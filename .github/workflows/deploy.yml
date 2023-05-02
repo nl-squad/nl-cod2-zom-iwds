@@ -1,0 +1,14 @@
+name: Deploy server files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deployment job
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/deploy.yml@main
+    with:
+      profile: default
+    secrets: inherit

@@ -1,0 +1,11 @@
+name: Stop server
+
+on: workflow_dispatch
+
+jobs:
+  stop:
+    name: Server stop job
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/stop.yml@main
+    with:
+      profile: default
+    secrets: inherit

@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  nl-cod2-zom:
+    image: rutkowski/cod2:2.9-server1.3-mysql-unsafe
+    container_name: nl-cod2-zom
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 7:7
+      - 7:7/udp
+    volumes:
+      - ./nl:/cod2/nl:ro
+      - ~/cod2/main/1_3:/cod2/main:ro
+      - ~/cod2/Library:/cod2/library:ro
+    environment:
+      PARAMS_BEFORE: "+exec server.cfg"
+      COD2_SET_fs_homepath: "/cod2/home"
+      COD2_SET_fs_library: "/cod2/library"
+      COD2_SET_fs_game: "nl"
+      COD2_SET_dedicated: 2
+      COD2_SET_net_port: 7
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+networks:
+  default:
+    external:
+      name: my_network

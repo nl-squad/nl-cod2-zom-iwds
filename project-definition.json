@@ -1,0 +1,26 @@
+{
+    "connection": {
+        "address": "mynl.pl",
+        "user": "ubuntu",
+        "keyPath": "~/.ssh/nl"
+    },
+    "deployment": {
+        "localPath": "src",
+        "remotePath": "~/cod2/servers/nl-cod2-zom-dev",
+        "rsyncExclude": [
+            ".DS_Store",
+            "nl/000empty.iwd",
+            "library",
+            "nl/maps/mp/mp_*.gsc",
+            "nl/blanco"
+        ],
+        "logsContainer": "nl-cod2-zom-dev"
+    },
+    "restart": {
+        "path": "~/cod2/servers/nl-cod2-zom-dev"
+    },
+    "cod2": {
+        "port": 7,
+        "rconPassword": "kusza"
+    }
+}
