@@ -72,6 +72,11 @@ CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon
 	[[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc, timeOffset, deathAnimDuration);
 }
 
+CodeCallback_RemoteCommand(from, args, messagePointer)
+{
+    [[ level.callbackRemoteCommand ]](from, args, messagePointer);
+}
+
 //=============================================================================
 
 /*================
