@@ -153,8 +153,8 @@ CodeCallback_PlayerCommand(args)
 {
 	args = fixChatArgs(args);
 
-	output = self blanco\commands\commands_core::playerCommand(args);
+    execute = [[ level.callbackPlayerCommand ]](args);
 
-	if(output != "")
+	if (execute)
 		self ClientCommand(self getEntityNumber());
 }
