@@ -1,0 +1,1302 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE		10 60
+#define ORIGIN_PAGE			10 430
+#define ORIGIN_CHOICE1		20 125
+#define ORIGIN_CHOICE2		20 150
+#define ORIGIN_CHOICE3		20 175
+#define ORIGIN_CHOICE4		20 200
+#define ORIGIN_CHOICE5		20 225
+#define ORIGIN_CHOICE6		20 250
+#define ORIGIN_CHOICE7		20 275
+#define ORIGIN_CHOICE8		20 300
+#define ORIGIN_CHOICE9		20 325
+#define ORIGIN_MAPNAME		460 285
+#define ORIGIN_MAPINFO		410 278
+#define ORIGIN_RECORDS		390 290
+#define ORIGIN_ABOUT		320 130
+#define ORIGIN_MODV			320 13
+#define ORIGIN_SEASON		320 42
+#define ORIGIN_DATES		320 54
+#define ORIGIN_SPONSORS		320 470
+
+#define ORIGIN_PLROPT1		340 160
+#define ORIGIN_PLROPT2		340 130
+#define ORIGIN_PLROPT3		340 100
+#define ORIGIN_EVER_SCOREBOARD		340 270
+#define ORIGIN_LOGO			256 120
+
+{
+	menuDef
+	{
+		name			"ingame"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			hide about;
+               show blanco_playeroption;
+			show map;
+
+			hide blanco_highlight_menu1;
+			hide blanco_highlight_menu2;
+			hide blanco_highlight_menu3;
+			hide blanco_highlight_menu4;
+			hide blanco_highlight_menu5;
+			hide blanco_highlight_menu6;
+			hide blanco_highlight_menu7;
+			hide blanco_highlight_menu8;
+			hide blanco_highlight_menu9;
+		}
+		onEsc
+		{
+			close ingame;
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+		///// INGAME OTHER //////
+
+          itemDef
+          {
+               origin		ORIGIN_SEASON
+               type			ITEM_TYPE_TEXT
+               text			"Season II"
+			forecolor		0.694 0.514 0.188 1
+               textscale		.3
+               textalign		ITEM_ALIGN_CENTER
+			visible		1
+			decoration
+          }
+          itemDef
+          {
+               origin		ORIGIN_DATES
+               type			ITEM_TYPE_TEXT
+               text			"September 01, 2017 - March 01, 2018"
+			forecolor		0.6 0.6 0.6 1
+               textscale		.22
+               textalign		ITEM_ALIGN_CENTER
+			visible		1
+			decoration
+          }
+
+          itemDef
+          {
+               origin		ORIGIN_SPONSORS
+               type			ITEM_TYPE_TEXT
+               text			"^4`^9Server ^7Spons^9ored by^4: ^7Wannabe^4*"
+			forecolor		1 1 1 1
+               textscale		.28
+               textalign		ITEM_ALIGN_CENTER
+			visible		1
+			decoration
+          }
+
+		execKey "1" { play "mouse_click"; scriptMenuResponse "autoassign"; }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "changeweapon"; }
+
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			visible			1
+			action
+			{
+				scriptMenuResponse "clear";
+			}
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_TITLE
+			type			ITEM_TYPE_TEXT
+			dvar			nl_ingame_title
+			textscale		.45
+		}
+		/// PAGE ///
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_PAGE
+			type			ITEM_TYPE_TEXT
+			dvar			nl_ingame_page
+			textscale		.30
+		}
+
+          // Player option 1
+          itemDef
+          {
+               name           blanco_playeroption
+               style 			WINDOW_STYLE_DVAR_SHADER
+               rect 			0 0 25 25
+               origin			ORIGIN_PLROPT1
+               visible 		1
+               dvar 			nl_plropt_1
+               decoration
+          }
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT1
+			type			ITEM_TYPE_TEXT
+			text			"HOOK"
+			textscale		.28
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	14
+			textalignx	0
+		}
+
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT1
+			type			ITEM_TYPE_TEXT
+			text			"Allow to ask you for hook"
+			forecolor		0.6 0.6 0.6 1
+			textscale		.18
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	23
+			textalignx	0
+		}
+		itemDef
+		{
+               name           blanco_playeroption
+			visible	     1
+			rect			0 0 150 25
+			origin		ORIGIN_PLROPT1
+			type			ITEM_TYPE_BUTTON
+               mouseEnter
+               {
+                    play "mouse_over";
+               }
+			action
+			{
+                    play "mouse_click";
+				scriptMenuResponse "plropt_1";
+			}
+		}
+
+          // Player option 2
+          itemDef
+          {
+               name           blanco_playeroption
+               style 			WINDOW_STYLE_DVAR_SHADER
+               rect 			0 0 25 25
+               origin			ORIGIN_PLROPT2
+               visible 		1
+               dvar 			nl_plropt_2
+               decoration
+          }
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT2
+			type			ITEM_TYPE_TEXT
+			text			"WEAPON EXCHANGE"
+			textscale		.28
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	14
+			textalignx	0
+		}
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT2
+			type			ITEM_TYPE_TEXT
+			text			"Allow to ask you for weapon exchange"
+			forecolor		0.6 0.6 0.6 1
+			textscale		.18
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	23
+			textalignx	0
+		}
+		itemDef
+		{
+               name           blanco_playeroption
+			visible	     1
+			rect			0 0 150 25
+			origin		ORIGIN_PLROPT2
+			type			ITEM_TYPE_BUTTON
+               mouseEnter
+               {
+                    play "mouse_over";
+               }
+			action
+			{
+                    play "mouse_click";
+				scriptMenuResponse "plropt_2";
+			}
+		}
+
+          // Player option 3
+          itemDef
+          {
+               name           blanco_playeroption
+               style 			WINDOW_STYLE_DVAR_SHADER
+               rect 			0 0 25 25
+               origin			ORIGIN_PLROPT3
+               visible 		1
+               dvar 			nl_plropt_3
+               decoration
+          }
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT3
+			type			ITEM_TYPE_TEXT
+			text			"EFFECTS"
+			textscale		.28
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	14
+			textalignx	0
+		}
+		itemDef
+		{
+               name           blanco_playeroption
+			visible		1
+			rect			30 0 0 0
+			origin		ORIGIN_PLROPT3
+			type			ITEM_TYPE_TEXT
+			text			"Toggle visibility of visual effects"
+			forecolor		0.6 0.6 0.6 1
+			textscale		.18
+			textalign		ITEM_ALIGN_LEFT
+			textaligny 	23
+			textalignx	0
+		}
+		itemDef
+		{
+               name           blanco_playeroption
+			visible	     1
+			rect			0 0 150 25
+			origin		ORIGIN_PLROPT3
+			type			ITEM_TYPE_BUTTON
+               mouseEnter
+               {
+                    play "mouse_over";
+               }
+			action
+			{
+                    play "mouse_click";
+				scriptMenuResponse "plropt_3";
+			}
+		}
+          // EVER SCOREBOARD
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_SHADER
+               rect			     5 0 100 20
+               origin			ORIGIN_EVER_SCOREBOARD
+               background		"nl_zakladka"
+               text			     "Best scores"
+               textscale		     .23
+               textalign 	     ITEM_ALIGN_CENTER
+               textalignx	     50
+               textaligny	     17
+               visible			1
+               decoration
+          }
+
+          // EVER SCOREBOARD BORDERS
+          itemDef // TOP
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     0 20 250 2
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 1
+               visible			1
+               decoration
+          }
+          itemDef // BOTTOM
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     0 156 250 2
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 1
+               visible			1
+               decoration
+          }
+          itemDef // LEFT
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     0 22 2 134
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 1
+               visible			1
+               decoration
+          }
+          itemDef // RIGHT
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     248 22 2 134
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 1
+               visible			1
+               decoration
+          }
+
+          // TABLE HEADERS
+          itemDef
+          {
+               name           "map_records"
+               style		     ITEM_TYPE_TEXT
+               rect			     12 22 200 40
+               origin			ORIGIN_EVER_SCOREBOARD
+               forecolor		     1 1 1 1
+               textfont		     UI_FONT_NORMAL
+               text			     "Name"
+               textscale		     .2
+               textaligny		11
+               textalignx		5
+               textalign 		ITEM_ALIGN_LEFT
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style		     ITEM_TYPE_TEXT
+               rect			     152 22 200 40
+               origin			ORIGIN_EVER_SCOREBOARD
+               forecolor		     1 1 1 1
+               textfont		     UI_FONT_NORMAL
+               text			     "Score"
+               textscale		     .2
+               textaligny		11
+               textalignx		5
+               textalign 		ITEM_ALIGN_LEFT
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style		     ITEM_TYPE_TEXT
+               rect			     202 22 200 40
+               origin			ORIGIN_EVER_SCOREBOARD
+               forecolor		     1 1 1 1
+               textfont		     UI_FONT_NORMAL
+               text			     "Rank"
+               textscale		     .2
+               textaligny		11
+               textalignx		5
+               textalign 		ITEM_ALIGN_LEFT
+               visible			1
+               decoration
+          }
+          itemDef // HR
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     0 35 250 1
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 0.8
+               visible			1
+               decoration
+          }
+
+          // LINES
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 36 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 48 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 60 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 72 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 84 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 96 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 108 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 120 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 132 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               style			WINDOW_STYLE_FILLED
+               rect			     2 144 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+
+          // Dvars
+          itemDef
+          {
+               name           "map_records"
+               dvar			"nl_records_ever_names"
+               type			ITEM_TYPE_TEXT
+               visible		1
+               rect			12 47 200 40
+               origin		ORIGIN_EVER_SCOREBOARD
+               textscale		.25
+               textalignx	5
+               textalign 	ITEM_ALIGN_LEFT
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               dvar			"nl_records_ever_scores"
+               type			ITEM_TYPE_TEXT
+               visible		1
+               rect			152 47 200 40
+               origin		ORIGIN_EVER_SCOREBOARD
+               textscale		.25
+               textalignx	5
+               textalign 	ITEM_ALIGN_LEFT
+               decoration
+          }
+          itemDef
+          {
+               name           "map_records"
+               dvar			"nl_records_ever_ranks"
+               type			ITEM_TYPE_TEXT
+               visible		1
+               rect			202 47 200 40
+               origin		ORIGIN_EVER_SCOREBOARD
+               textscale		.25
+               textalignx	5
+               textalign 	ITEM_ALIGN_LEFT
+               decoration
+          }
+
+
+		/// MAP INFO ///
+		itemDef
+		{
+			name			"map"
+			visible			1
+			origin			ORIGIN_MAPNAME
+			type			ITEM_TYPE_TEXT
+			dvar			nl_ingame_mapname
+			textscale		.35
+		}
+
+		/// ABOUT
+		itemDef
+		{
+			name			"about"
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 300 20
+			origin			ORIGIN_ABOUT
+			background		"nl_top_title"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"about"
+			visible			1
+			rect			0 0 300 20
+			origin			ORIGIN_ABOUT
+			forecolor		0.1 0.4 1 1
+			text			"INFORMATIONS"
+			textfont		UI_FONT_NORMAL
+			textscale		.45
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textalignx		150
+			textaligny		22
+			textalign		ITEM_ALIGN_CENTER
+		}
+
+		/// BORDER ///
+		itemDef
+		{
+			name			"about"
+			style			WINDOW_STYLE_FILLED
+			rect			0 20 300 240
+			origin			ORIGIN_ABOUT
+			backcolor		0 0 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"about"
+			style			WINDOW_STYLE_FILLED
+			rect			0 19 2 241
+			origin			ORIGIN_ABOUT
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"about"
+			style			WINDOW_STYLE_FILLED
+			rect			298 19 2 241
+			origin			ORIGIN_ABOUT
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"about"
+			style			WINDOW_STYLE_FILLED
+			rect			2 258 298 2
+			origin			ORIGIN_ABOUT
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"about"
+			rect			5 25 0 0
+			origin			ORIGIN_ABOUT
+			dvar			nl_rules
+			textscale		.25
+			visible			1
+			decoration
+		}
+
+		/// 1 ///
+		itemDef
+		{
+			name			blanco_highlight_menu1
+			style			WINDOW_STYLE_SHADER
+			rect			2 2 120 16
+			origin			ORIGIN_CHOICE1
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE1
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu1;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "autoassign";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE1
+			type			ITEM_TYPE_TEXT
+			text			"Join Game"
+			textaligny 		17
+			textalignx		7
+			textscale		.30
+		}
+		/// 2 ///
+		itemDef
+		{
+			name			blanco_highlight_menu2
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE2
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE2
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu2;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+
+				scriptMenuResponse "changeweapon";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE2
+			type			ITEM_TYPE_TEXT
+			text			"Weapon Menu"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 3 ///
+		itemDef
+		{
+			name			blanco_highlight_menu3
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE3
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE3
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu3;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "stats";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE3
+			type			ITEM_TYPE_TEXT
+			text			"My Stats"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 4 ///
+		itemDef
+		{
+			name			blanco_highlight_menu4
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE4
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE4
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu4;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "topstats";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE4
+			type			ITEM_TYPE_TEXT
+			text			"Top Players"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 5 ///
+		itemDef
+		{
+			name			blanco_highlight_menu5
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE5
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE5
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu5;
+				play "mouse_over";
+
+				hide map;
+                    hide map_records;
+                    hide blanco_playeroption;
+				show about;
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				hide about;
+                    show blanco_playeroption;
+                    show map_records;
+				show map;
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE5
+			type			ITEM_TYPE_TEXT
+			text			"About"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 6 ///
+		itemDef
+		{
+			name			blanco_highlight_menu6
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE6
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE6
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu6;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "challenges";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE6
+			type			ITEM_TYPE_TEXT
+			text			"Challenges"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 6 ///
+		itemDef
+		{
+			name			blanco_highlight_menu7
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE7
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE7
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu7;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				open leavegame;
+				close ingame;
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE7
+			type			ITEM_TYPE_TEXT
+			text			"Leave Game"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// 7 ///
+		itemDef
+		{
+			name			blanco_highlight_menu8
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE8
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE8
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu8;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
+				close ingame;
+				open main;
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE8
+			type			ITEM_TYPE_TEXT
+			text			"Main Menu"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+	}
+	
+	menuDef
+	{
+		name			"leavegame"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			hide blanco_highlight_menu1;
+			hide blanco_highlight_menu2;
+		}
+		onEsc 
+		{
+			close leavegame;
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+		
+		Leave Game?
+		
+		execKey "1" { play "mouse_click"; close leavegame; scriptMenuResponse "leave"; }
+		execKey "2" { play "mouse_click"; close leavegame; }
+		
+		/// 1 ///
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE1
+			type			ITEM_TYPE_TEXT
+			text			"Leave Game?"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		
+		/// 2 ///
+		itemDef
+		{
+			name			blanco_highlight_menu2
+			style			WINDOW_STYLE_SHADER
+			rect			2 2 120 16
+			origin			ORIGIN_CHOICE2
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE2
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu3;
+
+				show blanco_highlight_menu2;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+			}
+			action
+			{
+				play "mouse_click";
+				close leavegame;
+				scriptMenuResponse "leave";
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE2
+			type			ITEM_TYPE_TEXT
+			text			"Yes"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		
+		/// 3 ///
+		itemDef
+		{
+			name			blanco_highlight_menu3
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE3
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE3
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu2;
+
+				show blanco_highlight_menu3;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+			}
+			action
+			{
+				play "mouse_click";
+				close leavegame;
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE3
+			type			ITEM_TYPE_TEXT
+			text			"No"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		
+		/// LOGO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 128 128
+			origin			ORIGIN_LOGO
+			background		"nl_logo_avard"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			-10 -5 0 0
+			origin			ORIGIN_LOGO
+			text			"^4` ^7NoLimits ^4~> ^9Zombies ^4*"
+			textscale		.30
+			visible			1
+			decoration
+		}
+	}
+}

@@ -1,0 +1,115 @@
+// Black bars
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-118 -30 896 65
+		backcolor		.25 .25 .25 10
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-118 446 896 64
+		backcolor		.25 .25 .25 10
+		visible			1
+		decoration
+	}
+     itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 422 258 24
+		backcolor		.25 .25 .25 10
+		visible			1
+		decoration
+	}
+     itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 35 258 24
+		backcolor		.25 .25 .25 10
+		visible			1
+		decoration
+	}
+
+// Lines
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-118 34 306 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-118 446 306 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+     itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			445 34 306 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			445 446 306 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+      itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 59 258 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 421 258 1
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+     itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 34 1 26
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			188 422 1 25
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+     itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			445 34 1 26
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			445 422 1 25
+		backcolor		0 0 1 1
+		visible			1
+		decoration
+	}

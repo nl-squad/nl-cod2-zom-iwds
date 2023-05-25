@@ -1,0 +1,214 @@
+#include "ui/menudef.h"
+
+#define TEXT_ON_BG_STYLE 	3	//
+#define ORIGIN_MENU			220 70
+{
+\\ SETUP MENU \\
+
+	menuDef 
+	{
+		name			"expmenu"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onESC 
+		{ 
+			close expmenu;		
+		}
+		onOpen 
+		{
+			scriptMenuResponse "ExpMenuOpen";
+		}
+		
+		execKey "1"					{ play "mouse_click"; scriptMenuResponse "EM_1" }
+		execKey "2"					{ play "mouse_click"; scriptMenuResponse "EM_2" }
+		execKey "3"					{ play "mouse_click"; scriptMenuResponse "EM_3" }
+		execKey "4"					{ play "mouse_click"; scriptMenuResponse "EM_4" }
+		execKey "5"					{ play "mouse_click"; scriptMenuResponse "EM_5" }
+		execKey "6"					{ play "mouse_click"; scriptMenuResponse "EM_6" }
+		execKey "7"					{ play "mouse_click"; scriptMenuResponse "EM_7" }
+		execKey "8"					{ play "mouse_click"; scriptMenuResponse "EM_8" }
+		execKey "9" 				{ play "mouse_click"; scriptMenuResponse "EM_9" }
+		execKey "0" 				{ play "mouse_click"; scriptMenuResponse "EM_0" }
+		execKey "m" 				{ play "mouse_click"; scriptMenuResponse "max_money" }
+		execKey "b" 				{ play "mouse_click"; scriptMenuResponse "em_buy" }
+
+		// Gradient
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 200 40
+			origin			ORIGIN_MENU
+			background		"nl_top_title"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 32 200 40
+			origin			ORIGIN_MENU
+			text			"^4EXP MENU"
+			textscale		.45
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		100
+			visible			1
+			decoration
+		}
+
+		/// BORDER ///
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 40 200 240
+			origin			ORIGIN_MENU
+			backcolor		0 0 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 39 2 241
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			198 39 2 241
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 278 198 2
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+
+		/// CONTAINER ///
+		
+		itemDef
+		{
+			visible			1
+			rect			20 60 0 0
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textaligny		8
+			dvar			"em_info"
+			decoration
+		}
+		
+		itemDef 
+		{
+			name			"em_money"
+			visible			1
+			rect			260 220 100 30
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			dvar			"ui_em_money"
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "em_money";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			260 240 100 30
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			dvar			"ui_em_exp"
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "em_exp";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			visible			1
+			rect			20 240 80 20
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"^4M ^7Max Money"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "max_money";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			visible			1
+			rect			120 240 80 20
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"^4B ^7Buy"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "em_buy";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+}

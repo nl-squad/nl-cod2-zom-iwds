@@ -1,0 +1,94 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE		48 64
+#define ORIGIN_CHOICE1		240 180
+#define ORIGIN_CHOICE2		240 220
+
+#define ORIGIN_TEAMIMAGE	280 280
+
+{
+	menuDef
+	{
+		name			"lang"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+		
+		execKey "1" { play "mouse_click"; scriptMenuResponse "en"; }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "pl"; }
+
+		#include "ui_mp/blanco/bars.menu"
+		
+		itemDef 
+		{
+			name			"title"
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			text			"^4` ^9Select ^7You ^9Language ^4:"
+			textfont		UI_FONT_NORMAL
+			textscale		.60
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+		}
+		
+		itemDef 
+		{
+			name			"button_english"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"^41^9. ^7English"
+			textfont		UI_FONT_NORMAL
+			textscale		.60
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "en";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_polish"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"^42^9. ^7Polski ^9(Polish)"
+			textfont		UI_FONT_NORMAL
+			textscale		.60
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "pl";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+    }
+}

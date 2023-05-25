@@ -1,0 +1,770 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_BACKMENUBUTTON		40 40
+#define ORIGIN_CHOICE1				80 84
+#define ORIGIN_CHOICE2				80 108
+#define ORIGIN_CHOICE3				80 132
+#define ORIGIN_CHOICE4				80 156
+#define ORIGIN_CHOICE5				80 180
+#define ORIGIN_CHOICE6				80 204
+#define ORIGIN_CHOICE7				80 228
+#define ORIGIN_CHOICE8				80 252
+#define ORIGIN_CHOICE9				80 276
+
+#define ORIGIN_PISTOLINFO			90 340
+
+#define ORIGIN_WEAPONIMAGE			296 84
+#define ORIGIN_WEAPONDAMAGE			385 257
+#define ORIGIN_WEAPONMOBILITY		385 275
+#define ORIGIN_WEAPONPROPERTIESTEXT	296 270
+
+{
+	menuDef
+	{
+		name			"pistolmenu"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc 
+		{
+		}
+		onOpen 
+		{
+			hide weapon_properties;
+			hide colt_info;
+			hide deagle_info;
+			hide glock_info;
+			hide magnum_info;
+			hide ltt30_info;
+			hide sluger_info;
+			hide zooker_info;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			//rect			-107 0 554 480
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+// MENU CHOICES
+		execKey "1" { play "mouse_click"; scriptMenuResponse "colt"; }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "deagle"; }
+		execKey "3" { play "mouse_click"; scriptMenuResponse "glock"; }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "magnum"; }
+		execKey "5" { play "mouse_click"; scriptMenuResponse "ltt30"; }
+		execKey "6" { play "mouse_click"; scriptMenuResponse "sluger"; }
+		execKey "7" { play "mouse_click"; scriptMenuResponse "zooker"; }
+
+		itemDef 
+		{
+			name			"button_back"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_BACKMENUBUTTON
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			dvar			textback
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				close pistolmenu;
+				open weapon_american;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_1"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"1^9. ^7Colt"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "colt";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				show colt_info;
+				hide deagle_info;
+				hide glock_info;
+				hide magnum_info;
+				hide ltt30_info;
+				hide sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_2"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"2^9. ^4|^71^9R^4| ^7Deagle"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "deagle";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				show deagle_info;
+				hide glock_info;
+				hide magnum_info;
+				hide ltt30_info;
+				hide sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_3"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"3^9. ^4|^73^9R^4| ^7Glock"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "glock";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				hide deagle_info;
+				show glock_info;
+				hide magnum_info;
+				hide ltt30_info;
+				hide sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_4"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"4^9. ^4|^740^9R^4| ^7Magnum"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "magnum";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				hide deagle_info;
+				hide glock_info;
+				show magnum_info;
+				hide ltt30_info;
+				hide sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_5"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE5
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"5^9. ^4|^780^9R ^7100^9$^4| ^7Laser TT30"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "ltt30";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				hide deagle_info;
+				hide glock_info;
+				hide magnum_info;
+				show ltt30_info;
+				hide sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_6"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE6
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"6^9. ^4|^7140^9R ^7200^9$^4| ^7Luger S130"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "sluger";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				hide deagle_info;
+				hide glock_info;
+				hide magnum_info;
+				hide ltt30_info;
+				show sluger_info;
+				hide zooker_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_pistol_7"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE7
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"7^9. ^4|^7200^9R ^7200^9$^4| ^7Zooker"
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "zooker";
+			}
+			onFocus
+			{
+				show weapon_properties;
+
+				hide colt_info;
+				hide deagle_info;
+				hide glock_info;
+				hide magnum_info;
+				hide ltt30_info;
+				hide sluger_info;
+				show zooker_info;
+			}
+		}
+
+		itemDef
+		{
+			name			"pistolinfo"
+			visible 		1
+			rect			0 0 0 0
+			origin			ORIGIN_PISTOLINFO
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			dvar			pistolinfo
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+
+/// PROPORTIES
+
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			-5 0 0 0
+			origin			ORIGIN_WEAPONPROPERTIESTEXT
+			forecolor		1 1 1 1
+			dvar			"blanco_prop"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+/// END
+
+/// BG
+
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			-2 18 132 94
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			decoration
+		}
+/// END
+
+/// LNS
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			0 90 128 2
+			origin			ORIGIN_WEAPONIMAGE
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .4
+			decoration
+		}
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			0 92 2 18
+			origin			ORIGIN_WEAPONIMAGE
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .4
+			decoration
+		}
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			126 92 2 16
+			origin			ORIGIN_WEAPONIMAGE
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .4
+			decoration
+		}
+		itemDef
+		{
+			name			"weapon_properties"
+			visible 		0
+			rect			2 108 126 2
+			origin			ORIGIN_WEAPONIMAGE
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .4
+			decoration
+		}
+/// END
+
+/// WPS
+		itemDef
+		{
+			name			"colt_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Colt 1911"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"colt_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_colt"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"colt_info"
+			visible 		0
+			rect			0 0 50 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"colt_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"deagle_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Desert Eagle .50"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"deagle_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_deagle"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"deagle_info"
+			visible 		0
+			rect			0 0 90 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"deagle_info"
+			visible 		0
+			rect			0 0 52 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"glock_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Glock 17"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"glock_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_glock"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"glock_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"glock_info"
+			visible 		0
+			rect			0 0 100 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"magnum_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Magnum .357"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"magnum_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_magnum"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"magnum_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"magnum_info"
+			visible 		0
+			rect			0 0 44 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"ltt30_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Laser TT30"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"ltt30_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_tt30"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"ltt30_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"ltt30_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"sluger_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Luger S130"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sluger_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_luger"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sluger_info"
+			visible 		0
+			rect			0 0 10 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sluger_info"
+			visible 		0
+			rect			0 0 10 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			"zooker_info"
+			visible 		0
+			rect			2 88 124 30
+			origin			ORIGIN_WEAPONIMAGE
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_TEXT
+			text			"Zooker -S-"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textalignx		62
+			textaligny		20
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		itemDef
+		{
+			name			"zooker_info"
+			visible 		0
+			rect			0 20 128 64
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_colt"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"zooker_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"zooker_info"
+			visible 		0
+			rect			0 0 10 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+//////////////////////////////////////////////////////////////////////////////
+	}
+}

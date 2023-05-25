@@ -1,0 +1,327 @@
+#include "ui/menudef.h"
+
+#define TEXT_ON_BG_STYLE 		3	//
+#define ORIGIN_MENU				170 70
+#define ORIGIN_EXIT				60 415
+
+{
+\\ SETUP MENU \\
+
+	menuDef
+	{
+		name			"topstats"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close topstats;
+			open ingame;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 300 40
+			origin			ORIGIN_MENU
+			background		"nl_top_title"
+			visible			1
+			decoration
+		}
+		/// BACKGROUND ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 40 300 305
+			origin			ORIGIN_MENU
+			background		"nl_top_bg"
+			visible			1
+			decoration
+		}
+		/// TABLE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 40 2 305
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			298 40 2 305
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 343 296 2
+			origin			ORIGIN_MENU
+			backcolor		.254 .25 .254 1
+			visible			1
+			decoration
+		}
+		/// POSITION ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 52 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale		     .2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text			     "1"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 72 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"2"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 92 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"3"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 112 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 132 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"5"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 152 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"6"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 172 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"7"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 192 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"8"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 212 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"9"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 232 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"10"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 252 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"11"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect		      	10 272 12 12
+			origin			ORIGIN_MENU
+			background		"nl_top_postion"
+			textscale	       	.2
+			textalign 		ITEM_ALIGN_CENTER
+			textaligny		10
+			textalignx	     6
+			text		      	"12"
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			name			"ui_topstats"
+			visible		1
+			rect			10 312 12 12
+			origin		ORIGIN_MENU
+			forecolor		1 1 1 1
+			textalign 	ITEM_ALIGN_CENTER
+			textscale		.2
+               textaligny	10
+			textalignx	6
+			dvar			"ui_topstats_mypos"
+			decoration
+		}
+
+		/// TEXT ///
+		itemDef
+		{
+			name			"ui_topstats"
+			visible			1
+			rect			28 54 0 0
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			textalign 		ITEM_ALIGN_LEFT
+			textscale		.209
+			textaligny		8
+			dvar			"ui_topstats_1"
+			decoration
+		}
+		itemDef
+		{
+			name			"ui_topstats"
+			visible			1
+			rect			290 54 0 0
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			textalign 		ITEM_ALIGN_RIGHT
+			textscale		.209
+			textaligny		8
+			dvar			"ui_topstats_2"
+			decoration
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			name			"topstats_header"
+			visible			1
+			rect			90 12 0 0
+			origin			ORIGIN_MENU
+			forecolor		1 1 1 1
+			text			"^4TOP PLAYERS"
+			textfont		UI_FONT_NORMAL
+			textscale		.45
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+		}
+
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		20
+			visible			1
+			action
+			{
+				close topstats;
+				open ingame;
+				play "mouse_click";
+			}
+		}
+	}
+
+}

@@ -1,0 +1,2439 @@
+#include "ui/menudef.h"
+{
+	menuDef
+	{
+		name			"admin_kick"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0			
+		onOpen
+		{
+			scriptmenuresponse "AR"
+		}
+		onESC
+		{
+			close admin_kick;
+		}
+		
+		execKey "a" { play "mouse_click"; scriptMenuResponse "A" }
+		execKey "b" { play "mouse_click"; scriptMenuResponse "B" }
+		execKey "c" { play "mouse_click"; scriptMenuResponse "C" }
+		execKey "d" { play "mouse_click"; scriptMenuResponse "D" }
+		execKey "e" { play "mouse_click"; scriptMenuResponse "E" }
+		execKey "f" { play "mouse_click"; scriptMenuResponse "F" }
+		execKey "g" { play "mouse_click"; scriptMenuResponse "G" }
+		execKey "h" { play "mouse_click"; scriptMenuResponse "H" }
+		execKey "i" { play "mouse_click"; scriptMenuResponse "I" }
+		execKey "j" { play "mouse_click"; scriptMenuResponse "J" }
+		execKey "k" { play "mouse_click"; scriptMenuResponse "K" }
+		execKey "l" { play "mouse_click"; scriptMenuResponse "L" }
+		execKey "m" { play "mouse_click"; scriptMenuResponse "M" }
+		execKey "n" { play "mouse_click"; scriptMenuResponse "N" }
+		execKey "o" { play "mouse_click"; scriptMenuResponse "O" }
+		execKey "p" { play "mouse_click"; scriptMenuResponse "P" }
+		execKey "q" { play "mouse_click"; scriptMenuResponse "Q" }
+		execKey "r" { play "mouse_click"; scriptMenuResponse "R" }
+		execKey "s" { play "mouse_click"; scriptMenuResponse "S" }
+		execKey "t" { play "mouse_click"; scriptMenuResponse "T" }
+		execKey "u" { play "mouse_click"; scriptMenuResponse "U" }
+		execKey "v" { play "mouse_click"; scriptMenuResponse "V" }
+		execKey "w" { play "mouse_click"; scriptMenuResponse "W" }
+		execKey "x" { play "mouse_click"; scriptMenuResponse "X" }
+		execKey "y" { play "mouse_click"; scriptMenuResponse "Y" }
+		execKey "z" { play "mouse_click"; scriptMenuResponse "Z" }
+		execKey "," { play "mouse_click"; scriptMenuResponse "," }
+		execKey "." { play "mouse_click"; scriptMenuResponse "." }
+		execKey "/" { play "mouse_click"; scriptMenuResponse "/" }
+		execKey "=" { play "mouse_click"; scriptMenuResponse "=" }
+		execKey "-" { play "mouse_click"; scriptMenuResponse "-" }
+		execKey "[" { play "mouse_click"; scriptMenuResponse "[" }
+		execKey "]" { play "mouse_click"; scriptMenuResponse "]" }
+		execKey "0" { play "mouse_click"; scriptMenuResponse "x0" }
+		execKey "1" { play "mouse_click"; scriptMenuResponse "x1" }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "x2" }
+		execKey "3" { play "mouse_click"; scriptMenuResponse "x3" }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "x4" }
+		execKey "5" { play "mouse_click"; scriptMenuResponse "x5" }
+		execKey "6" { play "mouse_click"; scriptMenuResponse "x6" }
+		execKey "7" { play "mouse_click"; scriptMenuResponse "x7" }
+		execKey "8" { play "mouse_click"; scriptMenuResponse "x8" }
+		execKey "9" { play "mouse_click"; scriptMenuResponse "x9" }
+		execKeyInt 127 { scriptMenuResponse "bs" }
+		execKeyInt 13 { scriptMenuResponse "et" }
+		execKeyInt 32 { scriptMenuResponse "sp" }
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			190 5 420 40
+			backcolor		.2 .2 .5 .5
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"awarn"
+			visible			1
+			rect			200 25 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textaligny		8
+			dvar			"ui_awarn"
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			190 70 400 390
+			backcolor		.2 .2 .5 .5
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"ids"
+			visible			1
+			rect			200 65 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_ids"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			390 71 1 388
+			backcolor		1 1 1 1
+			visible			1
+			decoration
+		}
+	
+		itemDef
+		{
+			name			"ids"
+			visible			1
+			rect			400 65 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_ids2"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 28 160 19
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		0 1 0 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name		info1
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 30 158 17
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor info1 backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor info1 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AR"
+			}
+		}
+		
+		itemDef
+		{
+			name			"info1_txt"
+			visible			1
+			rect			24 35 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_ar"
+			decoration
+		}
+		
+		////////////////// 1 ///////////////////
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 275 160 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		r0a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 277 158 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor r0a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor r0a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AR0"
+			}
+		}
+		itemDef
+		{
+			name			"r0"
+			visible			1
+			rect			15 281 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_r0"
+			decoration
+		}
+
+		///////////////////////////////////////////////
+	
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 300 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		s0a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 302 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor s0a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor s0a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "SF0"
+			}
+		}
+		itemDef
+		{
+			name			"s0"
+			visible			1
+			rect			15 306 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_s0"
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 300 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		s1a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 302 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor s1a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor s1a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "SF1"
+			}
+		}
+		itemDef
+		{
+			name			"s1"
+			visible			1
+			rect			105 306 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_s1"
+			decoration
+		}
+		/////////////////////////////////
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 325 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		x0a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 327 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor x0a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor x0a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "XF0"
+			}
+		}
+		itemDef
+		{
+			name			"x0"
+			visible			1
+			rect			15 331 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_x0"
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 325 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		x1a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 327 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor x1a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor x1a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "XF1"
+			}
+		}
+		itemDef
+		{
+			name			"x1"
+			visible			1
+			rect			105 331 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_x1"
+			decoration
+		}
+		/////////////////////////////////
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 350 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 375 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 400 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 425 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			92 450 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		f0a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 352 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f0a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f0a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF0"
+			}
+		}
+		itemDef
+		{
+			name		f1a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 377 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f1a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f1a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF1"
+			}
+		}
+		itemDef
+		{
+			name		f2a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 402 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f2a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f2a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF2"
+			}
+		}
+		itemDef
+		{
+			name		f3a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 427 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f3a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f3a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF3"
+			}
+		}
+		itemDef
+		{
+			name		f4a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		94 452 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f4a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f4a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF4"
+			}
+		}
+		itemDef
+		{
+			name			"f0"
+			visible			1
+			rect			105 356 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f0"
+			decoration
+		}
+		itemDef
+		{
+			name			"f1"
+			visible			1
+			rect			105 381 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f1"
+			decoration
+		}
+		itemDef
+		{
+			name			"f2"
+			visible			1
+			rect			105 406 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f2"
+			decoration
+		}
+		itemDef
+		{
+			name			"f3"
+			visible			1
+			rect			105 431 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f3"
+			decoration
+		}
+		itemDef
+		{
+			name			"f4"
+			visible			1
+			rect			105 456 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f4"
+			decoration
+		}
+			
+		
+		////////////////// 2 ///////////////////
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 350 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 375 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 400 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 425 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 450 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		f5a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 352 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f5a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f5a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF5"
+			}
+		}
+		itemDef
+		{
+			name		f6a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 377 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f6a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f6a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF6"
+			}
+		}
+		itemDef
+		{
+			name		f7a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 402 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f7a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f7a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF7"
+			}
+		}
+		itemDef
+		{
+			name		f8a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 427 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f8a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f8a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF8"
+			}
+		}
+		itemDef
+		{
+			name		f9a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 452 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f9a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f9a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AF9"
+			}
+		}
+		itemDef
+		{
+			name			"f5"
+			visible			1
+			rect			15 356 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f5"
+			decoration
+		}
+		itemDef
+		{
+			name			"f6"
+			visible			1
+			rect			15 381 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f6"
+			decoration
+		}
+		itemDef
+		{
+			name			"f7"
+			visible			1
+			rect			15 406 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f7"
+			decoration
+		}
+		itemDef
+		{
+			name			"f8"
+			visible			1
+			rect			15 431 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f8"
+			decoration
+		}
+		itemDef
+		{
+			name			"f9"
+			visible			1
+			rect			15 456 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_f9"
+			decoration
+		}
+		
+		////////////////////////////////////////////////////////
+	
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 90 160 160
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 50 160 36
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		1 0 0 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"slct"
+			visible			1
+			rect			12 60 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textaligny		8
+			dvar			"ui_slct"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"slct"
+			visible			1
+			rect			12 100 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.20
+			textaligny		8
+			dvar			"ui_slct2"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			594 367 15 105
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		o1a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		596 369 13 103
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor o1a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor o1a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AO1"
+			}
+		}
+		itemDef
+		{
+			name			"o1"
+			visible			1
+			rect			600 376 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_o1"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			594 300 15 65
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		o2a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		596 302 13 63
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor o2a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor o2a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "AO2"
+			}
+		}
+		itemDef
+		{
+			name			"o2"
+			visible			1
+			rect			600 309 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_o2"
+			decoration
+		}
+
+		itemDef
+		{
+			name		p0
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 74 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p0 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p0 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "0"
+			}
+		}
+		itemDef
+		{
+			name		p1
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 86 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p1 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p1 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "1"
+			}
+		}
+		itemDef
+		{
+			name		p2
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 98 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p2 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p2 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "2"
+			}
+		}
+		itemDef
+		{
+			name		p3
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 110 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p3 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p3 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "3"
+			}
+		}
+		itemDef
+		{
+			name		p4
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 122 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p4 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p4 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "4"
+			}
+		}
+		itemDef
+		{
+			name		p5
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 134 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p5 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p5 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "5"
+			}
+		}
+		itemDef
+		{
+			name		p6
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 146 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p6 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p6 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "6"
+			}
+		}
+		itemDef
+		{
+			name		p7
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 158 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p7 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p7 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "7"
+			}
+		}
+		itemDef
+		{
+			name		p8
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 170 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p8 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p8 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "8"
+			}
+		}
+		itemDef
+		{
+			name		p9
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 182 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p9 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p9 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "9"
+			}
+		}
+		itemDef
+		{
+			name		p10
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 194 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p10 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p10 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "10"
+			}
+		}
+		itemDef
+		{
+			name		p11
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 206 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p11 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p11 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "11"
+			}
+		}
+		itemDef
+		{
+			name		p12
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 218 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p12 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p12 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "12"
+			}
+		}
+		itemDef
+		{
+			name		p13
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 230 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p13 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p13 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "13"
+			}
+		}
+		itemDef
+		{
+			name		p14
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 242 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p14 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p14 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "14"
+			}
+		}
+		itemDef
+		{
+			name		p15
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 254 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p15 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p15 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "15"
+			}
+		}
+		itemDef
+		{
+			name		p16
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 266 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p16 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p16 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "16"
+			}
+		}
+		itemDef
+		{
+			name		p17
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 278 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p17 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p17 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "17"
+			}
+		}
+		itemDef
+		{
+			name		p18
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 290 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p18 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p18 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "18"
+			}
+		}
+		itemDef
+		{
+			name		p19
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 302 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p19 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p19 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "19"
+			}
+		}
+		itemDef
+		{
+			name		p20
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 314 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p20 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p20 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "20"
+			}
+		}
+		itemDef
+		{
+			name		p21
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 326 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p21 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p21 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "21"
+			}
+		}
+		itemDef
+		{
+			name		p22
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 338 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p22 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p22 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "22"
+			}
+		}
+		itemDef
+		{
+			name		p23
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 350 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p23 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p23 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "23"
+			}
+		}
+		itemDef
+		{
+			name		p24
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 362 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p24 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p24 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "24"
+			}
+		}
+		itemDef
+		{
+			name		p25
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 374 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p25 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p25 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "25"
+			}
+		}
+		itemDef
+		{
+			name		p26
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 386 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p26 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p26 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "26"
+			}
+		}
+		itemDef
+		{
+			name		p27
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 398 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p27 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p27 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "27"
+			}
+		}
+		itemDef
+		{
+			name		p28
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 410 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p28 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p28 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "28"
+			}
+		}
+		itemDef
+		{
+			name		p29
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 422 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p29 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p29 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "29"
+			}
+		}
+		itemDef
+		{
+			name		p30
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 434 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p30 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p30 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "30"
+			}
+		}
+		itemDef
+		{
+			name		p31
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		195 446 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p31 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p31 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "31"
+			}
+		}
+		itemDef
+		{
+			name		p32
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 74 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p32 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p32 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "32"
+			}
+		}
+		itemDef
+		{
+			name		p33
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 86 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p33 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p33 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "33"
+			}
+		}
+		itemDef
+		{
+			name		p34
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 98 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p34 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p34 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "34"
+			}
+		}
+		itemDef
+		{
+			name		p35
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 110 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p35 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p35 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "35"
+			}
+		}
+		itemDef
+		{
+			name		p36
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 122 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p36 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p36 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "36"
+			}
+		}
+		itemDef
+		{
+			name		p37
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 134 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p37 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p37 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "37"
+			}
+		}
+		itemDef
+		{
+			name		p38
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 146 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p38 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p38 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "38"
+			}
+		}
+		itemDef
+		{
+			name		p39
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 158 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p39 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p39 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "39"
+			}
+		}
+		itemDef
+		{
+			name		p40
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 170 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p40 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p40 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "40"
+			}
+		}
+		itemDef
+		{
+			name		p41
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 182 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p41 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p41 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "41"
+			}
+		}
+		itemDef
+		{
+			name		p42
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 194 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p42 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p42 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "42"
+			}
+		}
+		itemDef
+		{
+			name		p43
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 206 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p43 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p43 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "43"
+			}
+		}
+		itemDef
+		{
+			name		p44
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 218 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p44 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p44 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "44"
+			}
+		}
+		itemDef
+		{
+			name		p45
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 230 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p45 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p45 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "45"
+			}
+		}
+		itemDef
+		{
+			name		p46
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 242 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p46 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p46 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "46"
+			}
+		}
+		itemDef
+		{
+			name		p47
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 254 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p47 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p47 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "47"
+			}
+		}
+		itemDef
+		{
+			name		p48
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 266 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p48 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p48 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "48"
+			}
+		}
+		itemDef
+		{
+			name		p49
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 278 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p49 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p49 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "49"
+			}
+		}
+		itemDef
+		{
+			name		p50
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 290 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p50 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p50 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "50"
+			}
+		}
+		itemDef
+		{
+			name		p51
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 302 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p51 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p51 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "51"
+			}
+		}
+		itemDef
+		{
+			name		p52
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 314 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p52 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p52 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "52"
+			}
+		}
+		itemDef
+		{
+			name		p53
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 326 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p53 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p53 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "53"
+			}
+		}
+		itemDef
+		{
+			name		p54
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 338 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p54 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p54 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "54"
+			}
+		}
+		itemDef
+		{
+			name		p55
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 350 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p55 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p55 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "55"
+			}
+		}
+		itemDef
+		{
+			name		p56
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 362 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p56 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p56 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "56"
+			}
+		}
+		itemDef
+		{
+			name		p57
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 374 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p57 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p57 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "57"
+			}
+		}
+		itemDef
+		{
+			name		p58
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 386 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p58 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p58 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "58"
+			}
+		}
+		itemDef
+		{
+			name		p59
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 398 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p59 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p59 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "59"
+			}
+		}
+
+		itemDef
+		{
+			name		p60
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 410 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p60 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p60 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "60"
+			}
+		}
+
+		itemDef
+		{
+			name		p61
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 422 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p61 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p61 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "61"
+			}
+		}
+
+		itemDef
+		{
+			name		p62
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 434 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p62 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p62 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "62"
+			}
+		}
+
+		itemDef
+		{
+			name		p63
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			rect		395 446 190 11
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor p63 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor p63 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "63"
+			}
+		}
+	}
+}

@@ -1,0 +1,1143 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE			0 50
+#define ORIGIN_KR1				80 70
+#define ORIGIN_KR2				170 70
+#define ORIGIN_KR3				260 70
+
+#define ORIGIN_KR4				80 160
+#define ORIGIN_KR5				170 160
+#define ORIGIN_KR6				260 160
+
+#define ORIGIN_KR7				80 250
+#define ORIGIN_KR8				170 250
+#define ORIGIN_KR9				260 250
+
+#define ORIGIN_KR10				170 340
+#define ORIGIN_KR11				170 340
+#define ORIGIN_KR12				260 340
+
+#define ORIGIN_EXIT				20 415
+#define ORIGIN_INFO				370 70
+
+{
+	menuDef
+	{
+		name			"prestige"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			scriptMenuResponse "open"; //a
+		}
+		onEsc 
+		{
+			close prestige;
+			open ingame;
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			name			"weapons_1"
+			style			WINDOW_STYLE_SHADER
+			rect			200 -29 240 30
+			origin			ORIGIN_TITLE
+			background		"nl_zakladka"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			80 0 480 3
+			origin			ORIGIN_TITLE
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 640 0
+			origin			ORIGIN_TITLE
+			text			"PRESTIGE"
+			textscale		.5
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		320
+			visible			1
+			decoration
+		}
+
+
+		/// TLO KWADRATOW ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR1
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR2
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR3
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR4
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR5
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR6
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR7
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR8
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR9
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 72 72
+			origin			ORIGIN_KR10
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+
+		/// KWADRATY ///
+		itemDef
+		{
+			name			kr1 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR1 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#1" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_1"; //a
+				setitemcolor kr1 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_1"; //a
+				setitemcolor kr1 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "1"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr2 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR2 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#2" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_2"; //a
+				setitemcolor kr2 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_2"; //a
+				setitemcolor kr2 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "2"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr3 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR3 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#3" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_3"; //a
+				setitemcolor kr3 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_3"; //a
+				setitemcolor kr3 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "3"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr4 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR4 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#4" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_4"; //a
+				setitemcolor kr4 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_4"; //a
+				setitemcolor kr4 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "4"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr5 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR5 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#5" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_5"; //a
+				setitemcolor kr5 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_5"; //a
+				setitemcolor kr5 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "5"; //a
+			}
+		}
+
+		itemDef
+		{
+			name			kr6 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR6 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#6" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_6"; //a
+				setitemcolor kr6 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_6"; //a
+				setitemcolor kr6 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "6"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr7 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR7 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#7" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_7"; //a
+				setitemcolor kr7 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_7"; //a
+				setitemcolor kr7 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "7"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr8 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR8 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#8" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_8"; //a
+				setitemcolor kr8 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_8"; //a
+				setitemcolor kr8 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "8"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr9 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR9 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#9" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_9"; //a
+				setitemcolor kr9 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_9"; //a
+				setitemcolor kr9 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "9"; //a
+			}
+		}
+		itemDef
+		{
+			name			kr10 //a
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 74 74
+			origin			ORIGIN_KR10 //a
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalignx		2
+			textaligny		71
+			text			"^9#10" //a
+			mouseEnter
+			{
+				scriptMenuResponse "enter_10"; //a
+				setitemcolor kr10 bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				scriptMenuResponse "exit_10"; //a
+				setitemcolor kr10 bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "10"; //a
+			}
+		}
+
+		/// UKONCZONE PRESTIGE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR1
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR2
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR3
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR4
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR5
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR6
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR7
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR8
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR9
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR10
+			border			1
+			bordercolor		0 0.8 0 1
+			dvartest		"nl_prestige"
+			showDvar		{ "11" }
+			visible			1
+			decoration
+		}
+
+		/// NIEDOSTEPNE PRESTIGE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR1
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR2
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR3
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR4
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR5
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR6
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR7
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR8
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR9
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 74 74
+			origin			ORIGIN_KR10
+			border			1
+			bordercolor		0.55 0.55 0.55 1
+			dvartest		"nl_prestige"
+			hideDvar		{ "10", "11" }
+			visible			1
+			decoration
+		}
+		
+		/// KUTKI ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR1
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR2
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR3
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR4
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR5
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR6
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR7
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR8
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR9
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR10
+			background		"nl_kutka"
+			dvartest		"nl_prestige"
+			hideDvar		{ "10", "11" }
+			visible			1
+			decoration
+		}
+
+		/// OBRAZKI ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR1
+			background		"nl_prestige_1"
+			dvartest		"nl_prestige"
+			showDvar		{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR2
+			background		"nl_prestige_2"
+			dvartest		"nl_prestige"
+			showDvar		{ "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR3
+			background		"nl_prestige_3"
+			dvartest		"nl_prestige"
+			showDvar		{ "3", "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR4
+			background		"nl_prestige_4"
+			dvartest		"nl_prestige"
+			showDvar		{ "4", "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR5
+			background		"nl_prestige_5"
+			dvartest		"nl_prestige"
+			showDvar		{ "5", "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR6
+			background		"nl_prestige_6"
+			dvartest		"nl_prestige"
+			showDvar		{ "6", "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR7
+			background		"nl_prestige_7"
+			dvartest		"nl_prestige"
+			showDvar		{ "7", "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR8
+			background		"nl_prestige_8"
+			dvartest		"nl_prestige"
+			showDvar		{ "8", "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR9
+			background		"nl_prestige_9"
+			dvartest		"nl_prestige"
+			showDvar		{ "9", "10", "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			6 5 64 64
+			origin			ORIGIN_KR10
+			background		"nl_prestige_10"
+			dvartest		"nl_prestige"
+			showDvar		{ "10", "11" }
+			visible			1
+			decoration
+		}
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		20
+			visible			1
+			action
+			{
+				close prestige;
+				open ingame;
+				play "mouse_click";
+			}
+		}
+
+		/// INFO ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 200 344
+			origin			ORIGIN_INFO
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 2 198 342
+			origin			ORIGIN_INFO
+			backcolor		0 0 0 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 26 198 1
+			origin			ORIGIN_INFO
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			visible			1
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		100
+			textaligny		23
+			textscale		.4
+			dvar			"nl_prestige_title" //a
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			visible			1
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		10
+			textaligny		42
+			textscale		.22
+			dvar			"nl_prestige_text" //a
+		}
+		
+		// CONFIRM //
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 160 200 100
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			222 162 198 98
+			backcolor		0 0 0 0.9
+			style			WINDOW_STYLE_FILLED
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			222 184 198 1
+			backcolor		0.027 0.082 0.604 1
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 160 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		100
+			textaligny		23
+			textscale		.4
+			text			"Confirmation" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 158 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		10
+			textaligny		42
+			textscale		.22
+			dvar			"nl_prestige_confirm" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+		}
+		
+		/// CONFIRM BUTTONS ///
+		itemDef
+		{
+			name			yesbutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			240 243 60 14
+			border			1
+			bordercolor		0.5 0.5 0.5 0.8
+			color			0.5 0.5 0.5 0.85
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"Yes" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			mouseEnter
+			{
+				setitemcolor yesbutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor yesbutton bordercolor 0.5 0.5 0.5 0.8 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "yes"; //a
+			}
+		}
+		itemDef
+		{
+			name			nobutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			340 243 60 14
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"No" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			mouseEnter
+			{
+				setitemcolor nobutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor nobutton bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "no"; //a
+			}
+		}
+		
+	}
+}

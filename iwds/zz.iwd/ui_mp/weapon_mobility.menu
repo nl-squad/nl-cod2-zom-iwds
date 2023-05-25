@@ -1,0 +1,6 @@
+			group			"weapons_info"
+			visible 		0
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration

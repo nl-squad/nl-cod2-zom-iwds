@@ -1,0 +1,192 @@
+
+		/////////////////// 1 //////////////////////
+
+		itemDef
+		{
+			name		map1
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		82 327 468 23
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor map1 backcolor 1 0 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor map1 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "vote"; //mouse_click
+				scriptmenuresponse "votemap1"
+			}
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			90 348 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votesmap1
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			120 348 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votemap1
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+
+		/////////////////// 2 //////////////////////
+		
+		itemDef
+		{
+			name		map2
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		82 362 468 23
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor map2 backcolor 1 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor map2 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "vote";
+				scriptmenuresponse "votemap2"
+			}
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			90 383 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votesmap2
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			120 383 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votemap2
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		/////////////////// 3 //////////////////////
+		
+		itemDef
+		{
+			name		map3
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		82 397 468 23
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor map3 backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor map3 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "vote";
+				scriptmenuresponse "votemap3"
+			}
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			90 418 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votesmap3
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			120 418 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votemap3
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		/////////////////// 4 //////////////////////
+		
+		itemDef
+		{
+			name		map4
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		82 432 468 23
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor map4 backcolor 0 0 1 0.3
+			}
+			mouseExit
+			{
+				setitemcolor map4 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "vote";
+				scriptmenuresponse "votemap4"
+			}
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			90 453 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votesmap4
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}
+		
+		itemDef 
+		{
+			visible			1
+			rect			120 453 0 0
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			dvar			ui_votemap4
+			textfont		UI_FONT_NORMAL
+			textscale		.40
+		}

@@ -1,0 +1,3 @@
+			play "mouse_over";
+			hide weapons_info;
+			//show weapon_propertiestext;

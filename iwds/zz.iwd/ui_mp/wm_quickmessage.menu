@@ -1,0 +1,135 @@
+calc#include "ui_mp/menudef.h"
+
+#define ORIGIN_QUICKMESSAGETAB			32 294
+#define ORIGIN_QUICKMESSAGEWINDOW		32 326
+
+{
+	menuDef
+	{
+		name			"quickmessage"
+		visible			0
+		fullscreen		0
+		rect			0 0 640 480
+		focuscolor		1 1 1 1
+		disablecolor		0 0 0 0
+ 		style			WINDOW_STYLE_EMPTY
+
+		onOpen
+		{
+			setDvar cl_bypassMouseInput "1"
+		}
+		onClose
+		{
+			setDvar cl_bypassMouseInput "0"
+		}
+
+// WINDOW BACKGROUND
+		itemDef
+		{
+			name			"window_background"
+			visible			1
+			rect			0 -3 194 144
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+	 		style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			decoration
+		}
+
+// WINDOW LINES
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			3 0 2 135
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			189 0 2 135
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			5 0 184 2
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			3 135 188 2
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+
+// TITLE
+		itemDef
+		{
+			name			"title"
+			visible			1
+			rect			0 9 110 20
+			origin			ORIGIN_QUICKMESSAGETAB
+			style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			type			ITEM_TYPE_TEXT
+			text			"^4`^9nL^4.^7Zombies^4*"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		55
+			textaligny		16
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+// TITLE
+		execKey "v" { close quickmessage; open voice_cmd; }
+		execKey "1" { close quickmessage; open voice_cmd; }
+		execKey "2" { close quickmessage; open playeroption; }
+		execKey "3" { close quickmessage; open hunters; }
+		execKey "4" { close quickmessage; open zombies; }
+		execKey "5"
+		{
+			close quickmessage;
+			uiScript openMenuOnDvar ui_vip 1 vips;
+			scriptMenuResponse "VIP";
+		}
+		execKey "x"
+		{
+			close quickmessage;
+			uiScript openMenuOnDvar ui_adm 1 admin_menu;
+		}
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 16 0 0
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"^71^9. ^9Voi^7ce ^9Mess^7ages ^4` \n^72^9. ^9Pla^7yer ^9Opt^7ions ^4` \n^73^9. ^9Hunt^7ers ^9Me^7nu ^4` \n^74^9. ^9Zomb^7ies ^9Me^7nu ^4` \n^75^9. ^9VIP ^9Me^7nu ^4` \n"
+			decoration
+		}
+	}
+}
+

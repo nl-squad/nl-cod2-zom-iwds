@@ -1,0 +1,205 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_IMAGE				350 160
+#define ORIGIN_TITLE1				60 72
+#define ORIGIN_TITLE2				200 72
+#define ORIGIN_TITLE3				340 72
+#define ORIGIN_TITLE4				480 72
+
+#define ORIGIN_INFO					60 105
+#define ORIGIN_CHOICE1				80 150
+#define ORIGIN_CHOICE2				350 150
+#define ORIGIN_CHOICE3				470 155
+
+#define ORIGIN_KRINFO				400 320
+#define ORIGIN_BUTTON				236 350
+#define ORIGIN_EXIT					20 415
+
+{
+	menuDef
+	{
+		name			"challenges"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close challenges;
+			open ingame;
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-10 15 540 2
+			origin			ORIGIN_TITLE1
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+		/// ZAKLADKI ///
+		itemDef
+		{
+			name			"weapons_1"
+			style			WINDOW_STYLE_SHADER
+			rect			0 -5 100 20
+			origin			ORIGIN_TITLE1
+			background		"nl_zakladka"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE1
+			text			"Challenges"
+			textscale		.23
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		50
+			textaligny		12
+			visible			1
+			decoration
+		}
+
+		/////////////////////////////////////////////////////
+
+		itemDef
+		{
+			visible		    1
+			origin		    ORIGIN_INFO
+			forecolor		1 1 1 1
+			textscale		.22
+			dvar			"nl_challenges_info"
+			decoration
+        }
+		
+		itemDef
+		{
+			visible		    1
+			origin		    ORIGIN_CHOICE1
+			forecolor		1 1 1 1
+			textscale		.2
+			dvar			"nl_challenges_desc"
+			decoration
+        }
+
+		itemDef
+		{
+			visible		    1
+			origin		    ORIGIN_CHOICE2
+			forecolor		1 1 1 1
+			textscale		.2
+			dvar			"nl_challenges_progress"
+			decoration
+        }
+		
+		itemDef
+		{
+			visible		    1
+			origin		    ORIGIN_CHOICE3
+			forecolor		1 1 1 1
+			textscale		.2
+			dvar			"nl_challenges_reward"
+			decoration
+		}
+		
+		/// Collect ///
+		itemDef
+		{
+			name			"collect_btn"
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 168 28
+			origin			ORIGIN_BUTTON
+			background		"nl_button"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"collect_btn_hover"
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 168 28
+			origin			ORIGIN_BUTTON
+			background		"nl_buttonh"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 168 28
+			origin			ORIGIN_BUTTON
+			text			"Collect ^3EXP ^7Reward"
+			textalign		ITEM_ALIGN_CENTER
+			textalignx		84
+			textaligny		21
+			textscale		.32
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 168 28
+			origin			ORIGIN_BUTTON
+			visible			1
+			mouseEnter
+			{
+				show collect_btn_hover;
+				hide collect_btn;
+			}
+			mouseExit
+			{
+				show collect_btn;
+				hide collect_btn_hover;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "collect";
+			}
+		}
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		20
+			visible			1
+			action
+			{
+				close challenges;
+				open ingame;
+				play "mouse_click";
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_KRINFO
+			textscale		.25
+			decoration
+		}
+	}
+}

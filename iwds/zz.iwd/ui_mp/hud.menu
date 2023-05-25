@@ -1,0 +1,389 @@
+#include "ui_mp/menudef.h"
+
+#define WEAPON_TEXTSCALE .3
+
+{
+
+	assetGlobalDef
+	{
+		fadeClamp 1.0					// sets the fadeup alpha
+		fadeCycle 1						// how often fade happens in milliseconds
+		fadeAmount 0.1					// amount to adjust alpha per cycle
+
+		shadowX  5						// x amount for shadow offset
+		shadowY  5						// y amount for shadow offset
+		shadowColor 0.1 0.1 0.1 0.25	// shadow color
+	}
+
+//	// Hold Breath Hint
+//	menuDef 
+//	{
+//		name "HoldBreathHint"
+//		fullScreen MENU_FALSE
+//		visible MENU_TRUE
+//		rect 0 -130 0 0 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+//
+//		itemDef 
+//		{
+//			name "chRect"
+//			decoration
+//			visible MENU_TRUE
+//			rect 0 0 0 0
+//			textscale .21
+//			textstyle ITEM_TEXTSTYLE_SHADOWED
+//			ownerdraw CG_HOLD_BREATH_HINT
+//		}
+//	}
+	
+	// Mantle Hint
+	menuDef 
+	{
+    	name "MantleHint"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+      	rect 0 130 40 40 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 40 40
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			ownerdraw CG_MANTLE_HINT
+		}
+	}
+	
+	//	CURSOR HINTS
+	menuDef 
+	{
+    	name "Cursorhints"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+      	rect 0 70 40 40 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 40 40 // 64x64
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			ownerdraw CG_CURSORHINT
+		}
+	}
+
+	
+	// WEAPON INFO
+	menuDef
+	{
+		name "weaponinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
+		
+		// ammo text
+		itemDef 
+		{
+ 			name "ammotex"
+			rect -55 -15 50 0
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textscale .3
+			forecolor .98 .827 .58 1
+			ownerdraw CG_PLAYER_AMMO_VALUE
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	// HEALTH BAR
+	menuDef
+	{
+		name "Health"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect  0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		
+		itemDef
+		{
+			name "healthbarback"
+			rect 13 0 130 12
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@health_back.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "healthbar"
+			rect 14 1 128 10
+			forecolor 0.7 0.4 0.0 1.0
+			background "gfx/hud/hud@health_bar.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "healthbarcross"
+			rect 0 0 12 12
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@health_cross.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
+			visible MENU_TRUE
+			decoration
+		}
+	}
+	
+	// LOW HEALTH OVERLAY
+	menuDef
+	{
+		name "Low Health"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		
+		itemDef
+		{
+			name "healthoverlay"
+			rect 0 0 640 480
+			forecolor 1.0 1.0 1.0 1.0
+			background "overlay_low_health"
+			ownerdraw CG_PLAYER_LOW_HEALTH_OVERLAY
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	//	COMPASS
+	menuDef
+	{
+		name "Compass"
+ 	   	fullScreen MENU_FALSE
+ 	   	visible MENU_TRUE
+ 	   	rect -20 -140 COMPASS_SIZE COMPASS_SIZE HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_BOTTOM
+
+		itemDef
+ 	   	{
+			name "compassback"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassback.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+ 	   	}
+		itemDef
+		{
+			name "compasshighlight"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compasshighlight.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "compassface"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassface.tga"
+			ownerdraw CG_PLAYER_COMPASS
+			visible MENU_TRUE
+			decoration
+		}
+    	itemDef // Objective pointers
+    	{
+			name "compasspointers"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_COMPASS_POINTERS
+    	}
+		itemDef // Friendlies pointers
+		{
+			name "compassfriendlies"
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_COMPASS_FRIENDS
+		}
+	}
+	
+
+	// OFFHAND WEAPONS
+	menuDef
+	{
+		name "offhandinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
+
+		// offhand frag icon 
+		itemDef
+		{
+			name "offhandfragicon"
+			rect -20 -44 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_ICON_FRAG
+			visible MENU_TRUE
+			background "gfx/icons/hud@russian_grenade.tga" // default texture
+			decoration
+		}
+		
+		// offhand frag ammo
+		itemDef
+		{
+			name "offhandfragammo"
+			rect -33 -29 25 25
+			textscale .35
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_AMMO_FRAG
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// offhand smoke icon
+		itemDef
+		{
+			name "offhandsmokeicon"
+			rect -20 -44 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_ICON_SMOKE
+			background "hud_us_smokegrenade" // default texture
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// offhand smoke ammo
+		itemDef
+		{
+			name "offhandsmokeammo"
+			rect -33 -29 25 25
+			textscale .35
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_AMMO_SMOKE
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	//	Local Talking Status
+	menuDef 
+	{
+    		name "amitalking"
+    		fullScreen MENU_FALSE
+    		visible MENU_TRUE
+		rect 100 5 24 24 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+
+		itemDef 
+		{
+			name "talkingRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 24 24 
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw UI_AMITALKING
+		}
+	}
+
+	// Remote Talking Status
+	menuDef 
+	{
+    		name "talkers"
+    		fullScreen MENU_FALSE
+    		visible MENU_TRUE
+		rect 60 30 16 16 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+
+		itemDef 
+		{
+			name "talker1Rect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw UI_TALKER1
+		}
+
+		itemDef 
+		{
+			name "talker2Rect"
+			decoration
+			visible MENU_TRUE
+			rect 0 16 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw UI_TALKER2
+		}
+
+		itemDef 
+		{
+			name "talker3Rect"
+			decoration
+			visible MENU_TRUE
+			rect 0 32 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw UI_TALKER3
+		}
+
+		itemDef 
+		{
+			name "talker4Rect"
+			decoration
+			visible MENU_TRUE
+			rect 0 48 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw UI_TALKER4
+		}
+	}
+
+	menuDef
+	{
+		name "extrahudinfo"
+		fullScreen MENU_TRUE
+		visible MENU_TRUE
+		rect 0 0 0 0
+
+		itemDef
+		{
+			visible			1
+			rect			320 80 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textalign 		ITEM_ALIGN_CENTER
+			dvar			"ui_hud1"
+			decoration
+		}
+
+		itemDef
+		{
+			visible			1
+			rect			320 80 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textalign 		ITEM_ALIGN_CENTER
+			dvar			"ui_hud2"
+			decoration
+		}
+	}
+}

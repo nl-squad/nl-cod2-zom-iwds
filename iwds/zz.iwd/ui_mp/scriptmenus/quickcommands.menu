@@ -1,0 +1,125 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_QUICKMESSAGETAB			32 294
+#define ORIGIN_QUICKMESSAGEWINDOW		32 326
+
+{
+	menuDef
+	{
+		name			"quickcommands"
+		fullscreen		0
+		rect			0 0 640 480
+		focuscolor		1 1 1 1
+		disablecolor	0 0 0 0
+ 		style			WINDOW_STYLE_EMPTY
+
+		onOpen
+		{
+			setDvar cl_bypassMouseInput "1"
+		}
+		onClose
+		{
+			setDvar cl_bypassMouseInput "0"
+		}
+
+// WINDOW BACKGROUND
+		itemDef
+		{
+			name			"window_background"
+			visible			1
+			rect			0 -3 194 144
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+	 		style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			decoration
+		}
+	
+// WINDOW LINES
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			3 0 2 135
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			189 0 2 135
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			5 0 184 2
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+		itemDef
+		{
+			name			"window_lines"
+			visible			1
+			rect			3 135 188 2
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 1 .2
+			decoration
+		}
+
+// TITLE
+		itemDef
+		{
+			name			"title"
+			visible			1
+			rect			0 9 110 20
+			origin			ORIGIN_QUICKMESSAGETAB
+			style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			type			ITEM_TYPE_TEXT
+			text			"^4~> ^9Comm^7ands ^4*"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		55
+			textaligny		16
+			textalign		ITEM_ALIGN_CENTER
+			decoration
+		}
+
+		execKey "1" { scriptMenuResponse "1"; close quickcommands; }
+		execKey "2" { scriptMenuResponse "2"; close quickcommands }
+		execKey "3" { scriptMenuResponse "3"; close quickcommands }
+		execKey "4" { scriptMenuResponse "4"; close quickcommands }
+		execKey "5" { scriptMenuResponse "5"; close quickcommands }
+		execKey "6" { scriptMenuResponse "6"; close quickcommands }
+		execKey "7" { scriptMenuResponse "7"; close quickcommands }
+		execKey "8" { scriptMenuResponse "8"; close quickcommands }
+		execKey "9" { scriptMenuResponse "9"; close quickcommands }
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 16 0 0
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"^91^4. ^7Follow me^4! \n^92^4. ^7Move in^4! \n^93^4. ^7Fall back^4! \n^94^4. ^7Suppressing fire^4! \n^95^4. ^7Attack left flank^4! \n^96^4. ^7Attack right flank^4! \n^97^4. ^7Hold this position^4! \n^98^4. ^7Regroup^4! \n^99^4. ^7Defend this position!^4! \n"
+			decoration
+		}
+	}
+}

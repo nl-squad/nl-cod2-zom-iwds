@@ -1,0 +1,9 @@
+			group			"weapons_info"
+			type			ITEM_TYPE_TEXT
+			visible			0
+			rect			-110 -14 0 0
+			origin			ORIGIN_WEAPONACCURACY
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			decoration

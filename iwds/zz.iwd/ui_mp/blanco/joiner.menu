@@ -1,0 +1,171 @@
+	itemDef 
+	{
+		name connectother
+		text "^4`^7PES^4~>^7ZombieS ^4*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 50
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 188.40.141.205:28949"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^2`^7PES^2~>^7DeathRun ^2*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 65
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 79.133.192.40:28703"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^3`^7PES^3~>^7Rifle ^3*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 80
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 80.72.37.10:28961"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^1`^7PES^1~>^7TDM ^1*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 95
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 80.72.37.10:28960"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^5`^7PES^5~>^7Jump ^5*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 110
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 79.133.192.41:28703"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^6`^7PES^6~>^7Private ^6*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 125
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec exec "connect 80.72.37.10:28711"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^0`^7PES^0~>^7Test ^0*"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 140
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{ 
+			play "mouse_click";
+			exec "connect 78.46.47.198:29907"
+		}
+	}
+
+	itemDef 
+	{
+		name connectother
+		text "^2***^7Member ^9Private ^7Slot^2***"
+		type ITEM_TYPE_BUTTON
+		textfont UI_FONT_NORMAL
+		textscale GLOBAL_TEXT_SIZE
+		textstyle ITEM_TEXTSTYLE_SHADOWED
+		rect 0 0 128 24
+		origin 480 155
+		textaligny 20
+		forecolor GLOBAL_UNFOCUSED_COLOR
+		visible 1
+
+		action 
+		{
+			play "mouse_click";
+			close mods_menu;
+			close password_menu;
+			close rconpassword_menu;
+			close options_multi;
+			open password_popmenu;
+		}
+	}

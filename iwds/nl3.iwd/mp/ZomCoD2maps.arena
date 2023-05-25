@@ -1,0 +1,80 @@
+
+{
+	map			"mp_farmhouse"
+	longname	"Beltot, France"
+	gametype	"zom"
+}
+
+{
+	map			"mp_brecourt"
+	longname	"Brecourt, France"
+	gametype	"zom"
+}
+
+{
+	map			"mp_burgundy"
+	longname	"Burgundy, France"
+	gametype	"zom"
+}
+
+
+{
+	map			"mp_trainstation"
+	longname	"Caen, France"
+	gametype	"zom"
+}
+
+{
+	map			"mp_carentan"
+	longname	"Carentan, France"
+	gametype	"zom"
+}
+
+{
+	map			"mp_decoy"
+	longname	"El Alamein, Egypt"
+	gametype	"zom"
+}
+
+{
+	map			"mp_leningrad"
+	longname	"Leningrad, Russia"
+	gametype	"zom"
+}
+
+{
+	map			"mp_matmata"
+	longname	"Matmata, Tunisia"
+	gametype	"zom"
+}
+
+{
+	map			"mp_downtown"
+	longname	"Moscow, Russia"
+	gametype	"zom"
+}
+
+{
+	map			"mp_dawnville"
+	longname	"St. Mere Eglise, France"
+	gametype	"zom"
+}
+
+{
+	map			"mp_railyard"
+	longname	"Stalingrad, Russia"
+	gametype	"zom"
+}
+
+{
+	map			"mp_toujane"
+	longname	"Toujane, Tunisia"
+	gametype	"zom"
+}
+
+{
+	map			"mp_breakout"
+	longname	"Villers-Bocage, France"
+	gametype	"zom"
+}
+

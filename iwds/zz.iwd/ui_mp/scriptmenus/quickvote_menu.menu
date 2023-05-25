@@ -1,0 +1,266 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_VOTE1				60 150
+#define ORIGIN_VOTE2				60 179
+#define ORIGIN_VOTE3				60 208
+#define ORIGIN_VOTE4				60 237
+#define ORIGIN_QUESTION				0 50
+
+{
+	menuDef
+	{
+		name			"quickvote_menu"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onESC
+		{
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// QUESTION ///
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 40
+			origin			ORIGIN_QUESTION
+			background		"nl_avard_gradient" //"black"
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			dvar			nl_question
+			textscale		.45
+			textaligny		32
+			textalignx		320
+			textalign 		ITEM_ALIGN_CENTER
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			0 40 2 250
+			origin			ORIGIN_QUESTION
+			backcolor		.6 .6 .6 .5
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			638 40 2 250
+			origin			ORIGIN_QUESTION
+			backcolor		.6 .6 .6 .5
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			0 290 640 2
+			origin			ORIGIN_QUESTION
+			backcolor		.6 .6 .6 .5
+			decoration
+		}
+
+		/// ANSWERS ///
+		itemDef
+		{
+			visible			1
+			type			ITEM_TYPE_TEXT
+			rect			5 5 0 0
+			origin			ORIGIN_VOTE1
+			forecolor		1 1 1 1
+			dvar			nl_answers
+			textscale		.30
+			textaligny		24
+			textalignx		0
+			decoration
+		}
+
+		/// ANSWER BOXES ///
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			-20 12 18 18
+			origin			ORIGIN_VOTE1
+			backcolor		.6 .6 .6 .5
+			border			1
+			bordercolor		1 1 1 1
+			dvartest		"nl_max_answers"
+			showDvar		{ "1"; "2"; "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		-20 12 200 18
+			origin		ORIGIN_VOTE1
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "ANS1"
+			}
+		}
+
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			-20 12 18 18
+			origin			ORIGIN_VOTE2
+			backcolor		.6 .6 .6 .5
+			border			1
+			bordercolor		1 1 1 1
+			dvartest		"nl_max_answers"
+			showDvar		{ "2"; "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		-20 12 200 18
+			origin		ORIGIN_VOTE2
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "ANS2"
+			}
+		}
+
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			-20 12 18 18
+			origin			ORIGIN_VOTE3
+			backcolor		.6 .6 .6 .5
+			border			1
+			bordercolor		1 1 1 1
+			dvartest		"nl_max_answers"
+			showDvar		{ "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		-20 12 200 18
+			origin		ORIGIN_VOTE3
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "ANS3"
+			}
+		}
+
+		itemDef
+		{
+			visible			1
+			style			WINDOW_STYLE_FILLED
+			rect			-20 12 18 18
+			origin			ORIGIN_VOTE4
+			backcolor		.6 .6 .6 .5
+			border			1
+			bordercolor		1 1 1 1
+			dvartest		"nl_max_answers"
+			showDvar		{ "4" }
+			decoration
+		}
+		itemDef
+		{
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		-20 12 200 18
+			origin		ORIGIN_VOTE4
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "ANS4"
+			}
+		}
+
+		/// TICKS ///
+		itemDef
+		{
+			visible			1
+			background		"blanco_tick"
+			dvartest		"nl_quickvote"
+			showDvar		{ "1" }
+			style			WINDOW_STYLE_SHADER
+			rect			-18 8 24 24
+			origin			ORIGIN_VOTE1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			background		"blanco_tick"
+			dvartest		"nl_quickvote"
+			showDvar		{ "2" }
+			style			WINDOW_STYLE_SHADER
+			rect			-18 8 24 24
+			origin			ORIGIN_VOTE2
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			background		"blanco_tick"
+			dvartest		"nl_quickvote"
+			showDvar		{ "3" }
+			style			WINDOW_STYLE_SHADER
+			rect			-18 8 24 24
+			origin			ORIGIN_VOTE3
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			background		"blanco_tick"
+			dvartest		"nl_quickvote"
+			showDvar		{ "4" }
+			style			WINDOW_STYLE_SHADER
+			rect			-18 8 24 24
+			origin			ORIGIN_VOTE4
+			decoration
+		}
+	}
+}

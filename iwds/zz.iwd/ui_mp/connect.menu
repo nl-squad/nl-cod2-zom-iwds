@@ -1,0 +1,44 @@
+#include "ui_mp/menudef.h"
+{
+	menuDef
+	{
+		name "connect"
+  		rect 0 0 640 480
+		fullScreen MENU_FALSE
+		visible MENU_FALSE
+		backcolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+ 		background "$levelBriefing"
+	    focusColor GLOBAL_FOCUSED_COLOR
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 4 4
+			backcolor		0 0 0 1
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 60 640 320
+			background		"nl_ls_zom"
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			dvar			"nolimits_ls"
+			type			ITEM_TYPE_TEXT
+			rect			0 420 640 480 4 4
+			textscale		.4
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		320
+			visible			1
+			decoration
+		}
+	}
+}

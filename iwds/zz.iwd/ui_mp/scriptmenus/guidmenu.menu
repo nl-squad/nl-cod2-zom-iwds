@@ -1,0 +1,77 @@
+#include "ui/menudef.h"
+
+#define TEXT_ON_BG_STYLE 	3	//
+
+{
+\\ SETUP MENU \\
+
+	menuDef 
+	{
+		name			"guidmenu"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onESC 
+		{	
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"guidmenu_guid"
+			visible			1
+			rect			50 50 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.30
+			textaligny		8
+			dvar			"guidmenu_guid"
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			50 195 120 28
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+
+		itemDef 
+		{
+			name			"guidmenu_disconnect"
+			visible			1
+			rect			60 200 100 30
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"^1Disconnect"
+			textfont		UI_FONT_NORMAL
+			textscale		.45
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "Player_Dissconect";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+
+}

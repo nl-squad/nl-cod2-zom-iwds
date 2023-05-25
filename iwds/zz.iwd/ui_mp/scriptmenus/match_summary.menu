@@ -1,0 +1,2192 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_VOTE					345 230
+#define ORIGIN_MAP_SCOREBOARD                  45 50
+#define ORIGIN_EVER_SCOREBOARD                  345 50
+#define ORIGIN_STATS                    45 230
+#define ORIGIN_EXP_BAR                  70 296
+
+
+
+{
+	menuDef
+	{
+		name			"match_summary"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+               hide blanco_highlight_vote1;
+               hide blanco_highlight_vote2;
+               hide blanco_highlight_vote3;
+               hide blanco_highlight_vote4;
+          }
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+          // MAP SCOREBOARD
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     5 0 100 20
+			origin			ORIGIN_MAP_SCOREBOARD
+			background		"nl_zakladka"
+			text			     "Map scoreboard"
+			textscale		     .23
+			textalign 	     ITEM_ALIGN_CENTER
+			textalignx	     50
+			textaligny	     17
+			visible			1
+			decoration
+		}
+
+          // MAP SCOREBOARD BORDERS
+		itemDef // TOP
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 20 250 2
+			origin			ORIGIN_MAP_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // BOTTOM
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 156 250 2
+			origin			ORIGIN_MAP_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // LEFT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 22 2 134
+			origin			ORIGIN_MAP_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // RIGHT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     248 22 2 134
+			origin			ORIGIN_MAP_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+          // TABLE HEADERS
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     12 22 200 40
+			origin			ORIGIN_MAP_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Name"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     152 22 200 40
+			origin			ORIGIN_MAP_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Score"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     202 22 200 40
+			origin			ORIGIN_MAP_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Rank"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef // HR
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     0 35 250 1
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 0.8
+               visible			1
+               decoration
+          }
+
+          // LINES
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 36 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 48 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 60 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 72 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 84 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 96 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 108 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 120 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 132 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 144 246 12
+               origin			ORIGIN_MAP_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+
+          // Dvars
+		itemDef
+		{
+			dvar			"nl_records_map_names"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			12 47 200 40
+			origin		ORIGIN_MAP_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+		itemDef
+		{
+			dvar			"nl_records_map_scores"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			152 47 200 40
+			origin		ORIGIN_MAP_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+		itemDef
+		{
+			dvar			"nl_records_map_ranks"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			202 47 200 40
+			origin		ORIGIN_MAP_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+
+          // EVER SCOREBOARD
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     5 0 100 20
+			origin			ORIGIN_EVER_SCOREBOARD
+			background		"nl_zakladka"
+			text			     "Best scores"
+			textscale		     .23
+			textalign 	     ITEM_ALIGN_CENTER
+			textalignx	     50
+			textaligny	     17
+			visible			1
+			decoration
+		}
+
+          // EVER SCOREBOARD BORDERS
+		itemDef // TOP
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 20 250 2
+			origin			ORIGIN_EVER_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // BOTTOM
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 156 250 2
+			origin			ORIGIN_EVER_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // LEFT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 22 2 134
+			origin			ORIGIN_EVER_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // RIGHT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     248 22 2 134
+			origin			ORIGIN_EVER_SCOREBOARD
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+          // TABLE HEADERS
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     12 22 200 40
+			origin			ORIGIN_EVER_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Name"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     152 22 200 40
+			origin			ORIGIN_EVER_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Score"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     202 22 200 40
+			origin			ORIGIN_EVER_SCOREBOARD
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Rank"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef // HR
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     0 35 250 1
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.027 0.082 0.604 0.8
+               visible			1
+               decoration
+          }
+
+          // LINES
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 36 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 48 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 60 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 72 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 84 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 96 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 108 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 120 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 132 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     2 144 246 12
+               origin			ORIGIN_EVER_SCOREBOARD
+               backcolor		     0.3 0.3 0.3 0.2
+               visible			1
+               decoration
+          }
+
+          // Dvars
+		itemDef
+		{
+			dvar			"nl_records_ever_names"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			12 47 200 40
+			origin		ORIGIN_EVER_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+		itemDef
+		{
+			dvar			"nl_records_ever_scores"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			152 47 200 40
+			origin		ORIGIN_EVER_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+		itemDef
+		{
+			dvar			"nl_records_ever_ranks"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			202 47 200 40
+			origin		ORIGIN_EVER_SCOREBOARD
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+
+
+          // Player progress
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     5 0 100 20
+			origin			ORIGIN_STATS
+			background		"nl_zakladka"
+			text			     "Progress"
+			textscale		     .23
+			textalign 	     ITEM_ALIGN_CENTER
+			textalignx	     50
+			textaligny	     17
+			visible			1
+			decoration
+		}
+
+          // PLAYER PROGRESS BORDERS
+		itemDef // TOP
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 20 250 2
+			origin			ORIGIN_STATS
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // BOTTOM
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 156 250 2
+			origin			ORIGIN_STATS
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // LEFT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 22 2 134
+			origin			ORIGIN_STATS
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // RIGHT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     248 22 2 134
+			origin			ORIGIN_STATS
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+          // Player EXP over exp Bar
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     2 24 200 40
+			origin			ORIGIN_STATS
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			dvar			     "blanco_player_info"
+			textscale		     .22
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     245 22 200 40
+			origin			ORIGIN_STATS
+               forecolor		     1 0.902 0.494 0.6
+			textfont		     UI_FONT_NORMAL
+			dvar			     "blanco_player_login"
+			textscale		     .22
+			textaligny		11
+			textalignx		0
+			textalign 		ITEM_ALIGN_RIGHT
+     		visible			1
+			decoration
+          }
+
+          // Current and next rank
+          itemDef
+          {
+               style		     ITEM_TYPE_TEXT
+               rect			     2 -2 200 40
+               origin			ORIGIN_EXP_BAR
+               forecolor		     0.08 0.08 1 1
+               textfont		     UI_FONT_NORMAL
+               dvar			     "blanco_rank"
+               textscale		     .21
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style		     ITEM_TYPE_TEXT
+               rect			     189 -2 200 40
+               origin			ORIGIN_EXP_BAR
+               forecolor		     0.08 0.08 1 1
+               textfont		     UI_FONT_NORMAL
+               dvar			     "blanco_next_rank"
+               textscale		     .21
+               visible			1
+               decoration
+          }
+
+          itemDef
+          {
+               style		     ITEM_TYPE_TEXT
+               rect			     189 18 200 40
+               origin			ORIGIN_EXP_BAR
+               forecolor		     1 0.902 0.494 1
+               textfont		     UI_FONT_NORMAL
+               dvar			     "blanco_nextin"
+               textscale		     .21
+               visible			1
+               decoration
+          }
+
+          // EXP Bar
+          itemDef
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     0 0 200 8
+               origin			ORIGIN_EXP_BAR
+               backcolor		     0.2 0.2 0.2 0.2
+               visible			1
+               decoration
+          }
+
+          // XP loading
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 2 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "1" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 4 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "2" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 6 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "3" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 8 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "4" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 10 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "5" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 12 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "6" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 14 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "7" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 16 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "8" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 18 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "9" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 20 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "10" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 22 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "11" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 24 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "12" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 26 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "13" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 28 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "14" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 30 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "15" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 32 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "16" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 34 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "17" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 36 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "18" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 38 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "19" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 40 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "20" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 42 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "21" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 44 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "22" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 46 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "23" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 48 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "24" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 50 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "25" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 52 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "26" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 54 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "27" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 56 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "28" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 58 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "29" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 60 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "30" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 62 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "31" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 64 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "32" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 66 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "33" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 68 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "34" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 70 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "35" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 72 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "36" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 74 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "37" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 76 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "38" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 78 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "39" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 80 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "40" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 82 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "41" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 84 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "42" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 86 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "43" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 88 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "44" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 90 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "45" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 92 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "46" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 94 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "47" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 96 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "48" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 98 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "49" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 100 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "50" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 102 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "51" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 104 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "52" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 106 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "53" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 108 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "54" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 110 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "55" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 112 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "56" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 114 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "57" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 116 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "58" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 118 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "59" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 120 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "60" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 122 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "61" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 124 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "62" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 126 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "63" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 128 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "64" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 130 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "65" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 132 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "66" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 134 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "67" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 136 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "68" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 138 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "69" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 140 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "70" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 142 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "71" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 144 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "72" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 146 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "73" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 148 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "74" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 150 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "75" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 152 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "76" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 154 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "77" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 156 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "78" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 158 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "79" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 160 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "80" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 162 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "81" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 164 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "82" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 166 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "83" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 168 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "84" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 170 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "85" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 172 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "86" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 174 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "87" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 176 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "88" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 178 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "89" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 180 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "90" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 182 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "91" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 184 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "92" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 186 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "93" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 188 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "94" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 190 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "95" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 192 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "96" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 194 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "97" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 196 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "98" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 198 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "99" }
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style			WINDOW_STYLE_SHADER
+               rect			     0 0 200 8
+               origin			ORIGIN_EXP_BAR
+               background		"blanco_fade"
+               forecolor		     0.282 0.765 0.286 1
+               dvartest		     "blanco_xp_bar"
+               showDvar		     { "100" }
+               visible			1
+               decoration
+          }
+
+          // Player EXP below exp Bar
+          itemDef
+          {
+               style		     ITEM_TYPE_TEXT
+               rect			     2 91 200 40
+               origin			ORIGIN_STATS
+               forecolor		     1 1 1 1
+               textfont		     UI_FONT_NORMAL
+               dvar			     "blanco_player_stats"
+               textscale		     .22
+               textaligny		11
+               textalignx		5
+               textalign 		ITEM_ALIGN_LEFT
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               style		     ITEM_TYPE_TEXT
+               rect			     230 91 200 40
+               origin			ORIGIN_STATS
+               forecolor		     1 0.902 0.494 1
+               textfont		     UI_FONT_NORMAL
+               dvar			     "blanco_player_stats_values"
+               textscale		     .22
+               textaligny		11
+               textalignx		0
+               textalign 		ITEM_ALIGN_RIGHT
+               visible			1
+               decoration
+          }
+
+          // Vote
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     5 0 100 20
+			origin			ORIGIN_VOTE
+			background		"nl_zakladka"
+			text			     "Next map vote"
+			textscale		     .23
+			textalign 	     ITEM_ALIGN_CENTER
+			textalignx	     50
+			textaligny	     17
+			visible			1
+			decoration
+		}
+
+          // MAP SCOREBOARD BORDERS
+		itemDef // TOP
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 20 250 2
+			origin			ORIGIN_VOTE
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // BOTTOM
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 156 250 2
+			origin			ORIGIN_VOTE
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // LEFT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     0 22 2 134
+			origin			ORIGIN_VOTE
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef // RIGHT
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			     248 22 2 134
+			origin			ORIGIN_VOTE
+			backcolor		     0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+          // TABLE HEADERS
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     12 22 200 40
+			origin			ORIGIN_VOTE
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Map name"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     202 22 200 40
+			origin			ORIGIN_VOTE
+			forecolor		     1 1 1 1
+			textfont		     UI_FONT_NORMAL
+			text			     "Votes"
+			textscale		     .2
+			textaligny		11
+			textalignx		5
+			textalign 		ITEM_ALIGN_LEFT
+     		visible			1
+			decoration
+          }
+          itemDef // HR
+          {
+               style			WINDOW_STYLE_FILLED
+               rect			     0 35 250 1
+               origin			ORIGIN_VOTE
+               backcolor		     0.027 0.082 0.604 0.8
+               visible			1
+               decoration
+          }
+
+		/// 1 ///
+		itemDef
+		{
+			name			     blanco_highlight_vote1
+			style			WINDOW_STYLE_SHADER
+			rect			     12 54 226 12
+			origin			ORIGIN_VOTE
+			background		"blanco_fade"
+               forecolor		     0 0.471 1 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible		1
+			rect			12 54 226 12
+			origin		ORIGIN_VOTE
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+
+				show blanco_highlight_vote1;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+			}
+			action
+			{
+				play "vote";
+				scriptMenuResponse "vote_1";
+			}
+		}
+
+		/// 2 ///
+		itemDef
+		{
+			name			     blanco_highlight_vote2
+			style			WINDOW_STYLE_SHADER
+			rect			     12 78 226 12
+			origin			ORIGIN_VOTE
+			background		"blanco_fade"
+               forecolor		     0 0.471 1 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible		1
+			rect			12 78 226 12
+			origin		ORIGIN_VOTE
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+
+				show blanco_highlight_vote2;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+			}
+			action
+			{
+				play "vote";
+				scriptMenuResponse "vote_2";
+			}
+		}
+
+		/// 3 ///
+		itemDef
+		{
+			name			     blanco_highlight_vote3
+			style			WINDOW_STYLE_SHADER
+			rect			     12 102 226 12
+			origin			ORIGIN_VOTE
+			background		"blanco_fade"
+               forecolor		     0 0.471 1 0.6
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible		1
+			rect			12 102 226 12
+			origin		ORIGIN_VOTE
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+
+				show blanco_highlight_vote3;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_vote1;
+				hide blanco_highlight_vote2;
+				hide blanco_highlight_vote3;
+				hide blanco_highlight_vote4;
+			}
+			action
+			{
+				play "vote";
+				scriptMenuResponse "vote_3";
+			}
+		}
+
+          /// 4 ///
+          itemDef
+          {
+               name			     blanco_highlight_vote4
+               style			WINDOW_STYLE_SHADER
+               rect			     12 126 226 12
+               origin			ORIGIN_VOTE
+               background		"blanco_fade"
+               forecolor		     0 0.471 1 0.6
+               visible			1
+               decoration
+          }
+          itemDef
+          {
+               visible		1
+               rect			12 126 226 12
+               origin		ORIGIN_VOTE
+               type			ITEM_TYPE_BUTTON
+               mouseEnter
+               {
+                    hide blanco_highlight_vote1;
+                    hide blanco_highlight_vote2;
+                    hide blanco_highlight_vote3;
+                    hide blanco_highlight_vote4;
+
+                    show blanco_highlight_vote4;
+                    play "mouse_over";
+               }
+               mouseExit
+               {
+                    hide blanco_highlight_vote1;
+                    hide blanco_highlight_vote2;
+                    hide blanco_highlight_vote3;
+                    hide blanco_highlight_vote4;
+               }
+               action
+               {
+                    play "vote";
+                    scriptMenuResponse "vote_4";
+               }
+          }
+
+          // Dvars
+		itemDef
+		{
+			dvar			"nl_records_vote_names"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			12 65 200 40
+			origin		ORIGIN_VOTE
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+		itemDef
+		{
+			dvar			"nl_records_vote_votes"
+			type			ITEM_TYPE_TEXT
+			visible		1
+			rect			202 65 200 40
+			origin		ORIGIN_VOTE
+			textscale		.25
+			textalignx	5
+			textalign 	ITEM_ALIGN_LEFT
+			decoration
+		}
+          itemDef
+          {
+			style		     ITEM_TYPE_TEXT
+		     rect			     245 144 200 40
+			origin			ORIGIN_VOTE
+               forecolor		     0.5 0.5 0.5 0.9
+			textfont		     UI_FONT_NORMAL
+			dvar			     "nl_records_vote_left"
+			textscale		     .22
+			textaligny		11
+			textalignx		0
+			textalign 		ITEM_ALIGN_RIGHT
+     		visible			1
+			decoration
+          }
+	}
+}

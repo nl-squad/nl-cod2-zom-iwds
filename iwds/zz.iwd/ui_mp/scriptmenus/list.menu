@@ -1,0 +1,645 @@
+#include "ui/menudef.h"
+
+#define TEXT_ON_BG_STYLE 	3	//
+
+{
+\\ SETUP MENU \\
+
+	menuDef 
+	{
+		name			"list"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0			
+		onOpen
+		{
+			scriptmenuresponse "LR"
+		}
+		onESC 
+		{ 
+			close list;		
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			190 5 420 40
+			backcolor		.2 .2 .5 .5
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"awarn"
+			visible			1
+			rect			200 25 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textaligny		8
+			dvar			"ui_lwarn"
+			decoration
+		}
+
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			190 70 400 390
+			backcolor		.2 .2 .5 .5
+			border			1
+			bordercolor		1 1 1 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"ids"
+			visible			1
+			rect			200 65 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_ids"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			390 71 1 388
+			backcolor		1 1 1 1
+			visible			1
+			decoration
+		}
+	
+		itemDef
+		{
+			name			"ids"
+			visible			1
+			rect			400 65 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_ids2"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			18 58 152 19
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		0 1 0 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name		info1
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		20 60 150 17
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor info1 backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor info1 backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "LR"
+			}
+		}
+		
+		itemDef
+		{
+			name			"info1_txt"
+			visible			1
+			rect			40 65 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_lr"
+			decoration
+		}
+		
+		/////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 350 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 375 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 400 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 425 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			2 450 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		f1a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 352 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f1a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f1a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List1"
+			}
+		}
+		itemDef
+		{
+			name		f2a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 377 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f2a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f2a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List2"
+			}
+		}
+		itemDef
+		{
+			name		f3a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 402 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f3a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f3a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List3"
+			}
+		}
+		itemDef
+		{
+			name		f4a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 427 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f4a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f4a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List4"
+			}
+		}
+		itemDef
+		{
+			name		f5a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		4 452 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f5a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f5a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List5"
+			}
+		}
+		itemDef
+		{
+			name			"f1"
+			visible			1
+			rect			15 356 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list1"
+			decoration
+		}
+		itemDef
+		{
+			name			"f2"
+			visible			1
+			rect			15 381 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list2"
+			decoration
+		}
+		itemDef
+		{
+			name			"f3"
+			visible			1
+			rect			15 406 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list3"
+			decoration
+		}
+		itemDef
+		{
+			name			"f4"
+			visible			1
+			rect			15 431 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list4"
+			decoration
+		}
+		itemDef
+		{
+			name			"f5"
+			visible			1
+			rect			15 456 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list5"
+			decoration
+		}
+		
+		/////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			82 350 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			82 375 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			82 400 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			82 425 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			82 450 70 15
+			backcolor		0 0 0 .8
+			border			1
+			bordercolor		0 1 0 .8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name		f6a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		84 352 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f6a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f6a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List6"
+			}
+		}
+		itemDef
+		{
+			name		f7a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		84 377 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f7a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f7a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List7"
+			}
+		}
+		itemDef
+		{
+			name		f8a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		84 402 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f8a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f8a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List8"
+			}
+		}
+		itemDef
+		{
+			name		f9a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		84 427 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f9a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f9a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List9"
+			}
+		}
+		itemDef
+		{
+			name		f10a
+			type		ITEM_TYPE_BUTTON
+			style		WINDOW_STYLE_FILLED
+			text		""
+			rect		84 452 68 13
+			visible		1
+			mouseEnter
+			{
+				play "mouse_over";
+				setitemcolor f10a backcolor 0 1 0 0.3
+			}
+			mouseExit
+			{
+				setitemcolor f10a backcolor 0 0 0 0
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "List10"
+			}
+		}
+		itemDef
+		{
+			name			"f6"
+			visible			1
+			rect			95 356 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list6"
+			decoration
+		}
+		itemDef
+		{
+			name			"f7"
+			visible			1
+			rect			95 381 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list7"
+			decoration
+		}
+		itemDef
+		{
+			name			"f8"
+			visible			1
+			rect			95 406 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list8"
+			decoration
+		}
+		itemDef
+		{
+			name			"f9"
+			visible			1
+			rect			95 431 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list9"
+			decoration
+		}
+		itemDef
+		{
+			name			"f10"
+			visible			1
+			rect			95 456 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			dvar			"ui_list10"
+			decoration
+		}
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			10 110 160 36
+			backcolor		.7 .7 .7 .1
+			border			1
+			bordercolor		1 0 0 1
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"slct"
+			visible			1
+			rect			20 120 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.35
+			textaligny		8
+			dvar			"ui_lslct"
+			decoration
+		}
+		
+		//////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////
+		
+		#include "ui_mp/blanco/p.menu"
+
+	}
+
+}

@@ -1,0 +1,838 @@
+Particle
+{
+	name				inner_fire
+
+	flags				useRandomRotationDelta useRandomVelocity absoluteVel2
+
+	spawnFlags			orgOnCylinder evenDistribution
+
+	count				500
+
+	life				2000
+
+	delay				0 6e+004
+
+	spawnRange			0 1500
+
+	radius				5 12
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	24.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0 0 1
+			0.01437 1 0.9839 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5069 0 0
+			0.9296 0.5 0 0
+			0.9765 0.4167 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0 0
+			0.03653 0.5405 0 0
+			0.137 0.8829 0 0
+			0.347 1 0 0
+			0.6164 0.8739 0 0
+			0.8539 0.6577 0 0
+			1 0.4304 0 0
+		]
+
+		scale			30
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 -0.5 0 0
+		]
+
+		scale			25
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0 0 0
+		]
+
+		scale			100
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.06667 0 0
+			1 -0.06667 0 0
+		]
+
+		scale			75
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.08 0 0
+			1 0.08 0 0
+		]
+
+		scale			75
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.3824 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.06667 0 0
+			1 0.06667 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.06373 0 0
+			1 -0.07843 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			100
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0.2042 0 0
+			1 0.2042 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_fire_atlas
+	]
+}
+
+Particle
+{
+	name				thinSmoke
+
+	flags				useAlpha useRandomColors useRandomRotationDelta useRandomVelocity useRandomVelocity2 absoluteVel2
+
+	spawnFlags			cheapOrgCalc orgOnCylinder evenDistribution
+
+	count				12
+
+	life				6e+004
+
+	origin				0 0 30
+
+	radius				15
+
+	height				8
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	sequenceLoopMode	1
+
+	sequenceLoopTimes	0
+
+	rgb
+	{
+		curve
+		[
+			0 0.8118 0.5529 0.3216
+			0.2701 0.6235 0.4667 0.1765
+			0.4224 0.1843 0.2016 0.2353
+			1 0.1922 0.2039 0.2431
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.8118 0.5529 0.3216
+			0.4224 0.1843 0.2016 0.2353
+			1 0.1922 0.2039 0.2431
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.08046 0.104 0 0
+			0.181 0.2723 0 0
+			0.25 0.4059 0 0
+			0.3362 0.4455 0 0
+			0.408 0.4208 0 0
+			0.5446 0.2917 0 0
+			0.7418 0.125 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1351 0 0
+			0.3059 0.2342 0 0
+			0.6484 0.5135 0 0
+			1 1 0 0
+		]
+
+		scale			125
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.05263 -0.4187 0 0
+			0.1053 -0.3507 0 0
+			0.1579 -0.2937 0 0
+			0.2105 -0.246 0 0
+			0.2632 -0.206 0 0
+			0.3158 -0.1725 0 0
+			0.3684 -0.1445 0 0
+			0.4211 -0.121 0 0
+			0.4737 -0.1014 0 0
+			0.5263 -0.08488 0 0
+			0.5789 -0.07109 0 0
+			0.6316 -0.05954 0 0
+			0.6842 -0.04986 0 0
+			0.7368 -0.04176 0 0
+			0.7895 -0.03497 0 0
+			0.8421 -0.02929 0 0
+			0.8947 -0.02453 0 0
+			0.9474 -0.02054 0 0
+			1 -0.01721 0 0
+		]
+
+		scale			24
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.05263 0.4187 0 0
+			0.1053 0.3507 0 0
+			0.1579 0.2937 0 0
+			0.2105 0.246 0 0
+			0.2632 0.206 0 0
+			0.3158 0.1725 0 0
+			0.3684 0.1445 0 0
+			0.4211 0.121 0 0
+			0.4737 0.1014 0 0
+			0.5263 0.08488 0 0
+			0.5789 0.07109 0 0
+			0.6316 0.05954 0 0
+			0.6842 0.04986 0 0
+			0.7368 0.04176 0 0
+			0.7895 0.03497 0 0
+			0.8421 0.02929 0 0
+			0.8947 0.02453 0 0
+			0.9474 0.02054 0 0
+			1 0.01721 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			20
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.08824 0 0
+			1 -0.08333 0 0
+		]
+
+		scale			80
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.02941 0 0
+			1 -0.03431 0 0
+		]
+
+		scale			80
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.4363 0 0
+			1 0.451 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.05392 0 0
+			1 0.06373 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.05392 0 0
+			1 0.03922 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			60
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 -0.5 0 0
+		]
+
+		scale			60
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			60
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0.3263 0 0
+			1 0.3169 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}
+
+Particle
+{
+	name				outer_fire
+
+	flags				useRandomRotationDelta useRandomVelocity
+
+	spawnFlags			orgOnCylinder evenDistribution
+
+	count				10
+
+	life				6e+004
+
+	radius				0
+
+	height				0
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	24.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.3871 0.3952 1
+			0.03448 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.02586 0.2708 0 0
+			0.06897 0.4097 0 0
+			0.1724 0.4722 0 0
+			0.8218 0.4514 0 0
+			0.908 0.4028 0 0
+			0.954 0.2778 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			1 1 0 0
+		]
+
+		scale			30
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0 0 0
+			1 1 0 0
+		]
+
+		scale			40
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 1 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.2443 -0.35 0 0
+			0.6264 -0.2136 0 0
+			1 -0.1394 0 0
+		]
+
+		scale			8
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.2615 0.3636 0 0
+			0.7213 0.1955 0 0
+			1 0.1394 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_fire_atlas
+	]
+}

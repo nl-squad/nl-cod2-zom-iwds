@@ -1,0 +1,10 @@
+          name			"weapons_3"
+          visible		0
+          rect			-10 0 128 24
+          forecolor		GLOBAL_UNFOCUSED_COLOR
+          type			ITEM_TYPE_TEXT
+          textfont		UI_FONT_NORMAL
+          textscale		.25
+          textstyle		ITEM_TEXTSTYLE_SHADOWED
+          textaligny	20
+          textalign      ITEM_ALIGN_RIGHT

@@ -1,0 +1,279 @@
+
+		/// WEAPON LEVEL ///
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 -2 0 0
+			origin			ORIGIN_WEAPONLEVEL
+			forecolor		.5 .5 .5 1
+			dvar			nl_up_lvl
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			-18 11 0 0
+			origin			ORIGIN_WEAPONLEVEL
+			forecolor		0.9 0.45 0 1
+			dvar			nl_up_lvl1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			155 11 0 0
+			origin			ORIGIN_WEAPONLEVEL
+			forecolor		0.9 0.45 0 1
+			dvar			nl_up_lvl2
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			decoration
+		}
+		itemDef
+		{
+			visible 		1
+			rect			0 0 145 10
+			origin			ORIGIN_WEAPONLEVEL
+			backcolor		.2 .2 .2 1
+			style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "0" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 1 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "1" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 8 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "2" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 15 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "3" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 22 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "4" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 29 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "5" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 36 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "6" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 43 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "7" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 50 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "8" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 57 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "9" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 64 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "10" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 71 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "11" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 78 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "12" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 85 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "13" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 92 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "14" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 99 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "15" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 106 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "16" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 113 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "17" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 120 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "18" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 127 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "19" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 134 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"blanco_wpn_bar"
+			showDvar		{ "20" }
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 143 10
+			origin			ORIGIN_WEAPONLEVEL
+			background		"nl_hud_levelbar"
+			decoration
+		}

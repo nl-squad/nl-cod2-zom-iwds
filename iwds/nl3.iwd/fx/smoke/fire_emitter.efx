@@ -1,0 +1,29 @@
+Particle
+{
+	name				embers
+
+	life				1000
+
+	rotation			-10 10
+
+	rotationDelta		-3 3
+
+	alpha
+	{
+		end				0
+		parm			10
+		flags			linear
+	}
+
+	size
+	{
+		end				20
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx_exp_fireball_atlas
+		gfx_fire_atlas
+	]
+}

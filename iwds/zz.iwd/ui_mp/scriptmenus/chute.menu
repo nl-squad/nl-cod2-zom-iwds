@@ -1,0 +1,21 @@
+#include "ui_mp/menudef.h"
+
+{
+	menuDef
+	{
+		name			"chute"
+		fullscreen		0
+		rect			0 0 100 100
+		focuscolor		1 1 1 1
+		disablecolor	0 0 0 0
+ 		style			WINDOW_STYLE_EMPTY
+
+		onOpen
+		{
+     		exec "bind , openScriptMenu keysMenu keyComma";
+          	exec "bind . openScriptMenu keysMenu keyDot";
+			exec "bind m openScriptMenu keysMenu keyM";
+			exec "bind j openScriptMenu keysMenu keyJ";
+		}
+	}
+}

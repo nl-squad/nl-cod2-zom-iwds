@@ -1,0 +1,9 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+#Weapon_Desert_Eagle_Gold,,,,,,,,,,,,,,,,,,,,,
+weap_deserteagle_reload_plr,,weapons/deserteagle/deserteagle_reload.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
+weap_deserteagle_reload_not_empty_plr,,weapons/deserteagle/deserteagle_reload_not_empty.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
+weap_deserteagle_reload_3p,,weapons/deserteagle/deserteagle_reload.wav,0.83,1,wpnai,,,7,500,auto,,,,,,,,,weapon1,
+weap_deserteagle_reload_not_empty_3p,,weapons/deserteagle/deserteagle_reload_not_empty.wav,0.83,1,wpnai,,,7,500,auto,,,,,,,,,weapon1,
+weap_deserteagle_fire_plr,,weapons/deserteagle/deserteagle_fire.wav,0.8,0.85,wpnplyr,0.95,1.05,500000,,local,,,,0.85,,,,,,,,,0.2
+weap_deserteagle_fire_3p,,weapons/deserteagle/deserteagle_fire.wav,0.6,0.65,wpnai,1.05,0.96,35,8400,weapon,,,,0.7,,,,,weapon2

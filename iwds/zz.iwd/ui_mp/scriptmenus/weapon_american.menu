@@ -1,0 +1,868 @@
+#include "ui_mp/menudef.h"
+
+
+#define ORIGIN_LOGO				121 120
+#define ORIGIN_WINDOW1			340 100
+#define ORIGIN_WINDOW2			340 200
+#define ORIGIN_SEC1                363 220
+#define ORIGIN_ZOM1                488 220
+#define ORIGIN_WINDOW3			340 300
+#define ORIGIN_WINDOW4			60 300
+#define ORIGIN_APP1                88 320
+#define ORIGIN_LOADOUT			60 260
+#define ORIGIN_BUTTON			370 400
+
+#define ORIGIN_KR1				352 325
+#define ORIGIN_KR2				407 325
+#define ORIGIN_KR3				462 325
+#define ORIGIN_KR4				517 325
+#define ORIGIN_PE1				227 325
+#define ORIGIN_PE2				287 325
+#define ORIGIN_INFO				400 415
+
+#define ORIGIN_EXIT				20 415
+{
+	menuDef
+	{
+		name			"weapon_american"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			setdvar nl_kr_info "";
+		}
+		onEsc
+		{
+			close weapon_american;
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// LOGO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 128 128
+			origin			ORIGIN_LOGO
+			background		"nl_logo_avard"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			-10 -5 0 0
+			origin			ORIGIN_LOGO
+			text			"^4` ^7NoLimits ^4~> ^9Zombies ^4*"
+			textscale		.30
+			visible			1
+			decoration
+		}
+
+		/// BRON PODSTAWOWA ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW1
+			background		"nl_wps_ramka1"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW1
+			text			"Primary weapon"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		230
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_select;
+			}
+		}
+
+          /// DRUGA BRON ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     0 0 115 90
+			origin			ORIGIN_WINDOW2
+			background		"nl_wps_ramka4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 115 90
+			origin			ORIGIN_WINDOW2
+			text			"Secondary weapon"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		110
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 115 90
+			origin			ORIGIN_WINDOW2
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_secondary;
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			87 77 30 14
+			origin			ORIGIN_WINDOW2
+			textscale		.18
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		0
+			textaligny		10
+			text			"Default"
+			forecolor		0.5 0.5 0.5 1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "reset_secondary";
+			}
+		}
+
+          /// ZOMBIE BRON ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			     125 0 115 90
+			origin			ORIGIN_WINDOW2
+			background		"nl_wps_ramka4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			125 0 115 90
+			origin			ORIGIN_WINDOW2
+			text			"Zombie weapon"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		110
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			125 0 115 90
+			origin			ORIGIN_WINDOW2
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_zombie;
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			212 77 30 14
+			origin			ORIGIN_WINDOW2
+			textscale		.18
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		0
+			textaligny		10
+			text			"Default"
+			forecolor		0.5 0.5 0.5 1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "reset_zombie";
+			}
+		}
+
+
+		/// KILLSTREAKS ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW3
+			background		"nl_wps_ramka2"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW3
+			text			"Killstreaks"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		230
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 240 90
+			origin			ORIGIN_WINDOW3
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_killstreak;
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			218 77 25 14
+			origin			ORIGIN_WINDOW3
+			textscale		.18
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		0
+			textaligny		10
+			text			"Clear"
+			forecolor		0.5 0.5 0.5 1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "reset_ks";
+			}
+		}
+
+		/// APPEREANCE ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 120 90
+			origin			ORIGIN_WINDOW4
+			background		"nl_wps_ramka4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 120 90
+			origin			ORIGIN_WINDOW4
+			text			"Skin"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		110
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 120 90
+			origin			ORIGIN_WINDOW4
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_appereance;
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			91 77 30 14
+			origin			ORIGIN_WINDOW4
+			textscale		.18
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		0
+			textaligny		10
+			text			"Default"
+			forecolor		0.5 0.5 0.5 1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "reset_skin";
+			}
+		}
+
+		/// ATUTY ///
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			130 0 119 90
+			origin			ORIGIN_WINDOW4
+			background		"nl_wps_ramka4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			130 0 119 90
+			origin			ORIGIN_WINDOW4
+			text			"Perk"
+			textscale		.23
+			textalign 		ITEM_ALIGN_RIGHT
+			textalignx		110
+			textaligny		15
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			130 0 119 90
+			origin			ORIGIN_WINDOW4
+			visible			1
+			action
+			{
+				play "mouse_click";
+				close weapon_american;
+				open weapon_perks;
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			226 77 25 14
+			origin			ORIGIN_WINDOW4
+			textscale		.18
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		0
+			textaligny		10
+			text			"Clear"
+			forecolor		0.5 0.5 0.5 1
+			visible			1
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "reset_perks";
+			}
+		}
+
+		/// PRIMARY ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			55 20 130 65
+			origin			ORIGIN_WINDOW1
+			visible 		1
+			dvar 			nl_primary
+			decoration
+		}
+          // SECONDARY ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			10 5 50 50
+			origin			ORIGIN_SEC1
+			visible 		1
+			dvar 			nl_secondary
+			decoration
+		}
+
+          // ZOMBIE ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			10 5 50 50
+			origin			ORIGIN_ZOM1
+			visible 		1
+			dvar 			nl_zombiegun
+			decoration
+		}
+
+		/// KILLSTREAKI ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 0 50 50
+			origin			ORIGIN_KR1
+			visible 		1
+			dvar 			nl_kr_1
+			decoration
+		}
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 0 50 50
+			origin			ORIGIN_KR2
+			visible 		1
+			dvar 			nl_kr_2
+			decoration
+		}
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 0 50 50
+			origin			ORIGIN_KR3
+			visible 		1
+			dvar 			nl_kr_3
+			decoration
+		}
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 0 50 50
+			origin			ORIGIN_KR4
+			visible 		1
+			dvar 			nl_kr_4
+			decoration
+		}
+
+		/// PERKS ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 -5 50 50
+			origin			ORIGIN_PE1
+			visible 		1
+			dvar 			nl_pe_1
+			decoration
+		}
+
+          // APPERANCE ///
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			5 -5 60 60
+			origin			ORIGIN_APP1
+			visible 		1
+			dvar 			nl_appereance
+			decoration
+		}
+
+		/// LOADOUTS ///
+		itemDef
+		{
+               name           "loadout_btn_1"
+			style		WINDOW_STYLE_SHADER
+			rect			0 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_button"
+			visible		1
+			decoration
+		}
+		itemDef
+		{
+               name           "loadout_btn_hover_1"
+			style		WINDOW_STYLE_SHADER
+			rect			0 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_buttonh"
+			visible		0
+			decoration
+		}
+		itemDef
+		{
+			name			load1
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 80 14
+			origin		ORIGIN_LOADOUT
+			textscale		.22
+			textalign 	ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"Load class ^31"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_btn_hover_1;
+                    hide loadout_btn_1;
+			}
+			mouseExit
+			{
+                    show loadout_btn_1;
+                    hide loadout_btn_hover_1;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "loadout1";
+			}
+		}
+
+		itemDef
+		{
+               name           "loadout_btn_2"
+			style		WINDOW_STYLE_SHADER
+			rect			84 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_button"
+			visible		1
+			decoration
+		}
+		itemDef
+		{
+               name           "loadout_btn_hover_2"
+			style		WINDOW_STYLE_SHADER
+			rect			84 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_buttonh"
+			visible		0
+			decoration
+		}
+		itemDef
+		{
+			name			load2
+			type			ITEM_TYPE_BUTTON
+			rect			84 0 80 14
+			origin			ORIGIN_LOADOUT
+			textscale		.22
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"Load class ^32"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_btn_hover_2;
+                    hide loadout_btn_2;
+			}
+			mouseExit
+			{
+                    show loadout_btn_2;
+                    hide loadout_btn_hover_2;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "loadout2";
+			}
+		}
+
+		itemDef
+		{
+               name           "loadout_btn_3"
+			style		WINDOW_STYLE_SHADER
+			rect			168 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_button"
+			visible		1
+			decoration
+		}
+		itemDef
+		{
+               name           "loadout_btn_hover_3"
+			style		WINDOW_STYLE_SHADER
+			rect			168 0 80 14
+			origin		ORIGIN_LOADOUT
+			background	"nl_buttonh"
+			visible		0
+			decoration
+		}
+		itemDef
+		{
+			name			load3
+			type			ITEM_TYPE_BUTTON
+			rect			168 0 80 14
+			origin			ORIGIN_LOADOUT
+			textscale		.22
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"^3VIP ^7Load class ^33"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_btn_hover_3;
+                    hide loadout_btn_3;
+			}
+			mouseExit
+			{
+                    show loadout_btn_3;
+                    hide loadout_btn_hover_3;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "loadout3";
+			}
+		}
+
+          itemDef
+          {
+               name           "loadout_save_btn_1"
+               style		WINDOW_STYLE_SHADER
+               rect			0 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_button"
+               visible		1
+               decoration
+          }
+          itemDef
+          {
+               name           "loadout_save_btn_hover_1"
+               style		WINDOW_STYLE_SHADER
+               rect			0 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_buttonh"
+               visible		0
+               decoration
+          }
+		itemDef
+		{
+			name			save1
+			type			ITEM_TYPE_BUTTON
+			rect			0 18 80 14
+			origin			ORIGIN_LOADOUT
+			textscale		.22
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"Save class ^31"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_save_btn_hover_1;
+                    hide loadout_save_btn_1;
+			}
+			mouseExit
+			{
+                    show loadout_save_btn_1;
+                    hide loadout_save_btn_hover_1;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "save_loadout1";
+			}
+		}
+
+          itemDef
+          {
+               name           "loadout_save_btn_2"
+               style		WINDOW_STYLE_SHADER
+               rect			84 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_button"
+               visible		1
+               decoration
+          }
+          itemDef
+          {
+               name           "loadout_save_btn_hover_2"
+               style		WINDOW_STYLE_SHADER
+               rect			84 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_buttonh"
+               visible		0
+               decoration
+          }
+		itemDef
+		{
+			name			save2
+			type			ITEM_TYPE_BUTTON
+			rect			84 18 80 14
+			origin			ORIGIN_LOADOUT
+			textscale		.22
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"Save class ^32"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_save_btn_hover_2;
+                    hide loadout_save_btn_2;
+			}
+			mouseExit
+			{
+                    show loadout_save_btn_2;
+                    hide loadout_save_btn_hover_2;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "save_loadout2";
+			}
+		}
+
+          itemDef
+          {
+               name           "loadout_save_btn_3"
+               style		WINDOW_STYLE_SHADER
+               rect			168 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_button"
+               visible		1
+               decoration
+          }
+          itemDef
+          {
+               name           "loadout_save_btn_hover_3"
+               style		WINDOW_STYLE_SHADER
+               rect			168 18 80 14
+               origin		ORIGIN_LOADOUT
+               background	"nl_buttonh"
+               visible		0
+               decoration
+          }
+		itemDef
+		{
+			name			save3
+			type			ITEM_TYPE_BUTTON
+			rect			168 18 80 14
+			origin			ORIGIN_LOADOUT
+			textscale		.22
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		40
+			textaligny		12
+			text			"^3VIP ^7Save class ^33"
+			visible			1
+			mouseEnter
+			{
+                    show loadout_save_btn_hover_3;
+                    hide loadout_save_btn_3;
+			}
+			mouseExit
+			{
+                    show loadout_save_btn_3;
+                    hide loadout_save_btn_hover_3;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "save_loadout3";
+			}
+		}
+
+		/// SPAWN ///
+		itemDef
+		{
+               name           "spawn_btn"
+			style		WINDOW_STYLE_SHADER
+			rect			0 0 128 28
+			origin		ORIGIN_BUTTON
+			background	"nl_button"
+			visible		1
+			decoration
+		}
+		itemDef
+		{
+               name           "spawn_btn_hover"
+			style		WINDOW_STYLE_SHADER
+			rect			0 0 128 28
+			origin		ORIGIN_BUTTON
+			background	"nl_buttonh"
+			visible		0
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 128 28
+			origin		ORIGIN_BUTTON
+			text			"Spawn"
+               textalign      ITEM_ALIGN_CENTER
+               textalignx     64
+               textaligny     21
+			textscale		.32
+			visible		1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 128 28
+			origin			ORIGIN_BUTTON
+			visible			1
+               mouseEnter
+               {
+                    show spawn_btn_hover;
+                    hide spawn_btn;
+               }
+               mouseExit
+               {
+                    show spawn_btn;
+                    hide spawn_btn_hover;
+               }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "spawn";
+			}
+		}
+		execKey "s" { scriptMenuResponse "spawn"; }
+
+		/// MAIN MENU ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 -20 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4M ^7Main menu"
+			textaligny		15
+			visible			1
+			action
+			{
+				close weapon_american;
+				open main;
+				play "mouse_click";
+			}
+		}
+		execKey "m" { close weapon_american; open main; }
+
+		/// INGAME MENU ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4I ^7Ingame menu"
+			textaligny		15
+			visible			1
+			action
+			{
+				close weapon_american;
+				open ingame;
+				play "mouse_click";
+			}
+		}
+		execKey "i" { close weapon_american; open ingame; }
+	}
+}

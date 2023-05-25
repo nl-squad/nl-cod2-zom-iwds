@@ -1,0 +1,16 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+#New commands,,,,,,,,,,,,,,,,,,,,,,,
+cheer,6,Voiceovers/MP/cheer.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+thanks2,6,Voiceovers/MP/us_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+
+attack1,1,zombies/zom_attack1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack2,2,zombies/zom_attack2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack3,3,zombies/zom_attack3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack4,4,zombies/zom_attack4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+growl1,1,zombies/zom_growl1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+growl2,1,zombies/zom_growl2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+growl3,1,zombies/zom_growl3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+growl4,1,zombies/zom_growl4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+growl5,1,zombies/zom_growl5.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp

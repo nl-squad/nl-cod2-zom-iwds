@@ -1,0 +1,113 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE		48 64
+#define ORIGIN_CHOICE1		240 200
+
+#define ORIGIN_TEAMIMAGE	280 280
+
+{
+	menuDef
+	{
+		name			"zomteam_americangerman"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			hide autoassign_info;
+		}
+		onClose
+		{
+			hide autoassign_info;
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+		
+		execKey "1" { play "mouse_click"; scriptMenuResponse "autoassign"; }
+
+		#include "ui_mp/blanco/bars.menu"
+		
+		itemDef 
+		{
+			name			"button_autoassign"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"Join ^9ZOMBIES^4*"
+			textfont		UI_FONT_NORMAL
+			textscale		.60
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "autoassign";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				show autoassign_info;
+			}
+		}
+		
+		itemDef 
+		{
+			name			"button_mainmenu"
+			visible			1
+			rect			0 0 128 24
+			origin			48 417
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"^7Main ^9Menu"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			textaligny		24
+
+			action
+			{
+				play "mouse_click";
+				close zomteam_americangerman;
+				open main;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		
+		itemDef 
+		{
+			name			"spectator"
+			visible			1
+			rect			0 0 128 24
+			origin			460 417
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"^7Spectator"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			textaligny		24
+
+			action
+			{
+				play "mouse_click";
+				close zomteam_americangerman;
+				scriptMenuResponse "spectator";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+    }
+}
