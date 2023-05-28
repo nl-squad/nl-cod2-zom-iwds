@@ -1,11 +1,13 @@
 #include "ui/menudef.h"
 
-#define ORIGIN_TITLE				60 130
-#define ORIGIN_LOGIN				100 160
-#define ORIGIN_PASS					100 190
-#define ORIGIN_REMEMBER				100 220
+#define ORIGIN_LOGO					260 100
+#define ORIGIN_TITLE				60 180
+#define ORIGIN_LOGIN				175 210
+#define ORIGIN_PASS					175 240
+#define ORIGIN_REMEMBER				175 270
 #define ORIGIN_MAINMENU				50 380
 #define ORIGIN_DISCONNECT			50 350
+#define ORIGIN_INFORMATION			400 380
 
 {
 	menuDef 
@@ -64,6 +66,17 @@
 			decoration
 		}
 
+		// Logo
+		itemDef
+		{
+			style		WINDOW_STYLE_SHADER
+			rect		0 0 120 120
+			origin		ORIGIN_LOGO
+			background	"nl_omniscientos"
+			visible		1
+			decoration
+		}
+
 		// Naglowek
 		itemDef
 		{
@@ -74,6 +87,31 @@
 			text			"ACCOUNT"
 			textfont		UI_FONT_NORMAL
 			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 15 0 0
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"To play on NoLimits servers you have to have an account. Register or login below."
+			textfont		UI_FONT_NORMAL
+			textscale		.2
+			decoration
+		}
+
+		// Bottom information
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_INFORMATION
+			forecolor		1 1 1 1
+			text			"Visit ^8mynl.pl\n^7Discord: ^8ds.mynl.pl ^9or ^8discord.gg/37UBvysKQ5"
+			textfont		UI_FONT_NORMAL
+			textscale		.2
 			decoration
 		}
 
@@ -141,7 +179,7 @@
 		itemDef 
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			140 4 16 16
+			rect			90 4 16 16
 			origin			ORIGIN_REMEMBER
 			backcolor		0 0 0 0
 			border			1
@@ -188,7 +226,7 @@
 		itemDef 
 		{
 			visible			1
-			rect			140 4 16 16
+			rect			90 4 16 16
 			origin			ORIGIN_REMEMBER
 			type			ITEM_TYPE_BUTTON
 			action
@@ -204,30 +242,13 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect			142 7 14 14
+			rect			92 7 14 14
 			origin			ORIGIN_REMEMBER
 			background		"blanco_tick"
 			dvartest		"ui_remember"
 			showDvar		{ "1" }
 			visible			1
 			decoration
-		}
-
-		itemDef 
-		{
-			visible			1
-			rect			140 4 16 16
-			origin			ORIGIN_REMEMBER
-			type			ITEM_TYPE_BUTTON
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "remember";
-			}
-			onFocus
-			{
-				play "mouse_over";
-			}
 		}
 
 		// Edycja tekstu
@@ -330,7 +351,6 @@
 			}
 		}
 
-		// Warn
 		itemDef
 		{
 			visible			1
@@ -351,73 +371,30 @@
 		// MAIN MENU
 		itemDef
 		{
-			name			mainmenu_button
-			visible			1
-			rect			30 50 0 0
-			origin			ORIGIN_MAINMENU
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			text			"MAIN MENU"
-			decoration
-		}
-		itemDef 
-		{
-			visible			1
-			rect			20 40 100 22
-			origin			ORIGIN_MAINMENU
 			type			ITEM_TYPE_BUTTON
-			border			1
-			bordercolor		1 1 1 1
-			mouseEnter
-			{
-				play "mouse_over";
-				setitemcolor mainmenu_button forecolor 0 0.58 1 1
-			}
-			mouseExit
-			{
-				setitemcolor mainmenu_button forecolor 1 1 1 1
-			}
+			rect			0 -20 40 20
+			origin			ORIGIN_MAINMENU
+			textscale		.25
+			text			"Main menu"
+			textaligny		15
+			visible			1
 			action
 			{
-				play "mouse_click";
-				close ingame;
 				open main;
+				play "mouse_click";
 			}
 		}
 
 		// DISCONNECT
 		itemDef
 		{
-			name			disconnect_button
-			visible			1
-			rect			30 50 0 0
-			origin			ORIGIN_DISCONNECT
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			text			"DISCONNECT"
-			decoration
-		}
-		itemDef 
-		{
-			visible			1
-			rect			20 40 100 22
-			origin			ORIGIN_DISCONNECT
 			type			ITEM_TYPE_BUTTON
-			border			1
-			bordercolor		1 1 1 1
-			mouseEnter
-			{
-				play "mouse_over";
-				setitemcolor disconnect_button forecolor 0 0.58 1 1
-			}
-			mouseExit
-			{
-				setitemcolor disconnect_button forecolor 1 1 1 1
-			}
+			rect			0 -20 40 20
+			origin			ORIGIN_DISCONNECT
+			textscale		.25
+			text			"Disconnect"
+			textaligny		15
+			visible			1
 			action
 			{
 				play "mouse_click";
