@@ -1,13 +1,12 @@
 #include "ui/menudef.h"
 
-#define ORIGIN_LOGO					260 100
-#define ORIGIN_TITLE				60 180
-#define ORIGIN_LOGIN				175 210
-#define ORIGIN_PASS					175 240
-#define ORIGIN_REMEMBER				175 270
-#define ORIGIN_MAINMENU				50 380
-#define ORIGIN_DISCONNECT			50 350
-#define ORIGIN_INFORMATION			400 380
+#define ORIGIN_LOGO					260 60
+#define ORIGIN_TITLE				60 220
+#define ORIGIN_LOGIN				175 250
+#define ORIGIN_PASS					175 280
+#define ORIGIN_REMEMBER				175 310
+#define ORIGIN_DISCONNECT			50 370
+#define ORIGIN_INFORMATION			400 400
 
 {
 	menuDef 
@@ -109,7 +108,7 @@
 			visible			1
 			origin			ORIGIN_INFORMATION
 			forecolor		1 1 1 1
-			text			"Visit ^8mynl.pl\n^7Discord: ^8ds.mynl.pl ^9or ^8discord.gg/37UBvysKQ5"
+			text			"Visit ^8mynl.pl\n^7Discord: ^8ds.mynl.pl ^7or ^8discord.gg/37UBvysKQ5\n^7Forgot password? No worries, just contact ^8Dusza ^7on discord."
 			textfont		UI_FONT_NORMAL
 			textscale		.2
 			decoration
@@ -367,23 +366,6 @@
 		execKeyInt 9 { play "mouse_click"; scriptMenuResponse "t" }
 		execKeyInt 13 { play "mouse_click"; scriptMenuResponse "e" }
 		execKeyInt 127 { play "mouse_click"; scriptMenuResponse "b" }
-
-		// MAIN MENU
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 -20 40 20
-			origin			ORIGIN_MAINMENU
-			textscale		.25
-			text			"Main menu"
-			textaligny		15
-			visible			1
-			action
-			{
-				open main;
-				play "mouse_click";
-			}
-		}
 
 		// DISCONNECT
 		itemDef
