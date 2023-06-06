@@ -23,6 +23,7 @@
                hide blanco_highlight_vote3;
                hide blanco_highlight_vote4;
           }
+		onESC { }
 
 		// Gradient
 		itemDef
