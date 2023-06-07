@@ -210,7 +210,7 @@
                textscale		.2
                textalignx		2
                textaligny		76
-               text			"Recon" //a
+               text			"Omniscient" //a
                mouseEnter
                {
                     scriptMenuResponse "hover_2"; //a
@@ -239,7 +239,7 @@
 			textscale		.2
 			textalignx		2
 			textaligny		76
-			text			"Omniscient" //a
+			text			"Recon" //a
 			mouseEnter
 			{
 				scriptMenuResponse "hover_3"; //a
