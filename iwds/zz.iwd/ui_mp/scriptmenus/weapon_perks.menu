@@ -524,7 +524,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			5 5 70 70
 			origin			ORIGIN_KR9
-			background		"nl_kutka_vip"
+			background		"nl_kutka"
 			dvartest		"perk_9"
 			showDvar		{ "2" }
 			visible			1
