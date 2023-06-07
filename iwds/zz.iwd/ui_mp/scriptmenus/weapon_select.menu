@@ -22,6 +22,7 @@
 #define ORIGIN_CHOICE13				150 340
 #define ORIGIN_EXIT					20 415
 #define ORIGIN_INFO					400 415
+#define ORIGIN_NLT					400 340
 
 {
 	menuDef
@@ -41,12 +42,14 @@
 			setdvar nl_weapon "nl_blank";
 			show weapons_1;
 			hide weapons_2;
-               hide weapons_3;
+			hide weapons_3;
 			hide weapons_4;
 			hide weapons_1_hover;
 			hide weapons_2_hover;
 			hide weapons_3_hover;
 			hide weapons_4_hover;
+			hide nlt_tooltip;
+			scriptMenuResponse "open";
 		}
 
 		/// TLO ///
@@ -827,6 +830,40 @@
 				open weapon_american;
 				play "mouse_click";
 			}
+		}
+
+		itemDef
+		{
+			dvar			"nlt"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			-3 0 51 18
+			origin			ORIGIN_NLT
+			textscale		.25
+			textaligny		15
+			textalignx		3
+			decoration
+			
+			mouseEnter
+			{
+				show nlt_tooltip;
+			}
+			mouseExit
+			{
+				hide nlt_tooltip;
+			}
+		}
+		
+		itemDef
+		{
+			name			"nlt_tooltip"
+			type			ITEM_TYPE_TEXT
+			rect			0 30 0 0
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
+			visible			1
+			decoration
 		}
 
 		itemDef
