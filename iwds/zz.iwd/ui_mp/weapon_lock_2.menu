@@ -1,0 +1,6 @@
+			name			"weapons_2"
+			style			WINDOW_STYLE_SHADER
+			background		"nl_kutka"
+			showDvar		{ "2" }
+			visible			1
+			decoration

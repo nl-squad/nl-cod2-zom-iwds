@@ -369,7 +369,7 @@
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE5
-               text			"^9Rank 20 ^4|"
+               text			"^9NLT ^8500 ^4|"
           }
 		itemDef
 		{
@@ -386,11 +386,18 @@
 				setdvar nl_weapon "nl_img_g3";
 			}
 		}
+		itemDef
+		{
+			#include       "ui_mp/weapon_lock_1.menu"
+			rect			10 2 24 24
+			origin		ORIGIN_CHOICE5
+			dvartest		"w1_5"
+		}
           itemDef
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^9NLT ^81000 ^4|"
+               text			"^9NLT ^81 000 ^4|"
           }
 		itemDef
 		{
@@ -409,14 +416,10 @@
 		}
 		itemDef
 		{
-			style		WINDOW_STYLE_SHADER
-			rect			50 2 16 16
+			#include       "ui_mp/weapon_lock_1.menu"
+			rect			40 2 24 24
 			origin		ORIGIN_CHOICE6
-			background	"nl_kutka"
 			dvartest		"w1_6"
-			showDvar		{ "2" }
-			visible		1
-			decoration
 		}
 		itemDef
 		{
@@ -634,7 +637,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE10
-               text			"^9Rank 75 ^4|"
+               text			"^9NLT ^82 500 000 ^4|"
           }
           itemDef
           {
@@ -651,6 +654,13 @@
                     setdvar nl_weapon "nl_img_g36";
                }
           }
+		itemDef
+		{
+			#include       "ui_mp/weapon_lock_2.menu"
+			rect			12 2 24 24
+			origin		ORIGIN_CHOICE10
+			dvartest		"w2_10"
+		}
           itemDef
           {
                #include "ui_mp/weapon_rank_2.menu"
