@@ -390,7 +390,7 @@
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^9Rank 55 ^4|"
+               text			"^9NLT ^81000 ^4|"
           }
 		itemDef
 		{
@@ -406,6 +406,17 @@
 			{
 				setdvar nl_weapon "nl_img_remington";
 			}
+		}
+		itemDef
+		{
+			style		WINDOW_STYLE_SHADER
+			rect			50 2 16 16
+			origin		ORIGIN_CHOICE6
+			background	"nl_kutka"
+			dvartest		"w1_6"
+			showDvar		{ "2" }
+			visible		1
+			decoration
 		}
 		itemDef
 		{
