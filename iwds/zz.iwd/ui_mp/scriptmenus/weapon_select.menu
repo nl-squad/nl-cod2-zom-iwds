@@ -554,7 +554,7 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE5
-               text			"SIG"
+               text			"SIG SG 552"
                action
                {
                     play "mouse_click";
@@ -637,7 +637,7 @@
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE1
-               text			"Bar"
+               text			"BAR"
                action
                {
                     play "mouse_click";
@@ -679,7 +679,7 @@
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE4
-               text			"Winchester"
+               text			"Winchester 1200"
                action
                {
                     play "mouse_click";

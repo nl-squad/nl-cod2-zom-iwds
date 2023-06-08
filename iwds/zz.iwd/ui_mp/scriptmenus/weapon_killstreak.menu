@@ -585,7 +585,7 @@
 			textscale		.2
 			textalignx		2
 			textaligny		76
-			text			"EMP ^9(^550^9)" //a
+			text			"Raptor ^9(^550^9)" //a
 			mouseEnter
 			{
 				scriptMenuResponse "hover_13"; //a
@@ -966,7 +966,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			5 5 70 70
 			origin			ORIGIN_KR13
-			background		"nl_hud_kr16"
+			background		"nl_hud_kr21"
 			dvartest		"reward_13"
 			hideDvar		{ "2" }
 			visible			1
