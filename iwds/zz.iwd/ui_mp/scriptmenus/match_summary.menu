@@ -545,7 +545,7 @@
 		itemDef // BOTTOM
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			     0 156 250 2
+			rect			     0 171 250 2
 			origin			ORIGIN_STATS
 			backcolor		     0.027 0.082 0.604 1
 			visible			1
@@ -554,7 +554,7 @@
 		itemDef // LEFT
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			     0 22 2 134
+			rect			     0 22 2 149
 			origin			ORIGIN_STATS
 			backcolor		     0.027 0.082 0.604 1
 			visible			1
@@ -563,7 +563,7 @@
 		itemDef // RIGHT
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			     248 22 2 134
+			rect			     248 22 2 149
 			origin			ORIGIN_STATS
 			backcolor		     0.027 0.082 0.604 1
 			visible			1

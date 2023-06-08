@@ -21,8 +21,8 @@
 #define ORIGIN_CHOICE12				150 320
 #define ORIGIN_CHOICE13				150 340
 #define ORIGIN_EXIT					20 415
-#define ORIGIN_INFO					400 415
-#define ORIGIN_NLT					400 340
+#define ORIGIN_INFO					350 375
+#define ORIGIN_NLT					350 300
 
 {
 	menuDef
@@ -281,6 +281,72 @@
 			}
 		}
 
+		// Special
+		itemDef
+		{
+			name			"weapons_4"
+			style			WINDOW_STYLE_SHADER
+			rect			0 -5 100 20
+			origin			ORIGIN_TITLE4
+			background		"nl_zakladkas"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			"weapons_4_hover"
+			style			WINDOW_STYLE_SHADER
+			rect			0 -5 100 20
+			origin			ORIGIN_TITLE4
+			background		"nl_zakladka"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE4
+			text			"Special"
+			textscale		.23
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		50
+			textaligny		12
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE4
+			visible			1
+               mouseEnter
+               {
+     			hide weapons_1_hover;
+     			hide weapons_2_hover;
+     			hide weapons_3_hover;
+     			show weapons_4_hover;
+               }
+               mouseExit
+               {
+     			hide weapons_1_hover;
+     			hide weapons_2_hover;
+     			hide weapons_3_hover;
+     			hide weapons_4_hover;
+               }
+			action
+			{
+				play "mouse_click";
+				setdvar nl_weapon "nl_blank";
+
+				hide weapons_1;
+				hide weapons_2;
+				hide weapons_3;
+     			show weapons_4;
+			}
+		}
+
 		/////////////////////////////////////////////////////
           /// Rifles
 
@@ -288,54 +354,12 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE1
-			text			""
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE1
-			text			"M1 Garand"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "m1garand_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_m1garand";
-			}
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE2
-			text			""
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE2
-			text			"Springfield"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "springfield_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_springfield";
-			}
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE3
 			text			"^9Rank 3 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE3
+			origin			ORIGIN_CHOICE1
 			text			"Mosin Nagant"
 			action
 			{
@@ -347,33 +371,57 @@
 				setdvar nl_weapon "nl_img_mosin_nagant";
 			}
 		}
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_1.menu"
-               origin		ORIGIN_CHOICE4
-               text			"^9Rank 10 ^4|"
-          }
+
+		itemDef
+		{
+			#include "ui_mp/weapon_rank_1.menu"
+			origin		ORIGIN_CHOICE2
+			text			"^9Rank 8 ^4|"
+		}
+		itemDef
+		{
+			#include "ui_mp/weapon_add_1.menu"
+			origin			ORIGIN_CHOICE2
+			text			"M1 Garand"
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "m1garand_mp";
+			}
+			mouseEnter
+			{
+				setdvar nl_weapon "nl_img_m1garand";
+			}
+		}
+
+		itemDef
+		{
+			#include "ui_mp/weapon_rank_1.menu"
+			origin		ORIGIN_CHOICE4
+			text			"^82 000 ^9nL Tokens ^4|"
+		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE4
-			text			"Barrett"
+			text			"Springfield"
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "barrett_mp";
+				scriptMenuResponse "springfield_mp";
 			}
 			mouseEnter
 			{
-				setdvar nl_weapon "nl_img_barrett";
+				setdvar nl_weapon "nl_img_springfield";
 			}
 		}
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_1.menu"
-               origin		ORIGIN_CHOICE5
-               text			"^8500 ^9nL Tokens ^4|"
-          }
+
+		itemDef
+		{
+			#include "ui_mp/weapon_rank_1.menu"
+			origin		ORIGIN_CHOICE5
+			text			"^84 000 ^9nL Tokens ^4|"
+		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
@@ -396,55 +444,44 @@
 			origin		ORIGIN_CHOICE5
 			dvartest		"w1_5"
 		}
+
           itemDef
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^81 000 ^9nL Tokens ^4|"
+               text			"^810 000 ^9nL Tokens ^4|"
           }
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE6
-			text			"Remington"
+			text			"M82 Barrett"
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "remington_mp";
+				scriptMenuResponse "barrett_mp";
 			}
 			mouseEnter
 			{
-				setdvar nl_weapon "nl_img_remington";
+				setdvar nl_weapon "nl_img_barrett";
 			}
 		}
-		itemDef
-		{
-			#include       "ui_mp/weapon_lock_1.menu"
-			rect			40 2 24 24
-			origin		ORIGIN_CHOICE6
-			dvartest		"w1_6"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE7
-			text			"^9Rank 100 ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE7
-			text			"^3Golden ^7Kar98k"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "kar98k_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_kar98k";
-			}
-		}
+		  
+          itemDef
+          {
+				name			"weapons_1"
+				visible			0
+				rect			0 0 128 24
+				forecolor		GLOBAL_UNFOCUSED_COLOR
+				type			ITEM_TYPE_TEXT
+				textfont		UI_FONT_NORMAL
+				textscale		.2
+				textstyle		ITEM_TEXTSTYLE_SHADOWED
+				textaligny		20
+				textalign      ITEM_ALIGN_LEFT
+               origin		ORIGIN_CHOICE7
+               text			"^9more comming soon..."
+          }
 
           /// Machine Guns
           itemDef
@@ -457,22 +494,22 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE1
-               text			"Sten"
+               text			"MP40"
                action
                {
                     play "mouse_click";
-                    scriptMenuResponse "sten_mp";
+                    scriptMenuResponse "mp40_mp";
                }
                mouseEnter
                {
-                    setdvar nl_weapon "nl_img_sten";
+                    setdvar nl_weapon "nl_img_mp40";
                }
           }
           itemDef
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE2
-               text			"^9Rank 2 ^4|"
+               text			"^9Rank 10 ^4|"
           }
           itemDef
           {
@@ -489,32 +526,12 @@
                     setdvar nl_weapon "nl_img_mp44";
                }
           }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE3
-               text			"^9Rank 4 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE3
-               text			"PPSh"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "ppsh_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_ppsh";
-               }
-          }
+
           itemDef
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE4
-               text			"^9Rank 15 ^4|"
+               text			"^82 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -535,7 +552,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE5
-               text			"^9Rank 30 ^4|"
+               text			"^88 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -556,33 +573,12 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE6
-               text			"^9Rank 40 ^4|"
+               text			"^815 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE6
-               text			"MP5"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "mp5_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_mp5";
-               }
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE7
-               text			"^9Rank 50 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE7
                text			"AK47"
                action
                {
@@ -594,86 +590,33 @@
                     setdvar nl_weapon "nl_img_ak47";
                }
           }
+
           itemDef
           {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE8
-               text			"^9Rank 60 ^4|"
+				name			"weapons_2"
+				visible			0
+				rect			0 0 128 24
+				forecolor		GLOBAL_UNFOCUSED_COLOR
+				type			ITEM_TYPE_TEXT
+				textfont		UI_FONT_NORMAL
+				textscale		.2
+				textstyle		ITEM_TEXTSTYLE_SHADOWED
+				textaligny		20
+				textalign      ITEM_ALIGN_LEFT
+               origin		ORIGIN_CHOICE7
+               text			"^9more comming soon..."
           }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE8
-               text			"P90"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "p90_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_p90";
-               }
-          }
+
           itemDef
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE9
-               text			"^9Rank 65 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE9
-               text			"Tesla"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "tesla_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_tesla";
-               }
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE10
-               text			"^82 500 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE10
-               text			"G36"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "g36_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_g36";
-               }
-          }
-		itemDef
-		{
-			#include       "ui_mp/weapon_lock_2.menu"
-			rect			12 2 24 24
-			origin		ORIGIN_CHOICE10
-			dvartest		"w2_10"
-		}
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE11
                text			"^9Rank 100 ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE11
+               origin			ORIGIN_CHOICE9
                text			"^3Golden ^7Thompson"
                action
                {
@@ -686,6 +629,7 @@
                }
           }
 
+
           /// Heavy ///
           itemDef
           {
@@ -697,27 +641,27 @@
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE1
-               text			"XM1014"
+               text			"Bar"
                action
                {
                     play "mouse_click";
-                    scriptMenuResponse "xm_mp";
+                    scriptMenuResponse "bar_mp";
                }
                mouseEnter
                {
-                    setdvar nl_weapon "nl_img_xm";
+                    setdvar nl_weapon "nl_img_bar";
                }
           }
           itemDef
           {
                #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE2
-               text			"^9Rank 25 ^4|"
+               origin		ORIGIN_CHOICE3
+               text			"^82 500 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE2
+               origin			ORIGIN_CHOICE3
                text			"RPD"
                action
                {
@@ -732,13 +676,13 @@
           itemDef
           {
                #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE3
-               text			"^9Rank 35 ^4|"
+               origin		ORIGIN_CHOICE4
+               text			"^85 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE3
+               origin			ORIGIN_CHOICE4
                text			"Winchester"
                action
                {
@@ -753,13 +697,13 @@
           itemDef
           {
                #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE4
-               text			"^9Rank 45 ^4|"
+               origin		ORIGIN_CHOICE5
+               text			"^89 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE4
+               origin			ORIGIN_CHOICE5
                text			"SAW"
                action
                {
@@ -773,45 +717,56 @@
           }
           itemDef
           {
-               #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE5
-               text			"^9Rank 70 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE5
-               text			"Benelli"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "benelli_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_benelli";
-               }
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
+				name			"weapons_3"
+				visible			0
+				rect			0 0 128 24
+				forecolor		GLOBAL_UNFOCUSED_COLOR
+				type			ITEM_TYPE_TEXT
+				textfont		UI_FONT_NORMAL
+				textscale		.2
+				textstyle		ITEM_TEXTSTYLE_SHADOWED
+				textaligny		20
+				textalign      ITEM_ALIGN_LEFT
                origin		ORIGIN_CHOICE6
-               text			"^9Rank 100 ^4|"
+               text			"^9more comming soon..."
+          }
+
+			/// Special ///
+          itemDef
+          {
+               #include "ui_mp/weapon_rank_4.menu"
+               origin		ORIGIN_CHOICE1
+               text			"^850 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE6
-               text			"^3Golden ^7Shotgun"
+               #include "ui_mp/weapon_add_4.menu"
+               origin			ORIGIN_CHOICE1
+               text			"Tesla"
                action
                {
                     play "mouse_click";
-                    scriptMenuResponse "shotgun_mp";
+                    scriptMenuResponse "tesla_mp";
                }
                mouseEnter
                {
-                    setdvar nl_weapon "nl_img_shotgun";
+                    setdvar nl_weapon "nl_img_tesla";
                }
+          }
+          itemDef
+          {
+				name			"weapons_4"
+				visible			0
+				rect			0 0 128 24
+				forecolor		GLOBAL_UNFOCUSED_COLOR
+				type			ITEM_TYPE_TEXT
+				textfont		UI_FONT_NORMAL
+				textscale		.2
+				textstyle		ITEM_TEXTSTYLE_SHADOWED
+				textaligny		20
+				textalign      ITEM_ALIGN_LEFT
+               origin		ORIGIN_CHOICE2
+               text			"^9more comming soon..."
           }
 
 		/// EXIT ///
@@ -835,27 +790,14 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			0 0 0 0
+			rect			-3 0 130 18
 			origin			ORIGIN_NLT
 			textscale		.23
 			text			"nL Tokens balance:"
-			visible			1
-			decoration
-		}
-
-		itemDef
-		{
-			dvar			"nlt"
-			type			ITEM_TYPE_TEXT
-			visible			1
-			rect			-3 30 51 18
-			forecolor		.976 .624 .22 1
-			origin			ORIGIN_NLT
-			textscale		.25
 			textaligny		15
 			textalignx		3
+			visible			1
 			decoration
-			
 			mouseEnter
 			{
 				show nlt_tooltip;
@@ -865,12 +807,26 @@
 				hide nlt_tooltip;
 			}
 		}
+
+		itemDef
+		{
+			dvar			"nlt"
+			type			ITEM_TYPE_TEXT
+			forecolor		.976 .624 .22 1
+			rect			0 0 0 0
+			origin			ORIGIN_NLT
+			textscale		.24
+			textaligny		15
+			textalignx		68
+			visible			1
+			decoration
+		}
 		
 		itemDef
 		{
 			name			"nlt_tooltip"
 			type			ITEM_TYPE_TEXT
-			rect			0 60 0 0
+			rect			0 30 0 0
 			origin			ORIGIN_NLT
 			textscale		.23
 			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
