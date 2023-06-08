@@ -96,7 +96,6 @@
 		}
 		itemDef
 		{
-			name			"weapons_1_hover"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE1
@@ -162,7 +161,6 @@
 		}
 		itemDef
 		{
-			name			"weapons_2_hover"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE2
@@ -228,7 +226,6 @@
 		}
 		itemDef
 		{
-			name			"weapons_3_hover"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE3
@@ -294,7 +291,6 @@
 		}
 		itemDef
 		{
-			name			"weapons_4_hover"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE4
