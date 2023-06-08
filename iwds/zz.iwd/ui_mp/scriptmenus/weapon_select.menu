@@ -372,7 +372,7 @@
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE5
-               text			"^9NLT ^8500 ^4|"
+               text			"^8500 ^9nL Tokens ^4|"
           }
 		itemDef
 		{
@@ -400,7 +400,7 @@
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^9NLT ^81 000 ^4|"
+               text			"^81 000 ^9nL Tokens ^4|"
           }
 		itemDef
 		{
@@ -640,7 +640,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE10
-               text			"^9NLT ^82 500 000 ^4|"
+               text			"^82 500 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -834,10 +834,22 @@
 
 		itemDef
 		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 0 0
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"nL Tokens balance:"
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
 			dvar			"nlt"
 			type			ITEM_TYPE_TEXT
 			visible			1
-			rect			-3 0 51 18
+			rect			-3 30 51 18
+			forecolor		.976 .624 .22 1
 			origin			ORIGIN_NLT
 			textscale		.25
 			textaligny		15
@@ -858,7 +870,7 @@
 		{
 			name			"nlt_tooltip"
 			type			ITEM_TYPE_TEXT
-			rect			0 30 0 0
+			rect			0 60 0 0
 			origin			ORIGIN_NLT
 			textscale		.23
 			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
