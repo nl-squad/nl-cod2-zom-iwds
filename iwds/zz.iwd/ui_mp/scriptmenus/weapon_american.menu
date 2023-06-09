@@ -145,7 +145,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			87 77 30 14
+			rect			93 77 25 14
 			origin			ORIGIN_WINDOW2
 			textscale		.18
 			textalign 		ITEM_ALIGN_LEFT
@@ -200,7 +200,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			212 77 30 14
+			rect			218 77 25 14
 			origin			ORIGIN_WINDOW2
 			textscale		.18
 			textalign 		ITEM_ALIGN_LEFT
@@ -408,7 +408,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			28 25 50 50
+			rect 			30 22 56 56
 			origin			ORIGIN_WINDOW2
 			visible 		1
 			dvar 			nl_tp
@@ -417,7 +417,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			158 25 50 50
+			rect 			158 22 56 56
 			origin			ORIGIN_WINDOW2
 			visible 		1
 			dvar 			nl_cp
