@@ -106,7 +106,7 @@
 			}
 		}
 
-          /// DRUGA BRON ///
+          /// TACTICAL PERK ///
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
@@ -121,7 +121,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			0 0 115 90
 			origin			ORIGIN_WINDOW2
-			text			"Secondary weapon"
+			text			"Tactical perk"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -139,7 +139,7 @@
 			{
 				play "mouse_click";
 				close weapon_american;
-				open weapon_secondary;
+				open perks_tactical;
 			}
 		}
 		itemDef
@@ -151,17 +151,17 @@
 			textalign 		ITEM_ALIGN_LEFT
 			textalignx		0
 			textaligny		10
-			text			"Default"
+			text			"Clear"
 			forecolor		0.5 0.5 0.5 1
 			visible			1
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "reset_secondary";
+				scriptMenuResponse "reset_tactical_perk";
 			}
 		}
 
-          /// ZOMBIE BRON ///
+          /// COMBAT PERK ///
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
@@ -176,7 +176,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			125 0 115 90
 			origin			ORIGIN_WINDOW2
-			text			"Zombie weapon"
+			text			"Combat perk"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -194,7 +194,7 @@
 			{
 				play "mouse_click";
 				close weapon_american;
-				open weapon_zombie;
+				open perks_combat;
 			}
 		}
 		itemDef
@@ -206,13 +206,13 @@
 			textalign 		ITEM_ALIGN_LEFT
 			textalignx		0
 			textaligny		10
-			text			"Default"
+			text			"Clear"
 			forecolor		0.5 0.5 0.5 1
 			visible			1
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "reset_zombie";
+				scriptMenuResponse "reset_combat_perk";
 			}
 		}
 
@@ -327,7 +327,7 @@
 			}
 		}
 
-		/// ATUTY ///
+		/// ZOMBIE WEAPON ///
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
@@ -342,7 +342,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
-			text			"Perk"
+			text			"Zombie weapon"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -360,7 +360,7 @@
 			{
 				play "mouse_click";
 				close weapon_american;
-				open weapon_perks;
+				open weapon_zombie;
 			}
 		}
 		itemDef
@@ -372,13 +372,13 @@
 			textalign 		ITEM_ALIGN_LEFT
 			textalignx		0
 			textaligny		10
-			text			"Clear"
+			text			"Default"
 			forecolor		0.5 0.5 0.5 1
 			visible			1
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "reset_perks";
+				scriptMenuResponse "reset_zombie";
 			}
 		}
 
@@ -392,25 +392,35 @@
 			dvar 			nl_primary
 			decoration
 		}
-          // SECONDARY ///
-		itemDef
-		{
-			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			10 5 50 50
-			origin			ORIGIN_SEC1
-			visible 		1
-			dvar 			nl_secondary
-			decoration
-		}
 
           // ZOMBIE ///
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			10 5 50 50
-			origin			ORIGIN_ZOM1
+			rect 			158 25 50 50
+			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_zombiegun
+			decoration
+		}
+		
+		// COMBAT PERK //
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			28 25 50 50
+			origin			ORIGIN_WINDOW2
+			visible 		1
+			dvar 			nl_tp
+			decoration
+		}
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			158 25 50 50
+			origin			ORIGIN_WINDOW2
+			visible 		1
+			dvar 			nl_cp
 			decoration
 		}
 
@@ -453,22 +463,13 @@
 		}
 
 		/// PERKS ///
-		itemDef
-		{
-			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			0 -5 50 50
-			origin			ORIGIN_PE1
-			visible 		1
-			dvar 			nl_pe_1
-			decoration
-		}
 
           // APPERANCE ///
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			5 -5 60 60
-			origin			ORIGIN_APP1
+			rect 			33 15 60 60
+			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_appereance
 			decoration

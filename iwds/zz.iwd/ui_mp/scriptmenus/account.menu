@@ -1,12 +1,12 @@
 #include "ui/menudef.h"
 
 #define ORIGIN_LOGO					260 60
-#define ORIGIN_TITLE				60 220
+#define ORIGIN_TITLE				175 220
 #define ORIGIN_LOGIN				175 250
 #define ORIGIN_PASS					175 280
 #define ORIGIN_REMEMBER				175 310
-#define ORIGIN_DISCONNECT			50 370
-#define ORIGIN_INFORMATION			400 400
+#define ORIGIN_DISCONNECT			50 430
+#define ORIGIN_INFORMATION			420 420
 
 {
 	menuDef 
@@ -60,7 +60,7 @@
 		{
 			style			WINDOW_STYLE_FILLED
 			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
+			backcolor		0 0 0 0.9
 			visible			1
 			decoration
 		}
@@ -71,7 +71,7 @@
 			style		WINDOW_STYLE_SHADER
 			rect		0 0 120 120
 			origin		ORIGIN_LOGO
-			background	"nl_omniscientos"
+			background	"nl_logo_2023"
 			visible		1
 			decoration
 		}
@@ -108,7 +108,7 @@
 			visible			1
 			origin			ORIGIN_INFORMATION
 			forecolor		1 1 1 1
-			text			"Visit ^8mynl.pl\n^7Discord: ^8ds.mynl.pl ^7or ^8discord.gg/37UBvysKQ5\n^7Forgot password? No worries, just contact ^8Dusza ^7on discord."
+			text			"Visit ^8mynl.pl\n^7Discord: ^8ds.mynl.pl ^7or ^8discord.gg/37UBvysKQ5\n^9Forgot password? No worries, just contact ^8Dusza ^9on discord."
 			textfont		UI_FONT_NORMAL
 			textscale		.2
 			decoration
@@ -281,12 +281,14 @@
 		{
 			name			login_button
 			visible			1
-			rect			30 50 0 0
+			rect			90 60 0 0
 			origin			ORIGIN_REMEMBER
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
 			textaligny		8
+			textalignx		35
+			textalign 		ITEM_ALIGN_CENTER
 			text			"LOGIN"
 			decoration
 		}
@@ -294,19 +296,21 @@
 		{
 			name			register_button
 			visible			1
-			rect			130 50 0 0
+			rect			190 60 0 0
 			origin			ORIGIN_REMEMBER
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
 			textaligny		8
+			textalignx		35
+			textalign 		ITEM_ALIGN_CENTER
 			text			"REGISTER"
 			decoration
 		}
 		itemDef 
 		{
 			visible			1
-			rect			20 40 70 22
+			rect			90 50 70 22
 			origin			ORIGIN_REMEMBER
 			type			ITEM_TYPE_BUTTON
 			border			1
@@ -329,7 +333,7 @@
 		itemDef 
 		{
 			visible			1
-			rect			120 40 70 22
+			rect			190 50 70 22
 			origin			ORIGIN_REMEMBER
 			type			ITEM_TYPE_BUTTON
 			border			1
@@ -353,7 +357,7 @@
 		itemDef
 		{
 			visible			1
-			rect			40 70 0 0
+			rect			90 30 0 0
 			origin			ORIGIN_REMEMBER
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
