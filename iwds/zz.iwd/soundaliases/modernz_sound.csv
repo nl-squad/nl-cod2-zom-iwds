@@ -39,21 +39,9 @@ weap_winchester_fire_plr,,weapons/winchester/winchester_fire.wav,0.84,0.92,wpnpl
 weap_grenadelauncher_fire,,weapons/grenadelauncher/grenadelauncher_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_grenadelauncher_fire_plr,,weapons/grenadelauncher/grenadelauncher_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
-#p90
-weap_p90_fire,,weapons/p90/p90_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_p90_fire_plr,,weapons/p90/p90_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
-
 #barret
 weap_barret_fire,,weapons/barret/barret_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_barret_fire_plr,,weapons/barret/barret_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
-
-#benelli
-weap_benelli_fire,,weapons/benelli/benelli_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_benelli_fire_plr,,weapons/benelli/benelli_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
-
-#glock
-weap_glock_fire,,weapons/glock/glock_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_glock_fire_plr,,weapons/glock/glock_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #remington
 weap_remington_fire,,weapons/remington/remington_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
@@ -64,10 +52,6 @@ weap_minigun_fire,,weapons/minigun/minigun_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,
 weap_minigun_reload,,weapons/minigun/minigun_reload.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_minigun_fire_plr,,weapons/minigun/minigun_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 weap_minigun_reload_plr,,weapons/minigun/minigun_reload.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
-
-#usp
-weap_usp_fire,,weapons/usp/usp_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,,,,,weapon2
-weap_usp_fire_plr,,weapons/usp/usp_fire.wav,0.6,0.66,wpnplyr,1.05,1.35,500000,,local,,10,,0.85,,,,,,,,,0.2
 
 #nambu
 weap_nambu_fire,1,weapons/nambu/nambu_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
