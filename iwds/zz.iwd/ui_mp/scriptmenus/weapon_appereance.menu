@@ -82,7 +82,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE1
-			background		"nl_zakladka"
+			background		"nl_zakladkas"
 			visible			1
 			decoration
 		}
@@ -92,7 +92,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE1
-			background		"nl_zakladkas"
+			background		"nl_zakladka"
 			visible			1
 			decoration
 		}

@@ -160,7 +160,7 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE3
-			text			"^9Rank 80 ^4|"
+			text			"^9Rank 30 ^4|"
 		}
 		itemDef
 		{
@@ -182,13 +182,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE4
-			text			"^9Rank 100 ^4|"
+			text			"^9Rank 50 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE4
-			text			"^3Golden ^7Knife"
+			text			"Knife"
 			action
 			{
 				play "mouse_click";

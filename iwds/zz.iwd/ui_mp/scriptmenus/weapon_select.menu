@@ -658,15 +658,15 @@
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE3
-               text			"RPD"
+               text			"RPK-74"
                action
                {
                     play "mouse_click";
-                    scriptMenuResponse "rpd_mp";
+                    scriptMenuResponse "rpk_mp";
                }
                mouseEnter
                {
-                    setdvar nl_weapon "nl_img_rpd";
+                    setdvar nl_weapon "nl_img_rpk";
                }
           }
           itemDef
@@ -700,7 +700,7 @@
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE5
-               text			"SAW"
+               text			"M249 SAW"
                action
                {
                     play "mouse_click";

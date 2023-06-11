@@ -86,3 +86,15 @@ weap_beretta_fire_plr,,weapons/beretta/fire_beretta.wav,0.84,0.92,wpnplyr,1,1.05
 weap_saw_fire,,weapons/saw/saw_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_saw_fire_plr,,weapons/saw/saw_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
+#RPK
+weap_rpk_fire,1,weapons/rpk/rpk_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,,,,cweap_rifle_shell,weapon2
+weap_rpk_fire_plr,,weapons/rpk/rpk_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,cweap_rifle_shell,,,,,0.2
+weap_rpk_chamber,,weapons/rpk/fly_rpk_pull.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
+weap_rpk_clipin,,weapons/rpk/fly_rpk_mag_in.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
+weap_rpk_clipout,,weapons/rpk/fly_rpk_mag_out.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
+#Shelleject impact,,,,,,,,,,,,,,,
+cweap_rifle_shell,1,weapons/cweap/cweap_shell_rifle.wav,0.4,0.6,wpnplyr,1,1,100,600,auto,,,,0.5,,,,,,
+cweap_rifle_shell,2,weapons/cweap/cweap_shell_rifle2.wav,0.4,0.6,wpnplyr,1,1,100,600,auto,,,,0.5,,,,,,
+cweap_rifle_shell,3,weapons/cweap/cweap_shell_rifle3.wav,0.4,0.6,wpnplyr,1,1,100,600,auto,,,,0.5,,,,,,
+
+
