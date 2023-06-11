@@ -118,7 +118,7 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^91^4. ^7Follow me^4! \n^92^4. ^7Move in^4! \n^93^4. ^7Fall back^4! \n^94^4. ^7Suppressing fire^4! \n^95^4. ^7Attack left flank^4! \n^96^4. ^7Attack right flank^4! \n^97^4. ^7Hold this position^4! \n^98^4. ^7Regroup^4! \n^99^4. ^7Defend this position!^4! \n"
+			text			"^91^4. ^7Follow me^4! \n^92^4. ^7Move in^4! \n^93^4. ^7Fall back^4! \n^94^4. ^7Suppressing fire^4! \n^95^4. ^7Attack left flank^4! \n^96^4. ^7Attack right flank^4! \n^97^4. ^7Hold this position^4! \n^98^4. ^7Regroup^4! \n^99^4. ^7Defend this position^4! \n"
 			decoration
 		}
 	}
