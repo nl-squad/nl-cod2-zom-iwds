@@ -40,6 +40,10 @@
 			close perks_tactical;
 			open weapon_american;
 		}
+		onOpen 
+		{
+			scriptMenuResponse "open";
+		}
 
 		/// TLO ///
 		itemDef
