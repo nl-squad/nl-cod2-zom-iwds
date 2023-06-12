@@ -451,7 +451,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE6
-			text			"M82 Barrett"
+			text			"Barrett M82"
 			action
 			{
 				play "mouse_click";
@@ -490,7 +490,7 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE1
-               text			"MP40"
+               text			"MP 40"
                action
                {
                     play "mouse_click";
@@ -511,7 +511,7 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE2
-               text			"MP44"
+               text			"MP 44"
                action
                {
                     play "mouse_click";
@@ -533,7 +533,7 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE4
-               text			"AK74u"
+               text			"AK-74u"
                action
                {
                     play "mouse_click";
@@ -575,7 +575,7 @@
           {
                #include "ui_mp/weapon_add_2.menu"
                origin			ORIGIN_CHOICE6
-               text			"AK47"
+               text			"AK-47"
                action
                {
                     play "mouse_click";
