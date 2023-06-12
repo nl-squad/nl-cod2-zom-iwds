@@ -17,6 +17,10 @@
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onESC { }
+		onOpen 
+		{
+			scriptMenuResponse "open";
+		}
 		
 		execKey "a" { play "mouse_click"; scriptMenuResponse "A" }
 		execKey "b" { play "mouse_click"; scriptMenuResponse "B" }
