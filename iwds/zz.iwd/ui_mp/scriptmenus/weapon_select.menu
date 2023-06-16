@@ -394,7 +394,7 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE4
-			text			"^82 000 ^9nL Tokens ^4|"
+			text			"^81 000 ^9nL Tokens ^4|"
 		}
 		itemDef
 		{
@@ -416,7 +416,7 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE5
-			text			"^84 000 ^9nL Tokens ^4|"
+			text			"^83 000 ^9nL Tokens ^4|"
 		}
 		itemDef
 		{
@@ -445,7 +445,7 @@
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^810 000 ^9nL Tokens ^4|"
+               text			"^88 000 ^9nL Tokens ^4|"
           }
 		itemDef
 		{
@@ -548,7 +548,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE5
-               text			"^88 000 ^9nL Tokens ^4|"
+               text			"^87 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -569,7 +569,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE6
-               text			"^815 000 ^9nL Tokens ^4|"
+               text			"^812 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -652,12 +652,33 @@
           {
                #include "ui_mp/weapon_rank_3.menu"
                origin		ORIGIN_CHOICE3
-               text			"^82 500 ^9nL Tokens ^4|"
+               text			"^86 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_3.menu"
                origin			ORIGIN_CHOICE3
+               text			"Winchester 1200"
+               action
+               {
+                    play "mouse_click";
+                    scriptMenuResponse "winchester_mp";
+               }
+               mouseEnter
+               {
+                    setdvar nl_weapon "nl_img_winchester";
+               }
+          }
+    itemDef
+          {
+               #include "ui_mp/weapon_rank_3.menu"
+               origin		ORIGIN_CHOICE4
+               text			"^89000 ^9nL Tokens ^4|"
+          }
+          itemDef
+          {
+               #include "ui_mp/weapon_add_3.menu"
+               origin			ORIGIN_CHOICE4
                text			"RPK-74"
                action
                {
@@ -672,29 +693,8 @@
           itemDef
           {
                #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE4
-               text			"^85 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE4
-               text			"Winchester 1200"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "winchester_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_winchester";
-               }
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
                origin		ORIGIN_CHOICE5
-               text			"^89 000 ^9nL Tokens ^4|"
+               text			"^815 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -732,7 +732,7 @@
           {
                #include "ui_mp/weapon_rank_4.menu"
                origin		ORIGIN_CHOICE1
-               text			"^850 000 ^9nL Tokens ^4|"
+               text			"^825 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
