@@ -59,8 +59,12 @@ weap_sig_fire,,weapons/sg552/fire_sg552.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,wea
 weap_sig_fire_plr,,weapons/sg552/fire_sg552.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #Beretta
-weap_beretta_fire,,weapons/beretta/fire_beretta.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_beretta_fire_plr,,weapons/beretta/fire_beretta.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+weap_beretta_fire,,weapons/beretta/weap_beretta_fire.wav,0.6,,wpnai,0.95,1.05,35,8400,auto,,,,0.55,all_mp,,,,weapon2,,,,
+weap_beretta_fire_plr,,weapons/beretta/weap_beretta_fire.wav,0.6,,wpnplyr,0.95,1,500000,,auto,,,,0.7,all_mp,,,,,,,,0.2
+weap_beretta_reload,,weapons/beretta/weap_beretta_reload.wav,0.7,,wpnai,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
+weap_beretta_reload_plr,,weapons/beretta/weap_beretta_reload.wav,0.7,,wpnplyr,0.95,1,500000,,voice,,,,0.7,all_mp,,,,,,,,0.2
+weap_beretta_reload_empty,,weapons/beretta/weap_beretta_reload_empty.wav,0.7,,wpnai,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
+weap_beretta_reload_empty_plr,,weapons/beretta/weap_beretta_reload_empty.wav,0.7,,wpnplyr,0.95,1,500000,,voice,,,,0.7,all_mp,,,,,,,,0.2
 
 #saw
 weap_saw_fire,,weapons/saw/saw_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2

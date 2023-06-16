@@ -75,7 +75,7 @@
 			style		WINDOW_STYLE_SHADER
 			rect		0 0 120 120
 			origin		ORIGIN_LOGO
-			background	"nl_logo_2023"
+			background	"nl_logo_avard"
 			visible		1
 			decoration
 		}
