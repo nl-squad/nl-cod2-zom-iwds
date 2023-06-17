@@ -68,7 +68,7 @@ REFERENCE           PLAYERRENAMES
 LANG_ENGLISH        "^7Renamed to "
 
 REFERENCE           CONNECTIONINTERUPTED
-LANG_ENGLISH        "^9Rany ^7Julek ^4?!"
+LANG_ENGLISH        "^9Connection ^7Lost ^4:("
 
 REFERENCE           SB_PLAYER
 LANG_ENGLISH        "&&1 player"
