@@ -948,12 +948,34 @@
           {
                #include "ui_mp/weapon_rank_4.menu"
                origin		ORIGIN_CHOICE1
-               text			"^815 000 ^9nL Tokens ^4|"
+               text			"^3NEXUS ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_4.menu"
                origin			ORIGIN_CHOICE1
+               text			"Raygun"
+               action
+               {
+                    play "mouse_click";
+                    scriptMenuResponse "raygun_mp";
+               }
+               mouseEnter
+               {
+                    setdvar nl_weapon "nl_img_raygun";
+               }
+          }
+
+          itemDef
+          {
+               #include "ui_mp/weapon_rank_4.menu"
+               origin		ORIGIN_CHOICE2
+               text			"^825 000 ^9nL Tokens ^4|"
+          }
+          itemDef
+          {
+               #include "ui_mp/weapon_add_4.menu"
+               origin			ORIGIN_CHOICE2
                text			"Tesla"
                action
                {
