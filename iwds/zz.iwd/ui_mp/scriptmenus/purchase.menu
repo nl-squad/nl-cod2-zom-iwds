@@ -1,0 +1,256 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE			0 50
+#define ORIGIN_KR1				80 70
+#define ORIGIN_KR2				180 70
+#define ORIGIN_KR3				280 70
+#define ORIGIN_KR4				380 70
+#define ORIGIN_KR5				480 70
+
+#define ORIGIN_KR6				80 170
+#define ORIGIN_KR7				180 170
+#define ORIGIN_KR8				280 170
+#define ORIGIN_KR9				380 170
+#define ORIGIN_KR10				480 170
+
+#define ORIGIN_KR11				80 270
+#define ORIGIN_KR12				180 270
+#define ORIGIN_KR13				280 270
+#define ORIGIN_KR14				380 270
+#define ORIGIN_KR15				480 270
+
+#define ORIGIN_KR16				80 370
+#define ORIGIN_KR17				180 370
+#define ORIGIN_KR18				280 370
+#define ORIGIN_KR19				380 370
+#define ORIGIN_KR20				480 370
+
+#define ORIGIN_EXIT				10 415
+#define ORIGIN_INFO				400 415
+#define ORIGIN_NLT				350 300
+
+#define ORIGIN_TAB1				10 40
+#define ORIGIN_TAB2				10 120
+
+#ifndef PURCHASE
+
+#define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action) \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			origin			_origin \
+			background		_background_active \
+			dvartest		_dvar \
+			showDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			origin			_origin \
+			background		_background_nonactive \
+			dvartest		_dvar \
+			hideDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			origin			_origin \
+			border			1 \
+			bordercolor		0.027 0.082 0.604 1 \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.2 \
+			textalignx		2 \
+			textaligny		76 \
+			text			_text \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover:" ## _action; \
+				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.027 0.082 0.604 1 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+            	scriptMenuResponse "click:" ## _action; \
+			} \
+		}
+#endif
+
+#ifndef TAB
+#define TAB(_tab, _origin, _text) \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 \
+			origin			_origin \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.2 \
+			textalignx		2 \
+			textaligny		10 \
+			text			_text \
+			mouseEnter \
+			{ \
+				setcolor backcolor 1 1 1 0.2 \
+			} \
+			mouseExit \
+			{ \
+				setcolor backcolor 1 1 1 0 \
+			} \
+			action \
+			{ \
+            	scriptMenuResponse "open:" ## _tab; \
+				play "mouse_click"; \
+				hide tab1; \
+				hide tab2; \
+				show "tab" ## _tab; \
+			} \
+		}
+#endif
+
+{
+	menuDef
+	{
+		name			"purchase"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close purchase;
+		}
+		onOpen 
+		{
+			show tab1;
+			hide tab2;
+			scriptMenuResponse "open:main";
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		TAB("1", ORIGIN_TAB1, "Boosters")
+		TAB("2", ORIGIN_TAB2, "Weapons")
+
+		PURCHASE("tab1", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1")
+		PURCHASE("tab1", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2")
+		PURCHASE("tab1", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3")
+		PURCHASE("tab1", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4")
+		PURCHASE("tab1", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5")
+		PURCHASE("tab1", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6")
+		PURCHASE("tab1", ORIGIN_KR7, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (1h)", "7")
+		PURCHASE("tab1", ORIGIN_KR8, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (3h)", "8")
+		PURCHASE("tab1", ORIGIN_KR9, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (1h)", "9")
+		PURCHASE("tab1", ORIGIN_KR10, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (3h)", "10")
+
+		PURCHASE("tab2", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1")
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			-3 0 130 18
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"nL Tokens balance:"
+			textaligny		15
+			textalignx		3
+			visible			1
+			decoration
+			mouseEnter
+			{
+				show nlt_tooltip;
+			}
+			mouseExit
+			{
+				hide nlt_tooltip;
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nlt"
+			type			ITEM_TYPE_TEXT
+			forecolor		.976 .624 .22 1
+			rect			0 0 0 0
+			origin			ORIGIN_NLT
+			textscale		.24
+			textaligny		15
+			textalignx		68
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"nlt_tooltip"
+			type			ITEM_TYPE_TEXT
+			rect			0 30 0 0
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
+			visible			1
+			decoration
+		}
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		15
+			visible			1
+			action
+			{
+				close perks_combat;
+				open weapon_american;
+				play "mouse_click";
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
+	}
+}
