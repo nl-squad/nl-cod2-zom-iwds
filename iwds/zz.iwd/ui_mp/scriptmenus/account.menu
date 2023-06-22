@@ -416,6 +416,36 @@
 				scriptMenuResponse "make_register";
 			}
 		}
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			90 22 0 0
+			origin			ORIGIN_INPUT2
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.15
+			textaligny		8
+			dvartest		"ui_email"
+			showDvar		{ "" }
+			text			"^9Example: john.doe@example.com"
+			decoration
+		}
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			90 22 0 0
+			origin			ORIGIN_INPUT2
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.15
+			textaligny		8
+			dvartest		"ui_email"
+			hideDvar		{ "" }
+			text			"^9This will never be shown to others, can be used for password reset."
+			decoration
+		}
 		
 		// Password
 		itemDef
