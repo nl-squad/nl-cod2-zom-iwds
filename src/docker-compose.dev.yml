@@ -15,7 +15,7 @@ services:
       - ~/cod2/main/1_3:/cod2/main:ro
       - ./library/iwds:/cod2/library:ro
     environment:
-      PARAMS_BEFORE: "+exec server.cfg"
+      PARAMS_BEFORE: "+exec server.dev.cfg"
       COD2_SET_fs_homepath: "/cod2/home"
       COD2_SET_fs_library: "/cod2/library"
       COD2_SET_fs_game: "nl"

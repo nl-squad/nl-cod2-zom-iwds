@@ -1,11 +1,11 @@
-name: Restart server
+name: Restart zom server
 
 on: workflow_dispatch
 
 jobs:
   restart:
-    name: Server restart job
+    name: Zom server restart job
     uses: nl-squad/nl-cod2-workflows/.github/workflows/restart.yml@main
     with:
-      profile: default
+      profile: zom
     secrets: inherit

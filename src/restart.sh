@@ -18,5 +18,5 @@ cp $local_library_path/000empty.iwd $cwd/nl/
 echo -e "\033[0;36mCopied 000empty.iwd to nl/\033[0m"
 
 echo -e "\033[0;36mRestarting docker-compose...\033[0m"
-detach_arg=$([[ $1 == "detach" ]] && echo "-d")
-(cd $cwd && docker-compose up --force-recreate $detach_arg)
+detach_arg=$([[ $2 == "detach" ]] && echo "-d")
+(cd $cwd && docker-compose -f $1 up --force-recreate $detach_arg)
