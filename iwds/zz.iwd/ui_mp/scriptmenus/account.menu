@@ -1,10 +1,12 @@
 #include "ui/menudef.h"
 
-#define ORIGIN_LOGO					260 60
-#define ORIGIN_TITLE				175 220
-#define ORIGIN_LOGIN				175 250
-#define ORIGIN_PASS					175 280
-#define ORIGIN_REMEMBER				175 310
+#define ORIGIN_LOGO					260 30
+#define ORIGIN_TITLE				175 190
+#define ORIGIN_INPUT1				175 220
+#define ORIGIN_INPUT2				175 250
+#define ORIGIN_INPUT3				175 280
+#define ORIGIN_INPUT4				175 310
+#define ORIGIN_INPUT5				175 340
 #define ORIGIN_DISCONNECT			50 430
 #define ORIGIN_INFORMATION			420 420
 
@@ -16,50 +18,22 @@
 		focuscolor		GLOBAL_FOCUSED_COLOR
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
-		onESC { }
+		onESC
+		{
+			scriptMenuResponse "close";
+		}
 		onOpen 
 		{
+			exec "setu ui_login _";
+			exec "setu ui_email _";
+			exec "setu ui_pass _";
+			exec "setu ui_repass _";
+			show loginGroup;
+			hide registerGroup;
 			scriptMenuResponse "open";
 		}
-		
-		execKey "a" { play "mouse_click"; scriptMenuResponse "A" }
-		execKey "b" { play "mouse_click"; scriptMenuResponse "B" }
-		execKey "c" { play "mouse_click"; scriptMenuResponse "C" }
-		execKey "d" { play "mouse_click"; scriptMenuResponse "D" }
-		execKey "e" { play "mouse_click"; scriptMenuResponse "E" }
-		execKey "f" { play "mouse_click"; scriptMenuResponse "F" }
-		execKey "g" { play "mouse_click"; scriptMenuResponse "G" }
-		execKey "h" { play "mouse_click"; scriptMenuResponse "H" }
-		execKey "i" { play "mouse_click"; scriptMenuResponse "I" }
-		execKey "j" { play "mouse_click"; scriptMenuResponse "J" }
-		execKey "k" { play "mouse_click"; scriptMenuResponse "K" }
-		execKey "l" { play "mouse_click"; scriptMenuResponse "L" }
-		execKey "m" { play "mouse_click"; scriptMenuResponse "M" }
-		execKey "n" { play "mouse_click"; scriptMenuResponse "N" }
-		execKey "o" { play "mouse_click"; scriptMenuResponse "O" }
-		execKey "p" { play "mouse_click"; scriptMenuResponse "P" }
-		execKey "q" { play "mouse_click"; scriptMenuResponse "Q" }
-		execKey "r" { play "mouse_click"; scriptMenuResponse "R" }
-		execKey "s" { play "mouse_click"; scriptMenuResponse "S" }
-		execKey "t" { play "mouse_click"; scriptMenuResponse "T" }
-		execKey "u" { play "mouse_click"; scriptMenuResponse "U" }
-		execKey "v" { play "mouse_click"; scriptMenuResponse "V" }
-		execKey "w" { play "mouse_click"; scriptMenuResponse "W" }
-		execKey "x" { play "mouse_click"; scriptMenuResponse "X" }
-		execKey "y" { play "mouse_click"; scriptMenuResponse "Y" }
-		execKey "z" { play "mouse_click"; scriptMenuResponse "Z" }
-		execKey "0" { play "mouse_click"; scriptMenuResponse "0" }
-		execKey "1" { play "mouse_click"; scriptMenuResponse "1" }
-		execKey "2" { play "mouse_click"; scriptMenuResponse "2" }
-		execKey "3" { play "mouse_click"; scriptMenuResponse "3" }
-		execKey "4" { play "mouse_click"; scriptMenuResponse "4" }
-		execKey "5" { play "mouse_click"; scriptMenuResponse "5" }
-		execKey "6" { play "mouse_click"; scriptMenuResponse "6" }
-		execKey "7" { play "mouse_click"; scriptMenuResponse "7" }
-		execKey "8" { play "mouse_click"; scriptMenuResponse "8" }
-		execKey "9" { play "mouse_click"; scriptMenuResponse "9" }
 
-		// Gradient
+		// Background
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
@@ -118,12 +92,13 @@
 			decoration
 		}
 
-		// Napisy
+		// Login
 		itemDef
 		{
+			group			loginGroup
 			visible			1
 			rect			0 11 0 0
-			origin			ORIGIN_LOGIN
+			origin			ORIGIN_INPUT1
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
@@ -133,9 +108,49 @@
 		}
 		itemDef
 		{
+			group			loginGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT1
+			text			" "
+			dvar			"ui_login"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		12
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		30
+			maxpaintchars		30
+			onFocus
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_login";
+			}
+		}
+
+		// Password
+		itemDef
+		{
+			group			loginGroup
 			visible			1
 			rect			0 11 0 0
-			origin			ORIGIN_PASS
+			origin			ORIGIN_INPUT2
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
@@ -145,9 +160,63 @@
 		}
 		itemDef
 		{
+			group			loginGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT2
+			text			" "
+			dvar			"ui_pass"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		9912
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		30
+			maxpaintchars		30
+			onFocus
+			{
+				setDvar ui_repass "";
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_login";
+			}
+		}
+		itemDef
+		{
+			group			loginGroup
+			visible			1
+			rect			98 0 0 0
+			origin			ORIGIN_INPUT2
+			forecolor		0 0.58 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		18
+			dvar			"ui_display_pass"
+			decoration
+		}
+
+		// Remember
+		itemDef
+		{
+			group			loginGroup
 			visible			1
 			rect			0 11 0 0
-			origin			ORIGIN_REMEMBER
+			origin			ORIGIN_INPUT3
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
@@ -155,82 +224,24 @@
 			text			"Remember me"
 			decoration
 		}
-
-		// Okienka
 		itemDef 
 		{
-			style			WINDOW_STYLE_FILLED
-			rect			90 4 200 16
-			origin			ORIGIN_LOGIN
-			backcolor		0 0 0 0
-			border			1
-			bordercolor		1 1 1 1
-			visible			1
-			decoration
-		}
-		itemDef 
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			90 4 200 16
-			origin			ORIGIN_PASS
-			backcolor		0 0 0 0
-			border			1
-			bordercolor		1 1 1 1
-			visible			1
-			decoration
-		}
-		itemDef 
-		{
+			group			loginGroup
 			style			WINDOW_STYLE_FILLED
 			rect			90 4 16 16
-			origin			ORIGIN_REMEMBER
+			origin			ORIGIN_INPUT3
 			backcolor		0 0 0 0
 			border			1
-			bordercolor		1 1 1 1
+			bordercolor		.4 .4 .4 1
 			visible			1
 			decoration
 		}
-
-		// Przyciski
 		itemDef 
 		{
-			visible			1
-			rect			90 4 200 16
-			origin			ORIGIN_LOGIN
-			type			ITEM_TYPE_BUTTON
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "login";
-			}
-			onFocus
-			{
-				play "mouse_over";
-			}
-		}
-		itemDef 
-		{
-			visible			1
-			rect			90 4 200 16
-			origin			ORIGIN_PASS
-			type			ITEM_TYPE_BUTTON
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "pass";
-			}
-			onFocus
-			{
-				play "mouse_over";
-			}
-		}
-
-		// Remember tick
-		itemDef 
-		{
+			group			loginGroup
 			visible			1
 			rect			90 4 16 16
-			origin			ORIGIN_REMEMBER
+			origin			ORIGIN_INPUT3
 			type			ITEM_TYPE_BUTTON
 			action
 			{
@@ -244,9 +255,10 @@
 		}
 		itemDef
 		{
+			group			loginGroup
 			style			WINDOW_STYLE_SHADER
-			rect			92 7 14 14
-			origin			ORIGIN_REMEMBER
+			rect			93 8 12 12
+			origin			ORIGIN_INPUT3
 			background		"blanco_tick"
 			dvartest		"ui_remember"
 			showDvar		{ "1" }
@@ -254,79 +266,31 @@
 			decoration
 		}
 
-		// Edycja tekstu
-		itemDef
-		{
-			visible			1
-			rect			100 11 0 0
-			origin			ORIGIN_LOGIN
-			forecolor		0 0.58 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			dvar			"ui_login"
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			100 13 0 0
-			origin			ORIGIN_PASS
-			forecolor		0 0.58 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			dvar			"ui_pass"
-			decoration
-		}
-
-		// Buttony
-		itemDef
-		{
-			name			login_button
-			visible			1
-			rect			90 60 0 0
-			origin			ORIGIN_REMEMBER
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			textalignx		35
-			textalign 		ITEM_ALIGN_CENTER
-			text			"LOGIN"
-			decoration
-		}
-		itemDef
-		{
-			name			register_button
-			visible			1
-			rect			190 60 0 0
-			origin			ORIGIN_REMEMBER
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			textalignx		35
-			textalign 		ITEM_ALIGN_CENTER
-			text			"REGISTER"
-			decoration
-		}
+		// Submit
 		itemDef 
 		{
+			group			loginGroup
 			visible			1
-			rect			90 50 70 22
-			origin			ORIGIN_REMEMBER
+			rect			90 20 70 22
+			origin			ORIGIN_INPUT4
 			type			ITEM_TYPE_BUTTON
 			border			1
 			bordercolor		1 1 1 1
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		16
+			textalignx		35
+			textalign 		ITEM_ALIGN_CENTER
+			text			"LOGIN"
 			mouseEnter
 			{
 				play "mouse_over";
-				setitemcolor login_button forecolor 0 0.58 1 1
+				setcolor bordercolor 0 0.58 1 1;
 			}
 			mouseExit
 			{
-				setitemcolor login_button forecolor 1 1 1 1
+				setcolor bordercolor 1 1 1 1;
 			}
 			action
 			{
@@ -334,35 +298,12 @@
 				scriptmenuresponse "make_login"
 			}
 		}
-		itemDef 
-		{
-			visible			1
-			rect			190 50 70 22
-			origin			ORIGIN_REMEMBER
-			type			ITEM_TYPE_BUTTON
-			border			1
-			bordercolor		1 1 1 1
-			mouseEnter
-			{
-				play "mouse_over";
-				setitemcolor register_button forecolor 0 0.58 1 1
-			}
-			mouseExit
-			{
-				setitemcolor register_button forecolor 1 1 1 1
-			}
-			action
-			{
-				play "mouse_click";
-				scriptmenuresponse "make_register"
-			}
-		}
-
 		itemDef
 		{
+			group			loginGroup
 			visible			1
 			rect			90 30 0 0
-			origin			ORIGIN_REMEMBER
+			origin			ORIGIN_INPUT3
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.2
@@ -371,9 +312,327 @@
 			decoration
 		}
 
-		execKeyInt 9 { play "mouse_click"; scriptMenuResponse "t" }
-		execKeyInt 13 { play "mouse_click"; scriptMenuResponse "e" }
-		execKeyInt 127 { play "mouse_click"; scriptMenuResponse "b" }
+		/// Register
+		// Login
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			0 11 0 0
+			origin			ORIGIN_INPUT1
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			text			"Login"
+			decoration
+		}
+		itemDef
+		{
+			group			registerGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT1
+			text			" "
+			dvar			"ui_login"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		12
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		30
+			maxpaintchars		30
+			onFocus
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_register";
+			}
+		}
+		
+		// Email
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			0 11 0 0
+			origin			ORIGIN_INPUT2
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			text			"Email"
+			decoration
+		}
+		itemDef
+		{
+			group			registerGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT2
+			text			" "
+			dvar			"ui_email"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		12
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		50
+			maxpaintchars		30
+			onFocus
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_register";
+			}
+		}
+		
+		// Password
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			0 11 0 0
+			origin			ORIGIN_INPUT3
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			text			"Password"
+			decoration
+		}
+		itemDef
+		{
+			group			registerGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT3
+			text			" "
+			dvar			"ui_pass"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		9912
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		30
+			maxpaintchars		30
+			onFocus
+			{
+				setDvar ui_pass "";
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_register";
+			}
+		}
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			98 0 0 0
+			origin			ORIGIN_INPUT3
+			forecolor		0 0.58 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		18
+			dvar			"ui_display_pass"
+			decoration
+		}
+		
+		// RPassword
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			0 11 0 0
+			origin			ORIGIN_INPUT4
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		8
+			text			"Repeat password"
+			decoration
+		}
+		itemDef
+		{
+			group			registerGroup
+			type			ITEM_TYPE_EDITFIELD
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT4
+			text			" "
+			dvar			"ui_repass"
+			textstyle		3
+			textalign		0
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		9912
+			textalignx		-4
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 1
+			forecolor		1 1 1 1
+			border			WINDOW_BORDER_FULL
+			bordercolor		.4 .4 .4 1
+			visible			1 
+			maxChars		30
+			maxpaintchars		30
+			onFocus
+			{
+				setDvar ui_repass "";
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
+			accept
+			{
+				play "mouse_click";
+				scriptMenuResponse "make_register";
+			}
+		}
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			98 0 0 0
+			origin			ORIGIN_INPUT4
+			forecolor		0 0.58 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		18
+			dvar			"ui_display_repass"
+			decoration
+		}
+		
+		itemDef 
+		{
+			group			registerGroup
+			visible			1
+			rect			90 20 70 22
+			origin			ORIGIN_INPUT5
+			type			ITEM_TYPE_BUTTON
+			border			1
+			bordercolor		1 1 1 1
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.25
+			textaligny		16
+			textalignx		35
+			textalign 		ITEM_ALIGN_CENTER
+			text			"REGISTER"
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			mouseExit
+			{
+				setcolor bordercolor 1 1 1 1;
+			}
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "make_register";
+			}
+		}
+
+
+		itemDef
+		{
+			group			registerGroup
+			visible			1
+			rect			90 30 0 0
+			origin			ORIGIN_INPUT4
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.2
+			textaligny		8
+			dvar			"ui_warn"
+			decoration
+		}
+
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 -120 40 20
+			origin			ORIGIN_DISCONNECT
+			textscale		.25
+			text			"Login"
+			textaligny		15
+			visible			1
+			action
+			{
+				play "mouse_click";
+				hide registerGroup;
+				show loginGroup;
+				setDvar ui_pass "";
+			}
+		}
+
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 -100 40 20
+			origin			ORIGIN_DISCONNECT
+			textscale		.25
+			text			"Register"
+			textaligny		15
+			visible			1
+			action
+			{
+				play "mouse_click";
+				hide loginGroup;
+				show registerGroup;
+				setDvar ui_pass "";
+				setDvar ui_repass "";
+			}
+		}
+
 
 		// DISCONNECT
 		itemDef
