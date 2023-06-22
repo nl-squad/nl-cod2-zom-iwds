@@ -21,6 +21,7 @@
 #define ORIGIN_CHOICE12				150 320
 #define ORIGIN_CHOICE13				150 340
 #define ORIGIN_EXIT					20 415
+#define ORIGIN_AMMO					350 280
 #define ORIGIN_INFO					350 375
 #define ORIGIN_NLT					350 300
 
@@ -50,6 +51,26 @@
 			hide weapons_4_hover;
 			hide nlt_tooltip;
 			scriptMenuResponse "open";
+			
+			hide mosin_nagant_ammo;
+			hide m1_garand_ammo;
+			hide springfield_ammo;
+			hide g3_ammo;
+			hide barrett_ammo;
+			
+			hide mp40_ammo;
+			hide mp44_ammo;
+			hide ak74_ammo;
+			hide sig_ammo;
+			hide ak47_ammo;
+			hide thompson_ammo;
+			
+			hide bar_ammo;
+			hide winchester_ammo;
+			hide rpk_ammo;
+			hide saw_ammo;
+			
+			hide tesla_ammo;
 		}
 
 		/// TLO ///
@@ -145,6 +166,26 @@
 				hide weapons_2;
 				hide weapons_3;
      			hide weapons_4;
+				
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+				
+				hide mp40_ammo;
+				hide mp44_ammo;
+				hide ak74_ammo;
+				hide sig_ammo;
+				hide ak47_ammo;
+				hide thompson_ammo;
+				
+				hide bar_ammo;
+				hide winchester_ammo;
+				hide rpk_ammo;
+				hide saw_ammo;
+				
+				hide tesla_ammo;
 			}
 		}
 
@@ -210,6 +251,26 @@
 				show weapons_2;
 				hide weapons_3;
      			hide weapons_4;
+				
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+				
+				hide mp40_ammo;
+				hide mp44_ammo;
+				hide ak74_ammo;
+				hide sig_ammo;
+				hide ak47_ammo;
+				hide thompson_ammo;
+				
+				hide bar_ammo;
+				hide winchester_ammo;
+				hide rpk_ammo;
+				hide saw_ammo;
+				
+				hide tesla_ammo;
 			}
 		}
 
@@ -275,6 +336,26 @@
 				hide weapons_2;
 				show weapons_3;
      			hide weapons_4;
+				
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+				
+				hide mp40_ammo;
+				hide mp44_ammo;
+				hide ak74_ammo;
+				hide sig_ammo;
+				hide ak47_ammo;
+				hide thompson_ammo;
+				
+				hide bar_ammo;
+				hide winchester_ammo;
+				hide rpk_ammo;
+				hide saw_ammo;
+				
+				hide tesla_ammo;
 			}
 		}
 
@@ -340,6 +421,26 @@
 				hide weapons_2;
 				hide weapons_3;
      			show weapons_4;
+				
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+				
+				hide mp40_ammo;
+				hide mp44_ammo;
+				hide ak74_ammo;
+				hide sig_ammo;
+				hide ak47_ammo;
+				hide thompson_ammo;
+				
+				hide bar_ammo;
+				hide winchester_ammo;
+				hide rpk_ammo;
+				hide saw_ammo;
+				
+				hide tesla_ammo;
 			}
 		}
 
@@ -349,7 +450,7 @@
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE1
+			origin			ORIGIN_CHOICE1
 			text			"^9Rank 3 ^4|"
 		}
 		itemDef
@@ -365,6 +466,14 @@
 			mouseEnter
 			{
 				setdvar nl_weapon "nl_img_mosin_nagant";
+			}
+			onFocus
+			{
+				show mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
 			}
 		}
 
@@ -388,6 +497,14 @@
 			{
 				setdvar nl_weapon "nl_img_m1garand";
 			}
+			onFocus
+			{
+				hide mosin_nagant_ammo;
+				show m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+			}
 		}
 
 		itemDef
@@ -410,6 +527,14 @@
 			{
 				setdvar nl_weapon "nl_img_springfield";
 			}
+			onFocus
+			{
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				show springfield_ammo;
+				hide g3_ammo;
+				hide barrett_ammo;
+			}
 		}
 
 		itemDef
@@ -431,6 +556,14 @@
 			mouseEnter
 			{
 				setdvar nl_weapon "nl_img_g3";
+			}
+			onFocus
+			{
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				show g3_ammo;
+				hide barrett_ammo;
 			}
 		}
 		itemDef
@@ -461,6 +594,14 @@
 			{
 				setdvar nl_weapon "nl_img_barrett";
 			}
+			onFocus
+			{
+				hide mosin_nagant_ammo;
+				hide m1_garand_ammo;
+				hide springfield_ammo;
+				hide g3_ammo;
+				show barrett_ammo;
+			}
 		}
 		  
           itemDef
@@ -488,18 +629,27 @@
           }
           itemDef
           {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE1
-               text			"MP 40"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "mp40_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_mp40";
-               }
+				#include "ui_mp/weapon_add_2.menu"
+				origin			ORIGIN_CHOICE1
+				text			"MP 40"
+				action
+				{
+					play "mouse_click";
+					scriptMenuResponse "mp40_mp";
+				}
+				mouseEnter
+				{
+					setdvar nl_weapon "nl_img_mp40";
+				}
+				onFocus
+				{
+					show mp40_ammo;
+					hide mp44_ammo;
+					hide ak74_ammo;
+					hide sig_ammo;
+					hide ak47_ammo;
+					hide thompson_ammo;
+				}
           }
           itemDef
           {
@@ -521,6 +671,15 @@
                {
                     setdvar nl_weapon "nl_img_mp44";
                }
+				onFocus
+				{
+					hide mp40_ammo;
+					show mp44_ammo;
+					hide ak74_ammo;
+					hide sig_ammo;
+					hide ak47_ammo;
+					hide thompson_ammo;
+				}
           }
 
           itemDef
@@ -543,6 +702,15 @@
                {
                     setdvar nl_weapon "nl_img_ak74";
                }
+				onFocus
+				{
+					hide mp40_ammo;
+					hide mp44_ammo;
+					show ak74_ammo;
+					hide sig_ammo;
+					hide ak47_ammo;
+					hide thompson_ammo;
+				}
           }
           itemDef
           {
@@ -564,6 +732,15 @@
                {
                     setdvar nl_weapon "nl_img_sig";
                }
+				onFocus
+				{
+					hide mp40_ammo;
+					hide mp44_ammo;
+					hide ak74_ammo;
+					show sig_ammo;
+					hide ak47_ammo;
+					hide thompson_ammo;
+				}
           }
           itemDef
           {
@@ -585,6 +762,15 @@
                {
                     setdvar nl_weapon "nl_img_ak47";
                }
+				onFocus
+				{
+					hide mp40_ammo;
+					hide mp44_ammo;
+					hide ak74_ammo;
+					hide sig_ammo;
+					show ak47_ammo;
+					hide thompson_ammo;
+				}
           }
 
           itemDef
@@ -623,6 +809,15 @@
                {
                     setdvar nl_weapon "nl_img_thompson";
                }
+				onFocus
+				{
+					hide mp40_ammo;
+					hide mp44_ammo;
+					hide ak74_ammo;
+					hide sig_ammo;
+					hide ak47_ammo;
+					show thompson_ammo;
+				}
           }
 
 
@@ -647,6 +842,13 @@
                {
                     setdvar nl_weapon "nl_img_bar";
                }
+				onFocus
+				{
+					show bar_ammo;
+					hide winchester_ammo;
+					hide rpk_ammo;
+					hide saw_ammo;
+				}
           }
           itemDef
           {
@@ -668,6 +870,13 @@
                {
                     setdvar nl_weapon "nl_img_winchester";
                }
+				onFocus
+				{
+					hide bar_ammo;
+					show winchester_ammo;
+					hide rpk_ammo;
+					hide saw_ammo;
+				}
           }
     itemDef
           {
@@ -689,6 +898,13 @@
                {
                     setdvar nl_weapon "nl_img_rpk";
                }
+				onFocus
+				{
+					hide bar_ammo;
+					hide winchester_ammo;
+					show rpk_ammo;
+					hide saw_ammo;
+				}
           }
           itemDef
           {
@@ -710,6 +926,13 @@
                {
                     setdvar nl_weapon "nl_img_saw";
                }
+				onFocus
+				{
+					hide bar_ammo;
+					hide winchester_ammo;
+					hide rpk_ammo;
+					show saw_ammo;
+				}
           }
           itemDef
           {
@@ -748,6 +971,10 @@
                {
                     setdvar nl_weapon "nl_img_tesla";
                }
+				onFocus
+				{
+					show tesla_ammo;
+				}
           }
           itemDef
           {
@@ -782,6 +1009,131 @@
 				play "mouse_click";
 			}
 		}
+
+		///////////////////////////////////////////////////
+		// AMMO INFO
+		
+		// Rifle
+		itemDef
+		{
+			name 			"mosin_nagant_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"m1_garand_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 8^9/320 \n^7Max ^9Ammo^7: 8^9/352"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"springfield_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"g3_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 20^9/180 \n^7Max ^9Ammo^7: 20^9/260"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"barrett_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120"
+			textscale		.23
+		}
+		
+		// Machine Guns
+		itemDef
+		{
+			name 			"mp40_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 32^9/192 \n^7Max ^9Ammo^7: 32^9/320"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"mp44_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"ak74_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"sig_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"ak47_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"thompson_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330"
+			textscale		.23
+		}
+
+		// Heavy
+		itemDef
+		{
+			name 			"bar_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 20^9/120 \n^7Max ^9Ammo^7: 20^9/200"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"winchester_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 7^9/70 \n^7Max ^9Ammo^7: 7^9/98"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"rpk_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
+			textscale		.23
+		}
+		itemDef
+		{
+			name 			"saw_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 100^9/300 \n^7Max ^9Ammo^7: 100^9/700"
+			textscale		.23
+		}
+
+		// Special
+		itemDef
+		{
+			name 			"tesla_ammo"
+			origin			ORIGIN_AMMO
+			text			"^7Start ^9Ammo^7: 5^9/50 \n^7Max ^9Ammo^7: 5^9/70"
+			textscale		.23
+		}
+
+		///////////////////////////////////////////////////
 
 		itemDef
 		{
