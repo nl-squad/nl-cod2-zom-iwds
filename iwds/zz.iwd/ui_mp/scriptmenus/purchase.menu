@@ -131,6 +131,11 @@
 				play "mouse_click"; \
 				hide tab1; \
 				hide tab2; \
+				hide tab3; \
+				hide tab4; \
+				hide tab5; \
+				hide tab6; \
+				hide tab7; \
 				show "tab" ## _tab; \
 			} \
 		} \
@@ -253,7 +258,7 @@
 			origin			ORIGIN_NLT
 			textscale		.23
 			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
-			visible			1
+			visible			0
 			decoration
 		}
 
