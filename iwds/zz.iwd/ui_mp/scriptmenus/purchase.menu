@@ -1,45 +1,49 @@
 #include "ui_mp/menudef.h"
 
 #define ORIGIN_TITLE			0 50
-#define ORIGIN_KR1				80 70
-#define ORIGIN_KR2				180 70
-#define ORIGIN_KR3				280 70
-#define ORIGIN_KR4				380 70
-#define ORIGIN_KR5				480 70
+#define ORIGIN_KR1				120 90
+#define ORIGIN_KR2				220 90
+#define ORIGIN_KR3				320 90
+#define ORIGIN_KR4				420 90
+#define ORIGIN_KR5				520 90
 
-#define ORIGIN_KR6				80 170
-#define ORIGIN_KR7				180 170
-#define ORIGIN_KR8				280 170
-#define ORIGIN_KR9				380 170
-#define ORIGIN_KR10				480 170
+#define ORIGIN_KR6				120 190
+#define ORIGIN_KR7				220 190
+#define ORIGIN_KR8				320 190
+#define ORIGIN_KR9				420 190
+#define ORIGIN_KR10				520 190
 
-#define ORIGIN_KR11				80 270
-#define ORIGIN_KR12				180 270
-#define ORIGIN_KR13				280 270
-#define ORIGIN_KR14				380 270
-#define ORIGIN_KR15				480 270
+#define ORIGIN_KR11				120 290
+#define ORIGIN_KR12				220 290
+#define ORIGIN_KR13				320 290
+#define ORIGIN_KR14				420 290
+#define ORIGIN_KR15				520 290
 
-#define ORIGIN_KR16				80 370
-#define ORIGIN_KR17				180 370
-#define ORIGIN_KR18				280 370
-#define ORIGIN_KR19				380 370
-#define ORIGIN_KR20				480 370
+#define ORIGIN_KR16				120 390
+#define ORIGIN_KR17				220 390
+#define ORIGIN_KR18				320 390
+#define ORIGIN_KR19				420 390
+#define ORIGIN_KR20				520 390
 
-#define ORIGIN_EXIT				10 415
+#define ORIGIN_EXIT				20 415
 #define ORIGIN_INFO				400 415
-#define ORIGIN_NLT				350 300
+#define ORIGIN_NLT				350 20
 
-#define ORIGIN_TAB1				10 40
-#define ORIGIN_TAB2				10 120
+#define ORIGIN_TAB1				20 90
+#define ORIGIN_TAB2				20 120
+#define ORIGIN_TAB3				20 150
+#define ORIGIN_TAB4				20 180
+#define ORIGIN_TAB5				20 210
+#define ORIGIN_TAB6				20 240
+#define ORIGIN_TAB7				20 270
 
 #ifndef PURCHASE
-
 #define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action) \
 		itemDef \
 		{ \
 			name			_tab \
 			style			WINDOW_STYLE_FILLED \
-			rect			2 2 78 78 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			rect			2 2 78 78 0 0 \
 			origin			_origin \
 			backcolor		0 0 0 0.6 \
 			visible			0 \
@@ -49,7 +53,7 @@
 		{ \
 			name			_tab \
 			style			WINDOW_STYLE_SHADER \
-			rect			5 5 70 70 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			rect			5 5 70 70 0 0 \
 			origin			_origin \
 			background		_background_active \
 			dvartest		_dvar \
@@ -61,7 +65,7 @@
 		{ \
 			name			_tab \
 			style			WINDOW_STYLE_SHADER \
-			rect			5 5 70 70 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			rect			5 5 70 70 0 0 \
 			origin			_origin \
 			background		_background_nonactive \
 			dvartest		_dvar \
@@ -73,13 +77,13 @@
 		{ \
 			name			_tab \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 80 80 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN \
+			rect			0 0 80 80 0 0 \
 			origin			_origin \
 			border			1 \
 			bordercolor		0.027 0.082 0.604 1 \
 			style			WINDOW_STYLE_FILLED \
 			visible			1 \
-			textscale		.2 \
+			textscale		.17 \
 			textalignx		2 \
 			textaligny		76 \
 			text			_text \
@@ -105,13 +109,13 @@
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 80 80 \
-			origin			_origin \
 			style			WINDOW_STYLE_FILLED \
+			rect			0 0 80 25 0 0 \
+			origin			_origin \
 			visible			1 \
-			textscale		.2 \
-			textalignx		2 \
-			textaligny		10 \
+			textscale		.22 \
+			textalignx		8 \
+			textaligny		17 \
 			text			_text \
 			mouseEnter \
 			{ \
@@ -129,6 +133,16 @@
 				hide tab2; \
 				show "tab" ## _tab; \
 			} \
+		} \
+		itemDef \
+		{ \
+			name			"tab" ## _tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 25 80 1 0 0 \
+			origin			_origin \
+			backcolor		0 0 1 1 \
+			visible			1 \
+			decoration \
 		}
 #endif
 
@@ -148,6 +162,11 @@
 		{
 			show tab1;
 			hide tab2;
+			hide tab3;
+			hide tab4;
+			hide tab5;
+			hide tab6;
+			hide tab7;
 			scriptMenuResponse "open:main";
 		}
 
@@ -163,6 +182,20 @@
 
 		TAB("1", ORIGIN_TAB1, "Boosters")
 		TAB("2", ORIGIN_TAB2, "Weapons")
+		TAB("3", ORIGIN_TAB3, "Medic")
+		TAB("4", ORIGIN_TAB4, "Support")
+		TAB("5", ORIGIN_TAB5, "Trapper")
+		TAB("6", ORIGIN_TAB6, "Skins")
+		
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			80 0 1 210 0 0
+			origin			ORIGIN_TAB1
+			backcolor		0 0 1 1
+			visible			1
+			decoration
+		}
 
 		PURCHASE("tab1", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1")
 		PURCHASE("tab1", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2")
