@@ -38,7 +38,7 @@
 #define ORIGIN_TAB7				20 270
 
 #ifndef PURCHASE
-#define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action) \
+#define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
 		itemDef \
 		{ \
 			name			_tab \
@@ -85,7 +85,7 @@
 			visible			1 \
 			textscale		.17 \
 			textalignx		2 \
-			textaligny		76 \
+			textaligny		77 \
 			text			_text \
 			mouseEnter \
 			{ \
@@ -101,6 +101,19 @@
 				play "mouse_click"; \
             	scriptMenuResponse "click:" ## _action; \
 			} \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			rect			77 10 0 0 0 0 \
+			origin			_origin \
+			forecolor		.976 .624 .22 1 \
+			textscale		.17 \
+			textalign 		ITEM_ALIGN_RIGHT \
+			text			_price \
+			visible			1 \
+			decoration \
 		}
 #endif
 
@@ -202,18 +215,18 @@
 			decoration
 		}
 
-		PURCHASE("tab1", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1")
-		PURCHASE("tab1", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2")
-		PURCHASE("tab1", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3")
-		PURCHASE("tab1", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4")
-		PURCHASE("tab1", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5")
-		PURCHASE("tab1", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6")
-		PURCHASE("tab1", ORIGIN_KR7, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (1h)", "7")
-		PURCHASE("tab1", ORIGIN_KR8, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (3h)", "8")
-		PURCHASE("tab1", ORIGIN_KR9, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (1h)", "9")
-		PURCHASE("tab1", ORIGIN_KR10, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (3h)", "10")
+		PURCHASE("tab1", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1", "200")
+		PURCHASE("tab1", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2", "500")
+		PURCHASE("tab1", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3", "400")
+		PURCHASE("tab1", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4", "1 000")
+		PURCHASE("tab1", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5", "300")
+		PURCHASE("tab1", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6", "1 000")
+		PURCHASE("tab1", ORIGIN_KR7, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (1h)", "7", "200")
+		PURCHASE("tab1", ORIGIN_KR8, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (3h)", "8", "400")
+		PURCHASE("tab1", ORIGIN_KR9, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (1h)", "9", "400")
+		PURCHASE("tab1", ORIGIN_KR10, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (3h)", "10", "800")
 
-		PURCHASE("tab2", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1")
+		PURCHASE("tab2", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1", "9 100 000")
 
 		itemDef
 		{
@@ -245,7 +258,7 @@
 			origin			ORIGIN_NLT
 			textscale		.24
 			textaligny		15
-			textalignx		68
+			textalignx		85
 			visible			1
 			decoration
 		}
@@ -274,8 +287,7 @@
 			visible			1
 			action
 			{
-				close perks_combat;
-				open weapon_american;
+				close purchase;
 				play "mouse_click";
 			}
 		}
