@@ -185,6 +185,8 @@
 			hide tab5;
 			hide tab6;
 			hide tab7;
+			setDvar confirmation_description "";
+			setDvar confirmation_title "";
 			scriptMenuResponse "open:main";
 		}
 
@@ -311,8 +313,8 @@
 			border			1
 			bordercolor		0.027 0.082 0.604 1
 			style			WINDOW_STYLE_FILLED
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 			visible			1
 		}
 		itemDef
@@ -321,8 +323,8 @@
 			rect			222 162 198 98
 			backcolor		0 0 0 0.9
 			style			WINDOW_STYLE_FILLED
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 			visible			1
 		}
 		itemDef
@@ -330,8 +332,8 @@
 			style			WINDOW_STYLE_FILLED
 			rect			222 184 198 1
 			backcolor		0.027 0.082 0.604 1
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 			visible			1
 			decoration
 		}
@@ -344,9 +346,9 @@
 			textalignx		100
 			textaligny		23
 			textscale		.4
-			text			"Confirmation" //a
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvar			"confirmation_title"
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 		}
 		itemDef
 		{
@@ -357,9 +359,9 @@
 			textalignx		10
 			textaligny		42
 			textscale		.22
-			dvar			"nl_prestige_confirm" //a
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvar			"confirmation_description"
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 		}
 		
 		/// CONFIRM BUTTONS ///
@@ -378,8 +380,8 @@
 			textalignx		30
 			textaligny		11
 			text			"Yes" //a
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 			mouseEnter
 			{
 				setitemcolor yesbutton bordercolor 0.094 0.455 0.804 0.8 //a
@@ -408,8 +410,8 @@
 			textalignx		30
 			textaligny		11
 			text			"No" //a
-			dvartest		"nl_prestige_confirm"
-			hideDvar		{ "0" }
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
 			mouseEnter
 			{
 				setitemcolor nobutton bordercolor 0.094 0.455 0.804 0.8 //a
