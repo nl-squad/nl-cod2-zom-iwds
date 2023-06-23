@@ -541,7 +541,7 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE5
-			text			"^83 000 ^9nL Tokens ^4|"
+			text			"^82 000 ^9nL Tokens ^4|"
 		}
 		itemDef
 		{
@@ -566,19 +566,12 @@
 				hide barrett_ammo;
 			}
 		}
-		itemDef
-		{
-			#include       "ui_mp/weapon_lock_1.menu"
-			rect			10 2 24 24
-			origin		ORIGIN_CHOICE5
-			dvartest		"w1_5"
-		}
 
           itemDef
           {
                #include "ui_mp/weapon_rank_1.menu"
                origin		ORIGIN_CHOICE6
-               text			"^88 000 ^9nL Tokens ^4|"
+               text			"^85 000 ^9nL Tokens ^4|"
           }
 		itemDef
 		{
@@ -716,7 +709,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE5
-               text			"^87 000 ^9nL Tokens ^4|"
+               text			"^83 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -746,7 +739,7 @@
           {
                #include "ui_mp/weapon_rank_2.menu"
                origin		ORIGIN_CHOICE6
-               text			"^812 000 ^9nL Tokens ^4|"
+               text			"^84 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -854,7 +847,7 @@
           {
                #include "ui_mp/weapon_rank_3.menu"
                origin		ORIGIN_CHOICE3
-               text			"^86 000 ^9nL Tokens ^4|"
+               text			"^83 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -882,7 +875,7 @@
           {
                #include "ui_mp/weapon_rank_3.menu"
                origin		ORIGIN_CHOICE4
-               text			"^89 000 ^9nL Tokens ^4|"
+               text			"^85 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -910,7 +903,7 @@
           {
                #include "ui_mp/weapon_rank_3.menu"
                origin		ORIGIN_CHOICE5
-               text			"^815 000 ^9nL Tokens ^4|"
+               text			"^810 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
@@ -955,7 +948,7 @@
           {
                #include "ui_mp/weapon_rank_4.menu"
                origin		ORIGIN_CHOICE1
-               text			"^825 000 ^9nL Tokens ^4|"
+               text			"^815 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
