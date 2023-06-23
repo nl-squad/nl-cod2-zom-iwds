@@ -160,6 +160,7 @@
 		}
 		itemDef
 		{
+			name			login_pass
 			group			loginGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -182,7 +183,7 @@
 			maxpaintchars		30
 			onFocus
 			{
-				setDvar ui_repass "";
+				setDvar ui_pass "";
 				play "mouse_over";
 				setcolor bordercolor 0 0.58 1 1;
 			}
@@ -310,6 +311,20 @@
 			textaligny		8
 			dvar			"ui_warn"
 			decoration
+		}
+		
+		itemDef 
+		{
+			group			loginGroup
+			visible			1
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT2
+			type			ITEM_TYPE_BUTTON
+			action
+			{
+				setDvar ui_pass "";
+				setFocus login_pass;
+			}
 		}
 
 		/// Register
@@ -463,6 +478,7 @@
 		}
 		itemDef
 		{
+			name			register_pass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -488,6 +504,7 @@
 				setDvar ui_pass "";
 				play "mouse_over";
 				setcolor bordercolor 0 0.58 1 1;
+				setFocus register_pass;
 			}
 			leaveFocus
 			{
@@ -529,6 +546,7 @@
 		}
 		itemDef
 		{
+			name			register_repass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -554,6 +572,7 @@
 				setDvar ui_repass "";
 				play "mouse_over";
 				setcolor bordercolor 0 0.58 1 1;
+				setFocus register_repass;
 			}
 			leaveFocus
 			{
@@ -610,7 +629,34 @@
 				scriptmenuresponse "make_register";
 			}
 		}
-
+		
+		itemDef 
+		{
+			group			registerGroup
+			visible			1
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT3
+			type			ITEM_TYPE_BUTTON
+			action
+			{
+				setDvar ui_pass "";
+				setFocus register_pass;
+			}
+		}
+		
+		itemDef 
+		{
+			group			registerGroup
+			visible			1
+			rect			90 4 200 16
+			origin			ORIGIN_INPUT4
+			type			ITEM_TYPE_BUTTON
+			action
+			{
+				setDvar ui_repass "";
+				setFocus register_repass;
+			}
+		}
 
 		itemDef
 		{
