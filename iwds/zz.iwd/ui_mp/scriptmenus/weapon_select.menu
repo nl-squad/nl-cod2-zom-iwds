@@ -968,13 +968,13 @@
           itemDef
           {
                #include "ui_mp/weapon_rank_4.menu"
-               origin		ORIGIN_CHOICE2
+               origin		ORIGIN_CHOICE3
                text			"^815 000 ^9nL Tokens ^4|"
           }
           itemDef
           {
                #include "ui_mp/weapon_add_4.menu"
-               origin			ORIGIN_CHOICE2
+               origin			ORIGIN_CHOICE3
                text			"Tesla"
                action
                {
@@ -1002,7 +1002,7 @@
 				textstyle		ITEM_TEXTSTYLE_SHADOWED
 				textaligny		20
 				textalign      ITEM_ALIGN_LEFT
-               origin		ORIGIN_CHOICE2
+               origin		ORIGIN_CHOICE4
                text			"^9more comming soon..."
           }
 

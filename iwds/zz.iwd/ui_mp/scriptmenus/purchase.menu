@@ -302,5 +302,127 @@
 			textscale		.25
 			decoration
 		}
+
+		// CONFIRM //
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 160 200 100
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			222 162 198 98
+			backcolor		0 0 0 0.9
+			style			WINDOW_STYLE_FILLED
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			222 184 198 1
+			backcolor		0.027 0.082 0.604 1
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 160 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		100
+			textaligny		23
+			textscale		.4
+			text			"Confirmation" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 158 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		10
+			textaligny		42
+			textscale		.22
+			dvar			"nl_prestige_confirm" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+		}
+		
+		/// CONFIRM BUTTONS ///
+		itemDef
+		{
+			name			yesbutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			240 243 60 14
+			border			1
+			bordercolor		0.5 0.5 0.5 0.8
+			color			0.5 0.5 0.5 0.85
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"Yes" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			mouseEnter
+			{
+				setitemcolor yesbutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor yesbutton bordercolor 0.5 0.5 0.5 0.8 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "yes"; //a
+			}
+		}
+		itemDef
+		{
+			name			nobutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			340 243 60 14
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"No" //a
+			dvartest		"nl_prestige_confirm"
+			hideDvar		{ "0" }
+			mouseEnter
+			{
+				setitemcolor nobutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor nobutton bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "no"; //a
+			}
+		}
 	}
 }
