@@ -1,14 +1,17 @@
 #include "ui/menudef.h"
 
-#define ORIGIN_LOGO					260 30
-#define ORIGIN_TITLE				175 190
-#define ORIGIN_INPUT1				175 220
-#define ORIGIN_INPUT2				175 250
-#define ORIGIN_INPUT3				175 280
-#define ORIGIN_INPUT4				175 310
-#define ORIGIN_INPUT5				175 340
+#define ORIGIN_LOGO					260 20
+#define ORIGIN_TITLE				175 170
+#define ORIGIN_INPUT1				175 240
+#define ORIGIN_INPUT2				175 270
+#define ORIGIN_INPUT3				175 300
+#define ORIGIN_INPUT4				175 330
+#define ORIGIN_INPUT5				175 360
 #define ORIGIN_DISCONNECT			50 430
 #define ORIGIN_INFORMATION			420 420
+#define ORIGIN_KRESECZKA			175 210
+#define ORIGIN_TAB1					200 210
+#define ORIGIN_TAB2					340 210
 
 {
 	menuDef 
@@ -160,7 +163,7 @@
 		}
 		itemDef
 		{
-			name			login_pass
+			name			loginPass
 			group			loginGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -203,10 +206,10 @@
 			visible			1
 			rect			98 0 0 0
 			origin			ORIGIN_INPUT2
-			forecolor		0 0.58 1 1
+			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
-			textaligny		18
+			textaligny		21
 			dvar			"ui_display_pass"
 			decoration
 		}
@@ -228,30 +231,27 @@
 		itemDef 
 		{
 			group			loginGroup
+			type			ITEM_TYPE_BUTTON
 			style			WINDOW_STYLE_FILLED
 			rect			90 4 16 16
 			origin			ORIGIN_INPUT3
-			backcolor		0 0 0 0
+			backcolor		0 0 0 1
 			border			1
 			bordercolor		.4 .4 .4 1
 			visible			1
-			decoration
-		}
-		itemDef 
-		{
-			group			loginGroup
-			visible			1
-			rect			90 4 16 16
-			origin			ORIGIN_INPUT3
-			type			ITEM_TYPE_BUTTON
+			onFocus
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			leaveFocus
+			{
+				setcolor bordercolor .4 .4 .4 1;
+			}
 			action
 			{
 				play "mouse_click";
 				scriptMenuResponse "remember";
-			}
-			onFocus
-			{
-				play "mouse_over";
 			}
 		}
 		itemDef
@@ -320,10 +320,22 @@
 			rect			90 4 200 16
 			origin			ORIGIN_INPUT2
 			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			border			WINDOW_BORDER_FULL
+			bordercolor		0 0 0 0
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			mouseExit
+			{
+				setcolor bordercolor 0 0 0 0;
+			}
 			action
 			{
 				setDvar ui_pass "";
-				setFocus login_pass;
+				setFocus loginPass;
 			}
 		}
 
@@ -478,7 +490,7 @@
 		}
 		itemDef
 		{
-			name			register_pass
+			name			registerPass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -504,7 +516,7 @@
 				setDvar ui_pass "";
 				play "mouse_over";
 				setcolor bordercolor 0 0.58 1 1;
-				setFocus register_pass;
+				setFocus registerPass;
 			}
 			leaveFocus
 			{
@@ -522,10 +534,10 @@
 			visible			1
 			rect			98 0 0 0
 			origin			ORIGIN_INPUT3
-			forecolor		0 0.58 1 1
+			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
-			textaligny		18
+			textaligny		21
 			dvar			"ui_display_pass"
 			decoration
 		}
@@ -546,7 +558,7 @@
 		}
 		itemDef
 		{
-			name			register_repass
+			name			registerRepass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
 			rect			90 4 200 16
@@ -572,7 +584,7 @@
 				setDvar ui_repass "";
 				play "mouse_over";
 				setcolor bordercolor 0 0.58 1 1;
-				setFocus register_repass;
+				setFocus registerRepass;
 			}
 			leaveFocus
 			{
@@ -590,10 +602,10 @@
 			visible			1
 			rect			98 0 0 0
 			origin			ORIGIN_INPUT4
-			forecolor		0 0.58 1 1
+			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
 			textscale		.25
-			textaligny		18
+			textaligny		21
 			dvar			"ui_display_repass"
 			decoration
 		}
@@ -637,10 +649,22 @@
 			rect			90 4 200 16
 			origin			ORIGIN_INPUT3
 			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			border			WINDOW_BORDER_FULL
+			bordercolor		0 0 0 0
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			mouseExit
+			{
+				setcolor bordercolor 0 0 0 0;
+			}
 			action
 			{
 				setDvar ui_pass "";
-				setFocus register_pass;
+				setFocus registerPass;
 			}
 		}
 		
@@ -651,10 +675,22 @@
 			rect			90 4 200 16
 			origin			ORIGIN_INPUT4
 			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			border			WINDOW_BORDER_FULL
+			bordercolor		0 0 0 0
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor 0 0.58 1 1;
+			}
+			mouseExit
+			{
+				setcolor bordercolor 0 0 0 0;
+			}
 			action
 			{
 				setDvar ui_repass "";
-				setFocus register_repass;
+				setFocus registerRepass;
 			}
 		}
 
@@ -672,33 +708,73 @@
 			decoration
 		}
 
+		// Login tab
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 20 290 2
+			origin			ORIGIN_KRESECZKA
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			group			loginGroup
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 100 20
+			origin			ORIGIN_TAB1
+			background		"nl_zakladkas"
+			visible			1
+			decoration
+		}
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			0 -120 40 20
-			origin			ORIGIN_DISCONNECT
-			textscale		.25
-			text			"Login"
-			textaligny		15
+			rect			0 0 100 20
+			origin			ORIGIN_TAB1
+			style			WINDOW_STYLE_SHADER
+			background		"nl_zakladka"
 			visible			1
+			textscale		.23
+			textalign 		ITEM_ALIGN_CENTER
+			text			"Login"
+			textalignx		50
+			textaligny		16
 			action
 			{
 				play "mouse_click";
 				hide registerGroup;
 				show loginGroup;
 				setDvar ui_pass "";
+				setDvar ui_warn "";
 			}
 		}
 
+		// Register tab
+		itemDef
+		{
+			group			registerGroup
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 100 20
+			origin			ORIGIN_TAB2
+			background		"nl_zakladkas"
+			visible			1
+			decoration
+		}
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			0 -100 40 20
-			origin			ORIGIN_DISCONNECT
-			textscale		.25
-			text			"Register"
-			textaligny		15
+			rect			0 0 100 20
+			origin			ORIGIN_TAB2
+			style			WINDOW_STYLE_SHADER
+			background		"nl_zakladka"
 			visible			1
+			textscale		.23
+			textalign 		ITEM_ALIGN_CENTER
+			text			"Register"
+			textalignx		50
+			textaligny		16
 			action
 			{
 				play "mouse_click";
@@ -706,9 +782,9 @@
 				show registerGroup;
 				setDvar ui_pass "";
 				setDvar ui_repass "";
+				setDvar ui_warn "";
 			}
 		}
-
 
 		// DISCONNECT
 		itemDef
