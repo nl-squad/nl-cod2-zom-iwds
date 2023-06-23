@@ -69,7 +69,7 @@
 		{
 			origin			ORIGIN_SEASON
 			type			ITEM_TYPE_TEXT
-			text			"Version 3.0"
+			text			"Version 3.1"
 			forecolor		0.694 0.514 0.188 1
 			textscale		.3
 			textalign		ITEM_ALIGN_CENTER
@@ -80,7 +80,7 @@
 		{
 			origin			ORIGIN_DATES
 			type			ITEM_TYPE_TEXT
-			text			"Release date: June 29, 2023. Check what's new on discord #announcements channel."
+			text			"Release date: July xxx, 2023. Check what's new on discord #announcements channel."
 			forecolor		0.6 0.6 0.6 1
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
