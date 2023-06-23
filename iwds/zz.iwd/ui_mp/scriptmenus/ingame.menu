@@ -1007,7 +1007,7 @@
 			textalignx		7
 			textscale		.30
 		}
-		/// 6 ///
+		/// Purchases ///
 		itemDef
 		{
 			name			blanco_highlight_menu7
@@ -1054,8 +1054,7 @@
 			action
 			{
 				play "mouse_click";
-				open leavegame;
-				close ingame;
+				scriptMenuResponse "purchases";
 			}
 		}
 		itemDef
@@ -1063,12 +1062,12 @@
 			visible			1
 			origin			ORIGIN_CHOICE7
 			type			ITEM_TYPE_TEXT
-			text			"Leave Game"
+			text			"Purchases"
 			textaligny 		15
 			textalignx		7
 			textscale		.30
 		}
-		/// 7 ///
+		/// Leave game ///
 		itemDef
 		{
 			name			blanco_highlight_menu8
@@ -1115,6 +1114,67 @@
 			action
 			{
 				play "mouse_click";
+				open leavegame;
+				close ingame;
+			}
+		}
+		itemDef
+		{
+			visible			1
+			origin			ORIGIN_CHOICE8
+			type			ITEM_TYPE_TEXT
+			text			"Leave Game"
+			textaligny 		15
+			textalignx		7
+			textscale		.30
+		}
+		/// Main menu ///
+		itemDef
+		{
+			name			blanco_highlight_menu9
+			style			WINDOW_STYLE_SHADER
+			rect			2 0 120 16
+			origin			ORIGIN_CHOICE9
+			background		"nl_gradient"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			rect			0 0 100 16
+			origin			ORIGIN_CHOICE9
+			type			ITEM_TYPE_BUTTON
+			mouseEnter
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+
+				show blanco_highlight_menu9;
+				play "mouse_over";
+			}
+			mouseExit
+			{
+				hide blanco_highlight_menu1;
+				hide blanco_highlight_menu2;
+				hide blanco_highlight_menu3;
+				hide blanco_highlight_menu4;
+				hide blanco_highlight_menu5;
+				hide blanco_highlight_menu6;
+				hide blanco_highlight_menu7;
+				hide blanco_highlight_menu8;
+				hide blanco_highlight_menu9;
+			}
+			action
+			{
+				play "mouse_click";
 				close ingame;
 				open main;
 			}
@@ -1122,7 +1182,7 @@
 		itemDef
 		{
 			visible			1
-			origin			ORIGIN_CHOICE8
+			origin			ORIGIN_CHOICE9
 			type			ITEM_TYPE_TEXT
 			text			"Main Menu"
 			textaligny 		15

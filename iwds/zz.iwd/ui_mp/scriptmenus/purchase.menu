@@ -175,6 +175,7 @@
 		onEsc
 		{
 			close purchase;
+			open ingame;
 		}
 		onOpen 
 		{
