@@ -82,7 +82,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE1
-			background		"nl_zakladka"
+			background		"nl_zakladkas"
 			visible			1
 			decoration
 		}
@@ -92,7 +92,7 @@
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE1
-			background		"nl_zakladkas"
+			background		"nl_zakladka"
 			visible			1
 			decoration
 		}
@@ -135,7 +135,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE1
-			text			"American Ranger ^9- Normandy 1944"
+			text			"American Ranger ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -158,7 +158,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE2
-			text			"German Soldier ^9- Normandy 1944"
+			text			"German Soldier ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -181,7 +181,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE3
-			text			"British Soldier ^9- Normandy 1944"
+			text			"British Mate ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -204,7 +204,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE4
-			text			"Russian Soldier (Padded) ^9- U.S.S.R. 1943"
+			text			"Russian Comrade (Padded) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -227,7 +227,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE5
-			text			"German Solfier (Winter Dark) ^9- U.S.S.R. 1943"
+			text			"German Soldier (Winter Dark) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -250,7 +250,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE6
-			text			"German Soldier (Winter Light) ^9- U.S.S.R. 1943"
+			text			"German Soldier (Winter Light) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -273,7 +273,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE7
-			text			"German Soldier ^9- Northern Africa 1942"
+			text			"German Soldier ^9- Northern Africa"
 			action
 			{
 				play "mouse_click";
@@ -296,7 +296,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE8
-			text			"British Soldier ^9- Northern Africa 1942"
+			text			"British Mate ^9- Northern Africa"
 			action
 			{
 				play "mouse_click";
@@ -319,7 +319,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE9
-			text			"Russian Soldier (Coat) ^9- U.S.S.R. 1941"
+			text			"Russian Comrade (Coat) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
