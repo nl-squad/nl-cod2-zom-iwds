@@ -135,7 +135,7 @@
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE1
-			text			"American Normandy"
+			text			"American Ranger ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -152,13 +152,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE2
-			text			"^9Rank 8 ^4|"
+			text			"^9Rank 10 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE2
-			text			"German Normandy"
+			text			"German Soldier ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -175,13 +175,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE3
-			text			"^9Rank 18 ^4|"
+			text			"^9Rank 20 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE3
-			text			"British Normandy"
+			text			"British Mate ^9- Normandy"
 			action
 			{
 				play "mouse_click";
@@ -198,13 +198,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE4
-			text			"^9Rank 28 ^4|"
+			text			"^9Rank 30 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE4
-			text			"Russian Padded"
+			text			"Russian Comrade (Padded) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -221,13 +221,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE5
-			text			"^9Rank 38 ^4|"
+			text			"^9Rank 40 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE5
-			text			"German Winter Dark"
+			text			"German Soldier (Winter Dark) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -244,13 +244,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE6
-			text			"^9Rank 48 ^4|"
+			text			"^9Rank 50 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE6
-			text			"German Winter Light"
+			text			"German Soldier (Winter Light) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
@@ -267,13 +267,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE7
-			text			"^9Rank 58 ^4|"
+			text			"^9Rank 60 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE7
-			text			"German Africa"
+			text			"German Soldier ^9- Northern Africa"
 			action
 			{
 				play "mouse_click";
@@ -290,13 +290,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE8
-			text			"^9Rank 68 ^4|"
+			text			"^9Rank 70 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE8
-			text			"British Africa"
+			text			"British Mate ^9- Northern Africa"
 			action
 			{
 				play "mouse_click";
@@ -313,13 +313,13 @@
 		{
 			#include "ui_mp/weapon_rank_1.menu"
 			origin		ORIGIN_CHOICE9
-			text			"^9Rank 88 ^4|"
+			text			"^9Rank 80 ^4|"
 		}
 		itemDef
 		{
 			#include "ui_mp/weapon_add_1.menu"
 			origin			ORIGIN_CHOICE9
-			text			"Russian Coat"
+			text			"Russian Comrade (Coat) ^9- U.S.S.R."
 			action
 			{
 				play "mouse_click";
