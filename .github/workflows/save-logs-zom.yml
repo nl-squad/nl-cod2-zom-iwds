@@ -1,0 +1,11 @@
+name: Save zom logs
+
+on: workflow_dispatch
+
+jobs:
+  restart:
+    name: Zom save logs job
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/save-logs.yml@main
+    with:
+      profile: zom
+    secrets: inherit
