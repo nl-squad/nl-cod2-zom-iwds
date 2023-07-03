@@ -1,31 +1,56 @@
 #!/bin/bash
 
-# Read the headers from the second line
-IFS=";" read -a headers <<< "$(sed -n 2p weapons.csv)"
+# define csv file
+csvfile="weapons.csv"
 
-# Skip the first two lines
-tail -n +3 weapons.csv | while IFS=";" read -a line
+# initial line number
+lineno=0
+
+# read the file line by line
+while IFS= read -r line
 do
-    # Construct the file path
-    FILEPATH="../iwds/zz.iwd/weapons/${line[0]}"
+    # increment line number
+    ((lineno++))
 
-    # Loop over the headers
-    for ((i=1; i<${#headers[@]}; i++))
+    # skip first line
+    if ((lineno == 1)); then
+        continue
+    fi
+
+    # separating column names, which are the properties
+    if ((lineno == 2)); then
+        IFS=';' read -r -a properties <<< "$line"
+        continue
+    fi
+
+    # separating data for each file
+    IFS=';' read -r -a data <<< "$line"
+
+    filename=${data[0]}
+    
+    # define path
+    filepath="../iwds/zz.iwd/weapons/mp/$filename"
+
+    # iterate over properties and data
+    for ((pidx=1; pidx<${#data[@]}; pidx++))
     do
-        # Check if there are multiple properties in the header
-        if [[ ${headers[i]} == *","* ]]; then
-            # Split the properties and values by comma
-            IFS="," read -a properties <<< "${headers[i]}"
-            IFS="," read -a values <<< "${line[i]}"
+        # extract property and value
+        property_string=${properties[$pidx]}
+        value=${data[$pidx]}
 
-            # Replace each property
-            for ((j=0; j<${#properties[@]}; j++))
-            do
-                sed -i "s/\(${properties[j]}\\.*\\\).*/\1${values[j]}/" "$FILEPATH"
-            done
-        else
-            # Replace a single property
-            sed -i "s/\(${headers[i]}\\.*\\\).*/\1${line[i]}/" "$FILEPATH"
-        fi
+        # multiple properties might be separated by ','
+        IFS=',' read -r -a multiple_properties <<< "$property_string"
+
+        for property in "${multiple_properties[@]}"
+        do
+            # check if the property is already in the file
+            if grep -q "$property\\\\" "${filepath}"; then
+                sed -i '' "s/\(${property}\\\\\)[^\\\\]*\\\\/\1${value}\\\\/g" $filepath
+            else
+                # property is not in the file, print error
+                echo "Error: Property $property not found in $filename"
+            fi
+        done
     done
-done
+
+done < "$csvfile"
