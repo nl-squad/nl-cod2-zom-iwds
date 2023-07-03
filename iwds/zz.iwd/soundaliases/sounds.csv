@@ -14,3 +14,8 @@ growl2,1,zombies/zom_growl2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,
 growl3,1,zombies/zom_growl3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl4,1,zombies/zom_growl4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl5,1,zombies/zom_growl5.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+
+#Ambience,,,,,,,,,,,,,,,
+ambient_france_nl,,ambient/amb_france01b.mp3,0.73,,,,,,,local,streamed,,looping,,
+ambient_africa_nl,,ambient/amb_africa01b.mp3,0.67,,,,,,,local,streamed,,looping,,
+ambient_russia_nl,,ambient/amb_russia01b.mp3,0.56,,,,,,,local,streamed,,looping,,
