@@ -1179,7 +1179,7 @@
 			origin			ORIGIN_NLT
 			textscale		.24
 			textaligny		15
-			textalignx		68
+			textalignx		85
 			visible			1
 			decoration
 		}
