@@ -220,10 +220,6 @@
 		PURCHASE("tab1", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4", "1 000")
 		PURCHASE("tab1", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5", "300")
 		PURCHASE("tab1", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6", "1 000")
-		PURCHASE("tab1", ORIGIN_KR7, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (1h)", "7", "200")
-		PURCHASE("tab1", ORIGIN_KR8, "10discount", "nl_booster_discount_a", "nl_booster_discount_n", "10% shop discount (3h)", "8", "400")
-		PURCHASE("tab1", ORIGIN_KR9, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (1h)", "9", "400")
-		PURCHASE("tab1", ORIGIN_KR10, "20discount", "nl_booster_discount_a", "nl_booster_discount_n", "20% shop discount (3h)", "10", "800")
 
 		PURCHASE("tab2", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
 		PURCHASE("tab2", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
