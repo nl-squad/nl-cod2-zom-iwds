@@ -43,13 +43,8 @@ do
 
         for property in "${multiple_properties[@]}"
         do
-            # check if the property is already in the file
-            if grep -q "$property\\\\" "${filepath}"; then
-                sed -i '' "s/\(${property}\\\\\)[^\\\\]*\\\\/\1${value}\\\\/g" $filepath
-            else
-                # property is not in the file, print error
-                echo "Error: Property $property not found in $filename"
-            fi
+            sed -i '' "s/\(${property}\\\\\)[^\\\\]*\\\\/\1${value}\\\\/g" $filepath
+
         done
     done
 
