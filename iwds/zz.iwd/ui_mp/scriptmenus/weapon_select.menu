@@ -1092,7 +1092,7 @@
 		{
 			name 			"bar_ammo"
 			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 20^9/120 \n^7Max ^9Ammo^7: 20^9/200"
+			text			"^7Start ^9Ammo^7: 20^9/200 \n^7Max ^9Ammo^7: 20^9/280"
 			textscale		.23
 		}
 		itemDef
@@ -1122,7 +1122,7 @@
 		{
 			name 			"tesla_ammo"
 			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 5^9/50 \n^7Max ^9Ammo^7: 5^9/70"
+			text			"^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100"
 			textscale		.23
 		}
 
