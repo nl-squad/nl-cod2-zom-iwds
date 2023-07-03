@@ -44,7 +44,6 @@ do
         for property in "${multiple_properties[@]}"
         do
             sed -i '' "s/\(${property}\\\\\)[^\\\\]*\\\\/\1${value}\\\\/g" $filepath
-
         done
     done
 
