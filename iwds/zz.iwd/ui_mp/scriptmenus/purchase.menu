@@ -117,6 +117,86 @@
 		}
 #endif
 
+#ifndef PURCHASEWIDE
+#define PURCHASEWIDE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 22 70 35 0 0 \
+			origin			_origin \
+			background		_background_active \
+			dvartest		_dvar \
+			showDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		_background_nonactive \
+			dvartest		_dvar \
+			hideDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 0 0 \
+			origin			_origin \
+			border			1 \
+			bordercolor		0.027 0.082 0.604 1 \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.17 \
+			textalignx		2 \
+			textaligny		77 \
+			text			_text \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover:" ## _action; \
+				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.027 0.082 0.604 1 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+            	scriptMenuResponse "click:" ## _action; \
+			} \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			rect			77 10 0 0 0 0 \
+			origin			_origin \
+			forecolor		.976 .624 .22 1 \
+			textscale		.17 \
+			textalign 		ITEM_ALIGN_RIGHT \
+			text			_price \
+			visible			1 \
+			decoration \
+		}
+#endif
+
 #ifndef TAB
 #define TAB(_tab, _origin, _text) \
 		itemDef \
@@ -214,16 +294,16 @@
 			decoration
 		}
 
-		PURCHASE("tab1", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
-		PURCHASE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
-		PURCHASE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
-		PURCHASE("tab1", ORIGIN_KR6, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
-		PURCHASE("tab1", ORIGIN_KR7, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
-		PURCHASE("tab1", ORIGIN_KR8, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
-		PURCHASE("tab1", ORIGIN_KR11, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
-		PURCHASE("tab1", ORIGIN_KR12, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
-		PURCHASE("tab1", ORIGIN_KR13, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "10 000")
-		PURCHASE("tab1", ORIGIN_KR16, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR6, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR7, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR8, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR11, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR12, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR13, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "10 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR16, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
 
 		PURCHASE("tab2", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "1", "750")
 		PURCHASE("tab2", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "2", "2 500")
