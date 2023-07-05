@@ -4,8 +4,11 @@ $csvfile = "weapons.csv"
 # Initial line number
 $lineno = 0
 
-# Read the file line by line
-Get-Content $csvfile | ForEach-Object {
+# Read the file into an array
+$lines = Get-Content $csvfile
+
+# Iterate over each line
+foreach($line in $lines) {
     # Increment line number
     $lineno++
 
@@ -17,13 +20,13 @@ Get-Content $csvfile | ForEach-Object {
 
     # Separating column names, which are the properties
     if ($lineno -eq 2) {
-        $properties = $_ -split ';'
+        $properties = $line -split ';'
         Write-Host "Reading properties: $properties"
         continue
     }
 
     # Separating data for each file
-    $data = $_ -split ';'
+    $data = $line -split ';'
     Write-Host "Reading data: $data"
 
     $filename = $data[0]
