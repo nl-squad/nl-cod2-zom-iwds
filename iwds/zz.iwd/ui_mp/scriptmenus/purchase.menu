@@ -201,8 +201,8 @@
 			decoration
 		}
 
-		TAB("1", ORIGIN_TAB1, "Boosters")
-		TAB("2", ORIGIN_TAB2, "Weapons")
+		TAB("1", ORIGIN_TAB1, "Weapons")
+		TAB("2", ORIGIN_TAB2, "Boosters")
 		
 		itemDef
 		{
@@ -214,26 +214,23 @@
 			decoration
 		}
 
-		PURCHASE("tab1", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1", "200")
-		PURCHASE("tab1", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2", "500")
-		PURCHASE("tab1", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3", "400")
-		PURCHASE("tab1", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4", "1 000")
-		PURCHASE("tab1", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5", "300")
-		PURCHASE("tab1", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6", "1 000")
+		PURCHASE("tab1", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
+		PURCHASE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
+		PURCHASE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
+		PURCHASE("tab1", ORIGIN_KR6, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
+		PURCHASE("tab1", ORIGIN_KR7, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
+		PURCHASE("tab1", ORIGIN_KR8, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
+		PURCHASE("tab1", ORIGIN_KR11, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
+		PURCHASE("tab1", ORIGIN_KR12, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
+		PURCHASE("tab1", ORIGIN_KR13, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "10 000")
+		PURCHASE("tab1", ORIGIN_KR16, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
 
-		PURCHASE("tab2", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
-		PURCHASE("tab2", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
-		PURCHASE("tab2", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
-
-		PURCHASE("tab2", ORIGIN_KR6, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
-		PURCHASE("tab2", ORIGIN_KR7, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
-		PURCHASE("tab2", ORIGIN_KR8, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
-
-		PURCHASE("tab2", ORIGIN_KR11, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
-		PURCHASE("tab2", ORIGIN_KR12, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
-		PURCHASE("tab2", ORIGIN_KR13, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "10 000")
-
-		PURCHASE("tab2", ORIGIN_KR16, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
+		PURCHASE("tab2", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1", "200")
+		PURCHASE("tab2", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2", "500")
+		PURCHASE("tab2", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3", "400")
+		PURCHASE("tab2", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4", "1 000")
+		PURCHASE("tab2", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5", "300")
+		PURCHASE("tab2", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6", "1 000")
 
 		itemDef
 		{
