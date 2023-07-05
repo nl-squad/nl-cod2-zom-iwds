@@ -3,7 +3,7 @@ name: Deploy zom server files
 on:
   push:
     branches:
-      - main
+      - public
   workflow_dispatch:
 
 jobs:
