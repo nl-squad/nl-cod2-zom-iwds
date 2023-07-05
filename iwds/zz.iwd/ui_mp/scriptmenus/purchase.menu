@@ -1,0 +1,430 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE			0 50
+#define ORIGIN_KR1				120 90
+#define ORIGIN_KR2				220 90
+#define ORIGIN_KR3				320 90
+#define ORIGIN_KR4				420 90
+#define ORIGIN_KR5				520 90
+
+#define ORIGIN_KR6				120 190
+#define ORIGIN_KR7				220 190
+#define ORIGIN_KR8				320 190
+#define ORIGIN_KR9				420 190
+#define ORIGIN_KR10				520 190
+
+#define ORIGIN_KR11				120 290
+#define ORIGIN_KR12				220 290
+#define ORIGIN_KR13				320 290
+#define ORIGIN_KR14				420 290
+#define ORIGIN_KR15				520 290
+
+#define ORIGIN_KR16				120 390
+#define ORIGIN_KR17				220 390
+#define ORIGIN_KR18				320 390
+#define ORIGIN_KR19				420 390
+#define ORIGIN_KR20				520 390
+
+#define ORIGIN_EXIT				20 415
+#define ORIGIN_INFO				400 415
+#define ORIGIN_NLT				350 20
+
+#define ORIGIN_TAB1				20 90
+#define ORIGIN_TAB2				20 120
+#define ORIGIN_TAB3				20 150
+#define ORIGIN_TAB4				20 180
+#define ORIGIN_TAB5				20 210
+#define ORIGIN_TAB6				20 240
+#define ORIGIN_TAB7				20 270
+
+#ifndef PURCHASE
+#define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		_background_active \
+			dvartest		_dvar \
+			showDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		_background_nonactive \
+			dvartest		_dvar \
+			hideDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 0 0 \
+			origin			_origin \
+			border			1 \
+			bordercolor		0.027 0.082 0.604 1 \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.17 \
+			textalignx		2 \
+			textaligny		77 \
+			text			_text \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover:" ## _action; \
+				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.027 0.082 0.604 1 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+            	scriptMenuResponse "click:" ## _action; \
+			} \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			rect			77 10 0 0 0 0 \
+			origin			_origin \
+			forecolor		.976 .624 .22 1 \
+			textscale		.17 \
+			textalign 		ITEM_ALIGN_RIGHT \
+			text			_price \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef TAB
+#define TAB(_tab, _origin, _text) \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 80 25 0 0 \
+			origin			_origin \
+			visible			1 \
+			textscale		.22 \
+			textalignx		8 \
+			textaligny		17 \
+			text			_text \
+			mouseEnter \
+			{ \
+				setcolor backcolor 1 1 1 0.2 \
+			} \
+			mouseExit \
+			{ \
+				setcolor backcolor 1 1 1 0 \
+			} \
+			action \
+			{ \
+            	scriptMenuResponse "open:" ## _tab; \
+				play "mouse_click"; \
+				hide tab1; \
+				hide tab2; \
+				hide tab3; \
+				hide tab4; \
+				hide tab5; \
+				hide tab6; \
+				hide tab7; \
+				show "tab" ## _tab; \
+			} \
+		} \
+		itemDef \
+		{ \
+			name			"tab" ## _tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 25 80 1 0 0 \
+			origin			_origin \
+			backcolor		0 0 1 1 \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+{
+	menuDef
+	{
+		name			"purchase"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close purchase;
+			open ingame;
+		}
+		onOpen 
+		{
+			show tab1;
+			hide tab2;
+			hide tab3;
+			hide tab4;
+			hide tab5;
+			hide tab6;
+			hide tab7;
+			setDvar confirmation_description "";
+			setDvar confirmation_title "";
+			scriptMenuResponse "open:main";
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		TAB("1", ORIGIN_TAB1, "Weapons")
+		TAB("2", ORIGIN_TAB2, "Boosters")
+		
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			80 0 1 210 0 0
+			origin			ORIGIN_TAB1
+			backcolor		0 0 1 1
+			visible			1
+			decoration
+		}
+
+		PURCHASE("tab1", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
+		PURCHASE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
+		PURCHASE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
+		PURCHASE("tab1", ORIGIN_KR6, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
+		PURCHASE("tab1", ORIGIN_KR7, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
+		PURCHASE("tab1", ORIGIN_KR8, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
+		PURCHASE("tab1", ORIGIN_KR11, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
+		PURCHASE("tab1", ORIGIN_KR12, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
+		PURCHASE("tab1", ORIGIN_KR13, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "10 000")
+		PURCHASE("tab1", ORIGIN_KR16, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
+
+		PURCHASE("tab2", ORIGIN_KR1, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (3h)", "1", "200")
+		PURCHASE("tab2", ORIGIN_KR2, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25% EXP booster (12h)", "2", "500")
+		PURCHASE("tab2", ORIGIN_KR3, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (3h)", "3", "400")
+		PURCHASE("tab2", ORIGIN_KR4, "50expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "50% EXP booster (12h)", "4", "1 000")
+		PURCHASE("tab2", ORIGIN_KR5, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "5", "300")
+		PURCHASE("tab2", ORIGIN_KR6, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "6", "1 000")
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			-3 0 130 18
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"nL Tokens balance:"
+			textaligny		15
+			textalignx		3
+			visible			1
+			decoration
+			mouseEnter
+			{
+				show nlt_tooltip;
+			}
+			mouseExit
+			{
+				hide nlt_tooltip;
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nlt"
+			type			ITEM_TYPE_TEXT
+			forecolor		.976 .624 .22 1
+			rect			0 0 0 0
+			origin			ORIGIN_NLT
+			textscale		.24
+			textaligny		15
+			textalignx		85
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"nlt_tooltip"
+			type			ITEM_TYPE_TEXT
+			rect			0 30 0 0
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
+			visible			0
+			decoration
+		}
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		15
+			visible			1
+			action
+			{
+				close purchase;
+				play "mouse_click";
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
+
+		// CONFIRM //
+		itemDef 
+		{
+			style 			WINDOW_STYLE_SHADER
+			rect			220 160 200 100
+	 		background 		"popmenu_bg"
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+			visible			1
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			222 162 198 98
+			backcolor		0 0 0 0.9
+			style			WINDOW_STYLE_FILLED
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			222 184 198 1
+			backcolor		0.027 0.082 0.604 1
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 160 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		100
+			textaligny		23
+			textscale		.4
+			dvar			"confirmation_title"
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			220 158 0 0
+			visible			1
+			textalign 		ITEM_ALIGN_LEFT
+			textalignx		10
+			textaligny		42
+			textscale		.22
+			dvar			"confirmation_description"
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+		}
+		
+		/// CONFIRM BUTTONS ///
+		itemDef
+		{
+			name			yesbutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			240 243 60 14
+			border			1
+			bordercolor		0.5 0.5 0.5 0.8
+			color			0.5 0.5 0.5 0.85
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"Yes" //a
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+			mouseEnter
+			{
+				setitemcolor yesbutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor yesbutton bordercolor 0.5 0.5 0.5 0.8 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "yes"; //a
+			}
+		}
+		itemDef
+		{
+			name			nobutton //a
+			type			ITEM_TYPE_BUTTON
+			rect			340 243 60 14
+			border			1
+			bordercolor		0.027 0.082 0.604 1
+			style			WINDOW_STYLE_FILLED
+			visible			1
+			textscale		.2
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		30
+			textaligny		11
+			text			"No" //a
+			dvartest		"confirmation_title"
+			hideDvar		{ "" }
+			mouseEnter
+			{
+				setitemcolor nobutton bordercolor 0.094 0.455 0.804 0.8 //a
+			}
+			mouseExit
+			{
+				setitemcolor nobutton bordercolor 0.027 0.082 0.604 1 //a
+			}
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "no"; //a
+			}
+		}
+	}
+}
