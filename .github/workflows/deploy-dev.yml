@@ -12,4 +12,5 @@ jobs:
     uses: nl-squad/nl-cod2-workflows/.github/workflows/deploy.yml@main
     with:
       profile: default
+      branch: main
     secrets: inherit
