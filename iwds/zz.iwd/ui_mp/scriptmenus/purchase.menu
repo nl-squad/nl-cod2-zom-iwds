@@ -308,13 +308,11 @@
 		}
 
 		// CONFIRM //
-		itemDef
+		itemDef 
 		{
-			type			ITEM_TYPE_TEXT
+			style 			WINDOW_STYLE_SHADER
 			rect			220 160 200 100
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
+	 		background 		"popmenu_bg"
 			dvartest		"confirmation_title"
 			hideDvar		{ "" }
 			visible			1
