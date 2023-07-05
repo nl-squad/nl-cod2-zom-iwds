@@ -37,16 +37,35 @@ foreach($line in $lines) {
         $property_string = $properties[$pidx]
         $value = $data[$pidx]
 
+        # Skip if the property value is empty
+        if ($property_string -eq ' ') {
+            continue
+        }
+
         # Multiple properties might be separated by ','
         $multiple_properties = $property_string -split ','
 
         foreach ($property in $multiple_properties) {
-            Write-Host "Updating property '$property' with value '$value' in file '$filename'"
-            # Use regex to replace the string
-            (Get-Content $filepath) |
-            Foreach-Object { $_ -replace "(${property}\\\\)[^\\\\]*\\\\", "`${1}${value}\\" } |
-            Out-File $filepath -Encoding utf8 -NoNewline
+            # Get the content of the file
+            $content = Get-Content $filepath
+            
+            # Define the replacement pattern
+            $replacementPattern = "(${property}\\\\)[^\\\\]*\\\\"
+
+            # Check if the value needs to be replaced
+            if ($content -match $replacementPattern) {
+                $oldValue = $matches[1]
+
+                if ($oldValue -ne $value) {
+                    # Perform the replacement
+                    $newContent = $content -replace $replacementPattern, "`${1}${value}\\"
+
+                    # Write the updated content back to the file
+                    $newContent | Out-File $filepath -Encoding utf8 -NoNewline
+
+                    Write-Host "Updated property '$property' from '$oldValue' to '$value' in file '$filename'"
+                }
+            }
         }
     }
-    Write-Host "Processed: $filename"
 }
