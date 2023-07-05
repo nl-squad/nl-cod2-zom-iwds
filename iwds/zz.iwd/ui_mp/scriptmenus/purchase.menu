@@ -308,9 +308,9 @@
 		PURCHASE("tab2", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "1", "750")
 		PURCHASE("tab2", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "2", "2 500")
 		PURCHASE("tab2", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (30d)", "3", "7 500")
-		PURCHASE("tab2", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percentages EXP booster (1d)", "6", "700")
-		PURCHASE("tab2", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percentages EXP booster (7d)", "7", "2 400")
-		PURCHASE("tab2", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percentages EXP booster (30d)", "8", "7 200")
+		PURCHASE("tab2", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (1d)", "6", "700")
+		PURCHASE("tab2", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (7d)", "7", "2 400")
+		PURCHASE("tab2", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (30d)", "8", "7 200")
 
 		itemDef
 		{
