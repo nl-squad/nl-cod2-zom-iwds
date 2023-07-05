@@ -2,15 +2,16 @@
 
 #define ORIGIN_TITLE		10 60
 #define ORIGIN_PAGE			10 430
-#define ORIGIN_CHOICE1		20 125
-#define ORIGIN_CHOICE2		20 150
-#define ORIGIN_CHOICE3		20 175
-#define ORIGIN_CHOICE4		20 200
-#define ORIGIN_CHOICE5		20 225
-#define ORIGIN_CHOICE6		20 250
-#define ORIGIN_CHOICE7		20 275
-#define ORIGIN_CHOICE8		20 300
-#define ORIGIN_CHOICE9		20 325
+#define ORIGIN_CHOICE1		70 125
+#define ORIGIN_CHOICE2		70 150
+#define ORIGIN_CHOICE3		70 175
+#define ORIGIN_CHOICE4		70 200
+#define ORIGIN_CHOICE5		70 225
+#define ORIGIN_CHOICE6		70 250
+#define ORIGIN_CHOICE7		70 275
+#define ORIGIN_CHOICE8		70 300
+#define ORIGIN_CHOICE9		70 325
+#define ORIGIN_CHOICE10		70 350
 #define ORIGIN_MAPNAME		460 235
 #define ORIGIN_MAPINFO		410 228
 #define ORIGIN_RECORDS		390 240
@@ -25,6 +26,198 @@
 #define ORIGIN_PLROPT3		340 100
 #define ORIGIN_EVER_SCOREBOARD		340 220
 #define ORIGIN_LOGO			256 120
+
+
+#ifndef INGAME_SELECTION
+#define INGAME_SELECTION(_text, _origin, _response, _num) \
+		itemDef \
+		{ \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_SHADER \
+			rect			2 0 120 16 0 0 \
+			origin			_origin \
+			background		"nl_gradient" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			rect			0 0 100 16 0 0 \
+			origin			_origin \
+			type			ITEM_TYPE_BUTTON \
+			mouseEnter \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+				show "blanco_highlight_menu" ## _num; \
+				play "mouse_over"; \
+			} \
+			mouseExit \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+            	scriptMenuResponse _response; \
+			} \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			origin			_origin \
+			type			ITEM_TYPE_TEXT \
+			text			_text \
+			textaligny 		15 \
+			textalignx		7 \
+			textscale		.30 \
+		}
+#endif
+
+#ifndef INGAME_SELECTION_OPENSUBMENU
+#define INGAME_SELECTION_OPENSUBMENU(_text, _origin, _submenu, _num) \
+		itemDef \
+		{ \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_SHADER \
+			rect			2 0 120 16 0 0 \
+			origin			_origin \
+			background		"nl_gradient" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			rect			0 0 100 16 0 0 \
+			origin			_origin \
+			type			ITEM_TYPE_BUTTON \
+			mouseEnter \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+				show "blanco_highlight_menu" ## _num; \
+				play "mouse_over"; \
+			} \
+			mouseExit \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				close ingame; \
+				open _submenu; \
+			} \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			origin			_origin \
+			type			ITEM_TYPE_TEXT \
+			text			_text \
+			textaligny 		15 \
+			textalignx		7 \
+			textscale		.30 \
+		}
+#endif
+
+#ifndef INGAME_SELECTION_HOVERSUBMENU
+#define INGAME_SELECTION_HOVERSUBMENU(_text, _origin, _submenu, _num) \
+		itemDef \
+		{ \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_SHADER \
+			rect			2 0 120 16 0 0 \
+			origin			_origin \
+			background		"nl_gradient" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			rect			0 0 100 16 0 0 \
+			origin			_origin \
+			type			ITEM_TYPE_BUTTON \
+			mouseEnter \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+				show "blanco_highlight_menu" ## _num; \
+				play "mouse_over"; \
+				hide map; \
+				hide map_records; \
+				hide blanco_playeroption; \
+				show _submenu; \
+			} \
+			mouseExit \
+			{ \
+				hide blanco_highlight_menu1; \
+				hide blanco_highlight_menu2; \
+				hide blanco_highlight_menu3; \
+				hide blanco_highlight_menu4; \
+				hide blanco_highlight_menu5; \
+				hide blanco_highlight_menu6; \
+				hide blanco_highlight_menu7; \
+				hide blanco_highlight_menu8; \
+				hide blanco_highlight_menu9; \
+				show map; \
+				show map_records; \
+				show blanco_playeroption; \
+				hide _submenu; \
+			} \
+		} \
+		itemDef \
+		{ \
+			visible			1 \
+			origin			_origin \
+			type			ITEM_TYPE_TEXT \
+			text			_text \
+			textaligny 		15 \
+			textalignx		7 \
+			textscale		.30 \
+		}
+#endif
+
 
 {
 	menuDef
@@ -69,7 +262,7 @@
 		{
 			origin			ORIGIN_SEASON
 			type			ITEM_TYPE_TEXT
-			text			"Version 3.0"
+			text			"Version 3.1"
 			forecolor		0.694 0.514 0.188 1
 			textscale		.3
 			textalign		ITEM_ALIGN_CENTER
@@ -80,7 +273,7 @@
 		{
 			origin			ORIGIN_DATES
 			type			ITEM_TYPE_TEXT
-			text			"Release date: June 29, 2023. Check what's new on discord #announcements channel."
+			text			"Release date: July xxx, 2023. Check what's new on discord #announcements channel."
 			forecolor		0.6 0.6 0.6 1
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
@@ -642,493 +835,16 @@
 			decoration
 		}
 
-		/// 1 ///
-		itemDef
-		{
-			name			blanco_highlight_menu1
-			style			WINDOW_STYLE_SHADER
-			rect			2 2 120 16
-			origin			ORIGIN_CHOICE1
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE1
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
+		INGAME_SELECTION("Weapon Menu", ORIGIN_CHOICE1, "changeweapon", "1")
+		INGAME_SELECTION("Purchases", ORIGIN_CHOICE2, "purchases", "2")
+		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
-				show blanco_highlight_menu1;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "autoassign";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE1
-			type			ITEM_TYPE_TEXT
-			text			"Join Game"
-			textaligny 		17
-			textalignx		7
-			textscale		.30
-		}
-		/// 2 ///
-		itemDef
-		{
-			name			blanco_highlight_menu2
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE2
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE2
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu2;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-
-				scriptMenuResponse "changeweapon";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE2
-			type			ITEM_TYPE_TEXT
-			text			"Weapon Menu"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 3 ///
-		itemDef
-		{
-			name			blanco_highlight_menu3
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE3
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE3
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu3;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "stats";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE3
-			type			ITEM_TYPE_TEXT
-			text			"My Stats"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 4 ///
-		itemDef
-		{
-			name			blanco_highlight_menu4
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE4
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE4
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu4;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "topstats";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE4
-			type			ITEM_TYPE_TEXT
-			text			"Top Players"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 5 ///
-		itemDef
-		{
-			name			blanco_highlight_menu5
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE5
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE5
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu5;
-				play "mouse_over";
-
-				hide map;
-                    hide map_records;
-                    hide blanco_playeroption;
-				show about;
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				hide about;
-                    show blanco_playeroption;
-                    show map_records;
-				show map;
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE5
-			type			ITEM_TYPE_TEXT
-			text			"About"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 6 ///
-		itemDef
-		{
-			name			blanco_highlight_menu6
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE6
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE6
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu6;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "challenges";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE6
-			type			ITEM_TYPE_TEXT
-			text			"Challenges"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 6 ///
-		itemDef
-		{
-			name			blanco_highlight_menu7
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE7
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE7
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu7;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				open leavegame;
-				close ingame;
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE7
-			type			ITEM_TYPE_TEXT
-			text			"Leave Game"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		/// 7 ///
-		itemDef
-		{
-			name			blanco_highlight_menu8
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE8
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE8
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-
-				show blanco_highlight_menu8;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu1;
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-				hide blanco_highlight_menu4;
-				hide blanco_highlight_menu5;
-				hide blanco_highlight_menu6;
-				hide blanco_highlight_menu7;
-				hide blanco_highlight_menu8;
-				hide blanco_highlight_menu9;
-			}
-			action
-			{
-				play "mouse_click";
-				close ingame;
-				open main;
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE8
-			type			ITEM_TYPE_TEXT
-			text			"Main Menu"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
+		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
+		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
+		INGAME_SELECTION_HOVERSUBMENU("About", ORIGIN_CHOICE7, "about", "6")
+		
+		INGAME_SELECTION_OPENSUBMENU("Leave Game", ORIGIN_CHOICE9, "leavegame", "7")
+		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
 	}
 	
 	menuDef
