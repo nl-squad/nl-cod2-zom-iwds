@@ -109,18 +109,102 @@
 			visible			1
 			decoration
 		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE1
+			visible			1
+			mouseEnter
+			{
+				show weapons_1_hover;
+				hide weapons_2_hover;
+			}
+			mouseExit
+			{
+				hide weapons_1_hover;
+				hide weapons_2_hover;
+			}
+			action
+			{
+				play "mouse_click";
+				setdvar nl_weapon "nl_blank";
+
+				show weapons_1;
+				hide weapons_2;
+			}
+		}
+
+		// Characters
+		itemDef
+		{
+			name			"weapons_2"
+			style			WINDOW_STYLE_SHADER
+			rect			0 -5 100 20
+			origin			ORIGIN_TITLE2
+			background		"nl_zakladkas"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 -5 100 20
+			origin			ORIGIN_TITLE2
+			background		"nl_zakladka"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE2
+			text			"Characters"
+			textscale		.23
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		50
+			textaligny		12
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 100 20
+			origin			ORIGIN_TITLE1
+			visible			1
+			mouseEnter
+			{
+				hide weapons_1_hover;
+				show weapons_2_hover;
+			}
+			mouseExit
+			{
+				hide weapons_1_hover;
+				hide weapons_2_hover;
+			}
+			action
+			{
+				play "mouse_click";
+				setdvar nl_weapon "nl_blank";
+
+				hide weapons_1;
+				show weapons_2;
+			}
+		}
 
 		/////////////////////////////////////////////////////
 		/*
 		American Normandy [6] "nl_char_american_normandy"
-		German Normandy (8 rank) [3] "nl_char_german_normandy"
-		British Normandy (18 rank) [5] "nl_char_british_normandy"
-		Russian Padded (28 rank) [9] "nl_char_russian_padded"
-		German Winter Dark (38 rank) [8] "nl_char_german_winter_dark"
-		German Winter Light(48 rank) [24] "nl_char_german_winter_light"
-		German Africa (58 rank) [2] "nl_char_german_africa"
-		British Africa (68 rank) [4] "nl_char_british_africa"
-		Russian Coat (88 rank) [7] "nl_char_russian_coat"
+		German Normandy (10 rank) [3] "nl_char_german_normandy"
+		British Normandy (20 rank) [5] "nl_char_british_normandy"
+		Russian Padded (30 rank) [9] "nl_char_russian_padded"
+		German Winter Dark (40 rank) [8] "nl_char_german_winter_dark"
+		German Winter Light(50 rank) [24] "nl_char_german_winter_light"
+		German Africa (60 rank) [2] "nl_char_german_africa"
+		British Africa (70 rank) [4] "nl_char_british_africa"
+		Russian Coat (80 rank) [7] "nl_char_russian_coat"
 		*/
 		/////////////////////////////////////////////////////
 		
@@ -147,7 +231,7 @@
 			}
 		}
 
-		/// 2 /// German Normandy (8 rank) [3] "nl_char_german_normandy"
+		/// 2 /// German Normandy (10 rank) [3] "nl_char_german_normandy"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -170,7 +254,7 @@
 			}
 		}
 
-		/// 3 /// British Normandy (18 rank) [5] "nl_char_british_normandy"
+		/// 3 /// British Normandy (20 rank) [5] "nl_char_british_normandy"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -193,7 +277,7 @@
 			}
 		}
 
-		/// 4 /// Russian Padded (28 rank) [9] "nl_char_russian_padded"
+		/// 4 /// Russian Padded (30 rank) [9] "nl_char_russian_padded"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -216,7 +300,7 @@
 			}
 		}
 
-		/// 5 /// German Winter Dark (38 rank) [8] "nl_char_german_winter_dark"
+		/// 5 /// German Winter Dark (40 rank) [8] "nl_char_german_winter_dark"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -239,8 +323,7 @@
 			}
 		}
 
-		/// 6 /// German Winter Light(48 rank) [10] "nl_char_german_winter_light" 
-		// cpt price: scriptMenuResponse "10";
+		/// 6 /// German Winter Light(50 rank) [10] "nl_char_german_winter_light" 
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -263,7 +346,7 @@
 			}
 		}
 		
-		/// 7 /// German Africa (58 rank) [2] "nl_char_german_africa"
+		/// 7 /// German Africa (60 rank) [2] "nl_char_german_africa"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -286,7 +369,7 @@
 			}
 		}
 		
-		/// 8 /// British Africa (68 rank) [4] "nl_char_british_africa"
+		/// 8 /// British Africa (70 rank) [4] "nl_char_british_africa"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -309,7 +392,7 @@
 			}
 		}
 		
-		/// 9 /// Russian Coat (88 rank) [7] "nl_char_russian_coat"
+		/// 9 /// Russian Coat (80 rank) [7] "nl_char_russian_coat"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -330,6 +413,66 @@
 			{
 				setdvar nl_weapon "nl_char_russian_coat";
 			}
+		}
+		/// Characters
+		/// 1 /// Cpt. Price (Nexus) [24] "nl_char_cpt_price"
+		itemDef
+		{
+			#include "ui_mp/weapon_rank_2.menu"
+			origin		ORIGIN_CHOICE1
+			text			"^3Nexus ^4|"
+		}
+		itemDef
+		{
+			#include "ui_mp/weapon_add_2.menu"
+			origin			ORIGIN_CHOICE1
+			text			"Cpt. Price"
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "24";
+			}
+			mouseEnter
+			{
+				setdvar nl_weapon "nl_char_cpt_price";
+			}
+		}
+		/// 2 /// Diana Antanova (100 rank) [] "nl_char_diana_antanova"
+		itemDef
+		{
+			#include "ui_mp/weapon_rank_2.menu"
+			origin		ORIGIN_CHOICE3
+			text			"^9Rank 100 ^4|"
+		}
+		itemDef
+		{
+			#include "ui_mp/weapon_add_2.menu"
+			origin			ORIGIN_CHOICE3
+			text			"Diana Antanowa ^9- Russian Medic"
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "24";
+			}
+			mouseEnter
+			{
+				setdvar nl_weapon "nl_char_diana_antanova";
+			}
+		}
+		itemDef
+		{
+			name			"weapons_2"
+			visible			0
+			rect			0 0 128 24
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_TEXT
+			textfont		UI_FONT_NORMAL
+			textscale		.2
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			textalign      ITEM_ALIGN_LEFT
+			origin			ORIGIN_CHOICE7
+			text			"^9more comming soon..."
 		}
 
 		/// EXIT ///

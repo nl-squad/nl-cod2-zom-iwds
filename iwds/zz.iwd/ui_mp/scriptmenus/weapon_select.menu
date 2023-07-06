@@ -948,7 +948,7 @@
           {
                #include "ui_mp/weapon_rank_4.menu"
                origin		ORIGIN_CHOICE1
-               text			"^3NEXUS ^4|"
+               text			"^3Nexus ^4|"
           }
           itemDef
           {
