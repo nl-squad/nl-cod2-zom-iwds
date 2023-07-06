@@ -433,7 +433,7 @@
 		{
 			#include "ui_mp/weapon_add_2.menu"
 			origin			ORIGIN_CHOICE3
-			text			"Diana Antanowa ^9- Russian Medic"
+			text			"Diana Antanova ^9- Russian Medic"
 			action
 			{
 				play "mouse_click";
