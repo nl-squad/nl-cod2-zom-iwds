@@ -78,7 +78,7 @@
 		// Skins
 		itemDef
 		{
-			name			"weapons_2"
+			name			"weapons_1"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
 			origin			ORIGIN_TITLE2
@@ -180,7 +180,7 @@
 		British Normandy (20 rank) [5] "nl_char_british_normandy"
 		Russian Padded (30 rank) [9] "nl_char_russian_padded"
 		German Winter Dark (40 rank) [8] "nl_char_german_winter_dark"
-		German Winter Light(50 rank) [24] "nl_char_german_winter_light"
+		German Winter Light(50 rank) [10] "nl_char_german_winter_light"
 		German Africa (60 rank) [2] "nl_char_german_africa"
 		British Africa (70 rank) [4] "nl_char_british_africa"
 		Russian Coat (80 rank) [7] "nl_char_russian_coat"
