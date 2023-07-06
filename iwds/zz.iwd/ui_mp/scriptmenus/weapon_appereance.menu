@@ -78,20 +78,19 @@
 		// Skins
 		itemDef
 		{
-			name			"weapons_1"
+			name			"weapons_2"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
+			origin			ORIGIN_TITLE2
 			background		"nl_zakladkas"
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"weapons_1_hover"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
+			origin			ORIGIN_TITLE2
 			background		"nl_zakladka"
 			visible			1
 			decoration
@@ -115,16 +114,6 @@
 			rect			0 0 100 20
 			origin			ORIGIN_TITLE1
 			visible			1
-			mouseEnter
-			{
-				show weapons_1_hover;
-				hide weapons_2_hover;
-			}
-			mouseExit
-			{
-				hide weapons_1_hover;
-				hide weapons_2_hover;
-			}
 			action
 			{
 				play "mouse_click";
@@ -174,16 +163,6 @@
 			rect			0 0 100 20
 			origin			ORIGIN_TITLE1
 			visible			1
-			mouseEnter
-			{
-				hide weapons_1_hover;
-				show weapons_2_hover;
-			}
-			mouseExit
-			{
-				hide weapons_1_hover;
-				hide weapons_2_hover;
-			}
 			action
 			{
 				play "mouse_click";
@@ -414,6 +393,7 @@
 				setdvar nl_weapon "nl_char_russian_coat";
 			}
 		}
+		
 		/// Characters
 		/// 1 /// Cpt. Price (Nexus) [24] "nl_char_cpt_price"
 		itemDef
@@ -471,7 +451,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textaligny		20
 			textalign      ITEM_ALIGN_LEFT
-			origin			ORIGIN_CHOICE7
+			origin			ORIGIN_CHOICE4
 			text			"^9more comming soon..."
 		}
 
