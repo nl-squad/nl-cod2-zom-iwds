@@ -40,8 +40,9 @@
 		{
 			setdvar nl_weapon "nl_blank";
 			show weapons_1;
-               hide weapons_2;
+            hide weapons_2;
 			hide weapons_3;
+			hide weapons_4;
 		}
 
 		/// TLO ///
@@ -81,7 +82,7 @@
 			name			"weapons_1"
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
-			origin			ORIGIN_TITLE2
+			origin			ORIGIN_TITLE1
 			background		"nl_zakladkas"
 			visible			1
 			decoration
@@ -90,7 +91,7 @@
 		{
 			style			WINDOW_STYLE_SHADER
 			rect			0 -5 100 20
-			origin			ORIGIN_TITLE2
+			origin			ORIGIN_TITLE1
 			background		"nl_zakladka"
 			visible			1
 			decoration
@@ -121,6 +122,8 @@
 
 				show weapons_1;
 				hide weapons_2;
+				hide weapons_3;
+				hide weapons_4;
 			}
 		}
 
@@ -161,7 +164,7 @@
 		{
 			type			ITEM_TYPE_BUTTON
 			rect			0 0 100 20
-			origin			ORIGIN_TITLE1
+			origin			ORIGIN_TITLE2
 			visible			1
 			action
 			{
@@ -170,6 +173,8 @@
 
 				hide weapons_1;
 				show weapons_2;
+				hide weapons_3;
+				hide weapons_4;
 			}
 		}
 
