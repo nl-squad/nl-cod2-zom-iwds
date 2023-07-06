@@ -239,7 +239,8 @@
 			}
 		}
 
-		/// 6 /// German Winter Light(48 rank) [24] "nl_char_german_winter_light"
+		/// 6 /// German Winter Light(48 rank) [10] "nl_char_german_winter_light" 
+		// cpt price: scriptMenuResponse "10";
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_1.menu"
@@ -254,7 +255,7 @@
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "24";
+				scriptMenuResponse "10";
 			}
 			mouseEnter
 			{
