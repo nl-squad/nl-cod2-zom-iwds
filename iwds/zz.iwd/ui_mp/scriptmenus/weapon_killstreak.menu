@@ -415,7 +415,7 @@
 			textscale		.2
 			textalignx		2
 			textaligny		76
-			text			"Browning MG ^9(^522^9)" //a
+			text			"Browning MG ^9(^520^9)" //a
 			mouseEnter
 			{
 				scriptMenuResponse "hover_7"; //a
@@ -648,7 +648,7 @@
 			textscale		.2
 			textalignx		2
 			textaligny		76
-			text			"Nuke ^9(^575^9)" //a
+			text			"Nuke ^9(^5100^9)" //a
 			mouseEnter
 			{
 				scriptMenuResponse "hover_15"; //a
