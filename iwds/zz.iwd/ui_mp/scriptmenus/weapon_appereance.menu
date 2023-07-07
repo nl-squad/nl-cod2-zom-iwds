@@ -422,7 +422,7 @@
 				setdvar nl_weapon "nl_char_cpt_price";
 			}
 		}
-		/// 2 /// Diana Antanova (100 rank) [] "nl_char_diana_antanova"
+		/// 2 /// Diana Antanova (100 rank) [11] "nl_char_diana_antanova"
 		itemDef
 		{
 			#include "ui_mp/weapon_rank_2.menu"
@@ -437,7 +437,7 @@
 			action
 			{
 				play "mouse_click";
-				scriptMenuResponse "24";
+				scriptMenuResponse "11";
 			}
 			mouseEnter
 			{
