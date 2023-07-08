@@ -39,8 +39,10 @@ weap_lasergun_fire,1,misc/fire_lasergun.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,wea
 weap_lasergun_fire_plr,,misc/fire_lasergun.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #raygun
-weap_raygun_fire,,weapons/raygun/fire_raygun.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_raygun_fire_plr,,weapons/raygun/fire_raygun.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+weap_raygun_fire_plr,,weapons/raygun/fire_raygun.wav,0.8,0.85,wpnplyr,0.95,1.05,500000,,local,,,,0.85,,,,,,,,,0.2
+weap_raygun_fire,,weapons/raygun/fire_raygun.wav,0.6,0.65,wpnai,1.05,0.96,35,8400,weapon,,,,0.7,,,,,weapon2
+weap_raygun_reload,,weapons/raygun/reload_raygun.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
+weap_raygun_reload_not_empty,,weapons/raygun/reload_raygun.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
 
 #g3
 weap_g3_fire,,weapons/g3/g3_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
