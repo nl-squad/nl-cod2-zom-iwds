@@ -419,7 +419,7 @@
 			}
 			mouseEnter
 			{
-				setdvar nl_weapon "nl_char_cpt_price";
+				setdvar nl_weapon "nl_char_british_normandy_price";
 			}
 		}
 		/// 2 /// Diana Antanova (100 rank) [11] "nl_char_diana_antanova"
@@ -441,7 +441,7 @@
 			}
 			mouseEnter
 			{
-				setdvar nl_weapon "nl_char_diana_antanova";
+				setdvar nl_weapon "nl_char_russian_diana";
 			}
 		}
 		itemDef
