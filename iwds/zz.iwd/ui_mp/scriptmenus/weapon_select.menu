@@ -25,6 +25,134 @@
 #define ORIGIN_INFO					350 375
 #define ORIGIN_NLT					350 300
 
+#ifndef WP
+#define WP(_tab, _origin, _requirement, _name, _weapon, _ammo) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			-10 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_TEXT \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_RIGHT \
+			origin			_origin \
+			text			_requirement ## " ^4|" \
+		} \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			0 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_BUTTON \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_LEFT \
+			origin			_origin \
+			text			_name \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _weapon ## "_mp"; \
+			} \
+			mouseEnter \
+			{ \
+				setdvar nl_weapon "nl_img_" ## _weapon; \
+			} \
+			onFocus \
+			{ \
+				hide ammo_group; \
+				show _weapon ## "_ammo"; \
+			} \
+		} \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			name 			_weapon ## "_ammo" \
+			origin			ORIGIN_AMMO \
+			text			_ammo \
+			textscale		.23 \
+		}
+#endif
+
+#ifndef MORE
+#define MORE(_tab, _origin) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			0 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_TEXT \
+			textfont		UI_FONT_NORMAL \
+			textscale		.2 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_LEFT \
+			origin			_origin \
+			text			"^9more comming soon..." \
+		}
+#endif
+
+#ifndef WPTAB
+#define WPTAB(_tab, _origin, _name) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			0 -5 100 20 0 0 \
+			origin			_origin \
+			background		"nl_zakladkas" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			0 -5 100 20 0 0 \
+			origin			_origin \
+			background		"nl_zakladka" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 100 20 0 0 \
+			origin			_origin \
+			text			_name \
+			textscale		.23 \
+			textalign 		ITEM_ALIGN_CENTER \
+			textalignx		50 \
+			textaligny		12 \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 100 20 0 0 \
+			origin			_origin \
+			visible			1 \
+			action \
+			{ \
+				play "mouse_click"; \
+				setdvar nl_weapon "nl_blank"; \
+				hide tab_1; \
+				hide tab_2; \
+				hide tab_3; \
+				hide tab_4; \
+				show "tab_" ## _tab; \
+			} \
+		}
+#endif
+
 {
 	menuDef
 	{
@@ -41,36 +169,12 @@
 		onOpen
 		{
 			setdvar nl_weapon "nl_blank";
-			show weapons_1;
-			hide weapons_2;
-			hide weapons_3;
-			hide weapons_4;
-			hide weapons_1_hover;
-			hide weapons_2_hover;
-			hide weapons_3_hover;
-			hide weapons_4_hover;
+			show tab_1;
+			hide tab_2;
+			hide tab_3;
+			hide tab_4;
 			hide nlt_tooltip;
 			scriptMenuResponse "open";
-			
-			hide mosin_nagant_ammo;
-			hide m1_garand_ammo;
-			hide springfield_ammo;
-			hide g3_ammo;
-			hide barrett_ammo;
-			
-			hide mp40_ammo;
-			hide mp44_ammo;
-			hide ak74_ammo;
-			hide sig_ammo;
-			hide ak47_ammo;
-			hide thompson_ammo;
-			
-			hide bar_ammo;
-			hide winchester_ammo;
-			hide rpk_ammo;
-			hide saw_ammo;
-			
-			hide tesla_ammo;
 		}
 
 		/// TLO ///
@@ -103,908 +207,35 @@
 			decoration
 		}
 
-		/// ZAKLADKI ///
-		// Rifles
-		itemDef
-		{
-			name			"weapons_1"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
-			background		"nl_zakladkas"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
-			background		"nl_zakladka"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE1
-			text			"Rifles"
-			textscale		.23
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		50
-			textaligny		12
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE1
-			visible			1
-               mouseEnter
-               {
-     			show weapons_1_hover;
-     			hide weapons_2_hover;
-                    hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-               mouseExit
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-                    hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-			action
-			{
-				play "mouse_click";
-				setdvar nl_weapon "nl_blank";
+		WPTAB("1", ORIGIN_TITLE1, "Rifles")
+		WPTAB("2", ORIGIN_TITLE2, "Machine Guns")
+		WPTAB("3", ORIGIN_TITLE3, "Heavy Weapons")
+		WPTAB("4", ORIGIN_TITLE4, "Special")
 
-				show weapons_1;
-				hide weapons_2;
-				hide weapons_3;
-     			hide weapons_4;
-				
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-				
-				hide mp40_ammo;
-				hide mp44_ammo;
-				hide ak74_ammo;
-				hide sig_ammo;
-				hide ak47_ammo;
-				hide thompson_ammo;
-				
-				hide bar_ammo;
-				hide winchester_ammo;
-				hide rpk_ammo;
-				hide saw_ammo;
-				
-				hide tesla_ammo;
-			}
-		}
+		WP("1", ORIGIN_CHOICE1, "^9Rank 3", "Mosin Nagant", "mosin_nagant", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
+		WP("1", ORIGIN_CHOICE2, "^9Rank 8", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/320 \n^7Max ^9Ammo^7: 8^9/352")
+		WP("1", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Springfield", "springfield", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
+		WP("1", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/180 \n^7Max ^9Ammo^7: 20^9/260")
+		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120")
+		MORE("1", ORIGIN_CHOICE7)
 
-		// Machine guns
-		itemDef
-		{
-			name			"weapons_2"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE2
-			background		"nl_zakladkas"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE2
-			background		"nl_zakladka"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE2
-			text			"Machine Guns"
-			textscale		.23
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		50
-			textaligny		12
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE2
-			visible			1
-               mouseEnter
-               {
-     			hide weapons_1_hover;
-     			show weapons_2_hover;
-     			hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-               mouseExit
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-     			hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-			action
-			{
-				play "mouse_click";
-				setdvar nl_weapon "nl_blank";
+		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/192 \n^7Max ^9Ammo^7: 32^9/320")
+		WP("2", ORIGIN_CHOICE2, "^9Rank 10", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE4, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE5, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE6, "^84 000 ^9nL Tokens", "Ak-47", "ak47", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		MORE("2", ORIGIN_CHOICE7)
+		WP("2", ORIGIN_CHOICE9, "^9Rank 100", "^3Golden ^7Thompson", "thompson", "^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330")
 
-				hide weapons_1;
-				show weapons_2;
-				hide weapons_3;
-     			hide weapons_4;
-				
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-				
-				hide mp40_ammo;
-				hide mp44_ammo;
-				hide ak74_ammo;
-				hide sig_ammo;
-				hide ak47_ammo;
-				hide thompson_ammo;
-				
-				hide bar_ammo;
-				hide winchester_ammo;
-				hide rpk_ammo;
-				hide saw_ammo;
-				
-				hide tesla_ammo;
-			}
-		}
+		WP("3", ORIGIN_CHOICE1, "^9Rank 5", "BAR", "bar", "^7Start ^9Ammo^7: 20^9/200 \n^7Max ^9Ammo^7: 20^9/280")
+		WP("3", ORIGIN_CHOICE3, "^83 000 ^9nL Tokens", "Winchester 1200", "winchester", "^7Start ^9Ammo^7: 7^9/70 \n^7Max ^9Ammo^7: 7^9/98")
+		WP("3", ORIGIN_CHOICE4, "^825 000 ^9nL Tokens", "RPK-74", "rpk", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("3", ORIGIN_CHOICE5, "^810 000 ^9nL Tokens", "M249 SAW", "saw", "^7Start ^9Ammo^7: 100^9/300 \n^7Max ^9Ammo^7: 100^9/700")
+		MORE("3", ORIGIN_CHOICE6)
 
-		// Heavy
-		itemDef
-		{
-			name			"weapons_3"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE3
-			background		"nl_zakladkas"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE3
-			background		"nl_zakladka"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE3
-			text			"Heavy Weapons"
-			textscale		.23
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		50
-			textaligny		12
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE3
-			visible			1
-               mouseEnter
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-     			show weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-               mouseExit
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-     			hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-			action
-			{
-				play "mouse_click";
-				setdvar nl_weapon "nl_blank";
-
-				hide weapons_1;
-				hide weapons_2;
-				show weapons_3;
-     			hide weapons_4;
-				
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-				
-				hide mp40_ammo;
-				hide mp44_ammo;
-				hide ak74_ammo;
-				hide sig_ammo;
-				hide ak47_ammo;
-				hide thompson_ammo;
-				
-				hide bar_ammo;
-				hide winchester_ammo;
-				hide rpk_ammo;
-				hide saw_ammo;
-				
-				hide tesla_ammo;
-			}
-		}
-
-		// Special
-		itemDef
-		{
-			name			"weapons_4"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE4
-			background		"nl_zakladkas"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE4
-			background		"nl_zakladka"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE4
-			text			"Special"
-			textscale		.23
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		50
-			textaligny		12
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE4
-			visible			1
-               mouseEnter
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-     			hide weapons_3_hover;
-     			show weapons_4_hover;
-               }
-               mouseExit
-               {
-     			hide weapons_1_hover;
-     			hide weapons_2_hover;
-     			hide weapons_3_hover;
-     			hide weapons_4_hover;
-               }
-			action
-			{
-				play "mouse_click";
-				setdvar nl_weapon "nl_blank";
-
-				hide weapons_1;
-				hide weapons_2;
-				hide weapons_3;
-     			show weapons_4;
-				
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-				
-				hide mp40_ammo;
-				hide mp44_ammo;
-				hide ak74_ammo;
-				hide sig_ammo;
-				hide ak47_ammo;
-				hide thompson_ammo;
-				
-				hide bar_ammo;
-				hide winchester_ammo;
-				hide rpk_ammo;
-				hide saw_ammo;
-				
-				hide tesla_ammo;
-			}
-		}
-
-		/////////////////////////////////////////////////////
-          /// Rifles
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin			ORIGIN_CHOICE1
-			text			"^9Rank 3 ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE1
-			text			"Mosin Nagant"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "mosin_nagant_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_mosin_nagant";
-			}
-			onFocus
-			{
-				show mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-			}
-		}
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE2
-			text			"^9Rank 8 ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE2
-			text			"M1 Garand"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "m1garand_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_m1garand";
-			}
-			onFocus
-			{
-				hide mosin_nagant_ammo;
-				show m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-			}
-		}
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE4
-			text			"^81 000 ^9nL Tokens ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE4
-			text			"Springfield"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "springfield_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_springfield";
-			}
-			onFocus
-			{
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				show springfield_ammo;
-				hide g3_ammo;
-				hide barrett_ammo;
-			}
-		}
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE5
-			text			"^82 000 ^9nL Tokens ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE5
-			text			"G3"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "g3_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_g3";
-			}
-			onFocus
-			{
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				show g3_ammo;
-				hide barrett_ammo;
-			}
-		}
-
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_1.menu"
-               origin		ORIGIN_CHOICE6
-               text			"^85 000 ^9nL Tokens ^4|"
-          }
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE6
-			text			"Barrett M82"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "barrett_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_barrett";
-			}
-			onFocus
-			{
-				hide mosin_nagant_ammo;
-				hide m1_garand_ammo;
-				hide springfield_ammo;
-				hide g3_ammo;
-				show barrett_ammo;
-			}
-		}
-		  
-          itemDef
-          {
-				name			"weapons_1"
-				visible			0
-				rect			0 0 128 24
-				forecolor		GLOBAL_UNFOCUSED_COLOR
-				type			ITEM_TYPE_TEXT
-				textfont		UI_FONT_NORMAL
-				textscale		.2
-				textstyle		ITEM_TEXTSTYLE_SHADOWED
-				textaligny		20
-				textalign      ITEM_ALIGN_LEFT
-               origin		ORIGIN_CHOICE7
-               text			"^9more comming soon..."
-          }
-
-          /// Machine Guns
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE1
-               text			""
-          }
-          itemDef
-          {
-				#include "ui_mp/weapon_add_2.menu"
-				origin			ORIGIN_CHOICE1
-				text			"MP 40"
-				action
-				{
-					play "mouse_click";
-					scriptMenuResponse "mp40_mp";
-				}
-				mouseEnter
-				{
-					setdvar nl_weapon "nl_img_mp40";
-				}
-				onFocus
-				{
-					show mp40_ammo;
-					hide mp44_ammo;
-					hide ak74_ammo;
-					hide sig_ammo;
-					hide ak47_ammo;
-					hide thompson_ammo;
-				}
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE2
-               text			"^9Rank 10 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE2
-               text			"MP 44"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "mp44_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_mp44";
-               }
-				onFocus
-				{
-					hide mp40_ammo;
-					show mp44_ammo;
-					hide ak74_ammo;
-					hide sig_ammo;
-					hide ak47_ammo;
-					hide thompson_ammo;
-				}
-          }
-
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE4
-               text			"^82 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE4
-               text			"AK-74u"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "ak74_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_ak74";
-               }
-				onFocus
-				{
-					hide mp40_ammo;
-					hide mp44_ammo;
-					show ak74_ammo;
-					hide sig_ammo;
-					hide ak47_ammo;
-					hide thompson_ammo;
-				}
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE5
-               text			"^83 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE5
-               text			"SIG SG 552"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "sig_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_sig";
-               }
-				onFocus
-				{
-					hide mp40_ammo;
-					hide mp44_ammo;
-					hide ak74_ammo;
-					show sig_ammo;
-					hide ak47_ammo;
-					hide thompson_ammo;
-				}
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE6
-               text			"^84 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE6
-               text			"AK-47"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "ak47_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_ak47";
-               }
-				onFocus
-				{
-					hide mp40_ammo;
-					hide mp44_ammo;
-					hide ak74_ammo;
-					hide sig_ammo;
-					show ak47_ammo;
-					hide thompson_ammo;
-				}
-          }
-
-          itemDef
-          {
-				name			"weapons_2"
-				visible			0
-				rect			0 0 128 24
-				forecolor		GLOBAL_UNFOCUSED_COLOR
-				type			ITEM_TYPE_TEXT
-				textfont		UI_FONT_NORMAL
-				textscale		.2
-				textstyle		ITEM_TEXTSTYLE_SHADOWED
-				textaligny		20
-				textalign      ITEM_ALIGN_LEFT
-               origin		ORIGIN_CHOICE7
-               text			"^9more comming soon..."
-          }
-
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_2.menu"
-               origin		ORIGIN_CHOICE9
-               text			"^9Rank 100 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_2.menu"
-               origin			ORIGIN_CHOICE9
-               text			"^3Golden ^7Thompson"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "thompson_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_thompson";
-               }
-				onFocus
-				{
-					hide mp40_ammo;
-					hide mp44_ammo;
-					hide ak74_ammo;
-					hide sig_ammo;
-					hide ak47_ammo;
-					show thompson_ammo;
-				}
-          }
-
-
-          /// Heavy ///
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE1
-               text			"^9Rank 5 ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE1
-               text			"BAR"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "bar_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_bar";
-               }
-				onFocus
-				{
-					show bar_ammo;
-					hide winchester_ammo;
-					hide rpk_ammo;
-					hide saw_ammo;
-				}
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE3
-               text			"^83 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE3
-               text			"Winchester 1200"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "winchester_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_winchester";
-               }
-				onFocus
-				{
-					hide bar_ammo;
-					show winchester_ammo;
-					hide rpk_ammo;
-					hide saw_ammo;
-				}
-          }
-    itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE4
-               text			"^85 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE4
-               text			"RPK-74"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "rpk_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_rpk";
-               }
-				onFocus
-				{
-					hide bar_ammo;
-					hide winchester_ammo;
-					show rpk_ammo;
-					hide saw_ammo;
-				}
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_3.menu"
-               origin		ORIGIN_CHOICE5
-               text			"^810 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_3.menu"
-               origin			ORIGIN_CHOICE5
-               text			"M249 SAW"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "saw_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_saw";
-               }
-				onFocus
-				{
-					hide bar_ammo;
-					hide winchester_ammo;
-					hide rpk_ammo;
-					show saw_ammo;
-				}
-          }
-          itemDef
-          {
-				name			"weapons_3"
-				visible			0
-				rect			0 0 128 24
-				forecolor		GLOBAL_UNFOCUSED_COLOR
-				type			ITEM_TYPE_TEXT
-				textfont		UI_FONT_NORMAL
-				textscale		.2
-				textstyle		ITEM_TEXTSTYLE_SHADOWED
-				textaligny		20
-				textalign      ITEM_ALIGN_LEFT
-               origin		ORIGIN_CHOICE6
-               text			"^9more comming soon..."
-          }
-
-			/// Special ///
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_4.menu"
-               origin		ORIGIN_CHOICE1
-               text			"^3Nexus ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_4.menu"
-               origin			ORIGIN_CHOICE1
-               text			"Raygun"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "raygun_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_raygun";
-               }
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_rank_4.menu"
-               origin		ORIGIN_CHOICE3
-               text			"^815 000 ^9nL Tokens ^4|"
-          }
-          itemDef
-          {
-               #include "ui_mp/weapon_add_4.menu"
-               origin			ORIGIN_CHOICE3
-               text			"Tesla"
-               action
-               {
-                    play "mouse_click";
-                    scriptMenuResponse "tesla_mp";
-               }
-               mouseEnter
-               {
-                    setdvar nl_weapon "nl_img_tesla";
-               }
-				onFocus
-				{
-					show tesla_ammo;
-				}
-          }
-          itemDef
-          {
-				name			"weapons_4"
-				visible			0
-				rect			0 0 128 24
-				forecolor		GLOBAL_UNFOCUSED_COLOR
-				type			ITEM_TYPE_TEXT
-				textfont		UI_FONT_NORMAL
-				textscale		.2
-				textstyle		ITEM_TEXTSTYLE_SHADOWED
-				textaligny		20
-				textalign      ITEM_ALIGN_LEFT
-               origin		ORIGIN_CHOICE4
-               text			"^9more comming soon..."
-          }
+		WP("4", ORIGIN_CHOICE1, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100")
+		WP("4", ORIGIN_CHOICE3, "^815 000 ^9nL Tokens", "Tesla", "tesla", "^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100")
+		MORE("4", ORIGIN_CHOICE4)
 
 		/// EXIT ///
 		itemDef
@@ -1023,131 +254,6 @@
 				play "mouse_click";
 			}
 		}
-
-		///////////////////////////////////////////////////
-		// AMMO INFO
-		
-		// Rifle
-		itemDef
-		{
-			name 			"mosin_nagant_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"m1_garand_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 8^9/320 \n^7Max ^9Ammo^7: 8^9/352"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"springfield_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"g3_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 20^9/180 \n^7Max ^9Ammo^7: 20^9/260"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"barrett_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120"
-			textscale		.23
-		}
-		
-		// Machine Guns
-		itemDef
-		{
-			name 			"mp40_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 32^9/192 \n^7Max ^9Ammo^7: 32^9/320"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"mp44_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"ak74_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"sig_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"ak47_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"thompson_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330"
-			textscale		.23
-		}
-
-		// Heavy
-		itemDef
-		{
-			name 			"bar_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 20^9/200 \n^7Max ^9Ammo^7: 20^9/280"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"winchester_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 7^9/70 \n^7Max ^9Ammo^7: 7^9/98"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"rpk_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360"
-			textscale		.23
-		}
-		itemDef
-		{
-			name 			"saw_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 100^9/300 \n^7Max ^9Ammo^7: 100^9/700"
-			textscale		.23
-		}
-
-		// Special
-		itemDef
-		{
-			name 			"tesla_ammo"
-			origin			ORIGIN_AMMO
-			text			"^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100"
-			textscale		.23
-		}
-
-		///////////////////////////////////////////////////
 
 		itemDef
 		{
