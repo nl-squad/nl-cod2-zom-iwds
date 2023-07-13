@@ -608,7 +608,7 @@
                style		     ITEM_TYPE_TEXT
                rect			     2 -2 200 40
                origin			ORIGIN_EXP_BAR
-               forecolor		     0.08 0.08 1 1
+               forecolor		     0.95 0.95 0.01 1
                textfont		     UI_FONT_NORMAL
                dvar			     "blanco_rank"
                textscale		     .21
@@ -620,7 +620,7 @@
                style		     ITEM_TYPE_TEXT
                rect			     189 -2 200 40
                origin			ORIGIN_EXP_BAR
-               forecolor		     0.08 0.08 1 1
+               forecolor		     0.95 0.95 0.01 1
                textfont		     UI_FONT_NORMAL
                dvar			     "blanco_next_rank"
                textscale		     .21
