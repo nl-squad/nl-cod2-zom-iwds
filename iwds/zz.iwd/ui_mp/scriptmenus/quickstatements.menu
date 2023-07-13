@@ -118,7 +118,7 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^91^4. ^7Enemy spotted^4! \n^92^4. ^7Enemy down^4! \n^93^4. ^7I'm in position^4. \n^94^4. ^7Area secure^4! \n^95^4. ^7Grenade^4! \n^96^4. ^7Sniper^4! \n^97^4. ^7Need reinforcements^4! \n^98^4. ^7Hold your fire^4! \n"
+			text			"^91^4. ^7Enemy spotted^4! \n^92^4. ^7Enemy down^4! \n^93^4. ^7I'm in position^4. \n^94^4. ^7Area secure^4! \n^95^4. ^7Grenade^4! \n^96^4. ^7Sniper^4! \n^97^4. ^7Need reinforcements^4! \n^98^4. ^7Hold your fire^4! \n^99^4. ^7Man down^4! \n"
 			decoration
 		}
 	}
