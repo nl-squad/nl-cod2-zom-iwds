@@ -16,6 +16,7 @@
           	exec "bind . openScriptMenu keysMenu keyDot";
 			exec "bind m openScriptMenu keysMenu keyM";
 			exec "bind j openScriptMenu keysMenu keyJ";
+			exec "bind f12 openScriptMenu keysMenu keyF12";
 		}
 	}
 }
