@@ -73,7 +73,7 @@
 		} \
 		itemDef \
 		{ \
-			group			"tab_" ## _tab \
+			group			"ammo_group" \
 			name 			_weapon ## "_ammo" \
 			origin			ORIGIN_AMMO \
 			text			_ammo \
@@ -148,6 +148,7 @@
 				hide tab_2; \
 				hide tab_3; \
 				hide tab_4; \
+				hide ammo_group; \
 				show "tab_" ## _tab; \
 			} \
 		}
