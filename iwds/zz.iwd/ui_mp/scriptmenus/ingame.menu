@@ -2,29 +2,27 @@
 
 #define ORIGIN_TITLE		10 60
 #define ORIGIN_PAGE			10 430
-#define ORIGIN_CHOICE1		70 125
-#define ORIGIN_CHOICE2		70 150
-#define ORIGIN_CHOICE3		70 175
-#define ORIGIN_CHOICE4		70 200
-#define ORIGIN_CHOICE5		70 225
-#define ORIGIN_CHOICE6		70 250
-#define ORIGIN_CHOICE7		70 275
-#define ORIGIN_CHOICE8		70 300
-#define ORIGIN_CHOICE9		70 325
-#define ORIGIN_CHOICE10		70 350
-#define ORIGIN_MAPNAME		460 235
-#define ORIGIN_MAPINFO		410 228
-#define ORIGIN_RECORDS		390 240
-#define ORIGIN_ABOUT		320 130
-#define ORIGIN_MODV			320 13
-#define ORIGIN_VERSION		320 420
-#define ORIGIN_CHANGES		320 435
+#define ORIGIN_CHOICE1		70 105
+#define ORIGIN_CHOICE2		70 130
+#define ORIGIN_CHOICE3		70 155
+#define ORIGIN_CHOICE4		70 180
+#define ORIGIN_CHOICE5		70 205
+#define ORIGIN_CHOICE6		70 230
+#define ORIGIN_CHOICE7		70 255
+#define ORIGIN_CHOICE8		70 280
+#define ORIGIN_CHOICE9		70 305
+#define ORIGIN_CHOICE10		70 330
+#define ORIGIN_ABOUT		320 100
+#define ORIGIN_VERSION		320 430
+#define ORIGIN_CHANGES		320 445
 #define ORIGIN_PATRON		320 460
 
-#define ORIGIN_PLROPT1		340 160
-#define ORIGIN_PLROPT2		340 130
-#define ORIGIN_PLROPT3		340 100
-#define ORIGIN_EVER_SCOREBOARD		340 220
+#define ORIGIN_PLROPT1		340 165
+#define ORIGIN_PLROPT2		340 135
+#define ORIGIN_PLROPT3		340 105
+#define ORIGIN_EVER_SCOREBOARD		340 225
+#define ORIGIN_MAPNAME		460 240
+
 #define ORIGIN_LOGO			256 120
 
 
@@ -273,7 +271,7 @@
 		{
 			origin			ORIGIN_CHANGES
 			type			ITEM_TYPE_TEXT
-			text			"^9Check what's new on discord ^8#announcements ^9discord channel."
+			text			"^9Check what's new on discord ^8#announcements ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -283,7 +281,7 @@
 		{
 			origin			ORIGIN_PATRON
 			type			ITEM_TYPE_TEXT
-			text			"^9Join our ^3Patron ^9program, read more on ^8#how-to-patron ^9discord channel."
+			text			"^9Join our ^3Patron ^9program, read more on discord ^8#how-to-patron ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -310,7 +308,7 @@
 			visible			1
 			origin			ORIGIN_TITLE
 			type			ITEM_TYPE_TEXT
-			dvar			nl_ingame_title
+			text			"^4`^9nL^4.^7Zombies^4*"
 			textscale		.45
 		}
 		/// PAGE ///
