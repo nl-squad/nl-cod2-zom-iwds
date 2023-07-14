@@ -53,7 +53,7 @@
 			text			_name \
 			mouseEnter \
 			{ \
-            	scriptMenuResponse "hover_:" ## _id; \
+            	scriptMenuResponse "hover_" ## _id; \
 				setcolor bordercolor 0.094 0.455 0.804 0.8 \
 			} \
 			mouseExit \
@@ -181,7 +181,7 @@
 		KS("7", ORIGIN_KR6, "Browning MG ^9(^518^9)", "nl_hud_kr5")
 		KS("4", ORIGIN_KR7, "Mortar ^9(^520^9)", "nl_hud_kr13")
 		KS("8", ORIGIN_KR8, "Ammo Pack ^9(^525^9)", "nl_hud_kr4")
-		KS("9", ORIGIN_KR9, "Thunderclaps ^9(^530^9)", "nl_hud_kr10")
+		KS("9", ORIGIN_KR9, "Thunderclaps ^9(^530^9)", "hud_thunderclaps128")
 		KS("11", ORIGIN_KR10, "Rambo Mode ^9(^535^9)", "nl_hud_kr15")
 		KS("10", ORIGIN_KR11, "Launcher ^9(^540^9)", "nl_hud_kr11")
 		KS("12", ORIGIN_KR12, "Defense Cannon ^9(^550^9)", "nl_hud_kr14")
