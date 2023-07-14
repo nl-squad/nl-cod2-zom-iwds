@@ -17,9 +17,9 @@
 #define ORIGIN_RECORDS		390 240
 #define ORIGIN_ABOUT		320 130
 #define ORIGIN_MODV			320 13
-#define ORIGIN_SEASON		320 42
-#define ORIGIN_DATES		320 54
-#define ORIGIN_SPONSORS		320 470
+#define ORIGIN_VERSION		320 420
+#define ORIGIN_CHANGES		320 435
+#define ORIGIN_PATRON		320 460
 
 #define ORIGIN_PLROPT1		340 160
 #define ORIGIN_PLROPT2		340 130
@@ -260,9 +260,9 @@
 
 		itemDef
 		{
-			origin			ORIGIN_SEASON
+			origin			ORIGIN_VERSION
 			type			ITEM_TYPE_TEXT
-			text			"Version 3.1"
+			text			"Version 3.2"
 			forecolor		0.694 0.514 0.188 1
 			textscale		.3
 			textalign		ITEM_ALIGN_CENTER
@@ -271,10 +271,19 @@
 		}
 		itemDef
 		{
-			origin			ORIGIN_DATES
+			origin			ORIGIN_CHANGES
 			type			ITEM_TYPE_TEXT
-			text			"Release date: July 9th, 2023. Check what's new on discord #announcements channel."
-			forecolor		0.6 0.6 0.6 1
+			text			"^9Check what's new on discord ^8#announcements ^9discord channel."
+			textscale		.22
+			textalign		ITEM_ALIGN_CENTER
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			origin			ORIGIN_PATRON
+			type			ITEM_TYPE_TEXT
+			text			"^9Join our ^3Patron ^9program, read more on ^8#how-to-patron ^9discord channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
