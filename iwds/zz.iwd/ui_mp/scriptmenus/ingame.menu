@@ -329,7 +329,7 @@
                rect 			0 0 25 25
                origin			ORIGIN_PLROPT1
                visible 		1
-               dvar 			nl_plropt_1
+               dvar 			nl_plropt_enableHook
                decoration
           }
 		itemDef
@@ -374,7 +374,7 @@
 			action
 			{
                     play "mouse_click";
-				scriptMenuResponse "plropt_1";
+				scriptMenuResponse "plropt_enableHook";
 			}
 		}
 
@@ -386,7 +386,7 @@
                rect 			0 0 25 25
                origin			ORIGIN_PLROPT2
                visible 		1
-               dvar 			nl_plropt_2
+               dvar 			nl_plropt_enableExchange
                decoration
           }
 		itemDef
@@ -430,7 +430,7 @@
 			action
 			{
                     play "mouse_click";
-				scriptMenuResponse "plropt_2";
+				scriptMenuResponse "plropt_enableExchange";
 			}
 		}
 
@@ -442,7 +442,7 @@
                rect 			0 0 25 25
                origin			ORIGIN_PLROPT3
                visible 		1
-               dvar 			nl_plropt_3
+               dvar 			nl_plropt_enableFx
                decoration
           }
 		itemDef
@@ -486,7 +486,7 @@
 			action
 			{
                     play "mouse_click";
-				scriptMenuResponse "plropt_3";
+				scriptMenuResponse "plropt_enableFx";
 			}
 		}
           // EVER SCOREBOARD
