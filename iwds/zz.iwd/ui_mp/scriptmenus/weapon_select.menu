@@ -233,6 +233,7 @@
 		WP("3", ORIGIN_CHOICE4, "^85 000 ^9nL Tokens", "RPK-74", "rpk", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
 		WP("3", ORIGIN_CHOICE5, "^810 000 ^9nL Tokens", "M249 SAW", "saw", "^7Start ^9Ammo^7: 100^9/300 \n^7Max ^9Ammo^7: 100^9/700")
 		MORE("3", ORIGIN_CHOICE6)
+		WP("3", ORIGIN_CHOICE8, "^9Rank 150", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
 
 		WP("4", ORIGIN_CHOICE1, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 30^9/45 \n^7Max ^9Ammo^7: 30^9/75")
 		WP("4", ORIGIN_CHOICE3, "^815 000 ^9nL Tokens", "Tesla", "tesla", "^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100")
