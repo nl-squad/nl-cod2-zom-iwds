@@ -21,9 +21,9 @@ Main()
     level.lvl["warn"] = 30;
     level.lvl["afk"] = 40;
     level.lvl["kick"] = 40;
-    level.lvl["killhunt"] = 40;
     level.lvl["lookup"] = 40;
-    level.lvl["spec"] = 40;	
+    level.lvl["spec"] = 40;
+    level.lvl["killhunt"] = 60;	
     level.lvl["afk_all"] = 60;
     level.lvl["bash"] = 60;
     level.lvl["saybold"] = 60;
