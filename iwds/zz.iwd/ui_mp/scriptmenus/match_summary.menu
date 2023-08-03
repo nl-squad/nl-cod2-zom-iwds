@@ -135,7 +135,7 @@
             style            WINDOW_STYLE_SHADER \
                rect                 0 _y 12 12 0 0 \
             origin            ORIGIN_MAPRECORDS \
-            background        "blanco_gold" \
+            background        "nl_badge_new" \
             dvartest             "nl_records_ever_new" ## _num \
             showDvar             { "1" } \
             visible            1 \

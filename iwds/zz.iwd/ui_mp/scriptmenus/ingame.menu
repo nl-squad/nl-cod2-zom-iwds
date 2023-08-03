@@ -846,6 +846,29 @@
 		INGAME_SELECTION("Purchases", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
+		itemDef
+		{
+			visible			1
+			dvartest		"nl_challeges_badge"
+			showDvar		{ "1" }
+			style			WINDOW_STYLE_SHADER
+			rect			-2 -2 8 8
+			origin			ORIGIN_CHOICE3
+			background		"nl_badge_notification"
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			dvartest		"nl_challeges_badge"
+			showDvar		{ "2" }
+			style			WINDOW_STYLE_SHADER
+			rect			-2 -2 8 8
+			origin			ORIGIN_CHOICE3
+			background		"nl_badge_new"
+			decoration
+		}
+
 		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
 		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
 		INGAME_SELECTION_HOVERSUBMENU("About", ORIGIN_CHOICE7, "about", "6")
