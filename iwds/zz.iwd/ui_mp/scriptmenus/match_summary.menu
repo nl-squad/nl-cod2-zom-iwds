@@ -1,120 +1,120 @@
 #include "ui_mp/menudef.h"
 
-#define ORIGIN_STATS                    30 20
-#define ORIGIN_EXP_BAR                  60 70
-#define ORIGIN_MAPVOTE                  30 250
-#define ORIGIN_VOTE1                    30 280
-#define ORIGIN_VOTE2                    185 280
-#define ORIGIN_VOTE3                    340 280
-#define ORIGIN_VOTE4                    495 280
-#define ORIGIN_RECORDSHEADER            360 20
-#define ORIGIN_MAPRECORDS               360 50
+#define ORIGIN_STATS                    30 60
+#define ORIGIN_EXP_BAR                  30 110
+#define ORIGIN_MAPVOTE                  30 270
+#define ORIGIN_VOTE1                    30 300
+#define ORIGIN_VOTE2                    185 300
+#define ORIGIN_VOTE3                    340 300
+#define ORIGIN_VOTE4                    495 300
+#define ORIGIN_RECORDSHEADER            360 60
+#define ORIGIN_MAPRECORDS               360 90
 
-#define ORIGIN_STATBLOCK1               30 110
-#define ORIGIN_STATBLOCK2               120 110
-#define ORIGIN_STATBLOCK3               210 110
+#define ORIGIN_STATBLOCK1               30 150
+#define ORIGIN_STATBLOCK2               120 150
+#define ORIGIN_STATBLOCK3               210 150
 
 #ifndef HEADER
 #define HEADER(_header, _origin, _desc) \
           itemDef \
           { \
-			style		     ITEM_TYPE_TEXT \
-		     rect			     0 0 0 0 0 0 \
-			origin			_origin \
-			forecolor		     1 1 1 1 \
-			textfont		     UI_FONT_NORMAL \
-			text			     _header \
-			textscale		     .23 \
-			textalignx		5 \
-			textalign 		ITEM_ALIGN_LEFT \
-     		visible			1 \
-			decoration \
+            style             ITEM_TYPE_TEXT \
+             rect                 0 0 0 0 0 0 \
+            origin            _origin \
+            forecolor             1 1 1 1 \
+            textfont             UI_FONT_NORMAL \
+            text                 _header \
+            textscale             .23 \
+            textalignx        5 \
+            textalign         ITEM_ALIGN_LEFT \
+             visible            1 \
+            decoration \
           } \
-		itemDef \
-		{ \
-			style			WINDOW_STYLE_FILLED \
-			rect			     4 2 100 2 0 0 \
-			origin			_origin \
-			backcolor		     0.027 0.082 0.604 1 \
-			visible			1 \
-			decoration \
-		} \
+        itemDef \
+        { \
+            style            WINDOW_STYLE_FILLED \
+            rect                 4 2 100 2 0 0 \
+            origin            _origin \
+            backcolor             0.027 0.082 0.604 1 \
+            visible            1 \
+            decoration \
+        } \
           itemDef \
           { \
-			style		     ITEM_TYPE_TEXT \
-		     rect			     0 15 0 0 0 0 \
-			origin			_origin \
-			forecolor		     .7 .7 .7 1 \
-			textfont		     UI_FONT_NORMAL \
-			text			     _desc \
-			textscale		     .18 \
-			textalignx		5 \
-			textalign 		ITEM_ALIGN_LEFT \
-     		visible			1 \
-			decoration \
+            style             ITEM_TYPE_TEXT \
+             rect                 0 15 0 0 0 0 \
+            origin            _origin \
+            forecolor             .7 .7 .7 1 \
+            textfont             UI_FONT_NORMAL \
+            text                 _desc \
+            textscale             .18 \
+            textalignx        5 \
+            textalign         ITEM_ALIGN_LEFT \
+             visible            1 \
+            decoration \
           }
 #endif
 
 #ifndef MAP
 #define MAP(_origin, _num) \
-		itemDef \
-		{ \
-			style 			WINDOW_STYLE_DVAR_SHADER \
-			rect 			10 20 128 64 0 0 \
-			origin			_origin \
-			visible 		     1 \
-			dvar 			"nl_mapvote_image" ## _num \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			dvar			"nl_mapvote_name" ## _num \
-			type			ITEM_TYPE_TEXT \
-			visible		1 \
-			rect			74 15 0 0 0 0 \
-			origin		_origin \
-			textscale		.2 \
-			textalign 	ITEM_ALIGN_CENTER \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			type			ITEM_TYPE_BUTTON \
-			style		WINDOW_STYLE_FILLED \
-			rect			0 0 148 94 0 0 \
-			origin		_origin \
-			visible		1 \
-			textscale		.22 \
-			textalignx	8 \
-			textaligny	17 \
-			mouseEnter \
-			{ \
-				setcolor backcolor 1 1 1 0.2 \
-			} \
-			mouseExit \
-			{ \
-				setcolor backcolor 1 1 1 0 \
-			} \
-			action \
-			{ \
-            	     scriptMenuResponse "vote:" ## _num; \
-				play "mouse_click"; \
-			} \
-		}
+        itemDef \
+        { \
+            style             WINDOW_STYLE_DVAR_SHADER \
+            rect             10 20 128 64 0 0 \
+            origin            _origin \
+            visible              1 \
+            dvar             "nl_mapvote_image" ## _num \
+            decoration \
+        } \
+        itemDef \
+        { \
+            dvar            "nl_mapvote_name" ## _num \
+            type            ITEM_TYPE_TEXT \
+            visible        1 \
+            rect            74 15 0 0 0 0 \
+            origin        _origin \
+            textscale        .2 \
+            textalign     ITEM_ALIGN_CENTER \
+            decoration \
+        } \
+        itemDef \
+        { \
+            type            ITEM_TYPE_BUTTON \
+            style        WINDOW_STYLE_FILLED \
+            rect            0 0 148 94 0 0 \
+            origin        _origin \
+            visible        1 \
+            textscale        .22 \
+            textalignx    8 \
+            textaligny    17 \
+            mouseEnter \
+            { \
+                setcolor backcolor 1 1 1 0.2 \
+            } \
+            mouseExit \
+            { \
+                setcolor backcolor 1 1 1 0 \
+            } \
+            action \
+            { \
+                     scriptMenuResponse "vote:" ## _num; \
+                play "mouse_click"; \
+            } \
+        }
 #endif
 
 #ifndef PROGRESS
-#define PROGRESS(_dvar_value, _width) \
+#define PROGRESS(_width, _dvar_value) \
           itemDef \
           { \
-               style			WINDOW_STYLE_SHADER \
-               rect			     0 0 _width 8 0 0 \
-               origin			ORIGIN_EXP_BAR \
-               background		"blanco_fade" \
-               forecolor		     0.282 0.765 0.286 1 \
-               dvartest		     "blanco_xp_bar" \
-               showDvar		     { _dvar_value } \
-               visible			1 \
+               style            WINDOW_STYLE_SHADER \
+               rect                 0 0 _width 8 0 0 \
+               origin            ORIGIN_EXP_BAR \
+               background        "blanco_fade" \
+               forecolor             0.282 0.765 0.286 1 \
+               dvartest             "blanco_xp_bar" \
+               showDvar             { _dvar_value } \
+               visible            1 \
                decoration \
           }
 #endif
@@ -123,467 +123,515 @@
 #define RECORDSLINE(_num, _y, _fade) \
           itemDef \
           { \
-               style			WINDOW_STYLE_FILLED \
-               rect			     0 _y 250 12 0 0 \
-               origin			ORIGIN_MAPRECORDS \
-               backcolor		     _fade _fade _fade _fade \
-               visible			1 \
+               style            WINDOW_STYLE_FILLED \
+               rect                 0 _y 250 12 0 0 \
+               origin            ORIGIN_MAPRECORDS \
+               backcolor             _fade _fade _fade _fade \
+               visible            1 \
                decoration \
           } \
-		itemDef \
-		{ \
-			style			WINDOW_STYLE_SHADER \
-               rect			     0 _y 12 12 0 0 \
-			origin			ORIGIN_MAPRECORDS \
-			background		"blanco_gold" \
-			dvartest		     "nl_records_ever_new" ## _num \
-			showDvar		     { "1" } \
-			visible			1 \
-			decoration \
-		}
+        itemDef \
+        { \
+            style            WINDOW_STYLE_SHADER \
+               rect                 0 _y 12 12 0 0 \
+            origin            ORIGIN_MAPRECORDS \
+            background        "blanco_gold" \
+            dvartest             "nl_records_ever_new" ## _num \
+            showDvar             { "1" } \
+            visible            1 \
+            decoration \
+        }
 #endif
 
 #ifndef STATBLOCK
 #define STATBLOCK(_origin, _dvar, _name, _color) \
           itemDef \
           { \
-               style			WINDOW_STYLE_FILLED \
-               rect			     0 0 80 60 0 0 \
-               origin			_origin \
-               backcolor		     .05 .05 .05 .8 \
-			border			1 \
-			bordercolor		0.027 0.082 0.604 0.8 \
-               visible			1 \
+               style            WINDOW_STYLE_FILLED \
+               rect                 0 0 80 60 0 0 \
+               origin            _origin \
+               backcolor             .05 .05 .05 .8 \
+            border            1 \
+            bordercolor        0.027 0.082 0.604 0.8 \
+               visible            1 \
                decoration \
           } \
           itemDef \
           { \
-			style		     ITEM_TYPE_TEXT \
-		     rect			     40 14 0 0 0 0  \
-			origin			_origin \
-			forecolor		     1 1 1 1 \
-			textfont		     UI_FONT_NORMAL \
-			text			     _name \
-			textscale		     .2 \
-			textalign 		ITEM_ALIGN_CENTER \
-     		visible			1 \
-			decoration \
+            style             ITEM_TYPE_TEXT \
+             rect                 40 14 0 0 0 0  \
+            origin            _origin \
+            forecolor             1 1 1 1 \
+            textfont             UI_FONT_NORMAL \
+            text                 _name \
+            textscale             .2 \
+            textalign         ITEM_ALIGN_CENTER \
+             visible            1 \
+            decoration \
           } \
           itemDef \
           { \
-			style		     ITEM_TYPE_TEXT \
-		     rect			     40 40 0 0 0 0  \
-			origin			_origin \
-			forecolor		     _color \
-			textfont		     UI_FONT_NORMAL \
-			dvar			     _dvar \
-			textscale		     .4 \
-			textalign 		ITEM_ALIGN_CENTER \
-     		visible			1 \
-			decoration \
+            style             ITEM_TYPE_TEXT \
+             rect                 40 40 0 0 0 0  \
+            origin            _origin \
+            forecolor             _color \
+            textfont             UI_FONT_NORMAL \
+            dvar                 _dvar \
+            textscale             .4 \
+            textalign         ITEM_ALIGN_CENTER \
+             visible            1 \
+            decoration \
           }
 #endif
 
 #ifndef MORE
 #define MORE(_tab, _origin) \
-		itemDef \
-		{ \
-		}
+        itemDef \
+        { \
+        }
 #endif
 
 {
-	menuDef
-	{
-		name			"match_summary"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
-		style			WINDOW_STYLE_EMPTY
-		blurWorld		5.0
-		onOpen
-		{
-               setDvar nl_records_ever_new0 "0";
-               setDvar nl_records_ever_new1 "0";
-               setDvar nl_records_ever_new2 "0";
-               setDvar nl_records_ever_new3 "0";
-               setDvar nl_records_ever_new4 "0";
-               setDvar nl_records_ever_new5 "0";
-               setDvar nl_records_ever_new6 "0";
-               setDvar nl_records_ever_new7 "0";
-               setDvar nl_records_ever_new8 "0";
-               setDvar nl_records_ever_new9 "0";
-          }
-		onESC { }
+    menuDef
+    {
+        name            "match_summary"
+        rect            0 0 640 480
+        focuscolor        GLOBAL_FOCUSED_COLOR
+        style            WINDOW_STYLE_EMPTY
+        blurWorld        5.0
+        onOpen
+        {
+            setDvar nl_records_ever_new0 "0";
+            setDvar nl_records_ever_new1 "0";
+            setDvar nl_records_ever_new2 "0";
+            setDvar nl_records_ever_new3 "0";
+            setDvar nl_records_ever_new4 "0";
+            setDvar nl_records_ever_new5 "0";
+            setDvar nl_records_ever_new6 "0";
+            setDvar nl_records_ever_new7 "0";
+            setDvar nl_records_ever_new8 "0";
+            setDvar nl_records_ever_new9 "0";
+            setDvar nl_progress_score "0";
+            setDvar nl_progress_exp "0";
+            setDvar nl_progress_tokens "0";
+            setDvar nl_progress_extra " ";
+        }
+        onESC { }
 
-		// Gradient
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
+        // Gradient
+        itemDef
+        {
+            style               WINDOW_STYLE_FILLED
+            rect                0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+            backcolor           0 0 0 0.7975
+            visible             1
+            decoration
+        }
 
-          HEADER("Map best players", ORIGIN_RECORDSHEADER, "The best of the best")
+        HEADER("Map best players", ORIGIN_RECORDSHEADER, "The best of the best")
 
-          // TABLE HEADERS
-          itemDef
-          {
-			style		     ITEM_TYPE_TEXT
-		     rect			     25 0 200 40
-			origin			ORIGIN_MAPRECORDS
-			forecolor		     1 1 1 1
-			textfont		     UI_FONT_NORMAL
-			text			     "Name"
-			textscale		     .2
-			textaligny		11
-			textalignx		5
-			textalign 		ITEM_ALIGN_LEFT
-     		visible			1
-			decoration
-          }
-          itemDef
-          {
-			style		     ITEM_TYPE_TEXT
-		     rect			     170 0 200 40
-			origin			ORIGIN_MAPRECORDS
-			forecolor		     1 1 1 1
-			textfont		     UI_FONT_NORMAL
-			text			     "Score"
-			textscale		     .2
-			textaligny		11
-			textalignx		5
-			textalign 		ITEM_ALIGN_LEFT
-     		visible			1
-			decoration
-          }
-          itemDef
-          {
-			style		     ITEM_TYPE_TEXT
-		     rect			     220 0 200 40
-			origin			ORIGIN_MAPRECORDS
-			forecolor		     1 1 1 1
-			textfont		     UI_FONT_NORMAL
-			text			     "Rank"
-			textscale		     .2
-			textaligny		11
-			textalignx		5
-			textalign 		ITEM_ALIGN_LEFT
-     		visible			1
-			decoration
-          }
-          itemDef // HR
-          {
-               style			WINDOW_STYLE_FILLED
-               rect			     0 13 250 1
-               origin			ORIGIN_MAPRECORDS
-               backcolor		     0.027 0.082 0.604 0.8
-               visible			1
-               decoration
-          }
+        // TABLE HEADERS
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 25 0 200 40
+            origin            ORIGIN_MAPRECORDS
+            forecolor             1 1 1 1
+            textfont             UI_FONT_NORMAL
+            text                 "Name"
+            textscale             .2
+            textaligny        11
+            textalignx        5
+            textalign         ITEM_ALIGN_LEFT
+            visible            1
+            decoration
+        }
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 170 0 200 40
+            origin            ORIGIN_MAPRECORDS
+            forecolor             1 1 1 1
+            textfont             UI_FONT_NORMAL
+            text                 "Score"
+            textscale             .2
+            textaligny        11
+            textalignx        5
+            textalign         ITEM_ALIGN_LEFT
+            visible            1
+            decoration
+        }
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 220 0 200 40
+            origin            ORIGIN_MAPRECORDS
+            forecolor             1 1 1 1
+            textfont             UI_FONT_NORMAL
+            text                 "Rank"
+            textscale             .2
+            textaligny        11
+            textalignx        5
+            textalign         ITEM_ALIGN_LEFT
+            visible            1
+            decoration
+        }
+        itemDef // HR
+        {
+            style            WINDOW_STYLE_FILLED
+            rect                 0 13 250 1
+            origin            ORIGIN_MAPRECORDS
+            backcolor             0.027 0.082 0.604 0.8
+            visible            1
+            decoration
+        }
 
-          // LINES
-          RECORDSLINE("0", 14, 0.2)
-          RECORDSLINE("1", 26, 0.3)
-          RECORDSLINE("2", 38, 0.2)
-          RECORDSLINE("3", 50, 0.3)
-          RECORDSLINE("4", 62, 0.2)
-          RECORDSLINE("5", 74, 0.3)
-          RECORDSLINE("6", 86, 0.2)
-          RECORDSLINE("7", 98, 0.3)
-          RECORDSLINE("8", 110, 0.2)
-          RECORDSLINE("9", 122, 0.3)
+        // LINES
+        RECORDSLINE("0", 14, 0.2)
+        RECORDSLINE("1", 26, 0.3)
+        RECORDSLINE("2", 38, 0.2)
+        RECORDSLINE("3", 50, 0.3)
+        RECORDSLINE("4", 62, 0.2)
+        RECORDSLINE("5", 74, 0.3)
+        RECORDSLINE("6", 86, 0.2)
+        RECORDSLINE("7", 98, 0.3)
+        RECORDSLINE("8", 110, 0.2)
+        RECORDSLINE("9", 122, 0.3)
  
-		itemDef
-		{
-			text           "1."
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			14 25 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-               forecolor		1 0.902 0.494 1
-			decoration
-		}
-		itemDef
-		{
-			text           "2."
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			14 37 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-               forecolor		0.647 0.663 0.706 1
-			decoration
-		}
-		itemDef
-		{
-			text           "3."
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			14 49 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-               forecolor		0.431 0.302 0.145 1
-			decoration
-		}
-		itemDef
-		{
-			text           "4.\n5.\n6.\n7.\n8.\n9.\n10."
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			14 61 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-               forecolor		1 1 1 1
-			decoration
-		}
-		itemDef
-		{
-			dvar			"nl_records_ever_names"
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			25 25 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-			textalignx	5
-			textalign 	ITEM_ALIGN_LEFT
-			decoration
-		}
-		itemDef
-		{
-			dvar			"nl_records_ever_scores"
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			170 25 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-			textalignx	5
-			textalign 	ITEM_ALIGN_LEFT
-			decoration
-		}
-		itemDef
-		{
-			dvar			"nl_records_ever_ranks"
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			220 25 200 40
-			origin		ORIGIN_MAPRECORDS
-			textscale		.25
-			textalignx	5
-			textalign 	ITEM_ALIGN_LEFT
-			decoration
-		}
+        itemDef
+        {
+            text           "1."
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            14 25 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            forecolor        1 0.902 0.494 1
+            decoration
+        }
+        itemDef
+        {
+            text           "2."
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            14 37 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            forecolor        0.647 0.663 0.706 1
+            decoration
+        }
+        itemDef
+        {
+            text           "3."
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            14 49 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            forecolor        0.431 0.302 0.145 1
+            decoration
+        }
+        itemDef
+        {
+            text           "4.\n5.\n6.\n7.\n8.\n9.\n10."
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            14 61 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            forecolor        1 1 1 1
+            decoration
+        }
+        itemDef
+        {
+            dvar            "nl_records_ever_names"
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            25 25 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            textalignx    5
+            textalign     ITEM_ALIGN_LEFT
+            decoration
+        }
+        itemDef
+        {
+            dvar            "nl_records_ever_scores"
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            170 25 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            textalignx    5
+            textalign     ITEM_ALIGN_LEFT
+            decoration
+        }
+        itemDef
+        {
+            dvar            "nl_records_ever_ranks"
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            220 25 200 40
+            origin        ORIGIN_MAPRECORDS
+            textscale        .25
+            textalignx    5
+            textalign     ITEM_ALIGN_LEFT
+            decoration
+        }
 
-          // Player progress
+        // Player progress
+        
+        HEADER("Progress", ORIGIN_STATS, "Check your statistics and road to next rank")
+
+        // Player EXP over exp Bar
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 2 24 200 40
+            origin            ORIGIN_STATS
+            forecolor             1 1 1 1
+            textfont             UI_FONT_NORMAL
+            dvar                 "blanco_player_info"
+            textscale             .22
+            textaligny        11
+            textalignx        5
+            textalign         ITEM_ALIGN_LEFT
+            visible            1
+            decoration
+        }
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 245 22 200 40
+            origin            ORIGIN_STATS
+            forecolor             1 0.902 0.494 0.6
+            textfont             UI_FONT_NORMAL
+            dvar                 "blanco_player_login"
+            textscale             .22
+            textaligny        11
+            textalignx        0
+            textalign         ITEM_ALIGN_RIGHT
+            visible            1
+            decoration
+        }
+
+        // Current and next rank
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 2 -2 0 0
+            origin            ORIGIN_EXP_BAR
+            forecolor             1 0.902 0.494 1
+            textfont             UI_FONT_NORMAL
+            dvar                 "blanco_rank"
+            textscale             .21
+            visible            1
+            decoration
+        }
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 258 -2 0 0
+            origin            ORIGIN_EXP_BAR
+            forecolor             1 0.902 0.494 1
+            textfont             UI_FONT_NORMAL
+            dvar                 "blanco_next_rank"
+            textalign         ITEM_ALIGN_RIGHT
+            textscale             .21
+            visible            1
+            decoration
+        }
+
+        itemDef
+        {
+            style             ITEM_TYPE_TEXT
+            rect                 258 18 0 0
+            origin            ORIGIN_EXP_BAR
+            forecolor             .9 .9 .9 1
+            textfont             UI_FONT_NORMAL
+            dvar                 "blanco_nextin"
+            textalign         ITEM_ALIGN_RIGHT
+            textscale             .21
+            visible            1
+            decoration
+        }
+
+        // EXP Bar
+        itemDef
+        {
+            style            WINDOW_STYLE_FILLED
+            rect                 0 0 260 8
+            origin            ORIGIN_EXP_BAR
+            backcolor             0.5 0.5 0.5 0.2
+            visible            1
+            decoration
+        }
           
-          HEADER("Progress", ORIGIN_STATS, "Check your statistics and road to next rank")
+        STATBLOCK(ORIGIN_STATBLOCK1, "nl_progress_score", "Score", 1 1 1 1)
+        STATBLOCK(ORIGIN_STATBLOCK2, "nl_progress_exp", "EXP", 1 0.902 0.494 1)
+        STATBLOCK(ORIGIN_STATBLOCK3, "nl_progress_tokens", "nL Tokens", .976 .624 .22 1)
 
-          // Player EXP over exp Bar
-          itemDef
-          {
-			style		     ITEM_TYPE_TEXT
-		     rect			     2 24 200 40
-			origin			ORIGIN_STATS
-			forecolor		     1 1 1 1
-			textfont		     UI_FONT_NORMAL
-			dvar			     "blanco_player_info"
-			textscale		     .22
-			textaligny		11
-			textalignx		5
-			textalign 		ITEM_ALIGN_LEFT
-     		visible			1
-			decoration
-          }
-          itemDef
-          {
-			style		     ITEM_TYPE_TEXT
-		     rect			     245 22 200 40
-			origin			ORIGIN_STATS
-               forecolor		     1 0.902 0.494 0.6
-			textfont		     UI_FONT_NORMAL
-			dvar			     "blanco_player_login"
-			textscale		     .22
-			textaligny		11
-			textalignx		0
-			textalign 		ITEM_ALIGN_RIGHT
-     		visible			1
-			decoration
-          }
+        itemDef
+        {
+            dvar            "nl_progress_extra"
+            type            ITEM_TYPE_TEXT
+            visible         1
+            rect            0 80 0 0
+            origin          ORIGIN_STATBLOCK1
+            textscale       .18
+            textalignx      5
+            textalign       ITEM_ALIGN_LEFT
+            decoration
+        }
 
-          // Current and next rank
-          itemDef
-          {
-               style		     ITEM_TYPE_TEXT
-               rect			     2 -2 200 40
-               origin			ORIGIN_EXP_BAR
-               forecolor		     1 0.902 0.494 1
-               textfont		     UI_FONT_NORMAL
-               dvar			     "blanco_rank"
-               textscale		     .21
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               style		     ITEM_TYPE_TEXT
-               rect			     195 -2 190 40
-               origin			ORIGIN_EXP_BAR
-               forecolor		     1 0.902 0.494 1
-               textfont		     UI_FONT_NORMAL
-               dvar			     "blanco_next_rank"
-			textalign 		ITEM_ALIGN_RIGHT
-               textscale		     .21
-               visible			1
-               decoration
-          }
+        PROGRESS(2, "1")
+        PROGRESS(4, "2")
+        PROGRESS(6, "3")
+        PROGRESS(8, "4")
+        PROGRESS(10, "5")
+        PROGRESS(12, "6")
+        PROGRESS(14, "7")
+        PROGRESS(16, "8")
+        PROGRESS(18, "9")
+        PROGRESS(20, "10")
+        PROGRESS(22, "11")
+        PROGRESS(24, "12")
+        PROGRESS(26, "13")
+        PROGRESS(28, "14")
+        PROGRESS(30, "15")
+        PROGRESS(32, "16")
+        PROGRESS(34, "17")
+        PROGRESS(36, "18")
+        PROGRESS(38, "19")
+        PROGRESS(40, "20")
+        PROGRESS(42, "21")
+        PROGRESS(44, "22")
+        PROGRESS(46, "23")
+        PROGRESS(48, "24")
+        PROGRESS(50, "25")
+        PROGRESS(52, "26")
+        PROGRESS(54, "27")
+        PROGRESS(56, "28")
+        PROGRESS(58, "29")
+        PROGRESS(60, "30")
+        PROGRESS(62, "31")
+        PROGRESS(64, "32")
+        PROGRESS(66, "33")
+        PROGRESS(68, "34")
+        PROGRESS(70, "35")
+        PROGRESS(72, "36")
+        PROGRESS(74, "37")
+        PROGRESS(76, "38")
+        PROGRESS(78, "39")
+        PROGRESS(80, "40")
+        PROGRESS(82, "41")
+        PROGRESS(84, "42")
+        PROGRESS(86, "43")
+        PROGRESS(88, "44")
+        PROGRESS(90, "45")
+        PROGRESS(92, "46")
+        PROGRESS(94, "47")
+        PROGRESS(96, "48")
+        PROGRESS(98, "49")
+        PROGRESS(100, "50")
+        PROGRESS(102, "51")
+        PROGRESS(104, "52")
+        PROGRESS(106, "53")
+        PROGRESS(108, "54")
+        PROGRESS(110, "55")
+        PROGRESS(112, "56")
+        PROGRESS(114, "57")
+        PROGRESS(116, "58")
+        PROGRESS(118, "59")
+        PROGRESS(120, "60")
+        PROGRESS(122, "61")
+        PROGRESS(124, "62")
+        PROGRESS(126, "63")
+        PROGRESS(128, "64")
+        PROGRESS(130, "65")
+        PROGRESS(132, "66")
+        PROGRESS(134, "67")
+        PROGRESS(136, "68")
+        PROGRESS(138, "69")
+        PROGRESS(140, "70")
+        PROGRESS(142, "71")
+        PROGRESS(144, "72")
+        PROGRESS(146, "73")
+        PROGRESS(148, "74")
+        PROGRESS(150, "75")
+        PROGRESS(152, "76")
+        PROGRESS(154, "77")
+        PROGRESS(156, "78")
+        PROGRESS(158, "79")
+        PROGRESS(160, "80")
+        PROGRESS(162, "81")
+        PROGRESS(164, "82")
+        PROGRESS(166, "83")
+        PROGRESS(168, "84")
+        PROGRESS(170, "85")
+        PROGRESS(172, "86")
+        PROGRESS(174, "87")
+        PROGRESS(176, "88")
+        PROGRESS(178, "89")
+        PROGRESS(180, "90")
+        PROGRESS(182, "91")
+        PROGRESS(184, "92")
+        PROGRESS(186, "93")
+        PROGRESS(188, "94")
+        PROGRESS(190, "95")
+        PROGRESS(192, "96")
+        PROGRESS(194, "97")
+        PROGRESS(196, "98")
+        PROGRESS(198, "99")
+        PROGRESS(200, "100")
+        PROGRESS(202, "101")
+        PROGRESS(204, "102")
+        PROGRESS(206, "103")
+        PROGRESS(208, "104")
+        PROGRESS(210, "105")
+        PROGRESS(212, "106")
+        PROGRESS(214, "107")
+        PROGRESS(216, "108")
+        PROGRESS(218, "109")
+        PROGRESS(220, "110")
+        PROGRESS(222, "111")
+        PROGRESS(224, "112")
+        PROGRESS(226, "113")
+        PROGRESS(228, "114")
+        PROGRESS(230, "115")
+        PROGRESS(232, "116")
+        PROGRESS(234, "117")
+        PROGRESS(236, "118")
+        PROGRESS(238, "119")
+        PROGRESS(240, "120")
+        PROGRESS(242, "121")
+        PROGRESS(244, "122")
+        PROGRESS(246, "123")
+        PROGRESS(248, "124")
+        PROGRESS(250, "125")
+        PROGRESS(252, "126")
+        PROGRESS(254, "127")
+        PROGRESS(256, "128")
+        PROGRESS(258, "129")
+        PROGRESS(260, "130")
 
-          itemDef
-          {
-               style		     ITEM_TYPE_TEXT
-               rect			     195 18 190 40
-               origin			ORIGIN_EXP_BAR
-               forecolor		     .9 .9 .9 1
-               textfont		     UI_FONT_NORMAL
-               dvar			     "blanco_nextin"
-			textalign 		ITEM_ALIGN_RIGHT
-               textscale		     .21
-               visible			1
-               decoration
-          }
+        HEADER("Next map vote", ORIGIN_MAPVOTE, "Select which map you want to play next")
+        MAP(ORIGIN_VOTE1, "1")
+        MAP(ORIGIN_VOTE2, "2")
+        MAP(ORIGIN_VOTE3, "3")
+        MAP(ORIGIN_VOTE4, "4")
 
-          // EXP Bar
-          itemDef
-          {
-               style			WINDOW_STYLE_FILLED
-               rect			     0 0 200 8
-               origin			ORIGIN_EXP_BAR
-               backcolor		     0.5 0.5 0.5 0.2
-               visible			1
-               decoration
-          }
-          
-          STATBLOCK(ORIGIN_STATBLOCK1, "nl_progress_score", "Score", 1 1 1 1)
-          STATBLOCK(ORIGIN_STATBLOCK2, "nl_progress_exp", "EXP", 1 0.902 0.494 1)
-          STATBLOCK(ORIGIN_STATBLOCK3, "nl_progress_tokens", "nL Tokens", .976 .624 .22 1)
-
-          PROGRESS("1", 2)
-          PROGRESS("2", 4)
-          PROGRESS("3", 6)
-          PROGRESS("4", 8)
-          PROGRESS("5", 10)
-          PROGRESS("6", 12)
-          PROGRESS("7", 14)
-          PROGRESS("8", 16)
-          PROGRESS("9", 18)
-          PROGRESS("10", 20)
-          PROGRESS("11", 22)
-          PROGRESS("12", 24)
-          PROGRESS("13", 26)
-          PROGRESS("14", 28)
-          PROGRESS("15", 30)
-          PROGRESS("16", 32)
-          PROGRESS("17", 34)
-          PROGRESS("18", 36)
-          PROGRESS("19", 38)
-          PROGRESS("20", 40)
-          PROGRESS("21", 42)
-          PROGRESS("22", 44)
-          PROGRESS("23", 46)
-          PROGRESS("24", 48)
-          PROGRESS("25", 50)
-          PROGRESS("26", 52)
-          PROGRESS("27", 54)
-          PROGRESS("28", 56)
-          PROGRESS("29", 58)
-          PROGRESS("30", 60)
-          PROGRESS("31", 62)
-          PROGRESS("32", 64)
-          PROGRESS("33", 66)
-          PROGRESS("34", 68)
-          PROGRESS("35", 70)
-          PROGRESS("36", 72)
-          PROGRESS("37", 74)
-          PROGRESS("38", 76)
-          PROGRESS("39", 78)
-          PROGRESS("40", 80)
-          PROGRESS("41", 82)
-          PROGRESS("42", 84)
-          PROGRESS("43", 86)
-          PROGRESS("44", 88)
-          PROGRESS("45", 90)
-          PROGRESS("46", 92)
-          PROGRESS("47", 94)
-          PROGRESS("48", 96)
-          PROGRESS("49", 98)
-          PROGRESS("50", 100)
-          PROGRESS("51", 102)
-          PROGRESS("52", 104)
-          PROGRESS("53", 106)
-          PROGRESS("54", 108)
-          PROGRESS("55", 110)
-          PROGRESS("56", 112)
-          PROGRESS("57", 114)
-          PROGRESS("58", 116)
-          PROGRESS("59", 118)
-          PROGRESS("60", 120)
-          PROGRESS("61", 122)
-          PROGRESS("62", 124)
-          PROGRESS("63", 126)
-          PROGRESS("64", 128)
-          PROGRESS("65", 130)
-          PROGRESS("66", 132)
-          PROGRESS("67", 134)
-          PROGRESS("68", 136)
-          PROGRESS("69", 138)
-          PROGRESS("70", 140)
-          PROGRESS("71", 142)
-          PROGRESS("72", 144)
-          PROGRESS("73", 146)
-          PROGRESS("74", 148)
-          PROGRESS("75", 150)
-          PROGRESS("76", 152)
-          PROGRESS("77", 154)
-          PROGRESS("78", 156)
-          PROGRESS("79", 158)
-          PROGRESS("80", 160)
-          PROGRESS("81", 162)
-          PROGRESS("82", 164)
-          PROGRESS("83", 166)
-          PROGRESS("84", 168)
-          PROGRESS("85", 170)
-          PROGRESS("86", 172)
-          PROGRESS("87", 174)
-          PROGRESS("88", 176)
-          PROGRESS("89", 178)
-          PROGRESS("90", 180)
-          PROGRESS("91", 182)
-          PROGRESS("92", 184)
-          PROGRESS("93", 186)
-          PROGRESS("94", 188)
-          PROGRESS("95", 190)
-          PROGRESS("96", 192)
-          PROGRESS("97", 194)
-          PROGRESS("98", 196)
-          PROGRESS("99", 198)
-          PROGRESS("100", 200)
-
-		HEADER("Next map vote", ORIGIN_MAPVOTE, "Select which map you want to play next")
-          MAP(ORIGIN_VOTE1, "1")
-          MAP(ORIGIN_VOTE2, "2")
-          MAP(ORIGIN_VOTE3, "3")
-          MAP(ORIGIN_VOTE4, "4")
-		itemDef
-		{
-			dvar			"nl_mapvote_votes"
-			type			ITEM_TYPE_TEXT
-			visible		1
-			rect			70 62 0 0
-			origin		ORIGIN_VOTE1
-               forecolor		1 0.902 0.494 1
-			textscale		.5
-			textalign 	ITEM_ALIGN_LEFT
-			decoration
-		}
-	}
+        itemDef
+        {
+            dvar            "nl_mapvote_votes"
+            type            ITEM_TYPE_TEXT
+            visible        1
+            rect            70 62 0 0
+            origin        ORIGIN_VOTE1
+               forecolor        1 0.902 0.494 1
+            textscale        .5
+            textalign     ITEM_ALIGN_LEFT
+            decoration
+        }
+    }
 }
