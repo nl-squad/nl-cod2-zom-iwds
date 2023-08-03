@@ -35,6 +35,11 @@ Main()
     level.lvl["permban"] = 90;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
+    level.lvl["settime"] = 90;
+    level.lvl["setroundtime"] = 90;
+    level.lvl["mute"] = 90;
+    level.lvl["unmute"] = 90;
+    level.lvl["seeMutedMessage"] = 90;
     level.lvl["forgotpassword"] = 100;  	
     level.lvl["exec"] = 100;
     level.lvl["grant"] = 100;
@@ -42,15 +47,11 @@ Main()
     level.lvl["map"] = 100;
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
-    level.lvl["settime"] = 90;
-    level.lvl["setroundtime"] = 100;
     level.lvl["limits"] = 100;
     level.lvl["unban"] = 100;
     level.lvl["banip"] = 100;
     level.lvl["permbanip"] = 100;
-    level.lvl["mute"] = 100;
-    level.lvl["unmute"] = 100;
-    level.lvl["seeMutedMessage"] = 100;
+    
 
     // Dev commands
     level.lvl["blockade"] = 100;
