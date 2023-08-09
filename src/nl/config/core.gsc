@@ -1,0 +1,4 @@
+Main()
+{
+    config\bot::Main();
+}
