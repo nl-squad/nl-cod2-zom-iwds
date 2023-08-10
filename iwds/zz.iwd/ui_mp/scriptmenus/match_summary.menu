@@ -214,7 +214,7 @@
             setDvar nl_progress_score "0";
             setDvar nl_progress_exp "0";
             setDvar nl_progress_tokens "0";
-            setDvar nl_progress_extra " ";
+            setDvar nl_progress_extra ""
         }
         onESC { }
 
