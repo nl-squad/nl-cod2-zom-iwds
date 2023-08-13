@@ -305,7 +305,7 @@
 			{
 				play "mouse_click";
 				close weapon_american;
-				open weapon_appereance;
+				open character_skin;
 			}
 		}
 		itemDef
