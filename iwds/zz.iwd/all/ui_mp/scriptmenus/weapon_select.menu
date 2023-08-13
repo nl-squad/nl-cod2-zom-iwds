@@ -220,12 +220,12 @@
 		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120")
 		MORE("1", ORIGIN_CHOICE7)
 
-		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/192 \n^7Max ^9Ammo^7: 32^9/320")
+		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/224 \n^7Max ^9Ammo^7: 32^9/352")
 		WP("2", ORIGIN_CHOICE2, "^9Rank 10", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
-		WP("2", ORIGIN_CHOICE4, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE4, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/420")
 		WP("2", ORIGIN_CHOICE5, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
 		WP("2", ORIGIN_CHOICE6, "^84 000 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
-		WP("2", ORIGIN_CHOICE7, "^811 000 ^9nL Tokens", "MP5", "mp5", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE7, "^811 000 ^9nL Tokens", "MP5", "mp5", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 		MORE("2", ORIGIN_CHOICE8)
 		WP("2", ORIGIN_CHOICE10, "^9Rank 100", "^3Golden ^7Thompson", "thompson", "^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330")
 
