@@ -4,8 +4,8 @@ name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max
 cheer,6,Voiceovers/MP/cheer.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 ge_thanks1,6,Voiceovers/MP/ge_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 ge_thanks2,6,Voiceovers/MP/ge_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ru_thanks1,6,Voiceovers/MP/ru_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ru_thanks2,6,Voiceovers/MP/ru_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ru_thanks1,6,Voiceovers/MP/ru_thanks1.mp3,3.00,3.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ru_thanks2,6,Voiceovers/MP/ru_thanks2.mp3,3.00,3.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 uk_thanks1,6,Voiceovers/MP/uk_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 uk_thanks2,6,Voiceovers/MP/uk_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 us_thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
