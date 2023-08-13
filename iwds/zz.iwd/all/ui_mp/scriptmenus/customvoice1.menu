@@ -1,17 +1,16 @@
-1#include "ui_mp/menudef.h"
+#include "ui_mp/menudef.h"
 
-##define ORIGIN_QUICKMESSAGETAB			32 294
+#define ORIGIN_QUICKMESSAGETAB			32 294
 #define ORIGIN_QUICKMESSAGEWINDOW		32 326
 
 {
 	menuDef
 	{
-		name			"voice_cmd"
-		visible			0
+		name			"customvoice1"
 		fullscreen		0
 		rect			0 0 640 480
 		focuscolor		1 1 1 1
-		disablecolor		0 0 0 0
+		disablecolor	0 0 0 0
  		style			WINDOW_STYLE_EMPTY
 
 		onOpen
@@ -89,7 +88,7 @@
 			forecolor		1 1 1 1
 			backcolor		0 0 0 0.7975
 			type			ITEM_TYPE_TEXT
-			text			"^4~> ^9Mess^7ages ^4*"
+			text			"^4~> ^9Custom ^7Voice ^31 ^4*"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textalignx		55
@@ -97,6 +96,16 @@
 			textalign		ITEM_ALIGN_CENTER
 			decoration
 		}
+
+		execKey "1" { scriptMenuResponse "1"; close quickresponses }
+		execKey "2" { scriptMenuResponse "2"; close quickresponses }
+		execKey "3" { scriptMenuResponse "3"; close quickresponses }
+		execKey "4" { scriptMenuResponse "4"; close quickresponses }
+		execKey "5" { scriptMenuResponse "5"; close quickresponses }
+		execKey "6" { scriptMenuResponse "6"; close quickresponses }
+		execKey "7" { scriptMenuResponse "7"; close quickresponses }
+		execKey "8" { scriptMenuResponse "8"; close quickresponses }
+		execKey "9" { scriptMenuResponse "9"; close quickresponses }
 
 		itemDef
 		{
@@ -109,13 +118,8 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^71^9. ^9Commands ^4` \n^72^9. ^9Statements ^4` \n^73^9. ^9Responses ^4` \n^74^9. ^9Custom ^7Voice ^31 ^4` \n^73^9. ^9Custom ^7Voice ^32 ^4` \n"
+			text			"^91^4. ^7TODO^4! \n^92^4. ^7TODO^4! \n^93^4. ^7TODO^4! \n^94^4. ^7TODO^4! \n^95^4. ^7TODO^4! \n^96^4. ^7TODO^4!"
 			decoration
 		}
-		execKey "1" { close voice_cmd; open quickcommands }
-		execKey "2" { close voice_cmd; open quickstatements }
-		execKey "3" { close voice_cmd; open quickresponses }
-		execKey "4" { close voice_cmd; open customvoice1 }
-		execKey "5" { close voice_cmd; open customvoice2 }
 	}
 }
