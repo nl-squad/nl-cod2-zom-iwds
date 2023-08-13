@@ -51,6 +51,7 @@ Main()
     level.lvl["unban"] = 100;
     level.lvl["banip"] = 100;
     level.lvl["permbanip"] = 100;
+    level.lvl["patron"] = 100;
     
 
     // Dev commands
