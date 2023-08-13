@@ -73,7 +73,7 @@
         { \
             name			"tab" ## _tab \
             style			WINDOW_STYLE_SHADER \
-            rect			0 -5 100 20 \
+            rect			0 -5 100 20 0 0 \
             origin			_origin \
             background		"nl_zakladkas" \
             visible			1 \
@@ -82,7 +82,7 @@
         itemDef \
         { \
             style			WINDOW_STYLE_SHADER \
-            rect			0 -5 100 20 \
+            rect			0 -5 100 20 0 0 \
             origin			_origin \
             background		"nl_zakladka" \
             visible			1 \
@@ -91,7 +91,7 @@
         itemDef \
         { \
             type			ITEM_TYPE_TEXT \
-            rect			0 0 100 20 \
+            rect			0 0 100 20 0 0 \
             origin			_origin \
             text			_text \
             textscale		.23 \
@@ -104,7 +104,7 @@
         itemDef \
         { \
             type			ITEM_TYPE_BUTTON \
-            rect			0 0 100 20 \
+            rect			0 0 100 20 0 0 \
             origin			_origin \
             visible			1 \
             action \
@@ -139,10 +139,13 @@
         onOpen
         {
             setdvar nl_weapon "nl_blank";
-            show weapons_1;
-            hide weapons_2;
-            hide weapons_3;
-            hide weapons_4;
+            show tab1;
+            hide tab2;
+            hide tab3;
+            hide tab4;
+            hide tab5;
+            hide tab6;
+            hide tab7;
         }
 
         /// TLO ///
@@ -190,23 +193,7 @@
         SKIN("1", ORIGIN_CHOICE10, "^9Rank 100 ^4|", "Diana Antanova ^9- Russian Medic", "11", "nl_char_russian_diana")
         
         SKIN("2", ORIGIN_CHOICE1, "^3Nexus ^4|", "Cpt. Price", "24", "nl_char_british_normandy_price")
-        SKIN("2", ORIGIN_CHOICE10, "^8Patron ^4|", "Terminator", "12", "nl_char_british_normandy_price")
-
-        itemDef
-        {
-            name			"tab2"
-            visible			0
-            rect			0 0 128 24
-            forecolor		GLOBAL_UNFOCUSED_COLOR
-            type			ITEM_TYPE_TEXT
-            textfont		UI_FONT_NORMAL
-            textscale		.2
-            textstyle		ITEM_TEXTSTYLE_SHADOWED
-            textaligny		20
-            textalign       ITEM_ALIGN_LEFT
-            origin			ORIGIN_CHOICE3
-            text			"^9more comming soon..."
-        }
+        SKIN("2", ORIGIN_CHOICE2, "^8Patron ^4|", "Terminator", "12", "nl_char_british_normandy_price")
 
         /// EXIT ///
         itemDef
