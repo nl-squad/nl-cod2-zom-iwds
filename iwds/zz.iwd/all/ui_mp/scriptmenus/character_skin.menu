@@ -190,7 +190,7 @@
         SKIN("1", ORIGIN_CHOICE10, "^9Rank 100 ^4|", "Diana Antanova ^9- Russian Medic", "11", "nl_char_russian_diana")
         
         SKIN("2", ORIGIN_CHOICE1, "^3Nexus ^4|", "Cpt. Price", "24", "nl_char_british_normandy_price")
-        SKIN("2", ORIGIN_CHOICE10, "^8Patron ^4|", "TODO", "24", "nl_char_british_normandy_price")
+        SKIN("2", ORIGIN_CHOICE10, "^8Patron ^4|", "Terminator", "12", "nl_char_british_normandy_price")
 
         itemDef
         {
