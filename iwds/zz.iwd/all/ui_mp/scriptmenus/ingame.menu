@@ -260,7 +260,7 @@
 		{
 			origin			ORIGIN_VERSION
 			type			ITEM_TYPE_TEXT
-			text			"Version 3.4"
+			text			"Version 3.5"
 			forecolor		0.694 0.514 0.188 1
 			textscale		.3
 			textalign		ITEM_ALIGN_CENTER
