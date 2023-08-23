@@ -68,6 +68,7 @@ Main()
     level.lvl["trigger"] = 100;
     level.lvl["wh"] = 100;
     level.lvl["usage"] = 100;
+    level.lvl["patron"] = 100;
 
     // Extensions commands
     level.lvl["event"] = 60;
