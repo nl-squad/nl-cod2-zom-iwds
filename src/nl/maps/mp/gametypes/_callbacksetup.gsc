@@ -153,8 +153,27 @@ CodeCallback_PlayerCommand(args)
 {
 	args = fixChatArgs(args);
 
-    execute = [[ level.callbackPlayerCommand ]](args);
+    execute = handlePlayerCommand(args);
 
 	if (execute)
 		self ClientCommand(self getEntityNumber());
+}
+
+handlePlayerCommand(args)
+{
+    if (args.size < 2)
+        return true;
+
+    execute = true;
+    for (i = 0; i < level.commandHandlers.size; i += 1)
+    {
+        handlerStruct = level.commandHandlers[i];
+        if (lowercase(args[0]) != handlerStruct.command)
+            continue;
+
+        result = [[ handlerStruct.handler ]](args);
+        execute = execute && (!isDefined(result) || result);
+    }
+
+    return execute;
 }

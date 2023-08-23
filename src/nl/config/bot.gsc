@@ -43,7 +43,6 @@ Main()
     level.lvl["settime"] = 90;
     level.lvl["setroundtime"] = 90;
 	level.lvl["map"] = 90;
-    level.lvl["limits"] = 100;
 	level.lvl["forgotpassword"] = 100;  	
     level.lvl["exec"] = 100;
     level.lvl["grant"] = 100;
