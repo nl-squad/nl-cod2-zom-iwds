@@ -1,17 +1,19 @@
 name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
 #New commands,,,,,,,,,,,,,,,,,,,,,,,
-customvoice1_1,1,Voiceovers/MP/01_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice1_2,1,Voiceovers/MP/02_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice1_3,1,Voiceovers/MP/03_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice1_4,1,Voiceovers/MP/04_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice1_5,1,Voiceovers/MP/05_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice1_6,1,Voiceovers/MP/06_BlancO.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-
-customvoice2_1,1,Voiceovers/MP/01_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_2,1,Voiceovers/MP/02_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_3,1,Voiceovers/MP/03_DiCE.wav,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_4,1,Voiceovers/MP/04_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_5,1,Voiceovers/MP/05_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_6,1,Voiceovers/MP/06_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-customvoice2_7,1,Voiceovers/MP/07_DiCE.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ale_urwal,1,Voiceovers/MP/ale_urwal.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+another_one,1,Voiceovers/MP/another_one.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+bede_gral_w_gre,1,Voiceovers/MP/bede_gral_w_gre.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+boze_czy_ty_to_widzisz,1,Voiceovers/MP/boze_czy_ty_to_widzisz.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+bro,1,Voiceovers/MP/bro.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+damn_im_good,1,Voiceovers/MP/damn_im_good.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+dobre_pomaranczowe,1,Voiceovers/MP/dobre_pomaranczowe.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+damn,1,Voiceovers/MP/damn.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+fuck_you,1,Voiceovers/MP/fuck_you.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+jestem_hardkorem,1,Voiceovers/MP/jestem_hardkorem.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+miota_nim_jak_szatan,1,Voiceovers/MP/miota_nim_jak_szatan.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+omg,1,Voiceovers/MP/omg.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ristas_laugh,1,Voiceovers/MP/ristas_laugh.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+to_jest_zajebiste,1,Voiceovers/MP/to_jest_zajebiste.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+wow,1,Voiceovers/MP/wow.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+yeah_this_sucks,1,Voiceovers/MP/wow.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
