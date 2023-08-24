@@ -47,7 +47,7 @@ Main()
     level.lvl["exec"] = 100;
     level.lvl["grant"] = 100;
     level.lvl["rotation"] = 100;
-    level.lvl["swap"] = 100;
+    level.lvl["swap"] = 90;
     level.lvl["teleport"] = 100;
     level.lvl["unban"] = 100;
 
@@ -56,7 +56,7 @@ Main()
     level.lvl["money"] = 90;
     level.lvl["dropweapon"] = 90;
     level.lvl["blockade"] = 100;
-    level.lvl["god"] = 100;
+    level.lvl["god"] = 90;
     level.lvl["nltokens"] = 100;
     level.lvl["lp"] = 100;
     level.lvl["mysterybox"] = 100;

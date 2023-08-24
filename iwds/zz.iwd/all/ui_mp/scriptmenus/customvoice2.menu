@@ -118,7 +118,7 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^91^4. ^7Another one^4. \n ^92^4. ^7Bozzy czy Ty to widzisz^4? \n ^93^4. ^7Dobre, pomaranczowe^4. \n ^94^4. ^7Damn^4. \n ^95^4. ^7Jestem hardkorem^4! \n ^96^4. ^7OMG^4! \n ^97^4. ^7To jest zajebiste^4! \n ^98^4. ^7Arrrgh, this sucks^4. \n ^99^4. ^7Nossa nossa^4!"
+			text			"^91^4. ^7Another one^4. \n^92^4. ^7Bozzy czy Ty to widzisz^4? \n^93^4. ^7Dobre, pomaranczowe^4. \n^94^4. ^7Damn^4. \n^95^4. ^7Jestem hardkorem^4! \n^96^4. ^7OMG^4! \n^97^4. ^7To jest zajebiste^4! \n^98^4. ^7Arrrgh, this sucks^4. \n^99^4. ^7Nossa nossa^4!"
 			decoration
 		}
 	}
