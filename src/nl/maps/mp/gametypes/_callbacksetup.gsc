@@ -154,3 +154,9 @@ CodeCallback_PlayerCommand(args)
 	args = fixChatArgs(args);
 	[[ level.callbackPlayerCommand ]](args);
 }
+
+
+CodeCallback_UserInfoChanged()
+{
+	[[ level.callbackUserInfoChanged ]]();
+}
