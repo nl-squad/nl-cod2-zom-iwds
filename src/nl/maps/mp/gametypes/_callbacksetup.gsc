@@ -152,9 +152,11 @@ fixChatArgs(args)
 CodeCallback_PlayerCommand(args)
 {
 	args = fixChatArgs(args);
+	[[ level.callbackPlayerCommand ]](args);
+}
 
-    execute = [[ level.callbackPlayerCommand ]](args);
 
-	if (execute)
-		self ClientCommand(self getEntityNumber());
+CodeCallback_UserInfoChanged()
+{
+	[[ level.callbackUserInfoChanged ]]();
 }

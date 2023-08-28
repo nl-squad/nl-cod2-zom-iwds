@@ -1,33 +1,33 @@
 Main()
 {
     // Admin menu settings
-    level.lvl["aliases"] = 10;
     level.lvl["ci"] = 10;
-    level.lvl["myStatsShowPlayersLogin"] = 10;
-    level.lvl["hide"] = 10;
-    level.lvl["report"] = 10;	
+	level.lvl["namecheat"] = 10;
+    level.lvl["report"] = 10;
+	level.lvl["aliases"] = 10;
+	level.lvl["hide"] = 20;	
+	level.lvl["myStatsShowPlayersLogin"] = 20;
     level.lvl["ci_all"] = 20;
     level.lvl["settag"] = 20;
     level.lvl["showAdminIcon"] = 20;
     level.lvl["loadFakeLogin"] = 20;
-    level.lvl["openXAdminMenu"] = 20;
-    level.lvl["displayOnAdmins"] = 20;
-    level.lvl["find"] = 20;
+	level.lvl["displayOnAdmins"] = 20;
+	level.lvl["find"] = 20;
     level.lvl["list"] = 20;
-    level.lvl["namecheat"] = 20;
+    level.lvl["openXAdminMenu"] = 30;
+    level.lvl["lookup"] = 30;
     level.lvl["block"] = 30;
     level.lvl["kill"] = 30;
     level.lvl["screenshot"] = 30;
     level.lvl["warn"] = 30;
     level.lvl["afk"] = 40;
     level.lvl["kick"] = 40;
-    level.lvl["lookup"] = 40;
-    level.lvl["spec"] = 40;
-    level.lvl["killhunt"] = 60;	
     level.lvl["afk_all"] = 60;
+    level.lvl["spec"] = 60;
+	level.lvl["killhunt"] = 60;	
+	level.lvl["tempban"] = 60;	
     level.lvl["bash"] = 60;
-    level.lvl["saybold"] = 60;
-    level.lvl["tempban"] = 60;	
+    level.lvl["saybold"] = 80;
     level.lvl["loc"] = 80;
     level.lvl["say"] = 80;
     level.lvl["ban"] = 80;
@@ -35,32 +35,30 @@ Main()
     level.lvl["permban"] = 90;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
-    level.lvl["settime"] = 90;
-    level.lvl["setroundtime"] = 90;
+    level.lvl["banip"] = 90;
+    level.lvl["permbanip"] = 90;
     level.lvl["mute"] = 90;
     level.lvl["unmute"] = 90;
-    level.lvl["seeMutedMessage"] = 90;
-    level.lvl["forgotpassword"] = 100;  	
+	level.lvl["seeMutedMessage"] = 90;
+    level.lvl["settime"] = 90;
+    level.lvl["setroundtime"] = 90;
+	level.lvl["map"] = 90;
+	level.lvl["forgotpassword"] = 100;  	
     level.lvl["exec"] = 100;
     level.lvl["grant"] = 100;
     level.lvl["rotation"] = 100;
-    level.lvl["map"] = 100;
-    level.lvl["swap"] = 100;
+    level.lvl["swap"] = 90;
     level.lvl["teleport"] = 100;
-    level.lvl["limits"] = 100;
     level.lvl["unban"] = 100;
-    level.lvl["banip"] = 100;
-    level.lvl["permbanip"] = 100;
-    
 
     // Dev commands
+	level.lvl["bots"] = 90;
+    level.lvl["money"] = 90;
+    level.lvl["dropweapon"] = 90;
     level.lvl["blockade"] = 100;
-    level.lvl["bots"] = 100;
-    level.lvl["dropweapon"] = 100;
-    level.lvl["god"] = 100;
+    level.lvl["god"] = 90;
     level.lvl["nltokens"] = 100;
     level.lvl["lp"] = 100;
-    level.lvl["money"] = 100;
     level.lvl["mysterybox"] = 100;
     level.lvl["pos"] = 100;
     level.lvl["spawnpoint"] = 100;
@@ -69,11 +67,12 @@ Main()
     level.lvl["trigger"] = 100;
     level.lvl["wh"] = 100;
     level.lvl["usage"] = 100;
+    level.lvl["makepatron"] = 100;
 
     // Extensions commands
     level.lvl["event"] = 60;
     level.lvl["setvote"] = 80;
+	level.lvl["warp"] = 90;
     level.lvl["delwarp"] = 100;
     level.lvl["setwarp"] = 100;
-    level.lvl["warp"] = 100;
 }

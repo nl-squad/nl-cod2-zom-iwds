@@ -1,0 +1,319 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_CURRENTTITLE			90 120
+#define ORIGIN_IMAGE				350 160
+#define ORIGIN_TITLE1				60 72
+#define ORIGIN_TITLE2				200 72
+#define ORIGIN_TITLE3				340 72
+#define ORIGIN_TITLE4				480 72
+
+#define ORIGIN_CHOICE1				150 100
+#define ORIGIN_CHOICE2				150 120
+#define ORIGIN_CHOICE3				150 140
+#define ORIGIN_CHOICE4				150 160
+#define ORIGIN_CHOICE5				150 180
+#define ORIGIN_CHOICE6				150 200
+#define ORIGIN_CHOICE7				150 220
+#define ORIGIN_CHOICE8				150 240
+#define ORIGIN_CHOICE9				150 260
+#define ORIGIN_CHOICE10				150 280
+#define ORIGIN_CHOICE11				150 300
+#define ORIGIN_CHOICE12				150 320
+#define ORIGIN_CHOICE13				150 340
+#define ORIGIN_EXIT					20 415
+#define ORIGIN_AMMO					350 280
+#define ORIGIN_INFO					350 375
+#define ORIGIN_NLT					350 300
+
+#ifndef WP
+#define WP(_tab, _origin, _requirement, _name, _weapon, _ammo) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			-10 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_TEXT \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_RIGHT \
+			origin			_origin \
+			text			_requirement ## " ^4|" \
+		} \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			0 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_BUTTON \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_LEFT \
+			origin			_origin \
+			text			_name \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _weapon ## "_mp"; \
+			} \
+			mouseEnter \
+			{ \
+				setdvar nl_weapon "nl_img_" ## _weapon; \
+			} \
+			onFocus \
+			{ \
+				hide ammo_group; \
+				show _weapon ## "_ammo"; \
+			} \
+		} \
+		itemDef \
+		{ \
+			group			"ammo_group" \
+			name 			_weapon ## "_ammo" \
+			origin			ORIGIN_AMMO \
+			text			_ammo \
+			textscale		.23 \
+		}
+#endif
+
+#ifndef MORE
+#define MORE(_tab, _origin) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			visible			0 \
+			rect			0 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_TEXT \
+			textfont		UI_FONT_NORMAL \
+			textscale		.2 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_LEFT \
+			origin			_origin \
+			text			"^9more comming soon..." \
+		}
+#endif
+
+#ifndef WPTAB
+#define WPTAB(_tab, _origin, _name) \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
+			style			WINDOW_STYLE_SHADER \
+			rect			0 -5 100 20 0 0 \
+			origin			_origin \
+			background		"nl_zakladkas" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			0 -5 100 20 0 0 \
+			origin			_origin \
+			background		"nl_zakladka" \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 100 20 0 0 \
+			origin			_origin \
+			text			_name \
+			textscale		.23 \
+			textalign 		ITEM_ALIGN_CENTER \
+			textalignx		50 \
+			textaligny		12 \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 100 20 0 0 \
+			origin			_origin \
+			visible			1 \
+			action \
+			{ \
+				play "mouse_click"; \
+				setdvar nl_weapon "nl_blank"; \
+				hide tab_1; \
+				hide tab_2; \
+				hide tab_3; \
+				hide tab_4; \
+				hide ammo_group; \
+				show "tab_" ## _tab; \
+			} \
+		}
+#endif
+
+{
+	menuDef
+	{
+		name			"weapon_select"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close weapon_select;
+			open weapon_american;
+		}
+		onOpen
+		{
+			setdvar nl_weapon "nl_blank";
+			show tab_1;
+			hide tab_2;
+			hide tab_3;
+			hide tab_4;
+			hide nlt_tooltip;
+			scriptMenuResponse "open";
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-10 15 540 2
+			origin			ORIGIN_TITLE1
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			style 			WINDOW_STYLE_DVAR_SHADER
+			rect 			0 0 200 100
+			origin			ORIGIN_IMAGE
+			visible 		1
+			dvar 			nl_weapon
+			decoration
+		}
+
+		WPTAB("1", ORIGIN_TITLE1, "Rifles")
+		WPTAB("2", ORIGIN_TITLE2, "Machine Guns")
+		WPTAB("3", ORIGIN_TITLE3, "Heavy Weapons")
+		WPTAB("4", ORIGIN_TITLE4, "Special")
+
+		WP("1", ORIGIN_CHOICE1, "^9Rank 3", "Mosin Nagant", "mosin_nagant", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
+		WP("1", ORIGIN_CHOICE2, "^9Rank 8", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/320 \n^7Max ^9Ammo^7: 8^9/352")
+		WP("1", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Springfield", "springfield", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
+		WP("1", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/180 \n^7Max ^9Ammo^7: 20^9/260")
+		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120")
+		MORE("1", ORIGIN_CHOICE7)
+
+		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/224 \n^7Max ^9Ammo^7: 32^9/352")
+		WP("2", ORIGIN_CHOICE2, "^9Rank 10", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE4, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/420")
+		WP("2", ORIGIN_CHOICE5, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE6, "^84 000 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE7, "^811 000 ^9nL Tokens", "MP5", "mp5", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
+		MORE("2", ORIGIN_CHOICE8)
+		WP("2", ORIGIN_CHOICE10, "^9Rank 100", "^3Golden ^7Thompson", "thompson", "^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330")
+
+		WP("3", ORIGIN_CHOICE1, "^9Rank 5", "BAR", "bar", "^7Start ^9Ammo^7: 20^9/200 \n^7Max ^9Ammo^7: 20^9/280")
+		WP("3", ORIGIN_CHOICE3, "^83 000 ^9nL Tokens", "Winchester 1200", "winchester", "^7Start ^9Ammo^7: 7^9/70 \n^7Max ^9Ammo^7: 7^9/98")
+		WP("3", ORIGIN_CHOICE4, "^85 000 ^9nL Tokens", "RPK-74", "rpk", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("3", ORIGIN_CHOICE5, "^810 000 ^9nL Tokens", "M249 SAW", "saw", "^7Start ^9Ammo^7: 100^9/300 \n^7Max ^9Ammo^7: 100^9/700")
+		MORE("3", ORIGIN_CHOICE6)
+		WP("3", ORIGIN_CHOICE8, "^9Rank 150", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
+
+		WP("4", ORIGIN_CHOICE1, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 15^9/60 \n^7Max ^9Ammo^7: 15^9/90")
+		WP("4", ORIGIN_CHOICE3, "^815 000 ^9nL Tokens", "Tesla", "tesla", "^7Start ^9Ammo^7: 10^9/60 \n^7Max ^9Ammo^7: 10^9/100")
+		MORE("4", ORIGIN_CHOICE4)
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^4ESC ^7Back"
+			textaligny		20
+			visible			1
+			action
+			{
+				close weapon_select;
+				open weapon_american;
+				play "mouse_click";
+			}
+		}
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			-3 0 130 18
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"nL Tokens balance:"
+			textaligny		15
+			textalignx		3
+			visible			1
+			decoration
+			mouseEnter
+			{
+				show nlt_tooltip;
+			}
+			mouseExit
+			{
+				hide nlt_tooltip;
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nlt"
+			type			ITEM_TYPE_TEXT
+			forecolor		.976 .624 .22 1
+			rect			0 0 0 0
+			origin			ORIGIN_NLT
+			textscale		.24
+			textaligny		15
+			textalignx		85
+			visible			1
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"nlt_tooltip"
+			type			ITEM_TYPE_TEXT
+			rect			0 30 0 0
+			origin			ORIGIN_NLT
+			textscale		.23
+			text			"You can earn ^3nL Tokens ^7for your activity, completing challenges, \nand during special events"
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
+	}
+}
