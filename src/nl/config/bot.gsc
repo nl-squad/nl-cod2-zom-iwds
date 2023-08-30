@@ -18,8 +18,8 @@ Main()
     level.lvl["lookup"] = 30;
     level.lvl["block"] = 30;
     level.lvl["kill"] = 30;
-    level.lvl["screenshot"] = 30;
     level.lvl["warn"] = 30;
+	level.lvl["screenshot"] = 40;
     level.lvl["afk"] = 40;
     level.lvl["kick"] = 40;
     level.lvl["afk_all"] = 60;
@@ -32,32 +32,30 @@ Main()
     level.lvl["say"] = 80;
     level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
-    level.lvl["permban"] = 90;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
     level.lvl["banip"] = 90;
-    level.lvl["permbanip"] = 90;
-    level.lvl["mute"] = 90;
-    level.lvl["unmute"] = 90;
-	level.lvl["seeMutedMessage"] = 90;
     level.lvl["settime"] = 90;
     level.lvl["setroundtime"] = 90;
 	level.lvl["map"] = 90;
+	level.lvl["permbanip"] = 100;
+	level.lvl["permban"] = 100;
+    level.lvl["mute"] = 100;
+    level.lvl["unmute"] = 100;
+	level.lvl["seeMutedMessage"] = 100;
 	level.lvl["forgotpassword"] = 100;  	
     level.lvl["exec"] = 100;
-    level.lvl["grant"] = 100;
     level.lvl["rotation"] = 100;
-    level.lvl["swap"] = 90;
+    level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
-    level.lvl["unban"] = 100;
+	level.lvl["grant"] = 101;
+    level.lvl["unban"] = 101;
 
     // Dev commands
-	level.lvl["bots"] = 90;
-    level.lvl["money"] = 90;
-    level.lvl["dropweapon"] = 90;
+	level.lvl["bots"] = 100;
+    level.lvl["money"] = 100;
+    level.lvl["dropweapon"] = 100;
     level.lvl["blockade"] = 100;
-    level.lvl["god"] = 90;
-    level.lvl["nltokens"] = 100;
     level.lvl["lp"] = 100;
     level.lvl["mysterybox"] = 100;
     level.lvl["pos"] = 100;
@@ -67,12 +65,14 @@ Main()
     level.lvl["trigger"] = 100;
     level.lvl["wh"] = 100;
     level.lvl["usage"] = 100;
-    level.lvl["makepatron"] = 100;
+	level.lvl["god"] = 100;
+	level.lvl["nltokens"] = 101;
+    level.lvl["makepatron"] = 101;
 
     // Extensions commands
     level.lvl["event"] = 60;
     level.lvl["setvote"] = 80;
 	level.lvl["warp"] = 90;
-    level.lvl["delwarp"] = 100;
-    level.lvl["setwarp"] = 100;
+    level.lvl["delwarp"] = 101;
+    level.lvl["setwarp"] = 101;
 }
