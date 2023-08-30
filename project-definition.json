@@ -39,7 +39,7 @@
             "restartDockerCompose": "docker-compose.zom.yml",
             "cod2": {
                 "port": 28960,
-                "rconPassword": "duszaNadalKid34",
+                "rconPassword": "kusza",
                 "iwdsPath": "src/nl"
             }
         }
