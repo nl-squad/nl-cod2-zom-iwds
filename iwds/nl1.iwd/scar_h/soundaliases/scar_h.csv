@@ -33,11 +33,13 @@ name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max
 
 
 #Player Weapons Player,,,,,,,,,,,,,,,,,,,,,,,
-weap_scar_fire_plr,,weapons/scar/scar_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
+weap_scar_fire_plr,,weapons/scar/weap_scar_fire.wav,0.66,0.7,wpnplyr,1,1.05,500000,,weapon,,10,,0.85,,,,,,,,,0.2
+weap_scar_reload_plr,,weapons/scar/weap_scar_reload.wav,0.6,,wpnplyr,1,1.05,500000,,voice,,10,,0.85,,,,,,,,,0.2
+weap_scar_reload_empty_plr,,weapons/scar/weap_scar_reload_empty.wav,0.6,,wpnplyr,,,500000,,voice,,,,,,,,,,,,,0.2
 
 #Player Weapons Non-Player,,,,,,,,,,,,,,,,,,,,,,,
-weap_scar_fire,,weapons/scar/scar_fire.wav,0.69,0.74,wpnai,1.5,1.6,35,8400,weapon,,10,,0.7,,,,,weapon2
+weap_scar_fire,,weapons/scar/weap_scar_fire.wav,0.6,,wpnai,1.5,1.6,35,8400,weapon,,10,,0.7,,,,,weapon2,,,,
 
 #Weapon Foley,,,,,,,,,,,,,,,,,,,
-weap_scar_reload,,weapons/scar/scar_reload.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,end_of_autoclip,,
-weap_scar_reload_not_empty,,weapons/scar/scar_reload_not_empty.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
+weap_scar_reload,,weapons/scar/weap_scar_reload.wav,0.6,,wpnai,1,,1,500,voice,,,,,,,,,weapon2,,,,
+weap_scar_reload_empty,,weapons/scar/weap_scar_reload_empty.wav,0.6,,wpnai,1,,1,500,voice,,,,,,,,,weapon2,,,,
