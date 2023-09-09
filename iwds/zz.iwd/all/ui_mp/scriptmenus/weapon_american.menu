@@ -835,7 +835,7 @@
 			rect			0 -20 40 20
 			origin			ORIGIN_EXIT
 			textscale		.25
-			text			"^4M ^7Main menu"
+			text			"^3M ^7Main Menu"
 			textaligny		15
 			visible			1
 			action
@@ -854,7 +854,7 @@
 			rect			0 0 40 20
 			origin			ORIGIN_EXIT
 			textscale		.25
-			text			"^4I ^7Ingame menu"
+			text			"^3I ^7Ingame Menu"
 			textaligny		15
 			visible			1
 			action

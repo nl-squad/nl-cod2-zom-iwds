@@ -204,7 +204,7 @@
             rect			0 0 40 20
             origin			ORIGIN_EXIT
             textscale		.25
-            text			"^4ESC ^7Back"
+            text			"^3ESC ^7Back"
             textaligny		20
             visible			1
             action
