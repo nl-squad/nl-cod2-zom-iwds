@@ -178,7 +178,7 @@
             decoration
         }
 
-		SKINTAB("1", ORIGIN_TITLE1, "Skins")
+		SKINTAB("1", ORIGIN_TITLE1, "Soldiers")
 		SKINTAB("2", ORIGIN_TITLE2, "Characters")
         
         SKIN("1", ORIGIN_CHOICE1, "", "American Ranger ^9- Normandy", "6", "nl_char_american_normandy")
