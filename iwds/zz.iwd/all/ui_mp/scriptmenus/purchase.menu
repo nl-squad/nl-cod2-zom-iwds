@@ -323,8 +323,8 @@
 		PURCHASE("tab5", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (7d)", "7", "2 400")
 		PURCHASE("tab5", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (30d)", "8", "7 200")
 
-		PURCHASE("tab6", ORIGIN_KR1, "secret_service", "nl_char_secret_service", "nl_kutka", "Secret Service", "13", "1 000")
-		PURCHASE("tab6", ORIGIN_KR2, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "1 000")
+		PURCHASE("tab6", ORIGIN_KR1, "secret_service", "nl_char_secret_service", "nl_kutka", "Secret Service", "13", "5 000")
+		PURCHASE("tab6", ORIGIN_KR2, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
 
 		itemDef
 		{
