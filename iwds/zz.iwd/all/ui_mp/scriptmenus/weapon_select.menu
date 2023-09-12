@@ -214,7 +214,7 @@
 		WPTAB("4", ORIGIN_TITLE4, "Special")
 
 		WP("1", ORIGIN_CHOICE1, "^9Rank 3", "Mosin Nagant", "mosin_nagant", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
-		WP("1", ORIGIN_CHOICE2, "^9Rank 8", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/320 \n^7Max ^9Ammo^7: 8^9/352")
+		WP("1", ORIGIN_CHOICE2, "^9Rank 8", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/296 \n^7Max ^9Ammo^7: 8^9/328")
 		WP("1", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Springfield", "springfield", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
 		WP("1", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/180 \n^7Max ^9Ammo^7: 20^9/260")
 		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/80 \n^7Max ^9Ammo^7: 10^9/120")
