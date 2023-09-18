@@ -27,6 +27,7 @@ Main()
 	level.lvl["killhunt"] = 60;	
 	level.lvl["tempban"] = 60;	
     level.lvl["bash"] = 60;
+    level.lvl["seeSendToSpec"] = 60;
     level.lvl["saybold"] = 80;
     level.lvl["loc"] = 80;
     level.lvl["say"] = 80;
