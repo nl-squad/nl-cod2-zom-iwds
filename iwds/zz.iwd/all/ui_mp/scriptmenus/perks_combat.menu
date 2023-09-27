@@ -27,6 +27,91 @@
 #define ORIGIN_EXIT				10 415
 #define ORIGIN_INFO				400 415
 
+#ifndef COMBAT
+#define COMBAT(_origin, _id, _name, _image) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 0 0 \
+			origin			_origin \
+			border			1 \
+			bordercolor		0.027 0.082 0.604 1 \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.2 \
+			textalignx		2 \
+			textaligny		76 \
+			text			_name \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover_" ## _id; \
+				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.027 0.082 0.604 1 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _id \
+			} \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		"nl_kutka" \
+			dvartest		"tp" ## _id \
+			showDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		_image \
+			dvartest		"tp" ## _id \
+			hideDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			5 5 10 10 0 0 \
+			origin			_origin \
+			backcolor		0.592 1 1 .9 \
+			dvartest		"tp" ## _id \
+			showDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 10 10 0 0 \
+			origin			_origin \
+			background		"nl_szary_kwadrat" \
+			dvartest		"tp" ## _id \
+			hideDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		}
+#endif
+
 {
 	menuDef
 	{
@@ -88,431 +173,11 @@
 			decoration
 		}
 
-		/// TLO KWADRATOW ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 2 78 78
-			origin			ORIGIN_KR1
-			backcolor		0 0 0 0.6
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 2 78 78
-			origin			ORIGIN_KR2
-			backcolor		0 0 0 0.6
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 2 78 78
-			origin			ORIGIN_KR3
-			backcolor		0 0 0 0.6
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 2 78 78
-			origin			ORIGIN_KR4
-			backcolor		0 0 0 0.6
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 2 78 78
-			origin			ORIGIN_KR5
-			backcolor		0 0 0 0.6
-			visible			1
-			decoration
-		}
-
-		/// KWADRATY ///
-		itemDef
-		{
-			name			kr1 //a
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 80 80
-			origin			ORIGIN_KR1 //a
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
-			visible			1
-			textscale		.2
-			textalignx		2
-			textaligny		76
-			text			"Hardline" //a
-			mouseEnter
-			{
-				scriptMenuResponse "hover_6"; //a
-				setitemcolor kr1 bordercolor 0.094 0.455 0.804 0.8 //a
-			}
-			mouseExit
-			{
-				setitemcolor kr1 bordercolor 0.027 0.082 0.604 1 //a
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "6"; //a
-			}
-		}
-
-		itemDef
-		{
-			name			kr2 //a
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 80 80
-			origin			ORIGIN_KR2 //a
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
-			visible			1
-			textscale		.2
-			textalignx		2
-			textaligny		76
-			text			"Equipment" //a
-			mouseEnter
-			{
-				scriptMenuResponse "hover_7"; //a
-				setitemcolor kr2 bordercolor 0.094 0.455 0.804 0.8 //a
-			}
-			mouseExit
-			{
-				setitemcolor kr2 bordercolor 0.027 0.082 0.604 1 //a
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "7"; //a
-			}
-		}
-		
-		itemDef
-		{
-			name			kr3 //a
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 80 80
-			origin			ORIGIN_KR3 //a
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
-			visible			1
-			textscale		.2
-			textalignx		2
-			textaligny		76
-			text			"Escape" //a
-			mouseEnter
-			{
-				scriptMenuResponse "hover_8"; //a
-				setitemcolor kr3 bordercolor 0.094 0.455 0.804 0.8 //a
-			}
-			mouseExit
-			{
-				setitemcolor kr3 bordercolor 0.027 0.082 0.604 1 //a
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "8"; //a
-			}
-		}
-		
-		itemDef
-		{
-			name			kr4 //a
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 80 80
-			origin			ORIGIN_KR4 //a
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
-			visible			1
-			textscale		.2
-			textalignx		2
-			textaligny		76
-			text			"Immortal" //a
-			mouseEnter
-			{
-				scriptMenuResponse "hover_9"; //a
-				setitemcolor kr4 bordercolor 0.094 0.455 0.804 0.8 //a
-			}
-			mouseExit
-			{
-				setitemcolor kr4 bordercolor 0.027 0.082 0.604 1 //a
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "9"; //a
-			}
-		}
-		
-		itemDef
-		{
-			name			kr5 //a
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 80 80
-			origin			ORIGIN_KR5 //a
-			border			1
-			bordercolor		0.027 0.082 0.604 1
-			style			WINDOW_STYLE_FILLED
-			visible			1
-			textscale		.2
-			textalignx		2
-			textaligny		76
-			text			"Overkill" //a
-			mouseEnter
-			{
-				scriptMenuResponse "hover_10"; //a
-				setitemcolor kr5 bordercolor 0.094 0.455 0.804 0.8 //a
-			}
-			mouseExit
-			{
-				setitemcolor kr5 bordercolor 0.027 0.082 0.604 1 //a
-			}
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "10"; //a
-			}
-		}
-
-		/// KUTKI ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR1
-			background		"nl_kutka"
-			dvartest		"cp6"
-			showDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR2
-			background		"nl_kutka"
-			dvartest		"cp7"
-			showDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR3
-			background		"nl_kutka"
-			dvartest		"cp8"
-			showDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR4
-			background		"nl_kutka"
-			dvartest		"cp9"
-			showDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR5
-			background		"nl_kutka"
-			dvartest		"cp10"
-			showDvar		{ "2" }
-			visible			1
-			decoration
-		}
-
-		/// OBRAZKI ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR1
-			background		"nl_hud_pe10"
-			dvartest		"cp6"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR2
-			background		"nl_hud_pe7"
-			dvartest		"cp7"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR3
-			background		"nl_hud_pe9"
-			dvartest		"cp8"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR4
-			background		"nl_hud_pe12"
-			dvartest		"cp9"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 70 70
-			origin			ORIGIN_KR5
-			background		"nl_hud_pe8"
-			dvartest		"cp10"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-
-		/// ZAZNACZONE ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			5 5 10 10
-			origin			ORIGIN_KR1
-			backcolor		0.592 1 1 .9
-			dvartest		"cp6"
-			showDvar		{ "1" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			5 5 10 10
-			origin			ORIGIN_KR2
-			backcolor		0.592 1 1 .9
-			dvartest		"cp7"
-			showDvar		{ "1" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			5 5 10 10
-			origin			ORIGIN_KR3
-			backcolor		0.592 1 1 .9
-			dvartest		"cp8"
-			showDvar		{ "1" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			5 5 10 10
-			origin			ORIGIN_KR4
-			backcolor		0.592 1 1 .9
-			dvartest		"cp9"
-			showDvar		{ "1" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			5 5 10 10
-			origin			ORIGIN_KR5
-			backcolor		0.592 1 1 .9
-			dvartest		"cp10"
-			showDvar		{ "1" }
-			visible			1
-			decoration
-		}
-
-		/// SZARY KWADRAT ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 10 10
-			origin			ORIGIN_KR1
-			background		"nl_szary_kwadrat"
-			dvartest		"cp6"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 10 10
-			origin			ORIGIN_KR2
-			background		"nl_szary_kwadrat"
-			dvartest		"cp7"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 10 10
-			origin			ORIGIN_KR3
-			background		"nl_szary_kwadrat"
-			dvartest		"cp8"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 10 10
-			origin			ORIGIN_KR4
-			background		"nl_szary_kwadrat"
-			dvartest		"cp9"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			5 5 10 10
-			origin			ORIGIN_KR5
-			background		"nl_szary_kwadrat"
-			dvartest		"cp10"
-			hideDvar		{ "2" }
-			visible			1
-			decoration
-		}
+		COMBAT(ORIGIN_KR1, "6", "Hardline", "nl_hud_pe10")
+		COMBAT(ORIGIN_KR2, "7", "Equipment", "nl_hud_pe7")
+		COMBAT(ORIGIN_KR3, "8", "Escape", "nl_hud_pe9")
+		COMBAT(ORIGIN_KR4, "9", "Immortal", "nl_hud_pe12")
+		COMBAT(ORIGIN_KR5, "10", "Overkill", "nl_hud_pe8")
 
 		/// RESET ///
 		itemDef
