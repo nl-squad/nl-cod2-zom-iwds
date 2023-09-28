@@ -178,6 +178,7 @@
 		TACTICAL(ORIGIN_KR3, "Recon", "3", "nl_hud_pe2")
 		TACTICAL(ORIGIN_KR4, "Ghost", "4", "nl_hud_pe11")
 		TACTICAL(ORIGIN_KR5, "Rich", "5", "nl_hud_pe22")
+		TACTICAL(ORIGIN_KR6, "Gambler", "11", "nl_hud_pe52")
 
 		/// RESET ///
 		itemDef
