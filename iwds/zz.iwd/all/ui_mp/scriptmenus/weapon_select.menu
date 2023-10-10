@@ -214,7 +214,7 @@
 		WPTAB("4", ORIGIN_TITLE4, "Special")
 
 		WP("1", ORIGIN_CHOICE1, "^9Rank 3", "Mosin Nagant", "mosin_nagant", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
-		WP("1", ORIGIN_CHOICE2, "^9Rank 8", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/296 \n^7Max ^9Ammo^7: 8^9/328")
+		WP("1", ORIGIN_CHOICE2, "^9Rank 10", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/296 \n^7Max ^9Ammo^7: 8^9/328")
 		WP("1", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Springfield", "springfield", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
 		WP("1", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/220 \n^7Max ^9Ammo^7: 20^9/300")
 		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/90 \n^7Max ^9Ammo^7: 10^9/130")
@@ -222,7 +222,7 @@
 		WP("1", ORIGIN_CHOICE9, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 30^9/210 \n^7Max ^9Ammo^7: 30^9/330")
 
 		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/288 \n^7Max ^9Ammo^7: 32^9/384")
-		WP("2", ORIGIN_CHOICE2, "^9Rank 10", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
+		WP("2", ORIGIN_CHOICE2, "^9Rank 15", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 		WP("2", ORIGIN_CHOICE4, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/420")
 		WP("2", ORIGIN_CHOICE5, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
 		WP("2", ORIGIN_CHOICE6, "^84 000 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/240 \n^7Max ^9Ammo^7: 30^9/360")
