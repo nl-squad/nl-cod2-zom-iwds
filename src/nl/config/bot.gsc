@@ -53,7 +53,8 @@ Main()
     level.lvl["unban"] = 101;
 
     // Dev commands
-    level.lvl["checkPatron"] = 100;
+    level.lvl["checkOtherPlayerPatron"] = 100;
+    level.lvl["checkOtherPlayerVip"] = 100;
 	level.lvl["bots"] = 100;
     level.lvl["money"] = 100;
     level.lvl["dropweapon"] = 100;
