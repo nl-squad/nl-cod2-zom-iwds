@@ -26,60 +26,59 @@
 #define ORIGIN_WEAPON_INFO			350 280
 
 
-#ifndef ZOM
-#define ZOM(_origin, _requirement, _name, _weapon, _info) \
+#ifndef ZWP
+#define ZWP(_origin, _requirement, _name, _weapon, _info) \
         itemDef \
         { \
-            rect			-10 0 128 24 0 0 \
-            forecolor		GLOBAL_UNFOCUSED_COLOR \
-            type			ITEM_TYPE_TEXT \
-            textfont		UI_FONT_NORMAL \
-            textscale		.25 \
-            textstyle		ITEM_TEXTSTYLE_SHADOWED \
-            textaligny	    20 \
-            textalign       ITEM_ALIGN_RIGHT \
-            origin		    _origin \
-            text			_requirement \
+			visible			1 \
+			rect			-10 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_TEXT \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_RIGHT \
+			origin			_origin \
+			text			_requirement \
         } \
-        itemDef \
-        { \
-            visible			0 \
-            rect			0 0 128 24 \
-            forecolor		GLOBAL_UNFOCUSED_COLOR \
-            type			ITEM_TYPE_BUTTON \
-            textfont		UI_FONT_NORMAL \
-            textscale		.25 \
-            textstyle		ITEM_TEXTSTYLE_SHADOWED \
-            textaligny		20 \
-            textalign       ITEM_ALIGN_LEFT \
-            origin			_origin \
-            text			_name \
-            action \
-            { \
-                play "mouse_click"; \
-                scriptMenuResponse _weapon ## "_mp"; \
-            } \
-            mouseEnter \
-            { \
-                setdvar nl_weapon "nl_img_" ## _weapon; \
-            } \
-            onFocus \
-            { \
-                hide info_group; \
-                show _weapon ## "_info"; \
-            } \
-        } \
-        itemDef \
-        { \
-            group			"info_group" \
-            name 			_weapon ## "_info" \
-            origin			ORIGIN_WEAPON_INFO \
-            text			_info \
-            textscale		.23 \
-        }
+		itemDef \
+		{ \
+			visible			1 \
+			rect			0 0 128 24 0 0 \
+			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			type			ITEM_TYPE_BUTTON \
+			textfont		UI_FONT_NORMAL \
+			textscale		.25 \
+			textstyle		ITEM_TEXTSTYLE_SHADOWED \
+			textaligny		20 \
+			textalign      	ITEM_ALIGN_LEFT \
+			origin			_origin \
+			text			_name \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _weapon ## "_mp"; \
+			} \
+			mouseEnter \
+			{ \
+				setdvar nl_weapon "nl_img_" ## _weapon; \
+			} \
+			onFocus \
+			{ \
+				hide info_group; \
+				show _weapon ## "_info"; \
+			} \
+		} \
+		itemDef \
+		{ \
+			group			"info_group" \
+			name 			_weapon ## "_info" \
+			origin			ORIGIN_WEAPON_INFO \
+			text			_info \
+			textscale		.23 \
+		}
 #endif
-
-
 
 {
     menuDef
@@ -166,10 +165,10 @@
             decoration
         }
 
-        ZOM(ORIGIN_CHOICE1, "", "Bat", "bat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
-        ZOM(ORIGIN_CHOICE2, "", "Horizontal Bat", "hbat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
-        ZOM(ORIGIN_CHOICE3, "^9Rank 30 ^4|", "Axe", "axe", "Speed Scale 1.05 / Melee Range 1.2 / Melee Delay 0.8s")
-        ZOM(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Knife", "knife", "Speed Scale 1.15 / Melee Range 0.8 / Melee Delay 0.6s ")
+        ZWP(ORIGIN_CHOICE1, "", "Bat", "bat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
+        ZWP(ORIGIN_CHOICE2, "", "Horizontal Bat", "hbat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
+        ZWP(ORIGIN_CHOICE3, "^9Rank 30 ^4|", "Axe", "axe", "Speed Scale 1.05 / Melee Range 1.2 / Melee Delay 0.8s")
+        ZWP(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Knife", "knife", "Speed Scale 1.15 / Melee Range 0.8 / Melee Delay 0.6s")
 
         /// EXIT ///
         itemDef
