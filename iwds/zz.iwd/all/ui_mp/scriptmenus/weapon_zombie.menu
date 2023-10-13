@@ -23,210 +23,181 @@
 #define ORIGIN_CHOICE13				150 340
 #define ORIGIN_EXIT					20 415
 #define ORIGIN_INFO					400 415
+#define ORIGIN_WEAPON_INFO			350 280
+
+
+#ifndef ZOM
+#define ZOM(_origin, _requirement, _name, _weapon, _info) \
+        itemDef \
+        { \
+            rect			-10 0 128 24 0 0 \
+            forecolor		GLOBAL_UNFOCUSED_COLOR \
+            type			ITEM_TYPE_TEXT \
+            textfont		UI_FONT_NORMAL \
+            textscale		.25 \
+            textstyle		ITEM_TEXTSTYLE_SHADOWED \
+            textaligny	    20 \
+            textalign       ITEM_ALIGN_RIGHT \
+            origin		    _origin \
+            text			_requirement \
+        } \
+        itemDef \
+        { \
+            visible			0 \
+            rect			0 0 128 24 \
+            forecolor		GLOBAL_UNFOCUSED_COLOR \
+            type			ITEM_TYPE_BUTTON \
+            textfont		UI_FONT_NORMAL \
+            textscale		.25 \
+            textstyle		ITEM_TEXTSTYLE_SHADOWED \
+            textaligny		20 \
+            textalign       ITEM_ALIGN_LEFT \
+            origin			_origin \
+            text			_name \
+            action \
+            { \
+                play "mouse_click"; \
+                scriptMenuResponse _weapon ## "_mp"; \
+            } \
+            mouseEnter \
+            { \
+                setdvar nl_weapon "nl_img_" ## _weapon; \
+            } \
+            onFocus \
+            { \
+                hide info_group; \
+                show _weapon ## "_info"; \
+            } \
+        } \
+        itemDef \
+        { \
+            group			"info_group" \
+            name 			_weapon ## "_info" \
+            origin			ORIGIN_WEAPON_INFO \
+            text			_info \
+            textscale		.23 \
+        }
+#endif
+
+
 
 {
-	menuDef
-	{
-		name			"weapon_zombie"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
-		style			WINDOW_STYLE_EMPTY
-		blurWorld		5.0
-		onEsc
-		{
-			close weapon_zombie;
-			open weapon_american;
-		}
-		onOpen
-		{
-			setdvar nl_weapon "nl_blank";
-			show weapons_1;
-		}
+    menuDef
+    {
+        name			"weapon_zombie"
+        rect			0 0 640 480
+        focuscolor		GLOBAL_FOCUSED_COLOR
+        style			WINDOW_STYLE_EMPTY
+        blurWorld		5.0
+        onEsc
+        {
+            close weapon_zombie;
+            open weapon_american;
+        }
+        onOpen
+        {
+            setdvar nl_weapon "nl_blank";
+            show weapons_1;
+        }
 
-		/// TLO ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
+        /// TLO ///
+        itemDef
+        {
+            style			WINDOW_STYLE_FILLED
+            rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+            backcolor		0 0 0 0.7975
+            visible			1
+            decoration
+        }
 
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			-10 15 540 2
-			origin			ORIGIN_TITLE1
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
+        itemDef
+        {
+            style			WINDOW_STYLE_FILLED
+            rect			-10 15 540 2
+            origin			ORIGIN_TITLE1
+            backcolor		0.027 0.082 0.604 1
+            visible			1
+            decoration
+        }
 
-		itemDef
-		{
-			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			0 0 100 100
-			origin			ORIGIN_IMAGE
-			visible 		1
-			dvar 			nl_weapon
-			decoration
-		}
+        itemDef
+        {
+            style 			WINDOW_STYLE_DVAR_SHADER
+            rect 			0 0 100 100
+            origin			ORIGIN_IMAGE
+            visible 		1
+            dvar 			nl_weapon
+            decoration
+        }
 
-		/// ZAKLADKI ///
-		// Zombie Weapon
-		itemDef
-		{
-			name			"weapons_1"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
-			background		"nl_zakladkas"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			"weapons_1_hover"
-			style			WINDOW_STYLE_SHADER
-			rect			0 -5 100 20
-			origin			ORIGIN_TITLE1
-			background		"nl_zakladka"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 0 100 20
-			origin			ORIGIN_TITLE1
-			text			"Zombie Weapon"
-			textscale		.23
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		50
-			textaligny		12
-			visible			1
-			decoration
-		}
+        /// ZAKLADKI ///
+        // Zombie Weapon
+        itemDef
+        {
+            name			"weapons_1"
+            style			WINDOW_STYLE_SHADER
+            rect			0 -5 100 20
+            origin			ORIGIN_TITLE1
+            background		"nl_zakladkas"
+            visible			1
+            decoration
+        }
+        itemDef
+        {
+            name			"weapons_1_hover"
+            style			WINDOW_STYLE_SHADER
+            rect			0 -5 100 20
+            origin			ORIGIN_TITLE1
+            background		"nl_zakladka"
+            visible			1
+            decoration
+        }
+        itemDef
+        {
+            type			ITEM_TYPE_TEXT
+            rect			0 0 100 20
+            origin			ORIGIN_TITLE1
+            text			"Zombie Weapon"
+            textscale		.23
+            textalign 		ITEM_ALIGN_CENTER
+            textalignx		50
+            textaligny		12
+            visible			1
+            decoration
+        }
 
-		/////////////////////////////////////////////////////
-          /// Rifles
+        ZOM(ORIGIN_CHOICE1, "", "Bat", "bat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
+        ZOM(ORIGIN_CHOICE2, "", "Horizontal Bat", "hbat", "Speed Scale 1.1 / Melee Range 1 / Melee Delay 0.7s")
+        ZOM(ORIGIN_CHOICE3, "^9Rank 30 ^4|", "Axe", "axe", "Speed Scale 1.05 / Melee Range 1.2 / Melee Delay 0.8s")
+        ZOM(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Knife", "knife", "Speed Scale 1.15 / Melee Range 0.8 / Melee Delay 0.6s ")
 
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE1
-			text			""
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE1
-			text			"Bat"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "bat_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_bat";
-			}
-		}
+        /// EXIT ///
+        itemDef
+        {
+            type			ITEM_TYPE_BUTTON
+            rect			0 0 40 20
+            origin			ORIGIN_EXIT
+            textscale		.25
+            text			"^3ESC ^7Back"
+            textaligny		20
+            visible			1
+            action
+            {
+                close weapon_zombie;
+                open weapon_american;
+                play "mouse_click";
+            }
+        }
 
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE2
-			text			""
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE2
-			text			"Horizontal Bat"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "hbat_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_hbat";
-			}
-		}
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE3
-			text			"^9Rank 30 ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE3
-			text			"Axe"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "axe_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_axe";
-			}
-		}
-
-		itemDef
-		{
-			#include "ui_mp/weapon_rank_1.menu"
-			origin		ORIGIN_CHOICE4
-			text			"^9Rank 50 ^4|"
-		}
-		itemDef
-		{
-			#include "ui_mp/weapon_add_1.menu"
-			origin			ORIGIN_CHOICE4
-			text			"Knife"
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "knife_mp";
-			}
-			mouseEnter
-			{
-				setdvar nl_weapon "nl_img_knife";
-			}
-		}
-
-		/// EXIT ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3ESC ^7Back"
-			textaligny		20
-			visible			1
-			action
-			{
-				close weapon_zombie;
-				open weapon_american;
-				play "mouse_click";
-			}
-		}
-
-		itemDef
-		{
-			dvar			"nl_kr_info"
-			type			ITEM_TYPE_TEXT
-			visible			1
-			rect			0 0 0 0
-			origin			ORIGIN_INFO
-			textscale		.25
-			decoration
-		}
-	}
+        itemDef
+        {
+            dvar			"nl_kr_info"
+            type			ITEM_TYPE_TEXT
+            visible			1
+            rect			0 0 0 0
+            origin			ORIGIN_INFO
+            textscale		.25
+            decoration
+        }
+    }
 }
