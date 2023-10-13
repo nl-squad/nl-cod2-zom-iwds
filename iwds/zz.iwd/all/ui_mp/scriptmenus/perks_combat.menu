@@ -72,7 +72,7 @@
 			rect			5 5 70 70 0 0 \
 			origin			_origin \
 			background		"nl_kutka" \
-			dvartest		"tp" ## _id \
+			dvartest		"cp" ## _id \
 			showDvar		{ "2" } \
 			visible			1 \
 			decoration \
@@ -83,7 +83,7 @@
 			rect			5 5 70 70 0 0 \
 			origin			_origin \
 			background		_image \
-			dvartest		"tp" ## _id \
+			dvartest		"cp" ## _id \
 			hideDvar		{ "2" } \
 			visible			1 \
 			decoration \
@@ -94,7 +94,7 @@
 			rect			5 5 10 10 0 0 \
 			origin			_origin \
 			backcolor		0.592 1 1 .9 \
-			dvartest		"tp" ## _id \
+			dvartest		"cp" ## _id \
 			showDvar		{ "1" } \
 			visible			1 \
 			decoration \
@@ -105,7 +105,7 @@
 			rect			5 5 10 10 0 0 \
 			origin			_origin \
 			background		"nl_szary_kwadrat" \
-			dvartest		"tp" ## _id \
+			dvartest		"cp" ## _id \
 			hideDvar		{ "2" } \
 			visible			1 \
 			decoration \
