@@ -1,9 +1,6 @@
-name: Deploy server files to nl-cod2-zom-dev
+name: Deploy server files to nl-cod2-zom
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       sha:
@@ -12,10 +9,10 @@ on:
 
 jobs:
   deploy:
-    name: Dev
+    name: Public (Zombies)
     uses: nl-squad/nl-cod2-workflows/.github/workflows/deploy.yml@main
     with:
-      profile: default
+      profile: public
       branch: main
       sha: ${{ github.event.inputs.sha }}
       pack: true

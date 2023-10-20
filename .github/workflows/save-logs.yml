@@ -1,0 +1,20 @@
+name: Save server logs
+
+on:
+  workflow_dispatch:
+    inputs:
+      server:
+        type: choice
+        description: Which server logs do you want to save? (default = dev)
+        required: true
+        options: 
+        - default
+        - public
+
+jobs:
+  save-logs:
+    name: ${{ github.event.inputs.server }}
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/save-logs.yml@main
+    with:
+      profile: ${{ github.event.inputs.server }}
+    secrets: inherit

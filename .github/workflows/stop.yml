@@ -1,0 +1,20 @@
+name: Stop the server
+
+on:
+  workflow_dispatch:
+    inputs:
+      server:
+        type: choice
+        description: Which server do you want to stop? (default = dev)
+        required: true
+        options: 
+        - default
+        - public
+
+jobs:
+  stop:
+    name: ${{ github.event.inputs.server }}
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/stop.yml@main
+    with:
+      profile: ${{ github.event.inputs.server }}
+    secrets: inherit

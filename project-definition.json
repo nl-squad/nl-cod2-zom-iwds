@@ -24,7 +24,7 @@
                 "iwdsPath": "src/nl"
             }
         },
-        "zom": {
+        "public": {
             "localDeploymentPath": "src",
             "remoteDeploymentPath": "~/cod2/servers/nl-cod2-zom",
             "rsyncExclude": [
