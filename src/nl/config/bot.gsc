@@ -43,21 +43,22 @@ Main()
 	level.lvl["permban"] = 100;
     level.lvl["mute"] = 100;
     level.lvl["unmute"] = 100;
-	level.lvl["seeMutedMessage"] = 100;
+	
 	level.lvl["forgotpassword"] = 100;  	
     level.lvl["rotation"] = 100;
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
 	level.lvl["exec"] = 101;
 	level.lvl["grant"] = 101;
+	level.lvl["seeMutedMessage"] = 101;
     level.lvl["unban"] = 101;
 
     // Dev commands
+	level.lvl["bots"] = 90;
+	level.lvl["dropweapon"] = 90;
     level.lvl["checkOtherPlayerPatron"] = 100;
     level.lvl["checkOtherPlayerVip"] = 100;
-	level.lvl["bots"] = 100;
     level.lvl["money"] = 100;
-    level.lvl["dropweapon"] = 100;
     level.lvl["blockade"] = 100;
     level.lvl["lp"] = 100;
     level.lvl["mysterybox"] = 100;
