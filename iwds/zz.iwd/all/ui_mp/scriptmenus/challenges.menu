@@ -28,6 +28,10 @@
 			close challenges;
 			open ingame;
 		}
+		onOpen 
+		{
+			scriptMenuResponse "open";
+		}
 
 		/// TLO ///
 		itemDef
