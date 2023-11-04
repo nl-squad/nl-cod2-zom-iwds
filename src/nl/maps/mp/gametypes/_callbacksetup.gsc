@@ -155,8 +155,15 @@ CodeCallback_PlayerCommand(args)
 	[[ level.callbackPlayerCommand ]](args);
 }
 
-
 CodeCallback_UserInfoChanged()
 {
 	[[ level.callbackUserInfoChanged ]]();
+}
+
+CodeCallback_DPrintf(message)
+{
+    if (isSubStr(message, "(writing snapshot) Snapshot delta request from out of date packet."))
+        return;
+
+    logPrintConsole(message);
 }
