@@ -167,8 +167,8 @@
 
         ZWP(ORIGIN_CHOICE1, "", "Bat", "bat", "^7Speed Scale ^31.1 ^9/ ^7Melee Range ^31 ^9/ ^7Melee Delay ^30.7s")
         ZWP(ORIGIN_CHOICE2, "", "Horizontal Bat", "hbat", "^7Speed Scale ^31.1 ^9/ ^7Melee Range ^31 ^9/ ^7Melee Delay ^30.7s")
-        ZWP(ORIGIN_CHOICE3, "^9Rank 30 ^4|", "Axe", "axe", "^7Speed Scale ^31.05 ^9/ ^7Melee Range ^31.2 ^9/ ^7Melee Delay ^30.8s")
-        ZWP(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Knife", "knife", "^7Speed Scale ^31.15 ^9/ ^7Melee Range ^30.8 ^9/ ^7Melee Delay ^30.6s")
+        ZWP(ORIGIN_CHOICE3, "^9Rank 30 ^4|", "Axe", "axe", "^7Speed Scale ^31.05 ^9/ ^7Melee Range ^31.15 ^9/ ^7Melee Delay ^30.8s")
+        ZWP(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Knife", "knife", "^7Speed Scale ^31.15 ^9/ ^7Melee Range ^30.85 ^9/ ^7Melee Delay ^30.6s")
 
         /// EXIT ///
         itemDef
