@@ -302,6 +302,7 @@
 		PURCHASEWIDE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR4, "intervention_mp", "nl_img_intervention", "nl_kutka", "Intervention", "116", "7 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR5, "m14ebr_mp", "nl_img_m14ebr", "nl_kutka", "M14 EBR", "117", "7 000")
 
 		PURCHASEWIDE("tab2", ORIGIN_KR1, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR2, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")

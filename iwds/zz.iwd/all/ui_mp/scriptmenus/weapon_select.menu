@@ -219,7 +219,8 @@
 		WP("1", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/220 \n^7Max ^9Ammo^7: 20^9/300")
 		WP("1", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/90 \n^7Max ^9Ammo^7: 10^9/130")
 		WP("1", ORIGIN_CHOICE7, "^87 000 ^9nL Tokens", "M200 Intervention", "intervention", "^7Start ^9Ammo^7: 5^9/90 \n^7Max ^9Ammo^7: 5^9/110")
-		MORE("1", ORIGIN_CHOICE8)
+		WP("1", ORIGIN_CHOICE8, "^87 000 ^9nL Tokens", "M14 EBR", "m14ebr", "^7Start ^9Ammo^7: 15^9/195 \n^7Max ^9Ammo^7: 15^9/240")
+		MORE("1", ORIGIN_CHOICE9)
 		WP("1", ORIGIN_CHOICE10, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 5^9/75 \n^7Max ^9Ammo^7: 5^9/95")
 
 		WP("2", ORIGIN_CHOICE1, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/320 \n^7Max ^9Ammo^7: 32^9/416")
