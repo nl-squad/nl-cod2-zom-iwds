@@ -45,12 +45,12 @@ Main()
     level.lvl["unmute"] = 100;
 	
 	level.lvl["forgotpassword"] = 100;  	
-    level.lvl["rotation"] = 100;
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
 	level.lvl["exec"] = 101;
 	level.lvl["grant"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
+	level.lvl["rotation"] = 101;
     level.lvl["unban"] = 101;
 
     // Dev commands
@@ -71,12 +71,13 @@ Main()
     level.lvl["usage"] = 100;
 	level.lvl["god"] = 100;
     level.lvl["event"] = 100;
+	level.lvl["surprise"] = 100;
 	level.lvl["nltokens"] = 101;
     level.lvl["makepatron"] = 101;
 
     // Extensions commands
     level.lvl["setvote"] = 80;
-	level.lvl["warp"] = 90;
+	level.lvl["warp"] = 80;
     level.lvl["delwarp"] = 101;
     level.lvl["setwarp"] = 101;
 }
