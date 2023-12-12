@@ -70,11 +70,11 @@ Main()
     level.lvl["wh"] = 100;
     level.lvl["usage"] = 100;
 	level.lvl["god"] = 100;
+    level.lvl["event"] = 100;
 	level.lvl["nltokens"] = 101;
     level.lvl["makepatron"] = 101;
 
     // Extensions commands
-    level.lvl["event"] = 60;
     level.lvl["setvote"] = 80;
 	level.lvl["warp"] = 90;
     level.lvl["delwarp"] = 101;
