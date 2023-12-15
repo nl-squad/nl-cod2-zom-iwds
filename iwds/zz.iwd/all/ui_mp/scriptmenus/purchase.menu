@@ -255,7 +255,8 @@
 		onEsc
 		{
 			close purchase;
-			open ingame;
+			uiScript openMenuOnDvar ui_purchase_back ingame ingame;
+			uiScript openMenuOnDvar ui_purchase_back weapon_select weapon_select;
 		}
 		onOpen 
 		{
@@ -391,6 +392,8 @@
 			action
 			{
 				close purchase;
+				uiScript openMenuOnDvar ui_purchase_back ingame ingame;
+				uiScript openMenuOnDvar ui_purchase_back weapon_select weapon_select;
 				play "mouse_click";
 			}
 		}
