@@ -12,7 +12,7 @@ us_thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,n
 us_thanks2,6,Voiceovers/MP/us_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 
 #Xmas
-xmass_end,,nazi/xmas_end.mp3,1,1,,,,1000000,,auto,streamed,
+xmass_end,,misc/xmas_end.mp3,1,1,,,,1000000,,auto,streamed,
 hook,,misc/hook.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 wanted,,misc/wanted.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 exchange,,misc/PU_Weapon02.wav,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
