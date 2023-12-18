@@ -20,7 +20,7 @@
             "restartDockerCompose": "docker-compose.dev.yml",
             "cod2": {
                 "port": 7,
-                "rconPassword": "kusza",
+                "rconPasswordPath": "~/Dev/nl/nl-cod2-zom-dev.rcon",
                 "iwdsPath": "src/nl"
             }
         },
@@ -39,7 +39,7 @@
             "restartDockerCompose": "docker-compose.zom.yml",
             "cod2": {
                 "port": 28960,
-                "rconPassword": "kusza",
+                "rconPasswordPath": "~/Dev/nl/nl-cod2-zom.rcon",
                 "iwdsPath": "src/nl"
             }
         }
