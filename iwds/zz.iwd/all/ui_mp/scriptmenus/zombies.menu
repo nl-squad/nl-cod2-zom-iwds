@@ -119,7 +119,7 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			dvar			nl_zombie_1
+			dvar			nl_zombies_dvar
 			decoration
 		}
 	}

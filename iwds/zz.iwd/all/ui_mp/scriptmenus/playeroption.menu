@@ -119,7 +119,7 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			dvar			nl_option_1
+			dvar			nl_playeroption_dvar
 			decoration
 		}
 	}
