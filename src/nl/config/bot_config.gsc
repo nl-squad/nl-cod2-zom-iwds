@@ -43,7 +43,6 @@ Main()
 	level.lvl["permban"] = 100;
     level.lvl["mute"] = 100;
     level.lvl["unmute"] = 100;
-	
 	level.lvl["forgotpassword"] = 100;  	
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
@@ -52,6 +51,7 @@ Main()
 	level.lvl["seeMutedMessage"] = 101;
 	level.lvl["rotation"] = 101;
     level.lvl["unban"] = 101;
+	level.lvl["rotation"] = 101;
 
     // Dev commands
 	level.lvl["bots"] = 90;
