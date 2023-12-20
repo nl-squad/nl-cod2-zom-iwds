@@ -2,7 +2,7 @@ Particle
 {
 	name				whitesnieg_nl
 
-	flags				useRandomRotationDelta useRandomVelocity
+	flags				useRandomRotationDelta useRandomVelocity affectedByWind
 
 	spawnFlags			orgOnSphere evenDistribution
 
@@ -16,7 +16,11 @@ Particle
 
 	height				0 50
 
+	wind				0 10
+
 	rotation			-360 360
+
+	gravity				-10 0
 
 	rgb
 	{
@@ -63,11 +67,9 @@ Particle
 	{
 		curve
 		[
-			0 1 0 0
+			0 0.4937 0 0
 			1 0 0 0
 		]
-
-		scale			1
 	}
 
 	sizeRand
