@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nl-cod2-zom:
-    image: rutkowski/cod2:2.11-server1.3-mysql
+    image: rutkowski/cod2:3.11-server1.3-mysql-unsafe
     container_name: nl-cod2-zom
     restart: always
     stdin_open: true
@@ -21,6 +21,11 @@ services:
       COD2_SET_fs_game: "nl"
       COD2_SET_dedicated: 2
       COD2_SET_net_port: 28960
+    healthcheck:
+      test: [ "CMD", "/cod2/healthcheck.sh" ]
+      interval: 5s
+      timeout: 3s
+      retries: 7
     logging:
       driver: "json-file"
       options:
