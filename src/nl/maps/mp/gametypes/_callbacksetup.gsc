@@ -12,6 +12,7 @@ CodeCallback_StartGameType()
 	// If the gametype has not beed started, run the startup
 	if(!isDefined(level.gametypestarted) || !level.gametypestarted)
 	{
+		SetupCallbacks();
 		[[level.callbackStartGameType]]();
 
 		level.gametypestarted = true; // so we know that the gametype has been started up
@@ -87,12 +88,12 @@ SetupCallbacks()
 	SetDefaultCallbacks();
 
 	// Set defined for damage flags used in the playerDamage callback
-	level.iDFLAGS_RADIUS			= 1;
-	level.iDFLAGS_NO_ARMOR			= 2;
-	level.iDFLAGS_NO_KNOCKBACK		= 4;
-	level.iDFLAGS_NO_TEAM_PROTECTION	= 8;
-	level.iDFLAGS_NO_PROTECTION		= 16;
-	level.iDFLAGS_PASSTHRU			= 32;
+	level.damageFlags_RADIUS				= 1;
+	level.damageFlags_NO_ARMOR				= 2;
+	level.damageFlags_NO_KNOCKBACK			= 4;
+	level.damageFlags_NO_TEAM_PROTECTION	= 8;
+	level.damageFlags_NO_PROTECTION			= 16;
+	level.damageFlags_PASSTHRU				= 32;
 }
 
 /*================
@@ -166,4 +167,16 @@ CodeCallback_DPrintf(message)
         return;
 
     logPrintConsole(message);
+}
+
+CodeCallback_Error(critical, internal_function, message)
+{
+	[[ level.callbackError ]](critical, internal_function, message);
+}
+
+CodeCallback_Notify(message, args)
+{
+    waittillframeend;
+
+	self [[ level.callbackNotify ]](message, args);
 }
