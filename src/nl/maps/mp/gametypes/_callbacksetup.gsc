@@ -169,12 +169,6 @@ CodeCallback_DPrintf(message)
 	if (isSubStr(message, "SV_DirectConnect()"))
 		return;
 
-	if (isSubStr(message, "Connecting player"))
-		return;
-
-	if (isSubStr(message, "Going from "))
-		return;
-
 	if (isSubStr(message, "SV_SendClientGameState() for "))
 		return;
 
