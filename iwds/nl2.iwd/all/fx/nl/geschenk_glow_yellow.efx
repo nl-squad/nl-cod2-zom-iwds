@@ -1,27 +1,15 @@
 Particle
 {
-	name				lensflare
+	name				flash
 
-	flags				usePhysics relative
-
-	spawnFlags			evenDistribution
-
-	count				5
-
-	life				600
-
-	delay				0 600
-
-	spawnRange			0 3000
-
-	spawnFrustumCullRadius	100.000000
+	life				1000
 
 	rgb
 	{
 		curve
 		[
-			0 1 1 0
-			1 1 1 0
+			0 1 0.7539 0
+			1 1 0.7696 0
 		]
 	}
 
@@ -38,11 +26,8 @@ Particle
 	{
 		curve
 		[
-			0 0 0 0
-			0.1609 0.1485 0 0
-			0.5 0.2327 0 0
-			0.8305 0.1436 0 0
-			1 0 0 0
+			0 1 0 0
+			1 1 0 0
 		]
 	}
 
@@ -60,10 +45,10 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 0 0 0
+			1 1 0 0
 		]
 
-		scale			150
+		scale			20
 	}
 
 	sizeRand
@@ -115,9 +100,11 @@ Particle
 	{
 		curve
 		[
-			0 0 0 0
-			1 0 0 0
+			0 0.5 0 0
+			1 0.5 0 0
 		]
+
+		scale			10
 	}
 
 	rotationDeltaRand
@@ -239,6 +226,6 @@ Particle
 
 	shaders
 	[
-		gfx_spotlight_lensflare
+		gfx_explosion_flash
 	]
 }
