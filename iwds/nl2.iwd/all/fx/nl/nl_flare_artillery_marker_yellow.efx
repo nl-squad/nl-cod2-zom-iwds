@@ -993,11 +993,11 @@ Emitter
 
 	impactfx
 	[
-		/fx/misc/flare_smoke_9sec
+		/fx/nl/nl_flare_smoke_9sec_yellow
 	]
 
 	emitfx
 	[
-		/fx/misc/flare_smoke
+		/fx/nl/nl_flare_smoke_yellow
 	]
 }
