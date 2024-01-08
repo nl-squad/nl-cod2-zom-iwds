@@ -80,5 +80,5 @@ Main()
 	level.lvl["warp"] = 80;
     level.lvl["delwarp"] = 101;
     level.lvl["setwarp"] = 101;
-    level.lvl["spawnpoints"] = 101;
+    level.lvl["spawnpoints"] = 100;
 }
