@@ -11,7 +11,21 @@ uk_thanks2,6,Voiceovers/MP/uk_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,n
 us_thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 us_thanks2,6,Voiceovers/MP/us_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 
-xmass_end,,misc/xmas_end.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,1,nazi/nazi_end.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,2,misc/end1.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,3,misc/end2.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,4,misc/end3.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,5,misc/end4.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,6,misc/end5.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,7,misc/end6.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,8,misc/end7.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,9,misc/end8.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,10,misc/end9.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,11,misc/end10.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,12,misc/end11.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,13,misc/end12.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,14,misc/end13.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
+xmass_end,15,misc/end14.mp3,1,1,,,,1000000,,music,streamed,,looping,,all_mp,,,,,,,,
 hook,,misc/hook.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 wanted,,misc/wanted.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 thunderclaps,,amb_elements/elm_thunder_y04.wav,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
