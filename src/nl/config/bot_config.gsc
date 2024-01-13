@@ -46,6 +46,7 @@ Main()
 	level.lvl["forgotpassword"] = 100;  	
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
+    level.lvl["records"] = 100;
 	level.lvl["exec"] = 101;
 	level.lvl["grant"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
