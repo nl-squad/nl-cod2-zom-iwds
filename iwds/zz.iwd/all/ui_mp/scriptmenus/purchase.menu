@@ -311,6 +311,7 @@
 		PURCHASEWIDE("tab2", ORIGIN_KR4, "scar_mp", "nl_img_scar", "nl_kutka", "FN SCAR-H", "113", "9 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR5, "mp5_mp", "nl_img_mp5", "nl_kutka", "MP5", "111", "11 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR6, "p90_mp", "nl_img_p90", "nl_kutka", "P90", "115", "6 500")
+		PURCHASEWIDE("tab2", ORIGIN_KR7, "m4_mp", "nl_img_m4", "nl_kutka", "M4", "118", "10 000")
 
 		PURCHASEWIDE("tab3", ORIGIN_KR1, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR2, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
