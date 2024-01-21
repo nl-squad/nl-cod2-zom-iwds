@@ -71,6 +71,8 @@ weap_beretta_reload_empty_plr,,weapons/beretta/weap_beretta_reload_empty.wav,0.7
 #saw
 weap_saw_fire,,weapons/saw/saw_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_saw_fire_plr,,weapons/saw/saw_fire_plr.wav,0.77,0.84,wpnplyr,0.65,0.75,500000,,local,,,,0.85,,,,,weapon2
+weap_saw_reload,,weapons/saw/weap_saw_reload.wav,0.7,,wpnai,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
+weap_saw_reload_plr,,weapons/saw/weap_saw_reload.wav,0.7,,wpnplyr,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
 
 #RPKż
 weap_rpk_fire,1,weapons/rpk/rpk_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,,,,,weapon2
