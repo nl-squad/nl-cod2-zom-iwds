@@ -35,7 +35,6 @@ name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max
 
 weap_m4_fire_plr,,weapons/m4/weap_m4_fire.wav,1,1,wpnplyr,0.9,1.1,500000,,local,,,,0.85,,,,,,,,,200
 weap_m4_fire,,weapons/m4/weap_m4_fire.wav,0.7,0.8,wpnai,1.5,1.6,35,8400,weapon,,10,,0.7,,,,,weapon2,,,,
-
 weap_m4_reload,,weapons/m4/weap_m4_reload.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100
 weap_m4_reload_plr,,weapons/m4/weap_m4_reload.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,,,100
 weap_m4_reload_empty,,weapons/m4/weap_m4_reload_empty.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100

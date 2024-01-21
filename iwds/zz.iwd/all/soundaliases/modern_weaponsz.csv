@@ -74,12 +74,13 @@ weap_saw_fire_plr,,weapons/saw/saw_fire_plr.wav,0.77,0.84,wpnplyr,0.65,0.75,5000
 weap_saw_reload,,weapons/saw/weap_saw_reload.wav,0.7,,wpnai,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
 weap_saw_reload_plr,,weapons/saw/weap_saw_reload.wav,0.7,,wpnplyr,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
 
-#RPKż
+#RPK
 weap_rpk_fire,1,weapons/rpk/rpk_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,,,,,weapon2
 weap_rpk_fire_plr,,weapons/rpk/rpk_fire_plr.wav,0.44,0.62,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
-weap_rpk_chamber,,weapons/rpk/fly_rpk_pull.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
-weap_rpk_clipin,,weapons/rpk/fly_rpk_mag_in.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
-weap_rpk_clipout,,weapons/rpk/fly_rpk_mag_out.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
+weap_rpk_reload,,weapons/rpk/rpk_reload.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100
+weap_rpk_reload_plr,,weapons/rpk/rpk_reload.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,,,100
+weap_rpk_reload_empty,,weapons/rpk/rpk_reload_empty.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100
+weap_rpk_reload_empty_plr,,weapons/rpk/rpk_reload_empty.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,,,100
 
 #rocket
 rocket_fire,,weapons/rocket/rocket_fire.wav,0.93,0.98,wpnplyr,0.9,0.95,500000,,local,,,,0.85,,,,,,,,,0.2

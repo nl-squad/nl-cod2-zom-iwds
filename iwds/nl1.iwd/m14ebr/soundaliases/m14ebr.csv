@@ -36,3 +36,7 @@ weap_m14ebr_fire_plr,,weapons/m14ebr/weap_m14ebr_fire.wav,0.78,0.86,wpnplyr,0.95
 
 #Weapons Non-Player,,,,,,,,,,,,,,,,,,,,,,,
 weap_m14ebr_fire,,weapons/m14ebr/weap_m14ebr_fire.wav,0.62,0.67,wpnai,1.05,0.96,35,8400,weapon,,,,0.7,,,,cweap_rifle_shell,weapon2
+weap_m14ebr_reload,,weapons/m14ebr/weap_m14ebr_reload.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100
+weap_m14ebr_reload_plr,,weapons/m14ebr/weap_m14ebr_reload.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,,,100
+weap_m14ebr_reload_empty,,weapons/m14ebr/weap_m14ebr_reload_empty.wav,1,1,wpnai,1,1,1,500,weapon,,,,,,,,,,100
+weap_m14ebr_reload_empty_plr,,weapons/m14ebr/weap_m14ebr_reload_empty.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,,,100
