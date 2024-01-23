@@ -189,3 +189,8 @@ CodeCallback_Notify(message, args)
 
 	self [[ level.callbackNotify ]](message, args);
 }
+
+CodeCallback_FireGrenade(grenade, name)
+{
+	self [[ level.callbackFireGrenade ]](grenade, name);
+}
