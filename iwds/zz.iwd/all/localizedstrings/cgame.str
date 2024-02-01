@@ -17,7 +17,7 @@ REFERENCE           NOSPECTATORVOICECHAT
 LANG_ENGLISH        "Can't voice chat as a spectator."
 
 REFERENCE           SPECTATOR
-LANG_ENGLISH        "Spectator"
+LANG_ENGLISH        "^3Only A Coward Sits and Spectates"
 
 REFERENCE           COMPLAINTFILED
 LANG_ENGLISH        "Your complaint has been filed"
