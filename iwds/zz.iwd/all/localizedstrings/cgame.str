@@ -77,7 +77,7 @@ REFERENCE           SB_PLAYERS
 LANG_ENGLISH        "&&1 players"
 
 REFERENCE           SPECTATORS
-LANG_ENGLISH        "^9Spectators ^4* ^0"
+LANG_ENGLISH        "^9Spectators ^4* ^7"
 
 REFERENCE           SB_SCORE
 LANG_ENGLISH        "^9Sc^7ore"
