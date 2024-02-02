@@ -10,7 +10,7 @@ main()
     hunters["3"] = CreateMenuSelection(3, "scissors", "Scissors (^710^9)", 600, blanco\menus\shops::giveScissors, undefined);
     hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", 800, blanco\actions\bubble::Activate);
     hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", 800, blanco\actions\freeze::Activate);
-    hunters["6"] = CreateMenuSelection(7, "c4", "4x C4", 1600, blanco\actions\c4::Activate, undefined, undefined, a(4));
+    hunters["6"] = CreateMenuSelection(7, "c4", "4x C4", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(4));
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
     zombies = [];
@@ -35,4 +35,9 @@ main()
 invisiblePrice(usageTimes)
 {
     return 500 + 100 * usageTimes;
+}
+
+c4Price(usageTimes)
+{
+    return 1600 + 320 * usageTimes;
 }
