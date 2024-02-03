@@ -34,7 +34,7 @@ main()
 
 zombie_grenadesPrice(usageTimes)
 {
-    return 950 + 190 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 invisiblePrice(usageTimes)
