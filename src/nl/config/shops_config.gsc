@@ -24,7 +24,7 @@ main()
 
     vips = [];
     vips["1"] = CreateMenuSelection(1, "bash_king", "Bash King ^3Free", 0, blanco\menus\shops::giveBashKing);
-    vips["2"] = CreateMenuSelection(2, "exploding_ball", "Exploding Ball", 600, blanco\actions\exploding_ball::Activate);
+    vips["2"] = CreateMenuSelection(2, "exploding_ball", "Exploding Ball", 750, blanco\actions\exploding_ball::Activate);
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", 1600, blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
     vips["4"] = CreateMenuSelection(4, "rambo_mode", "Rambo Mode (^740^9s)", 1600, blanco\actions\rambo::Activate, blanco\actions\rambo::CanUse, undefined, a(40));
     vips["5"] = CreateMenuSelection(5, "emp", "EMP (^730^9s)", 1600, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(30));
