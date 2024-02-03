@@ -19,7 +19,7 @@ main()
     zombies["3"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nades (^72^9)", 400, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(2));
     zombies["4"] = CreateMenuSelection(4, "speed", "Speed", 400, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
     zombies["5"] = CreateMenuSelection(5, "high_jump", "High Jump", 550, blanco\actions\super_jump::Activate);
-    zombies["6"] = CreateMenuSelection(6, "zombie_grenades", "Zombie Nade", 950, blanco\menus\shops::giveZombieNades, undefined, undefined, a(1));
+    zombies["6"] = CreateMenuSelection(6, "zombie_grenades", "Zombie Nade", ::zombie_grenadesPrice, blanco\menus\shops::giveZombieNades, undefined, undefined, a(1));
     RegisterMenu("zombies", ::VMenuDefaultHandler, zombies, blanco\menus\shops::canUseZombiesMenu);
 
     vips = [];
@@ -30,6 +30,11 @@ main()
     vips["5"] = CreateMenuSelection(5, "emp", "EMP (^730^9s)", 1600, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(30));
     vips["6"] = CreateMenuSelection(6, "nuke", "Nuke", 10000, blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);
+}
+
+zombie_grenadesPrice(usageTimes)
+{
+    return 950 + 190 * usageTimes;
 }
 
 invisiblePrice(usageTimes)
