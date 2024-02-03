@@ -39,5 +39,5 @@ invisiblePrice(usageTimes)
 
 c4Price(usageTimes)
 {
-    return 1600 + 320 * usageTimes;
+    return 1800 + 360 * usageTimes;
 }
