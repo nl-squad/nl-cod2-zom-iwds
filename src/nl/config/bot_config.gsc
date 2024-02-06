@@ -33,6 +33,7 @@ Main()
     level.lvl["say"] = 80;
     level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
+    level.lvl["localize"] = 80;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
     level.lvl["banip"] = 90;
