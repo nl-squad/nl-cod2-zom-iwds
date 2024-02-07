@@ -199,6 +199,11 @@
         SKIN("2", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens ^4|", "Secret Service", "13", "nl_char_secret_service")
         SKIN("2", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
 
+        SKIN("2", ORIGIN_CHOICE8, "^82 500 ^9nL Tokens ^4|", "Yellow", "31", "nl_char_nl_yellow")
+        SKIN("2", ORIGIN_CHOICE9, "^85 000 ^9nL Tokens ^4|", "Blue", "32", "nl_char_nl_blue")
+        SKIN("2", ORIGIN_CHOICE10, "^87 500 ^9nL Tokens ^4|", "Green", "33", "nl_char_nl_green")
+        SKIN("2", ORIGIN_CHOICE11, "^810 000 ^9nL Tokens ^4|", "Red", "34", "nl_char_nl_red")
+
         /// EXIT ///
         itemDef
         {
