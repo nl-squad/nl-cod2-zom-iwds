@@ -282,11 +282,11 @@
 			decoration
 		}
 
-		TAB("1", ORIGIN_TAB1, "Rifles")
-		TAB("2", ORIGIN_TAB2, "Machine Guns")
-		TAB("3", ORIGIN_TAB3, "Heavy Guns")
-		TAB("4", ORIGIN_TAB4, "Special Guns")
-		TAB("5", ORIGIN_TAB5, "Boosters")
+		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto")
+		TAB("2", ORIGIN_TAB2, "SMGs & Assaults")
+		TAB("3", ORIGIN_TAB3, "LMGs & Shotguns")
+		TAB("4", ORIGIN_TAB4, "Special Weapons")
+		TAB("5", ORIGIN_TAB5, "EXP Boosters")
 		TAB("6", ORIGIN_TAB6, "Skins")
 		
 		itemDef
