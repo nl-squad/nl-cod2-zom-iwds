@@ -209,8 +209,8 @@
 			decoration
 		}
 
-		WPTAB("1", ORIGIN_TITLE1, "Bolt Action & Semi-Auto")
-		WPTAB("2", ORIGIN_TITLE2, "SMGs & Assault Rifles")
+		WPTAB("1", ORIGIN_TITLE1, "Bolts & Semi-Auto")
+		WPTAB("2", ORIGIN_TITLE2, "SMGs & Assaults")
 		WPTAB("3", ORIGIN_TITLE3, "LMGs & Shotguns")
 		WPTAB("4", ORIGIN_TITLE4, "Special Weapons")
 
@@ -230,7 +230,7 @@
 		WP("2", ORIGIN_CHOICE6, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 		WP("2", ORIGIN_CHOICE7, "^84 000 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 		WP("2", ORIGIN_CHOICE8, "^86 500 ^9nL Tokens", "P90", "p90", "^7Start ^9Ammo^7: 50^9/400 \n^7Max ^9Ammo^7: 50^9/550")
-		WP("2", ORIGIN_CHOICE9, "^89 000 ^9nL Tokens", "FN SCAR-H", "scar", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/360")
+		WP("2", ORIGIN_CHOICE9, "^89 000 ^9nL Tokens", "SCAR-H", "scar", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/360")
 		WP("2", ORIGIN_CHOICE10, "^810 000 ^9nL Tokens", "M4", "m4", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/360")
 		WP("2", ORIGIN_CHOICE11, "^811 000 ^9nL Tokens", "MP5", "mp5", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/390")
 		MORE("2", ORIGIN_CHOICE12)
@@ -246,7 +246,7 @@
 		WP("3", ORIGIN_CHOICE11, "^9Rank 150", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 
 		WP("4", ORIGIN_CHOICE2, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 15^9/75 \n^7Max ^9Ammo^7: 15^9/105")
-		WP("4", ORIGIN_CHOICE4, "^815 000 ^9nL Tokens", "Tesla", "tesla", "^7Start ^9Ammo^7: 15^9/135 \n^7Max ^9Ammo^7: 15^9/180")
+		WP("4", ORIGIN_CHOICE4, "^815 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/135 \n^7Max ^9Ammo^7: 15^9/180")
 		MORE("4", ORIGIN_CHOICE5)
 
 		/// EXIT ///
