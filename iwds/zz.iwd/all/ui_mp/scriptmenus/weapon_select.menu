@@ -20,6 +20,7 @@
 #define ORIGIN_CHOICE11				150 300
 #define ORIGIN_CHOICE12				150 320
 #define ORIGIN_CHOICE13				150 340
+#define ORIGIN_CHOICE14				150 360
 #define ORIGIN_EXIT					20 415
 #define ORIGIN_AMMO					350 280
 #define ORIGIN_INFO					350 375
@@ -208,10 +209,10 @@
 			decoration
 		}
 
-		WPTAB("1", ORIGIN_TITLE1, "Rifles")
-		WPTAB("2", ORIGIN_TITLE2, "Machine Guns")
-		WPTAB("3", ORIGIN_TITLE3, "Heavy Weapons")
-		WPTAB("4", ORIGIN_TITLE4, "Special")
+		WPTAB("1", ORIGIN_TITLE1, "Bolt Action & Semi-Auto")
+		WPTAB("2", ORIGIN_TITLE2, "SMGs & Assault Rifles")
+		WPTAB("3", ORIGIN_TITLE3, "LMGs & Shotguns")
+		WPTAB("4", ORIGIN_TITLE4, "Special Weapons")
 
 		WP("1", ORIGIN_CHOICE2, "^9Rank 3", "Mosin Nagant", "mosin_nagant", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
 		WP("1", ORIGIN_CHOICE3, "^9Rank 10", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/256 \n^7Max ^9Ammo^7: 8^9/288")
