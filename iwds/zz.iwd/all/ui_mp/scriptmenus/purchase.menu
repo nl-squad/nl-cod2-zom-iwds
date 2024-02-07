@@ -207,7 +207,7 @@
 			origin			_origin \
 			visible			1 \
 			textscale		.22 \
-			textalignx		8 \
+			textalignx		4 \
 			textaligny		17 \
 			text			_text \
 			mouseEnter \
