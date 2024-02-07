@@ -180,7 +180,7 @@
 
 		SKINTAB("1", ORIGIN_TITLE1, "Soldiers")
 		SKINTAB("2", ORIGIN_TITLE2, "Old-School")
-		SKINTAB("3", ORIGIN_TITLE2, "Specials")
+		SKINTAB("3", ORIGIN_TITLE3, "Specials")
         
         SKIN("1", ORIGIN_CHOICE1, "", "American Ranger ^9- Normandy", "6", "nl_char_american_normandy")
         SKIN("1", ORIGIN_CHOICE2, "^9Rank 10 ^4|", "German Soldat ^9- Normandy", "3", "nl_char_german_normandy")
