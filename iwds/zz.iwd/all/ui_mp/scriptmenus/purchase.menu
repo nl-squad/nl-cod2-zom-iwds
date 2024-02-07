@@ -302,14 +302,14 @@
 		PURCHASEWIDE("tab1", ORIGIN_KR1, "springfield_mp", "nl_img_springfield", "nl_kutka", "Springfield", "101", "1 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR2, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
-		PURCHASEWIDE("tab1", ORIGIN_KR4, "intervention_mp", "nl_img_intervention", "nl_kutka", "Intervention", "116", "7 000")
+		PURCHASEWIDE("tab1", ORIGIN_KR4, "intervention_mp", "nl_img_intervention", "nl_kutka", "M200 Intervention", "116", "7 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR5, "m14ebr_mp", "nl_img_m14ebr", "nl_kutka", "M14 EBR", "117", "7 000")
 
 		PURCHASEWIDE("tab2", ORIGIN_KR1, "ak74_mp", "nl_img_ak74", "nl_kutka", "AK-74u", "104", "2 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR2, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "3 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR3, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "4 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR4, "p90_mp", "nl_img_p90", "nl_kutka", "P90", "115", "6 500")
-		PURCHASEWIDE("tab2", ORIGIN_KR5, "scar_mp", "nl_img_scar", "nl_kutka", "FN SCAR-H", "113", "9 000")
+		PURCHASEWIDE("tab2", ORIGIN_KR5, "scar_mp", "nl_img_scar", "nl_kutka", "SCAR-H", "113", "9 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR6, "m4_mp", "nl_img_m4", "nl_kutka", "M4", "118", "10 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR7, "mp5_mp", "nl_img_mp5", "nl_kutka", "MP5", "111", "11 000")
 
@@ -319,24 +319,26 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR4, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "8 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "8 000")
 
-		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla", "110", "15 000")
+		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "15 000")
 		
 		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (1d)", "1", "600")
 		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (7d)", "2", "2 000")
 		PURCHASE("tab5", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "VIP (30d)", "3", "6 500")
-		PURCHASE("tab5", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (1d)", "6", "450")
-		PURCHASE("tab5", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (7d)", "7", "1 600")
-		PURCHASE("tab5", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "25 percent EXP booster (30d)", "8", "5 500")
-
-		PURCHASE("tab6", ORIGIN_KR1, "pluxy", "nl_char_pluxy", "nl_kutka", "Pluxy", "15", "3 500")
-		PURCHASE("tab6", ORIGIN_KR2, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "5 000")
-		PURCHASE("tab6", ORIGIN_KR3, "secret_service", "nl_char_secret_service", "nl_kutka", "Secret Service", "13", "5 000")
-		PURCHASE("tab6", ORIGIN_KR4, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
+		PURCHASE("tab5", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent EXP (1d)", "6", "450")
+		PURCHASE("tab5", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent EXP (7d)", "7", "1 600")
+		PURCHASE("tab5", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent EXP (30d)", "8", "5 500")
 		
-		PURCHASE("tab6", ORIGIN_KR6, "nl_yellow", "nl_char_nl_yellow", "nl_kutka", "Yellow", "31", "2 500")
-		PURCHASE("tab6", ORIGIN_KR7, "nl_blue", "nl_char_nl_blue", "nl_kutka", "Blue", "32", "5 000")
-		PURCHASE("tab6", ORIGIN_KR8, "nl_green", "nl_char_nl_green", "nl_kutka", "Green", "33", "7 500")
-		PURCHASE("tab6", ORIGIN_KR9, "nl_red", "nl_char_nl_red", "nl_kutka", "Red", "34", "10 000")
+		PURCHASE("tab6", ORIGIN_KR1, "nl_yellow", "nl_char_nl_yellow", "nl_kutka", "American Ranger - ^3Yellow", "31", "2 500")
+		PURCHASE("tab6", ORIGIN_KR2, "nl_blue", "nl_char_nl_blue", "nl_kutka", "British Mate - ^4Blue", "32", "5 000")
+		PURCHASE("tab6", ORIGIN_KR3, "nl_green", "nl_char_nl_green", "nl_kutka", "Russian Comrade - ^2Green", "33", "7 500")
+		PURCHASE("tab6", ORIGIN_KR4, "nl_red", "nl_char_nl_red", "nl_kutka", "German Soldat - ^1Red", "34", "10 000")
+
+		PURCHASE("tab6", ORIGIN_KR5, "pluxy", "nl_char_pluxy", "nl_kutka", "Pluxy", "15", "3 500")
+		PURCHASE("tab6", ORIGIN_KR6, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "5 000")
+		PURCHASE("tab6", ORIGIN_KR7, "secret_service", "nl_char_secret_service", "nl_kutka", "Secret Service", "13", "5 000")
+		PURCHASE("tab6", ORIGIN_KR8, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
+		
+
 
 		itemDef
 		{
