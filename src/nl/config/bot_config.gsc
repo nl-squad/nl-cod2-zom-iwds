@@ -56,8 +56,8 @@ Main()
 	level.lvl["rotation"] = 101;
 
     // Dev commands
-	level.lvl["bots"] = 90;
-	level.lvl["dropweapon"] = 90;
+	level.lvl["bots"] = 80;
+	level.lvl["dropweapon"] = 80;
     level.lvl["checkOtherPlayerPatron"] = 100;
     level.lvl["checkOtherPlayerVip"] = 100;
     level.lvl["money"] = 100;
