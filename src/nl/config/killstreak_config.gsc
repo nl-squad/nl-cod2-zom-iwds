@@ -15,7 +15,7 @@ Main()
     blanco\config::addNewKillstreak(12, "Defense Cannon", 40, 18, "nl_hud_kr14", "Automatic machine gun for 40 seconds", "Defense ^9Cannon ^4: ^9Plant ^4[^7" + key + "^4]", blanco\actions\defense_cannon::Activate, undefined, blanco\utils::a(40));
     blanco\config::addNewKillstreak(10, "Grenade Launcher", 50, 20, "nl_hud_kr11", "Grenade launcher with 18 grenades", "Laun^9cher ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\weapons::Launcher);
     // blanco\config::addNewKillstreak(13, "EMP", 50, 22, "nl_hud_kr16", "Zombies will be harmless for 30 seconds", "E^9MP ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, a(30));
-    blanco\config::addNewKillstreak(14, "Rocket", 75, 22, "nl_hud_kr17", "Powerful rocket launcher with 15 missiles", "Roc^9ket ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\weapons::Rocket);
+    blanco\config::addNewKillstreak(14, "Rocket", 75, 22, "nl_hud_kr17", "Powerful rocket launcher with 12 missiles", "Roc^9ket ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\weapons::Rocket);
     blanco\config::addNewKillstreak(13, "Raptor", 100, 28, "nl_hud_kr21", "Following a player, combat drone for 25 seconds", "Rap^9tor ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\raptor::Activate, blanco\actions\raptor::CanUse);
     blanco\config::addNewKillstreak(15, "Nuke", 150, 30, "nl_hud_kr18", "Nuke will finish current map giving +500 score bonus", "Nu^9ke ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
 }
