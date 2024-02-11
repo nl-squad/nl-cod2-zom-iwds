@@ -165,10 +165,10 @@
             decoration
         }
 
-        ZWP(ORIGIN_CHOICE2, "", "Vertical Bat", "bat", "^7Speed ^3Standard 1.1 ^9/ ^7Bash Range ^3Normal 1 ^9/ ^7Bash Delay ^3Basic 0.7s")
-        ZWP(ORIGIN_CHOICE3, "", "Horizontal Bat", "hbat", "^7Speed ^3Standard 1.1 ^9/ ^7Bash Range ^3Normal 1 ^9/ ^7Bash Delay ^3Basic 0.7s")
-        ZWP(ORIGIN_CHOICE4, "^9Rank 30 ^4|", "Axe", "axe", "^7Speed ^1Slower -0.05 ^9/ ^7Bash Range ^2Bigger +0.10 ^9/ ^7Bash Delay ^1Higher +0.1s")
-        ZWP(ORIGIN_CHOICE5, "^9Rank 50 ^4|", "Knife", "knife", "^7Speed ^2 Faster +0.05 ^9/ ^7Bash Range ^1Shorter -0.15 ^9/ ^7Bash Delay ^2Smaller -0.1s")
+        ZWP(ORIGIN_CHOICE2, "", "Vertical Bat", "bat", "^7Speed ^3Normal 1.1 ^9/ ^7Bash Range ^3Standard 1 ^9/ ^7Bash Delay ^3Basic 0.7s")
+        ZWP(ORIGIN_CHOICE3, "", "Horizontal Bat", "hbat", "^7Speed ^3Normal 1.1 ^9/ ^7Bash Range ^3Standard 1 ^9/ ^7Bash Delay ^3Basic 0.7s")
+        ZWP(ORIGIN_CHOICE4, "^9Rank 30 ^4|", "Axe", "axe", "^7Speed ^11.05 ^7(^1-0.05^7) ^9/ ^7Bash Range ^21.1 ^7(+0.1^7) ^9/ ^7Bash Delay ^10.8 ^7(+0.1s^7)")
+        ZWP(ORIGIN_CHOICE5, "^9Rank 50 ^4|", "Knife", "knife", "^7Speed ^21.15 ^7(+0.05^7) ^9/ ^7Bash Range ^10.85 ^7(^1-0.15^7) ^9/ ^7Bash Delay ^20.6 ^7(-0.1s^7)")
 
         /// EXIT ///
         itemDef
