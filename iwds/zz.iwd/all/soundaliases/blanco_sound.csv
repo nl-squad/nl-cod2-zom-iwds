@@ -44,6 +44,11 @@ bubble_loop,,,misc/bubble_loop.wav,1,1,,,,1000000,,auto,streamed,
 raptor_boom,,,raptor/nl_raptor_boom.wav,1,1,,,,1000000,,auto,streamed,
 raptor_fire,,,raptor/nl_raptor_fire.wav,1,1,,,,1000000,,auto,streamed,
 raptor_rocket,,,raptor/nl_raptor_rocket.wav,1,1,,,,1000000,,auto,streamed,
+
+nl_drone_start,,,drone/nl_drone_start.wav,1,1,,,,1000000,,auto,streamed,
+nl_drone_fire,,,drone/nl_drone_fire.wav,1,1,,,,1000000,,auto,streamed,
+nl_drone_end,,,drone/nl_drone_end.wav,1,1,,,,1000000,,auto,streamed,
+nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 explodingball_explode,,,misc/explodingball_explode.mp3,1,1,,,,1000000,,auto,streamed,
 
 nazi_start,,,nazi/nazi_start.mp3,1,1,,,,1000000,,auto,streamed,
