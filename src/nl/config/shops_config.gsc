@@ -6,7 +6,7 @@ main()
 {
     hunters = [];
     hunters["1"] = CreateMenuSelection(1, "invisible", "Invisible (^75^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));
-    hunters["2"] = CreateMenuSelection(2, "mine", "Mine", ::minePrice, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
+    hunters["2"] = CreateMenuSelection(2, "mine", "Mine", 500, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
     hunters["3"] = CreateMenuSelection(3, "scissors", "Scissors (^710^9)", ::scissorsPrice, blanco\menus\shops::giveScissors, undefined);
     hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
     hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
@@ -37,11 +37,6 @@ invisiblePrice(usageTimes)
     return 500 + 100 * usageTimes;
 }
 
-minePrice(usageTimes)
-{
-    return 500 + 100 * usageTimes;
-}
-
 scissorsPrice(usageTimes)
 {
     return 500 + 100 * usageTimes;
@@ -49,7 +44,7 @@ scissorsPrice(usageTimes)
 
 bubblePrice(usageTimes)
 {
-    return 750 + 150 * usageTimes;
+    return 500 + 100 * usageTimes;
 }
 
 freeze_zombiesPrice(usageTimes)
@@ -79,10 +74,10 @@ napalmPrice(usageTimes)
 
 rambo_modePrice(usageTimes)
 {
-    return 1250 + 100 * usageTimes;
+    return 1250 + 250 * usageTimes;
 }
 
 empPrice(usageTimes)
 {
-    return 1250 + 150 * usageTimes;
+    return 1250 + 250 * usageTimes;
 }
