@@ -44,7 +44,7 @@ scissorsPrice(usageTimes)
 
 bubblePrice(usageTimes)
 {
-    return 500 + 100 * usageTimes;
+    return 750 + 150 * usageTimes;
 }
 
 freeze_zombiesPrice(usageTimes)
