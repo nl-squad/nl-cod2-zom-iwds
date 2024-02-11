@@ -16,7 +16,7 @@ main()
     zombies = [];
     zombies["1"] = CreateMenuSelection(1, "potatoes", "Potatoes x3", 300, blanco\menus\shops::givePotatoes, undefined, undefined, a(3));
     zombies["2"] = CreateMenuSelection(2, "holograms", "Holograms", 300, blanco\actions\holograms::Activate, blanco\actions\holograms::CanUse);
-    zombies["3"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nades x2", 400, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(2));
+    zombies["3"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", 400, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
     zombies["4"] = CreateMenuSelection(4, "speed", "Speed", 400, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
     zombies["5"] = CreateMenuSelection(5, "high_jump", "High Jump", 550, blanco\actions\super_jump::Activate);
     zombies["6"] = CreateMenuSelection(6, "zombie_grenades", "Zombie Nade", ::zombie_grenadesPrice, blanco\menus\shops::giveZombieNades, undefined, undefined, a(1));
