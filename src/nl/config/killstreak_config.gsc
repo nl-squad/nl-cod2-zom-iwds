@@ -18,5 +18,5 @@ Main()
     blanco\config::addNewKillstreak(14, "Rocket", 75, 22, "nl_hud_kr17", "Powerful rocket launcher with 12 missiles", "Roc^9ket ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\weapons::Rocket);
     blanco\config::addNewKillstreak(13, "Raptor", 100, 28, "nl_hud_kr21", "Following a player, combat drone for 25 seconds", "Rap^9tor ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\raptor::Activate, blanco\actions\raptor::CanUse);
     blanco\config::addNewKillstreak(15, "Nuke", 150, 30, "nl_hud_kr18", "Nuke will finish current map giving +500 score bonus", "Nu^9ke ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
-    blanco\config::addNewKillstreak(16, "Drone", 9999, 999, "nl_hud_kr22", "Dusza bedzie szukal tego", "Dro^9ne ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse);
+    blanco\config::addNewKillstreak(16, "Drone", 9999, 999, "nl_hud_kr22", "Dusza bedzie szukal tego", "Dro^9ne ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(40));
 }
