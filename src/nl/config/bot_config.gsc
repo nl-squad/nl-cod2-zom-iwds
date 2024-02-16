@@ -48,12 +48,11 @@ Main()
     level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
     level.lvl["records"] = 100;
+	level.lvl["rotation"] = 100;
 	level.lvl["exec"] = 101;
 	level.lvl["grant"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
-	level.lvl["rotation"] = 101;
     level.lvl["unban"] = 101;
-	level.lvl["rotation"] = 101;
 
     // Dev commands
 	level.lvl["bots"] = 80;
@@ -80,7 +79,7 @@ Main()
     // Extensions commands
     level.lvl["setvote"] = 80;
 	level.lvl["warp"] = 80;
-    level.lvl["delwarp"] = 101;
-    level.lvl["setwarp"] = 101;
+    level.lvl["delwarp"] = 100;
+    level.lvl["setwarp"] = 100;
     level.lvl["spawnpoints"] = 100;
 }
