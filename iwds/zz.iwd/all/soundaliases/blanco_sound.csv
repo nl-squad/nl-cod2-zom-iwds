@@ -50,8 +50,8 @@ nl_drone_end,,,drone/nl_drone_end.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Nuke
-bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,
-nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed,
+bip,,,nuke/bip.mp3,1,1,,,,1000000,,announcer,streamed
+nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,announcer,streamed
 
 #Exploding Ball
 explodingball_explode,,,misc/explodingball_explode.mp3,1,1,,,,1000000,,auto,streamed,
