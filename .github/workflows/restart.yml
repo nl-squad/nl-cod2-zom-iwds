@@ -8,7 +8,7 @@ on:
         description: Which server do you want to restart? (default = dev)
         required: true
         options: 
-        - dev
+        - default
         - public
 
 jobs:
