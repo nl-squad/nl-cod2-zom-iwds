@@ -183,11 +183,11 @@
 		KS("8", ORIGIN_KR8, "Ammo Pack ^9(^525^9)", "nl_hud_kr4")
 		KS("9", ORIGIN_KR9, "Thunderclaps ^9(^530^9)", "hud_thunder")
 		KS("11", ORIGIN_KR10, "Rambo Mode ^9(^535^9)", "nl_hud_kr15")
-		KS("12", ORIGIN_KR11, "Sentry Gun ^9(^540^9)", "nl_hud_kr14")
-		KS("10", ORIGIN_KR12, "Launcher ^9(^550^9)", "nl_hud_kr11")
+		KS("12", ORIGIN_KR11, "Sentry Gun ^9(^540^9)", "nl_hud_kr5")
+		KS("10", ORIGIN_KR12, "Grenade Launcher ^9(^550^9)", "nl_hud_kr11")
 		KS("14", ORIGIN_KR13, "Rocket ^9(^575^9)", "nl_hud_kr17")
 		KS("13", ORIGIN_KR14, "Raptor ^9(^5100^9)", "nl_hud_kr21")
-		KS("15", ORIGIN_KR15, "Nuke ^9(^5150^9)", "nl_hud_kr18")
+		KS("15", ORIGIN_KR15, "Nuke ^9(^5200^9)", "nl_hud_kr18")
 
 		/// RESET ///
 		itemDef
