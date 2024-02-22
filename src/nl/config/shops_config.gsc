@@ -14,11 +14,11 @@ main()
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
     zombies = [];
-    zombies["1"] = CreateMenuSelection(1, "potatoes", "Potatoes x3", 300, blanco\menus\shops::givePotatoes, undefined, undefined, a(3));
-    zombies["2"] = CreateMenuSelection(2, "holograms", "Holograms", 300, blanco\actions\holograms::Activate, blanco\actions\holograms::CanUse);
-    zombies["3"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", 400, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
-    zombies["4"] = CreateMenuSelection(4, "speed", "Speed", 400, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
-    zombies["5"] = CreateMenuSelection(5, "high_jump", "High Jump", 550, blanco\actions\super_jump::Activate);
+    zombies["1"] = CreateMenuSelection(1, "potatoes", "Potatoes x3", ::potatoesPrice, blanco\menus\shops::givePotatoes, undefined, undefined, a(3));
+    zombies["2"] = CreateMenuSelection(2, "holograms", "Holograms", ::hologramsPrice, blanco\actions\holograms::Activate, blanco\actions\holograms::CanUse);
+    zombies["3"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", ::anti_invi_grenadesPrice, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
+    zombies["4"] = CreateMenuSelection(4, "speed", "Speed", ::speedPrice, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
+    zombies["5"] = CreateMenuSelection(5, "high_jump", "High Jump", ::high_jumpPrice, blanco\actions\super_jump::Activate);
     zombies["6"] = CreateMenuSelection(6, "zombie_grenades", "Zombie Nade", ::zombie_grenadesPrice, blanco\menus\shops::giveZombieNades, undefined, undefined, a(1));
     RegisterMenu("zombies", ::VMenuDefaultHandler, zombies, blanco\menus\shops::canUseZombiesMenu);
 
@@ -55,6 +55,31 @@ freeze_zombiesPrice(usageTimes)
 c4Price(usageTimes)
 {
     return 1500 + 300 * usageTimes;
+}
+
+potatoesPrice(usageTimes)
+{
+    return 250 + 50 * usageTimes;
+}
+
+holograms_grenadesPrice(usageTimes)
+{
+    return 250 + 50 * usageTimes;
+}
+
+anti_invi_grenadesPrice(usageTimes)
+{
+    return 375 + 75 * usageTimes;
+}
+
+speedPrice(usageTimes)
+{
+    return 500 + 100 * usageTimes;
+}
+
+high_jumpPrice(usageTimes)
+{
+    return 500 + 100 * usageTimes;
 }
 
 zombie_grenadesPrice(usageTimes)
