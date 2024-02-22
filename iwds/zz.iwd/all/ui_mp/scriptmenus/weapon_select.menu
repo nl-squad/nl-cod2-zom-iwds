@@ -222,7 +222,7 @@
 		WP("1", ORIGIN_CHOICE8, "^87 000 ^9nL Tokens", "M200 Intervention", "intervention", "^7Start ^9Ammo^7: 5^9/90 \n^7Max ^9Ammo^7: 5^9/110")
 		WP("1", ORIGIN_CHOICE9, "^87 000 ^9nL Tokens", "M14 EBR", "m14ebr", "^7Start ^9Ammo^7: 15^9/195 \n^7Max ^9Ammo^7: 15^9/240")
 		MORE("1", ORIGIN_CHOICE10)
-		WP("1", ORIGIN_CHOICE12, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 5^9/80 \n^7Max ^9Ammo^7: 5^9/100")
+		WP("1", ORIGIN_CHOICE12, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
 
 		WP("2", ORIGIN_CHOICE2, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/320 \n^7Max ^9Ammo^7: 32^9/416")
 		WP("2", ORIGIN_CHOICE3, "^9Rank 15", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
@@ -246,7 +246,7 @@
 		WP("3", ORIGIN_CHOICE11, "^9Rank 150", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 
 		WP("4", ORIGIN_CHOICE2, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 25^9/75 \n^7Max ^9Ammo^7: 25^9/125")
-		WP("4", ORIGIN_CHOICE4, "^815 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/120 \n^7Max ^9Ammo^7: 15^9/165")
+		WP("4", ORIGIN_CHOICE4, "^815 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/105 \n^7Max ^9Ammo^7: 15^9/150")
 		MORE("4", ORIGIN_CHOICE5)
 
 		/// EXIT ///
