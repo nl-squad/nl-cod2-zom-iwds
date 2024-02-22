@@ -62,7 +62,7 @@ potatoesPrice(usageTimes)
     return 250 + 50 * usageTimes;
 }
 
-holograms_grenadesPrice(usageTimes)
+hologramsPrice(usageTimes)
 {
     return 250 + 50 * usageTimes;
 }
