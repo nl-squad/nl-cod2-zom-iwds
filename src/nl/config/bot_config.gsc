@@ -57,6 +57,7 @@ Main()
     // Dev commands
 	level.lvl["bots"] = 80;
 	level.lvl["dropweapon"] = 80;
+	level.lvl["wh"] = 90;
     level.lvl["checkOtherPlayerPatron"] = 100;
     level.lvl["checkOtherPlayerVip"] = 100;
     level.lvl["money"] = 100;
@@ -68,7 +69,6 @@ Main()
     level.lvl["sp"] = 100;
     level.lvl["teleport"] = 100;
     level.lvl["trigger"] = 100;
-    level.lvl["wh"] = 100;
     level.lvl["usage"] = 100;
 	level.lvl["god"] = 100;
     level.lvl["event"] = 100;
