@@ -56,10 +56,13 @@ thunderclaps,,amb_elements/elm_thunder_y04.wav,1.00,1.00,,,,7,3000,voice,streame
 #Challenge completed
 challenge_completed,,misc/challenge.wav,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
 
-attack1,1,zombies/zom_attack1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-attack2,2,zombies/zom_attack2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-attack3,3,zombies/zom_attack3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-attack4,4,zombies/zom_attack4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack1,,zombies/zom_attack1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack2,,zombies/zom_attack2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack3,,zombies/zom_attack3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack4,,zombies/zom_attack4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack5,,zombies/zom_attack5.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack6,,zombies/zom_attack6.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+attack7,,zombies/zom_attack7.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl1,1,zombies/zom_growl1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl2,1,zombies/zom_growl2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl3,1,zombies/zom_growl3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
