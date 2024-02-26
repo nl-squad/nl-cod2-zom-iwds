@@ -27,7 +27,7 @@ main()
     vips["2"] = CreateMenuSelection(2, "exploding_ball", "Exploding Ball", ::exploding_ballPrice, blanco\actions\exploding_ball::Activate);
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", ::napalmPrice, blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
     vips["4"] = CreateMenuSelection(4, "rambo_mode", "Rambo Mode (^740^9s)", ::rambo_modePrice, blanco\actions\rambo::Activate, blanco\actions\rambo::CanUse, undefined, a(40));
-    vips["5"] = CreateMenuSelection(5, "emp", "EMP (^730^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(30));
+    vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
     vips["6"] = CreateMenuSelection(6, "nuke", "Nuke", 10000, blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);
 }
