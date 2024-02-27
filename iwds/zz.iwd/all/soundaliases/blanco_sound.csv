@@ -53,6 +53,20 @@ nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,looping
 nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
 
+#Artillery
+artillery_used,,,artillery/artillery_used.mp3,1,1,,,,1000000,,auto,streamed
+artillery_ready,,,artillery/artillery_ready.mp3,1,1,,,,1000000,,auto,streamed
+
+#Mortar
+mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
+
+#Napalm
+napalm_ready,,,napalm/napalm_ready.mp3,1,1,,,,1000000,,auto,streamed
+napalm_used,,,napalm/napalm_used.mp3,1,1,,,,1000000,,auto,streamed
+
+#Emp
+emp_used,,,emp/emp_used.mp3,1,1,,,,1000000,,auto,streamed,looping
+
 #Exploding Ball
 explodingball_explode,,,misc/explodingball_explode.mp3,1,1,,,,1000000,,auto,streamed,
 
