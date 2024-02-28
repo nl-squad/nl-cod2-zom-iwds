@@ -271,7 +271,7 @@
 		{
 			origin			ORIGIN_CHANGES
 			type			ITEM_TYPE_TEXT
-			text			"^9Check what's new on Discord ^3#news ^9channel."
+			text			"^9Check the updates on Discord ^3#news ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -281,7 +281,7 @@
 		{
 			origin			ORIGIN_PATRON
 			type			ITEM_TYPE_TEXT
-			text			"^9Become our ^8Patron^9, more info on ^7Discord ^3#how-to-patron ^9channel."
+			text			"^9Become our ^8Patron^9, more info on Discord ^3#how-to-patron ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1

@@ -309,7 +309,7 @@
 			rect			0 30 0 0
 			origin			ORIGIN_NLT
 			textscale		.23
-			text			"You can earn ^8nL Tokens ^7for your ^3Activity, completing ^3Challenges, \nand during ^3Special Events^7."
+			text			"You can earn ^8nL Tokens ^7for your ^3Activity^7, completing ^3Challenges^7, \nand during ^3Special Events^7."
 			visible			1
 			decoration
 		}
