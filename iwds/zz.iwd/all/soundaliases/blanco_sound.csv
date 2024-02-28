@@ -65,7 +65,7 @@ napalm_ready,,,napalm/napalm_ready.mp3,1,1,,,,1000000,,auto,streamed
 napalm_used,,,napalm/napalm_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Emp
-emp_used,,,emp/emp_used.mp3,1,1,,,,1000000,,auto,streamed,looping
+emp_used,,,emp/emp_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Exploding Ball
 explodingball_explode,,,misc/explodingball_explode.mp3,1,1,,,,1000000,,auto,streamed,

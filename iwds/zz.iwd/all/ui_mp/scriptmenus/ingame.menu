@@ -271,7 +271,7 @@
 		{
 			origin			ORIGIN_CHANGES
 			type			ITEM_TYPE_TEXT
-			text			"^9Check what's new on Discord ^8#announcements ^9channel."
+			text			"^9Check the updates on Discord ^3#news ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -281,7 +281,7 @@
 		{
 			origin			ORIGIN_PATRON
 			type			ITEM_TYPE_TEXT
-			text			"^9Join our ^3Patron ^9program, more info on Discord ^8#how-to-patron ^9channel."
+			text			"^9Become our ^8Patron^9, more info on Discord ^3#how-to-patron ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -353,7 +353,7 @@
 			rect			30 0 0 0
 			origin		ORIGIN_PLROPT1
 			type			ITEM_TYPE_TEXT
-			text			"Allow to ask you for hook"
+			text			"Allow players to ask you for a Hook"
 			forecolor		0.6 0.6 0.6 1
 			textscale		.18
 			textalign		ITEM_ALIGN_LEFT
@@ -409,7 +409,7 @@
 			rect			30 0 0 0
 			origin		ORIGIN_PLROPT2
 			type			ITEM_TYPE_TEXT
-			text			"Allow to ask you for weapon exchange"
+			text			"Allow players to ask you for a Weapon Exchange"
 			forecolor		0.6 0.6 0.6 1
 			textscale		.18
 			textalign		ITEM_ALIGN_LEFT
@@ -465,7 +465,7 @@
 			rect			30 0 0 0
 			origin		ORIGIN_PLROPT3
 			type			ITEM_TYPE_TEXT
-			text			"Toggle visibility of visual effects"
+			text			"Allow displaying visual Effects"
 			forecolor		0.6 0.6 0.6 1
 			textscale		.18
 			textalign		ITEM_ALIGN_LEFT
