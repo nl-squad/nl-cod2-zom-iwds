@@ -245,10 +245,11 @@
 		MORE("3", ORIGIN_CHOICE9)
 		WP("3", ORIGIN_CHOICE11, "^9Rank 150", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 
-		WP("4", ORIGIN_CHOICE2, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 25^9/75 \n^7Max ^9Ammo^7: 25^9/125")
-		WP("4", ORIGIN_CHOICE4, "^815 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/105 \n^7Max ^9Ammo^7: 15^9/150")
-		MORE("4", ORIGIN_CHOICE5)
-
+		WP("4", ORIGIN_CHOICE2, "^9Rank 75", "Minigun", "Minigun", "^7Start ^9Ammo^7: 500^9/500 \n^7Max ^9Ammo^7: 500^9/1000")
+		WP("4", ORIGIN_CHOICE3, "^9Rank 125", "Flamethrower", "flamethrower", "^7Start ^9Ammo^7: 200^9/400 \n^7Max ^9Ammo^7: 200^9/800")
+		WP("4", ORIGIN_CHOICE5, "^815 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/105 \n^7Max ^9Ammo^7: 15^9/150")
+		MORE("4", ORIGIN_CHOICE6)
+		WP("4", ORIGIN_CHOICE8, "^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 25^9/75 \n^7Max ^9Ammo^7: 25^9/125")
 		/// EXIT ///
 		itemDef
 		{
