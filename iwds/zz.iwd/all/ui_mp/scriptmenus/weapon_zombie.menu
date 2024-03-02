@@ -169,7 +169,7 @@
         ZWP(ORIGIN_CHOICE3, "", "Horizontal Bat", "hbat", "^7Speed ^3110 \n^7Bash Range ^3100 \n^7Bash Delay ^30.7s")
         ZWP(ORIGIN_CHOICE4, "^9Rank 30 ^4|", "Axe", "axe", "^7Speed ^3105 ^7(^1-5^7) \n^7Bash Range ^3110 ^7(^2+10^7) \n^7Bash Delay ^30.8s ^7(^1+0.1s^7)")
         ZWP(ORIGIN_CHOICE5, "^9Rank 50 ^4|", "Knife", "knife", "^7Speed ^3115 ^7(^2+5^7) \n^7Bash Range ^385 ^7(^1-15^7) \n^7Bash Delay ^30.6s ^7(^2-0.1s^7)")
-		ZWP(ORIGIN_CHOICE5, "^9Rank 75 ^4|", "Chainsaw", "chainsaw", "^7Speed ^3100 ^7(^2-10^7) \n^7Bash Range ^3105 ^7(^1+5^7) \n^7Bash Delay ^30.6s ^7(^2-0.1s^7)")
+		ZWP(ORIGIN_CHOICE6, "^9Rank 75 ^4|", "Chainsaw", "chainsaw", "^7Speed ^3100 ^7(^2-10^7) \n^7Bash Range ^3105 ^7(^1+5^7) \n^7Bash Delay ^30.6s ^7(^2-0.1s^7)")
 
         /// EXIT ///
         itemDef
