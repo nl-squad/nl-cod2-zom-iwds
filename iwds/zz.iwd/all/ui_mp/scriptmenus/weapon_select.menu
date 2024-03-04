@@ -24,7 +24,7 @@
 #define ORIGIN_EXIT					20 415
 #define ORIGIN_AMMO					350 280
 #define ORIGIN_INFO					350 375
-#define ORIGIN_NLT					350 300
+#define ORIGIN_NLT					350 20
 
 #ifndef WP
 #define WP(_tab, _origin, _requirement, _name, _weapon, _ammo) \
