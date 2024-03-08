@@ -97,6 +97,9 @@ sentry_plant,,,misc/Bomb_plant_notick01.wav,1,1,,,,1000000,,auto,streamed,
 freeze,,,freeze/freeze.mp3,1,1,,,,1000000,,auto,streamed,
 freeze_free,,,freeze/freeze_free.mp3,1,1,,,,1000000,,auto,streamed,
 
+#Rambo
+rambo,,,rambo/rambo.mp3,1,1,,,,1000000,,auto,streamed,
+
 #Misc
 roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
 jetstart,,,misc/jetstart.mp3,1,1,,,,1000000,,auto,streamed,
