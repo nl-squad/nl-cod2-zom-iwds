@@ -44,10 +44,11 @@ nl_end_30,,music/Tankhunt_russian_victory_GRFINAL.mp3,1,1,,,,1000000,,music,stre
 nl_end_31,,music/toujane_armoredcar_crash_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_32,,music/toujane_vehicle_ride_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_33,,music/trainyard_soviet_tension_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
-nl_end_34,,music/british_action_artillery_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,;
-nl_end_35,,music/british_decoytrenches_dump2_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,;
-nl_end_36,,music/decoytrenches_outro_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,;
-
+nl_end_34,,music/british_action_artillery_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
+nl_end_35,,music/british_decoytrenches_dump2_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
+nl_end_36,,music/decoytrenches_outro_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
+nl_end_37,,music/end37.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
+nl_end_38,,music/end38.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 
 hook,,misc/hook.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 wanted,,misc/wanted.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
