@@ -54,7 +54,6 @@ bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,looping
 nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
 
 #Care pack
-carepack_deploy,,,carepackage/carepack_deploy.mp3,1,1,,,,1000000,,auto,streamed
 carepack_used,,,carepackage/carepack_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Artillery
