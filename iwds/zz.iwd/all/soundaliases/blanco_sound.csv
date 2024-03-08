@@ -34,9 +34,9 @@
 name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
 #Bubble
-bubble_create,,,misc/bubble_create.wav,1,1,,,,1000000,,auto,streamed,
-bubble_hit,,,misc/bubble_hit.wav,1,1,,,,1000000,,auto,streamed,
-bubble_loop,,,misc/bubble_loop.wav,1,1,,,,1000000,,auto,streamed,
+bubble_create,,,bubble/bubble_create.wav,1,1,,,,1000000,,auto,streamed,
+bubble_hit,,,bubble/bubble_hit.wav,1,1,,,,1000000,,auto,streamed,
+bubble_loop,,,bubble/bubble_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Raptor
 raptor_boom,,,raptor/nl_raptor_boom.wav,1,1,,,,1000000,,auto,streamed,
