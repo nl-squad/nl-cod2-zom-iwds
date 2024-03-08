@@ -53,6 +53,10 @@ nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,looping
 nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
 
+#Care pack
+carepack_deploy,,,carepackage/carepack_deploy.mp3,1,1,,,,1000000,,auto,streamed
+carepack_used,,,carepackage/carepack_used.mp3,1,1,,,,1000000,,auto,streamed
+
 #Artillery
 artillery_used,,,artillery/artillery_used.mp3,1,1,,,,1000000,,auto,streamed
 artillery_ready,,,artillery/artillery_ready.mp3,1,1,,,,1000000,,auto,streamed
@@ -89,6 +93,7 @@ box_drawing,,,nazi/box_drawing.mp3,1,1,,,,1000000,,auto,streamed,
 #Sentry
 sentry,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
 sentry_deploy,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
+sentry_plant,,misc/Bomb_plant_notick01.wav,1,1,,,,1000000,,auto,streamed,
 
 #Misc
 roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
