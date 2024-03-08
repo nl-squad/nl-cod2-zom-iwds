@@ -50,7 +50,7 @@ Main()
     customVoice1["5"] = CreateVoiceSelection("Fuck you.", "fuck_you");
     customVoice1["6"] = CreateVoiceSelection("Miota nim jak szatan!", "miota_nim_jak_szatan");
     customVoice1["7"] = CreateVoiceSelection("*Risitas laugh*", "risitas_laugh");
-    customVoice1["8"] = CreateVoiceSelection("Wow!", "wow");
+    customVoice1["8"] = CreateVoiceSelection("Jestem kaskaderem!", "jestem_kaskaderem");
     customVoice1["9"] = CreateVoiceSelection("Do mycia!", "do_mycia");
     RegisterMenu("customvoice1", ::customVoice1MenuResponse, customVoice1);
 
