@@ -225,7 +225,7 @@
 		WP("1", ORIGIN_CHOICE12, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120")
 
 		WP("2", ORIGIN_CHOICE2, "", "MP 40", "mp40", "^7Start ^9Ammo^7: 32^9/320 \n^7Max ^9Ammo^7: 32^9/416")
-		WP("2", ORIGIN_CHOICE3, "^9Rank 15", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390 \n^7Reload ^9Time^7: 2.2s \n \n^7Max. Body ^9Damage^7: 44 \n^7Min. Body ^9Damage^7: 24 \n^7Head ^9Damage^7: 99 \n \n^7Bash ^9Damage^7: 500 \n^7Melee ^9Delay ^7: 0.7s \n^7Speed ^7: 1")
+		WP("2", ORIGIN_CHOICE3, "^9Rank 15", "MP 44", "mp44", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390 \n^7Reload ^9Time^7: 2.2s \n \n^7Max. Body ^9Damage^7: 44 \n^7Max. Damage ^9Distance^7: 1000 units \n \n^7Min. Body ^9Damage^7: 24 \n^7Min. Damage ^9Distance^7: 2000 units \n \n^7Head ^9Damage^7: 99 \n \n^7Bash ^9Damage^7: 500 \n^7Melee ^9Delay ^7: 0.7s \n \n^7Speed ^7: 1")
 		WP("2", ORIGIN_CHOICE5, "^82 000 ^9nL Tokens", "AK-74u", "ak74", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/420")
 		WP("2", ORIGIN_CHOICE6, "^83 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
 		WP("2", ORIGIN_CHOICE7, "^84 000 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/270 \n^7Max ^9Ammo^7: 30^9/390")
