@@ -6,4 +6,5 @@ Main()
     config\rules_config::Main();
     config\shops_config::Main();
     config\tips_config::Main();
+    config\voice_config::Main();
 }
