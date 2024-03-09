@@ -1,6 +1,6 @@
 Main()
 {
-	blanco\config::addNewPerk(6, "combat", "Hardline", 12, "nl_hud_pe10", "Reduces q number of required kills for a killstreak by 10 percent");
+	blanco\config::addNewPerk(6, "combat", "Hardline", 12, "nl_hud_pe10", "Reduces a number of required kills for a killstreak by 10 percent");
 	blanco\config::addNewPerk(7, "combat", "Equipment", 32, "nl_hud_pe7", "Gives the weapons Max Ammo and 3 grenades at spawn");
 	blanco\config::addNewPerk(9, "combat", "Immortal", 52, "nl_hud_pe12", "Provides resistance to the hunter's own explosives");
 	blanco\config::addNewPerk(8, "combat", "Escape", 72, "nl_hud_pe9", "Provides 10 seconds of spawn protection");
