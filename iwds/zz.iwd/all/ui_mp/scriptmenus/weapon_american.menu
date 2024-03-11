@@ -63,7 +63,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			-10 -5 0 0
 			origin			ORIGIN_LOGO
-			text			"^4` ^7NoLimits ^4~> ^9Zombies ^4*"
+			text			"^4` ^7NoLimits ^4~> ^9Zombies^4*"
 			textscale		.30
 			visible			1
 			decoration

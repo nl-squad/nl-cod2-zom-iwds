@@ -88,7 +88,7 @@
 			forecolor		1 1 1 1
 			backcolor		0 0 0 0.7975
 			type			ITEM_TYPE_TEXT
-			text			"^4~> ^9State^7ments ^4*"
+			text			"^4~> ^9State^7ments^4*"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textalignx		55
