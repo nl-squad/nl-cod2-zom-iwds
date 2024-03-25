@@ -250,7 +250,7 @@
 			{
 				play "mouse_click";
 				close weapon_american;
-				open weapon_killstreak;
+				scriptMenuResponse "open_killstreak_menu";
 			}
 		}
 		itemDef

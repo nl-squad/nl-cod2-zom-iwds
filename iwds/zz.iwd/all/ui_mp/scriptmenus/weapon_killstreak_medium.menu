@@ -115,14 +115,14 @@
 {
 	menuDef
 	{
-		name			"weapon_killstreak"
+		name			"weapon_killstreak_medium"
 		rect			0 0 640 480
 		focuscolor		GLOBAL_FOCUSED_COLOR
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onEsc
 		{
-			close weapon_killstreak;
+			close weapon_killstreak_medium;
 			open weapon_american;
 		}
 		onOpen
@@ -219,7 +219,7 @@
 			visible			1
 			action
 			{
-				close weapon_killstreak;
+				close weapon_killstreak_medium;
 				open weapon_american;
 				play "mouse_click";
 			}

@@ -1,0 +1,239 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE			0 50
+#define ORIGIN_KR1				80 70
+#define ORIGIN_KR2				180 70
+#define ORIGIN_KR3				280 70
+#define ORIGIN_KR4				380 70
+#define ORIGIN_KR5				480 70
+
+#define ORIGIN_KR6				80 170
+#define ORIGIN_KR7				180 170
+#define ORIGIN_KR8				280 170
+#define ORIGIN_KR9				380 170
+#define ORIGIN_KR10				480 170
+
+#define ORIGIN_KR11				80 270
+#define ORIGIN_KR12				180 270
+#define ORIGIN_KR13				280 270
+#define ORIGIN_KR14				380 270
+#define ORIGIN_KR15				480 270
+
+#define ORIGIN_KR16				80 370
+#define ORIGIN_KR17				180 370
+#define ORIGIN_KR18				280 370
+#define ORIGIN_KR19				380 370
+#define ORIGIN_KR20				480 370
+#define ORIGIN_EXIT				10 415
+#define ORIGIN_INFO				400 415
+
+#ifndef KS
+#define KS(_id, _origin, _name, _image) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 0 0 \
+			origin			_origin \
+			border			1 \
+			bordercolor		0.027 0.082 0.604 1 \
+			style			WINDOW_STYLE_FILLED \
+			visible			1 \
+			textscale		.2 \
+			textalignx		2 \
+			textaligny		76 \
+			text			_name \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover_" ## _id; \
+				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.027 0.082 0.604 1 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _id \
+			} \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		"nl_kutka" \
+			dvartest		"reward_" ## _id \
+			showDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 70 70 0 0 \
+			origin			_origin \
+			background		_image \
+			dvartest		"reward_" ## _id \
+			hideDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			5 5 10 10 0 0 \
+			origin			_origin \
+			backcolor		0.592 1 1 .9 \
+			dvartest		"reward_" ## _id \
+			showDvar		{ "1" } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_SHADER \
+			rect			5 5 10 10 0 0 \
+			origin			_origin \
+			background		"nl_szary_kwadrat" \
+			dvartest		"reward_" ## _id \
+			hideDvar		{ "2" } \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+{
+	menuDef
+	{
+		name			"weapon_killstreak_hard"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close weapon_killstreak_hard;
+			open weapon_american;
+		}
+		onOpen
+		{
+			scriptMenuResponse "open";
+		}
+
+		/// TLO ///
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.7975
+			visible			1
+			decoration
+		}
+
+		/// TITLE ///
+		itemDef
+		{
+			name			"weapons_1"
+			style			WINDOW_STYLE_SHADER
+			rect			200 -29 240 30
+			origin			ORIGIN_TITLE
+			background		"nl_zakladka"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			80 0 480 3
+			origin			ORIGIN_TITLE
+			backcolor		0.027 0.082 0.604 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			0 0 640 0
+			origin			ORIGIN_TITLE
+			text			"KILLSTREAKS"
+			textscale		.5
+			textalign 		ITEM_ALIGN_CENTER
+			textalignx		320
+			visible			1
+			decoration
+		}
+
+		KS("1", ORIGIN_KR1, "Artillery ^9(^55^9)", "nl_hud_kr3")
+		KS("2", ORIGIN_KR2, "Panzerschreck ^9(^58^9)", "nl_hud_kr1")
+		KS("3", ORIGIN_KR3, "Care Pack ^9(^510^9)", "nl_hud_kr2")
+		KS("6", ORIGIN_KR4, "Big Grenade ^9(^512^9)", "nl_hud_kr8")
+		KS("5", ORIGIN_KR5, "Napalm ^9(^515^9)", "nl_hud_kr7")
+		KS("7", ORIGIN_KR6, "Browning MG ^9(^518^9)", "nl_hud_kr5")
+		KS("4", ORIGIN_KR7, "Mortar ^9(^520^9)", "nl_hud_kr13")
+		KS("8", ORIGIN_KR8, "Ammo Pack ^9(^525^9)", "nl_hud_kr4")
+		KS("9", ORIGIN_KR9, "Thunderclaps ^9(^530^9)", "hud_thunder")
+		KS("11", ORIGIN_KR10, "Rambo Mode ^9(^535^9)", "nl_hud_kr15")
+		KS("12", ORIGIN_KR11, "Sentry Gun ^9(^540^9)", "nl_hud_kr14")
+		KS("10", ORIGIN_KR12, "Launcher ^9(^550^9)", "nl_hud_kr11")
+		KS("14", ORIGIN_KR13, "Rocket ^9(^575^9)", "nl_hud_kr17")
+		KS("13", ORIGIN_KR14, "Raptor ^9(^5100^9)", "nl_hud_kr21")
+		KS("15", ORIGIN_KR15, "Nuke ^9(^5200^9)", "nl_hud_kr18")
+
+		/// RESET ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 -20 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^3U ^7Unselect All"
+			textaligny		15
+			visible			1
+			action
+			{
+				scriptMenuResponse "reset_ks";
+				play "mouse_click";
+			}
+		}
+		execKey "u" { scriptMenuResponse "reset_ks"; play "mouse_click"; }
+
+		/// EXIT ///
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			rect			0 0 40 20
+			origin			ORIGIN_EXIT
+			textscale		.25
+			text			"^3ESC ^7Back"
+			textaligny		15
+			visible			1
+			action
+			{
+				close weapon_killstreak_hard;
+				open weapon_american;
+				play "mouse_click";
+			}
+		}
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
+	}
+}
