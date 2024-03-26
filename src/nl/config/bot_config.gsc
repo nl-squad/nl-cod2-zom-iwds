@@ -59,9 +59,9 @@ Main()
 	level.lvl["bots"] = 80;
 	level.lvl["dropweapon"] = 80;
 	level.lvl["wh"] = 90;
-    level.lvl["checkOtherPlayerPatron"] = 100;
-    level.lvl["checkOtherPlayerVip"] = 100;
-    level.lvl["checkOtherPlayerExpBooster"] = 100;
+    level.lvl["checkOtherPlayerPatron"] = 90;
+    level.lvl["checkOtherPlayerVip"] = 90;
+    level.lvl["checkOtherPlayerExpBooster"] = 90;
     level.lvl["money"] = 100;
     level.lvl["blockade"] = 100;
     level.lvl["lp"] = 100;
