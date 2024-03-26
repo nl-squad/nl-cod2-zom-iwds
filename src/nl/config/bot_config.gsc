@@ -53,7 +53,7 @@ Main()
 	level.lvl["grant"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
     level.lvl["unban"] = 101;
-    level.lvl["forcechangepassword"] = 102;
+    level.lvl["forcechangepassword"] = 101;
 
     // Dev commands
 	level.lvl["bots"] = 80;
