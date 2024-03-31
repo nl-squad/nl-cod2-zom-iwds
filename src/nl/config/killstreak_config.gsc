@@ -18,7 +18,7 @@ Main()
     blanco\config::addNewKillstreak(14, "Rocket", 75, 22, "nl_hud_kr17", "Quake3 Rocket Launcher with 10 Missiles", "Roc^9ket ^4: ^9Get ^4[^7" + key + "^4]", blanco\actions\weapons::Rocket);
     blanco\config::addNewKillstreak(13, "Raptor", 100, 28, "nl_hud_kr21", "Ground Combat Drone protects Owner for 25 seconds", "Rap^9tor ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\raptor::Activate, blanco\actions\raptor::CanUse);
     blanco\config::addNewKillstreak(15, "Nuke", 200, 30, "nl_hud_kr18", "Ends the current Map and gives a +500 Score Bonus", "Nu^9ke ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
-    blanco\config::addNewKillstreak(16, "Drone", 9999, 9999, 9999, 999, "nl_hud_kr22", "Remote Flying Drone for 40 seconds", "Dro^9ne ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(40));
+    blanco\config::addNewKillstreak(16, "Drone", 9999, 999, "nl_hud_kr22", "Remote Flying Drone for 40 seconds", "Dro^9ne ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(40));
 
     // Available levels: killstreakHardLevel, killstreakMediumLevel, killstreakEasyLevel
     // Hard is the default one
