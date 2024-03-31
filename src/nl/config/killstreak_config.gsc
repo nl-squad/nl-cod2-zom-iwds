@@ -22,5 +22,4 @@ Main()
 
     // Available levels: killstreakHardLevel, killstreakMediumLevel, killstreakEasyLevel
     // Hard is the default one
-    blanco\config::setKillstreakLevelForMap("mp_starter", level.killstreakMediumLevel);
 }
