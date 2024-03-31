@@ -187,7 +187,7 @@
 		KS("10", ORIGIN_KR12, "Launcher ^9(^540^9)", "nl_hud_kr11")
 		KS("14", ORIGIN_KR13, "Rocket ^9(^550^9)", "nl_hud_kr17")
 		KS("13", ORIGIN_KR14, "Raptor ^9(^575^9)", "nl_hud_kr21")
-		KS("15", ORIGIN_KR15, "Nuke ^9(^5100^9)", "nl_hud_kr18")
+		KS("15", ORIGIN_KR15, "Nuke ^9(^5150^9)", "nl_hud_kr18")
 
 		/// RESET ///
 		itemDef
