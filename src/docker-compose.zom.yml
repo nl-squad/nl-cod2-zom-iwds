@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nl-cod2-zom:
-    image: rutkowski/cod2:3.11.1-server1.3-mysql-unsafe
+    image: rutkowski/cod2:3.12-server1.3-mysql-unsafe
     container_name: nl-cod2-zom
     restart: always
     stdin_open: true
