@@ -88,7 +88,7 @@ high_jumpPrice(usageTimes)
 
 zombie_grenadesPrice(usageTimes)
 {
-    return 1000 + 200 * usageTimes;
+    return 1250 + 250 * usageTimes;
 }
 
 exploding_ballPrice(usageTimes)
