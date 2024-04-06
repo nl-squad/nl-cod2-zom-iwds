@@ -73,7 +73,7 @@ hologramsPrice(usageTimes)
 
 anti_invi_grenadesPrice(usageTimes)
 {
-    return 375 + 75 * usageTimes;
+    return 500 + 100 * usageTimes;
 }
 
 speedPrice(usageTimes)
