@@ -1,0 +1,11 @@
+name: Restart public server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  restart:
+    uses: nl-squad/nl-cod2-workflows/.github/workflows/restart.yml@main
+    with:
+      profile: public
+    secrets: inherit
