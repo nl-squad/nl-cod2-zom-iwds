@@ -24,7 +24,7 @@ Main()
     a[a.size] = "^^77fire^^22ball^^77*";
     a[a.size] = "^2Yoshi";
     a[a.size] = "^7Marcin ^1Najman";
-    a[a.size] = "^7[^1OUT^7LAW^1]^7BOO^1GER;
+    a[a.size] = "^7[^1OUT^7LAW^1]^7BOO^1GER";
     a[a.size] = "^9Skater^7.^095";
     a[a.size] = "^^77I ^^11<3 ^^44NL";
     a[a.size] = "^5Chuppa^7Chupps";
