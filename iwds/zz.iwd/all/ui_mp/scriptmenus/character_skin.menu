@@ -204,8 +204,7 @@
         SKIN("3", ORIGIN_CHOICE6, "^83 500 ^9nL Tokens ^4|", "UNSC Marine", "17", "nl_char_tobby")
         SKIN("3", ORIGIN_CHOICE7, "^85 000 ^9nL Tokens ^4|", "Neo", "16", "nl_char_neo")
         SKIN("3", ORIGIN_CHOICE8, "^85 000 ^9nL Tokens ^4|", "US Secret Service", "13", "nl_char_secret_service")
-		SKIN("3", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens ^4|", "Joker", "18", "nl_char_joker")
-        SKIN("3", ORIGIN_CHOICE10, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
+        SKIN("3", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
 
         /// EXIT ///
         itemDef
