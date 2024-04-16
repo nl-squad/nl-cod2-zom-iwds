@@ -23,7 +23,7 @@
 #define ORIGIN_CHOICE14				150 360
 #define ORIGIN_EXIT					20 415
 #define ORIGIN_AMMO					350 280
-#define ORIGIN_INFO					200 380
+#define ORIGIN_INFO					150 415
 #define ORIGIN_NLT					350 20
 
 #ifndef WP
