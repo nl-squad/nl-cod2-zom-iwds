@@ -45,7 +45,7 @@ weap_raygun_reload,,weapons/raygun/reload_raygun.wav,0.83,1,wpnplyr,,,7,500,musi
 weap_raygun_reload_not_empty,,weapons/raygun/reload_raygun.wav,0.83,1,wpnplyr,,,7,500,music,,,,,,,,,,
 
 #fal
-weap_fal_fire,,weapons/fal/weap_fal_fire.wav,0.62,0.67,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,,,,,weapon2
+weap_fal_fire,,weapons/fal/weap_fal_fire.wav,0.6,0.65,wpnai,1.05,0.96,35,8400,weapon,,,,0.7,,,,,weapon2
 weap_fal_fire_plr,,weapons/fal/weap_fal_fire.wav,0.76,0.83,wpnplyr,0.95,1.25,500000,,local,,,,0.85,,,,,,,,,0.2
 
 #g3
