@@ -335,7 +335,7 @@
 		PURCHASE("tab6", ORIGIN_KR3, "nl_green", "nl_char_nl_green", "nl_kutka", "Russian Comrade ^2Green", "33", "7 500")
 		PURCHASE("tab6", ORIGIN_KR4, "nl_red", "nl_char_nl_red", "nl_kutka", "German Soldat ^1Red", "34", "10 000")
 
-		PURCHASE("tab6", ORIGIN_KR6, "sas", "nl_char_pluxy", "nl_kutka", "SAS", "15", "3 500")
+		PURCHASE("tab6", ORIGIN_KR6, "sas", "nl_char_sas", "nl_kutka", "SAS", "15", "3 500")
 		PURCHASE("tab6", ORIGIN_KR7, "sniper", "nl_char_sniper", "nl_kutka", "Sniper", "19", "3 500")
 		PURCHASE("tab6", ORIGIN_KR8, "tobby", "nl_char_tobby", "nl_kutka", "UNSC Marine", "17", "3 500")
 		PURCHASE("tab6", ORIGIN_KR9, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "5 000")
