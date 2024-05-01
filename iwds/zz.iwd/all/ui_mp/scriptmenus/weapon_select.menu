@@ -1,7 +1,7 @@
 #include "ui_mp/menudef.h"
 
 #define ORIGIN_CURRENTTITLE			90 120
-#define ORIGIN_IMAGE				350 160
+#define ORIGIN_IMAGE				380 160
 #define ORIGIN_TITLE1				60 72
 #define ORIGIN_TITLE2				200 72
 #define ORIGIN_TITLE3				340 72
@@ -22,7 +22,7 @@
 #define ORIGIN_CHOICE13				150 340
 #define ORIGIN_CHOICE14				150 360
 #define ORIGIN_EXIT					20 415
-#define ORIGIN_AMMO					350 280
+#define ORIGIN_AMMO					380 280
 #define ORIGIN_INFO					150 435
 #define ORIGIN_NLT					350 20
 
