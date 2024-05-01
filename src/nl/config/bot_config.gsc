@@ -40,12 +40,12 @@ Main()
     level.lvl["settime"] = 90;
     level.lvl["setroundtime"] = 90;
 	level.lvl["map"] = 90;
+	level.lvl["swap"] = 90;
 	level.lvl["permbanip"] = 100;
 	level.lvl["permban"] = 100;
     level.lvl["mute"] = 100;
     level.lvl["unmute"] = 100;
 	level.lvl["forgotpassword"] = 100;  	
-    level.lvl["swap"] = 100;
     level.lvl["teleport"] = 100;
     level.lvl["records"] = 100;
 	level.lvl["rotation"] = 100;
