@@ -21,11 +21,12 @@ Main()
     blanco\config::addNewKillstreak(16, "Drone", 9999, 9999, 9999, 999, "nl_hud_kr22", "Remote Flying Drone for 40 seconds", "Dro^9ne ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(40));
     blanco\config::addNewKillstreak(17, "RC-XD", 9999, 9999, 9999, 999, "nl_hud_kr23", "Grzegorz Floryda", "Dusze ^9sie ^4: ^9Pay Respect ^4[^7" + key + "^4]", blanco\actions\rcxd::Activate, blanco\actions\rcxd::CanUse, blanco\utils::a(30));
 
-	blanco\config::setKillstreakLevelForMap("mp_starter", level.killstreakMediumLevel);
-	blanco\config::setKillstreakLevelForMap("mp_richard", level.killstreakMediumLevel);
-	blanco\config::setKillstreakLevelForMap("mp_kjoa", level.killstreakMediumLevel);
 	blanco\config::setKillstreakLevelForMap("mp_kg", level.killstreakEasyLevel);
 	blanco\config::setKillstreakLevelForMap("mp_loop", level.killstreakEasyLevel);
+	blanco\config::setKillstreakLevelForMap("mp_blocks", level.killstreakMediumLevel);
+	blanco\config::setKillstreakLevelForMap("mp_kjoa", level.killstreakMediumLevel);
+	blanco\config::setKillstreakLevelForMap("mp_richard", level.killstreakMediumLevel);
+	blanco\config::setKillstreakLevelForMap("mp_starter", level.killstreakMediumLevel);
     // Available levels: killstreakHardLevel, killstreakMediumLevel, killstreakEasyLevel
     // Hard is the default one
 }
