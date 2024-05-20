@@ -24,7 +24,7 @@ Main()
     tips[tips.size] = "If you need help, ask any nL member currently online ^3!admins";
     tips[tips.size] = "You can exchange weapon with others by pressing ^3V 2 3 ^7buttons";
     tips[tips.size] = "You can drag other hunters to you by pressing ^3V 2 2 ^7buttons";
-    tips[tips.size] = "You will gain ^3EXP ^7for all kills and assists";
+    tips[tips.size] = "You will gain ^3EXP ^7for kills, challenges, and daily logins";
     tips[tips.size] = "Remember to follow the server rules with ^3!rules";
     tips[tips.size] = "Join our ^3Patron ^7program, check out ^3#how-to-patron ^7Discord channel";
     level.tips = tips;
