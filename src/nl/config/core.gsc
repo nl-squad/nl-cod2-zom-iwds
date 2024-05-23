@@ -2,6 +2,7 @@ Main()
 {
     config\bot_config::Main();
     config\bots_names_config::Main();
+    config\gametype_config::Main();
     config\killstreak_config::Main();
     config\perks_config::Main();
     config\rules_config::Main();
