@@ -54,7 +54,7 @@ weap_fal_fire_plr,,weapons/fal/fal_fire_plr.wav,0.44,0.62,wpnplyr,1,1.05,500000,
 weap_fal_reload,,weapons/fal/fal_reload.wav,0.4,0.44,wpnai,1,1,1,500,auto,,,,,,,,cweap_clipend,,
 weap_fal_reload_plr,,weapons/fal/fal_reload.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,cweap_clipend,,
 
-#famas
+#FAMAS
 weap_famas_fire,1,weapons/famas/famas_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_famas_fire_plr,,weapons/famas/famas_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 weap_famas_chamber,,weapons/famas/famas_charge.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
