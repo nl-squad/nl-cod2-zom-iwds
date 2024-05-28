@@ -69,6 +69,10 @@ weap_famas_clipout,,weapons/famas/famas_mag_out.wav,0.84,0.92,wpnplyr,1,1.05,500
 weap_g3_fire,,weapons/g3/g3_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_g3_fire_plr,,weapons/g3/g3_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
+#railgun
+weap_lasergun_fire,1,misc/fire_lasergun.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
+weap_lasergun_fire_plr,,misc/fire_lasergun.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+
 #raygun
 weap_raygun_fire,,weapons/raygun/fire_raygun.wav,0.6,0.65,wpnai,1.05,0.96,35,8400,weapon,,,,0.7,,,,,weapon2
 weap_raygun_fire_plr,,weapons/raygun/fire_raygun.wav,0.8,0.85,wpnplyr,0.95,1.05,500000,,local,,,,0.85,,,,,,,,,0.2
@@ -107,6 +111,9 @@ weap_tesla_fire,,weapons/tesla/tesla_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,w
 weap_tesla_fire_plr,,weapons/tesla/tesla_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #wunderwaffe
-weap_lasergun_fire,1,misc/fire_lasergun.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_lasergun_fire_plr,,misc/fire_lasergun.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+weap_wunderwaffe_fire,,weapons/wunderwaffe/wunderwaffe_fire.wav,0.66,0.72,wpnai,0.98,1.08,35,8400,weapon,,,,0.7,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,weapon2
+weap_wunderwaffe_plr,,weapons/wunderwaffe/wunderwaffe_fire.wav,0.82,0.89,wpnplyr,0.88,0.98,500000,,local,,,,0.85,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,,,,,0.2
+
+weap_wunderwaffe_rld,,weapons/wunderwaffe/wunderwaffe_rld.wav,0.83,1,wpnplyr,,,7,500,music,,,,,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,end_of_autoclip,
+weap_wunderwaffe_npc,,weapons/wunderwaffe/wunderwaffe_rld.wav,0.83,1,wpnai,,,7,500,auto,,,,,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,weapon1,
 

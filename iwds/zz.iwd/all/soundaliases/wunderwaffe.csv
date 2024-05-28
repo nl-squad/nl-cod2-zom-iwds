@@ -1,0 +1,12 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+null,,null.wav,,,,,,,,,,,,,,,,,,,
+
+#Weapon sounds
+
+#wunderwaffe
+weap_wunderwaffe_fire,,weapons/wunderwaffe/wunderwaffe_fire.wav,0.66,0.72,wpnai,0.98,1.08,35,8400,weapon,,,,0.7,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,weapon2
+weap_wunderwaffe_plr,,weapons/wunderwaffe/wunderwaffe_fire.wav,0.82,0.89,wpnplyr,0.88,0.98,500000,,local,,,,0.85,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,,,,,0.2
+
+weap_wunderwaffe_rld,,weapons/wunderwaffe/wunderwaffe_rld.wav,0.83,1,wpnplyr,,,7,500,music,,,,,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,end_of_autoclip,
+weap_wunderwaffe_npc,,weapons/wunderwaffe/wunderwaffe_rld.wav,0.83,1,wpnai,,,7,500,auto,,,,,!toujane !elalamein !eldaba !decoytrenches !decoytown !moscow !demolition !tankhunt !trainyard !cityhall !downtown_assault !downtown_sniper !toujane_ride !matmata !libya !88ridge !beltot !crossroads !newvillers !breakout,,,,weapon1,
