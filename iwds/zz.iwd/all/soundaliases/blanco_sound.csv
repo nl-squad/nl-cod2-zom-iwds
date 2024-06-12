@@ -50,10 +50,10 @@ nl_drone_end,,,drone/nl_drone_end.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #RCXD
-nl_rcxd_start,,,rcxd/nl_rcxd_start.mp3,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_explosion,,,rcxd/nl_rcxd_explosion.mp3,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_end,,,rcxd/nl_rcxd_end.mp3,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_loop,,,rcxd/nl_rcxd_loop.mp3,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_start,,,rcxd/nl_rcxd_start.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_explosion,,,rcxd/nl_rcxd_explosion.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_end,,,rcxd/nl_rcxd_end.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_loop,,,rcxd/nl_rcxd_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Nuke
 bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,looping
