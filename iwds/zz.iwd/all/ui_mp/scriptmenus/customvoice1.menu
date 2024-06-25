@@ -97,15 +97,15 @@
 			decoration
 		}
 
-		execKey "1" { scriptMenuResponse "1"; close quickresponses }
-		execKey "2" { scriptMenuResponse "2"; close quickresponses }
-		execKey "3" { scriptMenuResponse "3"; close quickresponses }
-		execKey "4" { scriptMenuResponse "4"; close quickresponses }
-		execKey "5" { scriptMenuResponse "5"; close quickresponses }
-		execKey "6" { scriptMenuResponse "6"; close quickresponses }
-		execKey "7" { scriptMenuResponse "7"; close quickresponses }
-		execKey "8" { scriptMenuResponse "8"; close quickresponses }
-		execKey "9" { scriptMenuResponse "9"; close quickresponses }
+		execKey "1" { scriptMenuResponse "1"; close customvoice1 }
+		execKey "2" { scriptMenuResponse "2"; close customvoice1 }
+		execKey "3" { scriptMenuResponse "3"; close customvoice1 }
+		execKey "4" { scriptMenuResponse "4"; close customvoice1 }
+		execKey "5" { scriptMenuResponse "5"; close customvoice1 }
+		execKey "6" { scriptMenuResponse "6"; close customvoice1 }
+		execKey "7" { scriptMenuResponse "7"; close customvoice1 }
+		execKey "8" { scriptMenuResponse "8"; close customvoice1 }
+		execKey "9" { scriptMenuResponse "9"; close customvoice1 }
 
 		itemDef
 		{
