@@ -1,0 +1,12 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+weap_g36c_reload_plr,,weapons/g36c/g36c_reload.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,cweap_clipend,,
+weap_g36c_reload_empty_plr,,weapons/g36c/g36c_reload_empty.wav,1,1,wpnplyr,1,1,1,500,weapon,,,,,,,,cweap_clipend,,
+weap_g36c_reload,,weapons/g36c/g36c_reload.wav,0.4,0.44,wpnai,1,1,1,500,auto,,,,,,,,cweap_clipend,,
+weap_g36c_reload_empty,,weapons/g36c/g36c_reload_empty.wav,0.4,0.44,wpnai,1,1,1,500,auto,,,,,,,,cweap_clipend,,
+
+weap_g36c_fire,1,weapons/g36c/g36c_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
+weap_g36c_fire_plr,,weapons/g36c/g36c_fire_plr.wav,0.44,0.62,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+
+weap_g36c_reload_npc,,weapons/g36c/g36c_reload.wav,0.4,0.44,wpnai,1,1,1,500,auto,,,,,,,,cweap_clipend,,
+weap_g36c_reload_empty_npc,,weapons/g36c/g36c_reload_empty.wav,0.4,0.44,wpnai,1,1,1,500,auto,,,,,,,,cweap_clipend,,
