@@ -6,7 +6,6 @@ Main()
     level.lvl["report"] = 10;
 	level.lvl["aliases"] = 10;
 	level.lvl["hide"] = 20;	
-	level.lvl["myStatsShowPlayersLogin"] = 20;
     level.lvl["ci_all"] = 20;
     level.lvl["settag"] = 20;
     level.lvl["showAdminIcon"] = 20;
@@ -34,6 +33,7 @@ Main()
     level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
     level.lvl["localize"] = 80;
+	level.lvl["myStatsShowPlayersLogin"] = 90;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
     level.lvl["banip"] = 90;
