@@ -6,6 +6,7 @@ Main()
 	blanco\config::addNewPerk(9, "combat", "Immortal", 92, "nl_hud_pe12", "Provides Resistance to the Hunter's own Explosives");
 	blanco\config::addNewPerk(10, "combat", "Overkill", 52, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
 	blanco\config::addNewPerk(12, "combat", "Potato Grater", 12, "nl_hud_pe50", "Allows the Hunter to survive one more Potato hit");
+	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 12, "nl_hud_pe50", "Twoja stara to twoj stary");
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
