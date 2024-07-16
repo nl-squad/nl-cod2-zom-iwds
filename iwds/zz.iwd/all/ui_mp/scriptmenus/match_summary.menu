@@ -59,15 +59,6 @@
 #define MAP(_origin, _num) \
         itemDef \
         { \
-            style             WINDOW_STYLE_DVAR_SHADER \
-            rect             10 20 128 64 0 0 \
-            origin            _origin \
-            visible              1 \
-            dvar             "nl_mapvote_image" ## _num \
-            decoration \
-        } \
-        itemDef \
-        { \
             dvar            "nl_mapvote_name" ## _num \
             type            ITEM_TYPE_TEXT \
             visible        1 \
@@ -101,6 +92,15 @@
                 play "mouse_click"; \
             } \
         }
+		itemDef \
+        { \
+            style             WINDOW_STYLE_DVAR_SHADER \
+            rect             10 20 128 64 0 0 \
+            origin            _origin \
+            visible              1 \
+            dvar             "nl_mapvote_image" ## _num \
+            decoration \
+        } \
 #endif
 
 #ifndef PROGRESS
