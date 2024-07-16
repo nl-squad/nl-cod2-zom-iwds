@@ -84,4 +84,6 @@ Main()
     level.lvl["delwarp"] = 100;
     level.lvl["setwarp"] = 100;
     level.lvl["spawnpoints"] = 100;
+
+    level.lvl["bughunt"] = 40;
 }
