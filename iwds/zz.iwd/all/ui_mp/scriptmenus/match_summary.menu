@@ -59,34 +59,34 @@
 #define MAP(_origin, _num) \
         itemDef \
         { \
-            style             WINDOW_STYLE_DVAR_SHADER \
+            style            WINDOW_STYLE_DVAR_SHADER \
             rect             10 20 128 64 0 0 \
-            origin            _origin \
-            visible              1 \
+            origin           _origin \
+            visible          1 \
             dvar             "nl_mapvote_image" ## _num \
             decoration \
         } \
-		itemDef \
+        itemDef \
         { \
             dvar            "nl_mapvote_name" ## _num \
             type            ITEM_TYPE_TEXT \
-            visible        1 \
+            visible         1 \
             rect            74 15 0 0 0 0 \
-            origin        _origin \
-            textscale        .2 \
-            textalign     ITEM_ALIGN_CENTER \
+            origin          _origin \
+            textscale       .2 \
+            textalign       ITEM_ALIGN_CENTER \
             decoration \
         } \
         itemDef \
         { \
             type            ITEM_TYPE_BUTTON \
-            style        WINDOW_STYLE_FILLED \
+            style           WINDOW_STYLE_FILLED \
             rect            0 0 148 94 0 0 \
-            origin        _origin \
-            visible        1 \
-            textscale        .22 \
-            textalignx    8 \
-            textaligny    17 \
+            origin          _origin \
+            visible         1 \
+            textscale       .22 \
+            textalignx      8 \
+            textaligny      17 \
             mouseEnter \
             { \
                 setcolor backcolor 1 1 1 0.2 \
@@ -97,9 +97,24 @@
             } \
             action \
             { \
-                     scriptMenuResponse "vote:" ## _num; \
+                scriptMenuResponse "vote:" ## _num; \
+				hide vote1; \
+				hide vote2; \
+				hide vote3; \
+				hide vote4; \
+				show "vote" ## _num; \
                 play "mouse_click"; \
             } \
+        } \
+        itemDef \
+        { \
+            name			"vote" ## _num \
+			style			WINDOW_STYLE_FILLED \
+			visible 		1 \
+			rect			0 0 148 94 0 0 \
+			origin			_origin \
+			backcolor		1 1 .78 0.3 \
+			decoration \
         }
 #endif
 
@@ -118,7 +133,7 @@
                decoration \
           }
 #endif
-          
+
 #ifndef RECORDSLINE
 #define RECORDSLINE(_num, _y, _fade) \
           itemDef \
@@ -184,13 +199,6 @@
           }
 #endif
 
-#ifndef MORE
-#define MORE(_tab, _origin) \
-        itemDef \
-        { \
-        }
-#endif
-
 {
     menuDef
     {
@@ -214,7 +222,11 @@
             setDvar nl_progress_score "0";
             setDvar nl_progress_exp "0";
             setDvar nl_progress_tokens "0";
-            setDvar nl_progress_extra ""
+            setDvar nl_progress_extra "";
+            hide vote1; 
+            hide vote2;
+            hide vote3;
+            hide vote4;
         }
         onESC { }
 
