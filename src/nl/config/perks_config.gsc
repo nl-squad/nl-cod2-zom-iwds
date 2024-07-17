@@ -1,9 +1,9 @@
 Main()
 {
 	blanco\config::addNewPerk(12, "combat", "Potato Grater", 12, "nl_hud_pe50", "Allows the Hunter to survive one more Potato hit");
-	blanco\config::addNewPerk(7, "combat", "Equipment", 32, "nl_hud_pe7", "Gives the Weapons Max Ammo and 3 Nades at Spawn");
+	blanco\config::addNewPerk(7, "combat", "Equipment", 32, "nl_hud_pe51", "Gives the Weapons Max Ammo and 3 Nades at Spawn");
 	blanco\config::addNewPerk(10, "combat", "Overkill", 52, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
-	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 72, "nl_hud_pe51", "Provides 10 Grenades at Spawn");
+	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 72, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
 	blanco\config::addNewPerk(8, "combat", "Escape", 92, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
 	blanco\config::addNewPerk(9, "combat", "Immortal", 142, "nl_hud_pe12", "Provides Resistance to the Hunter's own Explosives");
 	blanco\config::addNewPerk(6, "combat", "Hardline", 192, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
@@ -15,7 +15,7 @@ Main()
 	blanco\config::addNewPerk(11, "tactical", "Gambler", 84, "nl_hud_pe52", "Provides Higher Chances for Top Items in the Care Pack & MysteryBox");
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 134, "nl_hud_pe11", "Removes a Star Icon over the Hunter's Head");
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 184, "nl_hud_pe54", "Extends Browning MG, Sentry Gun & Raptor time by 20 percent");
-	blanco\config::addNewPerk(5, "tactical", "Rich", 234, "nl_hud_pe22", "Increases Money for Kills and Assists by 20 percent");
+	blanco\config::addNewPerk(5, "tactical", "Rich", 234, "nl_hud_pe22", "Increases Money for Kills by 20 percent");
 
 }
 
