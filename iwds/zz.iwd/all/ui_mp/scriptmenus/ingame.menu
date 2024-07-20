@@ -843,7 +843,7 @@
 		}
 
 		INGAME_SELECTION("Weapon Menu", ORIGIN_CHOICE1, "changeweapon", "1")
-		INGAME_SELECTION("Purchases", ORIGIN_CHOICE2, "purchases", "2")
+		INGAME_SELECTION("Purchases Menu", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
 		itemDef
