@@ -13,8 +13,8 @@ Main()
 	tips[tips.size] = "To change/activate the current Killstreaks, use ^3< M > ^7buttons";
     tips[tips.size] = "Remember to save your Class after every Loadout change";
 	tips[tips.size] = "An orange hitmarker indicates a spawn-protected enemy";
-	tips[tips.size] = "To get ^3VIP ^7, use ^8nL Tokens ^7or ^5PayPal";
-	tips[tips.size] = "To get ^3Patron ^7, check the ^3#how-to-patron ^7Discord channel";
+	tips[tips.size] = "To get ^3VIP^7, use ^8nL Tokens ^7or ^5PayPal";
+	tips[tips.size] = "To get ^3Patron^7, check the ^3#how-to-patron ^7Discord channel";
     tips[tips.size] = "You can unlock new Weapons with ^8nL Tokens";
 	tips[tips.size] = "You can unlock new Weapons and Skins in the Purchases Menu";
 	tips[tips.size] = "You can buy an ^3EXP booster ^7in the Purchases Menu";
