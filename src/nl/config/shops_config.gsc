@@ -98,7 +98,7 @@ exploding_ballPrice(usageTimes)
 
 napalmPrice(usageTimes)
 {
-    return 1250 + 250 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 rambo_modePrice(usageTimes)

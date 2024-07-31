@@ -20,8 +20,9 @@ Main()
     level.lvl["warn"] = 30;
 	level.lvl["screenshot"] = 40;
     level.lvl["afk"] = 40;
+	level.lvl["afk_all"] = 40;
     level.lvl["kick"] = 40;
-    level.lvl["afk_all"] = 60;
+	level.lvl["bughunt"] = 40;
     level.lvl["spec"] = 60;
 	level.lvl["killhunt"] = 60;	
 	level.lvl["tempban"] = 60;	
@@ -33,20 +34,20 @@ Main()
     level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
     level.lvl["localize"] = 80;
+	level.lvl["settime"] = 80;
+    level.lvl["setroundtime"] = 80;
+	level.lvl["map"] = 80;
 	level.lvl["myStatsShowPlayersLogin"] = 90;
     level.lvl["forcelogout"] = 90;
     level.lvl["wallhack"] = 90;
     level.lvl["banip"] = 90;
-    level.lvl["settime"] = 90;
-    level.lvl["setroundtime"] = 90;
-	level.lvl["map"] = 90;
 	level.lvl["swap"] = 90;
+	level.lvl["teleport"] = 90;
 	level.lvl["permbanip"] = 100;
 	level.lvl["permban"] = 100;
     level.lvl["mute"] = 100;
     level.lvl["unmute"] = 100;
 	level.lvl["forgotpassword"] = 100;  	
-    level.lvl["teleport"] = 100;
     level.lvl["records"] = 100;
 	level.lvl["rotation"] = 100;
 	level.lvl["exec"] = 101;
@@ -69,7 +70,6 @@ Main()
     level.lvl["pos"] = 100;
     level.lvl["spawnpoint"] = 100;
     level.lvl["sp"] = 100;
-    level.lvl["teleport"] = 100;
     level.lvl["trigger"] = 100;
     level.lvl["usage"] = 100;
 	level.lvl["god"] = 100;
@@ -84,6 +84,4 @@ Main()
     level.lvl["delwarp"] = 100;
     level.lvl["setwarp"] = 100;
     level.lvl["spawnpoints"] = 100;
-
-    level.lvl["bughunt"] = 40;
 }
