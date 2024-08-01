@@ -24,7 +24,6 @@ Main()
     level.lvl["kick"] = 40;
 	level.lvl["bughunt"] = 40;
     level.lvl["spec"] = 60;
-	level.lvl["killhunt"] = 60;	
 	level.lvl["tempban"] = 60;	
     level.lvl["bash"] = 60;
     level.lvl["seeSendToSpec"] = 60;
