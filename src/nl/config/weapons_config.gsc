@@ -238,5 +238,6 @@ Configure()
     level.DEFAULT_PISTOL = 61;
     level.DEFAULT_WEAPON = 6;
     level.DEFAULT_ZOMBIE_WEAPON = 81;
-    blanco\extensions\mysterybox::addDrawing("teddy", "teddy", 45, 10, level.mysteryboxTeddyModel, undefined, undefined, (level.mysteryboxTeddyShakeValue / -2.0, 90, 0));
+    level.mysteryboxTeddyChance = 120;
+    level.mysteryboxTeddyChanceGambler = 30;
 }
