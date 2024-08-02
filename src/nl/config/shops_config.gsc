@@ -2,7 +2,7 @@
 #include blanco\utils;
 #include blanco\menus\menus_core;
 
-main()
+Configure()
 {
     hunters = [];
     hunters["1"] = CreateMenuSelection(1, "invisible", "Invisible (^75^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));

@@ -2,7 +2,7 @@
 #include blanco\menus\menus_core;
 #include blanco\menus\menu_voice;
 
-Main()
+Configure()
 {
     precacheMenu("voice_cmd");
 

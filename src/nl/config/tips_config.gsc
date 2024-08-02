@@ -1,6 +1,6 @@
 #include blanco\math;
 
-Main()
+Configure()
 {
     tips = [];
     tips[tips.size] = "You can visit our Website at ^3mynl.pl";

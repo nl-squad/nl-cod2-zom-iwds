@@ -1,4 +1,4 @@
-Main()
+Configure()
 {
 	blanco\config::addNewPerk(12, "combat", "Potato Grater", 12, "nl_hud_pe50", "Allows the Hunter to survive one more Potato hit");
 	blanco\config::addNewPerk(7, "combat", "Equipment", 32, "nl_hud_pe51", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");

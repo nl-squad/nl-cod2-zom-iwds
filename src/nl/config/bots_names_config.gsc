@@ -1,4 +1,4 @@
-Main()
+Configure()
 {
     a = [];
     a[a.size] = "^^22CLI^77.^^22Carlo$";

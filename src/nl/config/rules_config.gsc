@@ -1,6 +1,6 @@
 #include blanco\utils;
 
-Main()
+Configure()
 {
     level.rules = [];
 	blanco\modules\server_rules::addRule("Cheats/Macro = Ban", a("hax", "cheat", "cheats", "hack", "hacks", "wh", "aimbot", "macro", "norecoil", "mombot", "trigger")); 

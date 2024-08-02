@@ -1,4 +1,4 @@
-Main()
+Configure()
 {
     // blanco\config::setZombiesOnRestart(minPlayers, zombiesOnRestart, theLevel);
     // theLevel = level.killstreakEasyLevel, level.killstreakMediumLevel, level.killstreakHardLevel

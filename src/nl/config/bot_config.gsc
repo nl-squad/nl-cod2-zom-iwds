@@ -1,4 +1,4 @@
-Main()
+Configure()
 {
     // Admin menu settings
     level.lvl["ci"] = 10;

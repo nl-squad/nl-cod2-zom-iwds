@@ -1,14 +1,14 @@
 Main()
 {
-    config\bot_config::Main();
-    config\bots_names_config::Main();
-    config\gametype_config::Main();
-    config\killstreak_config::Main();
-    config\perks_config::Main();
-    config\rules_config::Main();
-    config\shops_config::Main();
-    config\tips_config::Main();
-    config\voice_config::Main();
+    config\bot_config::Configure();
+    config\bots_names_config::Configure();
+    config\gametype_config::Configure();
+    config\killstreak_config::Configure();
+    config\perks_config::Configure();
+    config\rules_config::Configure();
+    config\shops_config::Configure();
+    config\tips_config::Configure();
+    config\voice_config::Configure();
     config\weapons_config::Configure();
-    config\zombies_on_restart_config::Main();
+    config\zombies_on_restart_config::Configure();
 }

@@ -1,4 +1,4 @@
-Main()
+Configure()
 {
     // ID, Name, EasyKills, MediumKills, HardKills, Rank, Icon, Desc, Activate, CanUse, ActivateArgs
     key = "M";
