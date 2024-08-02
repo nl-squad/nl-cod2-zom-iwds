@@ -168,7 +168,7 @@ Configure()
 
 
     // Special
-    defineWeapon(30, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL, botsDisable, rotationDisable);
+    defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL, botsDisable, rotationDisable);
     addWeaponPurchase("tesla_mp", 4, 110, 15000, purchaseDisable);
 
     defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
