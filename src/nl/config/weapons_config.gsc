@@ -99,7 +99,6 @@ Configure()
 
     defineWeapon(9, "sig_mp", "SIG", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
     addWeaponPurchase("sig_mp", 2, 105, 3000, purchaseDisable);
-    addWeaponToMysteryBox("sig_mp", "xmodel/worldmodel_sg552", 10, 10);
 
     defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("ak47_mp", 2, 106, 4000);
@@ -142,9 +141,8 @@ Configure()
     addWeaponPurchase("winchester_mp", 3, 107, 3000);
     addWeaponToMysteryBox("winchester_mp", "xmodel/winchester_w", 10, 10);
 
-    defineWeapon(13, "rpk_mp", "RPK", level.TYPE_PRIMARY, level.KIND_HEAVY, botsEnable, rotationDisable);
+    defineWeapon(13, "rpk_mp", "RPK", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
     addWeaponPurchase("rpk_mp", 3, 108, 5000, purchaseDisable);
-    addWeaponToMysteryBox("rpk_mp", "xmodel/weapon_rpk", 10, 10);
 
     defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("saw_mp", 3, 109, 8000);
