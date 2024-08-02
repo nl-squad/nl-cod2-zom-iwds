@@ -231,7 +231,7 @@ Configure()
     defineNonSelectable(123, "minigun_mp", level.KIND_OTHER);
     defineNonSelectable(125, "binoculars_mp", level.KIND_OTHER);
     defineNonSelectable(126, "wunderwaffe_mp", level.KIND_OTHER);
-    addWeaponToMysteryBox("wunderwaffe_mp", 25, 50, "xmodel/weapon_wunderwaffe_dg2");
+    addWeaponToMysteryBox("wunderwaffe_mp", "xmodel/weapon_wunderwaffe_dg2", 25, 50);
 
 
     // Final configuration
