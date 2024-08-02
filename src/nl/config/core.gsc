@@ -9,5 +9,6 @@ Main()
     config\shops_config::Main();
     config\tips_config::Main();
     config\voice_config::Main();
+    config\weapons_config::Configure();
     config\zombies_on_restart_config::Main();
 }
