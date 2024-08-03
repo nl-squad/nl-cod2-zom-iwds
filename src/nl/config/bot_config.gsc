@@ -34,8 +34,8 @@ Configure()
 	
 	level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
+	level.lvl["forcelogout"] = 80;
 	level.lvl["loc"] = 80;
-	level.lvl["localize"] = 80;
 	level.lvl["map"] = 80;
 	level.lvl["say"] = 80;
     level.lvl["saybold"] = 80;
@@ -44,57 +44,47 @@ Configure()
 	level.lvl["setvote"] = 80;
 	
 	level.lvl["banip"] = 90;
-	level.lvl["forcelogout"] = 90;
+	level.lvl["localize"] = 90;
 	level.lvl["myStatsShowPlayersLogin"] = 90;
 	level.lvl["swap"] = 90;
 	level.lvl["teleport"] = 90;
-	level.lvl["wallhack"] = 90;
 
+	level.lvl["checkOtherPlayerExpBooster"] = 100;
 	level.lvl["forgotpassword"] = 100;
 	level.lvl["mute"] = 100;
 	level.lvl["permbanip"] = 100;
 	level.lvl["permban"] = 100;
 	level.lvl["records"] = 100;
 	level.lvl["rotation"] = 100;
+	level.lvl["unban"] = 100;
     level.lvl["unmute"] = 100;
 	level.lvl["usage"] = 100;
-	
-	level.lvl["checkOtherPlayerExpBooster"] = 101;
+
 	level.lvl["checkOtherPlayerPatron"] = 101;
     level.lvl["checkOtherPlayerVip"] = 101;
+	level.lvl["event"] = 101;
 	level.lvl["exec"] = 101;
 	level.lvl["forcechangepassword"] = 101;
 	level.lvl["grant"] = 101;
 	level.lvl["makepatron"] = 101;
 	level.lvl["nltokens"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
-    level.lvl["unban"] = 101;
 
     // Dev commands
 	
 	level.lvl["dropweapon"] = 40;
+	level.lvl["lp"] = 40;
+	level.lvl["pos"] = 40;
+	level.lvl["sp"] = 40;
+	level.lvl["warp"] = 40;
 	
 	level.lvl["bots"] = 60;
-	level.lvl["camp"] = 60;
 	level.lvl["delwarp"] = 60;
-	level.lvl["edge"] = 60;
-	level.lvl["node"] = 60;
+	level.lvl["god"] = 60;
+	level.lvl["money"] = 60;
     level.lvl["setwarp"] = 60;
-	level.lvl["spawnpoint"] = 60;
-    level.lvl["spawnpoints"] = 60;
-	level.lvl["warp"] = 60;
 	level.lvl["waypoint"] = 60;
 
-	level.lvl["god"] = 80;
-	level.lvl["money"] = 80;
-	level.lvl["wh"] = 80;
-	
-	level.lvl["blockade"] = 100;
-	level.lvl["event"] = 100;
-	level.lvl["lp"] = 100;
 	level.lvl["mysterybox"] = 100;
-	level.lvl["pos"] = 100;
-	level.lvl["sp"] = 100;
 	level.lvl["surprise"] = 100;
-	level.lvl["trigger"] = 100;
 }
