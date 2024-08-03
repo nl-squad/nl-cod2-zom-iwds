@@ -58,6 +58,9 @@ Configure()
     // Dev commands
 	level.lvl["dropweapon"] = 40;
 	level.lvl["bots"] = 60;
+	level.lvl["node"] = 60;
+	level.lvl["edge"] = 60;
+	level.lvl["camp"] = 60;
 	level.lvl["money"] = 80;
 	level.lvl["god"] = 80;
 	level.lvl["wh"] = 90;
