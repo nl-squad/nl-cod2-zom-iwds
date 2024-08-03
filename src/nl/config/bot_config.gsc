@@ -56,13 +56,14 @@ Configure()
     level.lvl["forcechangepassword"] = 101;
 
     // Dev commands
-	level.lvl["bots"] = 80;
-	level.lvl["dropweapon"] = 80;
+	level.lvl["dropweapon"] = 40;
+	level.lvl["bots"] = 60;
+	level.lvl["money"] = 80;
+	level.lvl["god"] = 80;
 	level.lvl["wh"] = 90;
     level.lvl["checkOtherPlayerPatron"] = 90;
     level.lvl["checkOtherPlayerVip"] = 90;
     level.lvl["checkOtherPlayerExpBooster"] = 90;
-    level.lvl["money"] = 100;
     level.lvl["blockade"] = 100;
     level.lvl["lp"] = 100;
     level.lvl["mysterybox"] = 100;
@@ -71,16 +72,15 @@ Configure()
     level.lvl["sp"] = 100;
     level.lvl["trigger"] = 100;
     level.lvl["usage"] = 100;
-	level.lvl["god"] = 100;
     level.lvl["event"] = 100;
 	level.lvl["surprise"] = 100;
 	level.lvl["nltokens"] = 101;
     level.lvl["makepatron"] = 101;
 
     // Extensions commands
-    level.lvl["setvote"] = 80;
-	level.lvl["warp"] = 80;
-    level.lvl["delwarp"] = 100;
-    level.lvl["setwarp"] = 100;
-    level.lvl["spawnpoints"] = 100;
+	level.lvl["warp"] = 40;
+    level.lvl["delwarp"] = 60;
+    level.lvl["setwarp"] = 60;
+    level.lvl["spawnpoints"] = 60;
+	level.lvl["setvote"] = 80;
 }
