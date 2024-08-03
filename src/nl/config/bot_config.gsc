@@ -3,6 +3,7 @@ Configure()
     // Admin menu settings
 	level.lvl["aliases"] = 10;
     level.lvl["ci"] = 10;
+	level.lvl["liar"] = 10;
 	level.lvl["namecheat"] = 10;
     level.lvl["report"] = 10;
 	
