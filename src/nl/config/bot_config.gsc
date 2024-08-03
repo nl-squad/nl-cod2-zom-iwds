@@ -57,6 +57,7 @@ Configure()
 
     // Dev commands
 	level.lvl["dropweapon"] = 40;
+	level.lvl["waypoint"] = 60;
 	level.lvl["bots"] = 60;
 	level.lvl["node"] = 60;
 	level.lvl["edge"] = 60;
