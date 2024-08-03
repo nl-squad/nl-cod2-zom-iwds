@@ -103,7 +103,7 @@ napalmPrice(usageTimes)
 
 rambo_modePrice(usageTimes)
 {
-    return 1250 + 250 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 empPrice(usageTimes)
