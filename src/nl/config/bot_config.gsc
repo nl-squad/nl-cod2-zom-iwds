@@ -28,6 +28,7 @@ Configure()
 	level.lvl["screenshot"] = 40;
 	
     level.lvl["bash"] = 60;
+	level.lvl["map"] = 60;
     level.lvl["seeSendToSpec"] = 60;
 	level.lvl["setroundtime"] = 60;
 	level.lvl["settime"] = 60;
@@ -37,7 +38,6 @@ Configure()
 	level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
 	level.lvl["forcelogout"] = 80;
-	level.lvl["map"] = 80;
 	level.lvl["say"] = 80;
     level.lvl["saybold"] = 80;
 	level.lvl["setvote"] = 80;
