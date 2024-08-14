@@ -865,5 +865,16 @@
 			}
 		}
 		execKey "i" { close weapon_american; open ingame; }
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
 	}
 }
