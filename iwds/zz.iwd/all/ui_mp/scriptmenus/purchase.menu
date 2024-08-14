@@ -343,7 +343,8 @@
 		PURCHASE("tab6", ORIGIN_KR9, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "5 000")
 		PURCHASE("tab6", ORIGIN_KR10, "secret_service", "nl_char_secret_service", "nl_kutka", "US Secret Service", "13", "5 000")
 		PURCHASE("tab6", ORIGIN_KR11, "joker", "nl_char_joker", "nl_kutka", "Joker", "18", "7 500")
-		PURCHASE("tab6", ORIGIN_KR12, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
+		PURCHASE("tab6", ORIGIN_KR12, "niko", "nl_char_niko", "nl_kutka", "Niko Bellic", "20", "7 500")
+		PURCHASE("tab6", ORIGIN_KR13, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
 		
 
 
