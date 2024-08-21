@@ -18,7 +18,7 @@
 #define ORIGIN_KR4				517 325
 #define ORIGIN_PE1				227 325
 #define ORIGIN_PE2				287 325
-#define ORIGIN_INFO				400 415
+#define ORIGIN_INFO				370 443
 
 #define ORIGIN_EXIT				20 415
 {
@@ -865,5 +865,16 @@
 			}
 		}
 		execKey "i" { close weapon_american; open ingame; }
+
+		itemDef
+		{
+			dvar			"nl_kr_info"
+			type			ITEM_TYPE_TEXT
+			visible			1
+			rect			0 0 0 0
+			origin			ORIGIN_INFO
+			textscale		.25
+			decoration
+		}
 	}
 }
