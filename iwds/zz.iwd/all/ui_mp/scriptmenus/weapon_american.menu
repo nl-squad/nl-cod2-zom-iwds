@@ -18,7 +18,7 @@
 #define ORIGIN_KR4				517 325
 #define ORIGIN_PE1				227 325
 #define ORIGIN_PE2				287 325
-#define ORIGIN_INFO				400 443
+#define ORIGIN_INFO				370 443
 
 #define ORIGIN_EXIT				20 415
 {
