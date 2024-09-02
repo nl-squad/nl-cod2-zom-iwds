@@ -33,6 +33,8 @@ Configure()
 	level.lvl["setroundtime"] = 60;
 	level.lvl["settime"] = 60;
 	level.lvl["spec"] = 60;
+	level.lvl["swap"] = 60;
+	level.lvl["swapNewPlayerToHunterMaxRank"] = 16;
 	level.lvl["tempban"] = 60;
 	
 	level.lvl["ban"] = 80;
@@ -45,9 +47,6 @@ Configure()
 	level.lvl["banip"] = 90;
 	level.lvl["localize"] = 90;
 	level.lvl["myStatsShowPlayersLogin"] = 90;
-	level.lvl["swap"] = 90;
-	level.lvl["swapNewPlayerToHunterMaxRank"] = 16;
-	level.lvl["swapAnyRank"] = 100;
 	level.lvl["teleport"] = 90;
 
 	level.lvl["checkOtherPlayerExpBooster"] = 100;
@@ -57,6 +56,7 @@ Configure()
 	level.lvl["permban"] = 100;
 	level.lvl["records"] = 100;
 	level.lvl["rotation"] = 100;
+	level.lvl["swapAnyRank"] = 100;
 	level.lvl["unban"] = 100;
     level.lvl["unmute"] = 100;
 	level.lvl["usage"] = 100;
