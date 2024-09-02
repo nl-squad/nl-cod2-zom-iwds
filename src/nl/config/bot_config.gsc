@@ -46,6 +46,8 @@ Configure()
 	level.lvl["localize"] = 90;
 	level.lvl["myStatsShowPlayersLogin"] = 90;
 	level.lvl["swap"] = 90;
+	level.lvl["swapMaxRankAllowed"] = 16;
+	level.lvl["swapAnyRank"] = 100;
 	level.lvl["teleport"] = 90;
 
 	level.lvl["checkOtherPlayerExpBooster"] = 100;
