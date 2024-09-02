@@ -17,7 +17,5 @@ jobs:
       sha: ${{ github.event.inputs.sha }}
       pack: true
       set_passwords: true
-      rcon_password: ${{ secrets.PUBLIC_RCON_PASSWORD }}
-      g_password: ${{ secrets.PUBLIC_G_PASSWORD }}
       cfg_file: server.zom.cfg
     secrets: inherit

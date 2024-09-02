@@ -20,7 +20,5 @@ jobs:
       sha: ${{ github.event.inputs.sha }}
       pack: true
       set_passwords: true
-      rcon_password: ${{ secrets.DEV_RCON_PASSWORD }}
-      g_password: ${{ secrets.DEV_G_PASSWORD }}
       cfg_file: server.dev.cfg
     secrets: inherit
