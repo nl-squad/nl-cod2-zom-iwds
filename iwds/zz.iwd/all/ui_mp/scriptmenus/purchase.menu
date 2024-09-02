@@ -323,8 +323,6 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "8 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR6, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "8 000")
 
-		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "15 000")
-		
 		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(1d)", "1", "600")
 		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 000")
 		PURCHASE("tab5", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "6 500")
@@ -345,7 +343,6 @@
 		PURCHASE("tab6", ORIGIN_KR11, "joker", "nl_char_joker", "nl_kutka", "Joker", "18", "7 500")
 		PURCHASE("tab6", ORIGIN_KR12, "niko", "nl_char_niko", "nl_kutka", "Niko Bellic", "20", "7 500")
 		PURCHASE("tab6", ORIGIN_KR13, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
-		
 
 
 		itemDef

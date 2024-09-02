@@ -167,7 +167,7 @@ Configure()
 
     // Special
     defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL, botsDisable, rotationDisable);
-    addWeaponPurchase("tesla_mp", 4, 110, 15000, purchaseDisable);
+    addWeaponToMysteryBox("tesla_mp", "xmodel/superweap_worldmodel", 10, 20);
 
     defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
     addWeaponToMysteryBox("raygun_mp", "xmodel/van_raygun", 10, 20);
