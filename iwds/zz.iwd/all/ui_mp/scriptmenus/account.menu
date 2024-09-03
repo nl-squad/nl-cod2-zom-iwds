@@ -143,7 +143,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_login";
+				scriptMenuResponse "login";
 			}
 		}
 
@@ -197,7 +197,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_login";
+				scriptMenuResponse "login";
 			}
 		}
 		itemDef
@@ -296,7 +296,7 @@
 			action
 			{
 				play "mouse_click";
-				scriptmenuresponse "make_login"
+				scriptmenuresponse "login"
 			}
 		}
 		itemDef
@@ -388,7 +388,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_register";
+				scriptMenuResponse "register";
 			}
 		}
 		
@@ -440,7 +440,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_register";
+				scriptMenuResponse "register";
 			}
 		}
 		itemDef
@@ -525,7 +525,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_register";
+				scriptMenuResponse "register";
 			}
 		}
 		itemDef
@@ -593,7 +593,7 @@
 			accept
 			{
 				play "mouse_click";
-				scriptMenuResponse "make_register";
+				scriptMenuResponse "register";
 			}
 		}
 		itemDef
@@ -638,7 +638,7 @@
 			action
 			{
 				play "mouse_click";
-				scriptmenuresponse "make_register";
+				scriptmenuresponse "register";
 			}
 		}
 		
