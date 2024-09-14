@@ -173,21 +173,21 @@
 			decoration
 		}
 
-		KS("6", ORIGIN_KR1, "Big Grenade ^9(^512^9)", "nl_hud_kr8")
-		KS("2", ORIGIN_KR2, "Panzerschreck ^9(^58^9)", "nl_hud_kr1")
-		KS("3", ORIGIN_KR3, "Care Pack ^9(^510^9)", "nl_hud_kr2")
-		KS("1", ORIGIN_KR4, "Artillery ^9(^55^9)", "nl_hud_kr3")
-		KS("7", ORIGIN_KR5, "Browning MG ^9(^518^9)", "nl_hud_kr5")
-		KS("9", ORIGIN_KR6, "Thunderclaps ^9(^530^9)", "hud_thunder")
-		KS("5", ORIGIN_KR7, "Napalm ^9(^515^9)", "nl_hud_kr7")
-		KS("8", ORIGIN_KR8, "Ammo Pack ^9(^525^9)", "nl_hud_kr4")
-		KS("4", ORIGIN_KR9, "Mortar ^9(^520^9)", "nl_hud_kr13")
-		KS("11", ORIGIN_KR10, "Rambo Mode ^9(^535^9)", "nl_hud_kr15")
-		KS("12", ORIGIN_KR11, "Sentry Gun ^9(^540^9)", "nl_hud_kr14")
-		KS("14", ORIGIN_KR12, "Rocket ^9(^575^9)", "nl_hud_kr17")
+		KS("6", ORIGIN_KR1, "Big Grenade ^9(^54^9)", "nl_hud_kr8")
+		KS("2", ORIGIN_KR2, "Panzerschreck ^9(^55^9)", "nl_hud_kr1")
+		KS("3", ORIGIN_KR3, "Care Pack ^9(^58^9)", "nl_hud_kr2")
+		KS("1", ORIGIN_KR4, "Artillery ^9(^510^9)", "nl_hud_kr3")
+		KS("7", ORIGIN_KR5, "Browning MG ^9(^512^9)", "nl_hud_kr5")
+		KS("9", ORIGIN_KR6, "Thunderclaps ^9(^515^9)", "hud_thunder")
+		KS("5", ORIGIN_KR7, "Napalm ^9(^518^9)", "nl_hud_kr7")
+		KS("8", ORIGIN_KR8, "Ammo Pack ^9(^520^9)", "nl_hud_kr4")
+		KS("4", ORIGIN_KR9, "Mortar ^9(^525^9)", "nl_hud_kr13")
+		KS("11", ORIGIN_KR10, "Rambo Mode ^9(^530^9)", "nl_hud_kr15")
+		KS("12", ORIGIN_KR11, "Sentry Gun ^9(^535^9)", "nl_hud_kr14")
+		KS("14", ORIGIN_KR12, "Rocket ^9(^540^9)", "nl_hud_kr17")
 		KS("10", ORIGIN_KR13, "Launcher ^9(^550^9)", "nl_hud_kr11")
-		KS("13", ORIGIN_KR14, "Raptor ^9(^5100^9)", "nl_hud_kr21")
-		KS("15", ORIGIN_KR15, "Nuke ^9(^5200^9)", "nl_hud_kr18")
+		KS("13", ORIGIN_KR14, "Raptor ^9(^575^9)", "nl_hud_kr21")
+		KS("15", ORIGIN_KR15, "Nuke ^9(^5150^9)", "nl_hud_kr18")
 
 		/// RESET ///
 		itemDef
