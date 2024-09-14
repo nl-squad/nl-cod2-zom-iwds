@@ -2,8 +2,8 @@ Configure()
 {
     // ID, Name, EasyKills, MediumKills, HardKills, Rank, Icon, Desc, Activate, CanUse, ActivateArgs
     key = "M";
-	blanco\config::addNewKillstreak(6, "Big Grenade", 3, 4, 5, 1, "nl_hud_kr8", "Grenade with high Damage Radius", "Big ^9Grenade ^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
-	blanco\config::addNewKillstreak(2, "Panzerschreck", 4, 5, 8, 1, "nl_hud_kr1", "Shoulder Launcher with 4 Missiles", "^7Panzerschreck ^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GivePanzerschreck);
+	blanco\config::addNewKillstreak(2, "Panzerschreck", 3, 4, 5, 1, "nl_hud_kr1", "Shoulder Launcher with 4 Missiles", "^7Panzerschreck ^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GivePanzerschreck);
+	blanco\config::addNewKillstreak(6, "Big Grenade", 4, 5, 8, 1, "nl_hud_kr8", "Grenade with high Damage Radius", "Big ^9Grenade ^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
 	blanco\config::addNewKillstreak(3, "Care Pack", 5, 8, 10, 1, "nl_hud_kr2", "Care Package with a Random Killstreak", "^7Care ^9Pack ^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\care_package::Activate);
     blanco\config::addNewKillstreak(1, "Artillery", 8, 10, 12, 3, "nl_hud_kr3", "Artillery Barrage called by using Binoculars", "Arti^9llery ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\artillery::Activate, blanco\actions\artillery::CanUse);
 	blanco\config::addNewKillstreak(7, "Browning MG", 10, 12, 15, 5, "nl_hud_kr5", "Plantable Machine Gun for 40 seconds", "Brow^9ning ^7MG ^4: ^9Plant ^4[^7" + key + "^4]", blanco\actions\browning::Activate, blanco\actions\browning::CanUse, blanco\utils::a(40));

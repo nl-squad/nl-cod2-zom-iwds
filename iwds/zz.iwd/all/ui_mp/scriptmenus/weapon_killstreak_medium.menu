@@ -173,8 +173,8 @@
 			decoration
 		}
 
-		KS("6", ORIGIN_KR1, "Big Grenade ^9(^54^9)", "nl_hud_kr8")
-		KS("2", ORIGIN_KR2, "Panzerschreck ^9(^55^9)", "nl_hud_kr1")
+		KS("2", ORIGIN_KR1, "Panzerschreck ^9(^54^9)", "nl_hud_kr1")
+		KS("6", ORIGIN_KR2, "Big Grenade ^9(^55^9)", "nl_hud_kr8")
 		KS("3", ORIGIN_KR3, "Care Pack ^9(^58^9)", "nl_hud_kr2")
 		KS("1", ORIGIN_KR4, "Artillery ^9(^510^9)", "nl_hud_kr3")
 		KS("7", ORIGIN_KR5, "Browning MG ^9(^512^9)", "nl_hud_kr5")
