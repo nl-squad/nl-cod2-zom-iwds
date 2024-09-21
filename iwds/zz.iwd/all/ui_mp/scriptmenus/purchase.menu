@@ -343,6 +343,7 @@
 		PURCHASE("tab6", ORIGIN_KR11, "joker", "nl_char_joker", "nl_kutka", "Joker", "18", "7 500")
 		PURCHASE("tab6", ORIGIN_KR12, "niko", "nl_char_niko", "nl_kutka", "Niko Bellic", "20", "7 500")
 		PURCHASE("tab6", ORIGIN_KR13, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
+		PURCHASE("tab6", ORIGIN_KR14, "masterchiefg", "nl_char_masterchief", "nl_kutka", "Masterchief", "21", "10 000")
 
 
 		itemDef
