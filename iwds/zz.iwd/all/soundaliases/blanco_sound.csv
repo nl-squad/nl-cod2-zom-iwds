@@ -56,7 +56,7 @@ nl_rcxd_end,,,rcxd/nl_rcxd_end.wav,1,1,,,,1000000,,auto,streamed,
 nl_rcxd_loop,,,rcxd/nl_rcxd_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Nuke
-bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,looping
+bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,nonlooping
 nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
 
 #Care pack
@@ -96,7 +96,9 @@ box_byebye,,,nazi/box_byebye.mp3,1,1,,,,1000000,,auto,streamed,
 box_drawing,,,nazi/box_drawing.mp3,1,1,,,,1000000,,auto,streamed,
 
 #Sentry
-sentry,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
+sentry_fire,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
+sentry_delivery,,,sentry/sentry_delivery.mp3,1,1,,,,1000000,,auto,streamed
+sentry_deploy,,,sentry/sentry_deploy.mp3,1,1,,,,1000000,,auto,streamed
 
 #Freeze
 freeze,,,freeze/freeze.mp3,1,1,,,,1000000,,auto,streamed,
@@ -113,11 +115,11 @@ rankup,,,misc/rankup.mp3,1,1,,,,1000000,,auto,streamed,
 nexus_suicide,,,misc/nexus_suicide.mp3,1,1,,,,1000000,,auto,streamed,
 nl_surprise_pick_up,,,misc/nl_surprise_pick_up.mp3,1,1,,,,1000000,,auto,streamed,
 nltokens_add,,,misc/nltokens_add.mp3,1,1,,,,1000000,,auto,streamed,
+nl_stage,,,misc/nl_stage.mp3,1,1,,,,1000000,,auto,streamed,
 vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
 rakieta,,,misc/rakieta.mp3,1,1,,,,1000000,,auto,streamed,
 spawnprotect,,,misc/spawnprotect.mp3,1,1,,,,1000000,,auto,streamed,
 napalm,,,misc/NAPALM.mp3,1,1,,,,1000000,,auto,streamed,
-nl_stage,,,misc/nl_stage.mp3,1,1,,,,1000000,,auto,streamed,
 
 ##END OF FILE,,,,,,,,,,,,,,,,,,,
 
