@@ -100,12 +100,12 @@ Configure()
     a[a.size] = "^3Tit^4an UK.";
     a[a.size] = "^^00Oska^^66...";
     a[a.size] = "^6Sentino";
-    a[a.size] = "hyp3r (AFK)";
-    a[a.size] = "^1|XperiA|^7prototype^3,";
+    a[a.size] = "ManDown (AFK)";
+    a[a.size] = "^1|XperiA|^7prototype";
 	a[a.size] = "^5Baranek ^9Bozzy";
 	a[a.size] = "^9Bozzyanek^8Potasu";
     a[a.size] = "^2Wonsz^3zieczny";
-    a[a.size] = "^3Wexel ^7inBlancO;
+    a[a.size] = "^3Wexel ^7inBlancO";
     a[a.size] = "^9Collect Your Avard";
     a[a.size] = "^7Pavel ^4Jumper";
     a[a.size] = "^7<^3I Wanna Be Rich^7>";
