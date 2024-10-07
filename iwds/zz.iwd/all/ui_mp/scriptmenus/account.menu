@@ -25,12 +25,13 @@
 		{
 			scriptMenuResponse "close";
 		}
-		onOpen 
+		onOpen
 		{
 			exec "setu ui_login _";
 			exec "setu ui_email _";
 			exec "setu ui_pass _";
 			exec "setu ui_repass _";
+			exec "set g_scriptMainMenu account";
 			exec "writeconfig temp.cfg; exec account; vstr nlautologin_launch; exec temp; openscriptmenu account nlautologin_finished; clear;";
 			show loginGroup;
 			hide registerGroup;
