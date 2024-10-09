@@ -66,7 +66,7 @@ Configure()
     addWeaponToMysteryBox("g3_mp", "xmodel/g3_w", 10, 10);
 
     defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponPurchase("barrett_mp", 1, 103, 5000);
+    addWeaponPurchase("barrett_mp", 1, 103, 4000);
     addWeaponToMysteryBox("barrett_mp", "xmodel/m82_w", 10, 10);
 
     defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
@@ -78,7 +78,7 @@ Configure()
     addWeaponToMysteryBox("intervention_mp", "xmodel/weapon_intervention", 10, 10);
 
     defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("m14ebr_mp", 1, 117, 7000);
+    addWeaponPurchase("m14ebr_mp", 1, 117, 7500);
     addWeaponToMysteryBox("m14ebr_mp", "xmodel/weapon_law_m14ebr", 10, 10);
 
     defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
@@ -145,7 +145,7 @@ Configure()
     addWeaponPurchase("rpk_mp", 3, 108, 5000, purchaseDisable);
 
     defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("saw_mp", 3, 109, 8000);
+    addWeaponPurchase("saw_mp", 3, 109, 7500);
     addWeaponToMysteryBox("saw_mp", "xmodel/weapon_m249", 10, 10);
 
     defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -153,7 +153,7 @@ Configure()
     addWeaponToMysteryBox("bren_mp", "xmodel/weapon_bren", 10, 20);
 
     defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("aa12_mp", 3, 112, 8000);
+    addWeaponPurchase("aa12_mp", 3, 112, 7500);
     addWeaponToMysteryBox("aa12_mp", "xmodel/weapon_aa_12", 10, 10);
 
     defineWeapon(21, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -161,7 +161,7 @@ Configure()
     addWeaponToMysteryBox("m60_mp", "xmodel/weapon_m60", 10, 10);
 
     defineWeapon(28, "breda_m30_mp", "Breda M30", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("breda_m30_mp", 3, 120, 7000);
+    addWeaponPurchase("breda_m30_mp", 3, 120, 6000);
     addWeaponToMysteryBox("breda_m30_mp", "xmodel/weapon_breda_m30", 10, 10);
 
 
