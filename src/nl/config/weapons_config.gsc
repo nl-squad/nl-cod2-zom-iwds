@@ -236,6 +236,6 @@ Configure()
     level.DEFAULT_PISTOL = 61;
     level.DEFAULT_WEAPON = 6;
     level.DEFAULT_ZOMBIE_WEAPON = 81;
-    level.mysteryboxTeddyChance = 120;
-    level.mysteryboxTeddyChanceGambler = 30;
+    level.mysteryboxTeddyChance = 85;
+    level.mysteryboxTeddyChanceGambler = 20;
 }
