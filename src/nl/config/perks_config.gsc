@@ -7,6 +7,7 @@ Configure()
 	blanco\config::addNewPerk(8, "combat", "Escape", 92, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
 	blanco\config::addNewPerk(9, "combat", "Immortal", 132, "nl_hud_pe12", "Provides Resistance to the Hunter's own Explosives");
 	blanco\config::addNewPerk(6, "combat", "Hardline", 172, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
+	blanco\config::addNewPerk(20, "combat", "Random Combat", 292, "nl_hud_pe20", "Selects a random Combat Perk");
 	
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
@@ -16,6 +17,7 @@ Configure()
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Removes a Star Icon over the Hunter's Head");
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Extends Browning MG, Sentry Gun & Raptor time by 50 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 204, "nl_hud_pe22", "Increases Money for Kills with Weapons by 40 percent");
+	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 284, "nl_hud_pe19", "Selects a random Tactical Perk");
 
 }
 
