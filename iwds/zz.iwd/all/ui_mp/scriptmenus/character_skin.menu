@@ -183,7 +183,7 @@
 		SKINTAB("1", ORIGIN_TITLE1, "WW2 Soldiers")
 		SKINTAB("2", ORIGIN_TITLE2, "nL Old-School")
 		SKINTAB("3", ORIGIN_TITLE3, "CoD Universe")
-		SKINTAB("4", ORIGIN_TITLE3, "Specials")
+		SKINTAB("4", ORIGIN_TITLE4, "Specials")
         
         SKIN("1", ORIGIN_CHOICE2, "", "American Ranger ^9- Normandy", "6", "nl_char_american_normandy")
         SKIN("1", ORIGIN_CHOICE3, "^9Rank 10 ^4|", "German Soldat ^9- Normandy", "3", "nl_char_german_normandy")
