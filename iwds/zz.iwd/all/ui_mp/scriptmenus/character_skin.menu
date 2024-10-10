@@ -212,7 +212,7 @@
 		SKIN("4", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens ^4|", "Joker", "18", "nl_char_joker")
 		SKIN("4", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens ^4|", "Niko Bellic", "20", "nl_char_niko")
         SKIN("4", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
-		SKIN("4", ORIGIN_CHOICE9, "^810 000 ^9nL Tokens ^4|", "Masterchief", "21", "nl_char_masterchief")
+		SKIN("4", ORIGIN_CHOICE9, "^810 000 ^9nL Tokens ^4|", "Master Chief", "21", "nl_char_masterchief")
 
 
         /// EXIT ///
