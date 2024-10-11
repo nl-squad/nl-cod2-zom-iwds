@@ -75,7 +75,7 @@ weap_g3_fire_plr,,weapons/g3/g3_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,
 
 #grenadelauncher
 weap_grenadelauncher_fire,,weapons/grenadelauncher/grenadelauncher_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_grenadelauncher_fire_plr,,weapons/grenadelauncher/grenadelauncher_fire_plr.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+weap_grenadelauncher_fire_plr,,weapons/grenadelauncher/grenadelauncher_fire_plr.wav,0.44,0.62,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #MINIGUN
 weap_minigun_fire,1,weapons/minigun/minigun_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
