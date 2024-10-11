@@ -107,6 +107,9 @@ freeze_free,,,freeze/freeze_free.mp3,1,1,,,,1000000,,auto,streamed,
 #Rambo
 rambo,,,rambo/rambo.mp3,1,1,,,,1000000,,auto,streamed,
 
+#Rage
+nl_rage,,,rage/nl_rage.wav,1,1,,,,1000000,,auto,streamed,
+
 #Misc
 roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
 jetstart,,,misc/jetstart.mp3,1,1,,,,1000000,,auto,streamed,
