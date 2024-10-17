@@ -103,7 +103,7 @@ napalmPrice(usageTimes)
 
 rageModePrice(usageTimes)
 {
-    return 9999999 + 200 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 empPrice(usageTimes)
