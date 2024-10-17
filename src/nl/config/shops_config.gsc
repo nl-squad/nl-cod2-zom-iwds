@@ -26,7 +26,7 @@ Configure()
     vips["1"] = CreateMenuSelection(1, "bash_king", "Bash King Bat ^3Free", 0, blanco\menus\shops::giveBashKing);
     vips["2"] = CreateMenuSelection(2, "exploding_ball", "Exploding Ball", ::exploding_ballPrice, blanco\actions\exploding_ball::Activate);
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", ::napalmPrice, blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
-    vips["4"] = CreateMenuSelection(4, "rambo_mode", "Rage (^730^9s)", ::rambo_modePrice, blanco\actions\rambo::Activate, blanco\actions\rambo::CanUse, undefined, a(30));
+    vips["4"] = CreateMenuSelection(4, "rage", "Rage (^730^9s)", ::rageModePrice, blanco\actions\rage::Activate, blanco\actions\rage::CanUse, undefined, a(30));
     vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);
 }
@@ -101,9 +101,9 @@ napalmPrice(usageTimes)
     return 1000 + 200 * usageTimes;
 }
 
-rambo_modePrice(usageTimes)
+rageModePrice(usageTimes)
 {
-    return 1000 + 200 * usageTimes;
+    return 9999999 + 200 * usageTimes;
 }
 
 empPrice(usageTimes)
