@@ -8,7 +8,7 @@ Particle
 
 	count				250
 
-	life				5000
+	life				2000
 
 	origin				20 0 0
 
