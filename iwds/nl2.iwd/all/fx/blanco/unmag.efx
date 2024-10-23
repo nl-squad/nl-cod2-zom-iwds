@@ -6,9 +6,9 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				250
+	count				200
 
-	life				2000
+	life				200 300
 
 	origin				20 0 0
 
