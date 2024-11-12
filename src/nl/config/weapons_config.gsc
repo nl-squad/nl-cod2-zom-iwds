@@ -63,7 +63,7 @@ Configure()
 
     defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase("g3_mp", 1, 102, 2000);
-    addWeaponToMysteryBox("g3_mp", "xmodel/g3_w", 10, 10);
+    addWeaponToMysteryBox("g3_mp", "xmodel/weapon_g3", 10, 10);
 
     defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponPurchase("barrett_mp", 1, 103, 4000);
