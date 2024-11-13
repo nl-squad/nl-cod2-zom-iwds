@@ -1,0 +1,32 @@
+Decal
+{	
+		
+	life				900000
+
+	rotation			-360 360
+
+	rgb
+	{
+		start			0.2235 0.06667 0.06667
+		end				0.2902 0 0
+		flags			linear
+	}
+	size
+	{
+		start			 8 5			
+	}
+	
+	alpha
+	{
+		start			1
+		end			0
+	}
+
+	shaders
+	[
+		gfx_mud_splash01
+		gfx_mud_splash02
+	]
+	
+}
+

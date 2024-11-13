@@ -163,6 +163,10 @@ Configure()
     defineWeapon(28, "breda_m30_mp", "Breda M30", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("breda_m30_mp", 3, 120, 6000);
     addWeaponToMysteryBox("breda_m30_mp", "xmodel/weapon_breda_m30", 10, 10);
+	
+	defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase("model_1887_mp", 3, 123, 6500);
+    addWeaponToMysteryBox("model_1887_mp", "xmodel/weapon_model1887", 10, 10);
 
 
     // Special
