@@ -324,6 +324,7 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "6 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR6, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "7 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "7 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR8, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "8 000")
 
 		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(1d)", "1", "600")
 		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 000")
