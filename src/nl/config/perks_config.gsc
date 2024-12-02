@@ -18,6 +18,6 @@ Configure()
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Extends Browning MG, Sentry Gun & Raptor time by 50 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 204, "nl_hud_pe22", "Increases Money for Kills with Weapons by 40 percent");
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 284, "nl_hud_pe19", "Selects a random Tactical Perk");
-
+	blanco\config::addNewPerk(21, "tactical", "Sprint", 284, "nl_hud_pe21", "**Benny Hill music playing**");
 }
 
