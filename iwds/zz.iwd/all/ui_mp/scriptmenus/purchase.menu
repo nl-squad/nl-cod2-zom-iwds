@@ -343,10 +343,11 @@
 		
 		PURCHASE("tab7", ORIGIN_KR1, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "3 500")
 		PURCHASE("tab7", ORIGIN_KR2, "tobby", "nl_char_tobby", "nl_kutka", "UNSC Marine", "17", "3 500")
-		PURCHASE("tab7", ORIGIN_KR3, "joker", "nl_char_joker", "nl_kutka", "Joker", "18", "7 500")
-		PURCHASE("tab7", ORIGIN_KR4, "niko", "nl_char_niko", "nl_kutka", "Niko Bellic", "20", "7 500")
-		PURCHASE("tab7", ORIGIN_KR5, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
-		PURCHASE("tab7", ORIGIN_KR6, "masterchief", "nl_char_masterchief", "nl_kutka", "Master Chief", "21", "15 000")
+		PURCHASE("tab7", ORIGIN_KR3, "daryl", "nl_char_daryl", "nl_kutka", "Daryl Dixon", "22", "7 500")
+		PURCHASE("tab7", ORIGIN_KR4, "joker", "nl_char_joker", "nl_kutka", "Joker", "18", "7 500")
+		PURCHASE("tab7", ORIGIN_KR5, "niko", "nl_char_niko", "nl_kutka", "Niko Bellic", "20", "7 500")
+		PURCHASE("tab7", ORIGIN_KR6, "vodka", "nl_char_vodka", "nl_kutka", "Vodka", "14", "7 500")
+		PURCHASE("tab7", ORIGIN_KR7, "masterchief", "nl_char_masterchief", "nl_kutka", "Master Chief", "21", "15 000")
 
 
 		itemDef
