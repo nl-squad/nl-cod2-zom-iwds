@@ -17,7 +17,7 @@ Configure()
 	blanco\config::addNewPerk(8, "combat", "Escape", 92, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
 	blanco\config::addNewPerk(9, "combat", "Immortal", 132, "nl_hud_pe12", "Provides Resistance to the Hunter's own Explosives");
 	blanco\config::addNewPerk(6, "combat", "Hardline", 172, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
-	blanco\config::addNewPerk(16, "combat", "Sprint", 212, "nl_hud_pe9", "Allows to Sprint for 4 seconds (12 seconds Cooldown)");
+	blanco\config::addNewPerk(16, "combat", "Sprint", 212, "nl_hud_pe55", "Allows to Sprint for 4 seconds (12 seconds Cooldown)");
 	blanco\config::addNewPerk(20, "combat", "Random Combat", 292, "nl_hud_pe20", "Selects a random Combat Perk");
 }
 
