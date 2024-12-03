@@ -180,6 +180,7 @@
 		COMBAT(ORIGIN_KR5, "8", "Escape", "nl_hud_pe9")
 		COMBAT(ORIGIN_KR6, "9", "Immortal", "nl_hud_pe12")
 		COMBAT(ORIGIN_KR7, "6", "Hardline", "nl_hud_pe10")
+		COMBAT(ORIGIN_KR8, "16", "Sprint", "nl_hud_pe7")
 		COMBAT(ORIGIN_KR10, "20", "Random Combat", "nl_hud_pe20")
 		
 

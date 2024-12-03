@@ -326,12 +326,12 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "7 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR8, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "8 000")
 
-		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(1d)", "1", "600")
-		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 000")
-		PURCHASE("tab5", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "6 500")
-		PURCHASE("tab5", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(1d)", "6", "450")
-		PURCHASE("tab5", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "1 600")
-		PURCHASE("tab5", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "5 500")
+		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(1d)", "1", "650")
+		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
+		PURCHASE("tab5", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
+		PURCHASE("tab5", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(1d)", "6", "500")
+		PURCHASE("tab5", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "2 000")
+		PURCHASE("tab5", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "6 000")
 		
 		PURCHASE("tab6", ORIGIN_KR1, "nl_yellow", "nl_char_nl_yellow", "nl_kutka", "American Ranger ^3Yellow", "31", "2 500")
 		PURCHASE("tab6", ORIGIN_KR2, "nl_blue", "nl_char_nl_blue", "nl_kutka", "British Mate ^4Blue", "32", "5 000")
