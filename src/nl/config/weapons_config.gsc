@@ -58,14 +58,14 @@ Configure()
     defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponRank("m1garand_mp", 10);
 
-    defineWeapon(3, "springfield_mp", "Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable, rotationDisable);
+    defineWeapon(3, "springfield_mp", "Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponPurchase("springfield_mp", 1, 101, 1000, purchaseDisable);
 
     defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase("g3_mp", 1, 102, 2000);
     addWeaponToMysteryBox("g3_mp", "xmodel/weapon_g3", 10, 10);
 
-    defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase("barrett_mp", 1, 103, 4000);
     addWeaponToMysteryBox("barrett_mp", "xmodel/m82_w", 10, 10);
 
@@ -93,11 +93,11 @@ Configure()
     defineWeapon(7, "mp44_mp", "MP44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("mp44_mp", 15);
 
-    defineWeapon(8, "ak74_mp", "AK-74u", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    defineWeapon(8, "ak74_mp", "AK-74u", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
     addWeaponPurchase("ak74_mp", 2, 104, 2000);
     addWeaponToMysteryBox("ak74_mp", "xmodel/ak74_w", 10, 10);
 
-    defineWeapon(9, "sig_mp", "SIG", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
+    defineWeapon(9, "sig_mp", "SIG", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("sig_mp", 2, 105, 3000, purchaseDisable);
 
     defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -124,7 +124,7 @@ Configure()
     addWeaponPurchase("m4_mp", 2, 118, 10000);
     addWeaponToMysteryBox("m4_mp", "xmodel/m4_w", 10, 10);
 
-    defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
     addWeaponPurchase("famas_mp", 2, 121, 10000);
     addWeaponToMysteryBox("famas_mp", "xmodel/weapon_famas", 10, 10);
 
@@ -141,7 +141,7 @@ Configure()
     addWeaponPurchase("winchester_mp", 3, 107, 3000);
     addWeaponToMysteryBox("winchester_mp", "xmodel/winchester_w", 10, 10);
 
-    defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
+    defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("rpk_mp", 3, 108, 5000, purchaseDisable);
 
     defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -156,7 +156,7 @@ Configure()
     addWeaponPurchase("aa12_mp", 3, 112, 7500);
     addWeaponToMysteryBox("aa12_mp", "xmodel/weapon_aa_12", 10, 10);
 
-    defineWeapon(21, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    defineWeapon(21, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
     addWeaponPurchase("m60_mp", 3, 114, 6000);
     addWeaponToMysteryBox("m60_mp", "xmodel/weapon_m60", 10, 10);
 
