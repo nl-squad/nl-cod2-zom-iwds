@@ -320,7 +320,7 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR1, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "3 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR2, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR3, "m60_mp", "nl_img_m60", "nl_kutka", "M60", "114", "6 000")
-		PURCHASEWIDE("tab3", ORIGIN_KR4, "breda_m30_mp", "nl_img_breda_m30", "nl_kutka", "Breda M30", "120", "6 000")
+		PURCHASEWIDE("tab3", ORIGIN_KR4, "breda_m30_mp", "nl_img_breda_m30", "nl_kutka", "Breda M30", "120", "6 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "6 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR6, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "7 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "7 500")
