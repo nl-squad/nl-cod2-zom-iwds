@@ -11,5 +11,4 @@ bren
 kar98k
 m1carbine
 enfield
-laststand
 sprint
