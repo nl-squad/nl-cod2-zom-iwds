@@ -3,8 +3,8 @@ Configure()
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
 	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays a Distance, in meters, to the nearest Zombie");
-	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 64, "nl_hud_pe53", "Doubles Money for Assists");
-	blanco\config::addNewPerk(11, "tactical", "Gambler", 84, "nl_hud_pe52", "Provides Higher Chances for Top Items in the Care Pack & MysteryBox");
+	blanco\config::addNewPerk(11, "tactical", "Gambler", 64, "nl_hud_pe52", "Provides Higher Chances for Top Items in the Care Pack & MysteryBox");
+	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 84, "nl_hud_pe53", "Doubles Money for Assists");
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Removes a Star Icon overhead and Adds +2 seconds of Invi");
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Extends Browning MG, Sentry Gun & Raptor time by 50 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 204, "nl_hud_pe22", "Increases Money for Kills with Weapons by 40 percent");
