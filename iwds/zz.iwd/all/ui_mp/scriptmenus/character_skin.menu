@@ -207,14 +207,13 @@
 		SKIN("3", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens ^4|", "US Secret Service", "13", "nl_char_secret_service")
 
         SKIN("4", ORIGIN_CHOICE2, "^8Patron ^4|", "Terminator", "12", "nl_char_terminator")   
-		SKIN("4", ORIGIN_CHOICE3, "^3Christmas Event ^4|", "Santa Claus", "23", "nl_char_santa") 
-		SKIN("4", ORIGIN_CHOICE5, "^83 500 ^9nL Tokens ^4|", "Neo", "16", "nl_char_neo")
-        SKIN("4", ORIGIN_CHOICE6, "^83 500 ^9nL Tokens ^4|", "UNSC Marine", "17", "nl_char_tobby")     
-		SKIN("4", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens ^4|", "Daryl Dixon", "22", "nl_char_daryl")		
-		SKIN("4", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens ^4|", "Joker", "18", "nl_char_joker")
-		SKIN("4", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens ^4|", "Niko Bellic", "20", "nl_char_niko")
-        SKIN("4", ORIGIN_CHOICE10, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
-		SKIN("4", ORIGIN_CHOICE11, "^815 000 ^9nL Tokens ^4|", "Master Chief", "21", "nl_char_masterchief")
+		SKIN("4", ORIGIN_CHOICE4, "^83 500 ^9nL Tokens ^4|", "Neo", "16", "nl_char_neo")
+        SKIN("4", ORIGIN_CHOICE5, "^83 500 ^9nL Tokens ^4|", "UNSC Marine", "17", "nl_char_tobby")     
+		SKIN("4", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens ^4|", "Daryl Dixon", "22", "nl_char_daryl")		
+		SKIN("4", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens ^4|", "Joker", "18", "nl_char_joker")
+		SKIN("4", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens ^4|", "Niko Bellic", "20", "nl_char_niko")
+        SKIN("4", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
+		SKIN("4", ORIGIN_CHOICE10, "^815 000 ^9nL Tokens ^4|", "Master Chief", "21", "nl_char_masterchief")
 
 
         /// EXIT ///
