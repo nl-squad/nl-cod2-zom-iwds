@@ -3,7 +3,8 @@ name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max
 #Doublebarrel
 weap_doublebarrel_fire_pump,,weapons/doublebarrel/wpn_dbshot_nl.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
 weap_doublebarrel_fire_pump_plr,,weapons/doublebarrel/wpn_dbshot_nl_plr.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
-weap_aa12_reload_plr,,weapons/doublebarrel/wpn_dbreloadt_nl.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+weap_doublebarrel_reload_plr,,weapons/doublebarrel/wpn_dbreloadt_nl.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 weap_doublebarrel_reload,,weapons/doublebarrel/wpn_dbreloadt_nl.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 weap_doublebarrel_reload_empty_plr,,weapons/doublebarrel/wpn_dbreloadt_nl.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 weap_doublebarrel_reload_empty,,weapons/doublebarrel/wpn_dbreloadt_nl.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+,
