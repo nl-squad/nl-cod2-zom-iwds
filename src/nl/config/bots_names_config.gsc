@@ -104,12 +104,12 @@ Configure()
     a[a.size] = "ManDown (AFK)";
     a[a.size] = "^1|XperiA|^7prototype";
 	a[a.size] = "^5Baranek.Bozzy";
-	a[a.size] = "@$$.";
+	a[a.size] = "This is the Reebok or the Nike";
     a[a.size] = "^3#^2Wonsz^3zieczny";
     a[a.size] = "#weXel.inblanco#";
     a[a.size] = "^^22John Cena^^33##";
     a[a.size] = "^^55Pawel ^^77Jumper";
-    a[a.size] = "^7<^3I Wanna Be Rich^7>";
+    a[a.size] = "^5Elon^12Musk^3**";
     a[a.size] = "^6hyp3r^7Wentylacja";    
 	a[a.size] = "^^99Tak dziala Black^7!";
     a[a.size] = "^^55Goddess^^66RoXy";
