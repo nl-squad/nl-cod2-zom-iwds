@@ -91,7 +91,7 @@ Configure()
     addWeaponRank("mp40_mp", 1);
 
     defineWeapon(7, "mp44_mp", "MP44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank("mp44_mp", 15);
+    addWeaponRank("mp44_mp", 25);
 
     defineWeapon(8, "ak74_mp", "AK-74u", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
     addWeaponPurchase("ak74_mp", 2, 104, 2500, purchaseDisable);
@@ -201,10 +201,10 @@ Configure()
     addWeaponRank("hbat_mp", 1);
 
     defineWeapon(84, "axe_mp", "Axe", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("axe_mp", 25);
+    addWeaponRank("axe_mp", 50);
 
     defineWeapon(83, "knife_mp", "Knife", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("knife_mp", 50);
+    addWeaponRank("knife_mp", 75);
 
 
     // Grenades

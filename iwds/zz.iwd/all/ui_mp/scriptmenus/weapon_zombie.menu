@@ -167,8 +167,8 @@
 
         ZWP(ORIGIN_CHOICE2, "", "Vertical Bat", "bat", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.7^9s \n^7Bash ^9Delay^7: ^70.1^9s \n \n^7Bash ^9Range^7: ^7100 \n \n^7Movement ^9Speed^7: ^7110")
         ZWP(ORIGIN_CHOICE3, "", "Horizontal Bat", "hbat", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.7^9s \n^7Bash ^9Delay^7: ^70.1^9s \n \n^7Bash ^9Range^7: ^7100 \n \n^7Movement ^9Speed^7: ^7110")
-        ZWP(ORIGIN_CHOICE4, "^9Rank 25 ^4|", "Axe", "axe", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.8^9s \n^7Bash ^9Delay^7: ^70.15^9s \n \n^7Bash ^9Range^7: ^7110 \n \n^7Movement ^9Speed^7: ^7105")
-        ZWP(ORIGIN_CHOICE5, "^9Rank 50 ^4|", "Knife", "knife", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.6^9s \n^7Bash ^9Delay^7: ^70.09^9s \n \n^7Bash ^9Range^7: ^785 \n \n^7Movement ^9Speed^7: ^7115")
+        ZWP(ORIGIN_CHOICE4, "^9Rank 50 ^4|", "Axe", "axe", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.8^9s \n^7Bash ^9Delay^7: ^70.15^9s \n \n^7Bash ^9Range^7: ^7110 \n \n^7Movement ^9Speed^7: ^7105")
+        ZWP(ORIGIN_CHOICE5, "^9Rank 75 ^4|", "Knife", "knife", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: ^70.6^9s \n^7Bash ^9Delay^7: ^70.08^9s \n \n^7Bash ^9Range^7: ^790 \n \n^7Movement ^9Speed^7: ^7115")
 
         /// EXIT ///
         itemDef
