@@ -323,8 +323,8 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR4, "breda_m30_mp", "nl_img_breda_m30", "nl_kutka", "Breda M30", "120", "6 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "6 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR6, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "7 500")
-		PURCHASEWIDE("tab3", ORIGIN_KR7, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "7 500")
-		PURCHASEWIDE("tab3", ORIGIN_KR8, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "7 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR7, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "7 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR8, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "9 500")
 		
 		
 		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "14 500")

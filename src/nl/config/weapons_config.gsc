@@ -169,7 +169,7 @@ Configure()
     addWeaponToMysteryBox("model_1887_mp", "xmodel/weapon_model1887", 10, 10);
 	
 	defineWeapon(32, "doublebarrel_mp", "Double Barrel", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("doublebarrel_mp", 3, 124, 7500);
+    addWeaponPurchase("doublebarrel_mp", 3, 124, 9500);
     addWeaponToMysteryBox("doublebarrel_mp", "xmodel/weapon_doublebarrel", 10, 10);
 
 
