@@ -271,7 +271,7 @@
 		{
 			origin			ORIGIN_CHANGES
 			type			ITEM_TYPE_TEXT
-			text			"^9Check the updates on Discord ^3#news ^9channel."
+			text			"^9Check the Updates on Discord ^3#news ^9channel."
 			textscale		.22
 			textalign		ITEM_ALIGN_CENTER
 			visible			1
@@ -497,7 +497,7 @@
                rect			     5 0 100 20
                origin			ORIGIN_EVER_SCOREBOARD
                background		"nl_zakladka"
-               text			     "Best scores"
+               text			     "TOP 10 scores"
                textscale		     .23
                textalign 	     ITEM_ALIGN_CENTER
                textalignx	     50
@@ -842,8 +842,8 @@
 			decoration
 		}
 
-		INGAME_SELECTION("Weapons Menu", ORIGIN_CHOICE1, "changeweapon", "1")
-		INGAME_SELECTION("Purchases Menu", ORIGIN_CHOICE2, "purchases", "2")
+		INGAME_SELECTION("Loadout Menu", ORIGIN_CHOICE1, "changeweapon", "1")
+		INGAME_SELECTION("nL Shop", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
 		itemDef
@@ -871,7 +871,7 @@
 
 		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
 		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
-		INGAME_SELECTION_HOVERSUBMENU("About", ORIGIN_CHOICE7, "about", "6")
+		INGAME_SELECTION_HOVERSUBMENU("Server Info", ORIGIN_CHOICE7, "about", "6")
 		
 		INGAME_SELECTION_OPENSUBMENU("Leave Game", ORIGIN_CHOICE9, "leavegame", "7")
 		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
