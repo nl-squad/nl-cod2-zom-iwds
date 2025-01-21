@@ -497,7 +497,7 @@
                rect			     5 0 100 20
                origin			ORIGIN_EVER_SCOREBOARD
                background		"nl_zakladka"
-               text			     "TOP 10 scores"
+               text			     "TOP 10 Scores"
                textscale		     .23
                textalign 	     ITEM_ALIGN_CENTER
                textalignx	     50
@@ -843,7 +843,7 @@
 		}
 
 		INGAME_SELECTION("Loadout Menu", ORIGIN_CHOICE1, "changeweapon", "1")
-		INGAME_SELECTION("nL Shop", ORIGIN_CHOICE2, "purchases", "2")
+		INGAME_SELECTION("Shop", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
 		itemDef
