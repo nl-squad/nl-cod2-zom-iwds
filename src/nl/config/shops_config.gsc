@@ -8,9 +8,10 @@ Configure()
     hunters["1"] = CreateMenuSelection(1, "invisible", "Invisibility (^75^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));
     hunters["2"] = CreateMenuSelection(2, "mine", "Mine", ::minePrice, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
     hunters["3"] = CreateMenuSelection(3, "scissors", "Throwing Scissors x10", ::scissorsPrice, blanco\menus\shops::giveScissors, undefined);
-    hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
-    hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
-    hunters["6"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
+    hunters["4"] = CreateMenuSelection(8, "elixir", "Elixir", ::elixirPrice, blanco\actions\elixir::Activate);
+    hunters["5"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
+    hunters["6"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
+    hunters["7"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
     zombies = [];
@@ -57,6 +58,11 @@ freeze_zombiesPrice(usageTimes)
 }
 
 c4Price(usageTimes)
+{
+    return 1500 + 300 * usageTimes;
+}
+
+elixirPrice(usageTimes)
 {
     return 1500 + 300 * usageTimes;
 }
