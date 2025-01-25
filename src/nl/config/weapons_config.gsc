@@ -213,7 +213,7 @@ Configure()
     defineGrenade(93, "big_nade_mp");
     defineGrenade(94, "dummy_mp");
     defineGrenade(95, "zom_nade_mp");
-
+    defineGrenade(96, "body_mp");
 
     // Shop
     defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
