@@ -1,5 +1,14 @@
 Configure()
-{	
+{
+    level.PERK_assistHandEarningMultiplier = 2;
+    level.PERK_ghostInvisibleExtensionSeconds = 2;
+    level.PERK_assaultExtensionDurationMultiplier = 1.5;
+    level.PERK_richEarningMultiplier = 1.3;
+    level.PERK_potatoGraterDamageMultiplier = 3 / 4;
+    level.PERK_grenadeSupplyGrenadesCount = 10;
+    level.PERK_spawnProtectionEscapeDuration = 10;
+    level.PERK_hardlineNeededKillsMultiplier = 0.9;
+
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
 	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays nearest Zombie Distance + Jumpy Spawn detection");
