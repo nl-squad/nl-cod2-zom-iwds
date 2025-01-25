@@ -1,8 +1,8 @@
 Configure()
 {
     level.PERK_assistHandEarningMultiplier = 2;
-    level.PERK_ghostInvisibleExtensionSeconds = 2;
-    level.PERK_assaultExtensionDurationMultiplier = 1.5;
+    level.PERK_ghostInvisibleExtensionSeconds = 3;
+    level.PERK_assaultExtensionDurationMultiplier = 2;
     level.PERK_richEarningMultiplier = 1.3;
     level.PERK_potatoGraterDamageMultiplier = 3 / 4;
     level.PERK_grenadeSupplyGrenadesCount = 10;
@@ -14,8 +14,8 @@ Configure()
 	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays nearest Zombie Distance + Jumpy Spawn detection");
 	blanco\config::addNewPerk(11, "tactical", "Gambler", 64, "nl_hud_pe52", "Provides Higher Chances for Top Items in the Care Pack & MysteryBox");
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 84, "nl_hud_pe53", "Doubles Money for Assists");
-	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Adds 2 seconds of Invi + Removes Star overhead");
-	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Extends Browning MG, Sentry Gun & Raptor time by 50 percent");
+	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Adds 3 seconds of Invi + Removes Star overhead");
+	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Doubles Browning MG, Sentry Gun & Raptor time + Adds one Raptor's rocket");
 	blanco\config::addNewPerk(6, "tactical", "Hardline", 204, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 244, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 284, "nl_hud_pe19", "Selects a random Tactical Perk");
