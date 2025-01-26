@@ -65,7 +65,7 @@ c4Price(usageTimes)
 
 elixirPrice(usageTimes)
 {
-    return 69 + 0 * usageTimes;
+    return 500 + 0 * usageTimes;
 }
 
 potatoesPrice(usageTimes)
@@ -80,7 +80,7 @@ hologramsPrice(usageTimes)
 
 toxicMeatPrice(usageTimes)
 {
-    return 2137 + 0 * usageTimes;
+    return 375 + 0 * usageTimes;
 }
 
 anti_invi_grenadesPrice(usageTimes)
