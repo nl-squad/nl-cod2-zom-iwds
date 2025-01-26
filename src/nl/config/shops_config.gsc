@@ -8,7 +8,7 @@ Configure()
     hunters["1"] = CreateMenuSelection(1, "invisible", "Invisibility (^75^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));
     hunters["2"] = CreateMenuSelection(2, "mine", "Mine", ::minePrice, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
     hunters["3"] = CreateMenuSelection(3, "scissors", "Throwing Scissors x10", ::scissorsPrice, blanco\menus\shops::giveScissors, undefined);
-    hunters["4"] = CreateMenuSelection(8, "elixir", "Elixir", ::elixirPrice, blanco\actions\elixir::Activate);
+    hunters["4"] = CreateMenuSelection(8, "elixir", "Vital Elixir", ::elixirPrice, blanco\actions\elixir::Activate);
     hunters["5"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
     hunters["6"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
     hunters["7"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
@@ -17,7 +17,7 @@ Configure()
     zombies = [];
     zombies["1"] = CreateMenuSelection(1, "potatoes", "Potatoes x3", ::potatoesPrice, blanco\menus\shops::givePotatoes, undefined, undefined, a(3));
     zombies["2"] = CreateMenuSelection(2, "holograms", "Holograms", ::hologramsPrice, blanco\actions\holograms::Activate, blanco\actions\holograms::CanUse);
-    zombies["3"] = CreateMenuSelection(9, "toxic_meat", "Toxic meat", ::toxicMeatPrice, blanco\menus\shops::giveToxicMeat, undefined, undefined, a(100));
+    zombies["3"] = CreateMenuSelection(9, "toxic_meat", "Toxic Meat", ::toxicMeatPrice, blanco\menus\shops::giveToxicMeat, undefined, undefined, a(1));
     zombies["4"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", ::anti_invi_grenadesPrice, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
     zombies["5"] = CreateMenuSelection(4, "speed", "Speed", ::speedPrice, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
     zombies["6"] = CreateMenuSelection(5, "high_jump", "High Jump", ::high_jumpPrice, blanco\actions\super_jump::Activate);
@@ -48,6 +48,11 @@ scissorsPrice(usageTimes)
     return 500 + 100 * usageTimes;
 }
 
+elixirPrice(usageTimes)
+{
+    return 500 + 100 * usageTimes;
+}
+
 bubblePrice(usageTimes)
 {
     return 750 + 150 * usageTimes;
@@ -63,11 +68,6 @@ c4Price(usageTimes)
     return 1500 + 300 * usageTimes;
 }
 
-elixirPrice(usageTimes)
-{
-    return 500 + 0 * usageTimes;
-}
-
 potatoesPrice(usageTimes)
 {
     return 250 + 50 * usageTimes;
@@ -80,7 +80,7 @@ hologramsPrice(usageTimes)
 
 toxicMeatPrice(usageTimes)
 {
-    return 375 + 0 * usageTimes;
+    return 375 + 75 * usageTimes;
 }
 
 anti_invi_grenadesPrice(usageTimes)
