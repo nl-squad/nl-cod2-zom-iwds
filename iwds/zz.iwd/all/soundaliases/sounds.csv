@@ -1,16 +1,14 @@
 name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
-#New commands,,,,,,,,,,,,,,,,,,,,,,,
-cheer,6,Voiceovers/MP/cheer.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ge_thanks1,6,Voiceovers/MP/ge_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ge_thanks2,6,Voiceovers/MP/ge_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ru_thanks1,6,Voiceovers/MP/ru_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-ru_thanks2,6,Voiceovers/MP/ru_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-uk_thanks1,6,Voiceovers/MP/uk_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-uk_thanks2,6,Voiceovers/MP/uk_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-us_thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
-us_thanks2,6,Voiceovers/MP/us_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+#Ambience,,,,,,,,,,,,,,,
+ambient_france_nl,,ambient/amb_france01b.mp3,0.73,,,,,,,local,streamed,,looping,,
+ambient_africa_nl,,ambient/amb_africa01b.mp3,0.67,,,,,,,local,streamed,,looping,,
+ambient_russia_nl,,ambient/amb_russia01b.mp3,0.56,,,,,,,local,streamed,,looping,,
 
+#ChallengeCompleted
+challenge_completed,,misc/challenge.wav,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
+
+#EndSongs
 nl_end_1,,nazi/nazi_end.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
 nl_end_2,,misc/end1.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
 nl_end_3,,misc/end2.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,,
@@ -52,15 +50,30 @@ nl_end_38,,misc/end38.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_39,,misc/end39.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_40,,misc/end40.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 
-
-hook,,misc/hook.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+#Headshot
 nl_headshot,,misc/nl_headshot.mp3,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
-wanted,,misc/wanted.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+
+#Hook
+hook,,misc/hook.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+
+#ThanksCommands,,,,,,,,,,,,,,,,,,,,,,,
+cheer,6,Voiceovers/MP/cheer.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ge_thanks1,6,Voiceovers/MP/ge_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ge_thanks2,6,Voiceovers/MP/ge_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ru_thanks1,6,Voiceovers/MP/ru_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+ru_thanks2,6,Voiceovers/MP/ru_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+uk_thanks1,6,Voiceovers/MP/uk_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+uk_thanks2,6,Voiceovers/MP/uk_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+us_thanks1,6,Voiceovers/MP/us_thanks1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+us_thanks2,6,Voiceovers/MP/us_thanks2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
+
+#Thunderclaps
 thunderclaps,,amb_elements/elm_thunder_y04.wav,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 
-#Challenge completed
-challenge_completed,,misc/challenge.wav,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
+#Wanted
+wanted,,misc/wanted.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 
+#ZombiesAttack
 attack1,,zombies/zom_attack1.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 attack2,,zombies/zom_attack2.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 attack3,,zombies/zom_attack3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
@@ -74,7 +87,3 @@ growl3,1,zombies/zom_growl3.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,
 growl4,1,zombies/zom_growl4.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 growl5,1,zombies/zom_growl5.mp3,1.00,1.00,,,,7,3000,voice,streamed,0,nonlooping,,all_mp
 
-#Ambience,,,,,,,,,,,,,,,
-ambient_france_nl,,ambient/amb_france01b.mp3,0.73,,,,,,,local,streamed,,looping,,
-ambient_africa_nl,,ambient/amb_africa01b.mp3,0.67,,,,,,,local,streamed,,looping,,
-ambient_russia_nl,,ambient/amb_russia01b.mp3,0.56,,,,,,,local,streamed,,looping,,

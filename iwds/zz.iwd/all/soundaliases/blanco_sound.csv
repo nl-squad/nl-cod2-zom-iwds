@@ -33,15 +33,17 @@
 
 name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
+#Artillery
+artillery_used,,,artillery/artillery_used.mp3,1,1,,,,1000000,,auto,streamed
+artillery_ready,,,artillery/artillery_ready.mp3,1,1,,,,1000000,,auto,streamed
+
 #Bubble
 bubble_create,,,bubble/bubble_create.wav,1,1,,,,1000000,,auto,streamed,
 bubble_hit,,,bubble/bubble_hit.wav,1,1,,,,1000000,,auto,streamed,
 bubble_loop,,,bubble/bubble_loop.wav,1,1,,,,1000000,,auto,streamed,
 
-#Raptor
-raptor_boom,,,raptor/nl_raptor_boom.wav,1,1,,,,1000000,,auto,streamed,
-raptor_fire,,,raptor/nl_raptor_fire.wav,1,1,,,,1000000,,auto,streamed,
-raptor_rocket,,,raptor/nl_raptor_rocket.wav,1,1,,,,1000000,,auto,streamed,
+#Care pack
+carepack_used,,,carepackage/carepack_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Drone
 nl_drone_start,,,drone/nl_drone_start.wav,1,1,,,,1000000,,auto,streamed,
@@ -49,40 +51,52 @@ nl_drone_fire,,,drone/nl_drone_fire.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_end,,,drone/nl_drone_end.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 
-#RCXD
-nl_rcxd_start,,,rcxd/nl_rcxd_start.wav,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_explosion,,,rcxd/nl_rcxd_explosion.wav,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_end,,,rcxd/nl_rcxd_end.wav,1,1,,,,1000000,,auto,streamed,
-nl_rcxd_loop,,,rcxd/nl_rcxd_loop.wav,1,1,,,,1000000,,auto,streamed,
-
-#Nuke
-bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,nonlooping
-nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
-
-#Care pack
-carepack_used,,,carepackage/carepack_used.mp3,1,1,,,,1000000,,auto,streamed
-
-#Artillery
-artillery_used,,,artillery/artillery_used.mp3,1,1,,,,1000000,,auto,streamed
-artillery_ready,,,artillery/artillery_ready.mp3,1,1,,,,1000000,,auto,streamed
-
-#Mortar
-mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
-
-#Napalm
-napalm_ready,,,napalm/napalm_ready.mp3,1,1,,,,1000000,,auto,streamed
-napalm_used,,,napalm/napalm_used.mp3,1,1,,,,1000000,,auto,streamed
-
 #Emp
 emp_used,,,emp/emp_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Exploding Ball
 explodingball_explode,,,misc/explodingball_explode.mp3,1,1,,,,1000000,,auto,streamed,
 
+#Freeze
+freeze,,,freeze/freeze.mp3,1,1,,,,1000000,,auto,streamed,
+freeze_free,,,freeze/freeze_free.mp3,1,1,,,,1000000,,auto,streamed,
+
+#Misc
+jetstart,,,misc/jetstart.mp3,1,1,,,,1000000,,auto,streamed,
+killstreak,,,misc/killstreak.wav,1,1,,,,1000000,,auto,streamed,
+napalm,,,misc/NAPALM.mp3,1,1,,,,1000000,,auto,streamed,
+nexus_suicide,,,misc/nexus_suicide.mp3,1,1,,,,1000000,,auto,streamed,
+nl_elixir,,,misc/nl_elixir.mp3,1,1,,,,1000000,,auto,streamed,
+nl_explodebullet,,,misc/nl_explodebullet.wav,1,1,,,,1000000,,auto,streamed,
+nl_stage,,,misc/nl_stage.mp3,1,1,,,,1000000,,auto,streamed,
+nl_surprise_pick_up,,,misc/nl_surprise_pick_up.mp3,1,1,,,,1000000,,auto,streamed,
+nltokens_add,,,misc/nltokens_add.mp3,1,1,,,,1000000,,auto,streamed,
+nl_toxic_meat_damage,,,misc/nl_toxic_meat_damage.mp3,1,1,,,,1000000,,auto,streamed,
+rakieta,,,misc/rakieta.mp3,1,1,,,,1000000,,auto,streamed,
+rankup,,,misc/rankup.mp3,1,1,,,,1000000,,auto,streamed,
+roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
+spawnprotect,,,misc/spawnprotect.mp3,1,1,,,,1000000,,auto,streamed,
+vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
+
+#Mortar
+mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
+
+#Mystery box
+box_byebye,,,nazi/box_byebye.mp3,1,1,,,,1000000,,auto,streamed,
+box_drawing,,,nazi/box_drawing.mp3,1,1,,,,1000000,,auto,streamed,
+
+#Napalm
+napalm_ready,,,napalm/napalm_ready.mp3,1,1,,,,1000000,,auto,streamed
+napalm_used,,,napalm/napalm_used.mp3,1,1,,,,1000000,,auto,streamed
+
 #Nazi sounds
 nazi_start,,,nazi/nazi_start.mp3,1,1,,,,1000000,,auto,streamed,
 nazi_end,,,nazi/nazi_end.mp3,1,1,,,,1000000,,auto,streamed,
 nazi_zombie,,,nazi/nazi_zombie.mp3,1,1,,,,1000000,,auto,streamed,
+
+#Nuke
+bip,,,nuke/bip.mp3,1,1,,,,1000000,,auto,streamed,nonlooping
+nuke_presskey,,,nuke/nuke_presskey.mp3,1,1,,,,1000000,,auto,streamed
 
 #Powerups
 powerup_dp,,,nazi/powerup_dp.mp3,1,1,,,,1000000,,auto,streamed,
@@ -91,39 +105,27 @@ powerup_maxammo,,,nazi/powerup_maxammo.mp3,1,1,,,,1000000,,auto,streamed,
 powerup_nuke,,,nazi/powerup_nuke.mp3,1,1,,,,1000000,,auto,streamed,
 powerup_deathmachine,,,nazi/powerup_deathmachine.mp3,1,1,,,,1000000,,auto,streamed,
 
-#Mystery box
-box_byebye,,,nazi/box_byebye.mp3,1,1,,,,1000000,,auto,streamed,
-box_drawing,,,nazi/box_drawing.mp3,1,1,,,,1000000,,auto,streamed,
+#Rage
+nl_rage,,,rage/nl_rage.wav,1,1,,,,1000000,,auto,streamed,
+
+#Rambo
+rambo,,,rambo/rambo.mp3,1,1,,,,1000000,,auto,streamed,
+
+#Raptor
+raptor_boom,,,raptor/nl_raptor_boom.wav,1,1,,,,1000000,,auto,streamed,
+raptor_fire,,,raptor/nl_raptor_fire.wav,1,1,,,,1000000,,auto,streamed,
+raptor_rocket,,,raptor/nl_raptor_rocket.wav,1,1,,,,1000000,,auto,streamed,
+
+#RCXD
+nl_rcxd_start,,,rcxd/nl_rcxd_start.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_explosion,,,rcxd/nl_rcxd_explosion.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_end,,,rcxd/nl_rcxd_end.wav,1,1,,,,1000000,,auto,streamed,
+nl_rcxd_loop,,,rcxd/nl_rcxd_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Sentry
 sentry_fire,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
 sentry_delivery,,,sentry/sentry_delivery.mp3,1,1,,,,1000000,,auto,streamed
 sentry_deploy,,,sentry/sentry_deploy.mp3,1,1,,,,1000000,,auto,streamed
-
-#Freeze
-freeze,,,freeze/freeze.mp3,1,1,,,,1000000,,auto,streamed,
-freeze_free,,,freeze/freeze_free.mp3,1,1,,,,1000000,,auto,streamed,
-
-#Rambo
-rambo,,,rambo/rambo.mp3,1,1,,,,1000000,,auto,streamed,
-
-#Rage
-nl_rage,,,rage/nl_rage.wav,1,1,,,,1000000,,auto,streamed,
-
-#Misc
-roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
-jetstart,,,misc/jetstart.mp3,1,1,,,,1000000,,auto,streamed,
-killstreak,,,misc/killstreak.wav,1,1,,,,1000000,,auto,streamed,
-rankup,,,misc/rankup.mp3,1,1,,,,1000000,,auto,streamed,
-nexus_suicide,,,misc/nexus_suicide.mp3,1,1,,,,1000000,,auto,streamed,
-nl_explodebullet,,,misc/nl_explodebullet.wav,1,1,,,,1000000,,auto,streamed,
-nl_surprise_pick_up,,,misc/nl_surprise_pick_up.mp3,1,1,,,,1000000,,auto,streamed,
-nltokens_add,,,misc/nltokens_add.mp3,1,1,,,,1000000,,auto,streamed,
-nl_stage,,,misc/nl_stage.mp3,1,1,,,,1000000,,auto,streamed,
-vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
-rakieta,,,misc/rakieta.mp3,1,1,,,,1000000,,auto,streamed,
-spawnprotect,,,misc/spawnprotect.mp3,1,1,,,,1000000,,auto,streamed,
-napalm,,,misc/NAPALM.mp3,1,1,,,,1000000,,auto,streamed,
 
 ##END OF FILE,,,,,,,,,,,,,,,,,,,
 
