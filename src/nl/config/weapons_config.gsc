@@ -84,7 +84,10 @@ Configure()
     defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase("fal_mp", 1, 119, 8500);
     addWeaponToMysteryBox("fal_mp", "xmodel/oma_weapon_fal", 10, 10);
-
+	
+	defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    addWeaponRank("kar98k_sniper_mp", 350);
+    addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 20);
 
     // Machine Guns
     defineWeapon(6, "mp40_mp", "MP40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -131,6 +134,10 @@ Configure()
     defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("g36c_mp", 2, 122, 12500);
     addWeaponToMysteryBox("g36c_mp", "xmodel/weapon_g36c", 10, 10);
+	
+	defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponRank("pps_mp", 250);
+    addWeaponToMysteryBox("pps_mp", "xmodel/weapon_pps43", 10, 20);
 
 
     // Heavy weapons
@@ -171,6 +178,10 @@ Configure()
 	defineWeapon(32, "doublebarrel_mp", "Double Barrel", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("doublebarrel_mp", 3, 124, 9500);
     addWeaponToMysteryBox("doublebarrel_mp", "xmodel/weapon_doublebarrel", 10, 10);
+	
+	defineWeapon(35, "shotgun_mp", "M1897 Shotgun", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponRank("shotgun_mp", 300);
+    addWeaponToMysteryBox("shotgun_mp", "xmodel/weapon_trenchgun", 10, 20);
 
 
     // Special
