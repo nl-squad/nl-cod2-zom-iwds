@@ -6,7 +6,7 @@ Particle
 
 	life				3500
 
-	origin				20 0 0
+	origin				-20 0 0
 
 	sequenceFixedFpsValue	0.000000
 
