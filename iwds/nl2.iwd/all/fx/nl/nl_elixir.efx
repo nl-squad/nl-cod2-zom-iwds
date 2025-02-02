@@ -12,8 +12,8 @@ Particle
 	{
 		curve
 		[
-			0 1 1 0.6178
-			1 1 1 0.6126
+			0 1 1 0.7958
+			1 1 1 0.7958
 		]
 	}
 
@@ -459,6 +459,6 @@ FxRunner
 
 	playfx
 	[
-		/fx/explosions/nl_elixir_element
+		/fx/nl/nl_elixir_element
 	]
 }
