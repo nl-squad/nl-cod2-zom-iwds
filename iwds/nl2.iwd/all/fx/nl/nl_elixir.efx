@@ -6,8 +6,6 @@ Particle
 
 	life				3500
 
-	origin				-10 0 0
-
 	sequenceFixedFpsValue	0.000000
 
 	rgb
@@ -32,8 +30,8 @@ Particle
 	{
 		curve
 		[
-			0 0.1287 0 0
-			0.4799 0.08416 0 0
+			0 0.104 0 0
+			0.5029 0.05941 0 0
 			1 0 0 0
 		]
 	}

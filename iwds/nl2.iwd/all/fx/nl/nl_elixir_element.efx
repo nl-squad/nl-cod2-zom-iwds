@@ -12,8 +12,6 @@ Particle
 
 	bounce				0 0.95
 
-	origin				-10 0 0
-
 	rotation			360 -360
 
 	sequenceStartFrameMode	1
@@ -44,8 +42,8 @@ Particle
 	{
 		curve
 		[
-			0 0.1931 0 0
-			0.5661 0.1931 0 0
+			0 0.1188 0 0
+			0.5546 0.1139 0 0
 			1 0 0 0
 		]
 	}
