@@ -12,6 +12,8 @@ Particle
 
 	bounce				0 0.95
 
+	origin				20 0 0
+
 	rotation			360 -360
 
 	sequenceStartFrameMode	1
@@ -65,7 +67,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			10
+		scale			15
 	}
 
 	sizeRand
@@ -85,7 +87,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			10
+		scale			15
 	}
 
 	size2Rand
