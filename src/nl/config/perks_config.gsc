@@ -8,7 +8,7 @@ Configure()
     level.PERK_potatoGraterDamageMultiplier = 35 / 1.4;
     level.PERK_grenadeSupplyGrenadesCount = 10;
     level.PERK_spawnProtectionEscapeDuration = 10;
-	level.PERK_immortalSelfDamageMultiplier = 0.1;
+	level.PERK_immortalSelfDamageMultiplier = 0.02;
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
