@@ -8,7 +8,7 @@ Configure()
     level.PERK_potatoGraterDamageMultiplier = 35 / 1.4;
     level.PERK_grenadeSupplyGrenadesCount = 10;
     level.PERK_spawnProtectionEscapeDuration = 10;
-	level.PERK_immortalSelfDamageMultiplier = 0.02;
+	level.PERK_immortalSelfDamageMultiplier = 0.05;
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
@@ -26,7 +26,7 @@ Configure()
 	blanco\config::addNewPerk(10, "combat", "Overkill", 52, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
 	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 72, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
 	blanco\config::addNewPerk(8, "combat", "Escape", 92, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
-	blanco\config::addNewPerk(9, "combat", "Immortal", 132, "nl_hud_pe12", "Reduces Damage received from own Explosives by 90 percent");
+	blanco\config::addNewPerk(9, "combat", "Immortal", 132, "nl_hud_pe12", "Reduces Damage received from own Explosives by 95 percent");
 	blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting, draining Stamina that regenerates after a delay");
 	blanco\config::addNewPerk(17, "combat", "Explode Bullets", 212, "nl_hud_pe6", "Provides a 2 percent chance for Bullets to Explode");
 	blanco\config::addNewPerk(20, "combat", "Random Combat", 292, "nl_hud_pe20", "Selects a random Combat Perk");
