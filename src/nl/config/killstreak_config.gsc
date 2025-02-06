@@ -17,7 +17,7 @@ Configure()
     blanco\config::addNewKillstreak(10, "Grenade Launcher", 40, 50, 75, 35, "nl_hud_kr11", "Grenade Launcher with 18 Grenades", "Grenade ^9Launcher ^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveLauncher);
     // blanco\config::addNewKillstreak(13, "EMP", 40, 50, 75, 35, "nl_hud_kr16", "Disables Zombie Shop & Deathstreaks for 20 seconds", "E^9MP ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, a(20));
     blanco\config::addNewKillstreak(13, "Raptor", 50, 75, 100, 40, "nl_hud_kr21", "Ground Combat Drone protects Owner for 25 seconds", "Rap^9tor ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\raptor::Activate, blanco\actions\raptor::CanUse);
-    blanco\config::addNewKillstreak(15, "Nuke", 100, 150, 200, 50, "nl_hud_kr18", "Nuke ends the Map, adding a +500 Score Bonus", "Nu^9ke ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
+    blanco\config::addNewKillstreak(15, "Nuke", 150, 200, 250, 50, "nl_hud_kr18", "Nuke ends the Map, adding a +500 Score Bonus", "Nu^9ke ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
     blanco\config::addNewKillstreak(16, "Drone", 9999, 9999, 9999, 999, "nl_hud_kr22", "Remote Flying Combat Drone for 30 seconds", "Dro^9ne ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(30));
     blanco\config::addNewKillstreak(17, "RC-XD", 9999, 9999, 9999, 999, "hud_rcxd", "Remote Explosive Toy Car for 30 seconds", "RC^9-XD ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rcxd::Activate, blanco\actions\rcxd::CanUse, blanco\utils::a(30));
 
