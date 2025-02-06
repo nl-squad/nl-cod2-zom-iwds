@@ -4,10 +4,10 @@ Configure()
     level.PERK_ghostInvisibleExtensionSeconds = 3;
     level.PERK_assaultExtensionDurationMultiplier = 2;
     level.PERK_richEarningMultiplier = 1.3;
+	level.PERK_hardlineNeededKillsMultiplier = 0.85;
     level.PERK_potatoGraterDamageMultiplier = 35 / 1.4;
     level.PERK_grenadeSupplyGrenadesCount = 10;
     level.PERK_spawnProtectionEscapeDuration = 10;
-    level.PERK_hardlineNeededKillsMultiplier = 0.9;
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
@@ -16,8 +16,8 @@ Configure()
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 84, "nl_hud_pe53", "Doubles Money for Assists");
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 164, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	blanco\config::addNewPerk(6, "tactical", "Hardline", 204, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
-	blanco\config::addNewPerk(5, "tactical", "Rich", 244, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
+	blanco\config::addNewPerk(5, "tactical", "Rich", 204, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
+	blanco\config::addNewPerk(6, "tactical", "Hardline", 244, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 284, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
 	blanco\config::addNewPerk(12, "combat", "Potato Grater", 12, "nl_hud_pe50", "Reduces Damage received from each Potato to 25 (-10)");

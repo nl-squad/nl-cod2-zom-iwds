@@ -69,7 +69,7 @@ nexus_suicide,,,misc/nexus_suicide.mp3,1,1,,,,1000000,,auto,streamed,
 nl_elixir,,,misc/nl_elixir.mp3,1,1,,,,1000000,,auto,streamed,
 nl_explodebullet,,,misc/nl_explodebullet.wav,1,1,,,,1000000,,auto,streamed,
 nl_stage,,,misc/nl_stage.mp3,1,1,,,,1000000,,auto,streamed,
-nl_surprise_pick_up,,,misc/nl_surprise_pick_up.mp3,1,1,,,,1000000,,auto,streamed,
+nl_surprise,,,misc/nl_surprise.mp3,1,1,,,,1000000,,auto,streamed,
 nltokens_add,,,misc/nltokens_add.mp3,1,1,,,,1000000,,auto,streamed,
 nl_toxic_meat_damage,,,misc/nl_toxic_meat_damage.mp3,1,1,,,,1000000,,auto,streamed,
 rakieta,,,misc/rakieta.mp3,1,1,,,,1000000,,auto,streamed,
@@ -124,9 +124,7 @@ nl_rcxd_loop,,,rcxd/nl_rcxd_loop.wav,1,1,,,,1000000,,auto,streamed,
 
 #Sentry
 sentry_fire,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
-sentry_delivery,,,sentry/sentry_delivery.mp3,1,1,,,,1000000,,auto,streamed
-sentry_deploy,,,sentry/sentry_deploy.mp3,1,1,,,,1000000,,auto,streamed
-
-##END OF FILE,,,,,,,,,,,,,,,,,,,
+sentry_delivery,,,sentry/sentry_delivery.mp3,1,1,,,,1000000,,auto,streamed,
+sentry_deploy,,,sentry/sentry_deploy.mp3,1,1,,,,1000000,,auto,streamed,
 
 
