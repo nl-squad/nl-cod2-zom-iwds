@@ -842,7 +842,7 @@
 			decoration
 		}
 
-		INGAME_SELECTION("Loadout", ORIGIN_CHOICE1, "changeweapon", "1")
+		INGAME_SELECTION("Loadout Menu", ORIGIN_CHOICE1, "changeweapon", "1")
 		INGAME_SELECTION("Shop", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
