@@ -2,8 +2,6 @@ version: '3.7'
 services:
   nl-cod2-zom-dev:
     image: rutkowski/cod2:3.12-server1.3-mysql-unsafe
-    container_name: nl-cod2-zom-dev
-    restart: always
     stdin_open: true
     tty: true
     stop_grace_period: 1s
@@ -26,13 +24,8 @@ services:
       interval: 5s
       timeout: 3s
       retries: 7
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "10"
 
 networks:
   default:
-    external:
-      name: my_network
+    name: stack_network
+    external: true

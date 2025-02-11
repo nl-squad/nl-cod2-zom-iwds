@@ -17,7 +17,7 @@
             ],
             "containerName": "nl-cod2-zom-dev",
             "restartPath": "~/cod2/servers/nl-cod2-zom-dev",
-            "restartDockerCompose": "docker-compose.dev.yml",
+            "restartDockerCompose": "compose.dev.yml",
             "cod2": {
                 "port": 7,
                 "cfgFile": "server.dev.cfg",
@@ -36,7 +36,7 @@
             ],
             "containerName": "nl-cod2-zom",
             "restartPath": "~/cod2/servers/nl-cod2-zom",
-            "restartDockerCompose": "docker-compose.zom.yml",
+            "restartDockerCompose": "compose.zom.yml",
             "cod2": {
                 "port": 28960,
                 "cfgFile": "server.zom.cfg",
