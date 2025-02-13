@@ -19,4 +19,4 @@ cp $local_library_path/000empty.iwd $cwd/nl/
 echo -e "\033[0;36mCopied 000empty.iwd to nl/\033[0m"
 
 echo -e "\033[0;36mRestarting docker stack...\033[0m"
-(cd $cwd && docker stack deploy -c $1 $stack_name)
+(cd $cwd && docker stack deploy -c $1 $stack_name --with-registry-auth)
