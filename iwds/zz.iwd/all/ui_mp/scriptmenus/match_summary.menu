@@ -59,6 +59,16 @@
 #define MAP(_origin, _num) \
         itemDef \
         { \
+            name			"vote" ## _num \
+			style			WINDOW_STYLE_FILLED \
+			visible 		1 \
+			rect			0 0 148 94 0 0 \
+			origin			_origin \
+			backcolor		1 1 .78 0.3 \
+			decoration \
+        } \
+        itemDef \
+        { \
             style            WINDOW_STYLE_DVAR_SHADER \
             rect             10 20 128 64 0 0 \
             origin           _origin \
@@ -105,16 +115,6 @@
 				show "vote" ## _num; \
                 play "mouse_click"; \
             } \
-        } \
-        itemDef \
-        { \
-            name			"vote" ## _num \
-			style			WINDOW_STYLE_FILLED \
-			visible 		1 \
-			rect			0 0 148 94 0 0 \
-			origin			_origin \
-			backcolor		1 1 .78 0.3 \
-			decoration \
         }
 #endif
 
