@@ -16,7 +16,7 @@ Configure()
 	tips[tips.size] = "To get ^3VIP^7, use ^8nL Tokens ^7or ^5PayPal";
 	tips[tips.size] = "To get ^8Patron^7, check the ^3#how-to-patron ^7Discord channel";
 	tips[tips.size] = "Aim for the Zombie's head to deal more damage";
-	tips[tips.size] = "Heavier Weapons deal more damage with a bash";
+	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBoxes";
 	tips[tips.size] = "Nazi Zombie = Basic one with 300 HP";
@@ -50,7 +50,7 @@ Configure()
 	tips[tips.size] = "Don't be toxic, it's just a game from 2005";
 	tips[tips.size] = "Behave well and respect other players; we all want to have fun";
 	tips[tips.size] = "If you have lost your password, contact Dusza on Discord";
-    tips[tips.size] = "You will gain ^3EXP ^7for kills, Challenges, and daily logins";
+    tips[tips.size] = "You will gain ^3EXP ^7for Kills, Challenges, and daily Activity";
 	tips[tips.size] = "Don't use the `nL.Clan* tag if you are not a member";
     tips[tips.size] = "Remember to follow the server rules with ^3!rules";
 	tips[tips.size] = "`nL.Clan* has a ^1zero-tolerance ^7policy for ^1cheaters";
