@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nl-cod2-zom:
-    image: docker.io/rutkowski/cod2:13.3-server1.3-mysql-unsafe
+    image: docker.io/rutkowski/cod2:13.4-server1.3-mysql-unsafe
     stdin_open: true
     tty: true
     stop_grace_period: 1s
