@@ -192,7 +192,6 @@ Configure()
 
 
     // Zombie weapons
-
     defineWeapon(82, "hbat_mp", "Heavy Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
     addWeaponRank("hbat_mp", 1);
 
