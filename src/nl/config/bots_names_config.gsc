@@ -111,7 +111,7 @@ Configure()
     a[a.size] = "^^55Pawel ^^77Jumper";
     a[a.size] = "^5Elon^12Musk^3**";
     a[a.size] = "^6hyp3r^7Wentylacja";    
-	a[a.size] = "^^99Tak dziala Black^7!";
+	a[a.size] = "mateusz_1998";
     a[a.size] = "^^55Goddess^^66RoXy";
 	a[a.size] = "^3OG ^7Olgierd";
 	a[a.size] = "Miro Warsztat (stare konto)";
