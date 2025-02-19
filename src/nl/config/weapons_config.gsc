@@ -52,14 +52,13 @@ Configure()
     purchaseDisable = false;
 
     // Rifles
-    defineWeapon(1, "mosin_nagant_mp", "Mosin Nagant", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("mosin_nagant_mp", 3);
 
-    defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponRank("m1garand_mp", 10);
 
     defineWeapon(3, "springfield_mp", "Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponPurchase("springfield_mp", 1, 101, 1500);
+    addWeaponRank("springfield_mp", 10);
+	
+    defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponRank("m1garand_mp", 15);
 
     defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase("g3_mp", 1, 102, 2500);
@@ -95,10 +94,6 @@ Configure()
 
     defineWeapon(7, "mp44_mp", "MP44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("mp44_mp", 25);
-
-    defineWeapon(8, "ak74_mp", "AK-74u", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
-    addWeaponPurchase("ak74_mp", 2, 104, 2500, purchaseDisable);
-    addWeaponToMysteryBox("ak74_mp", "xmodel/ak74_w", 10, 10);
 
     defineWeapon(9, "sig_mp", "SIG", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("sig_mp", 2, 105, 3500);
@@ -162,14 +157,6 @@ Configure()
     defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("aa12_mp", 3, 112, 7500);
     addWeaponToMysteryBox("aa12_mp", "xmodel/weapon_aa_12", 10, 10);
-
-    defineWeapon(21, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
-    addWeaponPurchase("m60_mp", 3, 114, 5500, purchaseDisable);
-    addWeaponToMysteryBox("m60_mp", "xmodel/weapon_m60", 10, 10);
-
-    defineWeapon(28, "breda_m30_mp", "Breda M30", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("breda_m30_mp", 3, 120, 6500);
-    addWeaponToMysteryBox("breda_m30_mp", "xmodel/weapon_breda_m30", 10, 10);
 	
 	defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("model_1887_mp", 3, 123, 6500);
@@ -205,8 +192,6 @@ Configure()
 
 
     // Zombie weapons
-    defineWeapon(81, "bat_mp", "Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("bat_mp", 1);
 
     defineWeapon(82, "hbat_mp", "Heavy Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
     addWeaponRank("hbat_mp", 1);
