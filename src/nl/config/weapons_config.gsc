@@ -219,7 +219,7 @@ Configure()
     defineNonSelectable(110, "30cal_stand_mp", level.KIND_KILLSTREAK);
     defineNonSelectable(111, "rocket_mp", level.KIND_KILLSTREAK);
     defineNonSelectable(112, "launcher_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(113, "zooka_mp", level.KIND_KILLSTREAK);
+    defineNonSelectable(113, "panzerschreck_mp", level.KIND_KILLSTREAK);
     defineNonSelectable(114, "det_mp", level.KIND_KILLSTREAK);
 
     defineNonSelectable(116, "explode_mp", level.KIND_KILLSTREAK);
