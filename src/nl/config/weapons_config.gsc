@@ -239,7 +239,8 @@ Configure()
     // Final configuration
     level.DEFAULT_PISTOL = 61;
     level.DEFAULT_WEAPON = 6;
-    level.DEFAULT_ZOMBIE_WEAPON = 81;
+    level.DEFAULT_ZOMBIE_WEAPON = 82;
+	level.ZOMBIFY_KILLFEED_WEAPON_NAME = "hbat_mp";
     level.mysteryboxTeddyChance = 85;
     level.mysteryboxTeddyChanceGambler = 20;
 }
