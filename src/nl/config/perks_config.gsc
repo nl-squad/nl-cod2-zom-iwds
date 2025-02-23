@@ -5,7 +5,7 @@ Configure()
     level.PERK_assaultExtensionDurationMultiplier = 2;
     level.PERK_richEarningMultiplier = 1.3;
 	level.PERK_hardlineNeededKillsMultiplier = 0.9;
-    level.PERK_potatoGraterDamageMultiplier = 0.7;
+    level.PERK_potatoGraterDamageMultiplier = 0.71;
     level.PERK_grenadeSupplyGrenadesCount = 10;
     level.PERK_spawnProtectionEscapeDuration = 10;
 	level.PERK_immortalSelfDamageMultiplier = 0.05;
