@@ -28,6 +28,24 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async: "true"
+        tag: cod2.logs
+
+  fluent-bit:
+    image: fluent/fluent-bit:latest
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    command: >
+      /fluent-bit/bin/fluent-bit -i forward -p Listen=0.0.0.0 -p Port=24224
+      -o opentelemetry -p Match=cod2.* -p Host=nl-monitoring -p Port=18890
+      -p Metrics uri=/v1/metrics -p Traces uri=/v1/traces -p Logs uri=/v1/logs
+      -p 'header=x-otlp-api-key XXXXXXX'
+      -p Log response payload=true
 
 networks:
   default:
