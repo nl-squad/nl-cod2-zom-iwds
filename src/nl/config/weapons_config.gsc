@@ -210,12 +210,9 @@ Configure()
     defineGrenade(95, "zom_nade_mp");
     defineGrenade(96, "body_mp");
 
-    // Shop
-    defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
-    defineNonSelectable(106, "scissors_mp", level.KIND_SHOP);
-
 
     // Killstreak
+	defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
     defineNonSelectable(110, "30cal_stand_mp", level.KIND_KILLSTREAK);
     defineNonSelectable(111, "rocket_mp", level.KIND_KILLSTREAK);
     defineNonSelectable(112, "launcher_mp", level.KIND_KILLSTREAK);
