@@ -74,7 +74,7 @@ hologramsPrice(usageTimes)
 
 toxicMeatPrice(usageTimes)
 {
-    return 375 + 75 * usageTimes;
+    return 250 + 50 * usageTimes;
 }
 
 anti_invi_grenadesPrice(usageTimes)

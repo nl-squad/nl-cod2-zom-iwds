@@ -166,7 +166,7 @@ Configure()
     addWeaponPurchase("doublebarrel_mp", 3, 124, 9500);
     addWeaponToMysteryBox("doublebarrel_mp", "xmodel/weapon_doublebarrel", 10, 10);
 	
-	defineWeapon(35, "shotgun_mp", "M1897 Shotgun", level.TYPE_PRIMARY, level.KIND_HEAVY);
+	defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank("shotgun_mp", 300);
     addWeaponToMysteryBox("shotgun_mp", "xmodel/weapon_trenchgun", 10, 20);
 
@@ -187,12 +187,12 @@ Configure()
     defineWeapon(67, "deagle_mp", "Desert Eagle", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
     addWeaponRank("deagle_mp", 10);
 
-    defineWeapon(68, "bashbat_mp", "Bash King", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
+    defineWeapon(68, "bashbat_mp", "Bash King Bat", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
     addWeaponRank("bashbat_mp", level.VIP_REQUIRED);
 
 
     // Zombie weapons
-    defineWeapon(82, "hbat_mp", "Heavy Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
+    defineWeapon(82, "hbat_mp", "Baseball Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
     addWeaponRank("hbat_mp", 1);
 
     defineWeapon(84, "axe_mp", "Axe", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
@@ -209,7 +209,6 @@ Configure()
     defineGrenade(94, "dummy_mp");
     defineGrenade(95, "zom_nade_mp");
     defineGrenade(96, "body_mp");
-
 
     // Killstreak
 	defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
