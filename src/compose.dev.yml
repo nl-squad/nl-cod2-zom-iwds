@@ -6,8 +6,14 @@ services:
     tty: true
     stop_grace_period: 1s
     ports:
-      - 28961:28961
-      - 28961:28961/udp
+      - target: 28961
+        published: 28961
+        protocol: tcp
+        mode: host # use host mode for correct master server registration
+      - target: 28961
+        published: 28961
+        protocol: udp
+        mode: host # use host mode for correct master server registration
     volumes:
       - ./nl:/cod2/nl:ro
       - ~/cod2/main/1_3:/cod2/main:ro
