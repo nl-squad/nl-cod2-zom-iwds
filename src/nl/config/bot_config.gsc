@@ -1,7 +1,6 @@
 Configure()
 {
     // Admin menu settings
-	level.lvl["bughunt"] = 0;
 	
 	level.lvl["aliases"] = 10;
     level.lvl["ci"] = 10;
@@ -25,6 +24,7 @@ Configure()
 	
     level.lvl["afk"] = 40;
 	level.lvl["afk_all"] = 40;
+	level.lvl["bughunt"] = 40;
 	level.lvl["kick"] = 40;
 	level.lvl["screenshot"] = 40;
 	
@@ -85,8 +85,8 @@ Configure()
 	level.lvl["god"] = 60;
 	level.lvl["money"] = 60;
     level.lvl["setwarp"] = 60;
-	level.lvl["waypoint"] = 60;
-
+	
+	level.lvl["waypoint"] = 100;
 	level.lvl["mysterybox"] = 100;
 	level.lvl["surprise"] = 100;
 }
