@@ -1,8 +1,6 @@
 Configure()
 {
-    // Admin menu settings
-	level.lvl["bughunt"] = 0;
-	
+    // Admin menu settings	
 	level.lvl["aliases"] = 10;
     level.lvl["ci"] = 10;
 	level.lvl["list"] = 10;
@@ -25,6 +23,7 @@ Configure()
 	
     level.lvl["afk"] = 40;
 	level.lvl["afk_all"] = 40;
+	level.lvl["bughunt"] = 40;
 	level.lvl["kick"] = 40;
 	level.lvl["screenshot"] = 40;
 	
