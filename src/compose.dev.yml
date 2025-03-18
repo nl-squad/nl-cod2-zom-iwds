@@ -1,13 +1,19 @@
 version: '3.7'
 services:
   nl-cod2-zom-dev:
-    image: docker.io/rutkowski/cod2:13.4-server1.3-mysql-unsafe
+    image: docker.io/rutkowski/cod2:13.5-server1.3-mysql-unsafe
     stdin_open: true
     tty: true
     stop_grace_period: 1s
     ports:
-      - 7:7
-      - 7:7/udp
+      - target: 28961
+        published: 28961
+        protocol: tcp
+        mode: host # use host mode for correct master server registration
+      - target: 28961
+        published: 28961
+        protocol: udp
+        mode: host # use host mode for correct master server registration
     volumes:
       - ./nl:/cod2/nl:ro
       - ~/cod2/main/1_3:/cod2/main:ro
@@ -18,7 +24,7 @@ services:
       COD2_SET_fs_game: "nl"
       COD2_SET_fs_library: "library"
       COD2_SET_dedicated: 2
-      COD2_SET_net_port: 7
+      COD2_SET_net_port: 28961
     healthcheck:
       test: [ "CMD", "/cod2/healthcheck.sh" ]
       interval: 3s
