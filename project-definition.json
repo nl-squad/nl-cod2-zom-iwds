@@ -1,6 +1,6 @@
 {
     "connection": {
-        "address": "mynl.pl",
+        "address": "116.203.79.194",
         "user": "ubuntu",
         "keyPath": "~/.ssh/nl"
     },
