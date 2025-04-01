@@ -34,6 +34,13 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+      resources:
+        reservations:
+          cpus: '0.2'
+          memory: 200M
+        limits:
+          cpus: '0.8'
+          memory: 800M
 
 networks:
   default:
