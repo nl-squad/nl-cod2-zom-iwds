@@ -1,6 +1,7 @@
 Configure()
 {
-    // Admin menu settings	
+    // Admin menu settings
+	
 	level.lvl["aliases"] = 10;
     level.lvl["ci"] = 10;
 	level.lvl["list"] = 10;
@@ -85,8 +86,8 @@ Configure()
 	level.lvl["god"] = 60;
 	level.lvl["money"] = 60;
     level.lvl["setwarp"] = 60;
-	level.lvl["waypoint"] = 60;
-
+	
+	level.lvl["waypoint"] = 100;
 	level.lvl["mysterybox"] = 100;
 	level.lvl["surprise"] = 100;
 }
