@@ -29,6 +29,8 @@ Configure()
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", ::napalmPrice, blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
     vips["4"] = CreateMenuSelection(4, "rage", "Rage (^730^9s)", ::rageModePrice, blanco\actions\rage::Activate, blanco\actions\rage::CanUse, undefined, a(30));
     vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
+    vips["6"] = CreateMenuSelection(6, "teleport_backstep", "Teleport Backstep", ::teleportBackstepPrice, blanco\actions\teleport_backstep::Activate, blanco\actions\teleport_backstep::CanUse);
+    
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);
 }
 
@@ -115,4 +117,9 @@ rageModePrice(usageTimes)
 empPrice(usageTimes)
 {
     return 1500 + 300 * usageTimes;
+}
+
+teleportBackstepPrice(usageTimes)
+{
+    return 1 + 2 * usageTimes;
 }
