@@ -121,5 +121,5 @@ empPrice(usageTimes)
 
 teleportBackstepPrice(usageTimes)
 {
-    return 1 + 2 * usageTimes;
+    return 1500 + 300 * usageTimes;
 }
