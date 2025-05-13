@@ -76,8 +76,8 @@ Configure()
     addWeaponPurchase("intervention_mp", 1, 116, 7500);
     addWeaponToMysteryBox("intervention_mp", "xmodel/weapon_intervention", 10, 10);
 
-    defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("m14ebr_mp", 1, 117, 7500);
+    defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable, rotationDisable);
+    addWeaponPurchase("m14ebr_mp", 1, 117, 7500, purchaseDisable);
     addWeaponToMysteryBox("m14ebr_mp", "xmodel/weapon_law_m14ebr", 10, 10);
 
     defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
@@ -118,12 +118,12 @@ Configure()
     addWeaponPurchase("p90_mp", 2, 115, 6500);
     addWeaponToMysteryBox("p90_mp", "xmodel/weapon_p90sd", 10, 10);
 
-    defineWeapon(26, "m4_mp", "M4", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("m4_mp", 2, 118, 10500);
+    defineWeapon(26, "m4_mp", "M4", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
+    addWeaponPurchase("m4_mp", 2, 118, 10500, purchaseDisable);
     addWeaponToMysteryBox("m4_mp", "xmodel/m4_w", 10, 10);
 
-    defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
-    addWeaponPurchase("famas_mp", 2, 121, 13500, purchaseDisable);
+    defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase("famas_mp", 2, 121, 13500);
     addWeaponToMysteryBox("famas_mp", "xmodel/weapon_famas", 10, 10);
 
     defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -146,8 +146,8 @@ Configure()
     defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("rpk_mp", 3, 108, 5500);
 
-    defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("saw_mp", 3, 109, 7500);
+    defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
+    addWeaponPurchase("saw_mp", 3, 109, 7500, purchaseDisable);
     addWeaponToMysteryBox("saw_mp", "xmodel/weapon_m249", 10, 10);
 
     defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
