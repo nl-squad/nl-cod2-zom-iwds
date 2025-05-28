@@ -27,7 +27,7 @@ Configure()
 	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 72, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
 	blanco\config::addNewPerk(8, "combat", "Escape", 92, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
 	blanco\config::addNewPerk(9, "combat", "Immortal", 132, "nl_hud_pe12", "Reduces Damage received from own Explosives by 95 percent");
-	blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting, draining Stamina that regenerates after a delay");
+	blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting by holding the ^3F ^7button");
 	blanco\config::addNewPerk(17, "combat", "Explode Bullets", 212, "nl_hud_pe6", "Provides a 2 percent chance for Bullets to Explode");
 	blanco\config::addNewPerk(20, "combat", "Random Combat", 292, "nl_hud_pe20", "Selects a random Combat Perk");
 }
