@@ -72,6 +72,7 @@ Configure()
 	level.lvl["makepatron"] = 101;
 	level.lvl["nltokens"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
+	level.lvl["showtokens"] = 101;
 
     // Dev commands
 	
