@@ -30,5 +30,6 @@ Configure()
 	blanco\config::addNewPerk(16, "combat", "Sprint", 152, "nl_hud_pe55", "Allows Sprinting by holding the ^3F ^7button");
 	blanco\config::addNewPerk(17, "combat", "Explode Bullets", 192, "nl_hud_pe6", "Provides a 2 percent chance for Bullets to Explode");
 	blanco\config::addNewPerk(20, "combat", "Random Combat", 242, "nl_hud_pe20", "Selects a random Combat Perk");
+	blanco\config::addNewPerk(21, "combat", "Pistolero", 0, "nl_hud_pe21", "Pif paf more powerful");
 }
 
