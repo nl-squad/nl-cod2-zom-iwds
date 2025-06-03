@@ -69,7 +69,7 @@ Configure()
     addWeaponToMysteryBox("barrett_mp", "xmodel/m82_w", 10, 10);
 
     defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("kar98k_mp", 200);
+    addWeaponRank("kar98k_mp", 350);
     addWeaponToMysteryBox("kar98k_mp", "xmodel/weapon_kAr98", 10, 20);
 
     defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
@@ -85,7 +85,7 @@ Configure()
     addWeaponToMysteryBox("fal_mp", "xmodel/oma_weapon_fal", 10, 10);
 	
 	defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("kar98k_sniper_mp", 350);
+    addWeaponRank("kar98k_sniper_mp", 200);
     addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 20);
 
     // Machine Guns
