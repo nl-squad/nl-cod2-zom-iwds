@@ -28,7 +28,6 @@ Configure()
     a[a.size] = "Andrei [LAT]";
     a[a.size] = "^^77I ^^11<3 ^^44nL";
     a[a.size] = "^^33Ekwador^^55Manieczki";
-    a[a.size] = "^2KSA^7Marmoush";
     a[a.size] = "Selbie";
     a[a.size] = "^0WSRH^1PL";
     a[a.size] = "^4PIAST^1GKS";

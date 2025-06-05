@@ -16,6 +16,7 @@ Configure()
 	tips[tips.size] = "To get ^3VIP^7, use ^8nL Tokens ^7or ^5PayPal";
 	tips[tips.size] = "To get ^8Patron^7, check the ^3#how-to-patron ^7Discord channel";
 	tips[tips.size] = "Aim for the Zombie's head to deal more damage";
+	tips[tips.size] = "The maximum number of nL Tokens is 25,000";
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBoxes";
