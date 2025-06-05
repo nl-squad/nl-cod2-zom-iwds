@@ -9,6 +9,20 @@ Configure()
     level.PERK_grenadeSupplyGrenadesCount = 10;
     level.PERK_spawnProtectionEscapeDuration = 10;
 	level.PERK_immortalSelfDamageMultiplier = 0.05;
+    level.PERK_protectLabel = &"^5Protect: ";
+    level.PERK_jumpySpawnLabel = &"^3Jumpy Spawn: ";
+    level.PERK_laserShader = "nl_laser";
+    level.PERK_reconShader = "nl_hud_recon";
+    level.PERK_explodeBulletChance = 4;
+    level.PERK_explodeBulletFx = loadFx("fx/nl/nl_explodebullet.efx");
+    level.PERK_explodeBulletRange = 100;
+    level.PERK_explodeBulletDamage = 300;
+    level.PERK_pistoleroDamageMultiplier = 1.5;
+
+    preCacheString(level.PERK_protectLabel);
+    preCacheString(level.PERK_jumpySpawnLabel);
+    preCacheShader(level.PERK_laserShader);
+    preCacheShader(level.PERK_reconShader);
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
