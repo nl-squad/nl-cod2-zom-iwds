@@ -103,8 +103,7 @@ calc#include "ui_mp/menudef.h"
 		execKey "1" { close quickmessage; open voice_cmd; }
 		execKey "2" { close quickmessage; open playeroption; }
 		execKey "3" { close quickmessage; open hunters; }
-		execKey "4" { close quickmessage; open zombies; }
-		execKey "5"
+		execKey "4"
 		{
 			close quickmessage;
 			uiScript openMenuOnDvar ui_vip 1 vips;
@@ -127,7 +126,7 @@ calc#include "ui_mp/menudef.h"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^71^9. ^9Voi^7ce ^9Mess^7ages ^4` \n^72^9. ^9Pla^7yer ^9Opt^7ions ^4` \n^73^9. ^9Hunt^7ers ^9Me^7nu ^4` \n^74^9. ^9Zomb^7ies ^9Me^7nu ^4` \n^75^9. ^9VIP ^9Me^7nu ^4` \n"
+			text			"^71^9. ^9Voi^7ce ^9Mess^7ages ^4` \n^72^9. ^9Pla^7yer ^9Opt^7ions ^4` \n^73^9. ^9Hunt^7ers ^9Me^7nu ^4` \n^74^9. ^9VIP ^9Me^7nu ^4` \n"
 			decoration
 		}
 	}

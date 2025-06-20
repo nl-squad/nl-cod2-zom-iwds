@@ -13,15 +13,9 @@ Configure()
     hunters["6"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
-    zombies = [];
-    zombies["1"] = CreateMenuSelection(1, "potatoes", "Potatoes x3", ::potatoesPrice, blanco\menus\shops::givePotatoes, undefined, undefined, a(3));
-    zombies["2"] = CreateMenuSelection(2, "holograms", "Holograms", ::hologramsPrice, blanco\actions\holograms::Activate, blanco\actions\holograms::CanUse);
-    zombies["3"] = CreateMenuSelection(9, "toxic_meat", "Toxic Meat", ::toxicMeatPrice, blanco\menus\shops::giveToxicMeat, undefined, undefined, a(1));
-    zombies["4"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", ::anti_invi_grenadesPrice, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
-    zombies["5"] = CreateMenuSelection(4, "speed", "Speed", ::speedPrice, blanco\menus\shops::giveSpeedBat, blanco\menus\shops::canBuySpeed);
-    zombies["6"] = CreateMenuSelection(5, "high_jump", "Super Jump", ::high_jumpPrice, blanco\actions\super_jump::Activate);
-    zombies["7"] = CreateMenuSelection(6, "zombie_grenades", "Zombie Nade", ::zombie_grenadesPrice, blanco\menus\shops::giveZombieNades, undefined, undefined, a(1));
-    RegisterMenu("zombies", ::VMenuDefaultHandler, zombies, blanco\menus\shops::canUseZombiesMenu);
+    // zombies = [];
+    // zombies["2"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", ::anti_invi_grenadesPrice, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
+    // RegisterMenu("zombies", ::VMenuDefaultHandler, zombies, blanco\menus\shops::canUseZombiesMenu);
 
     vips = [];
     vips["1"] = CreateMenuSelection(1, "bash_king", "Bash King Bat ^3Free", 0, blanco\menus\shops::giveBashKing);
