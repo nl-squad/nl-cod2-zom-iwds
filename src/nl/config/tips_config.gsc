@@ -8,7 +8,7 @@ Configure()
     tips[tips.size] = "You can see your Money in the bottom right corner";
 	tips[tips.size] = "You can see your Hunters Killed amount in the bottom right corner";
     tips[tips.size] = "You can see your available Killstreaks in the bottom left corner";
-    tips[tips.size] = "You can access the Hunter and Zombie Menus by pressing ^3V ^7button";
+    tips[tips.size] = "You can access the Hunter & VIP Menus by pressing ^3V ^7button";
     tips[tips.size] = "Remember to select your Perks and Killstreaks in your Loadout Menu";
 	tips[tips.size] = "To change/activate the current Killstreaks, use ^3< M > ^7buttons";
     tips[tips.size] = "Remember to save your Class after every Loadout change";
@@ -21,9 +21,10 @@ Configure()
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBoxes";
 	tips[tips.size] = "Nazi Zombie = Basic one with 300 HP";
-	tips[tips.size] = "Black & Skinny Zombie = Speed, 220 HP (-80)";
-	tips[tips.size] = "Red & Fat Zombie = Health Pack, 600 HP (+300)";
-	tips[tips.size] = "Black & Fat Zombie = Super Health Pack, 800 HP (+500)";
+	tips[tips.size] = "Black & Skinny Zombie = Speed, 200 HP (-100)";
+	tips[tips.size] = "Red & Fat Zombie = Mutant";
+	tips[tips.size] = "Black & Fat Zombie = Strong Mutant";
+	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant";
 	tips[tips.size] = "The Nexus is a previous map winner (the Highest Score)";
 	tips[tips.size] = "Some Weapons are temporarily removed from the Rotation";
 	tips[tips.size] = "To save the Map Top Scores, there must be at least 12 Real Players online";

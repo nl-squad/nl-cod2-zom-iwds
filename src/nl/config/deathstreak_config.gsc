@@ -5,23 +5,8 @@ Configure()
     level.DEATHSTREAK_speedGrade1Speed = 250;
     level.DEATHSTREAK_speedGrade2Speed = 270;
     level.DEATHSTREAK_speedGrade3Speed = 290;
-
-    level.DEATHSTREAK_jumpySpawnGrade1ProtectionTime = 1;
-    level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
-    level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
-
-    level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
-    level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
-    level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
-
-    level.DEATHSTREAK_toxicMeatGrade1RadiusSquared = 64 * 64;
-    level.DEATHSTREAK_toxicMeatEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicMeatGrade2RadiusSquared = 72 * 72;
-    level.DEATHSTREAK_toxicMeatEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicMeatGrade3RadiusSquared = 80 * 80;
-    level.DEATHSTREAK_toxicMeatEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
-
-    level.DEATHSTREAK_mutantExplodeAndFireDamageMultiplier = 0.9;
+	
+	level.DEATHSTREAK_mutantExplodeAndFireDamageMultiplier = 0.9;
     level.DEATHSTREAK_mutantGrade1Hp = 550;
     level.DEATHSTREAK_mutantGrade2Hp = 600;
     level.DEATHSTREAK_mutantGrade3Hp = 650;
@@ -32,75 +17,265 @@ Configure()
     level.DEATHSTREAK_heavyMutantGrade3Hp = 850;
 
     level.DEATHSTREAK_armouredHp = 800;
-    level.DEATHSTREAK_armouredGrade1ExplodeAndFireDamageMultiplier = 0.4;
-    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.3;
-    level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.2;
+    level.DEATHSTREAK_armouredGrade1ExplodeAndFireDamageMultiplier = 0.6;
+    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.5
+    level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.4;
+	
+	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
+    level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
+    level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
 
-    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.2;
-    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.3;
-    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.4;
+    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.1;
+    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.15;
+    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.2;
 
-    level.DEATHSTREAK_swooshGrade1MaxPower = 300;
-    level.DEATHSTREAK_swooshGrade2MaxPower = 500;
-    level.DEATHSTREAK_swooshGrade3MaxPower = 700;
+    level.DEATHSTREAK_jumpySpawnGrade1ProtectionTime = 1;
+    level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
+    level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 
-    level.DEATHSTREAK_toxicAuraGrade1RadiusSquared = 128 * 128;
-    level.DEATHSTREAK_toxicAuraEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicAuraGrade2RadiusSquared = 192 * 192;
-    level.DEATHSTREAK_toxicAuraEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicAuraGrade3RadiusSquared = 256 * 256;
-    level.DEATHSTREAK_toxicAuraEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
-
-    level.DEATHSTREAK_absorptionGrade1RadiusSquared = 64 * 64;
+    level.DEATHSTREAK_swooshGrade1MaxPower = 200;
+    level.DEATHSTREAK_swooshGrade2MaxPower = 400;
+    level.DEATHSTREAK_swooshGrade3MaxPower = 600;
+	
+	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 64 * 64;
     level.DEATHSTREAK_absorptionGrade1TickDamage = 5;
     level.DEATHSTREAK_absorptionGrade2RadiusSquared = 80 * 80;
     level.DEATHSTREAK_absorptionGrade2TickDamage = 7;
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 96 * 96;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
+	
+	level.DEATHSTREAK_toxicAuraGrade1RadiusSquared = 96 * 96;
+    level.DEATHSTREAK_toxicAuraEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.DEATHSTREAK_toxicAuraGrade2RadiusSquared = 128 * 128;
+    level.DEATHSTREAK_toxicAuraEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.DEATHSTREAK_toxicAuraGrade3RadiusSquared = 160 * 160;
+    level.DEATHSTREAK_toxicAuraEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
+
+    level.DEATHSTREAK_toxicMeatGrade1RadiusSquared = 64 * 64;
+    level.DEATHSTREAK_toxicMeatEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.DEATHSTREAK_toxicMeatGrade2RadiusSquared = 72 * 72;
+    level.DEATHSTREAK_toxicMeatEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.DEATHSTREAK_toxicMeatGrade3RadiusSquared = 80 * 80;
+    level.DEATHSTREAK_toxicMeatEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
 
     // Available rewards
-    toxicAura = blanco\deathstreaks\toxic_aura::Grant;
-    swoosh = blanco\deathstreaks\swoosh::Grant;
-    nothing = blanco\deathstreaks\generic::GrantNothing;
-    speed = blanco\deathstreaks\generic::GrantSpeed;
-    potato = blanco\deathstreaks\generic::GrantPotato;
-    nade = blanco\deathstreaks\generic::GrantNade;
-    highJump = blanco\deathstreaks\high_jump::Grant;
-    toxicMeat = blanco\deathstreaks\toxic_meat::Grant;
-    mutant = blanco\deathstreaks\generic::GrantMutant;
+    
+	nothing = blanco\deathstreaks\generic::GrantNothing;
+	
+	speed = blanco\deathstreaks\generic::GrantSpeed;
+	
+	mutant = blanco\deathstreaks\generic::GrantMutant;
     heavyMutant = blanco\deathstreaks\generic::GrantHeavyMutant;
     armoured = blanco\deathstreaks\generic::GrantArmoured;
-    antiInviNade = blanco\deathstreaks\generic::GrantAntiInviNade;
-    bulletDodge = blanco\deathstreaks\generic::GrantBulletDodge;
-    absorption = blanco\deathstreaks\absorption::Grant;
+	
+	highJump = blanco\deathstreaks\high_jump::Grant;
+	bulletDodge = blanco\deathstreaks\generic::GrantBulletDodge;
+	jumpySpawn = blanco\deathstreaks\jumpy_spawn::Grant;
+	swoosh = blanco\deathstreaks\swoosh::Grant;
+	
+	absorption = blanco\deathstreaks\absorption::Grant;
+	toxicAura = blanco\deathstreaks\toxic_aura::Grant;
+	toxicMeat = blanco\deathstreaks\toxic_meat::Grant;
+	
+	potato = blanco\deathstreaks\generic::GrantPotato;
+	antiInviNade = blanco\deathstreaks\generic::GrantAntiInviNade;
+	nade = blanco\deathstreaks\generic::GrantNade;
 
     // Stages
     s = stage(0, &"^7Zom^9bie ^7Pow^9er^9: ^3Basic^9, ^7Ne^9xt ^7In^4: ^7");
-    reward(s, 100, mutant, 2);
-    reward(s, 100, heavyMutant, 1);
-    reward(s, 100, nothing, 1);
+    reward(s, 10, nothing, 1);
+    reward(s, 10, speed, 1);
+	reward(s, 5, speed, 2);
+	reward(s, 0, speed, 3);
+    reward(s, 15, mutant, 1);
+	reward(s, 10, mutant, 2);
+	reward(s, 0, mutant, 3);
+	reward(s, 5, heavyMutant, 1);
+	reward(s, 0, heavyMutant, 2);
+	reward(s, 0, heavyMutant, 3);
+    reward(s, 0, armoured, 1);
+	reward(s, 0, armoured, 2);
+	reward(s, 0, armoured, 3);
+    reward(s, 10, highJump, 1);
+	reward(s, 5, highJump, 2);
+	reward(s, 0, highJump, 3);
+	reward(s, 10, bulletDodge, 1);
+	reward(s, 5, bulletDodge, 2);
+	reward(s, 0, bulletDodge, 3);
+    reward(s, 10, jumpySpawn, 1);
+	reward(s, 5, jumpySpawn, 2);
+	reward(s, 0, jumpySpawn, 3);
+    reward(s, 10, swoosh, 1);
+	reward(s, 5, swoosh, 2);
+	reward(s, 0, swoosh, 3);
+	reward(s, 10, absorption, 1);
+	reward(s, 5, absorption, 2);
+	reward(s, 0, absorption, 3);
+    reward(s, 10, toxicAura, 1);
+	reward(s, 5, toxicAura, 2);
+	reward(s, 0, toxicAura, 3);
+    reward(s, 15, toxicMeat, 1);
+	reward(s, 15, potato, 1);
+	reward(s, 10, potato, 2);
+	reward(s, 5, potato, 3);
+    reward(s, 10, antiInviNade, 1);
+    reward(s, 0, nade, 1);
+	
+    s = stage(20, &"^7Zom^9bie ^7Pow^9er^9: ^3Medium^9, ^7Ne^9xt ^7In^4: ^7");
+    reward(s, 5, nothing, 1);
+    reward(s, 5, speed, 1);
+	reward(s, 10, speed, 2);
+	reward(s, 0, speed, 3);
+    reward(s, 10, mutant, 1);
+	reward(s, 15, mutant, 2);
+	reward(s, 0, mutant, 3);
+	reward(s, 5, heavyMutant, 1);
+	reward(s, 5, heavyMutant, 2);
+	reward(s, 0, heavyMutant, 3);
+    reward(s, 0, armoured, 1);
+	reward(s, 0, armoured, 2);
+	reward(s, 0, armoured, 3);
+    reward(s, 10, highJump, 1);
+	reward(s, 5, highJump, 2);
+	reward(s, 0, highJump, 3);
+	reward(s, 5, bulletDodge, 1);
+	reward(s, 10, bulletDodge, 2);
+	reward(s, 0, bulletDodge, 3);
+    reward(s, 5, jumpySpawn, 1);
+	reward(s, 10, jumpySpawn, 2);
+	reward(s, 0, jumpySpawn, 3);
+    reward(s, 5, swoosh, 1);
+	reward(s, 10, swoosh, 2);
+	reward(s, 0, swoosh, 3);
+	reward(s, 5, absorption, 1);
+	reward(s, 10, absorption, 2);
+	reward(s, 0, absorption, 3);
+    reward(s, 5, toxicAura, 1);
+	reward(s, 10, toxicAura, 2);
+	reward(s, 0, toxicAura, 3);
+    reward(s, 15, toxicMeat, 1);
+	reward(s, 10, potato, 1);
+	reward(s, 10, potato, 2);
+	reward(s, 10, potato, 3);
+    reward(s, 10, antiInviNade, 1);
+    reward(s, 0, nade, 1);
 
-    s = stage(18, &"^7Zom^9bie ^7Pow^9er^9: ^3Medium^9, ^7Ne^9xt ^7In^4: ^7");
-    reward(s, 100, mutant, 2);
-    reward(s, 100, heavyMutant, 1);
-    reward(s, 100, absorption, 1);
-    reward(s, 100, swoosh, 1);
-    reward(s, 100, toxicAura, 1);
+    s = stage(40, &"^7Zom^9bie ^7Pow^9er^9: ^3Strong^9, ^7Ne^9xt ^7In^4: ^7");
+    reward(s, 0, nothing, 1);
+    reward(s, 0, speed, 1);
+	reward(s, 10, speed, 2);
+	reward(s, 5, speed, 3);
+    reward(s, 5, mutant, 1);
+	reward(s, 15, mutant, 2);
+	reward(s, 10, mutant, 3);
+	reward(s, 0, heavyMutant, 1);
+	reward(s, 5, heavyMutant, 2);
+	reward(s, 5, heavyMutant, 3);
+    reward(s, 5, armoured, 1);
+	reward(s, 0, armoured, 2);
+	reward(s, 0, armoured, 3);
+    reward(s, 10, highJump, 1);
+	reward(s, 5, highJump, 2);
+	reward(s, 0, highJump, 3);
+	reward(s, 5, bulletDodge, 1);
+	reward(s, 10, bulletDodge, 2);
+	reward(s, 0, bulletDodge, 3);
+    reward(s, 0, jumpySpawn, 1);
+	reward(s, 10, jumpySpawn, 2);
+	reward(s, 5, jumpySpawn, 3);
+    reward(s, 0, swoosh, 1);
+	reward(s, 10, swoosh, 2);
+	reward(s, 5, swoosh, 3);
+	reward(s, 0, absorption, 1);
+	reward(s, 10, absorption, 2);
+	reward(s, 5, absorption, 3);
+    reward(s, 0, toxicAura, 1);
+	reward(s, 10, toxicAura, 2);
+	reward(s, 5, toxicAura, 3);
+    reward(s, 10, toxicMeat, 1);
+	reward(s, 10, potato, 1);
+	reward(s, 10, potato, 2);
+	reward(s, 10, potato, 3);
+    reward(s, 5, antiInviNade, 1);
+    reward(s, 5, nade, 1);
 
-    s = stage(20, &"^7Zom^9bie ^7Pow^9er^9: ^3Strong^9, ^7Ne^9xt ^7In^4: ^7");
-    reward(s, 100, potato, 1);
-    reward(s, 100, mutant, 2);
-    reward(s, 100, heavyMutant, 1);
-    reward(s, 100, armoured, 1);
-    reward(s, 100, swoosh, 1);
+    s = stage(60, &"^7Zom^9bie ^7Pow^9er^9: ^3Brutal^9, ^7Ne^9xt ^7In^4: ^7");
+    reward(s, 0, nothing, 1);
+    reward(s, 0, speed, 1);
+	reward(s, 5, speed, 2);
+	reward(s, 10, speed, 3);
+    reward(s, 0, mutant, 1);
+	reward(s, 15, mutant, 2);
+	reward(s, 15, mutant, 3);
+	reward(s, 0, heavyMutant, 1);
+	reward(s, 10, heavyMutant, 2);
+	reward(s, 5, heavyMutant, 3);
+    reward(s, 10, armoured, 1);
+	reward(s, 5, armoured, 2);
+	reward(s, 0, armoured, 3);
+    reward(s, 10, highJump, 1);
+	reward(s, 5, highJump, 2);
+	reward(s, 0, highJump, 3);
+	reward(s, 0, bulletDodge, 1);
+	reward(s, 10, bulletDodge, 2);
+	reward(s, 5, bulletDodge, 3);
+    reward(s, 0, jumpySpawn, 1);
+	reward(s, 10, jumpySpawn, 2);
+	reward(s, 5, jumpySpawn, 3);
+    reward(s, 0, swoosh, 1);
+	reward(s, 10, swoosh, 2);
+	reward(s, 5, swoosh, 3);
+	reward(s, 0, absorption, 1);
+	reward(s, 10, absorption, 2);
+	reward(s, 5, absorption, 3);
+    reward(s, 0, toxicAura, 1);
+	reward(s, 10, toxicAura, 2);
+	reward(s, 5, toxicAura, 3);
+    reward(s, 10, toxicMeat, 1);
+	reward(s, 0, potato, 1);
+	reward(s, 10, potato, 2);
+	reward(s, 10, potato, 3);
+    reward(s, 0, antiInviNade, 1);
+    reward(s, 5, nade, 1);
 
-    s = stage(30, &"^7Zom^9bie ^7Pow^9er^9: ^3Brutal^9, ^7Ne^9xt ^7In^4: ^7");
-    reward(s, 100, absorption, 3);
-    reward(s, 100, swoosh, 2);
-    reward(s, 100, toxicAura, 1);
-
-    s = stage(40, &"^7Zom^9bie ^7Pow^9er^9: ^1Unstoppable");
-    reward(s,  5, bulletDodge, 3);
+    s = stage(100, &"^7Zom^9bie ^7Pow^9er^9: ^1Unstoppable");
+    reward(s, 0, nothing, 1);
+    reward(s, 0, speed, 1);
+	reward(s, 5, speed, 2);
+	reward(s, 10, speed, 3);
+    reward(s, 0, mutant, 1);
+	reward(s, 5, mutant, 2);
+	reward(s, 15, mutant, 3);
+	reward(s, 0, heavyMutant, 1);
+	reward(s, 15, heavyMutant, 2);
+	reward(s, 10, heavyMutant, 3);
+    reward(s, 0, armoured, 1);
+	reward(s, 10, armoured, 2);
+	reward(s, 5, armoured, 3);
+    reward(s, 5, highJump, 1);
+	reward(s, 5, highJump, 2);
+	reward(s, 5, highJump, 3);
+	reward(s, 0, bulletDodge, 1);
+	reward(s, 5, bulletDodge, 2);
+	reward(s, 10, bulletDodge, 3);
+    reward(s, 0, jumpySpawn, 1);
+	reward(s, 5, jumpySpawn, 2);
+	reward(s, 10, jumpySpawn, 3);
+    reward(s, 0, swoosh, 1);
+	reward(s, 5, swoosh, 2);
+	reward(s, 10, swoosh, 3);
+	reward(s, 0, absorption, 1);
+	reward(s, 5, absorption, 2);
+	reward(s, 10, absorption, 3);
+    reward(s, 0, toxicAura, 1);
+	reward(s, 5, toxicAura, 2);
+	reward(s, 10, toxicAura, 3);
+    reward(s, 10, toxicMeat, 1);
+	reward(s, 0, potato, 1);
+	reward(s, 10, potato, 2);
+	reward(s, 10, potato, 3);
+    reward(s, 0, antiInviNade, 1);
+    reward(s, 5, nade, 1);
 }
 
 // Helper functions
