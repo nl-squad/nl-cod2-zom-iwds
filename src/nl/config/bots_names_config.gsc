@@ -84,8 +84,6 @@ Configure()
     a[a.size] = "^3Phoenix^1| ^7ephialtes^1.";
     a[a.size] = "]^^55R-F^^77[^^00HUEL";
     a[a.size] = "^6Dai$y^7<^13";
-    a[a.size] = "^^00Gumowy#^2©››^^33×Han$ik";
-    a[a.size] = "^^00Gumowy#^2©››^^33×Calgon";
     a[a.size] = "BiggMarketChippy#1987";
     a[a.size] = "^^11{D-Company09}^^44Pvt.Ryan";
     a[a.size] = "^^00^7M^51^9lf x Str^5i^7ke^5*";

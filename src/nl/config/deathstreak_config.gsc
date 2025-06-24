@@ -1,21 +1,6 @@
 Configure()
 {
-    toxicAura = blanco\deathstreaks\toxic_aura::Grant;
-    swoosh = blanco\deathstreaks\swoosh::Grant;
-    nothing = blanco\deathstreaks\generic::GrantNothing;
-    speed = blanco\deathstreaks\generic::GrantSpeed;
-    potato = blanco\deathstreaks\generic::GrantPotato;
-    nade = blanco\deathstreaks\generic::GrantNade;
-    highJump = blanco\deathstreaks\high_jump::Grant;
-    toxicMeat = blanco\deathstreaks\toxic_meat::Grant;
-    mutant = blanco\deathstreaks\generic::GrantMutant;
-    heavyMutant = blanco\deathstreaks\generic::GrantHeavyMutant;
-    armoured = blanco\deathstreaks\generic::GrantArmoured;
-    antiInviNade = blanco\deathstreaks\generic::GrantAntiInviNade;
-    bulletDodge = blanco\deathstreaks\generic::GrantBulletDodge;
-    absorption = blanco\deathstreaks\absorption::Grant;
-
-    // Configuration beloew
+    // Configuration below
     level.DEATHSTREAK_speedHp = 200;
     level.DEATHSTREAK_speedGrade1Speed = 250;
     level.DEATHSTREAK_speedGrade2Speed = 270;
@@ -73,12 +58,39 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 96 * 96;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
 
-    // Stages
-    s = defineDeathStreakStage(0, &"^7Zom^9bie ^7Pow^9er^9: ^3Basic^9, ^7Ne^9xt ^7In^9: ^7");
-    defineDeathStreak(s, 100, absorption, 1);
-    defineDeathStreak(s, 100, absorption, 2);
-    defineDeathStreak(s, 100, absorption, 3);
+    // Available rewards
+    toxicAura = blanco\deathstreaks\toxic_aura::Grant;
+    swoosh = blanco\deathstreaks\swoosh::Grant;
+    nothing = blanco\deathstreaks\generic::GrantNothing;
+    speed = blanco\deathstreaks\generic::GrantSpeed;
+    potato = blanco\deathstreaks\generic::GrantPotato;
+    nade = blanco\deathstreaks\generic::GrantNade;
+    highJump = blanco\deathstreaks\high_jump::Grant;
+    toxicMeat = blanco\deathstreaks\toxic_meat::Grant;
+    mutant = blanco\deathstreaks\generic::GrantMutant;
+    heavyMutant = blanco\deathstreaks\generic::GrantHeavyMutant;
+    armoured = blanco\deathstreaks\generic::GrantArmoured;
+    antiInviNade = blanco\deathstreaks\generic::GrantAntiInviNade;
+    bulletDodge = blanco\deathstreaks\generic::GrantBulletDodge;
+    absorption = blanco\deathstreaks\absorption::Grant;
 
-    s = defineDeathStreakStage(99999, &"^7Zom^9bie ^7Pow^9er^9: ^1Unstoppable");
-    defineDeathStreak(s,  5, bulletDodge, 3);
+    // Stages
+    s = stage(0, &"^7Zom^9bie ^7Pow^9er^9: ^3Basic^9, ^7Ne^9xt ^7In^9: ^7");
+    reward(s, 100, absorption, 1);
+    reward(s, 100, absorption, 2);
+    reward(s, 100, absorption, 3);
+
+    s = stage(99999, &"^7Zom^9bie ^7Pow^9er^9: ^1Unstoppable");
+    reward(s,  5, bulletDodge, 3);
+}
+
+// Helper functions
+stage(minimumZombiePower, label)
+{
+    return blanco\deathstreaks\deathstreak::defineDeathStreakStage(minimumZombiePower, label);
+}
+
+reward(stage, chance, function, grade)
+{
+    return blanco\deathstreaks\deathstreak::defineDeathStreak(stage, chance, function, grade);
 }
