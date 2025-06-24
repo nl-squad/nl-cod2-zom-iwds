@@ -75,27 +75,26 @@ Configure()
     absorption = blanco\deathstreaks\absorption::Grant;
 
     // Stages
-    s = stage(0, &"^7Zom^9bie ^7Pow^9er^9: ^3Basic^9, ^7Ne^9xt ^7In^9: ^7");
-    reward(s, 100, potato, 1);
+    s = stage(0, &"^7Zom^9bie ^7Pow^9er^9: ^3Basic^9, ^7Ne^9xt ^7In^4: ^7");
     reward(s, 100, mutant, 2);
     reward(s, 100, heavyMutant, 1);
     reward(s, 100, nothing, 1);
 
-    s = stage(10, &"^7Zom^9bie ^7Pow^9er^9: ^3Medium^9, ^7Ne^9xt ^7In^9: ^7");
+    s = stage(18, &"^7Zom^9bie ^7Pow^9er^9: ^3Medium^9, ^7Ne^9xt ^7In^4: ^7");
     reward(s, 100, mutant, 2);
     reward(s, 100, heavyMutant, 1);
     reward(s, 100, absorption, 1);
     reward(s, 100, swoosh, 1);
     reward(s, 100, toxicAura, 1);
 
-    s = stage(20, &"^7Zom^9bie ^7Pow^9er^9: ^3Strong^9, ^7Ne^9xt ^7In^9: ^7");
+    s = stage(20, &"^7Zom^9bie ^7Pow^9er^9: ^3Strong^9, ^7Ne^9xt ^7In^4: ^7");
     reward(s, 100, potato, 1);
     reward(s, 100, mutant, 2);
     reward(s, 100, heavyMutant, 1);
     reward(s, 100, armoured, 1);
     reward(s, 100, swoosh, 1);
 
-    s = stage(30, &"^7Zom^9bie ^7Pow^9er^9: ^3Brutal^9, ^7Ne^9xt ^7In^9: ^7");
+    s = stage(30, &"^7Zom^9bie ^7Pow^9er^9: ^3Brutal^9, ^7Ne^9xt ^7In^4: ^7");
     reward(s, 100, absorption, 3);
     reward(s, 100, swoosh, 2);
     reward(s, 100, toxicAura, 1);
