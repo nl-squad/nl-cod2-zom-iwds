@@ -18,7 +18,7 @@ Configure()
 
     level.DEATHSTREAK_armouredHp = 800;
     level.DEATHSTREAK_armouredGrade1ExplodeAndFireDamageMultiplier = 0.6;
-    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.5
+    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.5;
     level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.4;
 	
 	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
