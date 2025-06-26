@@ -33,17 +33,17 @@ Configure()
     level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
     level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 
-    level.DEATHSTREAK_swooshGrade1MaxPower = 200;
-    level.DEATHSTREAK_swooshGrade2MaxPower = 400;
-    level.DEATHSTREAK_swooshGrade3MaxPower = 600;
+    level.DEATHSTREAK_swooshGrade1MaxPower = 300;
+    level.DEATHSTREAK_swooshGrade2MaxPower = 500;
+    level.DEATHSTREAK_swooshGrade3MaxPower = 700;
 	
-    level.DEATHSTREAK_absorptionMaxHealth = 800;
-	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 64 * 64;
-    level.DEATHSTREAK_absorptionGrade1TickDamage = 5;
-    level.DEATHSTREAK_absorptionGrade2RadiusSquared = 80 * 80;
-    level.DEATHSTREAK_absorptionGrade2TickDamage = 7;
-    level.DEATHSTREAK_absorptionGrade3RadiusSquared = 96 * 96;
-    level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
+    level.DEATHSTREAK_absorptionMaxHealth = 600;
+	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 96 * 96;
+    level.DEATHSTREAK_absorptionGrade1TickDamage = 10;
+    level.DEATHSTREAK_absorptionGrade2RadiusSquared = 128 * 120;
+    level.DEATHSTREAK_absorptionGrade2TickDamage = 10;
+    level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
+    level.DEATHSTREAK_absorptionGrade3TickDamage = 15;
 	
     level.TOXIC_MEAT_damage = 15;
 	level.DEATHSTREAK_toxicAuraGrade1RadiusSquared = 96 * 96;
