@@ -45,6 +45,7 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 96 * 96;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
 	
+    level.TOXIC_MEAT_damage = 15;
 	level.DEATHSTREAK_toxicAuraGrade1RadiusSquared = 96 * 96;
     level.DEATHSTREAK_toxicAuraEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
     level.DEATHSTREAK_toxicAuraGrade2RadiusSquared = 128 * 128;
