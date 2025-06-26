@@ -41,6 +41,7 @@ Configure()
 	
 	level.lvl["ban"] = 80;
     level.lvl["banlist"] = 80;
+	level.lvl["bots"] = 80;
 	level.lvl["forcelogout"] = 80;
 	level.lvl["say"] = 80;
     level.lvl["saybold"] = 80;
@@ -82,7 +83,6 @@ Configure()
 	level.lvl["sp"] = 40;
 	level.lvl["warp"] = 40;
 	
-	level.lvl["bots"] = 60;
 	level.lvl["delwarp"] = 60;
 	level.lvl["god"] = 60;
 	level.lvl["money"] = 60;
