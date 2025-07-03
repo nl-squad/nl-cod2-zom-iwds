@@ -45,20 +45,13 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 15;
 	
-    level.TOXIC__damage = 15;
-	level.DEATHSTREAK_toxicGrade1RadiusSquared = 96 * 96;
-    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_.efx");
-    level.DEATHSTREAK_toxicGrade2RadiusSquared = 128 * 128;
-    level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_.efx");
-    level.DEATHSTREAK_toxicGrade3RadiusSquared = 160 * 160;
-    level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_.efx");
-
-    level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
-    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_.efx");
+    level.DEATHSTREAK_toxicDamage = 15;
+	level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
+    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_64.efx");
     level.DEATHSTREAK_toxicGrade2RadiusSquared = 72 * 72;
-    level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_.efx");
+    // level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_72.efx");
     level.DEATHSTREAK_toxicGrade3RadiusSquared = 80 * 80;
-    level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_.efx");
+    // level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_80.efx");
 
     // Available rewards
     
