@@ -45,20 +45,20 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 15;
 	
-    level.TOXIC_MEAT_damage = 15;
-	level.DEATHSTREAK_toxicAuraGrade1RadiusSquared = 96 * 96;
-    level.DEATHSTREAK_toxicAuraEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicAuraGrade2RadiusSquared = 128 * 128;
-    level.DEATHSTREAK_toxicAuraEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicAuraGrade3RadiusSquared = 160 * 160;
-    level.DEATHSTREAK_toxicAuraEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.TOXIC__damage = 15;
+	level.DEATHSTREAK_toxicGrade1RadiusSquared = 96 * 96;
+    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_.efx");
+    level.DEATHSTREAK_toxicGrade2RadiusSquared = 128 * 128;
+    level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_.efx");
+    level.DEATHSTREAK_toxicGrade3RadiusSquared = 160 * 160;
+    level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_.efx");
 
-    level.DEATHSTREAK_toxicMeatGrade1RadiusSquared = 64 * 64;
-    level.DEATHSTREAK_toxicMeatEffectLevel1 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicMeatGrade2RadiusSquared = 72 * 72;
-    level.DEATHSTREAK_toxicMeatEffectLevel2 = loadFx("fx/nl/nl_toxic_meat.efx");
-    level.DEATHSTREAK_toxicMeatGrade3RadiusSquared = 80 * 80;
-    level.DEATHSTREAK_toxicMeatEffectLevel3 = loadFx("fx/nl/nl_toxic_meat.efx");
+    level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
+    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_.efx");
+    level.DEATHSTREAK_toxicGrade2RadiusSquared = 72 * 72;
+    level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_.efx");
+    level.DEATHSTREAK_toxicGrade3RadiusSquared = 80 * 80;
+    level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_.efx");
 
     // Available rewards
     
@@ -76,8 +76,7 @@ Configure()
 	swoosh = blanco\deathstreaks\swoosh::Grant;
 	
 	absorption = blanco\deathstreaks\absorption::Grant;
-	toxicAura = blanco\deathstreaks\toxic_aura::Grant;
-	toxicMeat = blanco\deathstreaks\toxic_meat::Grant;
+	toxic = blanco\deathstreaks\toxic::Grant;
 	
 	potato = blanco\deathstreaks\generic::GrantPotato;
 	antiInviNade = blanco\deathstreaks\generic::GrantAntiInviNade;
@@ -113,10 +112,9 @@ Configure()
 	reward(s, 10, absorption, 1);
 	reward(s, 5, absorption, 2);
 	reward(s, 0, absorption, 3);
-    reward(s, 10, toxicAura, 1);
-	reward(s, 5, toxicAura, 2);
-	reward(s, 0, toxicAura, 3);
-    reward(s, 15, toxicMeat, 1);
+    reward(s, 10, toxic, 1);
+	reward(s, 5, toxic, 2);
+	reward(s, 0, toxic, 3);
 	reward(s, 15, potato, 1);
 	reward(s, 10, potato, 2);
 	reward(s, 5, potato, 3);
@@ -152,10 +150,9 @@ Configure()
 	reward(s, 5, absorption, 1);
 	reward(s, 10, absorption, 2);
 	reward(s, 0, absorption, 3);
-    reward(s, 5, toxicAura, 1);
-	reward(s, 10, toxicAura, 2);
-	reward(s, 0, toxicAura, 3);
-    reward(s, 15, toxicMeat, 1);
+    reward(s, 5, toxic, 1);
+	reward(s, 10, toxic, 2);
+	reward(s, 0, toxic, 3);
 	reward(s, 10, potato, 1);
 	reward(s, 10, potato, 2);
 	reward(s, 10, potato, 3);
@@ -191,10 +188,9 @@ Configure()
 	reward(s, 0, absorption, 1);
 	reward(s, 10, absorption, 2);
 	reward(s, 5, absorption, 3);
-    reward(s, 0, toxicAura, 1);
-	reward(s, 10, toxicAura, 2);
-	reward(s, 5, toxicAura, 3);
-    reward(s, 10, toxicMeat, 1);
+    reward(s, 0, toxic, 1);
+	reward(s, 10, toxic, 2);
+	reward(s, 5, toxic, 3);
 	reward(s, 10, potato, 1);
 	reward(s, 10, potato, 2);
 	reward(s, 10, potato, 3);
@@ -230,10 +226,9 @@ Configure()
 	reward(s, 0, absorption, 1);
 	reward(s, 10, absorption, 2);
 	reward(s, 5, absorption, 3);
-    reward(s, 0, toxicAura, 1);
-	reward(s, 10, toxicAura, 2);
-	reward(s, 5, toxicAura, 3);
-    reward(s, 10, toxicMeat, 1);
+    reward(s, 0, toxic, 1);
+	reward(s, 10, toxic, 2);
+	reward(s, 5, toxic, 3);
 	reward(s, 0, potato, 1);
 	reward(s, 10, potato, 2);
 	reward(s, 10, potato, 3);
@@ -269,10 +264,9 @@ Configure()
 	reward(s, 0, absorption, 1);
 	reward(s, 5, absorption, 2);
 	reward(s, 10, absorption, 3);
-    reward(s, 0, toxicAura, 1);
-	reward(s, 5, toxicAura, 2);
-	reward(s, 10, toxicAura, 3);
-    reward(s, 10, toxicMeat, 1);
+    reward(s, 0, toxic, 1);
+	reward(s, 5, toxic, 2);
+	reward(s, 10, toxic, 3);
 	reward(s, 0, potato, 1);
 	reward(s, 10, potato, 2);
 	reward(s, 10, potato, 3);
