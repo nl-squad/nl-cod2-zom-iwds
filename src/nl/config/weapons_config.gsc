@@ -86,7 +86,7 @@ Configure()
 	
 	defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponRank("kar98k_sniper_mp", 200);
-    addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 20);
+    addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 40);
 
     // Machine Guns
     defineWeapon(6, "mp40_mp", "MP40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -108,7 +108,7 @@ Configure()
 
     defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("thompson_mp", 100);
-    addWeaponToMysteryBox("thompson_mp", "xmodel/weapon_thompson", 10, 20);
+    addWeaponToMysteryBox("thompson_mp", "xmodel/weapon_thompson", 10, 40);
 
     defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("scar_mp", 2, 113, 9500);
@@ -132,7 +132,7 @@ Configure()
 	
 	defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("pps_mp", 250);
-    addWeaponToMysteryBox("pps_mp", "xmodel/weapon_pps43", 10, 20);
+    addWeaponToMysteryBox("pps_mp", "xmodel/weapon_pps43", 10, 40);
 
 
     // Heavy weapons
@@ -152,7 +152,7 @@ Configure()
 
     defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank("bren_mp", 150);
-    addWeaponToMysteryBox("bren_mp", "xmodel/weapon_bren", 10, 20);
+    addWeaponToMysteryBox("bren_mp", "xmodel/weapon_bren", 10, 40);
 
     defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase("aa12_mp", 3, 112, 7500);
@@ -168,16 +168,16 @@ Configure()
 	
 	defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank("shotgun_mp", 300);
-    addWeaponToMysteryBox("shotgun_mp", "xmodel/weapon_trenchgun", 10, 20);
+    addWeaponToMysteryBox("shotgun_mp", "xmodel/weapon_trenchgun", 10, 40);
 
 
     // Special
     defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
 	addWeaponPurchase("tesla_mp", 4, 110, 14500);
-    addWeaponToMysteryBox("tesla_mp", "xmodel/superweap_worldmodel", 10, 20);
+    addWeaponToMysteryBox("tesla_mp", "xmodel/superweap_worldmodel", 10, 40);
 
     defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-    addWeaponToMysteryBox("raygun_mp", "xmodel/van_raygun", 10, 20);
+    addWeaponToMysteryBox("raygun_mp", "xmodel/van_raygun", 10, 40);
 
 
     // Secondary weapons
@@ -229,7 +229,7 @@ Configure()
     defineNonSelectable(123, "minigun_mp", level.KIND_OTHER);
     defineNonSelectable(125, "binoculars_mp", level.KIND_OTHER);
     defineNonSelectable(126, "wunderwaffe_mp", level.KIND_OTHER);
-    addWeaponToMysteryBox("wunderwaffe_mp", "xmodel/weapon_wunderwaffe_dg2", 25, 50);
+    addWeaponToMysteryBox("wunderwaffe_mp", "xmodel/weapon_wunderwaffe_dg2", 50, 150);
 
 
     // Final configuration
