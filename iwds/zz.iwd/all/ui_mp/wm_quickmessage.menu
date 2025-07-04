@@ -109,6 +109,12 @@ calc#include "ui_mp/menudef.h"
 			uiScript openMenuOnDvar ui_vip 1 vips;
 			scriptMenuResponse "VIP";
 		}
+		execKey "5"
+		{
+			close quickmessage;
+			uiScript openMenuOnDvar ui_vip 1 vips;
+			scriptMenuResponse "VIP";
+		}
 		execKey "x"
 		{
 			close quickmessage;
