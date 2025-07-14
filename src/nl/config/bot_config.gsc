@@ -8,6 +8,7 @@ Configure()
 	level.lvl["namecheat"] = 10;
     level.lvl["report"] = 10;
 	level.lvl["maps"] = 10;
+	level.lvl["timescale"] = 80;
 
 	level.lvl["ci_all"] = 20;
 	level.lvl["displayOnAdmins"] = 20;
