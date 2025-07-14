@@ -37,6 +37,7 @@ Configure()
     level.DEATHSTREAK_swooshGrade2MaxPower = 500;
     level.DEATHSTREAK_swooshGrade3MaxPower = 700;
 	
+	level.DEATHSTREAK_absorptionHp = 400;
     level.DEATHSTREAK_absorptionMaxHealth = 800;
 	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 96 * 96;
     level.DEATHSTREAK_absorptionGrade1TickDamage = 5;
@@ -76,7 +77,7 @@ Configure()
 	nade = blanco\deathstreaks\generic::GrantNade;
 
     // Stages
-    s = stage(0, &"^7Zom^9bie ^7Pow^9er^9: ^7Basic^9, ^7Ne^9xt ^7In^4: ^7");
+    s = stage(0, &"Zombie Power^9: ^7Basic^9, ^7Next In^9: ^7");
     reward(s, 15, nothing, 1);
     reward(s, 15, speed, 1);
 	reward(s, 10, speed, 2);
