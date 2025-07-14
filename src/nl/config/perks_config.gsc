@@ -10,7 +10,20 @@ Configure()
     level.PERK_spawnProtectionEscapeDuration = 10;
 	level.PERK_immortalSelfDamageMultiplier = 0.05;
     level.PERK_protectLabel = &"^5Protect: ";
+    level.PERK_speedLabel = &"^3Speed: ";
     level.PERK_jumpySpawnLabel = &"^3Jumpy Spawn: ";
+    level.PERK_potatoLabel = &"^3Potato: ";
+    level.PERK_nadeLabel = &"^3Nade: ";
+    level.PERK_highJumpLabel = &"^3High Jump: ";
+    level.PERK_toxicLabel = &"^3Toxic: ";
+    level.PERK_mutantLabel = &"^3Mutant: ";
+    level.PERK_heavyMutantLabel = &"^3Heavy Mutant: ";
+    level.PERK_armouredLabel = &"^3Armoured: ";
+	level.PERK_antiInviNadesLabel = &"^3Anti Invi Nades: ";
+    level.PERK_bulletDodgeLabel = &"^3Bullet Dodge: ";
+    level.PERK_swooshLabel = &"^3Swoosh: ";
+    level.PERK_toxicAuraLabel = &"^3Toxic Aura: ";
+    level.PERK_absorptionLabel = &"^3Absorption: ";
     level.PERK_laserShader = "nl_laser";
     level.PERK_reconShader = "nl_hud_recon";
     level.PERK_explodeBulletChance = 4;
@@ -20,7 +33,20 @@ Configure()
     level.PERK_pistoleroDamageMultiplier = 1.5;
 
     preCacheString(level.PERK_protectLabel);
+	preCacheString(level.PERK_speedLabel);
     preCacheString(level.PERK_jumpySpawnLabel);
+	preCacheString(level.PERK_potatoLabel);
+	preCacheString(level.PERK_nadeLabel);
+	preCacheString(level.PERK_highJumpLabel);
+	preCacheString(level.PERK_toxicLabel);
+	preCacheString(level.PERK_mutantLabel);
+	preCacheString(level.PERK_heavyMutantLabel);
+	preCacheString(level.PERK_armouredLabel);
+	preCacheString(level.PERK_antiInviNadesLabel);
+	preCacheString(level.PERK_bulletDodgeLabel);
+	preCacheString(level.PERK_swooshLabel);
+	preCacheString(level.PERK_toxicAuraLabel);
+	preCacheString(level.PERK_absorptionLabel);
     preCacheShader(level.PERK_laserShader);
     preCacheShader(level.PERK_reconShader);
 
