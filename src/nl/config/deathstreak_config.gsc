@@ -39,6 +39,7 @@ Configure()
     level.DEATHSTREAK_swooshGrade2MaxPower = 500;
     level.DEATHSTREAK_swooshGrade3MaxPower = 700;
 	
+    level.DEATHSTREAK_absorptionHp = 2137;
     level.DEATHSTREAK_absorptionMaxHealth = 400;
 	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 96 * 96;
     level.DEATHSTREAK_absorptionGrade1TickDamage = 20;
