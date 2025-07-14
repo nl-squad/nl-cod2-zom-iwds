@@ -25,6 +25,7 @@ Configure()
     level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
     level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
 
+    level.DEATHSTREAK_bulletDodgeHp = 420;
     level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.15;
     level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.2;
     level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.25;
@@ -33,6 +34,7 @@ Configure()
     level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
     level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 
+    level.DEATHSTREAK_swooshHp = 600;
     level.DEATHSTREAK_swooshGrade1MaxPower = 300;
     level.DEATHSTREAK_swooshGrade2MaxPower = 500;
     level.DEATHSTREAK_swooshGrade3MaxPower = 700;
@@ -46,6 +48,7 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3TickDamage = 20;
 	
     level.DEATHSTREAK_toxicDamage = 15;
+	level.DEATHSTREAK_toxicHp = 100;
 	level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
     level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_64.efx");
     level.DEATHSTREAK_toxicGrade2RadiusSquared = 72 * 72;
