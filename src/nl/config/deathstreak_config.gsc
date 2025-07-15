@@ -115,7 +115,7 @@ Configure()
     reward(s, 10, antiInviNade, 1);
     reward(s, 0, nade, 1);
 	
-    s = stage(10, &"^7Zom^9bie ^7Pow^9er^9: ^3Medium^9, ^7Ne^9xt ^7In^4: ^7");
+    s = stage(10, &"Zombie Power^9: ^3Medium^9, ^7Next In^9: ^7");
     reward(s, 5, nothing, 1);
     reward(s, 10, speed, 1);
 	reward(s, 15, speed, 2);
@@ -153,7 +153,7 @@ Configure()
     reward(s, 10, antiInviNade, 1);
     reward(s, 0, nade, 1);
 
-    s = stage(20, &"^7Zom^9bie ^7Pow^9er^9: ^8Strong^9, ^7Ne^9xt ^7In^4: ^7");
+    s = stage(20, &"Zombie Power^9: ^8Strong^9, ^7Next In^9: ^7");
     reward(s, 0, nothing, 1);
     reward(s, 5, speed, 1);
 	reward(s, 15, speed, 2);
@@ -191,7 +191,7 @@ Configure()
     reward(s, 5, antiInviNade, 1);
     reward(s, 5, nade, 1);
 
-    s = stage(30, &"^7Zom^9bie ^7Pow^9er^9: ^1Brutal^9, ^7Ne^9xt ^7In^4: ^7");
+	s = stage(30, &"Zombie Power^9: ^1Brutal^9, ^7Next In^9: ^7");
     reward(s, 0, nothing, 1);
     reward(s, 0, speed, 1);
 	reward(s, 15, speed, 2);
@@ -229,7 +229,7 @@ Configure()
     reward(s, 5, antiInviNade, 1);
     reward(s, 5, nade, 1);
 
-    s = stage(40, &"^7Zom^9bie ^7Pow^9er^9: ^6Unstoppable");
+    s = stage(40, &"Zombie Power^9: ^6Unstoppable");
     reward(s, 0, nothing, 1);
     reward(s, 0, speed, 1);
 	reward(s, 0, speed, 2);
