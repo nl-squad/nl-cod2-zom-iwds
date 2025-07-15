@@ -205,9 +205,9 @@
 		SKIN("3", ORIGIN_CHOICE4, "^83 500 ^9nL Tokens ^4|", "Ghillied Up Sniper", "19", "nl_char_sniper")
 		SKIN("3", ORIGIN_CHOICE5, "^85 000 ^9nL Tokens ^4|", "SAS", "15", "nl_char_sas")
 		SKIN("3", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens ^4|", "US Secret Service", "13", "nl_char_secret_service")
-		SKIN("3", ORIGIN_CHOICE7, "^810 000 ^9nL Tokens ^4|", "US Navy SEALs", "41", "nl_char_oma_usa_seal")
+		SKIN("3", ORIGIN_CHOICE7, "^810 000 ^9nL Tokens ^4|", "US Navy SEALs", "41", "nl_char_usa_seal")
 
-		SKIN("4", ORIGIN_CHOICE2, "^3Annual Achievements^4|", "CryNet Nanosuit", "45", "nl_char_oma_nano_suit")
+		SKIN("4", ORIGIN_CHOICE2, "^3Annual Achievements^4|", "CryNet Nanosuit", "45", "nl_char_nano_suit")
         SKIN("4", ORIGIN_CHOICE3, "^8Patron ^4|", "Terminator", "12", "nl_char_terminator")   
 		SKIN("4", ORIGIN_CHOICE5, "^83 500 ^9nL Tokens ^4|", "Neo", "16", "nl_char_neo")
 		SKIN("4", ORIGIN_CHOICE6, "^85 000 ^9nL Tokens ^4|", "Daryl Dixon", "22", "nl_char_daryl")	

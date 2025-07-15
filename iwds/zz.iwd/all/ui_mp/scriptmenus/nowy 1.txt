@@ -1,9 +1,0 @@
-	addNewSkin(41, "american", "oma_usa_seal", a("xmodel/oma_usa_seal"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(42, "american", "zk_john_cena", a("xmodel/zk_john_cena"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(43, "american", "zk_stormtrooper", a("xmodel/zk_stormtrooper"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(44, "american", "oma_farmgirl_plr", a("xmodel/oma_farmgirl_plr"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(45, "american", "oma_nano_suit", a("xmodel/oma_nano_suit"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(46, "american", "sazomb", a("xmodel/sazomb"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(47, "american", "oma_freeze_man", a("xmodel/oma_freeze_man"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(48, "american", "zk_zom2", a("xmodel/zk_zom2"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
-    addNewSkin(49, "american", "zk_headless_zom", a("xmodel/zk_headless_zom"), undefined, undefined, "xmodel/viewhands_usmc", 0, undefined);
