@@ -25,6 +25,7 @@ Configure()
     level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
     level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
 
+	level.DEATHSTREAK_bulletDodgeHp = 300;
     level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.15;
     level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.2;
     level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.25;
