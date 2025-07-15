@@ -84,7 +84,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			0 0 240 90
 			origin			ORIGIN_WINDOW1
-			text			"Primary weapon"
+			text			"Primary Weapon"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		230
@@ -121,7 +121,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			0 0 115 90
 			origin			ORIGIN_WINDOW2
-			text			"Tactical perk"
+			text			"Tactical Perk"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -176,7 +176,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			125 0 115 90
 			origin			ORIGIN_WINDOW2
-			text			"Combat perk"
+			text			"Combat Perk"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -342,7 +342,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
-			text			"Zombie weapon"
+			text			"Zombie Profile"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -506,7 +506,7 @@
 			textalign 	ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"Load class ^31"
+			text			"Load Class ^31"
 			visible			1
 			mouseEnter
 			{
@@ -555,7 +555,7 @@
 			textalign 		ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"Load class ^32"
+			text			"Load Class ^32"
 			visible			1
 			mouseEnter
 			{
@@ -604,7 +604,7 @@
 			textalign 		ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"^3VIP ^7Load class ^33"
+			text			"^3VIP ^7Load Class ^33"
 			visible			1
 			mouseEnter
 			{
@@ -653,7 +653,7 @@
 			textalign 		ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"Save class ^31"
+			text			"Save Class ^31"
 			visible			1
 			mouseEnter
 			{
@@ -702,7 +702,7 @@
 			textalign 		ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"Save class ^32"
+			text			"Save Class ^32"
 			visible			1
 			mouseEnter
 			{
@@ -751,7 +751,7 @@
 			textalign 		ITEM_ALIGN_CENTER
 			textalignx		40
 			textaligny		12
-			text			"^3VIP ^7Save class ^33"
+			text			"^3VIP ^7Save Class ^33"
 			visible			1
 			mouseEnter
 			{
