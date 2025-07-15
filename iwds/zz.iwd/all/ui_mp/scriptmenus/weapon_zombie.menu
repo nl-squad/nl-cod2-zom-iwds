@@ -174,7 +174,7 @@
 		
         ZWP(ORIGIN_CHOICE6, "^4|", "Speed", "1", "^7Ability^9: ^7Faster Movement \n^7Level 1^9: ^3+30% \n^7Level 2^9: ^3+40% \n^7Level 3^9: ^3+50% \n \n^7Health Points^9: ^3200")
         ZWP(ORIGIN_CHOICE7, "^4|", "Mutant", "2", "^7Ability^9#^71^9: ^7More Health Points \n^7Level 1^9: ^3550 ^9HP \n^7Level 2^9: ^3600 ^9HP \n^7Level 3^9: ^3650 ^9HP \n ^7Ability^9#^72^9: ^7Reduced Damage for Explosions^9/^7Fire^9: ^3-10%")
-		ZWP(ORIGIN_CHOICE8, "^4|", "Heavy Mutant", "3", "^7Ability^9#^71^9: ^7More Health Points \n^7Level 1^9: ^3750 ^9HP \n^7Level 2^9: ^3800 ^9HP \n^7Level 3^9: ^3850 ^9HP \n ^7Ability^9#^72^9: ^7Reduced Damage for Explosions^9/^7Fire^9: ^3-20%
+		ZWP(ORIGIN_CHOICE8, "^4|", "Heavy Mutant", "3", "^7Ability^9#^71^9: ^7More Health Points \n^7Level 1^9: ^3750 ^9HP \n^7Level 2^9: ^3800 ^9HP \n^7Level 3^9: ^3850 ^9HP \n ^7Ability^9#^72^9: ^7Reduced Damage for Explosions^9/^7Fire^9: ^3-20%")
         ZWP(ORIGIN_CHOICE9, "^4|", "Armoured", "4", "^7Ability^9: ^7Reduced Damage for Explosions^9/^7Fire \n^7Level 1^9: ^3-40% \n^7Level 2^9: ^3-50% \n^7Level 3^9: ^3-60% \n \n^7Health Points^9: ^3800")
 		ZWP(ORIGIN_CHOICE10, "^4|", "High Jump", "5", "^7Ability^9: ^7High Jump Power \n^7Level 1^9: ^3+100% ^9Power \n^7Level 2^9: ^3+200% ^9Power \n^7Level 3^9: ^3+300% ^9Power \n \n^7Health Points^9: ^3300")
 		ZWP(ORIGIN_CHOICE11, "^4|", "Skeleton", "6", "^7Ability^9: ^7Dodging Bullet Chance \n^7Level 1^9: ^315% \n^7Level 2^9: ^320% \n^7Level 3^9: ^325% \n \n^7Health Points^9: ^3300")
