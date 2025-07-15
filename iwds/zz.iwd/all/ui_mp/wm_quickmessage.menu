@@ -132,7 +132,7 @@ calc#include "ui_mp/menudef.h"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^71^9. ^9Voi^7ce ^9Mess^7ages ^4` \n^72^9. ^9Pla^7yer ^9Opt^7ions ^4` \n^73^9. ^9Hunt^7ers ^9Me^7nu ^4` \n^74^9. ^9VIP ^9Me^7nu ^4` \n"
+			text			"^71^9. Voice Messages ^4` \n^72^9. Player Options ^4` \n^73^9. Hunters Menu ^4` \n^74^9. VIP Menu ^4` \n"
 			decoration
 		}
 	}
