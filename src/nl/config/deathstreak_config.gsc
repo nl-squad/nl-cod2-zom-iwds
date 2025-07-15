@@ -252,7 +252,7 @@ stage(minimumZombiePower, label)
     return blanco\deathstreaks\deathstreak::defineDeathStreakStage(minimumZombiePower, label);
 }
 
-reward(stage, chance, function, grade)
+reward(stage, chance, name, grade)
 {
-    return blanco\deathstreaks\deathstreak::defineDeathStreak(stage, chance, function, grade);
+    return blanco\deathstreaks\deathstreak::defineDeathStreak(stage, chance, name, grade);
 }
