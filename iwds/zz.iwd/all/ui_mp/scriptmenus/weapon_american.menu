@@ -366,7 +366,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			226 77 25 14
+			rect			226 77 30 14
 			origin			ORIGIN_WINDOW4
 			textscale		.18
 			textalign 		ITEM_ALIGN_LEFT
