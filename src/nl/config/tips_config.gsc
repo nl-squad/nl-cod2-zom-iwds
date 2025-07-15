@@ -20,11 +20,14 @@ Configure()
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBoxes";
-	tips[tips.size] = "Nazi Zombie = Basic one with 300 HP";
+	tips[tips.size] = "Nazi Zombie = Basic one, 300 HP";
 	tips[tips.size] = "Black & Skinny Zombie = Speed, 200 HP (-100)";
-	tips[tips.size] = "Red & Fat Zombie = Mutant";
-	tips[tips.size] = "Black & Fat Zombie = Strong Mutant";
-	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant";
+	tips[tips.size] = "Slasher = Mutant, 550-650 HP";
+	tips[tips.size] = "Black & Fat Zombie = Strong Mutant, 750-850 HP";
+	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant, 800 HP";
+	tips[tips.size] = "Red & Fat Zombie = Jumpy Spawn, 300 HP";
+	tips[tips.size] = "Alien = Health Absorption Ability";
+	tips[tips.size] = "Skeleton = Dodges Bullets Ability";
 	tips[tips.size] = "The Nexus is a previous map winner (the Highest Score)";
 	tips[tips.size] = "Some Weapons are temporarily removed from the Rotation";
 	tips[tips.size] = "To save the Map Top Scores, there must be at least 12 Real Players online";
