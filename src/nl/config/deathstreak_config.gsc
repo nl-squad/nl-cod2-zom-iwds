@@ -59,7 +59,7 @@ Configure()
 
     level.DEATHSTREAK_typeNothing = deathstreak("nothing", blanco\deathstreaks\generic::GrantNothing);
     level.DEATHSTREAK_typeSpeed = deathstreak("speed", blanco\deathstreaks\generic::GrantSpeed);
-    level.DEATHSTREAK_typeJumpySpawn = deathstreak("jumpy", blanco\deathstreaks\generic::GrantMutant);
+    level.DEATHSTREAK_typeJumpySpawn = deathstreak("jumpy", blanco\deathstreaks\jumpy_spawn::Grant);
     level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
     level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
     level.DEATHSTREAK_typeHighJump = deathstreak("high_jump", blanco\deathstreaks\high_jump::Grant);
