@@ -6,7 +6,7 @@ Particle
 
 	spawnFlags			evenDistribution
 
-	count				15 20
+	count				5 15
 
 	life				1500 3500
 
@@ -26,8 +26,8 @@ Particle
 	{
 		curve
 		[
-			0 0 0.6545 0
-			1 0 0.8953 0
+			0 0 0.8063 0.2251
+			1 0 1 0.4188
 		]
 	}
 
