@@ -8,6 +8,7 @@ Main()
     config\perks_config::Configure();
     config\rules_config::Configure();
     config\shops_config::Configure();
+    config\skins_config::Configure();
     config\tips_config::Configure();
     config\voice_config::Configure();
     config\weapons_config::Configure();
