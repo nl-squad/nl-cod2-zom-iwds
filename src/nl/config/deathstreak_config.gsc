@@ -35,9 +35,9 @@ Configure()
     level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 	
 	level.DEATHSTREAK_swooshHp = 300;
-    level.DEATHSTREAK_swooshGrade1MaxPower = 250;
-    level.DEATHSTREAK_swooshGrade2MaxPower = 450;
-    level.DEATHSTREAK_swooshGrade3MaxPower = 650;
+    level.DEATHSTREAK_swooshGrade1MaxPower = 100;
+    level.DEATHSTREAK_swooshGrade2MaxPower = 200;
+    level.DEATHSTREAK_swooshGrade3MaxPower = 300;
 	
 	level.DEATHSTREAK_absorptionHp = 400;
     level.DEATHSTREAK_absorptionMaxHealth = 800;
