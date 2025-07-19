@@ -21,10 +21,6 @@ Configure()
     level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.5;
     level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.4;
 	
-	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
-    level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
-    level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
-
 	level.DEATHSTREAK_bulletDodgeHp = 300;
     level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.15;
     level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.2;
@@ -38,6 +34,10 @@ Configure()
     level.DEATHSTREAK_swooshGrade1MaxPower = 100;
     level.DEATHSTREAK_swooshGrade2MaxPower = 200;
     level.DEATHSTREAK_swooshGrade3MaxPower = 300;
+	
+	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
+    level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
+    level.DEATHSTREAK_highJumpGrade3BoostPower = 7000;
 	
 	level.DEATHSTREAK_absorptionHp = 400;
     level.DEATHSTREAK_absorptionMaxHealth = 800;
@@ -58,19 +58,19 @@ Configure()
     level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_80.efx");
 
     level.DEATHSTREAK_typeNothing = deathstreak("nothing", blanco\deathstreaks\generic::GrantNothing);
-    level.DEATHSTREAK_typeSpeed = deathstreak("speed", blanco\deathstreaks\generic::GrantSpeed);
-    level.DEATHSTREAK_typeJumpySpawn = deathstreak("jumpy", blanco\deathstreaks\jumpy_spawn::Grant);
-    level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
-    level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
-    level.DEATHSTREAK_typeHighJump = deathstreak("high_jump", blanco\deathstreaks\high_jump::Grant);
-    level.DEATHSTREAK_typeMutant = deathstreak("mutant", blanco\deathstreaks\generic::GrantMutant);
+	level.DEATHSTREAK_typeSpeed = deathstreak("speed", blanco\deathstreaks\generic::GrantSpeed);
+	level.DEATHSTREAK_typeMutant = deathstreak("mutant", blanco\deathstreaks\generic::GrantMutant);
     level.DEATHSTREAK_typeHeavyMutant = deathstreak("heavy_mutant", blanco\deathstreaks\generic::GrantHeavyMutant);
     level.DEATHSTREAK_typeArmoured = deathstreak("armoured", blanco\deathstreaks\generic::GrantArmoured);
-    level.DEATHSTREAK_typeAntiInviNade = deathstreak("anti_invi", blanco\deathstreaks\generic::GrantAntiInviNade);
-    level.DEATHSTREAK_typeBulletDodge = deathstreak("bullet_dodge", blanco\deathstreaks\generic::GrantBulletDodge);
-    level.DEATHSTREAK_typeSwoosh = deathstreak("swoosh", blanco\deathstreaks\swoosh::Grant);
-    level.DEATHSTREAK_typeToxic = deathstreak("toxic", blanco\deathstreaks\toxic::Grant);
-    level.DEATHSTREAK_typeAbsorption = deathstreak("absorption", blanco\deathstreaks\absorption::Grant);
+	level.DEATHSTREAK_typeBulletDodge = deathstreak("bullet_dodge", blanco\deathstreaks\generic::GrantBulletDodge);
+	level.DEATHSTREAK_typeJumpySpawn = deathstreak("jumpy", blanco\deathstreaks\jumpy_spawn::Grant);
+	level.DEATHSTREAK_typeSwoosh = deathstreak("swoosh", blanco\deathstreaks\swoosh::Grant);
+	level.DEATHSTREAK_typeHighJump = deathstreak("high_jump", blanco\deathstreaks\high_jump::Grant);
+	level.DEATHSTREAK_typeAbsorption = deathstreak("absorption", blanco\deathstreaks\absorption::Grant);
+	level.DEATHSTREAK_typeToxic = deathstreak("toxic", blanco\deathstreaks\toxic::Grant);
+    level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
+	level.DEATHSTREAK_typeAntiInviNade = deathstreak("anti_invi", blanco\deathstreaks\generic::GrantAntiInviNade);
+    level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
 
     // Stages
     s = stage(0, &"Zombie Power^9: ^7Basic^9, ^7Next In^9: ^7");
