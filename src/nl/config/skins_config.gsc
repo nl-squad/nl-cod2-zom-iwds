@@ -137,7 +137,7 @@ Configure()
     hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
     hunterSkin(52, "zk_clown_zombie", "zk_clown_zombie");
 
-    // Bot skins (skin id, chance)
+    // Bot skins
     enableBotHunterSkinSelection(2, 2);
 	enableBotHunterSkinSelection(3, 2);
 	enableBotHunterSkinSelection(4, 2);
