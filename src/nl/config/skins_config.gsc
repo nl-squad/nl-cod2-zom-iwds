@@ -78,31 +78,31 @@ Configure()
     // Zombies
     level.SKINS_defaultZombie = zombieSkin(1, "iwx_xenonnazi", "iwx_xenonnazi", "viewmodel_hands_german_winter");
     level.SKINS_mutant = zombieSkin(1001, "iwx_slasher", "iwx_slasher", "viewmodel_hands_british_bare");
-    level.SKINS_heavyMutant = zombieSkin(1002, "vanfreddyZ", "vanfreddyZ", "viewmodel_hands_cloth");
-    level.SKINS_speed = zombieSkin(1003, "charple", "charple");
+    level.SKINS_heavyMutant = zombieSkin(1002, "vanfreddyZ", "vanfreddyZ", "viewmodel_hands_german_normandy");
+    level.SKINS_speed = zombieSkin(1003, "charple", "charple", "viewmodel_hands_german_winter");
     level.SKINS_armoured = zombieSkin(1004, "vanfreddyAZ", "vanfreddyAZ", "viewmodel_hands_british_bare");
     level.SKINS_bulletDodge = zombieSkin(1005, "hoek_skeleton", "hoek_skeleton", "viewmodel_hands_british_bare");
-    level.SKINS_absorption = zombieSkin(1006, "hoek_alien_solider", "hoek_alien_solider", "viewmodel_hands_british_bare");
-    level.SKINS_jumpySpawn = zombieSkin(1007, "zombie", "zombie");
-    level.SKINS_jumpySpawned = zombieSkin(1008, "zk_gho", "zk_gho");
+    level.SKINS_absorption = zombieSkin(1006, "hoek_alien_solider", "hoek_alien_solider", "viewhands_usmc");
+    level.SKINS_jumpySpawn = zombieSkin(1007, "zombie", "zombie", "viewhands_usmc");
+    level.SKINS_jumpySpawned = zombieSkin(1008, "zk_gho", "zk_gho", "viewhands_usmc");
     level.SKINS_toxic = zombieSkin(1009, "zk_hazmat_zombie", "zk_hazmat_zombie", "viewmodel_hands_yellow");
-    level.SKINS_highJump = zombieSkin(1010, "zk_spiderman", "zk_spiderman");
-    level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german_winter");
+    level.SKINS_highJump = zombieSkin(1010, "zk_spiderman", "zk_spiderman, "viewhands_usmc");
+    level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german_normandy");
 
     // Purchasables
-    hunterSkin(13, "secret_service", "van_usservice", "viewmodel_hands_cloth", "american");
+    hunterSkin(13, "secret_service", "van_usservice", "viewhands_usmc", "american");
     enableSkinForPurchase(13, 5000, "US Secret Service");
-    hunterSkin(14, "vodka", "iwx_vodkach", "viewmodel_hands_cloth", "russian");
+    hunterSkin(14, "vodka", "iwx_vodkach", "viewhands_usmc", "russian");
     enableSkinForPurchase(14, 7500, "Vodka");
     hunterSkin(15, "sas", "oma_sas_playermodel", "viewhands_usmc", "british");
     enableSkinForPurchase(15, 5000, "SAS");
-    hunterSkin(16, "neo", "van_neo_body", "viewmodel_hands_british_wet", "american");
+    hunterSkin(16, "neo", "van_neo_body", "viewmodel_hands_blue", "american");
     enableSkinForPurchase(16, 3500, "Neo");
     hunterSkin(17, "tobby", "iwx_tobbych", "viewmodel_hands_cloth", "american");
     enableSkinForPurchase(17, 3500, "UNSC Marine");
-    hunterSkin(18, "joker", "van_jokerb", "viewmodel_hands_cloth", "american");
+    hunterSkin(18, "joker", "van_jokerb", "viewmodel_hands_british_wet", "american");
     enableSkinForPurchase(18, 7500, "Joker");
-    hunterSkin(19, "sniper", "oma_sniper_rebels", "viewmodel_hands_cloth", "russian");
+    hunterSkin(19, "sniper", "oma_sniper_rebels", "viewmodel_hands_usmc", "russian");
     enableSkinForPurchase(19, 3500, "Sniper");
     hunterSkin(20, "niko", "oma_niko_bellic", "viewmodel_hands_cloth", "russian");
     enableSkinForPurchase(20, 7500, "Niko Bellic");
