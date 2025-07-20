@@ -55,7 +55,7 @@ Configure()
     nlGreenHelmets[1] = "helmet_green_nl2";
 
     // Skins for ranks
-    level.SKINS_defaultHunter = hunterSkin(6, "american_normandy", americanNormandyBodies, "viewmodel_hands", "american", americanHeads, "helmet_us_ranger_generic");
+    level.SKINS_defaultHunter = hunterSkin(6, "american_normandy", americanNormandyBodies, "viewmodel_hands_cloth", "american", americanHeads, "helmet_us_ranger_generic");
     hunterSkin(3, "german_normandy", "playerbody_german_normandy01", "viewmodel_hands_german", "german", germanNormandyHeads, "helmet_german_normandy");
     enableSkinForRank(3, 10);
     hunterSkin(5, "british_normandy", britishNormandyBodies, "viewmodel_hands_british", "british", britishHeads, "helmet_british_normandy");
