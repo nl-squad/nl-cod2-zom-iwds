@@ -90,11 +90,11 @@ Configure()
     level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german_winter");
 
     // Purchasables
-    hunterSkin(13, "secret_service", "van_usservice", "american");
+    hunterSkin(13, "secret_service", "van_usservice", "viewmodel_hands_cloth", "american");
     enableSkinForPurchase(13, 5000, "US Secret Service");
     hunterSkin(14, "vodka", "iwx_vodkach", "viewmodel_hands_cloth", "russian");
     enableSkinForPurchase(14, 7500, "Vodka");
-    hunterSkin(15, "sas", "oma_sas_playermodel", "viewhands_usmc4", "british");
+    hunterSkin(15, "sas", "oma_sas_playermodel", "viewhands_usmc", "british");
     enableSkinForPurchase(15, 5000, "SAS");
     hunterSkin(16, "neo", "van_neo_body", "viewmodel_hands_british_wet", "american");
     enableSkinForPurchase(16, 3500, "Neo");
@@ -102,11 +102,11 @@ Configure()
     enableSkinForPurchase(17, 3500, "UNSC Marine");
     hunterSkin(18, "joker", "van_jokerb", "viewmodel_hands_cloth", "american");
     enableSkinForPurchase(18, 7500, "Joker");
-    hunterSkin(19, "sniper", "oma_sniper_rebels", "russian");
+    hunterSkin(19, "sniper", "oma_sniper_rebels", "viewmodel_hands_cloth", "russian");
     enableSkinForPurchase(19, 3500, "Sniper");
     hunterSkin(20, "niko", "oma_niko_bellic", "viewmodel_hands_cloth", "russian");
     enableSkinForPurchase(20, 7500, "Niko Bellic");
-    hunterSkin(21, "masterchief", "van_mastercheifg", "viewhand_usmc_mw24", "american");
+    hunterSkin(21, "masterchief", "van_mastercheifg", "viewhand_usmc_mw2", "american");
     enableSkinForPurchase(21, 15000, "Master Chief");
     hunterSkin(22, "daryl", "horror_wd_darly", "viewmodel_hands_british_bare", "american");
     enableSkinForPurchase(22, 7500, "Daryl Dixon");
@@ -124,14 +124,14 @@ Configure()
 
     // Custom skins
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
-    hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_red", "american");
+    hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
     // Not used at this moment - available using !god command
-    hunterSkin(42, "zk_john_cena", "zk_vm_john_cena", "american");
-    hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper", "american");
-    hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr", "american");
-    hunterSkin(45, "oma_nano_suit", "oma_nano_suit", "american");
+    hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
+    hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
+    hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
+    hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
     hunterSkin(46, "sazomb", "sazomb");
     hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
     hunterSkin(48, "zk_zom2", "zk_zom2");
