@@ -101,7 +101,7 @@ Configure()
     enableSkinForPurchase(17, 3500, "UNSC Marine");
     hunterSkin(18, "joker", "van_jokerb", "viewmodel_hands_british_wet", "american");
     enableSkinForPurchase(18, 7500, "Joker");
-    hunterSkin(19, "sniper", "oma_sniper_rebels", "viewmodel_hands_usmc", "russian");
+    hunterSkin(19, "sniper", "oma_sniper_rebels", "viewhands_usmc", "russian");
     enableSkinForPurchase(19, 3500, "Sniper");
     hunterSkin(20, "niko", "oma_niko_bellic", "viewmodel_hands_cloth", "russian");
     enableSkinForPurchase(20, 7500, "Niko Bellic");
