@@ -138,8 +138,32 @@ Configure()
     hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
     hunterSkin(52, "zk_clown_zombie", "zk_clown_zombie");
 
-    // Bot skins
-    enableBotHunterSkinSelection(13, 1);
+    // Bot skins (skin id, chance)
+    enableBotHunterSkinSelection(2, 2);
+	enableBotHunterSkinSelection(3, 2);
+	enableBotHunterSkinSelection(4, 2);
+	enableBotHunterSkinSelection(5, 2);
+	enableBotHunterSkinSelection(6, 2);
+	enableBotHunterSkinSelection(7, 2);
+	enableBotHunterSkinSelection(8, 2);
+	enableBotHunterSkinSelection(9, 2);
+	enableBotHunterSkinSelection(10, 2);
+	enableBotHunterSkinSelection(11, 2);
+	enableBotHunterSkinSelection(13, 1);
+	enableBotHunterSkinSelection(14, 1);
+	enableBotHunterSkinSelection(15, 1);
+	enableBotHunterSkinSelection(16, 1);
+	enableBotHunterSkinSelection(17, 1);
+	enableBotHunterSkinSelection(18, 1);
+	enableBotHunterSkinSelection(19, 1);
+	enableBotHunterSkinSelection(20, 1);
+	enableBotHunterSkinSelection(21, 1);
+	enableBotHunterSkinSelection(22, 1);	
+	enableBotHunterSkinSelection(31, 1);
+	enableBotHunterSkinSelection(32, 1);
+	enableBotHunterSkinSelection(33, 1);
+	enableBotHunterSkinSelection(34, 1);
+	enableBotHunterSkinSelection(41, 1);
 }
 
 // Helper functions
