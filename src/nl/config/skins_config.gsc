@@ -123,7 +123,7 @@ Configure()
 
     // Custom skins
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
-    hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
+	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
     // Not used at this moment - available using !god command
@@ -169,7 +169,7 @@ Configure()
 zombieSkin(id, name, bodyModel, viewModel)
 {
     if (!isDefined(viewModel))
-        viewModel = "viewmodel_hands_british_wet";
+        viewModel = "viewhands_usmc";
 
     return blanco\modules\skins::defineSkin(id, "zombie", name, bodyModel, undefined, undefined, viewModel);
 }
@@ -177,7 +177,7 @@ zombieSkin(id, name, bodyModel, viewModel)
 hunterSkin(id, name, bodyModel, viewModel, voice, headModel, hatModel)
 {
     if (!isDefined(viewModel))
-        viewModel = "viewhands_usmc";
+        viewModel = "viewmodel_hands_cloth";
 
     if (!isDefined(voice))
         voice = "american";
