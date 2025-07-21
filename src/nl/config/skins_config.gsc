@@ -77,7 +77,7 @@ Configure()
     // Zombies
     level.SKINS_defaultZombie = zombieSkin(1, "iwx_xenonnazi", "iwx_xenonnazi", "viewmodel_hands_german_winter");
     level.SKINS_mutant = zombieSkin(1001, "iwx_slasher", "iwx_slasher", "viewmodel_hands_british_bare");
-    level.SKINS_heavyMutant = zombieSkin(1002, "vanfreddyZ", "vanfreddyZ", "viewmodel_hands_german_normandy");
+    level.SKINS_heavyMutant = zombieSkin(1002, "vanfreddyZ", "vanfreddyZ", "viewmodel_hands_german");
     level.SKINS_speed = zombieSkin(1003, "charple", "charple", "viewmodel_hands_german_winter");
     level.SKINS_armoured = zombieSkin(1004, "vanfreddyAZ", "vanfreddyAZ", "viewmodel_hands_british_bare");
     level.SKINS_bulletDodge = zombieSkin(1005, "hoek_skeleton", "hoek_skeleton", "viewmodel_hands_british_bare");
@@ -86,7 +86,7 @@ Configure()
     level.SKINS_jumpySpawned = zombieSkin(1008, "zk_gho", "zk_gho", "viewhands_usmc");
     level.SKINS_toxic = zombieSkin(1009, "zk_hazmat_zombie", "zk_hazmat_zombie", "viewmodel_hands_yellow");
     level.SKINS_highJump = zombieSkin(1010, "zk_spiderman", "zk_spiderman", "viewhands_usmc");
-    level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german_normandy");
+    level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german");
 
     // Purchasables
     hunterSkin(13, "secret_service", "van_usservice", "viewhands_usmc", "american");
@@ -127,15 +127,15 @@ Configure()
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
     // Not used at this moment - available using !god command
-    hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
-    hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
-    hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
-    hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
-    hunterSkin(46, "sazomb", "sazomb");
-    hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
-    hunterSkin(48, "zk_zom2", "zk_zom2");
-    hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
-    hunterSkin(52, "zk_clown_zombie", "zk_clown_zombie");
+    // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
+    // hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
+    // hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
+    // hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
+    // hunterSkin(46, "sazomb", "sazomb");
+    // hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
+    // hunterSkin(48, "zk_zom2", "zk_zom2");
+    // hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
+    // hunterSkin(52, "zk_clown_zombie", "zk_clown_zombie");
 
     // Bot skins
     enableBotHunterSkinSelection(2, 2);
