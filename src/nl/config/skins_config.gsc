@@ -79,7 +79,7 @@ Configure()
     level.SKINS_mutant = zombieSkin(1001, "iwx_slasher", "iwx_slasher", "viewmodel_hands_british_bare");
     level.SKINS_heavyMutant = zombieSkin(1002, "vanfreddyZ", "vanfreddyZ", "viewmodel_hands_german");
     level.SKINS_speed = zombieSkin(1003, "charple", "charple", "viewmodel_hands_german_winter");
-    level.SKINS_armoured = zombieSkin(1004, "vanfreddyAZ", "vanfreddyAZ", "viewmodel_hands_british_bare");
+    level.SKINS_armoured = zombieSkin(1004, "vanfreddyAZ", "vanfreddyAZ", "viewmodel_hands_blue");
     level.SKINS_bulletDodge = zombieSkin(1005, "hoek_skeleton", "hoek_skeleton", "viewmodel_hands_british_bare");
     level.SKINS_absorption = zombieSkin(1006, "hoek_alien_solider", "hoek_alien_solider", "viewhands_usmc");
     level.SKINS_jumpySpawn = zombieSkin(1007, "zombie", "zombie", "viewhands_usmc");
