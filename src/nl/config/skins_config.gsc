@@ -112,14 +112,14 @@ Configure()
     hunterSkin(41, "usa_seal", "oma_usa_seal", "viewhand_usmc_mw2", "american");
     enableSkinForPurchase(41, 10000, "USA Seal");
 
-    hunterSkin(31, "nl_yellow", "nl_yellow", "viewmodel_hands_yellow", "american", americanHeads, "helmet_yellow_nl");
-    enableSkinForPurchase(31, 2500, "American Ranger ^3Yellow");
-    hunterSkin(32, "nl_blue", "nl_blue", "viewmodel_hands_blue", "british", britishHeads, "helmet_blue_nl");
-    enableSkinForPurchase(32, 5000, "British Mate ^4Blue");
-    hunterSkin(33, "nl_green", "nl_green", "viewmodel_hands_green", "russian", russianHeads, nlGreenHelmets);
-    enableSkinForPurchase(33, 7500, "Russian Comrade ^2Green");
-    hunterSkin(34, "nl_red", "nl_red", "viewmodel_hands_red", "german", germanNormandyHeads, "helmet_red_nl");
-    enableSkinForPurchase(34, 10000, "German Soldat ^1Red");
+    // hunterSkin(31, "nl_yellow", "nl_yellow", "viewmodel_hands_yellow", "american", americanHeads, "helmet_yellow_nl");
+    // enableSkinForPurchase(31, 2500, "American Ranger ^3Yellow");
+    // hunterSkin(32, "nl_blue", "nl_blue", "viewmodel_hands_blue", "british", britishHeads, "helmet_blue_nl");
+    // enableSkinForPurchase(32, 5000, "British Mate ^4Blue");
+    // hunterSkin(33, "nl_green", "nl_green", "viewmodel_hands_green", "russian", russianHeads, nlGreenHelmets);
+    // enableSkinForPurchase(33, 7500, "Russian Comrade ^2Green");
+    // hunterSkin(34, "nl_red", "nl_red", "viewmodel_hands_red", "german", germanNormandyHeads, "helmet_red_nl");
+    // enableSkinForPurchase(34, 10000, "German Soldat ^1Red");
 
     // Custom skins
 	// hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
