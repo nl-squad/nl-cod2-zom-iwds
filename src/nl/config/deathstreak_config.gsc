@@ -73,7 +73,7 @@ Configure()
     level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
 
     // Stages
-    s = stage(0, &"Zombie Power^9: ^7Basic^9, ^7Next In^9: ^7");
+    s = stage(0, &"^9Zombie ^7Power^4: ^7Basic^4, ^7Next In^4: ^7");
     reward(s, 15, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 15, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 10, level.DEATHSTREAK_typeSpeed, 2);
@@ -111,7 +111,7 @@ Configure()
     reward(s, 10, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 	
-    s = stage(10, &"Zombie Power^9: ^3Medium^9, ^7Next In^9: ^7");
+    s = stage(10, &"^9Zombie ^7Power^4: ^3Medium^4, ^7Next In^4: ^7");
     reward(s, 5, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 10, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 15, level.DEATHSTREAK_typeSpeed, 2);
@@ -149,7 +149,7 @@ Configure()
     reward(s, 10, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 
-    s = stage(20, &"Zombie Power^9: ^8Strong^9, ^7Next In^9: ^7");
+    s = stage(20, &"^9Zombie ^7Power^4: ^8Strong^4, ^7Next In^4: ^7");
     reward(s, 0, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 5, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 15, level.DEATHSTREAK_typeSpeed, 2);
@@ -187,7 +187,7 @@ Configure()
     reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 5, level.DEATHSTREAK_typeNade, 1);
 
-	s = stage(30, &"Zombie Power^9: ^1Brutal^9, ^7Next In^9: ^7");
+	s = stage(30, &"^9Zombie ^7Power^4: ^1Brutal^4, ^7Next In^4: ^7");
     reward(s, 0, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 0, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 15, level.DEATHSTREAK_typeSpeed, 2);
@@ -225,7 +225,7 @@ Configure()
     reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 5, level.DEATHSTREAK_typeNade, 1);
 
-    s = stage(40, &"Zombie Power^9: ^6Unstoppable");
+    s = stage(40, &"^9Zombie ^7Power^4: ^6Unstoppable");
     reward(s, 0, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 0, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 0, level.DEATHSTREAK_typeSpeed, 2);
