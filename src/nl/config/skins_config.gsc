@@ -123,6 +123,18 @@ Configure()
 
     // Custom skins
 	hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
+    omaNanoSuitLogins[0] = "zieqa";
+    omaNanoSuitLogins[1] = "Zawiii";
+    omaNanoSuitLogins[2] = "nerox";
+    omaNanoSuitLogins[3] = "lidas";
+    omaNanoSuitLogins[4] = "onewaypl";
+    omaNanoSuitLogins[5] = "basti";
+    omaNanoSuitLogins[6] = "yarrr1";
+    omaNanoSuitLogins[7] = "DUSZA";
+    omaNanoSuitLogins[8] = "REKSIO";
+    omaNanoSuitLogins[9] = "shr23";
+    enableSkinForLogins(45, omaNanoSuitLogins, "Julian wrzuca taski, ale ich nie doprecyzowuje.");
+
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
 	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
@@ -183,6 +195,11 @@ hunterSkin(id, name, bodyModel, viewModel, voice, headModel, hatModel)
         voice = "american";
 
     return blanco\modules\skins::defineSkin(id, voice, name, bodyModel, headModel, hatModel, viewModel);
+}
+
+enableSkinForLogins(id, logins, cantSelectMessage)
+{
+    return blanco\modules\skins::enableSkinForLogins(id, logins, cantSelectMessage);
 }
 
 enableSkinForRank(id, rank)
