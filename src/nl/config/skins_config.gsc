@@ -122,7 +122,7 @@ Configure()
     enableSkinForPurchase(34, 10000, "German Soldat ^1Red");
 
     // Custom skins
-	hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
+	hunterSkin(45, "nano_suit", "oma_nano_suit", "viewhands_usmc", "american");
     omaNanoSuitLogins[0] = "zieqa";
     omaNanoSuitLogins[1] = "Zawiii";
     omaNanoSuitLogins[2] = "nerox";
@@ -135,7 +135,7 @@ Configure()
     omaNanoSuitLogins[9] = "shr23";
     enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
-    level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
+    level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
 	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
