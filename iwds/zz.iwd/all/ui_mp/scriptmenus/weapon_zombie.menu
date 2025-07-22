@@ -220,7 +220,7 @@
 	    ZWP(ORIGIN_CHOICE2, "^9Rank 1 ^4|", "Baseball Bat", "hbat", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.7^9s \n^9Bash ^7Delay^9: ^30.1^9s \n \n^9Bash ^7Range^9: ^3100 \n \n^9Movement ^7Speed^9: ^3110")
         ZWP(ORIGIN_CHOICE3, "^9Rank 50 ^4|", "Axe", "axe", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.8^9s \n^9Bash ^7Delay^9: ^30.15^9s \n \n^9Bash ^7Range^9: ^3110 \n \n^9Movement ^7Speed^9: ^3105")
         ZWP(ORIGIN_CHOICE4, "^9Rank 75 ^4|", "Knife", "knife", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.6^9s \n^9Bash ^7Delay^9: ^30.08^9s \n \n^9Bash ^7Range^9: ^390 \n \n^9Movement ^7Speed^9: ^3115")
-        DS(ORIGIN_CHOICE6, "^4|", "Speed", "speed", "^7Ability^9: ^7Faster Movement \n^9Level ^71^9: ^3+30% \n^9Level ^72^9: ^3+40% \n^9Level ^73^9: ^3+50% \n \n^7Health Points^9: ^3200")
+        DS(ORIGIN_CHOICE6, "^4|", "Speed", "charple", "^7Ability^9: ^7Faster Movement \n^9Level ^71^9: ^3+30% \n^9Level ^72^9: ^3+40% \n^9Level ^73^9: ^3+50% \n \n^7Health Points^9: ^3200")
         DS(ORIGIN_CHOICE7, "^4|", "Mutant", "mutant", "^7Ability^9#^71^9: ^7Reduced Damage for Explosions ^9& ^7Fire^9: ^3-10% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3550 ^9HP \n^9Level ^72^9: ^3600 ^9HP \n^9Level ^73^9: ^3650 ^9HP")
 		DS(ORIGIN_CHOICE8, "^4|", "Heavy Mutant", "heavymutant", "^7Ability^9#^71^9: ^7Reduced Damage for Explosions ^9& ^7Fire^9: ^3-20% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3750 ^9HP \n^9Level ^72^9: ^3800 ^9HP \n^9Level ^73^9: ^3850 ^9HP")
         DS(ORIGIN_CHOICE9, "^4|", "Armoured", "armoured", "^7Ability^9: ^7Reduced Damage for Explosions ^9& ^7Fire \n^9Level ^71^9: ^3-40% \n^9Level ^72^9: ^3-50% \n^9Level ^73^9: ^3-60% \n \n^7Health Points^9: ^3800")
