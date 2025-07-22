@@ -170,10 +170,10 @@ Configure()
 	enableBotHunterSkinSelection(20, 1);
 	enableBotHunterSkinSelection(21, 1);
 	enableBotHunterSkinSelection(22, 1);	
-	enableBotHunterSkinSelection(31, 1);
-	enableBotHunterSkinSelection(32, 1);
-	enableBotHunterSkinSelection(33, 1);
-	enableBotHunterSkinSelection(34, 1);
+	// enableBotHunterSkinSelection(31, 1);
+	// enableBotHunterSkinSelection(32, 1);
+	// enableBotHunterSkinSelection(33, 1);
+	// enableBotHunterSkinSelection(34, 1);
 	enableBotHunterSkinSelection(41, 1);
 }
 
