@@ -93,7 +93,7 @@ Configure()
     enableSkinForPurchase(13, 5000, "US Secret Service");
     hunterSkin(14, "vodka", "iwx_vodkach", "viewhands_usmc", "russian");
     enableSkinForPurchase(14, 7500, "Vodka");
-    hunterSkin(15, "sas", "oma_sas_playermodel", "viewhands_hands_cloth", "british");
+    hunterSkin(15, "sas", "oma_sas_playermodel", "viewmodel_hands_cloth", "british");
     enableSkinForPurchase(15, 5000, "SAS");
     hunterSkin(16, "neo", "van_neo_body", "viewmodel_hands_blue", "american");
     enableSkinForPurchase(16, 3500, "Neo");
