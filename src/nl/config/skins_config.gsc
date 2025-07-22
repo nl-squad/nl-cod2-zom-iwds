@@ -133,7 +133,7 @@ Configure()
     omaNanoSuitLogins[7] = "DUSZA";
     omaNanoSuitLogins[8] = "REKSIO";
     omaNanoSuitLogins[9] = "shr23";
-    enableSkinForLogins(45, omaNanoSuitLogins, "Julian wrzuca taski, ale ich nie doprecyzowuje.");
+    enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
 	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
