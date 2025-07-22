@@ -119,7 +119,7 @@
 			onFocus \
 			{ \
 				hide info_group; \
-				show _weapon ## "_info"; \
+				show _deathstreak ## "_info"; \
 			} \
 		} \
 		itemDef \
