@@ -122,6 +122,7 @@ Configure()
     enableSkinForPurchase(34, 10000, "German Soldat ^1Red");
 
     // Custom skins
+	hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_cloth", "american");
 	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
@@ -130,7 +131,6 @@ Configure()
     // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
     // hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
     // hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
-    // hunterSkin(45, "oma_nano_suit", "oma_nano_suit");
     // hunterSkin(46, "sazomb", "sazomb");
     // hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
     // hunterSkin(48, "zk_zom2", "zk_zom2");
