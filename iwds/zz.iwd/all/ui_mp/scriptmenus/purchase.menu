@@ -339,7 +339,7 @@
 		PURCHASE("tab6", ORIGIN_KR6, "sniper", "nl_char_sniper", "nl_kutka", "Ghillied Up Sniper", "19", "3 500")
 		PURCHASE("tab6", ORIGIN_KR7, "sas", "nl_char_sas", "nl_kutka", "SAS", "15", "5 000")
 		PURCHASE("tab6", ORIGIN_KR8, "secret_service", "nl_char_secret_service", "nl_kutka", "US Secret Service", "13", "7 500")
-		PURCHASE("tab6", ORIGIN_KR9, "oma_usa_seal", "nl_char_usa_seal", "nl_kutka", "US Navy SEALs", "41", "10 000")
+		PURCHASE("tab6", ORIGIN_KR9, "usa_seal", "nl_char_usa_seal", "nl_kutka", "US Navy SEALs", "41", "10 000")
 		
 		PURCHASE("tab7", ORIGIN_KR1, "neo", "nl_char_neo", "nl_kutka", "Neo", "16", "3 500")
 		PURCHASE("tab7", ORIGIN_KR2, "daryl", "nl_char_daryl", "nl_kutka", "Daryl Dixon", "22", "5 000")
