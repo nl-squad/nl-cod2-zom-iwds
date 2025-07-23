@@ -140,9 +140,9 @@ Configure()
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
     // Not used at this moment - available using !god command
-	hunterSkin(35, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
-	hunterSkin(36, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
-	hunterSkin(37, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german", germanNormandyHeads);
+	// hunterSkin(35, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
+	// hunterSkin(36, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
+	// hunterSkin(37, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
     // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
     // hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
     // hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
