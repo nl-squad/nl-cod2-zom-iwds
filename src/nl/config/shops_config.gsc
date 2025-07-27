@@ -9,7 +9,7 @@ Configure()
     hunters["2"] = CreateMenuSelection(2, "mine", "Mine", ::minePrice, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
     hunters["3"] = CreateMenuSelection(8, "elixir", "Vital Elixir", ::elixirPrice, blanco\actions\elixir::Activate);
     hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
-    hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^715^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
+    hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^75^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
     hunters["6"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
