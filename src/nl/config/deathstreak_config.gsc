@@ -30,10 +30,10 @@ Configure()
     level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
     level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 	
-	level.DEATHSTREAK_swooshHp = 300;
-    level.DEATHSTREAK_swooshGrade1MaxPower = 100;
-    level.DEATHSTREAK_swooshGrade2MaxPower = 200;
-    level.DEATHSTREAK_swooshGrade3MaxPower = 300;
+	level.DEATHSTREAK_swooshHp = 400;
+    level.DEATHSTREAK_swooshGrade1MaxPower = 200;
+    level.DEATHSTREAK_swooshGrade2MaxPower = 300;
+    level.DEATHSTREAK_swooshGrade3MaxPower = 400;
 	
 	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
     level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
@@ -74,21 +74,21 @@ Configure()
 
     // Stages
     s = stage(0, &"Zombie Power^4: ^9Basic ^4| ^7Next In^4: ^7");
-    reward(s, 15, level.DEATHSTREAK_typeNothing, 1);
+    reward(s, 0, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 15, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 10, level.DEATHSTREAK_typeSpeed, 2);
 	reward(s, 0, level.DEATHSTREAK_typeSpeed, 3);
     reward(s, 15, level.DEATHSTREAK_typeMutant, 1);
 	reward(s, 10, level.DEATHSTREAK_typeMutant, 2);
 	reward(s, 0, level.DEATHSTREAK_typeMutant, 3);
-	reward(s, 5, level.DEATHSTREAK_typeHeavyMutant, 1);
-	reward(s, 0, level.DEATHSTREAK_typeHeavyMutant, 2);
+	reward(s, 10, level.DEATHSTREAK_typeHeavyMutant, 1);
+	reward(s, 5, level.DEATHSTREAK_typeHeavyMutant, 2);
 	reward(s, 0, level.DEATHSTREAK_typeHeavyMutant, 3);
     reward(s, 0, level.DEATHSTREAK_typeArmoured, 1);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 2);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 3);
-    reward(s, 10, level.DEATHSTREAK_typeHighJump, 1);
-	reward(s, 5, level.DEATHSTREAK_typeHighJump, 2);
+    reward(s, 15, level.DEATHSTREAK_typeHighJump, 1);
+	reward(s, 10, level.DEATHSTREAK_typeHighJump, 2);
 	reward(s, 0, level.DEATHSTREAK_typeHighJump, 3);
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 1);
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 2);
@@ -108,11 +108,11 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 5, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 10, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 	
     s = stage(10, &"Zombie Power^4: ^3Medium ^4| ^7Next In^4: ^7");
-    reward(s, 5, level.DEATHSTREAK_typeNothing, 1);
+    reward(s, 0, level.DEATHSTREAK_typeNothing, 1);
     reward(s, 10, level.DEATHSTREAK_typeSpeed, 1);
 	reward(s, 15, level.DEATHSTREAK_typeSpeed, 2);
 	reward(s, 0, level.DEATHSTREAK_typeSpeed, 3);
@@ -125,8 +125,8 @@ Configure()
     reward(s, 0, level.DEATHSTREAK_typeArmoured, 1);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 2);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 3);
-    reward(s, 10, level.DEATHSTREAK_typeHighJump, 1);
-	reward(s, 5, level.DEATHSTREAK_typeHighJump, 2);
+    reward(s, 15, level.DEATHSTREAK_typeHighJump, 1);
+	reward(s, 10, level.DEATHSTREAK_typeHighJump, 2);
 	reward(s, 0, level.DEATHSTREAK_typeHighJump, 3);
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 1);
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 2);
@@ -146,7 +146,7 @@ Configure()
 	reward(s, 5, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 10, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(20, &"Zombie Power^4: ^8Strong ^4| ^7Next In^4: ^7");
