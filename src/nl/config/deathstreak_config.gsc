@@ -91,7 +91,7 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typeHighJump, 2);
 	reward(s, 0, level.DEATHSTREAK_typeHighJump, 3);
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 1);
-	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 2);
+	reward(s, 5, level.DEAT17HSTREAK_typeBulletDodge, 2);
 	reward(s, 0, level.DEATHSTREAK_typeBulletDodge, 3);
     reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 1);
 	reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 2);
