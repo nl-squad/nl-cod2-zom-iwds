@@ -22,18 +22,18 @@ Configure()
     level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.4;
 	
 	level.DEATHSTREAK_bulletDodgeHp = 300;
-    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.15;
-    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.2;
-    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.25;
+    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.2;
+    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.25
+    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.3;
 
     level.DEATHSTREAK_jumpySpawnGrade1ProtectionTime = 1;
     level.DEATHSTREAK_jumpySpawnGrade2ProtectionTime = 2;
     level.DEATHSTREAK_jumpySpawnGrade3ProtectionTime = 3;
 	
 	level.DEATHSTREAK_swooshHp = 400;
-    level.DEATHSTREAK_swooshGrade1MaxPower = 200;
-    level.DEATHSTREAK_swooshGrade2MaxPower = 300;
-    level.DEATHSTREAK_swooshGrade3MaxPower = 400;
+    level.DEATHSTREAK_swooshGrade1MaxPower = 250;
+    level.DEATHSTREAK_swooshGrade2MaxPower = 350;
+    level.DEATHSTREAK_swooshGrade3MaxPower = 450;
 	
 	level.DEATHSTREAK_highJumpGrade1BoostPower = 5000;
     level.DEATHSTREAK_highJumpGrade2BoostPower = 6000;
