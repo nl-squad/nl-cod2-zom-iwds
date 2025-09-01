@@ -42,11 +42,11 @@ Configure()
 	level.DEATHSTREAK_absorptionHp = 400;
     level.DEATHSTREAK_absorptionMaxHealth = 800;
 	level.DEATHSTREAK_absorptionGrade1RadiusSquared = 96 * 96;
-    level.DEATHSTREAK_absorptionGrade1TickDamage = 5;
+    level.DEATHSTREAK_absorptionGrade1TickDamage = 10;
     level.DEATHSTREAK_absorptionGrade2RadiusSquared = 128 * 120;
-    level.DEATHSTREAK_absorptionGrade2TickDamage = 5;
+    level.DEATHSTREAK_absorptionGrade2TickDamage = 10;
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
-    level.DEATHSTREAK_absorptionGrade3TickDamage = 5;
+    level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
 	
 	level.DEATHSTREAK_toxicHp = 300;
     level.DEATHSTREAK_toxicDamage = 15;
