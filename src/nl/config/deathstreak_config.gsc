@@ -23,7 +23,7 @@ Configure()
 	
 	level.DEATHSTREAK_bulletDodgeHp = 300;
     level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.2;
-    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.25
+    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.25;
     level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.3;
 
     level.DEATHSTREAK_jumpySpawnGrade1ProtectionTime = 1;
