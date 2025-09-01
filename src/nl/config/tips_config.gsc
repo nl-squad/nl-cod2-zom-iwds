@@ -63,6 +63,9 @@ Configure()
 	tips[tips.size] = "Don't use the `nL.Clan* tag if you are not a member";
     tips[tips.size] = "Remember to follow the server rules with ^3!rules";
 	tips[tips.size] = "`nL.Clan* has a ^1zero-tolerance ^7policy for ^1cheaters";
+	tips[tips.size] = "Check out ^8#binds ^7channel in our Discord";
+	tips[tips.size] = "Check out ^8#weapon-rotation ^7info in our Discord";
+	tips[tips.size] = "You can find current ^8nl-squad ^7list in our Discord";
 	tips[tips.size] = "^1Cheats ^7= Perm Ban";
     level.tips = tips;
 }
