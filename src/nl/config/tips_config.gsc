@@ -24,7 +24,7 @@ Configure()
 	tips[tips.size] = "Nazi Zombie = Basic one, 300 HP";
 	tips[tips.size] = "Black & Skinny Charple = Speed Zombie, 200 HP";
 	tips[tips.size] = "Slasher = Mutant, 550-650 HP";
-	tips[tips.size] = "Black & Muscular Zombie = Heavy Mutant, 750-850 HP";
+	tips[tips.size] = "Black & Muscular Heller = Heavy Mutant, 750-850 HP";
 	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant, 800 HP";
 	tips[tips.size] = "Skeleton = Dodge Bullets Ability, 300 HP";
 	tips[tips.size] = "Red Half-Life Zombie = Jumpy Spawn, 300 HP";
