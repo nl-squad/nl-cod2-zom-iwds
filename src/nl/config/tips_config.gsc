@@ -21,7 +21,7 @@ Configure()
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBoxes";
-	tips[tips.size] = "Nazi Zombie = Basic one, 300 HP";
+	tips[tips.size] = "Nazi Zombie can throw Potatoes/Nades, 300 HP";
 	tips[tips.size] = "Black & Skinny Charple = Speed Zombie, 200 HP";
 	tips[tips.size] = "Slasher = Mutant, 550-650 HP";
 	tips[tips.size] = "Black & Muscular Heller = Heavy Mutant, 750-850 HP";
@@ -39,7 +39,7 @@ Configure()
 	tips[tips.size] = "Behave well and respect other Players; we all want to have fun";
     tips[tips.size] = "You can unlock new Weapons with ^8nL Tokens";
 	tips[tips.size] = "You can unlock new Weapons and Skins in the Shop";
-	tips[tips.size] = "You can buy an ^3EXP booster ^7in the Purchases Menu";
+	tips[tips.size] = "You can buy an ^3EXP booster ^7in the Shop -> Boosters section";
 	tips[tips.size] = "Use ^3!challenges^7 to check the active weekly Challenges";
     tips[tips.size] = "You can earn ^3nL Tokens ^7for activity, Challenges, and during Events";
     tips[tips.size] = "If you are ^3VIP^7, you can choose up to 4 Killstreaks";
