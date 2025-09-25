@@ -73,7 +73,7 @@ Configure()
     level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
 	level.DEATHSTREAK_typeAntiInviNade = deathstreak("anti_invi", blanco\deathstreaks\generic::GrantAntiInviNade);
     level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
-	level.DEATHSTREAK_upgradeChance = 20;
+	level.DEATHSTREAK_upgradeChance = 99;
 
     // Stages
     s = stage(0, &"Zombie Power^4: ^9Basic ^4| ^7Next In^4: ^7");
