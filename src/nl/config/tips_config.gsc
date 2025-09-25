@@ -28,7 +28,7 @@ Configure()
 	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant, 800 HP";
 	tips[tips.size] = "Skeleton = Dodge Bullets Ability, 300 HP";
 	tips[tips.size] = "Red Half-Life Zombie = Jumpy Spawn, 300 HP";
-	tips[tips.size] = "Chimp = Swoosh Ability, 400 HP";
+	tips[tips.size] = "Chimp = Chared Swoosh Jump Ability, 400 HP";
 	tips[tips.size] = "Alien = Health Absorption Ability, 400-800 HP";
 	tips[tips.size] = "Venom = High Jump Ability, 300 HP";
 	tips[tips.size] = "Yellow Hazmat Suit = Toxic Zombie, 300 HP";

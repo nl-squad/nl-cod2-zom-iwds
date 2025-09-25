@@ -54,7 +54,7 @@ Configure()
     // Rifles
 
 
-    defineWeapon(3, "springfield_mp", "Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    defineWeapon(3, "springfield_mp", "M1903 Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponRank("springfield_mp", 10);
 	
     defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
@@ -89,13 +89,13 @@ Configure()
     addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 40);
 
     // Machine Guns
-    defineWeapon(6, "mp40_mp", "MP40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    defineWeapon(6, "mp40_mp", "MP 40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("mp40_mp", 1);
 
-    defineWeapon(7, "mp44_mp", "MP44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    defineWeapon(7, "mp44_mp", "MP 44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank("mp44_mp", 25);
 
-    defineWeapon(9, "sig_mp", "SIG", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase("sig_mp", 2, 105, 3500);
 
     defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -136,7 +136,7 @@ Configure()
 
 
     // Heavy weapons
-    defineWeapon(12, "bar_mp", "BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    defineWeapon(12, "bar_mp", "M1918 BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank("bar_mp", 5);
 
     defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY);
