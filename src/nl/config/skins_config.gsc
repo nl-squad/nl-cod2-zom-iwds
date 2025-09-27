@@ -90,7 +90,7 @@ Configure()
 
     // Purchasables
     hunterSkin(13, "secret_service", "van_usservice", "viewhands_usmc", "american");
-    enableSkinForPurchase(13, 5000, "US Secret Service");
+    enableSkinForPurchase(13, 7500, "US Secret Service");
     hunterSkin(14, "vodka", "iwx_vodkach", "viewhands_usmc", "russian");
     enableSkinForPurchase(14, 7500, "Vodka");
     hunterSkin(15, "sas", "oma_sas_playermodel", "viewmodel_hands_cloth", "british");
@@ -98,7 +98,7 @@ Configure()
     hunterSkin(16, "neo", "van_neo_body", "viewmodel_hands_blue", "american");
     enableSkinForPurchase(16, 3500, "Neo");
     hunterSkin(17, "tobby", "iwx_tobbych", "viewmodel_hands_cloth", "american");
-    enableSkinForPurchase(17, 3500, "UNSC Marine");
+    enableSkinForPurchase(17, 5000, "UNSC Marine");
     hunterSkin(18, "joker", "van_jokerb", "viewmodel_hands_british_wet", "american");
     enableSkinForPurchase(18, 7500, "Joker");
     hunterSkin(19, "sniper", "oma_sniper_rebels", "viewhands_usmc", "russian");
@@ -108,7 +108,7 @@ Configure()
     hunterSkin(21, "masterchief", "van_mastercheifg", "viewhand_usmc_mw2", "american");
     enableSkinForPurchase(21, 15000, "Master Chief");
     hunterSkin(22, "daryl", "horror_wd_darly", "viewmodel_hands_british_bare", "american");
-    enableSkinForPurchase(22, 7500, "Daryl Dixon");
+    enableSkinForPurchase(22, 5000, "Daryl Dixon");
     hunterSkin(41, "usa_seal", "oma_usa_seal", "viewhand_usmc_mw2", "american");
     enableSkinForPurchase(41, 10000, "USA Seal");
 
