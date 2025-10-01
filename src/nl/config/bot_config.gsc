@@ -71,6 +71,7 @@ Configure()
 	level.lvl["exec"] = 101;
 	level.lvl["forcechangepassword"] = 101;
 	level.lvl["grant"] = 101;
+	level.lvl["hq"] = 101;
 	level.lvl["makepatron"] = 101;
 	level.lvl["nltokens"] = 101;
 	level.lvl["seeMutedMessage"] = 101;
