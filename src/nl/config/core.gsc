@@ -4,6 +4,7 @@ Main()
     config\bots_names_config::Configure();
     config\deathstreak_config::Configure();
     config\gametype_config::Configure();
+	config\hq_config::Configure();
     config\killstreak_config::Configure();
     config\perks_config::Configure();
     config\rules_config::Configure();

@@ -49,7 +49,9 @@ Configure()
     level.DEATHSTREAK_absorptionGrade2TickDamage = 10;
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
-	
+    level.DEATHSTREAK_absorptionInvisibleDamageMultiplier = 2;
+    level.DEATHSTREAK_absorptionHealthIncreaseMultiplier = 2;
+
 	level.DEATHSTREAK_toxicHp = 300;
     level.DEATHSTREAK_toxicDamage = 15;
 	level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
