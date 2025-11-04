@@ -18,8 +18,8 @@ Configure()
     blanco\config::addNewKillstreak(15, "nuke", "Nuke", 150, 200, 250, 50, "nl_hud_kr18", "Nuke ends the Map, adding a +500 Score Bonus", "Nu^9ke ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\nuke::Activate, blanco\actions\nuke::CanUse);
     blanco\config::addNewKillstreak(16, "drone", "Drone", 9999, 9999, 9999, 999, "nl_hud_kr22", "Remote Flying Combat Drone for 30 seconds", "Dro^9ne ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\drone::Activate, blanco\actions\drone::CanUse, blanco\utils::a(30));
     blanco\config::addNewKillstreak(17, "rcxd", "RC-XD", 9999, 9999, 9999, 999, "hud_rcxd", "Remote Explosive Toy Car for 30 seconds", "RC^9-XD ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rcxd::Activate, blanco\actions\rcxd::CanUse, blanco\utils::a(30));
-    blanco\config::addNewKillstreak(18, "emp", "EMP", 9999, 9999, 9999, 999, "nl_hud_kr16", "Disables Zombie Shop & Deathstreaks for 20 seconds", "E^9MP ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, a(20));
-    blanco\config::addNewKillstreak(19, "rage", "RAGE", 9999, 9999, 9999, 999, "nl_hud_kr16", "Jak tam mistrzu skorka schodzi?", "Latek ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rage::Activate, blanco\actions\emp::CanUse, a(40));
+    blanco\config::addNewKillstreak(18, "emp", "EMP", 9999, 9999, 9999, 999, "nl_hud_kr16", "Disables Zombie Shop & Deathstreaks for 20 seconds", "E^9MP ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, blanco\utils::a(20));
+    blanco\config::addNewKillstreak(19, "rage", "RAGE", 9999, 9999, 9999, 999, "white", "Jak tam mistrzu skorka schodzi?", "Latek ^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rage::Activate, blanco\actions\emp::CanUse, blanco\utils::a(40));
 
 	blanco\config::setKillstreakLevelForMap("mp_kg", level.killstreakEasyLevel);
 	blanco\config::setKillstreakLevelForMap("mp_loop", level.killstreakEasyLevel);
