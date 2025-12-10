@@ -52,7 +52,7 @@ Configure()
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
-	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays the nearest Zombie's distance & Detects Jumpy Spawn");
+	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays the nearest Zombie Type & Distance"); 
 	blanco\config::addNewPerk(11, "tactical", "Gambler", 64, "nl_hud_pe52", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 84, "nl_hud_pe53", "Doubles Money for Assists");
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 104, "nl_hud_pe19", "Selects a random Tactical Perk");
