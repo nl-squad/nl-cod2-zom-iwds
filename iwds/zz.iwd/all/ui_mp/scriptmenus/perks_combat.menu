@@ -178,11 +178,12 @@
 		COMBAT(ORIGIN_KR3, "7", "Equipment", "nl_hud_pe51")
 		COMBAT(ORIGIN_KR4, "10", "Overkill", "nl_hud_pe8")
 		COMBAT(ORIGIN_KR5, "14", "Grenade Supply", "nl_hud_pe7")
-		COMBAT(ORIGIN_KR6, "8", "Escape", "nl_hud_pe9")
-		COMBAT(ORIGIN_KR7, "9", "Immortal", "nl_hud_pe12")
-		COMBAT(ORIGIN_KR8, "16", "Sprint", "nl_hud_pe55")
-		COMBAT(ORIGIN_KR9, "17", "Explode Bullets", "nl_hud_pe6")
-		COMBAT(ORIGIN_KR10, "20", "Random Combat", "nl_hud_pe20")
+		COMBAT(ORIGIN_KR6, "20", "Random Combat", "nl_hud_pe20")
+		COMBAT(ORIGIN_KR7, "8", "Escape", "nl_hud_pe9")
+		COMBAT(ORIGIN_KR8, "9", "Immortal", "nl_hud_pe12")
+		COMBAT(ORIGIN_KR9, "16", "Sprint", "nl_hud_pe55")
+		COMBAT(ORIGIN_KR10, "17", "Explode Bullets", "nl_hud_pe6")
+		
 		
 
 		

@@ -11,7 +11,7 @@ Configure()
     a[a.size] = "^^22G^^99rubase^^22K";
     a[a.size] = "^7SZKIELKO^1PL";
     a[a.size] = "^6Digi^7Dong";
-    a[a.size] = "Profi";
+    a[a.size] = "Afera^6#^7Podkarpacka";
     a[a.size] = "www.mynl.pl";
     a[a.size] = "^5ZDENEK^7[^1CZE^7]";
     a[a.size] = "Guayaquil ECU";
@@ -39,7 +39,7 @@ Configure()
     a[a.size] = "^0Wur^1stc^3hen";
     a[a.size] = "^7siadajNaButle^1.^7pl";
     a[a.size] = "Our Discord - ds.mynl.pl";
-    a[a.size] = "AnFe";
+    a[a.size] = "#^5Free^7Palestine";
     a[a.size] = "^^11HancocK";
     a[a.size] = "^1|^7MODS^1|^7Marco";
     a[a.size] = "^2Dignity ^1Destroyer";
@@ -116,7 +116,7 @@ Configure()
 	a[a.size] = "^5G^2Force#^1Zero^2Cool";
 	a[a.size] = "Nem kivant terhesseg";
 	a[a.size] = "^6majtkomat.pl^7#Krystian";
-	a[a.size] = "Deine Mudda";
+	a[a.size] = "Merry Christmas Everyone";
 	
     level.botNames = a;
 }
