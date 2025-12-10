@@ -49,7 +49,7 @@ Configure()
 	tips[tips.size] = "You will receive ^8nL Tokens^7 & ^3EXP^7 after each map";
     tips[tips.size] = "`nL.Zombies* server started in ^3November 2011";
     tips[tips.size] = "^3BlancO ^7is the founder of the `nL.Clan*";
-	tips[tips.size] = "^3Dusza ^7is the leader of the `nL.Clan*";
+	tips[tips.size] = "Cap ^2HQs ^7marked with the NoLimits flag to earn rewards";
     tips[tips.size] = "Use ^3!help ^7to check your available commands";
     tips[tips.size] = "Various types of Zombie Weapons have different bash ranges";
     tips[tips.size] = "If you need help, ask any nL member currently online ^3!admins";

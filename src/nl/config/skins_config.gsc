@@ -136,7 +136,7 @@ Configure()
     enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
-	// hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
+	hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 
     // Not used at this moment - available using !god command
@@ -173,6 +173,7 @@ Configure()
 	enableBotHunterSkinSelection(20, 1);
 	enableBotHunterSkinSelection(21, 1);
 	enableBotHunterSkinSelection(22, 1);	
+	enableBotHunterSkinSelection(23, 1);
 	enableBotHunterSkinSelection(31, 1);
 	enableBotHunterSkinSelection(32, 1);
 	enableBotHunterSkinSelection(33, 1);
