@@ -1,11 +1,11 @@
 Configure()
 {
     a = [];
-    a[a.size] = "^^22CLI^77.^^22MigueL";
+    a[a.size] = "^5|^7Ak^5a^7maru^5|";
     a[a.size] = "^1*^9Para^7noize^1.^5.^3.";
     a[a.size] = "^^77x^^88*^^44-^^66LoKKu^^44-";
     a[a.size] = "^^55`^^77Ga^^55ng^^77Zap";
-    a[a.size] = "^^55Elita^^22Kmix^4CZ";
+    a[a.size] = "^^55Elita^^22Kmix^^44CZ";
     a[a.size] = "^^55ERIKZON";
     a[a.size] = "^3MeXicano";
     a[a.size] = "^^22G^^99rubase^^22K";
@@ -15,7 +15,7 @@ Configure()
     a[a.size] = "www.mynl.pl";
     a[a.size] = "^5ZDENEK^7[^1CZE^7]";
     a[a.size] = "Guayaquil ECU";
-    a[a.size] = "AdriX";
+    a[a.size] = "^3|^9Sad Rejonowy^3x^7AdriX^3|";
     a[a.size] = "^1VETERAN^4|^7CTF";
     a[a.size] = "^^00King$^^33SkiterR";
     a[a.size] = "^^44`^^99nL^^44.^^77SkakoL^^44*";
@@ -58,7 +58,7 @@ Configure()
     a[a.size] = "^9Muted ^7Wysmarowany";
     a[a.size] = "^^11Django";
     a[a.size] = "^3Triska.^7ESL";
-    a[a.size] = "Embrace.";
+    a[a.size] = "@Embrace.";
     a[a.size] = "^^11.^7g^94^7ll^9ar^7do^^11.";
     a[a.size] = "^1|^9GDT^1|^7AdBi";
     a[a.size] = "^8Happy";
@@ -76,7 +76,7 @@ Configure()
     a[a.size] = "^^22Fehvar^^77[HUN]";
     a[a.size] = "Ciasny|x|WojteK";
     a[a.size] = "^^77Adria^^00N";
-    a[a.size] = "^^77Rayan^^11PL";
+    a[a.size] = "^4The^2Gospodarz";
     a[a.size] = "Kevi";
     a[a.size] = "Bodzio";
     a[a.size] = "^2J^7upiter";
