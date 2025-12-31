@@ -116,7 +116,7 @@ Configure()
 	a[a.size] = "^5G^2Force#^1Zero^2Cool";
 	a[a.size] = "Nem kivant terhesseg";
 	a[a.size] = "^6majtkomat.pl^7#Krystian";
-	a[a.size] = "Merry Christmas Everyone";
+	a[a.size] = "^2|^9Outlast^2|";
 	
     level.botNames = a;
 }
