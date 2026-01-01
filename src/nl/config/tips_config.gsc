@@ -66,7 +66,7 @@ Configure()
 	tips[tips.size] = "`nL.Clan* has a ^1zero-tolerance ^7policy for ^1cheaters";
 	tips[tips.size] = "Check out ^3#binds ^7channel in our Discord";
 	tips[tips.size] = "Check out ^3#weapon-rotation ^7info in our Discord";
-	tips[tips.size] = "You can find current ^3nl-squad ^7list in our Discord";
+	tips[tips.size] = "You can find current ^3#nl-squad ^7list in our Discord";
 	tips[tips.size] = "^1Cheats ^7= Perm Ban";
     level.tips = tips;
 }
