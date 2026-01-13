@@ -22,7 +22,7 @@ Configure()
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBox";
 	tips[tips.size] = "Nazi Zombie can throw Potatoes/Nades, 300 HP";
-	tips[tips.size] = "Black & Skinny Charple = Speed, 200 HP";
+	tips[tips.size] = "Black & Skinny Charple = Speed Zombie, 200 HP";
 	tips[tips.size] = "Slasher = Mutant, 550-650 HP";
 	tips[tips.size] = "Black & Muscular Heller = Heavy Mutant, 750-850 HP";
 	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant, 800 HP";
