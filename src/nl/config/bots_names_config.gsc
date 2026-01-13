@@ -15,7 +15,7 @@ Configure()
     a[a.size] = "www.mynl.pl";
     a[a.size] = "^5ZDENEK^7[^1CZE^7]";
     a[a.size] = "Guayaquil ECU";
-    a[a.size] = "^3|^9Sad^3x^9Rejonowy 7AdriX^3|";
+    a[a.size] = "^3|^9Sad Rejonowy^3x^7AdriX^3|";
     a[a.size] = "^1VETERAN^4|^7CTF";
     a[a.size] = "^^55x R ^7a i z e n ^^77";
     a[a.size] = "^^44`^^99nL^^44.^^77SkakoL^^44*";

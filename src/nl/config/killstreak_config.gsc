@@ -20,6 +20,8 @@ Configure()
     blanco\config::addNewKillstreak(17, "rcxd", "RC-XD", 9999, 9999, 9999, 999, "hud_rcxd", "Remote Explosive Toy Car for 30 seconds", "RC^9-XD^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rcxd::Activate, blanco\actions\rcxd::CanUse, blanco\utils::a(30));
     blanco\config::addNewKillstreak(18, "emp", "EMP", 9999, 9999, 9999, 999, "nl_hud_kr16", "Disables Zombie Shop & Deathstreaks for 20 seconds", "E^9MP^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, blanco\utils::a(20));
     blanco\config::addNewKillstreak(19, "rage", "Rage", 9999, 9999, 9999, 999, "hud_rage", "Double Damage and Ability to Burn for 30 seconds", "Ra^9ge^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rage::Activate, blanco\actions\rage::CanUse, blanco\utils::a(30));
+    blanco\config::addNewKillstreak(20, "hp_boost", "HP Boost", 9999, 9999, 9999, 999, "hud_hpboost", "Swedza Cie jaja az do smierci", "HP ^9Boost^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\hp_boost::Activate, blanco\actions\hp_boost::CanUse);
+    blanco\config::addNewKillstreak(21, "ulti", "Ultimate Fire", 9999, 9999, 9999, 999, "hud_ulti", "To jest kurwa swag, to je bangier jak skurwysyn", "Ultimate ^9Fire^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\ultimate::Activate, blanco\actions\ultimate::CanUse);
 
 	blanco\config::setKillstreakLevelForMap("mp_kg", level.killstreakEasyLevel);
 	blanco\config::setKillstreakLevelForMap("mp_loop", level.killstreakEasyLevel);
