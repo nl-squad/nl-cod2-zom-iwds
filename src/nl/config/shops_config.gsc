@@ -5,11 +5,11 @@
 Configure()
 {
     hunters = [];
-    hunters["1"] = CreateMenuSelection(1, "invisible", "Invisibility (^75^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));
+    hunters["1"] = CreateMenuSelection(1, "invisible", "Invisibility (^75 ^9s)", ::invisiblePrice, blanco\actions\invisible::Activate, blanco\actions\invisible::CanUse, undefined, a(5));
     hunters["2"] = CreateMenuSelection(2, "mine", "Mine", ::minePrice, blanco\actions\mine::Activate, blanco\actions\mine::CanUse);
     hunters["3"] = CreateMenuSelection(8, "elixir", "Vital Elixir", ::elixirPrice, blanco\actions\elixir::Activate);
-    hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
-    hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^75^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
+    hunters["4"] = CreateMenuSelection(4, "bubble", "Bubble (^712 ^9s)", ::bubblePrice, blanco\actions\bubble::Activate);
+    hunters["5"] = CreateMenuSelection(5, "freeze_zombies", "Freeze Zombies (^75 ^9s)", ::freeze_zombiesPrice, blanco\actions\freeze::Activate);
     hunters["6"] = CreateMenuSelection(7, "c4", "C4 Explosives x3", ::c4Price, blanco\actions\c4::Activate, undefined, undefined, a(3));
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
@@ -21,8 +21,8 @@ Configure()
     vips["1"] = CreateMenuSelection(1, "bash_king", "Bash King Bat ^3Free", 0, blanco\menus\shops::giveBashKing);
     vips["2"] = CreateMenuSelection(2, "exploding_ball", "Fireball", ::exploding_ballPrice, blanco\actions\exploding_ball::Activate);
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", ::napalmPrice, blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
-    vips["4"] = CreateMenuSelection(4, "rage", "Rage Mode (^730^9s)", ::rageModePrice, blanco\actions\rage::Activate, blanco\actions\rage::CanUse, undefined, a(30));
-    vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
+    vips["4"] = CreateMenuSelection(4, "rage", "Rage Mode (^730 ^9s)", ::rageModePrice, blanco\actions\rage::Activate, blanco\actions\rage::CanUse, undefined, a(30));
+    vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720 ^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
     vips["6"] = CreateMenuSelection(6, "spawn_beacon", "Spawn Beacon", ::spawn_beaconPrice, blanco\actions\spawn_beacon::Activate, blanco\actions\spawn_beacon::CanUse);
     
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);

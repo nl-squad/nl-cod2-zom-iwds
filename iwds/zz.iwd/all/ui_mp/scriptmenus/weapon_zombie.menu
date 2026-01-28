@@ -217,16 +217,16 @@
             decoration
         }
 		
-	    ZWP(ORIGIN_CHOICE2, "^9Rank 1 ^4|", "Baseball Bat", "hbat", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.7^9s \n^9Bash ^7Delay^9: ^30.1^9s \n \n^9Bash ^7Range^9: ^3100 \n \n^9Movement ^7Speed^9: ^3110")
-        ZWP(ORIGIN_CHOICE3, "^9Rank 50 ^4|", "Axe", "axe", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.8^9s \n^9Bash ^7Delay^9: ^30.15^9s \n \n^9Bash ^7Range^9: ^3110 \n \n^9Movement ^7Speed^9: ^3105")
-        ZWP(ORIGIN_CHOICE4, "^9Rank 75 ^4|", "Knife", "knife", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.6^9s \n^9Bash ^7Delay^9: ^30.08^9s \n \n^9Bash ^7Range^9: ^390 \n \n^9Movement ^7Speed^9: ^3115")
+	    ZWP(ORIGIN_CHOICE2, "^9Rank 1 ^4|", "Baseball Bat", "hbat", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.7^9 s \n^9Bash ^7Delay^9: ^30.1^9 s \n \n^9Bash ^7Range^9: ^3100 \n \n^9Movement ^7Speed^9: ^3110")
+        ZWP(ORIGIN_CHOICE3, "^9Rank 50 ^4|", "Axe", "axe", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.8^9 s \n^9Bash ^7Delay^9: ^30.15^9 s \n \n^9Bash ^7Range^9: ^3110 \n \n^9Movement ^7Speed^9: ^3105")
+        ZWP(ORIGIN_CHOICE4, "^9Rank 75 ^4|", "Knife", "knife", "^9Bash ^7Damage^9: ^3100 \n^9Bash ^7Time^9: ^30.6^9 s \n^9Bash ^7Delay^9: ^30.08^9 s \n \n^9Bash ^7Range^9: ^390 \n \n^9Movement ^7Speed^9: ^3115")
 		DS(ORIGIN_CHOICE6, "^4|", "Nazi Zombie", "nazi", "^7Ability^9#^71^9: ^7Throwable Zombie Nade^9/^7Anti-Invi Nade \n^7Ability^9#^72^9: ^7Throwable Potatoes \n^9Level ^71^9: ^31 ^9Potato \n^9Level ^72^9: ^32 ^9Potatoes \n^9Level ^73^9: ^33 ^9Potatoes \n \n^7Health Points^9: ^3300")
         DS(ORIGIN_CHOICE7, "^4|", "Speed Zombie", "charple", "^7Ability^9: ^7Increased Movement Speed \n^9Level ^71^9: ^3+30% \n^9Level ^72^9: ^3+40% \n^9Level ^73^9: ^3+50% \n \n^7Health Points^9: ^3200")
         DS(ORIGIN_CHOICE8, "^4|", "Mutant", "mutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire^9: ^3-10% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3550 ^9HP \n^9Level ^72^9: ^3600 ^9HP \n^9Level ^73^9: ^3650 ^9HP")
 		DS(ORIGIN_CHOICE9, "^4|", "Heavy Mutant", "heavymutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire^9: ^3-20% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3750 ^9HP \n^9Level ^72^9: ^3800 ^9HP \n^9Level ^73^9: ^3850 ^9HP")
         DS(ORIGIN_CHOICE10, "^4|", "Armoured Mutant", "armoured", "^7Ability^9: ^7Reduced Damage from Explosions ^9& ^7Fire \n^9Level ^71^9: ^3-40% \n^9Level ^72^9: ^3-50% \n^9Level ^73^9: ^3-60% \n \n^7Health Points^9: ^3800")
-		DS(ORIGIN_CHOICE11, "^4|", "Skeleton", "skeleton", "^7Ability^9: ^7Chance to Dodge Bullets \n^9Level ^71^9: ^325% \n^9Level ^72^9: ^330% \n^9Level ^73^9: ^335% \n \n^7Health Points^9: ^3300")
-		DS(ORIGIN_CHOICE12, "^4|", "Half-Life Red", "halflife", "^7Ability^9: ^7Sets a Jumpy Spawn Point on Death \n^9Level ^71^9: ^31.5s ^9of Spawn Protect \n^9Level ^72^9: ^32s ^9of Spawn Protect \n^9Level ^73^9: ^32.5s ^9of Spawn Protect \n \n^7Health Points^9: ^3300")
+		DS(ORIGIN_CHOICE11, "^4|", "Skeleton", "skeleton", "^7Ability^9: ^7Chance to Dodge Bullets \n^9Level ^71^9: ^325% \n^9Level ^72^9: ^335% \n^9Level ^73^9: ^345% \n \n^7Health Points^9: ^3300")
+		DS(ORIGIN_CHOICE12, "^4|", "Half-Life Red", "halflife", "^7Ability^9: ^7Sets a Jumpy Spawn Point on Death \n^9Level ^71^9: ^31.5 s ^9of Spawn Protect \n^9Level ^72^9: ^32 s ^9of Spawn Protect \n^9Level ^73^9: ^32.5 s ^9of Spawn Protect \n \n^7Health Points^9: ^3300")
 		DS(ORIGIN_CHOICE13, "^4|", "Chimp", "chimp", "^7Ability^9: ^7Preforms a Charged Swoosh Jump \n^9Level ^71^9: ^3200 ^9Max Power \n^9Level ^72^9: ^3300 ^9Max Power \n^9Level ^73^9: ^3400 ^9Max Power \n \n^7Health Points^9: ^3400")
 		DS(ORIGIN_CHOICE14, "^4|", "Venom", "venom", "^7Ability^9: ^7Performs a High Jump \n^9Level ^71^9: ^3Single ^9High Jump \n^9Level ^72^9: ^3Double ^9High Jump \n^9Level ^73^9: ^3Triple ^9High Jump \n \n^7Health Points^9: ^3300")			
 		DS(ORIGIN_CHOICE15, "^4|", "Alien", "alien", "^7Ability^9#^71^9: ^7Deals ^310 ^7Damage per second within a Radius (x2 against Invi) \n^7Ability^9#^72^9: ^7Gets ^340 ^7Health per second within a Radius \n^9Level ^71^9: ^396 ^9x ^396 ^9Radius \n^9Level ^72^9: ^3128 ^9x ^3128 ^9Radius \n^9Level ^73^9: ^3160 ^9x ^3160 ^9Radius \n \n^7Health Points^9: ^3400 \n^7Max Health Points^9: ^3800")
