@@ -1,12 +1,10 @@
 #include "ui/menudef.h"
 
 #define TEXT_ON_BG_STYLE 		3	//
-#define ORIGIN_MENU				170 60
+#define ORIGIN_MENU				170 45
 #define ORIGIN_EXIT				60 415
 #define ORIGIN_TITLE1			200 72
 #define ORIGIN_TITLE2			340 72
-#define ORIGIN_TITLE3			200 72
-#define ORIGIN_TITLE4			340 72
 
 #ifndef TAB
 #define TAB(_origin, _name, _action) \
@@ -125,7 +123,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 52 12 12
+			rect		      	10 60 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale		     .2
@@ -139,7 +137,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 72 12 12
+			rect		      	10 80 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -153,7 +151,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 92 12 12
+			rect		      	10 100 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -167,7 +165,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 112 12 12
+			rect		      	10 120 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -181,7 +179,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 132 12 12
+			rect		      	10 140 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -195,7 +193,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 152 12 12
+			rect		      	10 160 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -209,7 +207,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 172 12 12
+			rect		      	10 180 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -223,7 +221,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 192 12 12
+			rect		      	10 200 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -237,7 +235,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 212 12 12
+			rect		      	10 220 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -251,7 +249,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 232 12 12
+			rect		      	10 240 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -265,7 +263,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 252 12 12
+			rect		      	10 260 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -279,7 +277,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect		      	10 272 12 12
+			rect		      	10 280 12 12
 			origin			ORIGIN_MENU
 			background		"nl_top_postion"
 			textscale	       	.2
@@ -295,7 +293,7 @@
 		{
 			name			"ui_topstats"
 			visible		1
-			rect			10 312 12 12
+			rect			10 320 12 12
 			origin		ORIGIN_MENU
 			forecolor		1 1 1 1
 			textalign 	ITEM_ALIGN_CENTER
