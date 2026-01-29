@@ -1,7 +1,7 @@
 #include "ui/menudef.h"
 
 #define TEXT_ON_BG_STYLE 		3	//
-#define ORIGIN_MENU				170 70
+#define ORIGIN_MENU				170 60
 #define ORIGIN_EXIT				60 415
 #define ORIGIN_TITLE1				200 72
 #define ORIGIN_TITLE2				340 72
@@ -11,7 +11,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
+			rect			0 10 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladkas" \
 			visible			1 \
@@ -20,7 +20,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
+			rect			0 10 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladka" \
 			visible			1 \
@@ -82,7 +82,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			0 2 298 2
+			rect			2 40 298 2
 			origin			ORIGIN_MENU
 			backcolor		0.027 0.082 0.604 1
 			visible			1
@@ -337,7 +337,7 @@
 		{
 			name			"topstats_header"
 			visible			1
-			rect			90 0 0 0
+			rect			90 -20 0 0
 			origin			ORIGIN_MENU
 			forecolor		1 1 1 1
 			text			"^3TOP PLAYERS"
