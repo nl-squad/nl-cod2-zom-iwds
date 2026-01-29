@@ -68,17 +68,6 @@
 			close topstats;
 			open ingame;
 		}
-
-		/// TITLE ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 0 300 40
-			origin			ORIGIN_MENU
-			background		"nl_top_title"
-			visible			1
-			decoration
-		}
 		/// BACKGROUND ///
 		itemDef
 		{
@@ -93,7 +82,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			30 0 296 0
+			rect			0 2 296 298
 			origin			ORIGIN_MENU
 			backcolor		0.027 0.082 0.604 1
 			visible			1
@@ -348,10 +337,10 @@
 		{
 			name			"topstats_header"
 			visible			1
-			rect			90 12 0 0
+			rect			90 -12 0 0
 			origin			ORIGIN_MENU
 			forecolor		1 1 1 1
-			text			"^4TOP PLAYERS"
+			text			"^3TOP PLAYERS"
 			textfont		UI_FONT_NORMAL
 			textscale		.45
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
