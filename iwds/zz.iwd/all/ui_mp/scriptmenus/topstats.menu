@@ -5,15 +5,13 @@
 #define ORIGIN_EXIT				60 415
 #define ORIGIN_TITLE1			200 72
 #define ORIGIN_TITLE2			340 72
-#define ORIGIN_TITLE3			200 72
-#define ORIGIN_TITLE4			340 72
 
 #ifndef TAB
 #define TAB(_origin, _name, _action) \
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
+			rect			0 -7 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladkas" \
 			visible			1 \
@@ -22,7 +20,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
+			rect			0 -7 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladka" \
 			visible			1 \
@@ -31,7 +29,7 @@
 		itemDef \
 		{ \
 			type			ITEM_TYPE_TEXT \
-			rect			0 0 100 20 0 0 \
+			rect			0 -2 100 20 0 0 \
 			origin			_origin \
 			text			_name \
 			textscale		.23 \
@@ -339,7 +337,7 @@
 		{
 			name			"topstats_header"
 			visible			1
-			rect			90 -20 0 0
+			rect			90 -15 0 0
 			origin			ORIGIN_MENU
 			forecolor		1 1 1 1
 			text			"^3TOP PLAYERS"
