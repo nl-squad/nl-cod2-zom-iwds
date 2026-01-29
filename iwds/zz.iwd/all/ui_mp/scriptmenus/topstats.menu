@@ -13,7 +13,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 10 100 20 0 0 \
+			rect			0 -5 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladkas" \
 			visible			1 \
@@ -22,7 +22,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			0 10 100 20 0 0 \
+			rect			0 -5 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladka" \
 			visible			1 \
@@ -311,7 +311,7 @@
 		{
 			name			"ui_topstats"
 			visible			1
-			rect			28 54 0 0
+			rect			28 62 0 0
 			origin			ORIGIN_MENU
 			forecolor		1 1 1 1
 			textalign 		ITEM_ALIGN_LEFT
@@ -324,7 +324,7 @@
 		{
 			name			"ui_topstats"
 			visible			1
-			rect			290 54 0 0
+			rect			290 62 0 0
 			origin			ORIGIN_MENU
 			forecolor		1 1 1 1
 			textalign 		ITEM_ALIGN_RIGHT
