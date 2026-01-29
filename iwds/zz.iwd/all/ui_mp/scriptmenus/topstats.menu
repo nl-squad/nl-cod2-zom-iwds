@@ -3,8 +3,10 @@
 #define TEXT_ON_BG_STYLE 		3	//
 #define ORIGIN_MENU				170 60
 #define ORIGIN_EXIT				60 415
-#define ORIGIN_TITLE1				200 72
-#define ORIGIN_TITLE2				340 72
+#define ORIGIN_TITLE1			200 72
+#define ORIGIN_TITLE2			340 72
+#define ORIGIN_TITLE3			200 72
+#define ORIGIN_TITLE4			340 72
 
 #ifndef TAB
 #define TAB(_origin, _name, _action) \
