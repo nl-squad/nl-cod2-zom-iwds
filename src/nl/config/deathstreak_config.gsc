@@ -55,11 +55,11 @@ Configure()
 	level.DEATHSTREAK_toxicHp = 300;
     level.DEATHSTREAK_toxicDamage = 15;
 	level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
-    level.DEATHSTREAK_toxicEffectLevel1 = loadFx("fx/nl/nl_toxic_64.efx");
+    level.DEATHSTREAK_toxicEffectLevel1 = "fx/nl/nl_toxic_64.efx";
     level.DEATHSTREAK_toxicGrade2RadiusSquared = 72 * 72;
-    level.DEATHSTREAK_toxicEffectLevel2 = loadFx("fx/nl/nl_toxic_72.efx");
+    level.DEATHSTREAK_toxicEffectLevel2 = "fx/nl/nl_toxic_72.efx";
     level.DEATHSTREAK_toxicGrade3RadiusSquared = 80 * 80;
-    level.DEATHSTREAK_toxicEffectLevel3 = loadFx("fx/nl/nl_toxic_80.efx");
+    level.DEATHSTREAK_toxicEffectLevel3 = "fx/nl/nl_toxic_80.efx";
 
     level.DEATHSTREAK_typeNothing = deathstreak("nothing", blanco\deathstreaks\generic::GrantNothing);
 	level.DEATHSTREAK_typeSpeed = deathstreak("speed", blanco\deathstreaks\generic::GrantSpeed);

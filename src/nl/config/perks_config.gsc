@@ -27,7 +27,7 @@ Configure()
     level.PERK_laserShader = "nl_laser";
     level.PERK_reconShader = "nl_hud_recon";
     level.PERK_explodeBulletChance = 4;
-    level.PERK_explodeBulletFx = loadFx("fx/nl/nl_explodebullet.efx");
+    level.PERK_explodeBulletFx = "fx/nl/nl_explodebullet.efx";
     level.PERK_explodeBulletRange = 100;
     level.PERK_explodeBulletDamage = 300;
     level.PERK_pistoleroDamageMultiplier = 1.5;
