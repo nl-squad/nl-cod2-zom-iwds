@@ -12,7 +12,7 @@
 #define ORIGIN_CHOICE8		70 280
 #define ORIGIN_CHOICE9		70 305
 #define ORIGIN_CHOICE10		70 330
-#define ORIGIN_ABOUT		320 100
+#define ORIGIN_SERVERINFO	320 100
 #define ORIGIN_VERSION		320 430
 #define ORIGIN_CHANGES		320 445
 #define ORIGIN_PATRON		320 460
@@ -152,7 +152,7 @@
 #endif
 
 #ifndef INGAME_SELECTION_HOVERSUBMENU
-#define INGAME_SELECTION_HOVERSUBMENU(_text, _origin, _submenu, _num) \
+#define INGAME_SELECTION_HOVERSUBMENU(_text, _origin, _submenu, _num, _action) \
 		itemDef \
 		{ \
 			name			"blanco_highlight_menu" ## _num \
@@ -186,6 +186,7 @@
 				hide map_records; \
 				hide blanco_playeroption; \
 				show _submenu; \
+				scriptMenuResponse _action; \
 			} \
 			mouseExit \
 			{ \
@@ -227,7 +228,7 @@
 		blurWorld		5.0
 		onOpen
 		{
-			hide about;
+			hide serverinfo;
                show blanco_playeroption;
 			show map;
 
@@ -240,6 +241,7 @@
 			hide blanco_highlight_menu7;
 			hide blanco_highlight_menu8;
 			hide blanco_highlight_menu9;
+			scriptMenuResponse "open";
 		}
 		onEsc
 		{
@@ -763,23 +765,23 @@
 			textscale		.35
 		}
 
-		/// ABOUT
+		/// SERVER INFO
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			style			WINDOW_STYLE_SHADER
 			rect			0 0 300 20
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			background		"nl_top_title"
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			visible			1
 			rect			0 0 300 20
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			forecolor		0.1 0.4 1 1
 			text			"INFORMATIONS"
 			textfont		UI_FONT_NORMAL
@@ -793,50 +795,50 @@
 		/// BORDER ///
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			style			WINDOW_STYLE_FILLED
 			rect			0 20 300 240
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			backcolor		0 0 0 .8
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			style			WINDOW_STYLE_FILLED
 			rect			0 19 2 241
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			backcolor		.254 .25 .254 1
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			style			WINDOW_STYLE_FILLED
 			rect			298 19 2 241
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			backcolor		.254 .25 .254 1
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			style			WINDOW_STYLE_FILLED
 			rect			2 258 298 2
-			origin			ORIGIN_ABOUT
+			origin			ORIGIN_SERVERINFO
 			backcolor		.254 .25 .254 1
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			name			"about"
+			name			"serverinfo"
 			rect			5 25 0 0
-			origin			ORIGIN_ABOUT
-			dvar			nl_rules
+			origin			ORIGIN_SERVERINFO
+			dvar			nl_serverinfo
 			textscale		.25
 			visible			1
 			decoration
@@ -871,7 +873,7 @@
 
 		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
 		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
-		INGAME_SELECTION_HOVERSUBMENU("Server Info", ORIGIN_CHOICE7, "about", "6")
+		INGAME_SELECTION_HOVERSUBMENU("Server Info", ORIGIN_CHOICE7, "serverinfo", "6", "serverinfo")
 		
 		INGAME_SELECTION_OPENSUBMENU("Leave Game", ORIGIN_CHOICE9, "leavegame", "7")
 		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
