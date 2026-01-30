@@ -10,11 +10,12 @@
 #define TAB(_origin, _name, _action) \
 		itemDef \
 		{ \
+			group			"tab_" ## _action \
 			style			WINDOW_STYLE_SHADER \
 			rect			0 -7 100 20 0 0 \
 			origin			_origin \
 			background		"nl_zakladkas" \
-			visible			1 \
+			visible			0 \
 			decoration \
 		} \
 		itemDef \
@@ -49,6 +50,9 @@
 			{ \
 				play "mouse_click"; \
 				scriptMenuResponse _action; \
+				hide tab_overall; \
+				hide tab_month; \
+				show "tab_" ## _action; \
 			} \
 		}
 #endif
