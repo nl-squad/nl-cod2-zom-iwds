@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nl-cod2-zom:
-    image: docker.io/rutkowski/cod2:13.5-server1.3-mysql-unsafe
+    image: docker.io/rutkowski/cod2:14.2-server1.3-mysql-unsafe
     stdin_open: true
     tty: true
     stop_grace_period: 1s
@@ -22,6 +22,7 @@ services:
       PARAMS_BEFORE: "+exec server.zom.cfg"
       COD2_SET_fs_homepath: "/cod2/home"
       COD2_SET_fs_game: "nl"
+      COD2_SET_fs_gametypes: "maps/mp/gametypes"
       COD2_SET_fs_library: "library"
       COD2_SET_dedicated: 2
       COD2_SET_net_port: 28960
