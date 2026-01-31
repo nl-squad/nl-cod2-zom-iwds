@@ -84,6 +84,7 @@ Configure()
 	level.lvl["pos"] = 40;
 	level.lvl["sp"] = 40;
 	level.lvl["warp"] = 40;
+	level.lvl["noclip"] = 100;
 	
 	level.lvl["delwarp"] = 60;
 	level.lvl["god"] = 60;
