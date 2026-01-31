@@ -17,7 +17,7 @@ REFERENCE           NOSPECTATORVOICECHAT
 LANG_ENGLISH        "Can't voice chat as a spectator."
 
 REFERENCE           SPECTATOR
-LANG_ENGLISH        "^3Only A Coward Sits and Spectates"
+LANG_ENGLISH        "^3Spectator Mode"
 
 REFERENCE           COMPLAINTFILED
 LANG_ENGLISH        "Your complaint has been filed"
@@ -77,13 +77,13 @@ REFERENCE           SB_PLAYERS
 LANG_ENGLISH        "&&1 players"
 
 REFERENCE           SPECTATORS
-LANG_ENGLISH        "^9Spectators ^4* ^7"
+LANG_ENGLISH        "^9Spectators^4* ^7"
 
 REFERENCE           SB_SCORE
-LANG_ENGLISH        "^9Sc^7ore"
+LANG_ENGLISH        "Score"
 
 REFERENCE           SB_DEATHS
-LANG_ENGLISH        "^9Ra^7nk"
+LANG_ENGLISH        "Rank"
 
 REFERENCE           SB_PING
 LANG_ENGLISH        "^9Ping"
@@ -119,7 +119,7 @@ REFERENCE           HEAD_SHOT
 LANG_ENGLISH        "head shot"
 
 REFERENCE           PRONE_BLOCKED
-LANG_ENGLISH        "^9You Can^4'^9t ^7Prone ^9Here ^4!^7"
+LANG_ENGLISH        "^9You Can^4'^9t ^7Prone ^9Here^4!^7"
 
 REFERENCE           HEALTH
 LANG_ENGLISH        "Health"
