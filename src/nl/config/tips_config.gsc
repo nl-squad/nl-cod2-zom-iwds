@@ -21,11 +21,11 @@ Configure()
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your nL Tokens purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "You can test Weapons by drawing them from MysteryBox";
-	tips[tips.size] = "Nazi Zombie can throw Potatoes/Nades, 300 HP";
-	tips[tips.size] = "Black & Skinny Charple = Speed Zombie, 200 HP";
-	tips[tips.size] = "Slasher = Mutant, 550-650 HP";
-	tips[tips.size] = "Black & Muscular Heller = Heavy Mutant, 750-850 HP";
-	tips[tips.size] = "Muscular & Metalic Zombie = Armoured Mutant, 800 HP";
+	tips[tips.size] = "Nazi Zombie = Throws Potatoes/Nades, 300 HP";
+	tips[tips.size] = "Speed Zombie = Very fast, but only 200 HP";
+	tips[tips.size] = "Mutant = 550-650 HP";
+	tips[tips.size] = "Heavy Mutant = 750-850 HP";
+	tips[tips.size] = "Armoured Mutant = 800 HP";
 	tips[tips.size] = "Skeleton = Dodge Bullets Ability, 300 HP";
 	tips[tips.size] = "Red Half-Life Zombie = Jumpy Spawn, 300 HP";
 	tips[tips.size] = "Chimp = Charged Swoosh Jump Ability, 400 HP";
@@ -49,7 +49,7 @@ Configure()
 	tips[tips.size] = "You will receive ^8nL Tokens^7 & ^3EXP^7 after each map";
     tips[tips.size] = "`nL.Zombies* server started in ^3November 2011";
     tips[tips.size] = "^3BlancO ^7is the founder of the `nL.Clan*";
-	tips[tips.size] = "Cap ^2HQs ^7marked with the NoLimits flag to earn rewards";
+	tips[tips.size] = "Cap ^2HQ ^7marked with the NoLimits flag to earn rewards";
     tips[tips.size] = "Use ^3!help ^7to check your available commands";
     tips[tips.size] = "Various types of Zombie Weapons have different bash ranges";
     tips[tips.size] = "If you need help, ask any nL member currently online ^3!admins";

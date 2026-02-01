@@ -13,7 +13,6 @@ Configure()
 	level.lvl["ci_all"] = 20;
 	level.lvl["displayOnAdmins"] = 20;
 	level.lvl["find"] = 20;
-	level.lvl["hide"] = 20;	
 	level.lvl["loadFakeLogin"] = 20;
     level.lvl["settag"] = 20;
     level.lvl["showAdminIcon"] = 20;
@@ -31,6 +30,7 @@ Configure()
 	level.lvl["screenshot"] = 40;
 	
     level.lvl["bash"] = 60;
+	level.lvl["hide"] = 60;	
 	level.lvl["map"] = 60;
     level.lvl["seeSendToSpec"] = 60;
 	level.lvl["setroundtime"] = 60;
@@ -84,14 +84,14 @@ Configure()
 	level.lvl["pos"] = 40;
 	level.lvl["sp"] = 40;
 	level.lvl["warp"] = 40;
-	level.lvl["noclip"] = 100;
 	
 	level.lvl["delwarp"] = 60;
 	level.lvl["god"] = 60;
 	level.lvl["money"] = 60;
+	level.lvl["noclip"] = 60;
     level.lvl["setwarp"] = 60;
 	
-	level.lvl["waypoint"] = 100;
 	level.lvl["mysterybox"] = 100;
 	level.lvl["surprise"] = 100;
+	level.lvl["waypoint"] = 100;
 }
