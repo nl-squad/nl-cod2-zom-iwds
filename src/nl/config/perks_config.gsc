@@ -4,6 +4,9 @@ Configure()
     level.PERK_ghostInvisibleExtensionSeconds = 3;
     level.PERK_assaultExtensionDurationMultiplier = 2;
     level.PERK_richEarningMultiplier = 1.3;
+    level.PERK_sharpshooterEarningMultiplier = 1.5;
+    level.PERK_heavyFireEarningMultiplier = 1.4;
+    level.PERK_precisionFireEarningMultiplier = 1.3;
 	level.PERK_hardlineNeededKillsMultiplier = 0.9;
     level.PERK_potatoGraterDamageMultiplier = 0.71;
     level.PERK_grenadeSupplyGrenadesCount = 10;
@@ -59,6 +62,10 @@ Configure()
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 144, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 184, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
 	blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
+	blanco\config::addNewPerk(22, "tactical", "Sharpshooter", 999, "nl_hud_pe10", "Niezly lol");
+	blanco\config::addNewPerk(23, "tactical", "Heavy Fire", 999, "nl_hudd_pe10", "Zbyszek");
+	blanco\config::addNewPerk(24, "tactical", "Precision Fire", 999, "nl_hudd_pe10", "Jak cie robil");
+	
 	// Random must be last
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 104, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
