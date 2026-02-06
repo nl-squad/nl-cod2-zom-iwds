@@ -55,17 +55,16 @@ Configure()
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
 	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
-	blanco\config::addNewPerk(3, "tactical", "Recon", 44, "nl_hud_pe2", "Displays the nearest Zombie Type & Distance"); 
+	blanco\config::addNewPerk(18, "tactical", "Sharpshooter", 44, "nl_hud_pe18", "Increases Money for Kills with Snipers by 50 percent");
 	blanco\config::addNewPerk(11, "tactical", "Gambler", 64, "nl_hud_pe52", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 84, "nl_hud_pe53", "Doubles Money for Assists");
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 124, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
 	blanco\config::addNewPerk(15, "tactical", "Assault Extension", 144, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
+	blanco\config::addNewPerk(24, "tactical", "Precision Fire", 164, "nl_hudd_pe24", "Increases Money for Kills with Semi-Auto by 50 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 184, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
+	blanco\config::addNewPerk(23, "tactical", "Heavy Fire", 204, "nl_hudd_pe23", "Increases Money for Kills with LMG by 50 percent");
 	blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 10 percent");
-	blanco\config::addNewPerk(22, "tactical", "Sharpshooter", 999, "nl_hud_pe10", "Niezly lol");
-	blanco\config::addNewPerk(23, "tactical", "Heavy Fire", 999, "nl_hudd_pe10", "Zbyszek");
-	blanco\config::addNewPerk(24, "tactical", "Precision Fire", 999, "nl_hudd_pe10", "Jak cie robil");
-	
+	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe2", "Displays the nearest Zombie Type & Distance"); 
 	// Random must be last
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 104, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
