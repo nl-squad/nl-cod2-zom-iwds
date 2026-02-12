@@ -54,183 +54,183 @@ Configure()
     // Rifles
 
 
-    defineWeapon(3, "springfield_mp", "M1903 Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("springfield_mp", 10);
+    level.weapons_springfield = defineWeapon(3, "springfield_mp", "M1903 Springfield", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    addWeaponRank(level.weapons_springfield, 10);
 	
-    defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponRank("m1garand_mp", 15);
+    level.weapons_m1garand = defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponRank(level.weapons_m1garand, 15);
 
-    defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("g3_mp", 1, 102, 2500);
-    addWeaponToMysteryBox("g3_mp", "xmodel/weapon_g3", 10, 10);
+    level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_g3, 1, 102, 2500);
+    addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 10, 10);
 
-    defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("barrett_mp", 1, 103, 4500);
-    addWeaponToMysteryBox("barrett_mp", "xmodel/m82_w", 10, 10);
+    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_barrett, 1, 103, 4500);
+    addWeaponToMysteryBox(level.weapons_barrett, "xmodel/m82_w", 10, 10);
 
-    defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("kar98k_mp", 350);
-    addWeaponToMysteryBox("kar98k_mp", "xmodel/weapon_kAr98", 10, 20);
+    level.weapons_kar98k = defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    addWeaponRank(level.weapons_kar98k, 350);
+    addWeaponToMysteryBox(level.weapons_kar98k, "xmodel/weapon_kAr98", 10, 20);
 
-    defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable, rotationDisable);
-    addWeaponPurchase("intervention_mp", 1, 116, 7500, purchaseDisable);
-    addWeaponToMysteryBox("intervention_mp", "xmodel/weapon_intervention", 10, 10);
+    level.weapons_intervention = defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable, rotationDisable);
+    addWeaponPurchase(level.weapons_intervention, 1, 116, 7500, purchaseDisable);
+    addWeaponToMysteryBox(level.weapons_intervention, "xmodel/weapon_intervention", 10, 10);
 
-    defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("m14ebr_mp", 1, 117, 7500);
-    addWeaponToMysteryBox("m14ebr_mp", "xmodel/weapon_law_m14ebr", 10, 10);
+    level.weapons_m14ebr = defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_m14ebr, 1, 117, 7500);
+    addWeaponToMysteryBox(level.weapons_m14ebr, "xmodel/weapon_law_m14ebr", 10, 10);
 
-    defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase("fal_mp", 1, 119, 8500);
-    addWeaponToMysteryBox("fal_mp", "xmodel/oma_weapon_fal", 10, 10);
+    level.weapons_fal = defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_fal, 1, 119, 8500);
+    addWeaponToMysteryBox(level.weapons_fal, "xmodel/oma_weapon_fal", 10, 10);
 	
-	defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank("kar98k_sniper_mp", 200);
-    addWeaponToMysteryBox("kar98k_sniper_mp", "xmodel/weapon_kar98_scoped", 10, 40);
+	level.weapons_kar98k_sniper = defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
+    addWeaponRank(level.weapons_kar98k_sniper, 200);
+    addWeaponToMysteryBox(level.weapons_kar98k_sniper, "xmodel/weapon_kar98_scoped", 10, 40);
 
     // Machine Guns
-    defineWeapon(6, "mp40_mp", "MP 40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank("mp40_mp", 1);
+    level.weapons_mp40 = defineWeapon(6, "mp40_mp", "MP 40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponRank(level.weapons_mp40, 1);
 
-    defineWeapon(7, "mp44_mp", "MP 44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank("mp44_mp", 25);
+    level.weapons_mp44 = defineWeapon(7, "mp44_mp", "MP 44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponRank(level.weapons_mp44, 25);
 
-    defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("sig_mp", 2, 105, 3500);
+    level.weapons_sig = defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_sig, 2, 105, 3500);
 
-    defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("ak47_mp", 2, 106, 4500);
-    addWeaponToMysteryBox("ak47_mp", "xmodel/ak47_w", 10, 10);
+    level.weapons_ak47 = defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_ak47, 2, 106, 4500);
+    addWeaponToMysteryBox(level.weapons_ak47, "xmodel/ak47_w", 10, 10);
 
-    defineWeapon(18, "mp5_mp", "MP5", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
-    addWeaponPurchase("mp5_mp", 2, 111, 11500, purchaseDisable);
-    addWeaponToMysteryBox("mp5_mp", "xmodel/mp5_w", 10, 10);
+    level.weapons_mp5 = defineWeapon(18, "mp5_mp", "MP5", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, botsDisable, rotationDisable);
+    addWeaponPurchase(level.weapons_mp5, 2, 111, 11500, purchaseDisable);
+    addWeaponToMysteryBox(level.weapons_mp5, "xmodel/mp5_w", 10, 10);
 
-    defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank("thompson_mp", 100);
-    addWeaponToMysteryBox("thompson_mp", "xmodel/weapon_thompson", 10, 40);
+    level.weapons_thompson = defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponRank(level.weapons_thompson, 100);
+    addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 10, 40);
 
-    defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("scar_mp", 2, 113, 9500);
-    addWeaponToMysteryBox("scar_mp", "xmodel/weapon_mw2_scar", 10, 10);
+    level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_scar, 2, 113, 9500);
+    addWeaponToMysteryBox(level.weapons_scar, "xmodel/weapon_mw2_scar", 10, 10);
 
-    defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("p90_mp", 2, 115, 6500);
-    addWeaponToMysteryBox("p90_mp", "xmodel/weapon_p90sd", 10, 10);
+    level.weapons_p90 = defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_p90, 2, 115, 6500);
+    addWeaponToMysteryBox(level.weapons_p90, "xmodel/weapon_p90sd", 10, 10);
 
-    defineWeapon(26, "m4_mp", "M4", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("m4_mp", 2, 118, 10500);
-    addWeaponToMysteryBox("m4_mp", "xmodel/m4_w", 10, 10);
+    level.weapons_m4 = defineWeapon(26, "m4_mp", "M4", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_m4, 2, 118, 10500);
+    addWeaponToMysteryBox(level.weapons_m4, "xmodel/m4_w", 10, 10);
 
-    defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("famas_mp", 2, 121, 13500);
-    addWeaponToMysteryBox("famas_mp", "xmodel/weapon_famas", 10, 10);
+    level.weapons_famas = defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_famas, 2, 121, 13500);
+    addWeaponToMysteryBox(level.weapons_famas, "xmodel/weapon_famas", 10, 10);
 
-    defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase("g36c_mp", 2, 122, 12500);
-    addWeaponToMysteryBox("g36c_mp", "xmodel/weapon_g36c", 10, 10);
+    level.weapons_g36c = defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_g36c, 2, 122, 12500);
+    addWeaponToMysteryBox(level.weapons_g36c, "xmodel/weapon_g36c", 10, 10);
 	
-	defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank("pps_mp", 250);
-    addWeaponToMysteryBox("pps_mp", "xmodel/weapon_pps43", 10, 40);
+	level.weapons_pps = defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponRank(level.weapons_pps, 250);
+    addWeaponToMysteryBox(level.weapons_pps, "xmodel/weapon_pps43", 10, 40);
 
 
     // Heavy weapons
-    defineWeapon(12, "bar_mp", "M1918 BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponRank("bar_mp", 5);
+    level.weapons_bar = defineWeapon(12, "bar_mp", "M1918 BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponRank(level.weapons_bar, 5);
 
-    defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("winchester_mp", 3, 107, 3500);
-    addWeaponToMysteryBox("winchester_mp", "xmodel/winchester_w", 10, 10);
+    level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_winchester, 3, 107, 3500);
+    addWeaponToMysteryBox(level.weapons_winchester, "xmodel/winchester_w", 10, 10);
 
-    defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("rpk_mp", 3, 108, 5500);
+    level.weapons_rpk = defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_rpk, 3, 108, 5500);
 
-    defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("saw_mp", 3, 109, 7500);
-    addWeaponToMysteryBox("saw_mp", "xmodel/weapon_m249", 10, 10);
+    level.weapons_saw = defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_saw, 3, 109, 7500);
+    addWeaponToMysteryBox(level.weapons_saw, "xmodel/weapon_m249", 10, 10);
 
-    defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponRank("bren_mp", 150);
-    addWeaponToMysteryBox("bren_mp", "xmodel/weapon_bren", 10, 40);
+    level.weapons_bren = defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponRank(level.weapons_bren, 150);
+    addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 10, 40);
 
-    defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("aa12_mp", 3, 112, 7500);
-    addWeaponToMysteryBox("aa12_mp", "xmodel/weapon_aa_12", 10, 10);
+    level.weapons_aa12 = defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_aa12, 3, 112, 7500);
+    addWeaponToMysteryBox(level.weapons_aa12, "xmodel/weapon_aa_12", 10, 10);
 	
-	defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
-    addWeaponPurchase("model_1887_mp", 3, 123, 6500, purchaseDisable);
-    addWeaponToMysteryBox("model_1887_mp", "xmodel/weapon_model1887", 10, 10);
+	level.weapons_model_1887 = defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY, botsDisable, rotationDisable);
+    addWeaponPurchase(level.weapons_model_1887, 3, 123, 6500, purchaseDisable);
+    addWeaponToMysteryBox(level.weapons_model_1887, "xmodel/weapon_model1887", 10, 10);
 	
-	defineWeapon(32, "doublebarrel_mp", "Double Barrel", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase("doublebarrel_mp", 3, 124, 9500);
-    addWeaponToMysteryBox("doublebarrel_mp", "xmodel/weapon_doublebarrel", 10, 10);
+	level.weapons_doublebarrel = defineWeapon(32, "doublebarrel_mp", "Double Barrel", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_doublebarrel, 3, 124, 9500);
+    addWeaponToMysteryBox(level.weapons_doublebarrel, "xmodel/weapon_doublebarrel", 10, 10);
 	
-	defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponRank("shotgun_mp", 300);
-    addWeaponToMysteryBox("shotgun_mp", "xmodel/weapon_trenchgun", 10, 40);
+	level.weapons_shotgun = defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponRank(level.weapons_shotgun, 300);
+    addWeaponToMysteryBox(level.weapons_shotgun, "xmodel/weapon_trenchgun", 10, 40);
 
 
     // Special
-    defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-	addWeaponPurchase("tesla_mp", 4, 110, 14500);
-    addWeaponToMysteryBox("tesla_mp", "xmodel/superweap_worldmodel", 10, 40);
+    level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
+	addWeaponPurchase(level.weapons_tesla, 4, 110, 14500);
+    addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 10, 40);
 
-    defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-    addWeaponToMysteryBox("raygun_mp", "xmodel/van_raygun", 10, 40);
-	
-	defineWeapon(70, "crossbow_mp", "Crossbow", level.PATRON_REQUIRED, level.KIND_SPECIAL);
-	
+    level.weapons_raygun = defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
+    addWeaponToMysteryBox(level.weapons_raygun, "xmodel/van_raygun", 10, 40);
+
+	level.weapons_crossbow = defineWeapon(70, "crossbow_mp", "Crossbow", level.PATRON_REQUIRED, level.KIND_SPECIAL);
+
     // Secondary weapons
-    defineWeapon(61, "beretta_mp", "Beretta", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
-    addWeaponRank("beretta_mp", 1);
+    level.weapons_beretta = defineWeapon(61, "beretta_mp", "Beretta", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
+    addWeaponRank(level.weapons_beretta, 1);
 
-    defineWeapon(67, "deagle_mp", "Desert Eagle", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
-    addWeaponRank("deagle_mp", 10);
+    level.weapons_deagle = defineWeapon(67, "deagle_mp", "Desert Eagle", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
+    addWeaponRank(level.weapons_deagle, 10);
 
-    defineWeapon(68, "bashbat_mp", "Bash King Bat", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
-    addWeaponRank("bashbat_mp", level.VIP_REQUIRED);
+    level.weapons_bashbat = defineWeapon(68, "bashbat_mp", "Bash King Bat", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
+    addWeaponRank(level.weapons_bashbat, level.VIP_REQUIRED);
 
 
     // Zombie weapons
-    defineWeapon(82, "hbat_mp", "Baseball Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("hbat_mp", 1);
+    level.weapons_hbat = defineWeapon(82, "hbat_mp", "Baseball Bat", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
+    addWeaponRank(level.weapons_hbat, 1);
 
-    defineWeapon(84, "axe_mp", "Axe", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("axe_mp", 50);
+    level.weapons_axe = defineWeapon(84, "axe_mp", "Axe", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
+    addWeaponRank(level.weapons_axe, 50);
 
-    defineWeapon(83, "knife_mp", "Knife", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
-    addWeaponRank("knife_mp", 75);
+    level.weapons_knife = defineWeapon(83, "knife_mp", "Knife", level.TYPE_ZOMBIE, level.KIND_ZOMBIE, botsDisable);
+    addWeaponRank(level.weapons_knife, 75);
 
 
     // Grenades
-    defineGrenade(91, "potato_mp");
-    defineGrenade(92, "grenade_mp");
-    defineGrenade(93, "big_nade_mp");
-    defineGrenade(94, "dummy_mp");
-    defineGrenade(95, "zom_nade_mp");
-    defineGrenade(96, "body_mp");
+    level.weapons_potato = defineGrenade(91, "potato_mp");
+    level.weapons_grenade = defineGrenade(92, "grenade_mp");
+    level.weapons_big_nade = defineGrenade(93, "big_nade_mp");
+    level.weapons_dummy = defineGrenade(94, "dummy_mp");
+    level.weapons_zom_nade = defineGrenade(95, "zom_nade_mp");
+    level.weapons_body = defineGrenade(96, "body_mp");
 
     // Killstreak
-	defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
-    defineNonSelectable(110, "30cal_stand_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(111, "rocket_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(112, "launcher_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(113, "panzerschreck_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(114, "det_mp", level.KIND_KILLSTREAK);
+	level.weapons_thunder = defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
+    level.weapons_30cal_stand = defineNonSelectable(110, "30cal_stand_mp", level.KIND_KILLSTREAK);
+    level.weapons_rocket = defineNonSelectable(111, "rocket_mp", level.KIND_KILLSTREAK);
+    level.weapons_launcher = defineNonSelectable(112, "launcher_mp", level.KIND_KILLSTREAK);
+    level.weapons_panzerschreck = defineNonSelectable(113, "panzerschreck_mp", level.KIND_KILLSTREAK);
+    level.weapons_det = defineNonSelectable(114, "det_mp", level.KIND_KILLSTREAK);
 
-    defineNonSelectable(116, "explode_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(118, "nuke_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(120, "fire_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(121, "raptor_mp", level.KIND_KILLSTREAK);
-    defineNonSelectable(128, "drone_mp", level.KIND_KILLSTREAK);
+    level.weapons_explode = defineNonSelectable(116, "explode_mp", level.KIND_KILLSTREAK);
+    level.weapons_nuke = defineNonSelectable(118, "nuke_mp", level.KIND_KILLSTREAK);
+    level.weapons_fire = defineNonSelectable(120, "fire_mp", level.KIND_KILLSTREAK);
+    level.weapons_raptor = defineNonSelectable(121, "raptor_mp", level.KIND_KILLSTREAK);
+    level.weapons_drone = defineNonSelectable(128, "drone_mp", level.KIND_KILLSTREAK);
 
 
     // Other
-    defineNonSelectable(123, "minigun_mp", level.KIND_OTHER);
-    defineNonSelectable(125, "binoculars_mp", level.KIND_OTHER);
-    defineNonSelectable(126, "wunderwaffe_mp", level.KIND_OTHER);
-    addWeaponToMysteryBox("wunderwaffe_mp", "xmodel/weapon_wunderwaffe_dg2", 50, 150);
+    level.weapons_minigun = defineNonSelectable(123, "minigun_mp", level.KIND_OTHER);
+    level.weapons_binoculars = defineNonSelectable(125, "binoculars_mp", level.KIND_OTHER);
+    level.weapons_wunderwaffe = defineNonSelectable(126, "wunderwaffe_mp", level.KIND_OTHER);
+    addWeaponToMysteryBox(level.weapons_wunderwaffe, "xmodel/weapon_wunderwaffe_dg2", 50, 150);
 
 
     // Final configuration
