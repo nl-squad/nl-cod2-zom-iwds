@@ -174,7 +174,7 @@
 		}
 
 		TACTICAL(ORIGIN_KR1, "1", "Laser Dot", "nl_hud_pe1")
-		TACTICAL(ORIGIN_KR2, "2", "Omniscient", "nl_hud_pe21")
+		TACTICAL(ORIGIN_KR2, "2", "Omniscient", "nl_hud_pe2")
 		TACTICAL(ORIGIN_KR3, "11", "Gambler", "nl_hud_pe52")
 		TACTICAL(ORIGIN_KR4, "4", "Ghost", "nl_hud_pe11")
 		TACTICAL(ORIGIN_KR5, "19", "Random Tactical", "nl_hud_pe19")

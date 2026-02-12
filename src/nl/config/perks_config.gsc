@@ -54,7 +54,7 @@ Configure()
     preCacheShader(level.PERK_reconShader);
 
 	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
-	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe21", "Displays the Health Bar for the last hit Zombie");
+	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe2", "Displays the Health Bar for the last hit Zombie");
 	blanco\config::addNewPerk(11, "tactical", "Gambler", 44, "nl_hud_pe52", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe53", "Doubles Money for Assists");
@@ -63,7 +63,7 @@ Configure()
 	blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
 	blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hudd_pe24", "Increases Money for Kills with LMG by 40 percent");
 	blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 15 percent");
-	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe2", "Displays the nearest Zombie Type & Distance"); 
+	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe21", "Displays the nearest Zombie Type & Distance"); 
 	// Random must be last
 	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
