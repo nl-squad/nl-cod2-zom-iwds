@@ -73,7 +73,7 @@ Configure()
 	level.DEATHSTREAK_typeAbsorption = deathstreak("absorption", blanco\deathstreaks\absorption::Grant);
 	level.DEATHSTREAK_typeToxic = deathstreak("toxic", blanco\deathstreaks\toxic::Grant);
     level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
-	level.DEATHSTREAK_typeAntiInviNade = deathstreak("anti_invi", blanco\deathstreaks\generic::GrantAntiInviNade);
+	level.DEATHSTREAK_typeStunNade = deathstreak("stun", blanco\deathstreaks\generic::GrantStunNade);
     level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
 	level.DEATHSTREAK_upgradeChance = 20;
 
@@ -113,7 +113,7 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 	
     s = stage(10, &"Zombie Power^4: ^3Medium ^4| ^7Next In^4: ^7");
@@ -151,7 +151,7 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(20, &"Zombie Power^4: ^8Strong ^4| ^7Next In^4: ^7");
@@ -189,7 +189,7 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 5, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 5, level.DEATHSTREAK_typeNade, 1);
 
 	s = stage(30, &"Zombie Power^4: ^1Brutal ^4| ^7Next In^4: ^7");
@@ -227,7 +227,7 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 0, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 0, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(40, &"Zombie Power^4: ^6Unstoppable");
@@ -265,7 +265,7 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 0, level.DEATHSTREAK_typeAntiInviNade, 1);
+    reward(s, 0, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 }
 

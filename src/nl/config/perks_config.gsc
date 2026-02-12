@@ -22,7 +22,7 @@ Configure()
     level.PERK_mutantLabel = &"Mutant^9:^3 ";
     level.PERK_heavyMutantLabel = &"Heavy Mutant^9:^3 ";
     level.PERK_armouredLabel = &"Armoured^9:^3 ";
-	level.PERK_antiInviNadesLabel = &"Anti-Invi Nade^9:^3 ";
+	level.PERK_stunNadesLabel = &"Stun Nade^9:^3 ";
     level.PERK_bulletDodgeLabel = &"Bullet Dodge^9:^3 ";
     level.PERK_swooshLabel = &"Swoosh Jump^9:^3 ";
     level.PERK_toxicAuraLabel = &"Toxic Aura^9:^3 ";
@@ -45,7 +45,7 @@ Configure()
 	preCacheString(level.PERK_mutantLabel);
 	preCacheString(level.PERK_heavyMutantLabel);
 	preCacheString(level.PERK_armouredLabel);
-	preCacheString(level.PERK_antiInviNadesLabel);
+	preCacheString(level.PERK_stunNadesLabel);
 	preCacheString(level.PERK_bulletDodgeLabel);
 	preCacheString(level.PERK_swooshLabel);
 	preCacheString(level.PERK_toxicAuraLabel);

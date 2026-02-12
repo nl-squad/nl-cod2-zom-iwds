@@ -14,7 +14,7 @@ Configure()
     RegisterMenu("hunters", ::VMenuDefaultHandler, hunters, blanco\menus\shops::canUseHuntersMenu);
 
     // zombies = [];
-    // zombies["2"] = CreateMenuSelection(8, "anti_invi_grenades", "Anti-Invi Nade", ::anti_invi_grenadesPrice, blanco\menus\shops::giveAntiInviNades, undefined, undefined, a(1));
+    // zombies["2"] = CreateMenuSelection(8, "stun_grenades", "Stun Nade", ::stun_grenadesPrice, blanco\menus\shops::giveStunNades, undefined, undefined, a(1));
     // RegisterMenu("zombies", ::VMenuDefaultHandler, zombies, blanco\menus\shops::canUseZombiesMenu);
 
     vips = [];
@@ -73,7 +73,7 @@ toxicMeatPrice(usageTimes)
     return 250 + 50 * usageTimes;
 }
 
-anti_invi_grenadesPrice(usageTimes)
+stun_grenadesPrice(usageTimes)
 {
     return 500 + 100 * usageTimes;
 }

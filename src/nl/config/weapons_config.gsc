@@ -179,7 +179,8 @@ Configure()
     level.weapons_raygun = defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
     addWeaponToMysteryBox(level.weapons_raygun, "xmodel/van_raygun", 10, 40);
 
-	level.weapons_crossbow = defineWeapon(70, "crossbow_mp", "Crossbow", level.PATRON_REQUIRED, level.KIND_SPECIAL);
+	level.weapons_crossbow = defineWeapon(70, "crossbow_mp", "Crossbow", level.TYPE_PRIMARY, level.KIND_SPECIAL);
+    addWeaponRank(level.weapons_crossbow, level.PATRON_REQUIRED);
 
     // Secondary weapons
     level.weapons_beretta = defineWeapon(61, "beretta_mp", "Beretta", level.TYPE_SECONDARY, level.KIND_SECONDARY, botsDisable);
