@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nl-cod2-zom-dev:
-    image: ghcr.io/rutkowski-tomasz/cod2-server-1.3:0.6
+    image: ghcr.io/rutkowski-tomasz/cod2-server-1.3:latest
     stdin_open: true
     tty: true
     stop_grace_period: 1s
