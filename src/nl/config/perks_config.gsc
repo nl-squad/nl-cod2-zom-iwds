@@ -53,31 +53,30 @@ Configure()
     preCacheShader(level.PERK_laserShader);
     preCacheShader(level.PERK_reconShader);
 
-	blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
-	blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe2", "Displays the Health Bar for the last hit Zombie");
-	blanco\config::addNewPerk(11, "tactical", "Gambler", 44, "nl_hud_pe3", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
-	blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
-	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe53", "Doubles Money for Assists");
-	blanco\config::addNewPerk(18, "tactical", "Sharpshooter", 124, "nl_hud_pe18", "Increases Money for Kills with Snipers by 50 percent");
-	blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hud_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
-	blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
-	blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
-	blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 15 percent");
+	level.perks_laserDot = blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
+	level.perks_omniscient = blanco\config::addNewPerk(2, "tactical", "Omniscient", 24, "nl_hud_pe2", "Displays the Health Bar for the last hit Zombie");
+	level.perks_gambler = blanco\config::addNewPerk(11, "tactical", "Gambler", 44, "nl_hud_pe3", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
+	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
+	level.perks_assistHand = blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe53", "Doubles Money for Assists");
+	level.perks_sharpshooter = blanco\config::addNewPerk(18, "tactical", "Sharpshooter", 124, "nl_hud_pe18", "Increases Money for Kills with Snipers by 50 percent");
+	level.perks_precisionFire = blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hud_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
+	level.perks_rich = blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
+	level.perks_heavyFire = blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
+	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe21", "Displays the nearest Zombie Type & Distance"); 
 	// Random must be last
-	blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
+	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
-	blanco\config::addNewPerk(21, "combat", "Pistolero", 12, "nl_hud_pe56", "Increases Damage of Beretta Pistol by 50 percent");
-	blanco\config::addNewPerk(12, "combat", "Potato Grater", 32, "nl_hud_pe50", "Reduces Damage received from each Potato to 25 (-10)");
-	blanco\config::addNewPerk(7, "combat", "Equipment", 52, "nl_hud_pe51", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");
-	blanco\config::addNewPerk(10, "combat", "Overkill", 72, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
-	blanco\config::addNewPerk(14, "combat", "Grenade Supply", 112, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
-	blanco\config::addNewPerk(8, "combat", "Escape", 132, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
-	blanco\config::addNewPerk(9, "combat", "Immortal", 152, "nl_hud_pe12", "Reduces Damage received from own Explosives by 95 percent");
-	blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting by holding the ^3F ^7button");
-	blanco\config::addNewPerk(15, "combat", "Assault Extension", 192, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	blanco\config::addNewPerk(17, "combat", "Explode Bullets", 232, "nl_hud_pe6", "Provides a 5 percent chance for Bullets to Explode");
+	level.perks_pistolero = blanco\config::addNewPerk(21, "combat", "Pistolero", 12, "nl_hud_pe56", "Increases Damage of Beretta Pistol by 50 percent");
+	level.perks_potatoGrater = blanco\config::addNewPerk(12, "combat", "Potato Grater", 32, "nl_hud_pe50", "Reduces Damage received from each Potato to 25 (-10)");
+	level.perks_equipment = blanco\config::addNewPerk(7, "combat", "Equipment", 52, "nl_hud_pe51", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");
+	level.perks_overkill = blanco\config::addNewPerk(10, "combat", "Overkill", 72, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
+	level.perks_grenadeSupply = blanco\config::addNewPerk(14, "combat", "Grenade Supply", 112, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
+	level.perks_escape = blanco\config::addNewPerk(8, "combat", "Escape", 132, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
+	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 152, "nl_hud_pe12", "Reduces Damage received from own Explosives by 95 percent");
+	level.perks_sprint = blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting by holding the ^3F ^7button");
+	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 192, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
+	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 232, "nl_hud_pe6", "Provides a 5 percent chance for Bullets to Explode");
 	// Random must be last
-	blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
+	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }
-
