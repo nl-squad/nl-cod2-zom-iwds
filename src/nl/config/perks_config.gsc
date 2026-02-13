@@ -59,9 +59,9 @@ Configure()
 	blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe11", "Adds 3 seconds of Invi & Removes Star overhead");
 	blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe53", "Doubles Money for Assists");
 	blanco\config::addNewPerk(18, "tactical", "Sharpshooter", 124, "nl_hud_pe18", "Increases Money for Kills with Snipers by 50 percent");
-	blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hudd_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
+	blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hud_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
 	blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe22", "Increases Money for Kills with Weapons by 30 percent");
-	blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hudd_pe24", "Increases Money for Kills with LMG by 40 percent");
+	blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
 	blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe10", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe21", "Displays the nearest Zombie Type & Distance"); 
 	// Random must be last
