@@ -175,15 +175,15 @@
 
 		TACTICAL(ORIGIN_KR1, "1", "Laser Dot", "nl_hud_pe1")
 		TACTICAL(ORIGIN_KR2, "2", "Omniscient", "nl_hud_pe2")
-		TACTICAL(ORIGIN_KR3, "11", "Gambler", "nl_hud_pe3")
-		TACTICAL(ORIGIN_KR4, "4", "Ghost", "nl_hud_pe11")
+		TACTICAL(ORIGIN_KR3, "11", "Gambler", "nl_hud_pe11")
+		TACTICAL(ORIGIN_KR4, "4", "Ghost", "nl_hud_pe4")
 		TACTICAL(ORIGIN_KR5, "19", "Random Tactical", "nl_hud_pe19")
 		TACTICAL(ORIGIN_KR6, "13", "Assist Hand", "nl_hud_pe53")
 		TACTICAL(ORIGIN_KR7, "18", "Sharpshooter", "nl_hud_pe18")
 		TACTICAL(ORIGIN_KR8, "23", "Precision Fire", "nl_hud_pe23")
 		TACTICAL(ORIGIN_KR9, "5", "Rich", "nl_hud_pe22")
 		TACTICAL(ORIGIN_KR10, "24", "Heavy Fire", "nl_hud_pe24")
-		TACTICAL(ORIGIN_KR11, "6", "Hardline", "nl_hud_pe10")
+		TACTICAL(ORIGIN_KR11, "6", "Hardline", "nl_hud_pe6")
 		
 		/// RESET ///
 		itemDef
