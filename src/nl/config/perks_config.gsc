@@ -12,6 +12,11 @@ Configure()
     level.PERK_spawnProtectionEscapeDuration = 10;
 	level.PERK_immortalSelfDamageMultiplier = 0.05;
 	level.PERK_ghostInvisibleExtensionSeconds = 3;
+	level.PERK_explodeBulletChance = 5;
+    level.PERK_explodeBulletFx = "fx/nl/nl_explodebullet.efx";
+    level.PERK_explodeBulletRange = 100;
+    level.PERK_explodeBulletDamage = 400;
+    level.PERK_pistoleroDamageMultiplier = 1.5;
     level.PERK_protectLabel = &"^5Protect^9:^3 ";
     level.PERK_speedLabel = &"Speed^9:^3 ";
     level.PERK_jumpySpawnLabel = &"Jumpy Spawn^9:^3 ";
@@ -29,11 +34,6 @@ Configure()
     level.PERK_absorptionLabel = &"Absorption^9:^3 ";
     level.PERK_laserShader = "nl_laser";
     level.PERK_reconShader = "nl_hud_recon";
-    level.PERK_explodeBulletChance = 5;
-    level.PERK_explodeBulletFx = "fx/nl/nl_explodebullet.efx";
-    level.PERK_explodeBulletRange = 100;
-    level.PERK_explodeBulletDamage = 300;
-    level.PERK_pistoleroDamageMultiplier = 1.5;
 
     preCacheString(level.PERK_protectLabel);
 	preCacheString(level.PERK_speedLabel);

@@ -225,9 +225,9 @@ Configure()
 	reward(s, 5, level.DEATHSTREAK_typeToxic, 2);
 	reward(s, 10, level.DEATHSTREAK_typeToxic, 3);
 	reward(s, 0, level.DEATHSTREAK_typePotato, 1);
-	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
+	reward(s, 5, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 0, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(40, &"Zombie Power^4: ^6Unstoppable");
@@ -263,9 +263,9 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typeToxic, 2);
 	reward(s, 15, level.DEATHSTREAK_typeToxic, 3);
 	reward(s, 0, level.DEATHSTREAK_typePotato, 1);
-	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
+	reward(s, 5, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 0, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 }
 
