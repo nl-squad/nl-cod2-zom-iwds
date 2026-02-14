@@ -67,16 +67,16 @@ Configure()
 	// Random must be last
 	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
-	level.perks_pistolero = blanco\config::addNewPerk(21, "combat", "Pistolero", 12, "nl_hud_pe56", "Increases Damage of Beretta Pistol by 50 percent");
-	level.perks_potatoGrater = blanco\config::addNewPerk(12, "combat", "Potato Grater", 32, "nl_hud_pe50", "Reduces Damage received from each Potato to 25 (-10)");
-	level.perks_equipment = blanco\config::addNewPerk(7, "combat", "Equipment", 52, "nl_hud_pe51", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");
-	level.perks_overkill = blanco\config::addNewPerk(10, "combat", "Overkill", 72, "nl_hud_pe8", "Sets a Golden Desert Eagle as a Secondary Weapon");
-	level.perks_grenadeSupply = blanco\config::addNewPerk(14, "combat", "Grenade Supply", 112, "nl_hud_pe7", "Provides 10 Grenades at Spawn");
-	level.perks_escape = blanco\config::addNewPerk(8, "combat", "Escape", 132, "nl_hud_pe9", "Provides 10 seconds of Spawn Protection");
-	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 152, "nl_hud_pe12", "Reduces Damage received from own Explosives by 95 percent");
-	level.perks_sprint = blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe55", "Allows Sprinting by holding the ^3F ^7button");
-	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 192, "nl_hud_pe54", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 232, "nl_hud_pe6", "Provides a 5 percent chance for Bullets to Explode");
+	level.perks_pistolero = blanco\config::addNewPerk(21, "combat", "Pistolero", 12, "nl_hud_pe21", "Increases Damage of Beretta Pistol by 50 percent");
+	level.perks_potatoGrater = blanco\config::addNewPerk(12, "combat", "Potato Grater", 32, "nl_hud_pe12", "Reduces Damage received from each Potato to 25 (-10)");
+	level.perks_equipment = blanco\config::addNewPerk(7, "combat", "Equipment", 52, "nl_hud_pe7", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");
+	level.perks_overkill = blanco\config::addNewPerk(10, "combat", "Overkill", 72, "nl_hud_pe10", "Sets a Golden Desert Eagle as a Secondary Weapon");
+	level.perks_grenadeSupply = blanco\config::addNewPerk(14, "combat", "Grenade Supply", 112, "nl_hud_pe14", "Provides 10 Grenades at Spawn");
+	level.perks_escape = blanco\config::addNewPerk(8, "combat", "Escape", 132, "nl_hud_pe8", "Provides 10 seconds of Spawn Protection");
+	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 152, "nl_hud_pe9", "Reduces Damage received from own Explosives by 95 percent");
+	level.perks_sprint = blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe16", "Allows Sprinting by holding the ^3F ^7button");
+	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 192, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
+	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 232, "nl_hud_pe17", "Provides a 5 percent chance for Bullets to Explode");
 	// Random must be last
 	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }
