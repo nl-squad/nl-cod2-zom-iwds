@@ -55,9 +55,9 @@ weap_beretta_release,,weapons/beretta/beretta_release.wav,0.84,0.92,wpnplyr,1,1.
 weap_beretta_look01,,weapons/beretta/beretta_look01.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
 weap_beretta_look02,,weapons/beretta/beretta_look02.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,10,,0.85,,,,,,,,,0.2
 
-#cb
-weap_cb_fire,,weapons/cb/cb_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
-weap_cb_fire_plr,,weapons/cb/cb_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
+#crossbow
+weap_cb_fire,,weapons/crossbow/cb_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
+weap_cb_fire_plr,,weapons/crossbow/cb_fire.wav,0.84,0.92,wpnplyr,1,1.05,500000,,local,,,,0.85,!moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,,,,,0.2
 
 #fal
 weap_fal_fire,1,weapons/fal/fal_fire.wav,0.6,0.66,wpnai,1.05,1.35,35,8400,weapon,,,,0.7,!duhoc_assault !duhoc_town !duhoc_defend !silotown_assault !bergstein !hill400_assault !hill400_defend !rhine !moscow !demolition !tankhunt !trainyard !downtown_assault !cityhall !downtown_sniper,,,,weapon2
