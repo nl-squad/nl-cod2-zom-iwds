@@ -63,7 +63,6 @@ Configure()
 	level.perks_rich = blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe5", "Increases Money for Kills with Weapons by 30 percent");
 	level.perks_heavyFire = blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
 	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe6", "Reduces a number of Required Kills for a Killstreak by 15 percent");
-	//blanco\config::addNewPerk(3, "tactical", "Recon", 999, "nl_hud_pe21", "Displays the nearest Zombie Type & Distance"); 
 	// Random must be last
 	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
