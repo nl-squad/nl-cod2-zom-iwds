@@ -70,7 +70,7 @@ Configure()
 
     level.weapons_kar98k = defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponRank(level.weapons_kar98k, 350);
-    addWeaponToMysteryBox(level.weapons_kar98k, "xmodel/weapon_kAr98", 10, 20);
+    addWeaponToMysteryBox(level.weapons_kar98k, "xmodel/weapon_kAr98", 10, 30);
 
     level.weapons_intervention = defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable, rotationDisable);
     addWeaponPurchase(level.weapons_intervention, 1, 116, 7500, purchaseDisable);
@@ -86,7 +86,7 @@ Configure()
 	
 	level.weapons_kar98k_sniper = defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponRank(level.weapons_kar98k_sniper, 200);
-    addWeaponToMysteryBox(level.weapons_kar98k_sniper, "xmodel/weapon_kar98_scoped", 10, 40);
+    addWeaponToMysteryBox(level.weapons_kar98k_sniper, "xmodel/weapon_kar98_scoped", 10, 30);
 
     // Machine Guns
     level.weapons_mp40 = defineWeapon(6, "mp40_mp", "MP 40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -108,7 +108,7 @@ Configure()
 
     level.weapons_thompson = defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank(level.weapons_thompson, 100);
-    addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 10, 40);
+    addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 10, 30);
 
     level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_scar, 2, 113, 9500);
@@ -132,7 +132,7 @@ Configure()
 	
 	level.weapons_pps = defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank(level.weapons_pps, 250);
-    addWeaponToMysteryBox(level.weapons_pps, "xmodel/weapon_pps43", 10, 40);
+    addWeaponToMysteryBox(level.weapons_pps, "xmodel/weapon_pps43", 10, 30);
 
 
     // Heavy weapons
@@ -152,7 +152,7 @@ Configure()
 
     level.weapons_bren = defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_bren, 150);
-    addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 10, 40);
+    addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 10, 30);
 
     level.weapons_aa12 = defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_aa12, 3, 112, 7500);
@@ -168,16 +168,16 @@ Configure()
 	
 	level.weapons_shotgun = defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_shotgun, 300);
-    addWeaponToMysteryBox(level.weapons_shotgun, "xmodel/weapon_trenchgun", 10, 40);
+    addWeaponToMysteryBox(level.weapons_shotgun, "xmodel/weapon_trenchgun", 10, 30);
 
 
     // Special
     level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
 	addWeaponPurchase(level.weapons_tesla, 4, 110, 14500);
-    addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 10, 40);
+    addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 10, 30);
 
     level.weapons_raygun = defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-    addWeaponToMysteryBox(level.weapons_raygun, "xmodel/van_raygun", 10, 40);
+    addWeaponToMysteryBox(level.weapons_raygun, "xmodel/van_raygun", 10, 30);
 
 	level.weapons_crossbow = defineWeapon(70, "crossbow_mp", "Crossbow", level.TYPE_PRIMARY, level.KIND_SPECIAL);
     addWeaponRank(level.weapons_crossbow, level.PATRON_REQUIRED);
@@ -239,6 +239,6 @@ Configure()
     level.DEFAULT_WEAPON = 6;
     level.DEFAULT_ZOMBIE_WEAPON = 82;
 	level.ZOMBIFY_KILLFEED_WEAPON_NAME = "hbat_mp";
-    level.mysteryboxTeddyChance = 85;
-    level.mysteryboxTeddyChanceGambler = 20;
+    level.mysteryboxTeddyChance = 80;
+    level.mysteryboxTeddyChanceGambler = 10;
 }
