@@ -1,7 +1,7 @@
-version: '3.7'
+version: "3.7"
 services:
   nl-cod2-zom:
-    image: docker.io/rutkowski/cod2:14.2-server1.3-mysql-unsafe
+    image: ghcr.io/rutkowski-tomasz/cod2-server-1.3:0.17
     stdin_open: true
     tty: true
     stop_grace_period: 1s
@@ -27,7 +27,7 @@ services:
       COD2_SET_dedicated: 2
       COD2_SET_net_port: 28960
     healthcheck:
-      test: [ "CMD", "/cod2/healthcheck.sh" ]
+      test: ["CMD", "/cod2/healthcheck.sh"]
       interval: 3s
       timeout: 3s
       retries: 3
@@ -37,10 +37,10 @@ services:
         condition: on-failure
       resources:
         reservations:
-          cpus: '0.8'
+          cpus: "0.8"
           memory: 800M
         limits:
-          cpus: '1.2'
+          cpus: "1.2"
           memory: 1.2GB
 
 networks:
