@@ -64,7 +64,7 @@ Configure()
     addWeaponPurchase(level.weapons_g3, 1, 102, 2500);
     addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 1, 1);
 
-    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, rotationDisable);
+    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, rotationDisable, botsDisable);
     addWeaponPurchase(level.weapons_barrett, 1, 103, 4500, purchaseDisable);
     addWeaponToMysteryBox(level.weapons_barrett, "xmodel/m82_w", 1, 1);
 
@@ -111,7 +111,7 @@ Configure()
     addWeaponRank(level.weapons_thompson, 100);
     addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 1, 3);
 
-    level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, rotationDisable);
+    level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, rotationDisable, botsDisable);
     addWeaponPurchase(level.weapons_scar, 2, 113, 7500, purchaseDisable);
     addWeaponToMysteryBox(level.weapons_scar, "xmodel/weapon_mw2_scar", 1, 1);
 
@@ -140,7 +140,7 @@ Configure()
     level.weapons_bar = defineWeapon(12, "bar_mp", "M1918 BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_bar, 5);
 
-    level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY, rotationDisable);
+    level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY, rotationDisable, botsDisable);
     addWeaponPurchase(level.weapons_winchester, 3, 107, 2500, purchaseDisable);
     addWeaponToMysteryBox(level.weapons_winchester, "xmodel/winchester_w", 1, 1);
 
