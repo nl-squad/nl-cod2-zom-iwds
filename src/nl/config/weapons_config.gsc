@@ -73,7 +73,7 @@ Configure()
     addWeaponToMysteryBox(level.weapons_kar98k, "xmodel/weapon_kAr98", 1, 3);
 
     level.weapons_intervention = defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponPurchase(level.weapons_intervention, 1, 116, 6500;
+    addWeaponPurchase(level.weapons_intervention, 1, 116, 6500);
     addWeaponToMysteryBox(level.weapons_intervention, "xmodel/weapon_intervention", 1, 1);
 
     level.weapons_m14ebr = defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
