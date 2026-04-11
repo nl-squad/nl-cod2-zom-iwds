@@ -21,7 +21,7 @@ Configure()
     blanco\config::addNewKillstreak(18, "emp", "EMP", 9999, 9999, 9999, 999, "nl_hud_kr16", "Disables Zombie Power rewards for 20 seconds", "EMP^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\emp::Activate, blanco\actions\emp::CanUse, blanco\utils::a(20));
     blanco\config::addNewKillstreak(19, "rage", "Rage", 9999, 9999, 9999, 999, "hud_rage", "Double Damage and Ability to Burn for 30 seconds", "Rage Mode^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rage::Activate, blanco\actions\rage::CanUse, blanco\utils::a(30));
     blanco\config::addNewKillstreak(20, "hp_boost", "HP Boost", 9999, 9999, 9999, 999, "hud_hpboost", "Increases Health Points to 150", "HP Boost^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\hp_boost::Activate, blanco\actions\hp_boost::CanUse);
-    blanco\config::addNewKillstreak(21, "ulti", "Ultimate Fire", 9999, 9999, 9999, 999, "hud_ulti", "Fire Ring dealing damage for 25 seconds", "Ultimate Fire^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\ultimate::Activate, blanco\actions\ultimate::CanUse);
+    blanco\config::addNewKillstreak(21, "ulti", "Ultimate Fire", 9999, 9999, 9999, 999, "hud_ulti", "Fire Ring dealing damage for 30 seconds", "Ultimate Fire^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\ultimate::Activate, blanco\actions\ultimate::CanUse);
 
 	blanco\config::setKillstreakLevelForMap("mp_kg", level.killstreakEasyLevel);
 	blanco\config::setKillstreakLevelForMap("mp_loop", level.killstreakEasyLevel);
