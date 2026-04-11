@@ -185,24 +185,6 @@
 		COMBAT(ORIGIN_KR10, "15", "Assault Extension", "nl_hud_pe15")
 		COMBAT(ORIGIN_KR11, "17", "Explode Bullets", "nl_hud_pe17")
 		
-		/// RESET ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 -20 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3U ^7Unselect All"
-			textaligny		15
-			visible			1
-			action
-			{
-				scriptMenuResponse "reset";
-				play "mouse_click";
-			}
-		}
-		execKey "u" { scriptMenuResponse "reset"; play "mouse_click"; }
-
 		/// EXIT ///
 		itemDef
 		{

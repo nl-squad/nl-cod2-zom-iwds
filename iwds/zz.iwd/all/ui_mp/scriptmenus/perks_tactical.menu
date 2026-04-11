@@ -185,24 +185,6 @@
 		TACTICAL(ORIGIN_KR10, "24", "Heavy Fire", "nl_hud_pe24")
 		TACTICAL(ORIGIN_KR11, "6", "Hardline", "nl_hud_pe6")
 		
-		/// RESET ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 -20 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3U ^7Unselect All"
-			textaligny		15
-			visible			1
-			action
-			{
-				scriptMenuResponse "reset_perks";
-				play "mouse_click";
-			}
-		}
-		execKey "u" { scriptMenuResponse "reset_perks"; play "mouse_click"; }
-
 		/// EXIT ///
 		itemDef
 		{
