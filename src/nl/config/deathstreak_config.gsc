@@ -3,7 +3,7 @@ Configure()
     // Configuration below
 	level.DEATHSTREAK_upgradeToLevel2Cost = 200;
 	level.DEATHSTREAK_upgradeToLevel3Cost = 300;
-
+	
     level.DEATHSTREAK_speedHp = 200;
     level.DEATHSTREAK_speedGrade1Speed = 250;
     level.DEATHSTREAK_speedGrade2Speed = 270;
