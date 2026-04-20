@@ -318,12 +318,11 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR1, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "2 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR2, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "4 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR3, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "6 500")
-		PURCHASEWIDE("tab3", ORIGIN_KR4, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "8 500")
-		PURCHASEWIDE("tab3", ORIGIN_KR5, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "9 500")
-		PURCHASEWIDE("tab3", ORIGIN_KR6, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "10 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR4, "aa12_mp", "nl_img_aa12", "nl_kutka", "AA-12", "112", "9 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR5, "doublebarrel_mp", "nl_img_doublebarrel", "nl_kutka", "Double Barrel", "124", "10 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR6, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "11 500")
 		
-		
-		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "14 500")
+		PURCHASEWIDE("tab4", ORIGIN_KR1, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "15 500")
 
 		PURCHASE("tab5", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
 		PURCHASE("tab5", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")

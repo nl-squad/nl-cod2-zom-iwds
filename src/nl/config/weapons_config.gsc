@@ -149,7 +149,7 @@ Configure()
 	addWeaponToMysteryBox(level.weapons_rpk, "xmodel/weapon_rpk", 1, 1);
 
     level.weapons_saw = defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase(level.weapons_saw, 3, 109, 9500);
+    addWeaponPurchase(level.weapons_saw, 3, 109, 11500);
     addWeaponToMysteryBox(level.weapons_saw, "xmodel/weapon_m249", 1, 1);
 
     level.weapons_bren = defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -157,7 +157,7 @@ Configure()
     addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 1, 3);
 
     level.weapons_aa12 = defineWeapon(19, "aa12_mp", "AA-12", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase(level.weapons_aa12, 3, 112, 8500);
+    addWeaponPurchase(level.weapons_aa12, 3, 112, 9500);
     addWeaponToMysteryBox(level.weapons_aa12, "xmodel/weapon_aa_12", 1, 1);
 	
 	level.weapons_model_1887 = defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -175,7 +175,7 @@ Configure()
 
     // Special
     level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-	addWeaponPurchase(level.weapons_tesla, 4, 110, 14500);
+	addWeaponPurchase(level.weapons_tesla, 4, 110, 15500);
     addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 1, 3);
 
     level.weapons_raygun = defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
