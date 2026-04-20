@@ -9,12 +9,12 @@ Configure()
     level.DEATHSTREAK_speedGrade2Speed = 270;
     level.DEATHSTREAK_speedGrade3Speed = 290;
 	
-	level.DEATHSTREAK_mutantExplodeAndFireDamageMultiplier = 0.9;
+	level.DEATHSTREAK_mutantExplodeAndFireDamageMultiplier = 0.8;
     level.DEATHSTREAK_mutantGrade1Hp = 550;
     level.DEATHSTREAK_mutantGrade2Hp = 600;
     level.DEATHSTREAK_mutantGrade3Hp = 650;
 
-    level.DEATHSTREAK_heavyMutantExplodeAndFireDamageMultiplier = 0.8;
+    level.DEATHSTREAK_heavyMutantExplodeAndFireDamageMultiplier = 0.7;
     level.DEATHSTREAK_heavyMutantGrade1Hp = 750;
     level.DEATHSTREAK_heavyMutantGrade2Hp = 800;
     level.DEATHSTREAK_heavyMutantGrade3Hp = 850;
