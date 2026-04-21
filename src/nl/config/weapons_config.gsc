@@ -60,12 +60,12 @@ Configure()
     level.weapons_m1garand = defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponRank(level.weapons_m1garand, 15);
 
-    level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase(level.weapons_g3, 1, 102, 2500);
+    level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE, rotationDisable, botsDisable);
+    addWeaponPurchase(level.weapons_g3, 1, 102, 2500, purchaseDisable);
     addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 1, 1);
 
-    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE, rotationDisable, botsDisable);
-    addWeaponPurchase(level.weapons_barrett, 1, 103, 4500, purchaseDisable);
+    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_barrett, 1, 103, 4500);
     addWeaponToMysteryBox(level.weapons_barrett, "xmodel/m82_w", 1, 1);
 
     level.weapons_kar98k = defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
