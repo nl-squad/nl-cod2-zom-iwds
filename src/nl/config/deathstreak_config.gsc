@@ -101,8 +101,8 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 1);
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 2);
 	reward(s, 0, level.DEATHSTREAK_typeBulletDodge, 3);
-    reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 1);
-	reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 2);
+    reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 1);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 2);
 	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 3);
     reward(s, 10, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 5, level.DEATHSTREAK_typeSwoosh, 2);
@@ -139,8 +139,8 @@ Configure()
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 1);
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 2);
 	reward(s, 0, level.DEATHSTREAK_typeBulletDodge, 3);
-    reward(s, 5, level.DEATHSTREAK_typeJumpySpawn, 1);
-	reward(s, 15, level.DEATHSTREAK_typeJumpySpawn, 2);
+    reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 1);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 2);
 	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 3);
     reward(s, 5, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 10, level.DEATHSTREAK_typeSwoosh, 2);
@@ -178,8 +178,8 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 2);
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 3);
     reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 1);
-	reward(s, 15, level.DEATHSTREAK_typeJumpySpawn, 2);
-	reward(s, 5, level.DEATHSTREAK_typeJumpySpawn, 3);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 2);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 3);
     reward(s, 0, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 10, level.DEATHSTREAK_typeSwoosh, 2);
 	reward(s, 5, level.DEATHSTREAK_typeSwoosh, 3);
@@ -216,8 +216,8 @@ Configure()
 	reward(s, 5, level.DEATHSTREAK_typeBulletDodge, 2);
 	reward(s, 10, level.DEATHSTREAK_typeBulletDodge, 3);
     reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 1);
-	reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 2);
-	reward(s, 10, level.DEATHSTREAK_typeJumpySpawn, 3);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 2);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 3);
     reward(s, 0, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 5, level.DEATHSTREAK_typeSwoosh, 2);
 	reward(s, 10, level.DEATHSTREAK_typeSwoosh, 3);
@@ -254,8 +254,8 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typeBulletDodge, 2);
 	reward(s, 15, level.DEATHSTREAK_typeBulletDodge, 3);
     reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 1);
-	reward(s, 5, level.DEATHSTREAK_typeJumpySpawn, 2);
-	reward(s, 15, level.DEATHSTREAK_typeJumpySpawn, 3);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 2);
+	reward(s, 0, level.DEATHSTREAK_typeJumpySpawn, 3);
     reward(s, 0, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 0, level.DEATHSTREAK_typeSwoosh, 2);
 	reward(s, 15, level.DEATHSTREAK_typeSwoosh, 3);
