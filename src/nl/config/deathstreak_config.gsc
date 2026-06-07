@@ -14,20 +14,20 @@ Configure()
     level.DEATHSTREAK_mutantGrade2Hp = 600;
     level.DEATHSTREAK_mutantGrade3Hp = 650;
 
-    level.DEATHSTREAK_heavyMutantExplodeAndFireDamageMultiplier = 0.7;
+    level.DEATHSTREAK_heavyMutantExplodeAndFireDamageMultiplier = 0.75;
     level.DEATHSTREAK_heavyMutantGrade1Hp = 750;
     level.DEATHSTREAK_heavyMutantGrade2Hp = 800;
     level.DEATHSTREAK_heavyMutantGrade3Hp = 850;
 
     level.DEATHSTREAK_armouredHp = 800;
-    level.DEATHSTREAK_armouredGrade1ExplodeAndFireDamageMultiplier = 0.6;
-    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.5;
-    level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.4;
+    level.DEATHSTREAK_armouredGrade1ExplodeAndFireDamageMultiplier = 0.7;
+    level.DEATHSTREAK_armouredGrade2ExplodeAndFireDamageMultiplier = 0.6;
+    level.DEATHSTREAK_armouredGrade3ExplodeAndFireDamageMultiplier = 0.5;
 	
 	level.DEATHSTREAK_bulletDodgeHp = 300;
-    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.25;
-    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.35;
-    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.45;
+    level.DEATHSTREAK_bulletDodgeGrade1Chance = 0.3;
+    level.DEATHSTREAK_bulletDodgeGrade2Chance = 0.4;
+    level.DEATHSTREAK_bulletDodgeGrade3Chance = 0.5;
 	
 	level.DEATHSTREAK_jumpySpawnHp = 300;
     level.DEATHSTREAK_jumpySpawnGrade1ProtectionTime = 1.5;
@@ -52,7 +52,7 @@ Configure()
     level.DEATHSTREAK_absorptionGrade2TickDamage = 10;
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
-    level.DEATHSTREAK_absorptionInvisibleDamageMultiplier = 2;
+    level.DEATHSTREAK_absorptionInvisibleDamageMultiplier = 1.5;
     level.DEATHSTREAK_absorptionHealthIncreaseMultiplier = 2;
 
 	level.DEATHSTREAK_toxicHp = 300;
