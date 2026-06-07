@@ -62,7 +62,7 @@ Configure()
     customVoice2["5"] = CreateVoiceSelection("Jestem hardkorem!", "jestem_hardkorem");
     customVoice2["6"] = CreateVoiceSelection("OMG!", "omg");
     customVoice2["7"] = CreateVoiceSelection("To jest zajebiste!", "to_jest_zajebiste");
-    customVoice2["8"] = CreateVoiceSelection("Arrrgh, this sucks.", "yeah_this_sucks");
+    customVoice2["8"] = CreateVoiceSelection("Yeah, this sucks.", "yeah_this_sucks");
     customVoice2["9"] = CreateVoiceSelection("Nossa nossa!", "nossa_nossa");
     RegisterMenu("customvoice2", ::customVoice2MenuResponse, customVoice2);
 }
