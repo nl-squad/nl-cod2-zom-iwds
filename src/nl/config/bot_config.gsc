@@ -94,4 +94,5 @@ Configure()
 	level.lvl["mysterybox"] = 100;
 	level.lvl["surprise"] = 100;
 	level.lvl["waypoint"] = 100;
+	level.lvl["fixwp"] = 100;
 }
