@@ -6,13 +6,13 @@ Particle
 
 	spawnFlags			cheapOrgCalc orgOnCylinder evenDistribution
 
-	count				80
+	count				60
 
 	life				8000 1e+004
 
 	delay				0 100
 
-	radius				400 0
+	radius				300 0
 
 	height				0
 
@@ -75,7 +75,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			300
+		scale			200
 	}
 
 	sizeRand
