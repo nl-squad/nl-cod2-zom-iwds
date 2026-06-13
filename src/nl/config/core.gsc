@@ -3,6 +3,7 @@ Main()
     config\bot_config::Configure();
     config\bots_names_config::Configure();
     config\deathstreak_config::Configure();
+    config\care_package_config::Configure();
     config\gametype_config::Configure();
 	config\hq_config::Configure();
     config\killstreak_config::Configure();
