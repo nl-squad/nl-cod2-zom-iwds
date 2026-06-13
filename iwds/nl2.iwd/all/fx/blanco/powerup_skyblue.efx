@@ -4,7 +4,7 @@ Particle
 
 	flags				useBBox usePhysics useRandomSize useRandomRotationDelta absoluteVel relative
 
-	count				3
+	count				2
 
 	life				2100
 
@@ -68,7 +68,7 @@ Particle
 			1 0 0 0
 		]
 
-		scale			200
+		scale			150
 	}
 
 	sizeRand
