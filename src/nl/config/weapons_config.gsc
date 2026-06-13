@@ -60,8 +60,8 @@ Configure()
     level.weapons_m1garand = defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponRank(level.weapons_m1garand, 15);
 
-    level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE, rotationDisable, botsDisable);
-    addWeaponPurchase(level.weapons_g3, 1, 102, 2500, purchaseDisable);
+    level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_g3, 1, 102, 2500);
     addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 1, 1);
 
     level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
@@ -111,8 +111,8 @@ Configure()
     addWeaponRank(level.weapons_thompson, 100);
     addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 1, 3);
 
-    level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN, rotationDisable, botsDisable);
-    addWeaponPurchase(level.weapons_scar, 2, 113, 7500, purchaseDisable);
+    level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_scar, 2, 113, 7500);
     addWeaponToMysteryBox(level.weapons_scar, "xmodel/weapon_mw2_scar", 1, 1);
 
     level.weapons_p90 = defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -140,8 +140,8 @@ Configure()
     level.weapons_bar = defineWeapon(12, "bar_mp", "M1918 BAR", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_bar, 5);
 
-    level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY, rotationDisable, botsDisable);
-    addWeaponPurchase(level.weapons_winchester, 3, 107, 2500, purchaseDisable);
+    level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_winchester, 3, 107, 2500);
     addWeaponToMysteryBox(level.weapons_winchester, "xmodel/winchester_w", 1, 1);
 
     level.weapons_rpk = defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
@@ -233,7 +233,7 @@ Configure()
     level.weapons_minigun = defineNonSelectable(123, "minigun_mp", level.KIND_OTHER);
     level.weapons_binoculars = defineNonSelectable(125, "binoculars_mp", level.KIND_OTHER);
     level.weapons_wunderwaffe = defineNonSelectable(126, "wunderwaffe_mp", level.KIND_OTHER);
-    addWeaponToMysteryBox(level.weapons_wunderwaffe, "xmodel/weapon_wunderwaffe_dg2", 5, 15);
+    addWeaponToMysteryBox(level.weapons_wunderwaffe, "xmodel/weapon_wunderwaffe_dg2", 5, 10);
 
 
     // Final configuration

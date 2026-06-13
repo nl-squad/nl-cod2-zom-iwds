@@ -54,6 +54,7 @@ Configure()
     preCacheShader(level.PERK_reconShader);
 
 	level.perks_laserDot = blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
+	level.perks_treasureSeeker = blanco\config::addNewPerk(25, "tactical", "Treasure Seeker", 24, "nl_hud_pe2", "Gives Max Possible Reward from Surprise Box");
 	level.perks_gambler = blanco\config::addNewPerk(11, "tactical", "Gambler", 44, "nl_hud_pe11", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
 	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe4", "Adds 3 seconds of Invi & Removes Star overhead");
 	level.perks_assistHand = blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe13", "Doubles Money for Assists");
@@ -62,7 +63,6 @@ Configure()
 	level.perks_rich = blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe5", "Increases Money for Kills with Weapons by 30 percent");
 	level.perks_heavyFire = blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
 	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 224, "nl_hud_pe6", "Reduces a number of Required Kills for a Killstreak by 15 percent");
-	level.perks_treasureSeeker = blanco\config::addNewPerk(25, "tactical", "Treasure Seeker", 24, "nl_hud_pe25", "Increases Money for dusznosc");
 	// Random must be last
 	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
 	
