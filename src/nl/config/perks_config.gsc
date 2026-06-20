@@ -54,7 +54,7 @@ Configure()
     preCacheShader(level.PERK_reconShader);
 
 	level.perks_laserDot = blanco\config::addNewPerk(1, "tactical", "Laser Dot", 4, "nl_hud_pe1", "Displays a Red Dot in the middle of the Screen");
-	level.perks_treasureSeeker = blanco\config::addNewPerk(25, "tactical", "Treasure Seeker", 24, "nl_hud_pe2", "Gives Max Possible Reward from Surprise Box");
+	level.perks_treasureSeeker = blanco\config::addNewPerk(25, "tactical", "Treasure Seeker", 24, "nl_hud_pe2", "Gives a random Killstreak from Surprise Box");
 	level.perks_gambler = blanco\config::addNewPerk(11, "tactical", "Gambler", 44, "nl_hud_pe11", "Improves Top-item Chances in Care Pack, HQ, and MysteryBox");
 	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 64, "nl_hud_pe4", "Adds 3 seconds of Invi & Removes Star overhead");
 	level.perks_assistHand = blanco\config::addNewPerk(13, "tactical", "Assist Hand", 104, "nl_hud_pe13", "Doubles Money for Assists");
