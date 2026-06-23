@@ -141,15 +141,15 @@ Configure()
 
     // Not used at this moment - available using !god command
 	hunterSkin(35, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
-	// hunterSkin(36, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
-	// hunterSkin(37, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
-    // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
-    // hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
-    // hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
-    // hunterSkin(46, "sazomb", "sazomb");
-    // hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
-    // hunterSkin(48, "zk_zom2", "zk_zom2");
-    // hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
+	hunterSkin(36, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
+	hunterSkin(37, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
+    hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
+    hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
+    hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
+    hunterSkin(46, "sazomb", "sazomb");
+    hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
+    hunterSkin(48, "zk_zom2", "zk_zom2");
+    hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
 
 
     // Bot skins
