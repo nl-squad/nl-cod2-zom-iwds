@@ -123,16 +123,16 @@ Configure()
 
     // Custom skins
 	hunterSkin(45, "nano_suit", "oma_nano_suit", "viewhands_usmc", "american");
-    omaNanoSuitLogins[0] = "zieqa";
-    omaNanoSuitLogins[1] = "Zawiii";
-    omaNanoSuitLogins[2] = "nerox";
-    omaNanoSuitLogins[3] = "lidas";
-    omaNanoSuitLogins[4] = "onewaypl";
-    omaNanoSuitLogins[5] = "basti";
-    omaNanoSuitLogins[6] = "yarrr1";
-    omaNanoSuitLogins[7] = "DUSZA";
-    omaNanoSuitLogins[8] = "REKSIO";
-    omaNanoSuitLogins[9] = "shr23";
+    omaNanoSuitLogins[0] = "DUSZA";
+    omaNanoSuitLogins[1] = "zieqa";
+    omaNanoSuitLogins[2] = "shR23";
+    omaNanoSuitLogins[3] = "Mynek";
+    omaNanoSuitLogins[4] = "REKSIO";
+    omaNanoSuitLogins[5] = "ceesie118";
+    omaNanoSuitLogins[6] = "Jrp24";
+    omaNanoSuitLogins[7] = "MegaRollo";
+    omaNanoSuitLogins[8] = "lidas";
+    omaNanoSuitLogins[9] = "adama";
     enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
@@ -143,13 +143,13 @@ Configure()
 	hunterSkin(35, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
 	hunterSkin(36, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
 	hunterSkin(37, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
-    hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
-    hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
-    hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
-    hunterSkin(46, "sazomb", "sazomb");
-    hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
-    hunterSkin(48, "zk_zom2", "zk_zom2");
-    hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
+    // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
+    // hunterSkin(43, "zk_stormtrooper", "zk_vm_stormtrooper");
+    // hunterSkin(44, "oma_farmgirl_plr", "oma_farmgirl_plr");
+    // hunterSkin(46, "sazomb", "sazomb");
+    // hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
+    // hunterSkin(48, "zk_zom2", "zk_zom2");
+    // hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
 
 
     // Bot skins
