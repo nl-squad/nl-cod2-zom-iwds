@@ -219,3 +219,8 @@ enableBotHunterSkinSelection(id, chance)
 {
     return blanco\modules\skins::enableBotHunterSkinSelection(id, chance);
 }
+
+enableSkinForAdminPower(id, adminPower)
+{
+    return blanco\modules\skins::enableSkinForAdminPower(id, adminPower);
+}
