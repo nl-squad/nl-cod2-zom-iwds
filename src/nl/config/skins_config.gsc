@@ -138,7 +138,7 @@ Configure()
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
 	hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
-	hunterSkin(35, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
+	hunterSkin(35, "nl_officer", "iwx_hoekch", "viewmodel_hands_german", "german");
 	enableSkinForAdminPower(35, 80);
 
     // Not used at this moment - available using !god command
