@@ -1,0 +1,51 @@
+Tail
+{
+	name				beam_tracer
+
+	life				500
+
+	rgb
+	{
+		curve
+		[
+			0 0.85 0.15 0.15
+			1 0.95 0.75 0.75
+		]
+
+		scale			1.333
+	}
+	
+	rgbRand
+	{
+		curve
+		[
+			0 0.85 0.15 0.15
+			1 0.95 0.75 0.75
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 0 0
+		]
+
+		scale			20
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+		]
+
+		scale			600
+	}
+
+	shaders
+	[
+		gfx_antiaircraft_tracer
+	]
+}

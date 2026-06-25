@@ -1,0 +1,295 @@
+Particle
+{
+	name				atom_felho
+
+	flags				useRandomColors useRandomRotationDelta useRandomVelocity useRandomVelocity2 absoluteVel blocksSight
+
+	spawnFlags			cheapOrgCalc orgOnCylinder
+
+	nonUniformScale		1
+
+	count				22
+
+	life				500 1000
+
+	delay				0 10
+
+	radius				35 0
+
+	height				35 0
+
+	rotation			-3.6e+004 3.6e+004
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.4136 0.2356 1
+			0.3534 0.8639 0.3089 0
+			0.8563 0.911 0.3508 0
+			1 1 0.4084 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.4 0.2 0
+			1 0.4 0.2 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			0.7787 1 0 0
+			0.8793 0.9455 0 0
+			0.9109 0.9455 0 0
+			0.9282 0.896 0 0
+			0.9425 0.896 0 0
+			0.9655 0.8267 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0 0
+			0.02035 0.3734 0 0
+			0.1105 0.8228 0 0
+			0.3052 0.981 0 0
+			0.5698 1 0 0
+			0.7645 0.8861 0 0
+			0.9215 0.6266 0 0
+			1 0 0 0
+		]
+
+		scale			140
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.7342 0 0
+			1 0.5063 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0 0 0
+			0.1855 0.04348 0 0
+			0.2609 0.3789 0 0
+			0.371 0.7267 0 0
+			0.4928 0.9627 0 0
+			0.6116 1 0 0
+			0.8986 1 0 0
+			0.9507 0.9255 0 0
+			1 0 0 0
+		]
+
+		scale			140
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.1236 0.5 0 0
+			0.1437 -0.5 0 0
+			0.3851 0.4818 0 0
+			0.4282 -0.5 0 0
+			0.6207 0.5 0 0
+			0.7385 -0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			5
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.4971 0.4727 0 0
+			0.7644 0.3864 0 0
+			0.9224 0.2182 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			8
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0.5 0 0
+		]
+
+		scale			50
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0.5 0 0
+		]
+
+		scale			100
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0.3075 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0.1667 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_hotspot
+	]
+}

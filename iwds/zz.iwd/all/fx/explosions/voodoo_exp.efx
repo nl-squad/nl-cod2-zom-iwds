@@ -1,0 +1,126 @@
+Emitter
+{
+	name				voodoo
+
+	flags				useModel useBBox usePhysics
+
+	spawnFlags			orgOnCylinder
+
+	count				1
+
+	life				60000
+
+	delay				0 600
+
+	bounce				0.1 0.5
+
+	min					-6 -6 -6
+
+	max					6 6 6
+
+	origin				30 -10 -10 30 10 0
+
+	radius				5
+
+	height				1
+
+	angle				90 360 0 90 0 0
+
+	angleDelta			50 50 0 -80 -80 0
+
+	gravity				-150 -900
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			0
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	models
+	[
+		xmodel\prop_tractor
+		xmodel\prop_traincar01_opendoor
+		xmodel\silo02
+		xmodel\prop_trollycar_d
+		xmodel\vehicle_american_sherman_d
+		xmodel\vehicle_cargoship_d
+		xmodel\prop_traincar01
+		xmodel\vehicle_condor
+		xmodel\vehicle_german_flakpanzer
+		xmodel\bunker01
+		xmodel\vehicle_p51_mustang
+		xmodel\silo03
+		xmodel\vehicle_panzer_ii_destroyed
+		xmodel\vehicle_spitfire_flying
+		xmodel\silo01
+		xmodel\vehicle_stuka_flying
+	]
+}
