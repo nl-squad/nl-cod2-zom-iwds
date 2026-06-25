@@ -138,9 +138,10 @@ Configure()
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
 	hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
+	hunterSkin(35, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
+	enableSkinForAdminPower(35, 80);
 
     // Not used at this moment - available using !god command
-	hunterSkin(35, "iwx_hoekch", "iwx_hoekch", "viewmodel_hands_german", "german");
 	hunterSkin(36, "character_officer_ss", "character_officer_ss", "viewmodel_hands_blue", "german", germanNormandyHeads, "helmet_officer_ss");
 	hunterSkin(37, "character_dmbrn", "character_dmbrn", "viewmodel_hands_german", "german", germanNormandyHeads, "hat_american_cowboy");
     // hunterSkin(42, "zk_john_cena", "zk_vm_john_cena");
@@ -150,7 +151,6 @@ Configure()
     // hunterSkin(47, "oma_freeze_man", "oma_freeze_man");
     // hunterSkin(48, "zk_zom2", "zk_zom2");
     // hunterSkin(49, "zk_headless_zom", "zk_headless_zom");
-
 
     // Bot skins
     enableBotHunterSkinSelection(2, 2);
