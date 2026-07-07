@@ -50,7 +50,7 @@ Configure()
     a[a.size] = "Static";
     a[a.size] = "^^99evil^^11.^^77Mario";
     a[a.size] = "Aria";
-    a[a.size] = "^^00`^^77Vegeta^^00?!";	
+    a[a.size] = "Gemini";	
     a[a.size] = "United^5#^7Seven";
     a[a.size] = "^^11`^^77Ep^^11~>^^99B!G~F41L";
     a[a.size] = "^1!^4S^2.^7C^2.^4U^2.^7D^2.^1~!";
