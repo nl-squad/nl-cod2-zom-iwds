@@ -1,10 +1,10 @@
 name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
 #Ambience,,,,,,,,,,,,,,,
-ambient_africa_nl,,ambient/amb_africa01b.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_africa_nl,,ambient/amb_africa01b.mp3,0.7,,,,,,,local,streamed,,looping,,
 ambient_bunker_nl,,ambient/amb_duhocbattle_Bunker_1.mp3,0.65,,,,,,,local,streamed,,looping,,
-ambient_france_nl,,ambient/amb_france02_int.mp3,0.65,,,,,,,local,streamed,,looping,,
-ambient_space_nl,,misc/amb_space.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_france_nl,,ambient/amb_france02_int.mp3,0.7,,,,,,,local,streamed,,looping,,
+ambient_space_nl,,misc/ambient_space_nl.mp3,0.7,,,,,,,local,streamed,,looping,,
 ambient_russia_nl,,ambient/amb_russia01b.mp3,0.55,,,,,,,local,streamed,,looping,,
 
 #ChallengeCompleted
