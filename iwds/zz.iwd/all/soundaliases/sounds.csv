@@ -1,10 +1,11 @@
 name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 
 #Ambience,,,,,,,,,,,,,,,
-ambient_africa_nl,,ambient/amb_africa01b.mp3,0.67,,,,,,,local,streamed,,looping,,
-ambient_france_nl,,ambient/amb_france01b.mp3,0.73,,,,,,,local,streamed,,looping,,
-ambient_space_nl,,ambient/amb_africa01b.mp3,0.67,,,,,,,local,streamed,,looping,,
-ambient_russia_nl,,ambient/amb_russia01b.mp3,0.56,,,,,,,local,streamed,,looping,,
+ambient_africa_nl,,ambient/amb_africa01b.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_bunker_nl,,ambient/amb_duhocbattle_Bunker_1.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_france_nl,,ambient/amb_france02_int.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_space_nl,,misc/amb_space.mp3,0.65,,,,,,,local,streamed,,looping,,
+ambient_russia_nl,,ambient/amb_russia01b.mp3,0.55,,,,,,,local,streamed,,looping,,
 
 #ChallengeCompleted
 challenge_completed,,misc/challenge.wav,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
@@ -48,8 +49,6 @@ nl_end_35,,music/british_decoytrenches_dump2_GRFINAL.mp3,1,1,,,,1000000,,music,s
 nl_end_36,,music/decoytrenches_outro_GRFINAL.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_37,,misc/end37.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 nl_end_38,,misc/end38.mp3,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
-nl_end_39,,misc/end39.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
-nl_end_40,,misc/end40.wav,1,1,,,,1000000,,music,streamed,,,,all_mp,,,,,,,
 
 #Headshot
 nl_headshot,,misc/nl_headshot.mp3,1.00,1.00,,,,7,3000,local,streamed,0,nonlooping,,all_mp
