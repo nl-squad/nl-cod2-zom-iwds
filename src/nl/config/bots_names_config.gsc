@@ -56,13 +56,11 @@ Configure()
     a[a.size] = "^1!^4S^2.^7C^2.^4U^2.^7D^2.^1~!";
     a[a.size] = "^5Akhileusz";
     a[a.size] = "^9Muted ^7Wysmarowany";
-    a[a.size] = "Slaye^4R";
     a[a.size] = "^3Triska.^7ESL";
     a[a.size] = "^^11~>^^22Ma^^44ru^^00ch^^11<~";
     a[a.size] = "^^11.^7g^94^7ll^9ar^7do^^11.";
     a[a.size] = "^1|^9GDT^1|^7AdBi";
     a[a.size] = "^8Happy";
-    a[a.size] = "^5TheCROW";
     a[a.size] = "^^00^5x^9*_OBEY_";
     a[a.size] = "G1_Killer";
     a[a.size] = "^^00Woo^^11Doo";
@@ -91,7 +89,6 @@ Configure()
     a[a.size] = "MaraS^1[^7PL^1]";
     a[a.size] = "^^11PAT^^33RYCZ^^22ESKO";
     a[a.size] = "^^11Sgt.Randall^^44|AD|";
-    a[a.size] = "^^00D^^11i^^00Zz^^11Y";
     a[a.size] = "=[1944]=";
     a[a.size] = "CCCP^1.^7DR^1.^4Ce^1ll^7<^4<^1<";
     a[a.size] = "^3Tit^4an UK.";
