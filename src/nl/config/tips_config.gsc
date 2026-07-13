@@ -20,7 +20,7 @@ Configure()
 	tips[tips.size] = "The maximum number of ^8nL Tokens ^7is 25 000";
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your ^8nL Tokens ^7purchases are non-refundable and non-exchangeable";
-	tips[tips.size] = "Use ^3!wanted ^7to set a bounty on a Player";
+	tips[tips.size] = "Use ^3!wanted ^7to set a bounty on a Hunter";
 	tips[tips.size] = "You can test Weapons by drawing them from ^3MysteryBox";
 	tips[tips.size] = "Wunderwaffe is only available from ^3MysteryBox";
 	tips[tips.size] = "Crossbow is exclusive to ^8Patrons";
