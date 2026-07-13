@@ -128,14 +128,14 @@ Configure()
     omaNanoSuitLogins[2] = "shR23";
     omaNanoSuitLogins[3] = "Mynek";
     omaNanoSuitLogins[4] = "REKSIO";
-    omaNanoSuitLogins[5] = "ceesie118";
+    omaNanoSuitLogins[5] = "bluzz";
     omaNanoSuitLogins[6] = "Jrp24";
     omaNanoSuitLogins[7] = "MegaRollo";
     omaNanoSuitLogins[8] = "lidas";
-    omaNanoSuitLogins[9] = "adama";
+    omaNanoSuitLogins[9] = "Eganiro";
     enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
-    level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "american");
+    level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "russian");
 	hunterSkin(23, "santa", "zk_santa_claus", "viewmodel_hands_german", "american");
     level.NEXUS_SKIN_ID = hunterSkin(24, "british_normandy_price", "playerbody_british_normandy02", "viewmodel_hands_british", "british", "head_british_price");
 	hunterSkin(35, "nl_officer", "iwx_hoekch", "viewmodel_hands_german", "german");
