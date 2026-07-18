@@ -99,12 +99,12 @@ exploding_ballPrice(usageTimes)
 
 napalmPrice(usageTimes)
 {
-    return 1000 + 200 * usageTimes;
+    return 1250 + 250 * usageTimes;
 }
 
 spawn_beaconPrice(usageTimes)
 {
-    return 1000 + 200 * usageTimes;
+    return 1250 + 250 * usageTimes;
 }
 
 empPrice(usageTimes)

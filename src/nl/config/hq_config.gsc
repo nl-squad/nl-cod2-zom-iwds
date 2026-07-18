@@ -20,7 +20,7 @@ Configure()
 	level.HQ_rewardsBot = blanco\utils::addWithPossibility(level.HQ_rewardsBot, "rambo", 10);
 	level.HQ_rewardsBot = blanco\utils::addWithPossibility(level.HQ_rewardsBot, "sentry", 10);
 	level.HQ_rewardsBot = blanco\utils::addWithPossibility(level.HQ_rewardsBot, "raptor", 10);
-	level.HQ_rewardsBot = blanco\utils::addWithPossibility(level.HQ_rewardsBot, "ulti", 100);
+	level.HQ_rewardsBot = blanco\utils::addWithPossibility(level.HQ_rewardsBot, "ulti", 10);
 
 	level.HQ_rewardsGambler = [];
 	level.HQ_rewardsGambler = blanco\utils::addWithPossibility(level.HQ_rewardsGambler, "rage", 10);
@@ -43,5 +43,5 @@ Configure()
 	level.HQ_rewardsNormal = blanco\utils::addWithPossibility(level.HQ_rewardsNormal, "launcher", 15);
 	level.HQ_rewardsNormal = blanco\utils::addWithPossibility(level.HQ_rewardsNormal, "raptor", 10);
 	level.HQ_rewardsNormal = blanco\utils::addWithPossibility(level.HQ_rewardsNormal, "hp_boost", 10);
-	level.HQ_rewardsNormal = blanco\utils::addWithPossibility(level.HQ_rewardsNormal, "ulti", 20);
+	level.HQ_rewardsNormal = blanco\utils::addWithPossibility(level.HQ_rewardsNormal, "ulti", 10);
 }
