@@ -135,7 +135,7 @@ callbackVoid()
 
 fixChatArgs(args)
 {
-	if (isDefined(args[1]))
+	if (isDefined(args[1]) && args[1].size > 0)
 	{
 		if (getAscii(args[1][0]) >= 20 && getAscii(args[1][0]) <= 22)
 		{
