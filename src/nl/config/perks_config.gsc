@@ -17,6 +17,10 @@ Configure()
     level.PERK_explodeBulletRange = 100;
     level.PERK_explodeBulletDamage = 400;
     level.PERK_pistoleroDamageMultiplier = 1.5;
+    level.PERK_strongPunchDamage = 1000;
+    level.PERK_brothersInArmsDamageMultiplier = 1.2;
+    level.PERK_brothersInArmsMinOtherHunters = 7;
+    level.PERK_fireEnthusiastDamageMultiplier = 1.25;
     level.PERK_protectLabel = &"^5Protect^9:^3 ";
     level.PERK_speedLabel = &"Speed^9:^3 ";
     level.PERK_jumpySpawnLabel = &"Jumpy Spawn^9:^3 ";
@@ -76,6 +80,10 @@ Configure()
 	level.perks_sprint = blanco\config::addNewPerk(16, "combat", "Sprint", 172, "nl_hud_pe16", "Allows Sprinting by holding the ^3F ^7button");
 	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 192, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
 	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 232, "nl_hud_pe17", "Provides a 5 percent chance for Bullets to Explode");
+	level.perks_gasMask = blanco\config::addNewPerk(22, "combat", "Gas Mask", 252, "nl_hud_pe22", "Reduces Damage received from Toxic Meat and Toxic Aura to 0");
+	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 272, "nl_hud_pe26", "Increases Weapon Damage by 20 percent if 7+ other Hunters are Alive");
+	level.perks_strongPunch = blanco\config::addNewPerk(27, "combat", "Strong Punch", 292, "nl_hud_pe27", "Makes Bash deal 1000 Damage, one-hitting any Enemy");
+	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 312, "nl_hud_pe17", "Increases Fire Damage by 25 percent");
 	// Random must be last
 	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }
