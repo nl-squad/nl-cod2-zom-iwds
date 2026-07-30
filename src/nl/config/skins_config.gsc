@@ -125,14 +125,14 @@ Configure()
 	hunterSkin(45, "nano_suit", "oma_nano_suit", "viewhands_usmc", "american");
     omaNanoSuitLogins[0] = "DUSZA";
     omaNanoSuitLogins[1] = "zieqa";
-    omaNanoSuitLogins[2] = "shR23";
+    omaNanoSuitLogins[2] = "mercenario";
     omaNanoSuitLogins[3] = "Mynek";
-    omaNanoSuitLogins[4] = "REKSIO";
+    omaNanoSuitLogins[4] = "mixer2808";
     omaNanoSuitLogins[5] = "bluzz";
-    omaNanoSuitLogins[6] = "Jrp24";
+    omaNanoSuitLogins[6] = "Eganiro";
     omaNanoSuitLogins[7] = "MegaRollo";
     omaNanoSuitLogins[8] = "lidas";
-    omaNanoSuitLogins[9] = "Eganiro";
+    omaNanoSuitLogins[9] = "Jrp24";
     enableSkinForLogins(45, omaNanoSuitLogins, "This skin is only for Annual Achievement holders.");
 
     level.SKINS_patron = hunterSkin(12, "terminator", "iwx_mesterch", "viewmodel_hands_british", "russian");
