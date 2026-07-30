@@ -135,17 +135,18 @@ callbackVoid()
 
 fixChatArgs(args)
 {
-	if (isDefined(args[1]))
-	{
-		if (getAscii(args[1][0]) >= 20 && getAscii(args[1][0]) <= 22)
-		{
-			args[1] = getSubStr(args[1], 1);
+	if (args.size < 2 || args[1].size == 0)
+		return args;
 
-			newArgs = strTok(args[1], " ");
-			for (i = 0; i < newArgs.size; i++)
-				args[1 + i] = newArgs[i];
-		}
-	}
+	iconChar = getAscii(args[1][0]);
+	if (iconChar < 20 || iconChar > 22)
+		return args;
+
+	args[1] = getSubStr(args[1], 1);
+
+	newArgs = strTok(args[1], " ");
+	for (i = 0; i < newArgs.size; i++)
+		args[1 + i] = newArgs[i];
 
 	return args;
 }
