@@ -125,7 +125,7 @@ Configure()
 	hunterSkin(45, "nano_suit", "oma_nano_suit", "viewhands_usmc", "american");
     omaNanoSuitLogins[0] = "DUSZA";
     omaNanoSuitLogins[1] = "zieqa";
-    omaNanoSuitLogins[2] = "shR23";
+    omaNanoSuitLogins[2] = "mercenario";
     omaNanoSuitLogins[3] = "Mynek";
     omaNanoSuitLogins[4] = "mixer2808";
     omaNanoSuitLogins[5] = "bluzz";
