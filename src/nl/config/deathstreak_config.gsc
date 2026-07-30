@@ -64,6 +64,9 @@ Configure()
     level.DEATHSTREAK_toxicGrade3RadiusSquared = 80 * 80;
     level.DEATHSTREAK_toxicEffectLevel3 = "fx/nl/nl_toxic_80.efx";
 
+    level.DEATHSTREAK_iceHp = 300;
+    level.DEATHSTREAK_iceNadeFreezeDuration = 3;
+
     level.DEATHSTREAK_typeNothing = deathstreak("nothing", blanco\deathstreaks\generic::GrantNothing);
 	level.DEATHSTREAK_typeSpeed = deathstreak("speed", blanco\deathstreaks\generic::GrantSpeed);
 	level.DEATHSTREAK_typeMutant = deathstreak("mutant", blanco\deathstreaks\generic::GrantMutant);
@@ -78,6 +81,7 @@ Configure()
     level.DEATHSTREAK_typePotato = deathstreak("potato", blanco\deathstreaks\generic::GrantPotato);
 	level.DEATHSTREAK_typeStunNade = deathstreak("stun", blanco\deathstreaks\generic::GrantStunNade);
     level.DEATHSTREAK_typeNade = deathstreak("nade", blanco\deathstreaks\generic::GrantNade);
+    level.DEATHSTREAK_typeIce = deathstreak("ice", blanco\deathstreaks\ice::Grant);
 	level.DEATHSTREAK_upgradeChance = 20;
 
     // Stages
@@ -117,6 +121,7 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
     reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeIce, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 	
     s = stage(10, &"Zombie Power^4: ^3Medium ^4| ^7Next In^4: ^7");
@@ -155,6 +160,7 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
     reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeIce, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(20, &"Zombie Power^4: ^8Strong ^4| ^7Next In^4: ^7");
@@ -193,6 +199,7 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
     reward(s, 10, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 10, level.DEATHSTREAK_typeIce, 1);
     reward(s, 5, level.DEATHSTREAK_typeNade, 1);
 
 	s = stage(30, &"Zombie Power^4: ^1Brutal ^4| ^7Next In^4: ^7");
@@ -231,6 +238,7 @@ Configure()
 	reward(s, 5, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
     reward(s, 10, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 10, level.DEATHSTREAK_typeIce, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(40, &"Zombie Power^4: ^6Unstoppable");
@@ -269,6 +277,7 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
     reward(s, 10, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 10, level.DEATHSTREAK_typeIce, 1);
     reward(s, 10, level.DEATHSTREAK_typeNade, 1);
 }
 

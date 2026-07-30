@@ -87,6 +87,7 @@ Configure()
     level.SKINS_toxic = zombieSkin(1009, "zk_hazmat_zombie", "zk_hazmat_zombie", "viewmodel_hands_yellow");
     level.SKINS_highJump = zombieSkin(1010, "zk_spiderman", "zk_spiderman", "zk_vm_spiderman");
     level.SKINS_swoosh = zombieSkin(1011, "zk_chimp", "zk_chimp", "viewmodel_hands_german");
+    level.SKINS_ice = zombieSkin(1012, "oma_freeze_man", "oma_freeze_man", "viewmodel_hands_german_winter");
 
     // Purchasables
     hunterSkin(13, "secret_service", "van_usservice", "viewhands_usmc", "american");

@@ -213,6 +213,7 @@ Configure()
     level.weapons_dummy = defineGrenade(94, "dummy_mp");
     level.weapons_zom_nade = defineGrenade(95, "zom_nade_mp");
     level.weapons_body = defineGrenade(96, "body_mp");
+    level.weapons_thermite = defineGrenade(97, "thermite_mp");
 
     // Killstreak
 	level.weapons_thunder = defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
