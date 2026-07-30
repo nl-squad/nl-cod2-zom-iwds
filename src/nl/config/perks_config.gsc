@@ -84,6 +84,7 @@ Configure()
 	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 272, "nl_hud_pe26", "Increases Weapon Damage by 20 percent if 7+ other Hunters are Alive");
 	level.perks_strongPunch = blanco\config::addNewPerk(27, "combat", "Strong Punch", 292, "nl_hud_pe27", "Makes Bash deal 1000 Damage, one-hitting any Enemy");
 	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 312, "nl_hud_pe17", "Increases Fire Damage by 25 percent");
+	level.perks_shadowEscape = blanco\config::addNewPerk(29, "combat", "Shadow Escape", 332, "nl_hud_pe8", "Teleports once per life to a Random Bot Hunter by pressing ^3J");
 	// Random must be last
 	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }

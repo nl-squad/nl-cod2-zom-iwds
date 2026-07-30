@@ -188,6 +188,7 @@
 		COMBAT(ORIGIN_KR13, "28", "Fire Enthusiast", "nl_hud_pe17")
 		COMBAT(ORIGIN_KR14, "22", "Gas Mask", "nl_hud_pe22")
 		COMBAT(ORIGIN_KR15, "26", "Brothers in Arms", "nl_hud_pe26")
+		COMBAT(ORIGIN_KR16, "29", "Shadow Escape", "nl_hud_pe8")
 
 		/// EXIT ///
 		itemDef
