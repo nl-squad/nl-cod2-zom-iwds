@@ -1,5 +1,4 @@
 #include blanco\config;
-#include blanco\utils;
 
 Configure()
 {
@@ -27,14 +26,18 @@ Configure()
     //      isEnabledForSelection - by default `rotationEnable` (when set to `rotationDisable` it means it is out of rotation)
 
     // 2. How to add purchase or rank requirement?
-    // addWeaponPurchase(name, purchaseTab, purchaseId, tokensPrice, isEnabledForPurchase, requiredPurchaseNames);
+    // addWeaponPurchase(name, purchaseTab, purchaseId, tokensPrice, isEnabledForPurchase);
+    // addPurchaseRequirement(name, requiredPurchaseName, requiredKills);
     // addWeaponRank(name, rank);
     //      name - weapon file name, ex: "mp40_mp"
     //      purchaseTab - purchase tab, same as in menu, ex: 2
     //      purchaseId - must be unique, if weapon is ever removed no other weapon can have this id
     //      tokensPrice - price in tokens, ex: 1000
     //      isEnabledForPurchase - by default `purchaseEnable` (when set to `purchaseDisable` it means it is going to be out of rotation soon)
-    //      requiredPurchaseNames - optional array of purchase names (weapon file names or other purchase names) that must all be owned before this can be purchased
+    //      requiredPurchaseName - purchase name (weapon file name or other purchase name) that must already be owned before `name` can be
+    //          purchased; must already be added (via addWeaponPurchase/addPurchase) earlier, before this call. Call addPurchaseRequirement
+    //          multiple times for the same weapon to require more than one prior purchase.
+    //      requiredKills - optional, if set the player must also have this many kills with requiredPurchaseName; omit/0 means owning it is enough
     //      rank - required rank to select this weapon
 
     // 3. How to add weapon to mystery box?
@@ -102,7 +105,8 @@ Configure()
 	addWeaponToMysteryBox(level.weapons_sig, "xmodel/worldmodel_sg552", 1, 1);
 
     level.weapons_ak47 = defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase(level.weapons_ak47, 2, 106, 4500, purchaseEnable, a("sig_mp"));
+    addWeaponPurchase(level.weapons_ak47, 2, 106, 4500);
+    addPurchaseRequirement(level.weapons_ak47, "sig_mp");
     addWeaponToMysteryBox(level.weapons_ak47, "xmodel/ak47_w", 1, 1);
 
     level.weapons_mp5 = defineWeapon(18, "mp5_mp", "MP5", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -114,7 +118,8 @@ Configure()
     addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 1, 3);
 
     level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase(level.weapons_scar, 2, 113, 7500, purchaseEnable, a("ak47_mp"));
+    addWeaponPurchase(level.weapons_scar, 2, 113, 7500);
+    addPurchaseRequirement(level.weapons_scar, "ak47_mp");
     addWeaponToMysteryBox(level.weapons_scar, "xmodel/weapon_mw2_scar", 1, 1);
 
     level.weapons_p90 = defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -126,7 +131,8 @@ Configure()
     addWeaponToMysteryBox(level.weapons_m4, "xmodel/m4_w", 1, 1);
 
     level.weapons_famas = defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponPurchase(level.weapons_famas, 2, 121, 11500, purchaseEnable, a("scar_mp"));
+    addWeaponPurchase(level.weapons_famas, 2, 121, 11500);
+    addPurchaseRequirement(level.weapons_famas, "scar_mp", 1000);
     addWeaponToMysteryBox(level.weapons_famas, "xmodel/weapon_famas", 1, 1);
 
     level.weapons_g36c = defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
