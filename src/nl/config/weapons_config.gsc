@@ -177,7 +177,7 @@ Configure()
 
     // Special
     level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
-	addWeaponPurchase(level.weapons_tesla, 4, 110, 15500);
+	addWeaponPurchase(level.weapons_tesla, 1, 110, 15500);
     addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 1, 3);
 
     level.weapons_raygun = defineWeapon(69, "raygun_mp", "Raygun", level.TYPE_PRIMARY, level.KIND_SPECIAL);
