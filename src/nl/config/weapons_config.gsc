@@ -101,10 +101,7 @@ Configure()
     level.weapons_mp40 = defineWeapon(6, "mp40_mp", "MP 40", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank(level.weapons_mp40, 1);
 
-    // level.weapons_mp44 = defineWeapon(7, "mp44_mp", "MP 44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank(level.weapons_mp44, 999);
-
-    // level.weapons_sig = defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    level.weapons_sig = defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_sig, 2, 105, 500);
 	addWeaponToMysteryBox(level.weapons_sig, "xmodel/worldmodel_sg552", 1, 1);
 
@@ -142,6 +139,9 @@ Configure()
 	level.weapons_pps = defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponRank(level.weapons_pps, 300);
     addWeaponToMysteryBox(level.weapons_pps, "xmodel/weapon_pps43", 1, 3);
+	
+	// level.weapons_mp44 = defineWeapon(7, "mp44_mp", "MP 44", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    // addWeaponRank(level.weapons_mp44, 999);
 	
 	// level.weapons_thompson = defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     // addWeaponRank(level.weapons_thompson, 999);
