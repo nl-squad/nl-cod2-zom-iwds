@@ -93,8 +93,8 @@ Configure()
     addWeaponToMysteryBox(level.weapons_kar98k, "xmodel/weapon_kAr98", 1, 3);
 	
 	// level.weapons_kar98k_sniper = defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    addWeaponRank(level.weapons_kar98k_sniper, 999);
-    addWeaponToMysteryBox(level.weapons_kar98k_sniper, "xmodel/weapon_kar98_scoped", 1, 3);
+    // addWeaponRank(level.weapons_kar98k_sniper, 999);
+    // addWeaponToMysteryBox(level.weapons_kar98k_sniper, "xmodel/weapon_kar98_scoped", 1, 3);
 
     // Machine Guns
 	
@@ -144,8 +144,8 @@ Configure()
     addWeaponToMysteryBox(level.weapons_pps, "xmodel/weapon_pps43", 1, 3);
 	
 	// level.weapons_thompson = defineWeapon(11, "thompson_mp", "Thompson", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
-    addWeaponRank(level.weapons_thompson, 999);
-    addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 1, 3);
+    // addWeaponRank(level.weapons_thompson, 999);
+    // addWeaponToMysteryBox(level.weapons_thompson, "xmodel/weapon_thompson", 1, 3);
 
 
     // Heavy weapons
@@ -157,7 +157,7 @@ Configure()
     addWeaponPurchase(level.weapons_winchester, 3, 107, 500);
     addWeaponToMysteryBox(level.weapons_winchester, "xmodel/winchester_w", 1, 1);
 	
-		level.weapons_model_1887 = defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
+	level.weapons_model_1887 = defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_model_1887, 3, 123, 2500);
     addWeaponToMysteryBox(level.weapons_model_1887, "xmodel/weapon_model1887", 1, 1);
 
@@ -182,8 +182,8 @@ Configure()
     addWeaponToMysteryBox(level.weapons_shotgun, "xmodel/weapon_trenchgun", 1, 3);
 	
 	// level.weapons_bren = defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponRank(level.weapons_bren, 999);
-	addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 1, 3);
+    // addWeaponRank(level.weapons_bren, 999);
+	// addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 1, 3);
 
 
     // Special
