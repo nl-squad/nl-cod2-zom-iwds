@@ -183,7 +183,7 @@
 		TACTICAL(ORIGIN_KR8, "23", "Precision Fire", "nl_hud_pe23")
 		TACTICAL(ORIGIN_KR9, "5", "Rich", "nl_hud_pe5")
 		TACTICAL(ORIGIN_KR10, "24", "Heavy Fire", "nl_hud_pe24")
-		TACTICAL(ORIGIN_KR11, "29", "Shadow Escape", "nl_hud_pe1")
+		TACTICAL(ORIGIN_KR11, "29", "Shadow Escape", "nl_hud_pe29")
 		TACTICAL(ORIGIN_KR12, "4", "Ghost", "nl_hud_pe4")
 		TACTICAL(ORIGIN_KR13, "6", "Hardline", "nl_hud_pe6")
 		

@@ -66,7 +66,7 @@ Configure()
 	level.perks_precisionFire = blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hud_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
 	level.perks_rich = blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe5", "Increases Money for Kills with Weapons by 30 percent");
 	level.perks_heavyFire = blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
-	level.perks_shadowEscape = blanco\config::addNewPerk(29, "tactical", "Shadow Escape", 224, "nl_hud_pe8", "Teleports once per life to a Random Bot Hunter by pressing ^3J");
+	level.perks_shadowEscape = blanco\config::addNewPerk(29, "tactical", "Shadow Escape", 224, "nl_hud_pe29", "Teleports once per life to a Random Bot Hunter by pressing ^3J");
 	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 264, "nl_hud_pe4", "Adds 3 seconds of Invi & Removes Star overhead");
 	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 304, "nl_hud_pe6", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	// Random must be last
@@ -82,7 +82,7 @@ Configure()
 	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 172, "nl_hud_pe9", "Reduces Damage received from own Explosives by 95 percent");
 	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 192, "nl_hud_pe26", "Increases Weapon Damage by 20 percent if 7+ other Hunters are Alive");
 	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 232, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 272, "nl_hud_pe17", "Increases Fire Damage by 25 percent");
+	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 272, "nl_hud_pe28", "Increases Fire Damage by 25 percent");
 	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 312, "nl_hud_pe17", "Provides a 5 percent chance for Bullets to Explode");
 	level.perks_strongPunch = blanco\config::addNewPerk(27, "combat", "Strong Punch", 352, "nl_hud_pe27", "Makes Bash deal 1000 Damage, one-hitting any Zombie");
 	// Random must be last
