@@ -3,12 +3,12 @@ Configure()
     // Admin menu settings
 	
 	level.requiredAdminPower["aliases"] = 10;
+	level.requiredAdminPower["bughunt"] = 10;
     level.requiredAdminPower["ci"] = 10;
 	level.requiredAdminPower["list"] = 10;
 	level.requiredAdminPower["namecheat"] = 10;
     level.requiredAdminPower["report"] = 10;
 	level.requiredAdminPower["maps"] = 10;
-	level.requiredAdminPower["timescale"] = 80;
 
 	level.requiredAdminPower["ci_all"] = 20;
 	level.requiredAdminPower["displayOnAdmins"] = 20;
@@ -25,7 +25,6 @@ Configure()
 	
     level.requiredAdminPower["afk"] = 40;
 	level.requiredAdminPower["afk_all"] = 40;
-	level.requiredAdminPower["bughunt"] = 40;
 	level.requiredAdminPower["kick"] = 40;
 	level.requiredAdminPower["screenshot"] = 40;
 	
@@ -47,6 +46,7 @@ Configure()
 	level.requiredAdminPower["say"] = 80;
     level.requiredAdminPower["saybold"] = 80;
 	level.requiredAdminPower["setvote"] = 80;
+	level.requiredAdminPower["timescale"] = 80;
 	
 	level.requiredAdminPower["banip"] = 90;
 	level.requiredAdminPower["localize"] = 90;
