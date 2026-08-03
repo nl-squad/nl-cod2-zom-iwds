@@ -35,6 +35,7 @@
 #define ORIGIN_TAB4				20 180
 #define ORIGIN_TAB5				20 210
 #define ORIGIN_TAB6				20 240
+#define ORIGIN_TAB7				20 270
 
 #ifndef PURCHASE
 #define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
