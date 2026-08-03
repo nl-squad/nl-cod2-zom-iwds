@@ -169,6 +169,10 @@ Configure()
     addWeaponPurchase(level.weapons_aa12, 3, 112, 7500);
     addWeaponToMysteryBox(level.weapons_aa12, "xmodel/weapon_aa_12", 1, 1);
 	
+	level.weapons_m60 = defineWeapon(60, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_doublebarrel, 60, 60, 7500);
+    addWeaponToMysteryBox(level.weapons_doublebarrel, "xmodel/weapon_doublebarrel", 1, 1);
+	
 	level.weapons_doublebarrel = defineWeapon(32, "doublebarrel_mp", "Double Barrel", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_doublebarrel, 3, 124, 12500);
     addWeaponToMysteryBox(level.weapons_doublebarrel, "xmodel/weapon_doublebarrel", 1, 1);
