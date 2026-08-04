@@ -130,6 +130,11 @@ Configure()
 	level.weapons_g36c = defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_g36c, 2, 122, 12500);
     addWeaponToMysteryBox(level.weapons_g36c, "xmodel/weapon_g36c", 1, 1);
+	
+	level.weapons_acr = defineWeapon(29, "acr_mp", "ACR", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
+    addWeaponPurchase(level.weapons_acr, 2, 121, 25000);
+    addPurchaseRequirement(level.weapons_acr, "acr_mp", 1000);
+    addWeaponToMysteryBox(level.weapons_acr, "xmodel/weapon_masada", 1, 1);
 
     level.weapons_famas = defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_famas, 2, 121, 25000);
