@@ -66,7 +66,7 @@ Configure()
 	level.perks_precisionFire = blanco\config::addNewPerk(23, "tactical", "Precision Fire", 144, "nl_hud_pe23", "Increases Money for Kills with Semi-Auto by 40 percent");
 	level.perks_rich = blanco\config::addNewPerk(5, "tactical", "Rich", 164, "nl_hud_pe5", "Increases Money for Kills with Weapons by 30 percent");
 	level.perks_heavyFire = blanco\config::addNewPerk(24, "tactical", "Heavy Fire", 184, "nl_hud_pe24", "Increases Money for Kills with LMG by 40 percent");
-	level.perks_shadowEscape = blanco\config::addNewPerk(29, "tactical", "Shadow Escape", 224, "nl_hud_pe29", "Teleports once per life to a Random Bot Hunter by pressing ^3J");
+	level.perks_shadowEscape = blanco\config::addNewPerk(29, "tactical", "Shadow Escape", 224, "nl_hud_pe29", "Teleports to a Random Bot Hunter once per life by pressing ^3J");
 	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 264, "nl_hud_pe4", "Adds 5 seconds of Invi & Removes Star overhead");
 	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 304, "nl_hud_pe6", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	// Random must be last
