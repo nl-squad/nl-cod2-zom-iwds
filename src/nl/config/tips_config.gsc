@@ -17,7 +17,7 @@ Configure()
 	tips[tips.size] = "To get ^3VIP^7, use ^8nL Tokens ^7or ^5PayPal";
 	tips[tips.size] = "To get ^8Patron^7, check the ^3#how-to-patron ^7Discord channel";
 	tips[tips.size] = "Aim for the Zombie's head to deal more damage";
-	tips[tips.size] = "The maximum number of ^8nL Tokens ^7is 25 000";
+	tips[tips.size] = "The maximum number of ^8nL Tokens ^7is 30 000";
 	tips[tips.size] = "Heavy Weapons deal more damage with a bash";
 	tips[tips.size] = "Your ^8nL Tokens ^7purchases are non-refundable and non-exchangeable";
 	tips[tips.size] = "Use ^3!wanted ^7to set a bounty on a Hunter";
@@ -38,6 +38,7 @@ Configure()
 	tips[tips.size] = "Nexus can use the Raygun on the next map";
 	tips[tips.size] = "Venom = High Jump Ability, 300 HP";
 	tips[tips.size] = "Yellow Hazmat Suit Zombie = Throws Toxic Meat, 300 HP";
+	tips[tips.size] = "Ice Zombie = Throws Freezing Nade, Can't be Frozen, 500 HP";
 	tips[tips.size] = "Stun Nade deals minor damage and reduce Hunter mobility";
 	tips[tips.size] = "Use barrels and ledges as cover from Zombie Nades";
 	tips[tips.size] = "Hunter Shop item prices increase by 20 percent with each purchase";
@@ -51,6 +52,8 @@ Configure()
     tips[tips.size] = "You can unlock new Weapons with ^8nL Tokens";
 	tips[tips.size] = "You can unlock new Weapons and Skins in the Shop";
 	tips[tips.size] = "You can buy an ^3EXP Booster ^7in the Shop -> Boosters section";
+	tips[tips.size] = "You need to get the required number of Kills with your Weapon to unlock the next one";
+	tips[tips.size] = "You can check your Weapon Kill progress in the Shop tab";
 	tips[tips.size] = "Use ^3!challenges^7 to check the active Challenges";
     tips[tips.size] = "You can earn ^8nL Tokens ^7for Activity, Challenges, and during Events";
     tips[tips.size] = "If you are ^3VIP^7, you can choose up to 4 Killstreaks";
