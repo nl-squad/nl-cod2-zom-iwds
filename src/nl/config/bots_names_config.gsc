@@ -97,7 +97,7 @@ Configure()
 	a[a.size] = "^^99evil^^11.^^77Mi^^22a^^77mi";
     a[a.size] = "ManDown (AFK)";
     a[a.size] = "^1A^4t^2e^5sz";
-	a[a.size] = "iK^1.^7rEE;
+	a[a.size] = "iK^1.^7rEE";
 	a[a.size] = "Grzegorz x Floryda";
 	a[a.size] = "This is the Reebok or the Nike";
     a[a.size] = "^^66~>s&D<~^^33BelZe:**<3";
