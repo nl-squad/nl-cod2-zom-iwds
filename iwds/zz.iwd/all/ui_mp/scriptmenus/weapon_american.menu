@@ -287,7 +287,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
-			text			"Skin"
+			text			"Character Skin"
 			textscale		.23
 			textalign 		ITEM_ALIGN_RIGHT
 			textalignx		110
@@ -397,7 +397,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			36 16 56 56
+			rect 			30 16 56 56
 			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_zombiegun
@@ -468,7 +468,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			162 20 64 64 
+			rect 			148 8 82 82 
 			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_appereance
