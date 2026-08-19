@@ -276,7 +276,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect			0 0 120 90
+			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
 			background		"nl_wps_ramka4"
 			visible			1
@@ -285,7 +285,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			0 0 120 90
+			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
 			text			"Skin"
 			textscale		.23
@@ -298,7 +298,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			0 0 120 90
+			rect			130 0 119 90
 			origin			ORIGIN_WINDOW4
 			visible			1
 			action
@@ -311,7 +311,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			91 77 30 14
+			rect			222 77 30 14
 			origin			ORIGIN_WINDOW4
 			textscale		.18
 			textalign 		ITEM_ALIGN_LEFT
@@ -331,7 +331,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect			130 0 119 90
+			rect			0 0 120 90
 			origin			ORIGIN_WINDOW4
 			background		"nl_wps_ramka4"
 			visible			1
@@ -340,7 +340,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			130 0 119 90
+			rect			0 0 120 90
 			origin			ORIGIN_WINDOW4
 			text			"Zombie Profile"
 			textscale		.23
@@ -353,7 +353,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			130 0 119 90
+			rect			0 0 120 90
 			origin			ORIGIN_WINDOW4
 			visible			1
 			action
@@ -366,7 +366,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_BUTTON
-			rect			222 77 30 14
+			rect			91 77 30 14
 			origin			ORIGIN_WINDOW4
 			textscale		.18
 			textalign 		ITEM_ALIGN_LEFT
