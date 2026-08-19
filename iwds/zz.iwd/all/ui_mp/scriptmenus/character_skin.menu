@@ -173,7 +173,7 @@
         itemDef
         {
             style 			WINDOW_STYLE_DVAR_SHADER
-            rect 			0 0 100 100
+            rect 			-30 -30 160 160
             origin			ORIGIN_IMAGE
             visible 		1
             dvar 			nl_weapon
