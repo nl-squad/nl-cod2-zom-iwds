@@ -397,7 +397,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			30 20 50 50
+			rect 			36 16 56 56
 			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_zombiegun
@@ -468,7 +468,7 @@
 		itemDef
 		{
 			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			153 18 60 60 
+			rect 			162 20 64 64 
 			origin			ORIGIN_WINDOW4
 			visible 		1
 			dvar 			nl_appereance
