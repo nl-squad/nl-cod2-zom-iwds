@@ -63,7 +63,7 @@ Configure()
 	
 	level.weapons_m1garand = defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase(level.weapons_m1garand, 1, 104, 1000);
-	addPurchaseRequirement(level.weapons_m1garand, "springfield_mp", 50);
+	// addPurchaseRequirement(level.weapons_m1garand, "springfield_mp", 50);
 		
 	level.weapons_intervention = defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     addWeaponPurchase(level.weapons_intervention, 1, 116, 2500);
@@ -110,7 +110,7 @@ Configure()
 
     level.weapons_sig = defineWeapon(9, "sig_mp", "SIG SG 552", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_sig, 2, 105, 1000);
-	addPurchaseRequirement(level.weapons_sig, "mp40_mp", 50);
+	// addPurchaseRequirement(level.weapons_sig, "mp40_mp", 50);
 	addWeaponToMysteryBox(level.weapons_sig, "xmodel/worldmodel_sg552", 1, 1);
 
     level.weapons_ak47 = defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -172,7 +172,7 @@ Configure()
 
     level.weapons_winchester = defineWeapon(14, "winchester_mp", "Winchester 1200", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_winchester, 3, 107, 1000);
-	addPurchaseRequirement(level.weapons_winchester, "springfield_mp", 50);
+	// addPurchaseRequirement(level.weapons_winchester, "bar_mp", 50);
     addWeaponToMysteryBox(level.weapons_winchester, "xmodel/winchester_w", 1, 1);
 	
 	level.weapons_model_1887 = defineWeapon(31, "model_1887_mp", "Model 1887", level.TYPE_PRIMARY, level.KIND_HEAVY);
