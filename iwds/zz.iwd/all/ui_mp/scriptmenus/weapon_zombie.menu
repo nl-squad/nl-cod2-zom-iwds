@@ -2,7 +2,7 @@
 
 #define ORIGIN_CURRENTTITLE			90 120
 #define ORIGIN_TITLE				0 50
-#define ORIGIN_IMAGE				350 160
+#define ORIGIN_IMAGE				325 135
 #define ORIGIN_TITLE1				60 72
 #define ORIGIN_TITLE2				200 72
 #define ORIGIN_TITLE3				340 72
@@ -174,7 +174,7 @@
         itemDef
         {
             style 			WINDOW_STYLE_DVAR_SHADER
-            rect 			0 0 100 100
+            rect 			0 0 130 130
             origin			ORIGIN_IMAGE
             visible 		1
             dvar 			nl_weapon
