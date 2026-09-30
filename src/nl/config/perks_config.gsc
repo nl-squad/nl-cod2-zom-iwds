@@ -77,15 +77,14 @@ Configure()
 	level.perks_overkill = blanco\config::addNewPerk(10, "combat", "Overkill", 52, "nl_hud_pe10", "Sets a Golden Desert Eagle as a Secondary Weapon");
 	level.perks_gasMask = blanco\config::addNewPerk(22, "combat", "Gas Mask", 72, "nl_hud_pe22", "Gives Immunity to Toxic Meat");
 	level.perks_equipment = blanco\config::addNewPerk(7, "combat", "Equipment", 112, "nl_hud_pe7", "Gives the Weapons Max Ammo and 3 Grenades at Spawn");
-	level.perks_grenadeSupply = blanco\config::addNewPerk(14, "combat", "Grenade Supply", 132, "nl_hud_pe14", "Provides 10 Grenades at Spawn");
-	level.perks_escape = blanco\config::addNewPerk(8, "combat", "Escape", 152, "nl_hud_pe8", "Provides 10 seconds of Spawn Protection");
-	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 172, "nl_hud_pe9", "Reduces Damage received from own Explosives by 95 percent");
-	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 192, "nl_hud_pe26", "Increases Weapon Damage by 25 percent if 4+ other Hunters are Alive");
-	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 232, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	level.perks_strongPunch = blanco\config::addNewPerk(27, "combat", "Strong Punch", 272, "nl_hud_pe27", "Makes Bash one-hit any Zombie");
-	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 312, "nl_hud_pe28", "Increases Fire Damage by 33 percent");
+	level.perks_strongPunch = blanco\config::addNewPerk(27, "combat", "Strong Punch", 132, "nl_hud_pe27", "Makes Bash one-hit any Zombie");
+	level.perks_grenadeSupply = blanco\config::addNewPerk(14, "combat", "Grenade Supply", 152, "nl_hud_pe14", "Provides 10 Grenades at Spawn");
+	level.perks_escape = blanco\config::addNewPerk(8, "combat", "Escape", 172, "nl_hud_pe8", "Provides 10 seconds of Spawn Protection");
+	level.perks_immortal = blanco\config::addNewPerk(9, "combat", "Immortal", 192, "nl_hud_pe9", "Reduces Damage received from own Explosives by 95 percent");
+	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 232, "nl_hud_pe26", "Increases Weapon Damage by 25 percent if 4+ other Hunters are Alive");
+	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 272, "nl_hud_pe28", "Increases Fire Damage by 33 percent");
+	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 312, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
 	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 352, "nl_hud_pe17", "Provides a 5 percent chance for Bullets to Explode");
-	
 	// Random must be last
 	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }
