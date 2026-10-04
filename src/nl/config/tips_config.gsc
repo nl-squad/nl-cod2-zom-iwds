@@ -31,14 +31,17 @@ Configure()
 	tips[tips.size] = "Armoured Mutant = Reduced Fire & Explosion damage, 800 HP";
 	tips[tips.size] = "All Mutants receive less damage from Explosion & Fire";
 	tips[tips.size] = "Skeleton = Dodge Bullets Ability, 300 HP";
+	tips[tips.size] = "Skeletons are immune to Fire Damage";
 	tips[tips.size] = "Red Half-Life Zombie = Set a Jumpy Spawn Ability, 300 HP";
 	tips[tips.size] = "Chimp = Charged Swoosh Jump Ability, 400 HP";
 	tips[tips.size] = "Alien = Health Absorption Ability, 400-800 HP";
 	tips[tips.size] = "Alien can kill nearby Invisible Hunters";
+	tips[tips.size] = "Alien can teleport to a Random Place once per Life";
 	tips[tips.size] = "Nexus can use the Raygun on the next map";
 	tips[tips.size] = "Venom = High Jump Ability, 300 HP";
-	tips[tips.size] = "Yellow Hazmat Suit Zombie = Throws Toxic Meat, 300 HP";
+	tips[tips.size] = "Yellow Toxic Zombie = Throws Toxic Meat, 350 HP";
 	tips[tips.size] = "Ice Zombie = Throws Freezing Nade, Can't be Frozen, 500 HP";
+	tips[tips.size] = "Ice Zombies are immune to Freeze Zombies";
 	tips[tips.size] = "Stun Nade deals minor damage and reduce Hunter mobility";
 	tips[tips.size] = "Use barrels and ledges as cover from Zombie Nades";
 	tips[tips.size] = "Hunter Shop item prices increase by 20 percent with each purchase";

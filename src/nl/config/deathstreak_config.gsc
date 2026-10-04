@@ -53,10 +53,10 @@ Configure()
     level.DEATHSTREAK_absorptionGrade3RadiusSquared = 160 * 160;
     level.DEATHSTREAK_absorptionGrade3TickDamage = 10;
     level.DEATHSTREAK_absorptionInvisibleDamageMultiplier = 1.5;
-    level.DEATHSTREAK_absorptionHealthIncreaseMultiplier = 2;
+    level.DEATHSTREAK_absorptionHealthIncreaseMultiplier = 4;
 
-	level.DEATHSTREAK_toxicHp = 300;
-    level.DEATHSTREAK_toxicDamage = 15;
+	level.DEATHSTREAK_toxicHp = 350;
+    level.DEATHSTREAK_toxicDamage = 20;
 	level.DEATHSTREAK_toxicGrade1RadiusSquared = 64 * 64;
     level.DEATHSTREAK_toxicEffectLevel1 = "fx/nl/nl_toxic_64.efx";
     level.DEATHSTREAK_toxicGrade2RadiusSquared = 72 * 72;
