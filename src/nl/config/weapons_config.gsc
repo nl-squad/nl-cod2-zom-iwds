@@ -189,7 +189,7 @@ Configure()
 	addPurchaseRequirement(level.weapons_doublebarrel, "aa12_mp", 1500);
     addWeaponToMysteryBox(level.weapons_doublebarrel, "xmodel/weapon_doublebarrel", 1, 1);
 	
-	level.weapons_striker = defineWeapon(36, "striker_mp", "Stiker", level.TYPE_PRIMARY, level.KIND_HEAVY);
+	level.weapons_striker = defineWeapon(36, "striker_mp", "Striker", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_striker, 3, 127, 25000);
 	addPurchaseRequirement(level.weapons_striker, "doublebarrel_mp", 3000);
     addWeaponToMysteryBox(level.weapons_striker, "xmodel/weapon_law_striker", 1, 1);
