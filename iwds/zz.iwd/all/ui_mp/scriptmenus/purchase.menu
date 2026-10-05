@@ -1,41 +1,28 @@
 #include "ui_mp/menudef.h"
 
 #define ORIGIN_TITLE			0 50
-#define ORIGIN_KR1				120 90
-#define ORIGIN_KR2				220 90
-#define ORIGIN_KR3				320 90
-#define ORIGIN_KR4				420 90
-#define ORIGIN_KR5				520 90
+#define ORIGIN_KR1				40 120
+#define ORIGIN_KR2				160 120
+#define ORIGIN_KR3				280 120
+#define ORIGIN_KR4				400 120
+#define ORIGIN_KR5				520 120
 
-#define ORIGIN_KR6				120 190
-#define ORIGIN_KR7				220 190
-#define ORIGIN_KR8				320 190
-#define ORIGIN_KR9				420 190
-#define ORIGIN_KR10				520 190
-
-#define ORIGIN_KR11				120 290
-#define ORIGIN_KR12				220 290
-#define ORIGIN_KR13				320 290
-#define ORIGIN_KR14				420 290
-#define ORIGIN_KR15				520 290
-
-#define ORIGIN_KR16				120 390
-#define ORIGIN_KR17				220 390
-#define ORIGIN_KR18				320 390
-#define ORIGIN_KR19				420 390
-#define ORIGIN_KR20				520 390
+#define ORIGIN_KR6				40 240
+#define ORIGIN_KR7				160 240
+#define ORIGIN_KR8				280 240
+#define ORIGIN_KR9				400 240
+#define ORIGIN_KR10				520 240
 
 #define ORIGIN_EXIT				20 415
 #define ORIGIN_INFO				400 415
-#define ORIGIN_NLT				350 20
+#define ORIGIN_NLT				245 10
 
-#define ORIGIN_TAB1				20 90
-#define ORIGIN_TAB2				20 120
-#define ORIGIN_TAB3				20 150
-#define ORIGIN_TAB4				20 180
-#define ORIGIN_TAB5				20 210
-#define ORIGIN_TAB6				20 240
-#define ORIGIN_TAB7				20 270
+#define ORIGIN_TAB1				40 60
+#define ORIGIN_TAB2				136 60
+#define ORIGIN_TAB3				232 60
+#define ORIGIN_TAB4				328 60
+#define ORIGIN_TAB5				424 60
+#define ORIGIN_TAB6				520 60
 
 #ifndef PURCHASE
 #define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
@@ -80,7 +67,7 @@
 			rect			0 0 80 80 0 0 \
 			origin			_origin \
 			border			1 \
-			bordercolor		0.027 0.082 0.604 1 \
+			bordercolor		0.5 0.5 0.5 0.25 \
 			style			WINDOW_STYLE_FILLED \
 			visible			1 \
 			textscale		.17 \
@@ -90,11 +77,11 @@
 			mouseEnter \
 			{ \
             	scriptMenuResponse "hover:" ## _action; \
-				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+				setcolor bordercolor 0.8 0.8 0.8 0.6 \
 			} \
 			mouseExit \
 			{ \
-				setcolor bordercolor 0.027 0.082 0.604 1 \
+				setcolor bordercolor 0.5 0.5 0.5 0.25 \
 			} \
 			action \
 			{ \
@@ -160,7 +147,7 @@
 			rect			0 0 80 80 0 0 \
 			origin			_origin \
 			border			1 \
-			bordercolor		0.027 0.082 0.604 1 \
+			bordercolor		0.5 0.5 0.5 0.25 \
 			style			WINDOW_STYLE_FILLED \
 			visible			1 \
 			textscale		.17 \
@@ -170,11 +157,11 @@
 			mouseEnter \
 			{ \
             	scriptMenuResponse "hover:" ## _action; \
-				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+				setcolor bordercolor 0.8 0.8 0.8 0.6 \
 			} \
 			mouseExit \
 			{ \
-				setcolor bordercolor 0.027 0.082 0.604 1 \
+				setcolor bordercolor 0.5 0.5 0.5 0.25 \
 			} \
 			action \
 			{ \
@@ -207,7 +194,8 @@
 			origin			_origin \
 			visible			1 \
 			textscale		.22 \
-			textalignx		4 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
 			textaligny		17 \
 			text			_text \
 			mouseEnter \
@@ -238,6 +226,23 @@
 			rect			0 25 80 1 0 0 \
 			origin			_origin \
 			backcolor		0 0 1 1 \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef TIER
+#define TIER(_origin, _text) \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			0 -8 0 0 0 0 \
+			origin			_origin \
+			forecolor		1 1 1 0.6 \
+			textscale		.22 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			text			_text \
 			visible			1 \
 			decoration \
 		}
@@ -280,22 +285,28 @@
 			decoration
 		}
 
-		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto")
-		TAB("2", ORIGIN_TAB2, "Assaults & SMGs")
-		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs")
-		TAB("4", ORIGIN_TAB5, "VIP & Boosters")
-		TAB("5", ORIGIN_TAB6, "Skins #1")
-		TAB("6", ORIGIN_TAB7, "Skins #2")
-		
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			80 0 1 210 0 0
+			rect			0 25 560 1 0 0
 			origin			ORIGIN_TAB1
-			backcolor		0 0 1 1
+			backcolor		0 0 1 0.35
 			visible			1
 			decoration
 		}
+
+		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto")
+		TAB("2", ORIGIN_TAB2, "Assaults & SMGs")
+		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs")
+		TAB("4", ORIGIN_TAB4, "VIP & Boosters")
+		TAB("5", ORIGIN_TAB5, "Skins #1")
+		TAB("6", ORIGIN_TAB6, "Skins #2")
+
+		TIER(ORIGIN_KR1, "Tier I")
+		TIER(ORIGIN_KR2, "Tier II")
+		TIER(ORIGIN_KR3, "Tier III")
+		TIER(ORIGIN_KR4, "Tier IV")
+		TIER(ORIGIN_KR5, "Tier V")
 
 		PURCHASEWIDE("tab1", ORIGIN_KR1, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 500")
 		PURCHASEWIDE("tab1", ORIGIN_KR2, "fal_mp", "nl_img_fal", "nl_kutka", "FAL", "119", "5 000")
@@ -350,11 +361,11 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			-3 0 130 18
+			rect			-3 0 170 24
 			origin			ORIGIN_NLT
-			textscale		.23
+			textscale		.3
 			text			"nL Tokens balance:"
-			textaligny		15
+			textaligny		20
 			textalignx		3
 			visible			1
 			decoration
@@ -375,9 +386,9 @@
 			forecolor		.976 .624 .22 1
 			rect			0 0 0 0
 			origin			ORIGIN_NLT
-			textscale		.24
-			textaligny		15
-			textalignx		85
+			textscale		.32
+			textaligny		20
+			textalignx		111
 			visible			1
 			decoration
 		}
@@ -386,7 +397,7 @@
 		{
 			name			"nlt_tooltip"
 			type			ITEM_TYPE_TEXT
-			rect			0 30 0 0
+			rect			0 32 0 0
 			origin			ORIGIN_NLT
 			textscale		.23
 			text			"You can earn ^8nL Tokens ^7for your ^3Activity^7, completing ^3Challenges^7, \nand during ^3Special Events^7."
