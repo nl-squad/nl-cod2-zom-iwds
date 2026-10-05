@@ -176,7 +176,7 @@
 #endif
 
 #ifndef TAB
-#define TAB(_tab, _origin, _text) \
+#define TAB(_tab, _origin, _text, _tiers) \
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
@@ -208,6 +208,7 @@
 				hide tab5; \
 				hide tab6; \
 				show "tab" ## _tab; \
+				_tiers tiers; \
 			} \
 		} \
 		itemDef \
@@ -226,6 +227,7 @@
 #define TIER(_origin, _text) \
 		itemDef \
 		{ \
+			name			"tiers" \
 			type			ITEM_TYPE_TEXT \
 			rect			0 -8 0 0 0 0 \
 			origin			_origin \
@@ -239,23 +241,40 @@
 		}
 #endif
 
-#define ARROW_RIGHT				88 28 24 24
-#define ARROW_DOWN_RIGHT		88 80 24 40
-
-#ifndef ARROW
-#define ARROW(_tab, _origin, _rect, _image, _kills) \
+#ifndef ARROW_RIGHT
+#define ARROW_RIGHT(_tab, _origin, _kills) \
 		itemDef \
 		{ \
 			name			_tab \
 			type			ITEM_TYPE_TEXT \
 			style			WINDOW_STYLE_SHADER \
-			rect			_rect 0 0 \
+			rect			88 28 24 24 0 0 \
 			origin			_origin \
-			background		_image \
+			background		"nl_hud_right_arrow" \
 			textscale		.17 \
 			textalign		ITEM_ALIGN_CENTER \
 			textalignx		12 \
 			textaligny		3 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef ARROW_DOWN_RIGHT
+#define ARROW_DOWN_RIGHT(_tab, _origin, _kills) \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			80 53 40 94 0 0 \
+			origin			_origin \
+			background		"white" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			textaligny		44 \
 			text			_kills \
 			visible			1 \
 			decoration \
@@ -279,6 +298,7 @@
 		onOpen 
 		{
 			show tab1;
+			show tiers;
 			hide tab2;
 			hide tab3;
 			hide tab4;
@@ -309,12 +329,12 @@
 			decoration
 		}
 
-		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto")
-		TAB("2", ORIGIN_TAB2, "Assaults & SMGs")
-		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs")
-		TAB("4", ORIGIN_TAB4, "VIP & Boosters")
-		TAB("5", ORIGIN_TAB5, "Skins #1")
-		TAB("6", ORIGIN_TAB6, "Skins #2")
+		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto", show)
+		TAB("2", ORIGIN_TAB2, "Assaults & SMGs", show)
+		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs", show)
+		TAB("4", ORIGIN_TAB4, "VIP & Boosters", hide)
+		TAB("5", ORIGIN_TAB5, "Skins #1", hide)
+		TAB("6", ORIGIN_TAB6, "Skins #2", hide)
 
 		TIER(ORIGIN_KR1, "Tier I")
 		TIER(ORIGIN_KR2, "Tier II")
@@ -327,10 +347,10 @@
 		PURCHASEWIDE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "7 500")		
 		PURCHASEWIDE("tab1", ORIGIN_KR4, "m14ebr_mp", "nl_img_m14ebr", "nl_kutka", "Mk 14 EBR", "117", "12 500")
 		PURCHASEWIDE("tab1", ORIGIN_KR5, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "25 000")
-		ARROW("tab1", ORIGIN_KR1, ARROW_RIGHT, "nl_hud_right_arrow", "500 kills")
-		ARROW("tab1", ORIGIN_KR2, ARROW_RIGHT, "nl_hud_right_arrow", "750 kills")
-		ARROW("tab1", ORIGIN_KR3, ARROW_RIGHT, "nl_hud_right_arrow", "1 500 kills")
-		ARROW("tab1", ORIGIN_KR4, ARROW_RIGHT, "nl_hud_right_arrow", "3 000 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR1, "500 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR4, "3 000 kills")
 
 		PURCHASEWIDE("tab2", ORIGIN_KR1, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "1 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR2, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "2 500")
@@ -341,14 +361,14 @@
 		PURCHASEWIDE("tab2", ORIGIN_KR8, "mp5_mp", "nl_img_mp5", "nl_kutka", "MP5", "111", "7 500")
 		PURCHASEWIDE("tab2", ORIGIN_KR9, "g36c_mp", "nl_img_g36c", "nl_kutka", "G36C", "122", "12 500")
 		PURCHASEWIDE("tab2", ORIGIN_KR10, "famas_mp", "nl_img_famas", "nl_kutka", "FAMAS", "121", "20 000")
-		ARROW("tab2", ORIGIN_KR1, ARROW_RIGHT, "nl_hud_right_arrow", "250 kills")
-		ARROW("tab2", ORIGIN_KR2, ARROW_RIGHT, "nl_hud_right_arrow", "750 kills")
-		ARROW("tab2", ORIGIN_KR3, ARROW_RIGHT, "nl_hud_right_arrow", "1 500 kills")
-		ARROW("tab2", ORIGIN_KR4, ARROW_RIGHT, "nl_hud_right_arrow", "3 000 kills")
-		ARROW("tab2", ORIGIN_KR1, ARROW_DOWN_RIGHT, "nl_hud_right_arrow", "250 kills")
-		ARROW("tab2", ORIGIN_KR7, ARROW_RIGHT, "nl_hud_right_arrow", "750 kills")
-		ARROW("tab2", ORIGIN_KR8, ARROW_RIGHT, "nl_hud_right_arrow", "1 500 kills")
-		ARROW("tab2", ORIGIN_KR9, ARROW_RIGHT, "nl_hud_right_arrow", "3 000 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR4, "3 000 kills")
+		ARROW_DOWN_RIGHT("tab2", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR7, "750 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR8, "1 500 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR9, "3 000 kills")
 
 		PURCHASEWIDE("tab3", ORIGIN_KR1, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "1 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR2, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "2 500")
@@ -358,20 +378,20 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "dp28_mp", "nl_img_dp28", "nl_kutka", "DP-28", "129", "2 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR8, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR10, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "20 000")
-		ARROW("tab3", ORIGIN_KR1, ARROW_RIGHT, "nl_hud_right_arrow", "250 kills")
-		ARROW("tab3", ORIGIN_KR2, ARROW_RIGHT, "nl_hud_right_arrow", "750 kills")
-		ARROW("tab3", ORIGIN_KR3, ARROW_RIGHT, "nl_hud_right_arrow", "1 500 kills")
-		ARROW("tab3", ORIGIN_KR4, ARROW_RIGHT, "nl_hud_right_arrow", "3 000 kills")
-		ARROW("tab3", ORIGIN_KR1, ARROW_DOWN_RIGHT, "nl_hud_right_arrow", "250 kills")
-		ARROW("tab3", ORIGIN_KR7, ARROW_RIGHT, "nl_hud_right_arrow", "750 kills")
-		ARROW("tab3", ORIGIN_KR9, ARROW_RIGHT, "nl_hud_right_arrow", "3 000 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR4, "3 000 kills")
+		ARROW_DOWN_RIGHT("tab3", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR7, "750 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR9, "3 000 kills")
 		
-		PURCHASE("tab4", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
-		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
-		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(90d)", "4", "15 000")
-		PURCHASE("tab4", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "2 000")
-		PURCHASE("tab4", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "6 000")
-		PURCHASE("tab4", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(90d)", "9", "12 000")
+		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
+		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
+		PURCHASE("tab4", ORIGIN_KR4, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(90d)", "4", "15 000")
+		PURCHASE("tab4", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "2 000")
+		PURCHASE("tab4", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "6 000")
+		PURCHASE("tab4", ORIGIN_KR9, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(90d)", "9", "12 000")
 
 		PURCHASE("tab5", ORIGIN_KR1, "nl_yellow", "nl_char_nl_yellow", "nl_kutka", "American Ranger ^3Yellow", "31", "2 500")
 		PURCHASE("tab5", ORIGIN_KR2, "nl_blue", "nl_char_nl_blue", "nl_kutka", "British Mate ^4Blue", "32", "5 000")
