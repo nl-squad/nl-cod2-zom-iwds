@@ -200,7 +200,7 @@ Configure()
 	addPurchaseRequirement(level.weapons_rpk, "winchester_mp", 250);
 	addWeaponToMysteryBox(level.weapons_rpk, "xmodel/weapon_rpk", 1, 1);
 	
-	level.weapons_dp28 = defineWeapon(13, "dp28_mp", "DP-28", level.TYPE_PRIMARY, level.KIND_HEAVY);
+	level.weapons_dp28 = defineWeapon(37, "dp28_mp", "DP-28", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_dp28, 3, 129, 5000);
 	addPurchaseRequirement(level.weapons_dp28, "rpk_mp", 750);
 	addWeaponToMysteryBox(level.weapons_dp28, "xmodel/weapon_dp28", 1, 1);
