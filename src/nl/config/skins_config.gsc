@@ -55,20 +55,20 @@ Configure()
 
     // Skins for ranks
     level.SKINS_defaultHunter = hunterSkin(6, "american_normandy", americanNormandyBodies, "viewmodel_hands_cloth", "american", americanHeads, "helmet_us_ranger_generic");
-    hunterSkin(3, "german_normandy", "playerbody_german_normandy01", "viewmodel_hands_german", "german", germanNormandyHeads, "helmet_german_normandy");
-    enableSkinForRank(3, 10);
     hunterSkin(5, "british_normandy", britishNormandyBodies, "viewmodel_hands_british", "british", britishHeads, "helmet_british_normandy");
-    enableSkinForRank(5, 20);
+    enableSkinForRank(5, 10);
+	hunterSkin(3, "german_normandy", "playerbody_german_normandy01", "viewmodel_hands_german", "german", germanNormandyHeads, "helmet_german_normandy");
+    enableSkinForRank(3, 20);
     hunterSkin(9, "russian_padded", russianPaddedBodies, "viewmodel_hands_russian", "russian", russianHeads, russianPaddedHelmets);
     enableSkinForRank(9, 30);
+	hunterSkin(4, "british_africa", britishAfricaBodies, "viewmodel_hands_british_bare", "british", britishHeads, "helmet_british_afrca");
+    enableSkinForRank(4, 40);
+	hunterSkin(2, "german_africa", "playerbody_german_africa01", "viewmodel_hands_german_afrika", "german", germanAfricaHeads, "helmet_german_africa");
+    enableSkinForRank(2, 50);
     hunterSkin(8, "german_winter_dark", "playerbody_german_winterdark_masked", "viewmodel_hands_german_winter", "german");
-    enableSkinForRank(8, 40);
+    enableSkinForRank(8, 60);
     hunterSkin(10, "german_winter_light", "playerbody_german_winterlight_hooded", "viewmodel_hands_german_winter", "german", "head_german_winter_jon");
-    enableSkinForRank(10, 50);
-    hunterSkin(2, "german_africa", "playerbody_german_africa01", "viewmodel_hands_german_afrika", "german", germanAfricaHeads, "helmet_german_africa");
-    enableSkinForRank(2, 60);
-    hunterSkin(4, "british_africa", britishAfricaBodies, "viewmodel_hands_british_bare", "british", britishHeads, "helmet_british_afrca");
-    enableSkinForRank(4, 70);
+    enableSkinForRank(10, 70);
     hunterSkin(7, "russian_coat", russianCoatBodies, "viewmodel_hands_russian", "russian", russianHeads, russianCoatHelmets);
     enableSkinForRank(7, 80);
     hunterSkin(11, "russian_diana", "character_russian_diana_medic", "viewmodel_hands_russian", "russian");
