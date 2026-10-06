@@ -1,41 +1,28 @@
 #include "ui_mp/menudef.h"
 
 #define ORIGIN_TITLE			0 50
-#define ORIGIN_KR1				120 90
-#define ORIGIN_KR2				220 90
-#define ORIGIN_KR3				320 90
-#define ORIGIN_KR4				420 90
-#define ORIGIN_KR5				520 90
+#define ORIGIN_KR1				40 120
+#define ORIGIN_KR2				160 120
+#define ORIGIN_KR3				280 120
+#define ORIGIN_KR4				400 120
+#define ORIGIN_KR5				520 120
 
-#define ORIGIN_KR6				120 190
-#define ORIGIN_KR7				220 190
-#define ORIGIN_KR8				320 190
-#define ORIGIN_KR9				420 190
-#define ORIGIN_KR10				520 190
-
-#define ORIGIN_KR11				120 290
-#define ORIGIN_KR12				220 290
-#define ORIGIN_KR13				320 290
-#define ORIGIN_KR14				420 290
-#define ORIGIN_KR15				520 290
-
-#define ORIGIN_KR16				120 390
-#define ORIGIN_KR17				220 390
-#define ORIGIN_KR18				320 390
-#define ORIGIN_KR19				420 390
-#define ORIGIN_KR20				520 390
+#define ORIGIN_KR6				40 240
+#define ORIGIN_KR7				160 240
+#define ORIGIN_KR8				280 240
+#define ORIGIN_KR9				400 240
+#define ORIGIN_KR10				520 240
 
 #define ORIGIN_EXIT				20 415
 #define ORIGIN_INFO				400 415
-#define ORIGIN_NLT				350 20
+#define ORIGIN_NLT				245 10
 
-#define ORIGIN_TAB1				20 90
-#define ORIGIN_TAB2				20 120
-#define ORIGIN_TAB3				20 150
-#define ORIGIN_TAB4				20 180
-#define ORIGIN_TAB5				20 210
-#define ORIGIN_TAB6				20 240
-#define ORIGIN_TAB7				20 270
+#define ORIGIN_TAB1				40 60
+#define ORIGIN_TAB2				136 60
+#define ORIGIN_TAB3				232 60
+#define ORIGIN_TAB4				328 60
+#define ORIGIN_TAB5				424 60
+#define ORIGIN_TAB6				520 60
 
 #ifndef PURCHASE
 #define PURCHASE(_tab, _origin, _dvar, _background_active, _background_nonactive, _text, _action, _price) \
@@ -80,7 +67,7 @@
 			rect			0 0 80 80 0 0 \
 			origin			_origin \
 			border			1 \
-			bordercolor		0.027 0.082 0.604 1 \
+			bordercolor		0.5 0.5 0.5 0.25 \
 			style			WINDOW_STYLE_FILLED \
 			visible			1 \
 			textscale		.17 \
@@ -90,11 +77,11 @@
 			mouseEnter \
 			{ \
             	scriptMenuResponse "hover:" ## _action; \
-				setcolor bordercolor 0.094 0.455 0.804 0.8 \
+				setcolor bordercolor 0.8 0.8 0.8 0.6 \
 			} \
 			mouseExit \
 			{ \
-				setcolor bordercolor 0.027 0.082 0.604 1 \
+				setcolor bordercolor 0.5 0.5 0.5 0.25 \
 			} \
 			action \
 			{ \
@@ -122,12 +109,32 @@
 		itemDef \
 		{ \
 			name			_tab \
-			style			WINDOW_STYLE_FILLED \
-			rect			2 2 78 78 0 0 \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 80 80 0 0 \
 			origin			_origin \
+			border			1 \
+			bordercolor		0.5 0.5 0.5 0.25 \
+			style			WINDOW_STYLE_FILLED \
 			backcolor		0 0 0 0.6 \
-			visible			0 \
-			decoration \
+			visible			1 \
+			textscale		.17 \
+			textalignx		2 \
+			textaligny		77 \
+			text			_text \
+			mouseEnter \
+			{ \
+            	scriptMenuResponse "hover:" ## _action; \
+				setcolor bordercolor 0.8 0.8 0.8 0.6 \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor 0.5 0.5 0.5 0.25 \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+            	scriptMenuResponse "click:" ## _action; \
+			} \
 		} \
 		itemDef \
 		{ \
@@ -156,35 +163,6 @@
 		itemDef \
 		{ \
 			name			_tab \
-			type			ITEM_TYPE_BUTTON \
-			rect			0 0 80 80 0 0 \
-			origin			_origin \
-			border			1 \
-			bordercolor		0.027 0.082 0.604 1 \
-			style			WINDOW_STYLE_FILLED \
-			visible			1 \
-			textscale		.17 \
-			textalignx		2 \
-			textaligny		77 \
-			text			_text \
-			mouseEnter \
-			{ \
-            	scriptMenuResponse "hover:" ## _action; \
-				setcolor bordercolor 0.094 0.455 0.804 0.8 \
-			} \
-			mouseExit \
-			{ \
-				setcolor bordercolor 0.027 0.082 0.604 1 \
-			} \
-			action \
-			{ \
-				play "mouse_click"; \
-            	scriptMenuResponse "click:" ## _action; \
-			} \
-		} \
-		itemDef \
-		{ \
-			name			_tab \
 			type			ITEM_TYPE_TEXT \
 			rect			77 10 0 0 0 0 \
 			origin			_origin \
@@ -198,7 +176,7 @@
 #endif
 
 #ifndef TAB
-#define TAB(_tab, _origin, _text) \
+#define TAB(_tab, _origin, _text, _tiers) \
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
@@ -207,7 +185,8 @@
 			origin			_origin \
 			visible			1 \
 			textscale		.22 \
-			textalignx		4 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
 			textaligny		17 \
 			text			_text \
 			mouseEnter \
@@ -229,6 +208,7 @@
 				hide tab5; \
 				hide tab6; \
 				show "tab" ## _tab; \
+				_tiers tiers; \
 			} \
 		} \
 		itemDef \
@@ -238,6 +218,64 @@
 			rect			0 25 80 1 0 0 \
 			origin			_origin \
 			backcolor		0 0 1 1 \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef TIER
+#define TIER(_origin, _text) \
+		itemDef \
+		{ \
+			name			"tiers" \
+			type			ITEM_TYPE_TEXT \
+			rect			0 -8 0 0 0 0 \
+			origin			_origin \
+			forecolor		1 1 1 0.6 \
+			textscale		.22 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			text			_text \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef ARROW_RIGHT
+#define ARROW_RIGHT(_tab, _origin, _kills) \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			88 28 24 24 0 0 \
+			origin			_origin \
+			background		"nl_hud_right_arrow" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		12 \
+			textaligny		3 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
+#endif
+
+#ifndef ARROW_DOWN_RIGHT
+#define ARROW_DOWN_RIGHT(_tab, _origin, _kills) \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			80 53 40 94 0 0 \
+			origin			_origin \
+			background		"white" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			textaligny		44 \
+			text			_kills \
 			visible			1 \
 			decoration \
 		}
@@ -260,6 +298,7 @@
 		onOpen 
 		{
 			show tab1;
+			show tiers;
 			hide tab2;
 			hide tab3;
 			hide tab4;
@@ -280,29 +319,39 @@
 			decoration
 		}
 
-		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto")
-		TAB("2", ORIGIN_TAB2, "Assaults & SMGs")
-		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs")
-		TAB("4", ORIGIN_TAB5, "VIP & Boosters")
-		TAB("5", ORIGIN_TAB6, "Skins #1")
-		TAB("6", ORIGIN_TAB7, "Skins #2")
-		
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			80 0 1 210 0 0
+			rect			0 25 560 1 0 0
 			origin			ORIGIN_TAB1
-			backcolor		0 0 1 1
+			backcolor		0 0 1 0.35
 			visible			1
 			decoration
 		}
+
+		TAB("1", ORIGIN_TAB1, "Bolts & Semi-Auto", show)
+		TAB("2", ORIGIN_TAB2, "Assaults & SMGs", show)
+		TAB("3", ORIGIN_TAB3, "Shotguns & LMGs", show)
+		TAB("4", ORIGIN_TAB4, "VIP & Boosters", hide)
+		TAB("5", ORIGIN_TAB5, "Skins #1", hide)
+		TAB("6", ORIGIN_TAB6, "Skins #2", hide)
+
+		TIER(ORIGIN_KR1, "Tier I")
+		TIER(ORIGIN_KR2, "Tier II")
+		TIER(ORIGIN_KR3, "Tier III")
+		TIER(ORIGIN_KR4, "Tier IV")
+		TIER(ORIGIN_KR5, "Tier V")
 
 		PURCHASEWIDE("tab1", ORIGIN_KR1, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 500")
 		PURCHASEWIDE("tab1", ORIGIN_KR2, "fal_mp", "nl_img_fal", "nl_kutka", "FAL", "119", "5 000")
 		PURCHASEWIDE("tab1", ORIGIN_KR3, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "7 500")		
 		PURCHASEWIDE("tab1", ORIGIN_KR4, "m14ebr_mp", "nl_img_m14ebr", "nl_kutka", "Mk 14 EBR", "117", "12 500")
 		PURCHASEWIDE("tab1", ORIGIN_KR5, "tesla_mp", "nl_img_tesla", "nl_kutka", "Tesla Gun", "110", "25 000")
-	
+		ARROW_RIGHT("tab1", ORIGIN_KR1, "500 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab1", ORIGIN_KR4, "3 000 kills")
+
 		PURCHASEWIDE("tab2", ORIGIN_KR1, "sig_mp", "nl_img_sig", "nl_kutka", "SIG SG 552", "105", "1 000")
 		PURCHASEWIDE("tab2", ORIGIN_KR2, "ak47_mp", "nl_img_ak47", "nl_kutka", "AK-47", "106", "2 500")
 		PURCHASEWIDE("tab2", ORIGIN_KR3, "scar_mp", "nl_img_scar", "nl_kutka", "SCAR-H", "113", "7 500")
@@ -312,6 +361,14 @@
 		PURCHASEWIDE("tab2", ORIGIN_KR8, "mp5_mp", "nl_img_mp5", "nl_kutka", "MP5", "111", "7 500")
 		PURCHASEWIDE("tab2", ORIGIN_KR9, "g36c_mp", "nl_img_g36c", "nl_kutka", "G36C", "122", "12 500")
 		PURCHASEWIDE("tab2", ORIGIN_KR10, "famas_mp", "nl_img_famas", "nl_kutka", "FAMAS", "121", "20 000")
+		ARROW_RIGHT("tab2", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR4, "3 000 kills")
+		ARROW_DOWN_RIGHT("tab2", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR7, "750 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR8, "1 500 kills")
+		ARROW_RIGHT("tab2", ORIGIN_KR9, "3 000 kills")
 
 		PURCHASEWIDE("tab3", ORIGIN_KR1, "winchester_mp", "nl_img_winchester", "nl_kutka", "Winchester 1200", "107", "1 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR2, "model_1887_mp", "nl_img_model_1887", "nl_kutka", "Model 1887", "123", "2 500")
@@ -321,13 +378,20 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "dp28_mp", "nl_img_dp28", "nl_kutka", "DP-28", "129", "2 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR8, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "5 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR10, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "20 000")
+		ARROW_RIGHT("tab3", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR2, "750 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR3, "1 500 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR4, "3 000 kills")
+		ARROW_DOWN_RIGHT("tab3", ORIGIN_KR1, "250 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR7, "750 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR9, "3 000 kills")
 		
-		PURCHASE("tab4", ORIGIN_KR1, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
-		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
-		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(90d)", "4", "15 000")
-		PURCHASE("tab4", ORIGIN_KR6, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "2 000")
-		PURCHASE("tab4", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "6 000")
-		PURCHASE("tab4", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(90d)", "9", "12 000")
+		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
+		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
+		PURCHASE("tab4", ORIGIN_KR4, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(90d)", "4", "15 000")
+		PURCHASE("tab4", ORIGIN_KR7, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(7d)", "7", "2 000")
+		PURCHASE("tab4", ORIGIN_KR8, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(30d)", "8", "6 000")
+		PURCHASE("tab4", ORIGIN_KR9, "25expBooster", "nl_booster_xp_a", "nl_booster_xp_n", "+25 percent ^3EXP ^7(90d)", "9", "12 000")
 
 		PURCHASE("tab5", ORIGIN_KR1, "nl_yellow", "nl_char_nl_yellow", "nl_kutka", "American Ranger ^3Yellow", "31", "2 500")
 		PURCHASE("tab5", ORIGIN_KR2, "nl_blue", "nl_char_nl_blue", "nl_kutka", "British Mate ^4Blue", "32", "5 000")
@@ -350,11 +414,11 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			-3 0 130 18
+			rect			-3 0 170 24
 			origin			ORIGIN_NLT
-			textscale		.23
+			textscale		.3
 			text			"nL Tokens balance:"
-			textaligny		15
+			textaligny		20
 			textalignx		3
 			visible			1
 			decoration
@@ -375,9 +439,9 @@
 			forecolor		.976 .624 .22 1
 			rect			0 0 0 0
 			origin			ORIGIN_NLT
-			textscale		.24
-			textaligny		15
-			textalignx		85
+			textscale		.32
+			textaligny		20
+			textalignx		111
 			visible			1
 			decoration
 		}
@@ -386,10 +450,10 @@
 		{
 			name			"nlt_tooltip"
 			type			ITEM_TYPE_TEXT
-			rect			0 30 0 0
+			rect			0 32 0 0
 			origin			ORIGIN_NLT
 			textscale		.23
-			text			"You can earn ^8nL Tokens ^7for your ^3Activity^7, completing ^3Challenges^7, \nand during ^3Special Events^7."
+			text			"You can earn ^8nL Tokens ^7for your ^7Activity, \nChallenges, and Special Events."
 			visible			0
 			decoration
 		}
