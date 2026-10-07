@@ -2,7 +2,7 @@
 
 This is a repository of the client-side part of one of the most popular servers in CoD2 - `nL.Zombies*. It includes the .iwd files, configurations, and a part of server scripts.
 
-# 🚢 Restart, stop, pack .iwds, save logs
+# 🚢 Restart, stop, save logs
 
 Use the defined **GitHub Actions** or the local `mynl` commands from [nl-ops](https://github.com/nl-squad/nl-ops): `mynl restart`, `mynl stop`, `mynl exec map_restart`, `mynl logs follow`
 
