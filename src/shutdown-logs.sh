@@ -65,7 +65,8 @@ if grep -q -E "$error_regex" "$TEMP_LOG_FILE"; then
     total_lines=$(wc -l < "$TEMP_LOG_FILE")
 
     # Extract logs from start_line to the end of the file
-    error_logs=$(sed -n "${start_line},${total_lines}p" "$TEMP_LOG_FILE")
+    # Discord rejects embed descriptions over 4096 characters; leave room for JSON escaping
+    error_logs=$(sed -n "${start_line},${total_lines}p" "$TEMP_LOG_FILE" | head -c 3000)
 
     # Debug output
     echo "error_logs=$error_logs"
@@ -80,7 +81,7 @@ if grep -q -E "$error_regex" "$TEMP_LOG_FILE"; then
     echo "BODY=$BODY"
 
     # Send to Discord
-    curl -fsS -H "Content-Type: application/json" -d "$BODY" "$WEBHOOK_URL"
+    curl --fail-with-body -sS -H "Content-Type: application/json" -d "$BODY" "$WEBHOOK_URL"
     curl_status=$?
 
     if [ $curl_status -eq 0 ]; then
