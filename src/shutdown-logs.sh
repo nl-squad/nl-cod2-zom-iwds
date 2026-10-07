@@ -65,7 +65,7 @@ if grep -q -E "$error_regex" "$TEMP_LOG_FILE"; then
     total_lines=$(wc -l < "$TEMP_LOG_FILE")
 
     # Extract logs from start_line to the end of the file
-    # Discord rejects embed descriptions over 4096 characters; leave room for JSON escaping
+    # Discord caps embed descriptions at 4096 characters; truncate well below that
     error_logs=$(sed -n "${start_line},${total_lines}p" "$TEMP_LOG_FILE" | head -c 3000)
 
     # Debug output
