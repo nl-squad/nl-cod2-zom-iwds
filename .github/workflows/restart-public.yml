@@ -5,7 +5,7 @@ on:
 
 jobs:
   restart:
-    uses: nl-squad/nl-cod2-workflows/.github/workflows/restart.yml@main
+    uses: nl-squad/nl-ops/.github/workflows/restart.yml@main
     with:
       profile: public
     secrets: inherit
