@@ -4,10 +4,16 @@
 # */30 * * * * /home/ubuntu/cod2/servers/nl-cod2-zom-dev/shutdown-logs.sh >> /home/ubuntu/cod2/servers/shutdown-logs.log 2>&1
 
 PROJECT="nl-cod2-zom"
-WEBHOOK_URL="https://discord.com/api/webhooks/1342626560372375585/CrG9Qf1PTnXM7weeQpa6rbKwrQC1AHtOyNrd_9hMmU0MtmZ0OnkQuEmCH4mfQYYAKKSN"
+WEBHOOK_FILE="/home/ubuntu/cod2/servers/shutdown-logs.webhook"
 STATE_FILE="/home/ubuntu/cod2/servers/shutdown-logs.state"
 TEMP_LOG_FILE="/tmp/shutdown_logs_$$.txt"  # Unique temp file with PID
 LOG_LINES=500
+
+WEBHOOK_URL=$(cat "$WEBHOOK_FILE" 2>/dev/null)
+if [ -z "$WEBHOOK_URL" ]; then
+    echo "Webhook URL not found in $WEBHOOK_FILE"
+    exit 1
+fi
 
 # Ensure state file exists
 [ ! -f "$STATE_FILE" ] && touch "$STATE_FILE"
