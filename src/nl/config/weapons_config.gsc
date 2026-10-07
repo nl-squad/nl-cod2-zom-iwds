@@ -66,15 +66,15 @@ Configure()
 	// addPurchaseRequirement(level.weapons_sig, "springfield_mp", 50);
     addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 1, 1);
 	
-	level.weapons_fal = defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase(level.weapons_fal, 1, 119, 5000);
-	addPurchaseRequirement(level.weapons_fal, "g3_mp", 500);
-    addWeaponToMysteryBox(level.weapons_fal, "xmodel/oma_weapon_fal", 1, 1);
-
-    level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase(level.weapons_barrett, 1, 103, 7500);
-	addPurchaseRequirement(level.weapons_barrett, "fal_mp", 750);
+	level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_barrett, 1, 103, 5000);
+	addPurchaseRequirement(level.weapons_barrett, "g3_mp", 500);
     addWeaponToMysteryBox(level.weapons_barrett, "xmodel/m82_w", 1, 1);
+	
+	level.weapons_fal = defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
+    addWeaponPurchase(level.weapons_fal, 1, 119, 7500);
+	addPurchaseRequirement(level.weapons_fal, "barrett_mp", 750);
+    addWeaponToMysteryBox(level.weapons_fal, "xmodel/oma_weapon_fal", 1, 1);
 
 	level.weapons_m14ebr = defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase(level.weapons_m14ebr, 1, 117, 12500);
@@ -200,7 +200,7 @@ Configure()
 	addWeaponToMysteryBox(level.weapons_dp28, "xmodel/weapon_dp28", 1, 1);
 	
     level.weapons_rpk = defineWeapon(13, "rpk_mp", "RPK-74", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase(level.weapons_rpk, 3, 108, 5000);
+    addWeaponPurchase(level.weapons_rpk, 3, 108, 7500);
 	addPurchaseRequirement(level.weapons_rpk, "dp28_mp", 750);
 	addWeaponToMysteryBox(level.weapons_rpk, "xmodel/weapon_rpk", 1, 1);
 	
