@@ -9,7 +9,7 @@ STATE_FILE="/home/ubuntu/cod2/servers/shutdown-logs.state"
 TEMP_LOG_FILE="/tmp/shutdown_logs_$$.txt"  # Unique temp file with PID
 LOG_LINES=500
 
-WEBHOOK_URL=$(cat "$WEBHOOK_FILE" 2>/dev/null)
+WEBHOOK_URL=$(tr -d '[:space:]' < "$WEBHOOK_FILE")
 if [ -z "$WEBHOOK_URL" ]; then
     echo "Webhook URL not found in $WEBHOOK_FILE"
     exit 1
@@ -80,7 +80,7 @@ if grep -q -E "$error_regex" "$TEMP_LOG_FILE"; then
     echo "BODY=$BODY"
 
     # Send to Discord
-    curl -H "Content-Type: application/json" -d "$BODY" "$WEBHOOK_URL"
+    curl -fsS -H "Content-Type: application/json" -d "$BODY" "$WEBHOOK_URL"
     curl_status=$?
 
     if [ $curl_status -eq 0 ]; then
