@@ -4,7 +4,7 @@ This is a repository of the client-side part of one of the most popular servers 
 
 # 🚢 Restart, stop, pack .iwds, save logs
 
-Use defined **GitHub Actions** or use local [nl-cli-tool](https://github.com/nl-squad/nl-cli-tool) commands: `mynl restart`, `mynl stop`, `mynl pack`, `mynl mapres`, `mynl logs follow`
+Use the defined **GitHub Actions** or the local `mynl` commands from [nl-ops](https://github.com/nl-squad/nl-ops): `mynl restart`, `mynl stop`, `mynl pack`, `mynl mapres`, `mynl logs follow`
 
 # 🚀 Versioning and deployment
 

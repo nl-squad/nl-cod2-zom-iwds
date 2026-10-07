@@ -13,12 +13,8 @@ on:
 jobs:
   deploy:
     name: Dev
-    uses: nl-squad/nl-cod2-workflows/.github/workflows/deploy.yml@main
+    uses: nl-squad/nl-ops/.github/workflows/deploy.yml@main
     with:
       profile: default
-      branch: main
-      sha: ${{ github.event.inputs.sha }}
-      pack: true
-      set_passwords: true
-      cfg_file: server.dev.cfg
+      ref: ${{ github.event.inputs.sha }}
     secrets: inherit

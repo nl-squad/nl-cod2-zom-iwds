@@ -10,12 +10,8 @@ on:
 jobs:
   deploy:
     name: Public (Zombies)
-    uses: nl-squad/nl-cod2-workflows/.github/workflows/deploy.yml@main
+    uses: nl-squad/nl-ops/.github/workflows/deploy.yml@main
     with:
       profile: public
-      branch: main
-      sha: ${{ github.event.inputs.sha }}
-      pack: true
-      set_passwords: true
-      cfg_file: server.zom.cfg
+      ref: ${{ github.event.inputs.sha }}
     secrets: inherit
