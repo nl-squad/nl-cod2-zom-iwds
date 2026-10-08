@@ -1,0 +1,4 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop
+nl_gravitywell_open,,,gravitywell/nl_gravitywell_open.wav,1,1,,,,1000000,,auto,loaded,
+nl_gravitywell_loop,,,gravitywell/nl_gravitywell_loop.wav,0.8,0.8,,,,200,1500,auto,loaded,looping
+nl_gravitywell_implode,,,gravitywell/nl_gravitywell_implode.wav,1,1,,,,1000000,,auto,loaded,
