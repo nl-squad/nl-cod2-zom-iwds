@@ -1,0 +1,3 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop
+nl_repulsor_start,,,repulsor/nl_repulsor_start.wav,1,1,,,,1000000,,auto,loaded,
+nl_repulsor_push,,,repulsor/nl_repulsor_push.wav,0.9,0.9,,0.9,1.1,1000000,,auto,loaded,
