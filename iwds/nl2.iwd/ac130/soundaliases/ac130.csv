@@ -1,0 +1,10 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop
+nl_ac130_loop,,,ac130/nl_ac130_loop.wav,0.7,0.7,,,,100,400,auto,loaded,looping
+nl_ac130_105mm_fire,,,ac130/nl_ac130_105mm_fire.wav,1,1,,,,1000000,,auto,loaded,
+nl_ac130_40mm_fire,,,ac130/nl_ac130_40mm_fire.wav,0.9,0.9,,0.95,1.05,1000000,,auto,loaded,
+nl_ac130_105mm_explode,,,ac130/nl_ac130_105mm_explode.wav,1,1,,,,1000000,,auto,loaded,
+nl_ac130_40mm_explode,,,ac130/nl_ac130_40mm_explode.wav,0.9,0.9,,0.9,1.1,1000000,,auto,loaded,
+nl_ac130_105mm_reload,,,ac130/nl_ac130_reload.wav,0.8,0.8,,,,1000000,,auto,loaded,
+nl_ac130_40mm_reload,,,ac130/nl_ac130_reload.wav,0.3,0.3,,,,1000000,,auto,loaded,
+nl_ac130_start,,,ac130/nl_ac130_start.wav,1,1,,,,1000000,,auto,loaded,
+nl_ac130_inbound,,,ac130/nl_ac130_inbound.wav,1,1,,,,1000000,,auto,loaded,
