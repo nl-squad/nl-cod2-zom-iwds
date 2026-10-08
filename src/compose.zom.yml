@@ -27,7 +27,6 @@ services:
       COD2_SET_dedicated: 2
       COD2_SET_net_port: 28960
     healthcheck:
-      test: ["CMD", "/cod2/healthcheck.sh"]
       interval: 3s
       timeout: 3s
       retries: 3
