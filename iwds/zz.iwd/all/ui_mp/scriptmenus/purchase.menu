@@ -29,6 +29,16 @@
 		itemDef \
 		{ \
 			name			_tab \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 78 78 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.6 \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
 			style			WINDOW_STYLE_SHADER \
 			rect			5 5 70 70 0 0 \
 			origin			_origin \
@@ -59,7 +69,6 @@
 			border			1 \
 			bordercolor		0.5 0.5 0.5 0.25 \
 			style			WINDOW_STYLE_FILLED \
-			backcolor		0 0 0 0.6 \
 			visible			1 \
 			textscale		.17 \
 			textalignx		2 \
@@ -234,74 +243,42 @@
 
 #ifndef ARROW_RIGHT
 #define ARROW_RIGHT(_tab, _origin, _kills) \
-        itemDef \
-        { \
-            name _tab \
-            type ITEM_TYPE_TEXT \
-            style WINDOW_STYLE_FILLED \
-            rect 87 39 21 2 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.9 \
-            forecolor 1 1 1 1 \
-            textscale .17 \
-            textalign ITEM_ALIGN_CENTER \
-            textalignx 11 \
-            textaligny -8 \
-            text _kills \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_SHADER \
-            rect 108 35 6 10 0 0 \
-            origin _origin \
-            background "nl_grot" \
-            visible 1 \
-            decoration \
-        }
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			88 28 24 24 0 0 \
+			origin			_origin \
+			background		"nl_hud_right_arrow" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		12 \
+			textaligny		3 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
 #endif
 
 #ifndef ARROW_DOWN_RIGHT
 #define ARROW_DOWN_RIGHT(_tab, _origin, _kills) \
-        itemDef \
-        { \
-            name _tab \
-            type ITEM_TYPE_TEXT \
-            style WINDOW_STYLE_FILLED \
-            rect 99 40 2 120 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.9 \
-            forecolor 1 1 1 1 \
-            textscale .17 \
-            textalign ITEM_ALIGN_CENTER \
-            textalignx 0 \
-            textaligny 55 \
-            text _kills \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_FILLED \
-            rect 100 159 8 2 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.9 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_SHADER \
-            rect 108 155 6 10 0 0 \
-            origin _origin \
-            background "nl_grot" \
-            visible 1 \
-            decoration \
-        }
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			80 53 40 94 0 0 \
+			origin			_origin \
+			background		"white" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			textaligny		44 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
 #endif
 
 {
