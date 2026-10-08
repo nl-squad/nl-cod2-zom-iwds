@@ -241,138 +241,64 @@
 		}
 #endif
 
-// Polaczenia drzewa broni: kafel 80x80, odstep miedzy kolumnami 40.
-// Linia zaczyna sie 7 jednostek za kaflem, grot konczy 6 przed kolejnym.
 #ifndef ARROW_RIGHT
 #define ARROW_RIGHT(_tab, _origin, _kills) \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_FILLED \
-            rect 87 39 21 2 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.85 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_SHADER \
-            rect 108 34 6 12 0 0 \
-            origin _origin \
-            background "nl_grot" \
-            forecolor 0.85 0.85 0.85 1 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            type ITEM_TYPE_TEXT \
-            rect 83 19 34 12 0 0 \
-            origin _origin \
-            forecolor 1 1 1 0.85 \
-            textscale .15 \
-            textalign ITEM_ALIGN_CENTER \
-            textalignx 17 \
-            textaligny 9 \
-            text _kills \
-            visible 1 \
-            decoration \
-        }
+		itemDef \
+		{ \
+			name _tab \
+			style WINDOW_STYLE_FILLED \
+			rect 86 40 23 1 0 0 \
+			origin _origin \
+			backcolor 0.65 0.65 0.65 0.9 \
+			visible 1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name _tab \
+			style WINDOW_STYLE_SHADER \
+			rect 109 36 5 9 0 0 \
+			origin _origin \
+			background "nl_grot" \
+			visible 1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			88 28 24 24 0 0 \
+			origin			_origin \
+			background		"nl_hud_right_arrow" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		12 \
+			textaligny		3 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
 #endif
 
-// Odgalezienie: z prawej krawedzi pierwszego kafla do drugiego rzedu.
 #ifndef ARROW_DOWN_RIGHT
 #define ARROW_DOWN_RIGHT(_tab, _origin, _kills) \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_FILLED \
-            rect 100 40 2 120 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.85 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_FILLED \
-            rect 100 159 8 2 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.85 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_SHADER \
-            rect 108 154 6 12 0 0 \
-            origin _origin \
-            background "nl_grot" \
-            forecolor 0.85 0.85 0.85 1 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            type ITEM_TYPE_TEXT \
-            rect 75 137 44 12 0 0 \
-            origin _origin \
-            forecolor 1 1 1 0.85 \
-            textscale .15 \
-            textalign ITEM_ALIGN_CENTER \
-            textalignx 22 \
-            textaligny 9 \
-            text _kills \
-            visible 1 \
-            decoration \
-        }
-#endif
-
-// Dlugie polaczenie przez pusta kolumne (RPK-74 -> M249 SAW).
-#ifndef ARROW_SKIP
-#define ARROW_SKIP(_tab, _origin, _kills) \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_FILLED \
-            rect 87 39 141 2 0 0 \
-            origin _origin \
-            backcolor 0.65 0.65 0.65 0.85 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            style WINDOW_STYLE_SHADER \
-            rect 228 34 6 12 0 0 \
-            origin _origin \
-            background "nl_grot" \
-            forecolor 0.85 0.85 0.85 1 \
-            visible 1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            name _tab \
-            type ITEM_TYPE_TEXT \
-            rect 110 19 100 12 0 0 \
-            origin _origin \
-            forecolor 1 1 1 0.85 \
-            textscale .15 \
-            textalign ITEM_ALIGN_CENTER \
-            textalignx 50 \
-            textaligny 9 \
-            text _kills \
-            visible 1 \
-            decoration \
-        }
+		itemDef \
+		{ \
+			name			_tab \
+			type			ITEM_TYPE_TEXT \
+			style			WINDOW_STYLE_SHADER \
+			rect			80 53 40 94 0 0 \
+			origin			_origin \
+			background		"white" \
+			textscale		.17 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		40 \
+			textaligny		44 \
+			text			_kills \
+			visible			1 \
+			decoration \
+		}
 #endif
 
 {
@@ -478,7 +404,7 @@
 		ARROW_RIGHT("tab3", ORIGIN_KR4, "3 000 kills")
 		ARROW_DOWN_RIGHT("tab3", ORIGIN_KR1, "250 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR7, "750 kills")
-		ARROW_SKIP("tab3", ORIGIN_KR8, "3 000 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR9, "3 000 kills")
 		
 		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
 		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")
