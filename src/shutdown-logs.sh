@@ -41,8 +41,7 @@ if grep -Fxq "$container_id" "$STATE_FILE"; then
     exit 0
 fi
 
-docker logs --tail "$LOG_LINES" "$container_id" > "$TEMP_LOG_FILE" 2>&1
-if [ $? -ne 0 ]; then
+if ! docker logs --tail "$LOG_LINES" "$container_id" > "$TEMP_LOG_FILE" 2>&1; then
     echo "Failed to get logs for container $container_id"
     exit 1
 fi
@@ -75,6 +74,7 @@ if grep -q -F "${error_pattern_args[@]}" "$TEMP_LOG_FILE"; then
     echo "escaped_logs=$escaped_logs"
 
     # Construct JSON payload using printf
+    # shellcheck disable=SC2016 # the backticks are a literal Markdown code fence
     BODY=$(printf '{"content":"Error detected in %s (Container: %s)","embeds":[{"title":"Script Error","description":"```\\n%s\\n```","color":16711680}]}' \
            "$PROJECT" "$container_id" "$escaped_logs")
     echo "BODY=$BODY"
