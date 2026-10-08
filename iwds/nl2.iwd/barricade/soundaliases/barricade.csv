@@ -1,0 +1,3 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop
+nl_barricade_plant,,,barricade/nl_barricade_plant.wav,1,1,,,,1000000,,auto,loaded,
+nl_barricade_destroy,,,barricade/nl_barricade_destroy.wav,1,1,,,,1000000,,auto,loaded,
