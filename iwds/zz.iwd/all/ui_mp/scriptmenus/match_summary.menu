@@ -1,584 +1,1503 @@
 #include "ui_mp/menudef.h"
-
-#define ORIGIN_STATS                    30 60
-#define ORIGIN_EXP_BAR                  30 110
-#define ORIGIN_MAPVOTE                  30 270
-#define ORIGIN_VOTE1                    30 300
-#define ORIGIN_VOTE2                    185 300
-#define ORIGIN_VOTE3                    340 300
-#define ORIGIN_VOTE4                    495 300
-#define ORIGIN_RECORDSHEADER            360 60
-#define ORIGIN_MAPRECORDS               360 90
-
-#define ORIGIN_STATBLOCK1               30 150
-#define ORIGIN_STATBLOCK2               120 150
-#define ORIGIN_STATBLOCK3               210 150
-
-#ifndef HEADER
-#define HEADER(_header, _origin, _desc) \
-          itemDef \
-          { \
-            style             ITEM_TYPE_TEXT \
-             rect                 0 0 0 0 0 0 \
-            origin            _origin \
-            forecolor             1 1 1 1 \
-            textfont             UI_FONT_NORMAL \
-            text                 _header \
-            textscale             .23 \
-            textalignx        5 \
-            textalign         ITEM_ALIGN_LEFT \
-             visible            1 \
-            decoration \
-          } \
-        itemDef \
-        { \
-            style            WINDOW_STYLE_FILLED \
-            rect                 4 2 100 2 0 0 \
-            origin            _origin \
-            backcolor             0.027 0.082 0.604 1 \
-            visible            1 \
-            decoration \
-        } \
-          itemDef \
-          { \
-            style             ITEM_TYPE_TEXT \
-             rect                 0 15 0 0 0 0 \
-            origin            _origin \
-            forecolor             .7 .7 .7 1 \
-            textfont             UI_FONT_NORMAL \
-            text                 _desc \
-            textscale             .18 \
-            textalignx        5 \
-            textalign         ITEM_ALIGN_LEFT \
-             visible            1 \
-            decoration \
-          }
-#endif
-
-#ifndef MAP
-#define MAP(_origin, _num) \
-        itemDef \
-        { \
-            name			"vote" ## _num \
-			style			WINDOW_STYLE_FILLED \
-			visible 		1 \
-			rect			0 0 148 94 0 0 \
-			origin			_origin \
-			backcolor		1 1 .78 0.3 \
-			decoration \
-        } \
-        itemDef \
-        { \
-            style            WINDOW_STYLE_DVAR_SHADER \
-            rect             10 20 128 64 0 0 \
-            origin           _origin \
-            visible          1 \
-            dvar             "nl_mapvote_image" ## _num \
-            decoration \
-        } \
-        itemDef \
-        { \
-            dvar            "nl_mapvote_name" ## _num \
-            type            ITEM_TYPE_TEXT \
-            visible         1 \
-            rect            74 15 0 0 0 0 \
-            origin          _origin \
-            textscale       .2 \
-            textalign       ITEM_ALIGN_CENTER \
-            decoration \
-        } \
-        itemDef \
-        { \
-            type            ITEM_TYPE_BUTTON \
-            style           WINDOW_STYLE_FILLED \
-            rect            0 0 148 94 0 0 \
-            origin          _origin \
-            visible         1 \
-            textscale       .22 \
-            textalignx      8 \
-            textaligny      17 \
-            mouseEnter \
-            { \
-                setcolor backcolor 1 1 1 0.2 \
-            } \
-            mouseExit \
-            { \
-                setcolor backcolor 1 1 1 0 \
-            } \
-            action \
-            { \
-                scriptMenuResponse "vote:" ## _num; \
-				hide vote1; \
-				hide vote2; \
-				hide vote3; \
-				hide vote4; \
-				show "vote" ## _num; \
-                play "mouse_click"; \
-            } \
-        }
-#endif
-
-#ifndef PROGRESS
-#define PROGRESS(_width, _dvar_value) \
-          itemDef \
-          { \
-               style            WINDOW_STYLE_SHADER \
-               rect                 0 0 _width 8 0 0 \
-               origin            ORIGIN_EXP_BAR \
-               background        "blanco_fade" \
-               forecolor             0.282 0.765 0.286 1 \
-               dvartest             "blanco_xp_bar" \
-               showDvar             { _dvar_value } \
-               visible            1 \
-               decoration \
-          }
-#endif
-
-#ifndef RECORDSLINE
-#define RECORDSLINE(_num, _y, _fade) \
-          itemDef \
-          { \
-               style            WINDOW_STYLE_FILLED \
-               rect                 0 _y 250 12 0 0 \
-               origin            ORIGIN_MAPRECORDS \
-               backcolor             _fade _fade _fade _fade \
-               visible            1 \
-               decoration \
-          } \
-        itemDef \
-        { \
-            style            WINDOW_STYLE_SHADER \
-               rect                 0 _y 12 12 0 0 \
-            origin            ORIGIN_MAPRECORDS \
-            background        "nl_badge_new" \
-            dvartest             "nl_records_ever_new" ## _num \
-            showDvar             { "1" } \
-            visible            1 \
-            decoration \
-        }
-#endif
-
-#ifndef STATBLOCK
-#define STATBLOCK(_origin, _dvar, _name, _color) \
-          itemDef \
-          { \
-               style            WINDOW_STYLE_FILLED \
-               rect                 0 0 80 60 0 0 \
-               origin            _origin \
-               backcolor             .05 .05 .05 .8 \
-            border            1 \
-            bordercolor        0.027 0.082 0.604 0.8 \
-               visible            1 \
-               decoration \
-          } \
-          itemDef \
-          { \
-            style             ITEM_TYPE_TEXT \
-             rect                 40 14 0 0 0 0  \
-            origin            _origin \
-            forecolor             1 1 1 1 \
-            textfont             UI_FONT_NORMAL \
-            text                 _name \
-            textscale             .2 \
-            textalign         ITEM_ALIGN_CENTER \
-             visible            1 \
-            decoration \
-          } \
-          itemDef \
-          { \
-            style             ITEM_TYPE_TEXT \
-             rect                 40 40 0 0 0 0  \
-            origin            _origin \
-            forecolor             _color \
-            textfont             UI_FONT_NORMAL \
-            dvar                 _dvar \
-            textscale             .4 \
-            textalign         ITEM_ALIGN_CENTER \
-             visible            1 \
-            decoration \
-          }
-#endif
+#include "ui_mp/nl_style.h"
 
 {
-    menuDef
-    {
-        name            "match_summary"
-        rect            0 0 640 480
-        focuscolor        GLOBAL_FOCUSED_COLOR
-        style            WINDOW_STYLE_EMPTY
-        blurWorld        5.0
-        onOpen
-        {
-            setDvar nl_records_ever_new0 "0";
-            setDvar nl_records_ever_new1 "0";
-            setDvar nl_records_ever_new2 "0";
-            setDvar nl_records_ever_new3 "0";
-            setDvar nl_records_ever_new4 "0";
-            setDvar nl_records_ever_new5 "0";
-            setDvar nl_records_ever_new6 "0";
-            setDvar nl_records_ever_new7 "0";
-            setDvar nl_records_ever_new8 "0";
-            setDvar nl_records_ever_new9 "0";
-            setDvar nl_progress_score "0";
-            setDvar nl_progress_exp "0";
-            setDvar nl_progress_tokens "0";
-            setDvar nl_progress_extra "";
-            hide vote1; 
-            hide vote2;
-            hide vote3;
-            hide vote4;
-        }
-        onESC { }
+	menuDef
+	{
+		name			"match_summary"
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			setDvar nl_records_ever_new0 "0";
+			setDvar nl_records_ever_new1 "0";
+			setDvar nl_records_ever_new2 "0";
+			setDvar nl_records_ever_new3 "0";
+			setDvar nl_records_ever_new4 "0";
+			setDvar nl_records_ever_new5 "0";
+			setDvar nl_records_ever_new6 "0";
+			setDvar nl_records_ever_new7 "0";
+			setDvar nl_records_ever_new8 "0";
+			setDvar nl_records_ever_new9 "0";
+			setDvar nl_progress_score "0";
+			setDvar nl_progress_exp "0";
+			setDvar nl_progress_tokens "0";
+			setDvar nl_progress_extra "";
+			hide vote1;
+			hide vote2;
+			hide vote3;
+			hide vote4;
+		}
+		onESC { }
 
-        // Gradient
-        itemDef
-        {
-            style               WINDOW_STYLE_FILLED
-            rect                0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-            backcolor           0 0 0 0.7975
-            visible             1
-            decoration
-        }
+		NL_BACKDROP
+		NL_HEADER("Match summary")
 
-        HEADER("Map best players", ORIGIN_RECORDSHEADER, "The best of the best")
-
-        // TABLE HEADERS
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 25 0 200 40
-            origin            ORIGIN_MAPRECORDS
-            forecolor             1 1 1 1
-            textfont             UI_FONT_NORMAL
-            text                 "Name"
-            textscale             .2
-            textaligny        11
-            textalignx        5
-            textalign         ITEM_ALIGN_LEFT
-            visible            1
-            decoration
-        }
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 170 0 200 40
-            origin            ORIGIN_MAPRECORDS
-            forecolor             1 1 1 1
-            textfont             UI_FONT_NORMAL
-            text                 "Score"
-            textscale             .2
-            textaligny        11
-            textalignx        5
-            textalign         ITEM_ALIGN_LEFT
-            visible            1
-            decoration
-        }
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 220 0 200 40
-            origin            ORIGIN_MAPRECORDS
-            forecolor             1 1 1 1
-            textfont             UI_FONT_NORMAL
-            text                 "Rank"
-            textscale             .2
-            textaligny        11
-            textalignx        5
-            textalign         ITEM_ALIGN_LEFT
-            visible            1
-            decoration
-        }
-        itemDef // HR
-        {
-            style            WINDOW_STYLE_FILLED
-            rect                 0 13 250 1
-            origin            ORIGIN_MAPRECORDS
-            backcolor             0.027 0.082 0.604 0.8
-            visible            1
-            decoration
-        }
-
-        // LINES
-        RECORDSLINE("0", 14, 0.2)
-        RECORDSLINE("1", 26, 0.3)
-        RECORDSLINE("2", 38, 0.2)
-        RECORDSLINE("3", 50, 0.3)
-        RECORDSLINE("4", 62, 0.2)
-        RECORDSLINE("5", 74, 0.3)
-        RECORDSLINE("6", 86, 0.2)
-        RECORDSLINE("7", 98, 0.3)
-        RECORDSLINE("8", 110, 0.2)
-        RECORDSLINE("9", 122, 0.3)
- 
-        itemDef
-        {
-            text           "1."
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            14 25 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            forecolor        1 0.902 0.494 1
-            decoration
-        }
-        itemDef
-        {
-            text           "2."
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            14 37 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            forecolor        0.647 0.663 0.706 1
-            decoration
-        }
-        itemDef
-        {
-            text           "3."
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            14 49 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            forecolor        0.431 0.302 0.145 1
-            decoration
-        }
-        itemDef
-        {
-            text           "4.\n5.\n6.\n7.\n8.\n9.\n10."
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            14 61 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            forecolor        1 1 1 1
-            decoration
-        }
-        itemDef
-        {
-            dvar            "nl_records_ever_names"
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            25 25 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            textalignx    5
-            textalign     ITEM_ALIGN_LEFT
-            decoration
-        }
-        itemDef
-        {
-            dvar            "nl_records_ever_scores"
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            170 25 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            textalignx    5
-            textalign     ITEM_ALIGN_LEFT
-            decoration
-        }
-        itemDef
-        {
-            dvar            "nl_records_ever_ranks"
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            220 25 200 40
-            origin        ORIGIN_MAPRECORDS
-            textscale        .25
-            textalignx    5
-            textalign     ITEM_ALIGN_LEFT
-            decoration
-        }
-
-        // Player progress
-        
-        HEADER("Progress", ORIGIN_STATS, "Check your statistics and road to next rank")
-
-        // Player EXP over exp Bar
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 2 24 200 40
-            origin            ORIGIN_STATS
-            forecolor             1 1 1 1
-            textfont             UI_FONT_NORMAL
-            dvar                 "blanco_player_info"
-            textscale             .22
-            textaligny        11
-            textalignx        5
-            textalign         ITEM_ALIGN_LEFT
-            visible            1
-            decoration
-        }
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 245 22 200 40
-            origin            ORIGIN_STATS
-            forecolor             1 0.902 0.494 0.6
-            textfont             UI_FONT_NORMAL
-            dvar                 "blanco_player_login"
-            textscale             .22
-            textaligny        11
-            textalignx        0
-            textalign         ITEM_ALIGN_RIGHT
-            visible            1
-            decoration
-        }
-
-        // Current and next rank
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 2 -2 0 0
-            origin            ORIGIN_EXP_BAR
-            forecolor             1 0.902 0.494 1
-            textfont             UI_FONT_NORMAL
-            dvar                 "blanco_rank"
-            textscale             .21
-            visible            1
-            decoration
-        }
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 258 -2 0 0
-            origin            ORIGIN_EXP_BAR
-            forecolor             1 0.902 0.494 1
-            textfont             UI_FONT_NORMAL
-            dvar                 "blanco_next_rank"
-            textalign         ITEM_ALIGN_RIGHT
-            textscale             .21
-            visible            1
-            decoration
-        }
-
-        itemDef
-        {
-            style             ITEM_TYPE_TEXT
-            rect                 258 18 0 0
-            origin            ORIGIN_EXP_BAR
-            forecolor             .9 .9 .9 1
-            textfont             UI_FONT_NORMAL
-            dvar                 "blanco_nextin"
-            textalign         ITEM_ALIGN_RIGHT
-            textscale             .21
-            visible            1
-            decoration
-        }
-
-        // EXP Bar
-        itemDef
-        {
-            style            WINDOW_STYLE_FILLED
-            rect                 0 0 260 8
-            origin            ORIGIN_EXP_BAR
-            backcolor             0.5 0.5 0.5 0.2
-            visible            1
-            decoration
-        }
-          
-        STATBLOCK(ORIGIN_STATBLOCK1, "nl_progress_score", "Score", 1 1 1 1)
-        STATBLOCK(ORIGIN_STATBLOCK2, "nl_progress_exp", "EXP", 1 0.902 0.494 1)
-        STATBLOCK(ORIGIN_STATBLOCK3, "nl_progress_tokens", "nL Tokens", .976 .624 .22 1)
-
-        itemDef
-        {
-            dvar            "nl_progress_extra"
-            type            ITEM_TYPE_TEXT
-            visible         1
-            rect            0 80 0 0
-            origin          ORIGIN_STATBLOCK1
-            textscale       .18
-            textalignx      5
-            textalign       ITEM_ALIGN_LEFT
-            decoration
-        }
-
-        PROGRESS(4, "1")
-        PROGRESS(8, "2")
-        PROGRESS(12, "3")
-        PROGRESS(16, "4")
-        PROGRESS(20, "5")
-        PROGRESS(24, "6")
-        PROGRESS(28, "7")
-        PROGRESS(32, "8")
-        PROGRESS(36, "9")
-        PROGRESS(40, "10")
-        PROGRESS(44, "11")
-        PROGRESS(48, "12")
-        PROGRESS(52, "13")
-        PROGRESS(56, "14")
-        PROGRESS(60, "15")
-        PROGRESS(64, "16")
-        PROGRESS(68, "17")
-        PROGRESS(72, "18")
-        PROGRESS(76, "19")
-        PROGRESS(80, "20")
-        PROGRESS(84, "21")
-        PROGRESS(88, "22")
-        PROGRESS(92, "23")
-        PROGRESS(96, "24")
-        PROGRESS(100, "25")
-        PROGRESS(104, "26")
-        PROGRESS(108, "27")
-        PROGRESS(112, "28")
-        PROGRESS(116, "29")
-        PROGRESS(120, "30")
-        PROGRESS(124, "31")
-        PROGRESS(128, "32")
-        PROGRESS(132, "33")
-        PROGRESS(136, "34")
-        PROGRESS(140, "35")
-        PROGRESS(144, "36")
-        PROGRESS(148, "37")
-        PROGRESS(152, "38")
-        PROGRESS(156, "39")
-        PROGRESS(160, "40")
-        PROGRESS(164, "41")
-        PROGRESS(168, "42")
-        PROGRESS(172, "43")
-        PROGRESS(176, "44")
-        PROGRESS(180, "45")
-        PROGRESS(184, "46")
-        PROGRESS(188, "47")
-        PROGRESS(192, "48")
-        PROGRESS(196, "49")
-        PROGRESS(200, "50")
-        PROGRESS(204, "51")
-        PROGRESS(208, "52")
-        PROGRESS(212, "53")
-        PROGRESS(216, "54")
-        PROGRESS(220, "55")
-        PROGRESS(224, "56")
-        PROGRESS(228, "57")
-        PROGRESS(232, "58")
-        PROGRESS(236, "59")
-        PROGRESS(240, "60")
-        PROGRESS(244, "61")
-        PROGRESS(248, "62")
-        PROGRESS(252, "63")
-        PROGRESS(256, "64")
-        PROGRESS(260, "65")
-
-        HEADER("Next map vote", ORIGIN_MAPVOTE, "Select which map you want to play next")
-        MAP(ORIGIN_VOTE1, "1")
-        MAP(ORIGIN_VOTE2, "2")
-        MAP(ORIGIN_VOTE3, "3")
-        MAP(ORIGIN_VOTE4, "4")
-
-        itemDef
-        {
-            dvar            "nl_mapvote_votes"
-            type            ITEM_TYPE_TEXT
-            visible        1
-            rect            70 62 0 0
-            origin        ORIGIN_VOTE1
-               forecolor        1 0.902 0.494 1
-            textscale        .5
-            textalign     ITEM_ALIGN_LEFT
-            decoration
-        }
-    }
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 100 0 0 0 0
+			dvar			"blanco_player_info"
+			textfont		NL_FONT_BOLD
+			textscale		.32
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			300 100 0 0 0 0
+			dvar			"blanco_player_login"
+			textfont		NL_FONT
+			textscale		.2
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 122 0 0 0 0
+			dvar			"blanco_rank"
+			textfont		NL_FONT
+			textscale		.22
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			300 122 0 0 0 0
+			dvar			"blanco_next_rank"
+			textfont		NL_FONT
+			textscale		.22
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_TEXT_DIM
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 260 6 0 0
+			backcolor		1 1 1 0.08
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 4 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 8 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "2" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 12 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "3" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 16 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "4" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 20 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "5" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 24 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "6" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 28 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "7" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 32 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "8" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 36 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "9" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 40 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "10" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 44 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "11" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 48 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "12" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 52 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "13" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 56 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "14" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 60 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "15" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 64 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "16" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 68 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "17" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 72 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "18" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 76 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "19" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 80 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "20" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 84 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "21" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 88 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "22" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 92 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "23" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 96 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "24" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 100 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "25" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 104 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "26" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 108 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "27" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 112 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "28" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 116 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "29" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 120 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "30" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 124 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "31" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 128 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "32" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 132 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "33" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 136 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "34" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 140 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "35" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 144 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "36" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 148 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "37" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 152 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "38" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 156 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "39" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 160 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "40" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 164 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "41" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 168 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "42" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 172 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "43" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 176 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "44" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 180 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "45" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 184 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "46" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 188 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "47" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 192 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "48" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 196 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "49" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 200 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "50" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 204 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "51" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 208 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "52" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 212 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "53" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 216 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "54" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 220 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "55" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 224 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "56" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 228 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "57" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 232 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "58" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 236 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "59" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 240 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "60" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 244 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "61" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 248 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "62" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 252 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "63" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 256 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "64" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 128 260 6 0 0
+			backcolor		NL_BLUE
+			dvartest		"blanco_xp_bar"
+			showDvar		{ "65" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 148 0 0 0 0
+			text			"EXP to next rank"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			dvartest		"blanco_nextin"
+			hideDvar		{ "" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			300 148 0 0 0 0
+			dvar			"blanco_nextin"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_TEXT_DIM
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 160 82 56 0 0
+			backcolor		NL_SURFACE
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			81 176 0 0 0 0
+			text			"Score"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			81 204 0 0 0 0
+			dvar			"nl_progress_score"
+			textfont		NL_FONT_BOLD
+			textscale		.3
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			129 160 82 56 0 0
+			backcolor		NL_SURFACE
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			170 176 0 0 0 0
+			text			"EXP"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			170 204 0 0 0 0
+			dvar			"nl_progress_exp"
+			textfont		NL_FONT_BOLD
+			textscale		.3
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		1 0.902 0.494 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			218 160 82 56 0 0
+			backcolor		NL_SURFACE
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			259 176 0 0 0 0
+			text			"nL Tokens"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			259 204 0 0 0 0
+			dvar			"nl_progress_tokens"
+			textfont		NL_FONT_BOLD
+			textscale		.3
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_GOLD
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 234 0 0 0 0
+			dvar			"nl_progress_extra"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_TEXT_DIM
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			340 100 0 0 0 0
+			text			"Best on this map"
+			textfont		NL_FONT_BOLD
+			textscale		.26
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			346 118 0 0 0 0
+			text			"#"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			364 118 0 0 0 0
+			text			"Player"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			510 118 0 0 0 0
+			text			"Score"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			562 118 0 0 0 0
+			text			"Rank"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 122 260 1 0 0
+			backcolor		NL_LINE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 124 260 12 0 0
+			backcolor		1 1 1 0.035
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 127 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new0"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 139 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new1"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 148 260 12 0 0
+			backcolor		1 1 1 0.035
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 151 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new2"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 163 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new3"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 172 260 12 0 0
+			backcolor		1 1 1 0.035
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 175 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new4"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 187 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new5"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 196 260 12 0 0
+			backcolor		1 1 1 0.035
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 199 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new6"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 211 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new7"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			340 220 260 12 0 0
+			backcolor		1 1 1 0.035
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 223 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new8"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			336 235 6 6 0 0
+			background		"nl_badge_new"
+			dvartest		"nl_records_ever_new9"
+			showDvar		{ "1" }
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			346 134 0 0 0 0
+			text			"1"
+			textfont		NL_FONT_BOLD
+			textscale		.25
+			forecolor		1 0.902 0.494 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			346 146 0 0 0 0
+			text			"2"
+			textfont		NL_FONT_BOLD
+			textscale		.25
+			forecolor		0.75 0.77 0.8 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			346 158 0 0 0 0
+			text			"3"
+			textfont		NL_FONT_BOLD
+			textscale		.25
+			forecolor		0.8 0.55 0.3 1
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			346 170 0 0 0 0
+			text			"4\n5\n6\n7\n8\n9\n10"
+			textfont		NL_FONT_BOLD
+			textscale		.25
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			364 134 0 0 0 0
+			dvar			"nl_records_ever_names"
+			textfont		NL_FONT
+			textscale		.25
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			510 134 0 0 0 0
+			dvar			"nl_records_ever_scores"
+			textfont		NL_FONT
+			textscale		.25
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			562 134 0 0 0 0
+			dvar			"nl_records_ever_ranks"
+			textfont		NL_FONT
+			textscale		.25
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 266 560 1 0 0
+			backcolor		NL_LINE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 290 0 0 0 0
+			text			"Vote for the next map"
+			textfont		NL_FONT_BOLD
+			textscale		.26
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			600 290 0 0 0 0
+			dvar			"nl_records_vote_left"
+			textfont		NL_FONT
+			textscale		.22
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_TEXT_DIM
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 302 128 96 0 0
+			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote1
+			style			WINDOW_STYLE_FILLED
+			rect			40 302 128 96 0 0
+			backcolor		NL_BLUE_SOFT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote1
+			style			WINDOW_STYLE_FILLED
+			rect			41 303 3 94 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			44 306 120 60 0 0
+			dvar			"nl_mapvote_image1"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			104 386 0 0 0 0
+			dvar			"nl_mapvote_name1"
+			textfont		NL_FONT
+			textscale		.21
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			rect			40 302 128 96 0 0
+			backcolor		NL_CLEAR
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor NL_LINE_HOVER;
+			}
+			mouseExit
+			{
+				setcolor bordercolor NL_LINE;
+			}
+			action
+			{
+				scriptMenuResponse "vote:1";
+				hide vote1;
+				hide vote2;
+				hide vote3;
+				hide vote4;
+				show vote1;
+				play "mouse_click";
+			}
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			184 302 128 96 0 0
+			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote2
+			style			WINDOW_STYLE_FILLED
+			rect			184 302 128 96 0 0
+			backcolor		NL_BLUE_SOFT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote2
+			style			WINDOW_STYLE_FILLED
+			rect			185 303 3 94 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			188 306 120 60 0 0
+			dvar			"nl_mapvote_image2"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			248 386 0 0 0 0
+			dvar			"nl_mapvote_name2"
+			textfont		NL_FONT
+			textscale		.21
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			rect			184 302 128 96 0 0
+			backcolor		NL_CLEAR
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor NL_LINE_HOVER;
+			}
+			mouseExit
+			{
+				setcolor bordercolor NL_LINE;
+			}
+			action
+			{
+				scriptMenuResponse "vote:2";
+				hide vote1;
+				hide vote2;
+				hide vote3;
+				hide vote4;
+				show vote2;
+				play "mouse_click";
+			}
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			328 302 128 96 0 0
+			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote3
+			style			WINDOW_STYLE_FILLED
+			rect			328 302 128 96 0 0
+			backcolor		NL_BLUE_SOFT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote3
+			style			WINDOW_STYLE_FILLED
+			rect			329 303 3 94 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			332 306 120 60 0 0
+			dvar			"nl_mapvote_image3"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			392 386 0 0 0 0
+			dvar			"nl_mapvote_name3"
+			textfont		NL_FONT
+			textscale		.21
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			rect			328 302 128 96 0 0
+			backcolor		NL_CLEAR
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor NL_LINE_HOVER;
+			}
+			mouseExit
+			{
+				setcolor bordercolor NL_LINE;
+			}
+			action
+			{
+				scriptMenuResponse "vote:3";
+				hide vote1;
+				hide vote2;
+				hide vote3;
+				hide vote4;
+				show vote3;
+				play "mouse_click";
+			}
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			472 302 128 96 0 0
+			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote4
+			style			WINDOW_STYLE_FILLED
+			rect			472 302 128 96 0 0
+			backcolor		NL_BLUE_SOFT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			vote4
+			style			WINDOW_STYLE_FILLED
+			rect			473 303 3 94 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			476 306 120 60 0 0
+			dvar			"nl_mapvote_image4"
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			536 386 0 0 0 0
+			dvar			"nl_mapvote_name4"
+			textfont		NL_FONT
+			textscale		.21
+			textalign		ITEM_ALIGN_CENTER
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_BUTTON
+			style			WINDOW_STYLE_FILLED
+			rect			472 302 128 96 0 0
+			backcolor		NL_CLEAR
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			mouseEnter
+			{
+				play "mouse_over";
+				setcolor bordercolor NL_LINE_HOVER;
+			}
+			mouseExit
+			{
+				setcolor bordercolor NL_LINE;
+			}
+			action
+			{
+				scriptMenuResponse "vote:4";
+				hide vote1;
+				hide vote2;
+				hide vote3;
+				hide vote4;
+				show vote4;
+				play "mouse_click";
+			}
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 418 0 0 0 0
+			text			"Click a map to vote. VIP votes count twice."
+			textfont		NL_FONT
+			textscale		.2
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+	}
 }

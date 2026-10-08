@@ -9,6 +9,7 @@
 #define ORIGIN_INPUT2			170 226
 #define ORIGIN_INPUT3			170 258
 #define ORIGIN_INPUT4			170 290
+#define ORIGIN_INPUT4_BOX		170 287
 #define ORIGIN_INPUT5			170 322
 #define ORIGIN_INFORMATION		170 404
 
@@ -17,12 +18,12 @@
 		{ \
 			group			_group \
 			type			ITEM_TYPE_TEXT \
-			rect			0 0 0 0 0 0 \
+			rect			0 4 96 18 0 0 \
 			origin			_origin \
 			text			_text \
 			textfont		NL_FONT \
 			textscale		.23 \
-			textaligny		17 \
+			textaligny		14 \
 			forecolor		NL_TEXT_DIM \
 			visible			1 \
 			decoration \
@@ -49,12 +50,13 @@
 		{ \
 			group			_group \
 			type			ITEM_TYPE_TEXT \
-			rect			104 0 0 0 0 0 \
+			rect			100 4 200 18 0 0 \
 			origin			_origin \
 			dvar			_dvar \
 			textfont		NL_FONT \
 			textscale		.24 \
-			textaligny		18 \
+			textalignx		4 \
+			textaligny		14 \
 			forecolor		NL_TEXT \
 			visible			1 \
 			decoration \
@@ -298,12 +300,12 @@
 		{
 			group			loginGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT1
 			dvar			"ui_login"
 			textaligny		14
 			maxChars		30
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT1
 			onFocus
 			{
 				play "mouse_over";
@@ -326,12 +328,12 @@
 			name			loginPass
 			group			loginGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT2
 			dvar			"ui_pass"
 			textaligny		9912
 			maxChars		30
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT2
 			onFocus
 			{
 				setDvar ui_pass "";
@@ -356,7 +358,7 @@
 			group			loginGroup
 			type			ITEM_TYPE_BUTTON
 			style			WINDOW_STYLE_FILLED
-			rect			100 5 16 16 0 0
+			rect			100 2 16 16 0 0
 			origin			ORIGIN_INPUT3
 			backcolor		0 0 0 0.55
 			border			1
@@ -381,7 +383,7 @@
 		{
 			group			loginGroup
 			style			WINDOW_STYLE_SHADER
-			rect			102 7 12 12 0 0
+			rect			103 6 12 12 0 0
 			origin			ORIGIN_INPUT3
 			background		"blanco_tick"
 			dvartest		"ui_remember"
@@ -400,12 +402,12 @@
 		{
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT1
 			dvar			"ui_login"
 			textaligny		14
 			maxChars		30
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT1
 			onFocus
 			{
 				play "mouse_over";
@@ -427,12 +429,12 @@
 		{
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT2
 			dvar			"ui_email"
 			textaligny		14
 			maxChars		50
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT2
 			onFocus
 			{
 				play "mouse_over";
@@ -452,7 +454,7 @@
 		{
 			group			registerGroup
 			type			ITEM_TYPE_TEXT
-			rect			100 29 0 0 0 0
+			rect			100 33 0 0 0 0
 			origin			ORIGIN_INPUT2
 			text			"Example: john.doe@example.com"
 			textfont		NL_FONT
@@ -467,7 +469,7 @@
 		{
 			group			registerGroup
 			type			ITEM_TYPE_TEXT
-			rect			100 29 0 0 0 0
+			rect			100 33 0 0 0 0
 			origin			ORIGIN_INPUT2
 			text			"Never shown to others. Used to reset your password."
 			textfont		NL_FONT
@@ -485,12 +487,12 @@
 			name			registerPass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT3
 			dvar			"ui_pass"
 			textaligny		9912
 			maxChars		30
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT3
 			onFocus
 			{
 				setDvar ui_pass "";
@@ -516,12 +518,12 @@
 			name			registerRepass
 			group			registerGroup
 			type			ITEM_TYPE_EDITFIELD
-			origin			ORIGIN_INPUT4
 			dvar			"ui_repass"
 			textaligny		9912
 			maxChars		30
 			maxpaintchars	30
 			FIELD_STYLE
+			origin			ORIGIN_INPUT4_BOX
 			onFocus
 			{
 				setDvar ui_repass "";
@@ -539,12 +541,12 @@
 				scriptMenuResponse "register";
 			}
 		}
-		FIELD_MASK(registerGroup, ORIGIN_INPUT4, "ui_display_repass")
+		FIELD_MASK(registerGroup, ORIGIN_INPUT4_BOX, "ui_display_repass")
 
 		SUBMIT("register_btn", "register_btn_hover", registerGroup, ORIGIN_INPUT5, "Create account", "register")
 		WARNING(registerGroup, 170 362)
 		FIELD_CLEAR(registerGroup, ORIGIN_INPUT3, ui_pass, registerPass)
-		FIELD_CLEAR(registerGroup, ORIGIN_INPUT4, ui_repass, registerRepass)
+		FIELD_CLEAR(registerGroup, ORIGIN_INPUT4_BOX, ui_repass, registerRepass)
 
 		/// HELP ///
 		itemDef
