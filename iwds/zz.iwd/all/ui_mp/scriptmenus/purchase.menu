@@ -248,12 +248,12 @@
 			name			_tab \
 			type			ITEM_TYPE_TEXT \
 			style			WINDOW_STYLE_SHADER \
-			rect			88 28 24 24 0 0 \
+			rect			83 28 37 24 0 0 \
 			origin			_origin \
-			background		"nl_hud_right_arrow" \
+			background		"nl_purchase_arrow_right" \
 			textscale		.17 \
 			textalign		ITEM_ALIGN_CENTER \
-			textalignx		12 \
+			textalignx		17 \
 			textaligny		3 \
 			text			_kills \
 			visible			1 \
@@ -268,13 +268,13 @@
 			name			_tab \
 			type			ITEM_TYPE_TEXT \
 			style			WINDOW_STYLE_SHADER \
-			rect			80 53 40 94 0 0 \
+			rect			83 53 37 94 0 0 \
 			origin			_origin \
-			background		"white" \
+			background		"nl_purchase_arrow_down_right" \
 			textscale		.17 \
 			textalign		ITEM_ALIGN_CENTER \
-			textalignx		40 \
-			textaligny		44 \
+			textalignx		25 \
+			textaligny		52 \
 			text			_kills \
 			visible			1 \
 			decoration \
