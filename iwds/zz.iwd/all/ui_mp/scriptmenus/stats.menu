@@ -1,311 +1,83 @@
-#include "ui/menudef.h"
+#include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
-#define TEXT_ON_BG_STYLE 	3	//
-#define ORIGIN_EXIT			60 415
-#define ORIGIN_MENU			50 70
-#define ORIGIN_PLYR			390 70
+#define ORIGIN_MINE				40 84
+#define ORIGIN_OTHER			328 84
 
-#define ORIGIN_GIVMON1        400 280
-#define ORIGIN_GIVMON2        400 290
-#define ORIGIN_GIVMON3        400 300
-#define ORIGIN_GIVMON4        400 310
-#define ORIGIN_INFO			400 415
+#define STATS_PANEL(_origin, _title, _dvar) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 272 236 0 0 \
+			origin			_origin \
+			backcolor		NL_SURFACE \
+			border			1 \
+			bordercolor		NL_LINE \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 0 0 0 0 \
+			origin			_origin \
+			text			_title \
+			textfont		NL_FONT_BOLD \
+			textscale		.26 \
+			textalignx		12 \
+			textaligny		20 \
+			forecolor		NL_TEXT \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 28 272 1 0 0 \
+			origin			_origin \
+			backcolor		NL_LINE \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 0 0 0 0 \
+			origin			_origin \
+			dvar			_dvar \
+			textfont		NL_FONT \
+			textscale		.25 \
+			textaligny		48 \
+			forecolor		NL_TEXT \
+			visible			1 \
+			decoration \
+		}
+
 {
 	menuDef
 	{
 		name			"stats"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
-          onOpen
-          {
-               hide left_arrow_hover;
-               hide right_arrow_hover;
-               show left_arrow;
-               show right_arrow;
-          }
 		onEsc
 		{
 			close stats;
 			open ingame;
 		}
 
-		// Gradient
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
+		NL_BACKDROP
+		NL_HEADER("Statistics")
 
-		/// TITLE ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 0 200 40
-			origin			ORIGIN_MENU
-			background		"nl_top_title"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 32 200 40
-			origin			ORIGIN_MENU
-			text			"^4MY STATS"
-			textscale		.45
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		100
-			visible			1
-			decoration
-		}
+		STATS_PANEL(ORIGIN_MINE, "You", "ui_stats1")
+		STATS_PANEL(ORIGIN_OTHER, "Other players", "ui_stats2")
 
-		/// BORDER ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 40 200 240
-			origin			ORIGIN_MENU
-			backcolor		0 0 0 .8
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 39 2 241
-			origin			ORIGIN_MENU
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			198 39 2 241
-			origin			ORIGIN_MENU
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 278 198 2
-			origin			ORIGIN_MENU
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
+		NL_BUTTON(328 330, 84, 42, "Previous player", scriptMenuResponse "left";)
+		NL_BUTTON(516 330, 84, 42, "Next player", scriptMenuResponse "right";)
 
-		/// TEXT ///
-		itemDef
-		{
-			name			"ids"
-			visible			1
-			rect			10 60 0 0
-			origin			ORIGIN_MENU
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			dvar			"ui_stats1"
-			decoration
-		}
-
-		/// TITLE ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 0 200 40
-			origin			ORIGIN_PLYR
-			background		"nl_top_title"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			0 32 200 40
-			origin			ORIGIN_PLYR
-			text			"^4PLAYERS STATS"
-			textscale		.45
-			textalign 		ITEM_ALIGN_CENTER
-			textalignx		100
-			visible			1
-			decoration
-		}
-
-		/// BORDER ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 40 200 240
-			origin			ORIGIN_PLYR
-			backcolor		0 0 0 .8
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 39 2 241
-			origin			ORIGIN_PLYR
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			198 39 2 241
-			origin			ORIGIN_PLYR
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 278 198 2
-			origin			ORIGIN_PLYR
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-
-		/// TEXT ///
-		itemDef
-		{
-			name			"ids"
-			visible			1
-			rect			10 60 0 0
-			origin			ORIGIN_PLYR
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.25
-			textaligny		8
-			dvar			"ui_stats2"
-			decoration
-		}
-
-		/// ARROWS ///
-		itemDef
-		{
-               name           "left_arrow"
-			visible		1
-			style		WINDOW_STYLE_SHADER
-			rect			78 255 20 20
-			origin		ORIGIN_PLYR
-			background	"nl_hud_left_arrow"
-		}
-		itemDef
-		{
-               name           "left_arrow_hover"
-			visible		1
-			style		WINDOW_STYLE_SHADER
-			rect			78 255 20 20
-			origin		ORIGIN_PLYR
-			background	"nl_left_arrow"
-		}
-
-		itemDef
-		{
-			visible			1
-			type			ITEM_TYPE_BUTTON
-			rect			78 255 20 20
-			origin		ORIGIN_PLYR
-               mouseEnter
-               {
-                    show left_arrow_hover;
-                    hide left_arrow;
-               }
-               mouseExit
-               {
-                    hide left_arrow_hover;
-                    show left_arrow;
-               }
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "left";
-			}
-		}
-
-
-		itemDef
-		{
-               name           "right_arrow"
-			visible		1
-			style		WINDOW_STYLE_SHADER
-			rect			104 255 20 20
-			origin		ORIGIN_PLYR
-			background	"nl_hud_right_arrow"
-		}
-		itemDef
-		{
-               name           "right_arrow_hover"
-			visible		1
-			style		WINDOW_STYLE_SHADER
-			rect			104 255 20 20
-			origin		ORIGIN_PLYR
-			background	"nl_right_arrow"
-		}
-
-		itemDef
-		{
-			visible			1
-			type			ITEM_TYPE_BUTTON
-			rect			104 255 20 20
-			origin		ORIGIN_PLYR
-               mouseEnter
-               {
-                    show right_arrow_hover;
-                    hide right_arrow;
-               }
-               mouseExit
-               {
-                    hide right_arrow_hover;
-                    show right_arrow;
-               }
-			action
-			{
-				play "mouse_click";
-				scriptMenuResponse "right";
-			}
-		}
-
-		/// EXIT ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3ESC ^7Back"
-			textaligny		20
-			visible			1
-			action
-			{
-				close stats;
-				open ingame;
-				play "mouse_click";
-			}
-		}
-
-		itemDef
-		{
-			dvar			"nl_kr_info"
-			type			ITEM_TYPE_TEXT
-			visible			1
-			rect			0 0 0 0
-			origin			ORIGIN_INFO
-			textscale		.25
-			decoration
-		}
+		NL_INFO(40 400)
+		NL_FOOTER
+		NL_HINT_ESC(40 432, "Back to game menu", 130, close stats; open ingame;)
 	}
 }

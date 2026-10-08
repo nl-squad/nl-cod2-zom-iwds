@@ -1,252 +1,164 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
-#define ORIGIN_CURRENTTITLE			90 120
-#define ORIGIN_IMAGE				420 160
-#define ORIGIN_TITLE1				60 72
-#define ORIGIN_TITLE2				200 72
-#define ORIGIN_TITLE3				340 72
-#define ORIGIN_TITLE4				480 72
+#define ORIGIN_IMAGE			340 104
+#define ORIGIN_CHOICE1 			40 94
+#define ORIGIN_CHOICE2 			40 112
+#define ORIGIN_CHOICE3 			40 130
+#define ORIGIN_CHOICE4 			40 148
+#define ORIGIN_CHOICE5 			40 166
+#define ORIGIN_CHOICE6 			40 184
+#define ORIGIN_CHOICE7 			40 202
+#define ORIGIN_CHOICE8 			40 220
+#define ORIGIN_CHOICE9 			40 238
+#define ORIGIN_CHOICE10			40 256
+#define ORIGIN_CHOICE11			40 274
+#define ORIGIN_CHOICE12			40 292
 
-#define ORIGIN_CHOICE1				150 100
-#define ORIGIN_CHOICE2				150 120
-#define ORIGIN_CHOICE3				150 140
-#define ORIGIN_CHOICE4				150 160
-#define ORIGIN_CHOICE5				150 180
-#define ORIGIN_CHOICE6				150 200
-#define ORIGIN_CHOICE7				150 220
-#define ORIGIN_CHOICE8				150 240
-#define ORIGIN_CHOICE9				150 260
-#define ORIGIN_CHOICE10				150 280
-#define ORIGIN_CHOICE11				150 300
-#define ORIGIN_CHOICE12				150 320
-#define ORIGIN_CHOICE13				150 340
-#define ORIGIN_CHOICE14				150 360
-#define ORIGIN_CHOICE15				150 380
-#define ORIGIN_EXIT					20 415
-#define ORIGIN_INFO					400 415
-
-
-#ifndef SKIN
-#define SKIN(_tab, _origin, _requirement, _name, _skin_id, _preview) \
-        itemDef \
-        { \
-            name			"tab" ## _tab \
-            visible		    0 \
-            rect			-10 0 128 24 0 0 \
-            forecolor		GLOBAL_UNFOCUSED_COLOR \
-            type			ITEM_TYPE_TEXT \
-            textfont		UI_FONT_NORMAL \
-            textscale		.25 \
-            textstyle		ITEM_TEXTSTYLE_SHADOWED \
-            textaligny	    20 \
-            textalign       ITEM_ALIGN_RIGHT \
-            origin		    _origin \
-            text			_requirement \
-        } \
-        itemDef \
-        { \
-            name			"tab" ## _tab \
-            visible			0 \
-            rect			0 0 128 24 0 0 \
-            forecolor		GLOBAL_UNFOCUSED_COLOR \
-            type			ITEM_TYPE_BUTTON \
-            textfont		UI_FONT_NORMAL \
-            textscale		.25 \
-            textstyle		ITEM_TEXTSTYLE_SHADOWED \
-            textaligny		20 \
-            textalign       ITEM_ALIGN_LEFT \
-            origin			_origin \
-            text			_name \
-            action \
-            { \
-                play "mouse_click"; \
-                scriptMenuResponse _skin_id; \
-            } \
-            mouseEnter \
-            { \
-                setdvar nl_weapon _preview; \
-            } \
-        }
-#endif
-
-#ifndef SKINTAB
-#define SKINTAB(_tab, _origin, _text) \
-        itemDef \
-        { \
-            name			"tab" ## _tab \
-            style			WINDOW_STYLE_SHADER \
-            rect			0 -5 100 20 0 0 \
-            origin			_origin \
-            background		"nl_zakladkas" \
-            visible			1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            style			WINDOW_STYLE_SHADER \
-            rect			0 -5 100 20 0 0 \
-            origin			_origin \
-            background		"nl_zakladka" \
-            visible			1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            type			ITEM_TYPE_TEXT \
-            rect			0 0 100 20 0 0 \
-            origin			_origin \
-            text			_text \
-            textscale		.23 \
-            textalign 		ITEM_ALIGN_CENTER \
-            textalignx		50 \
-            textaligny		12 \
-            visible			1 \
-            decoration \
-        } \
-        itemDef \
-        { \
-            type			ITEM_TYPE_BUTTON \
-            rect			0 0 100 20 0 0 \
-            origin			_origin \
-            visible			1 \
-            action \
-            { \
-                setdvar nl_weapon "nl_blank"; \
+#define SKIN(_tab, _hl, _origin, _requirement, _name, _skin_id, _preview) \
+		itemDef \
+		{ \
+			name			"hl" ## _hl \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 260 18 0 0 \
+			origin			_origin \
+			backcolor		NL_SURFACE_HOVER \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			"hl" ## _hl \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 3 18 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			"tab" ## _tab \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 260 18 0 0 \
+			origin			_origin \
+			text			_requirement \
+			textfont		NL_FONT \
+			textscale		.19 \
+			textalign		ITEM_ALIGN_RIGHT \
+			textalignx		252 \
+			textaligny		13 \
+			forecolor		NL_MUTED \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			"tab" ## _tab \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 260 18 0 0 \
+			origin			_origin \
+			text			_name \
+			textfont		NL_FONT \
+			textscale		.22 \
+			textalignx		12 \
+			textaligny		13 \
+			forecolor		NL_TEXT_DIM \
+			visible			0 \
+			action \
+			{ \
 				play "mouse_click"; \
-				hide tab1; \
-				hide tab2; \
-				hide tab3; \
-				hide tab4; \
-				hide tab5; \
-				hide tab6; \
-				hide tab7; \
-				show "tab" ## _tab; \
-            } \
-        }
-#endif
+				scriptMenuResponse _skin_id; \
+			} \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				show "hl" ## _hl; \
+				setdvar nl_weapon _preview; \
+			} \
+			mouseExit \
+			{ \
+				hide "hl" ## _hl; \
+			} \
+		}
 
 {
-    menuDef
-    {
-        name			"character_skin"
-        rect			0 0 640 480
-        focuscolor		GLOBAL_FOCUSED_COLOR
-        style			WINDOW_STYLE_EMPTY
-        blurWorld		5.0
-        onEsc
-        {
-            close character_skin;
-            open weapon_american;
-        }
-        onOpen
-        {
-            setdvar nl_weapon "nl_blank";
-            show tab1;
-            hide tab2;
-            hide tab3;
-            hide tab4;
-            hide tab5;
-            hide tab6;
-            hide tab7;
-        }
+	menuDef
+	{
+		name			"character_skin"
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			close character_skin;
+			open weapon_american;
+		}
+		onOpen
+		{
+			setdvar nl_weapon "nl_blank";
+			show tab1;
+			hide tab2;
+			hide tab3;
+			hide tab4;
+			show tabon1;
+			hide tabon2;
+			hide tabon3;
+			hide tabon4;
+		}
 
-        /// TLO ///
-        itemDef
-        {
-            style			WINDOW_STYLE_FILLED
-            rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-            backcolor		0 0 0 0.7975
-            visible			1
-            decoration
-        }
+		NL_BACKDROP
+		NL_TITLE("Skin")
 
-        itemDef
-        {
-            style			WINDOW_STYLE_FILLED
-            rect			-10 15 540 2
-            origin			ORIGIN_TITLE1
-            backcolor		0.027 0.082 0.604 1
-            visible			1
-            decoration
-        }
+		NL_RULE(100)
+		NL_TAB(40 78, 128, 64, "WW2 soldiers", "tabon1", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab1; show tabon1;)
+		NL_TAB(172 78, 128, 64, "nL old-school", "tabon2", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab2; show tabon2;)
+		NL_TAB(304 78, 128, 64, "CoD universe", "tabon3", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab3; show tabon3;)
+		NL_TAB(436 78, 128, 64, "Specials", "tabon4", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab4; show tabon4;)
 
-        itemDef
-        {
-            style 			WINDOW_STYLE_DVAR_SHADER
-            rect 			-30 -30 160 160
-            origin			ORIGIN_IMAGE
-            visible 		1
-            dvar 			nl_weapon
-            decoration
-        }
+		itemDef
+		{
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			0 0 200 200 0 0
+			origin			ORIGIN_IMAGE
+			dvar			nl_weapon
+			visible			1
+			decoration
+		}
 
-		SKINTAB("1", ORIGIN_TITLE1, "WW2 Soldiers")
-		SKINTAB("2", ORIGIN_TITLE2, "nL Old-School")
-		SKINTAB("3", ORIGIN_TITLE3, "CoD Universe")
-		SKINTAB("4", ORIGIN_TITLE4, "Specials")
-        
-        SKIN("1", ORIGIN_CHOICE2, "", "American Ranger ^9- Normandy", "6", "nl_char_american_normandy")
-		SKIN("1", ORIGIN_CHOICE3, "^9Rank 10 ^4|", "British Vanguard ^9- Normandy", "5", "nl_char_british_normandy")
-        SKIN("1", ORIGIN_CHOICE4, "^9Rank 20 ^4|", "German Stormtrooper ^9- Normandy", "3", "nl_char_german_normandy")
-        SKIN("1", ORIGIN_CHOICE5, "^9Rank 30 ^4|", "Russian Comrade (Padded) ^9- U.S.S.R.", "9", "nl_char_russian_padded")
-		SKIN("1", ORIGIN_CHOICE6, "^9Rank 40 ^4|", "British Vanguard ^9- North Africa", "4", "nl_char_british_africa")
-		SKIN("1", ORIGIN_CHOICE7, "^9Rank 50 ^4|", "German Stormtrooper ^9- North Africa", "2", "nl_char_german_africa")
-		SKIN("1", ORIGIN_CHOICE8, "^9Rank 60 ^4|", "German Stormtrooper (Winter Dark) ^9- U.S.S.R.", "8", "nl_char_german_winter_dark")
-        SKIN("1", ORIGIN_CHOICE9, "^9Rank 70 ^4|", "German Stormtrooper (Winter Light) ^9- U.S.S.R.", "10", "nl_char_german_winter_light")
-        SKIN("1", ORIGIN_CHOICE10, "^9Rank 80 ^4|", "Russian Comrade (Coat) ^9- U.S.S.R.", "7", "nl_char_russian_coat")
-        SKIN("1", ORIGIN_CHOICE11, "^9Rank 100 ^4|", "Russian Comrade (Female) ^9- U.S.S.R.", "11", "nl_char_russian_diana")
-		
-        SKIN("2", ORIGIN_CHOICE2, "^82 500 ^9nL Tokens ^4|", "American Ranger ^9- ^3Yellow", "31", "nl_char_nl_yellow")
-        SKIN("2", ORIGIN_CHOICE3, "^85 000 ^9nL Tokens ^4|", "British Vanguard ^9- ^4Blue", "32", "nl_char_nl_blue")
-        SKIN("2", ORIGIN_CHOICE4, "^87 500 ^9nL Tokens ^4|", "Russian Comrade ^9- ^2Green", "33", "nl_char_nl_green")
-        SKIN("2", ORIGIN_CHOICE5, "^810 000 ^9nL Tokens ^4|", "German Stormtrooper ^9- ^1Red", "34", "nl_char_nl_red")
-		
-		SKIN("3", ORIGIN_CHOICE2, "^3Nexus ^4|", "Cpt. Price", "24", "nl_char_british_normandy_price")
-		SKIN("3", ORIGIN_CHOICE4, "^83 500 ^9nL Tokens ^4|", "Ghillied Up Sniper", "19", "nl_char_sniper")
-		SKIN("3", ORIGIN_CHOICE5, "^85 000 ^9nL Tokens ^4|", "SAS", "15", "nl_char_sas")
-		SKIN("3", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens ^4|", "US Secret Service", "13", "nl_char_secret_service")
-		SKIN("3", ORIGIN_CHOICE7, "^810 000 ^9nL Tokens ^4|", "US Navy SEALs", "41", "nl_char_usa_seal")
+		SKIN("1", "1_2", ORIGIN_CHOICE2, "", "American Ranger ^9- Normandy", "6", "nl_char_american_normandy")
+		SKIN("1", "1_3", ORIGIN_CHOICE3, "^9Rank 10", "British Vanguard ^9- Normandy", "5", "nl_char_british_normandy")
+		SKIN("1", "1_4", ORIGIN_CHOICE4, "^9Rank 20", "German Stormtrooper ^9- Normandy", "3", "nl_char_german_normandy")
+		SKIN("1", "1_5", ORIGIN_CHOICE5, "^9Rank 30", "Russian Comrade (Padded) ^9- U.S.S.R.", "9", "nl_char_russian_padded")
+		SKIN("1", "1_6", ORIGIN_CHOICE6, "^9Rank 40", "British Vanguard ^9- North Africa", "4", "nl_char_british_africa")
+		SKIN("1", "1_7", ORIGIN_CHOICE7, "^9Rank 50", "German Stormtrooper ^9- North Africa", "2", "nl_char_german_africa")
+		SKIN("1", "1_8", ORIGIN_CHOICE8, "^9Rank 60", "German Stormtrooper (Winter Dark) ^9- U.S.S.R.", "8", "nl_char_german_winter_dark")
+		SKIN("1", "1_9", ORIGIN_CHOICE9, "^9Rank 70", "German Stormtrooper (Winter Light) ^9- U.S.S.R.", "10", "nl_char_german_winter_light")
+		SKIN("1", "1_10", ORIGIN_CHOICE10, "^9Rank 80", "Russian Comrade (Coat) ^9- U.S.S.R.", "7", "nl_char_russian_coat")
+		SKIN("1", "1_11", ORIGIN_CHOICE11, "^9Rank 100", "Russian Comrade (Female) ^9- U.S.S.R.", "11", "nl_char_russian_diana")
+		SKIN("2", "2_2", ORIGIN_CHOICE2, "^82 500 ^9nL Tokens", "American Ranger ^9- ^3Yellow", "31", "nl_char_nl_yellow")
+		SKIN("2", "2_3", ORIGIN_CHOICE3, "^85 000 ^9nL Tokens", "British Vanguard ^9- ^4Blue", "32", "nl_char_nl_blue")
+		SKIN("2", "2_4", ORIGIN_CHOICE4, "^87 500 ^9nL Tokens", "Russian Comrade ^9- ^2Green", "33", "nl_char_nl_green")
+		SKIN("2", "2_5", ORIGIN_CHOICE5, "^810 000 ^9nL Tokens", "German Stormtrooper ^9- ^1Red", "34", "nl_char_nl_red")
+		SKIN("3", "3_2", ORIGIN_CHOICE2, "^3Nexus", "Cpt. Price", "24", "nl_char_british_normandy_price")
+		SKIN("3", "3_4", ORIGIN_CHOICE4, "^83 500 ^9nL Tokens", "Ghillied Up Sniper", "19", "nl_char_sniper")
+		SKIN("3", "3_5", ORIGIN_CHOICE5, "^85 000 ^9nL Tokens", "SAS", "15", "nl_char_sas")
+		SKIN("3", "3_6", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens", "US Secret Service", "13", "nl_char_secret_service")
+		SKIN("3", "3_7", ORIGIN_CHOICE7, "^810 000 ^9nL Tokens", "US Navy SEALs", "41", "nl_char_usa_seal")
+		SKIN("4", "4_2", ORIGIN_CHOICE2, "^9Admin", "nL Officer", "35", "nl_char_nl_officer")
+		SKIN("4", "4_3", ORIGIN_CHOICE3, "^3Annual Achievements", "CryNet Nanosuit", "45", "nl_char_nano_suit")
+		SKIN("4", "4_4", ORIGIN_CHOICE4, "^8Patron", "Terminator", "12", "nl_char_terminator")
+		SKIN("4", "4_6", ORIGIN_CHOICE6, "^83 500 ^9nL Tokens", "Neo", "16", "nl_char_neo")
+		SKIN("4", "4_7", ORIGIN_CHOICE7, "^85 000 ^9nL Tokens", "Daryl Dixon", "22", "nl_char_daryl")
+		SKIN("4", "4_8", ORIGIN_CHOICE8, "^85 000 ^9nL Tokens", "UNSC Marine", "17", "nl_char_tobby")
+		SKIN("4", "4_9", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens", "Joker", "18", "nl_char_joker")
+		SKIN("4", "4_10", ORIGIN_CHOICE10, "^87 500 ^9nL Tokens", "Vodka", "14", "nl_char_vodka")
+		SKIN("4", "4_11", ORIGIN_CHOICE11, "^810 000 ^9nL Tokens", "Niko Bellic", "20", "nl_char_niko")
+		SKIN("4", "4_12", ORIGIN_CHOICE12, "^815 000 ^9nL Tokens", "Master Chief", "21", "nl_char_masterchief")
 
-		SKIN("4", ORIGIN_CHOICE2, "^9Admin^4|", "nL Officer", "35", "nl_char_nl_officer")
-		SKIN("4", ORIGIN_CHOICE3, "^3Annual Achievements^4|", "CryNet Nanosuit", "45", "nl_char_nano_suit")
-        SKIN("4", ORIGIN_CHOICE4, "^8Patron ^4|", "Terminator", "12", "nl_char_terminator")   
-		SKIN("4", ORIGIN_CHOICE6, "^83 500 ^9nL Tokens ^4|", "Neo", "16", "nl_char_neo")
-		SKIN("4", ORIGIN_CHOICE7, "^85 000 ^9nL Tokens ^4|", "Daryl Dixon", "22", "nl_char_daryl")	
-        SKIN("4", ORIGIN_CHOICE8, "^85 000 ^9nL Tokens ^4|", "UNSC Marine", "17", "nl_char_tobby")     
-		SKIN("4", ORIGIN_CHOICE9, "^87 500 ^9nL Tokens ^4|", "Joker", "18", "nl_char_joker")
-		SKIN("4", ORIGIN_CHOICE10, "^87 500 ^9nL Tokens ^4|", "Vodka", "14", "nl_char_vodka")
-		SKIN("4", ORIGIN_CHOICE11, "^810 000 ^9nL Tokens ^4|", "Niko Bellic", "20", "nl_char_niko")
-		SKIN("4", ORIGIN_CHOICE12, "^815 000 ^9nL Tokens ^4|", "Master Chief", "21", "nl_char_masterchief")
-		
-
-
-        /// EXIT ///
-        itemDef
-        {
-            type			ITEM_TYPE_BUTTON
-            rect			0 0 40 20
-            origin			ORIGIN_EXIT
-            textscale		.25
-            text			"^3ESC ^7Back"
-            textaligny		20
-            visible			1
-            action
-            {
-                close character_skin;
-                open weapon_american;
-                play "mouse_click";
-            }
-        }
-
-        itemDef
-        {
-            dvar			"nl_kr_info"
-            type			ITEM_TYPE_TEXT
-            visible			1
-            rect			0 0 0 0
-            origin			ORIGIN_INFO
-            textscale		.25
-            decoration
-        }
-    }
+		NL_INFO(40 400)
+		NL_FOOTER
+		NL_HINT_ESC(40 432, "Back to loadout", 120, close character_skin; open weapon_american;)
+	}
 }

@@ -1,4 +1,5 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
 #define WEAPON_TEXTSCALE .3
 
@@ -90,8 +91,9 @@
  			name "ammotex"
 			rect -55 -15 50 0
 			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont NL_FONT_BOLD
 			textscale .3
-			forecolor .98 .827 .58 1
+			forecolor NL_TEXT
 			ownerdraw CG_PLAYER_AMMO_VALUE
 			visible MENU_TRUE
 			decoration
@@ -366,9 +368,10 @@
 		{
 			visible			1
 			rect			320 80 0 0
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.35
+			forecolor		NL_TEXT
+			textfont		NL_FONT
+			textscale		.32
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textalign 		ITEM_ALIGN_CENTER
 			dvar			"ui_hud1"
 			decoration
@@ -378,9 +381,10 @@
 		{
 			visible			1
 			rect			320 80 0 0
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.35
+			forecolor		NL_TEXT
+			textfont		NL_FONT
+			textscale		.32
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textalign 		ITEM_ALIGN_CENTER
 			dvar			"ui_hud2"
 			decoration

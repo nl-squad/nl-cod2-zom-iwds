@@ -1,20 +1,22 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
+
 {
 	menuDef
 	{
 		name "connect"
-  		rect 0 0 640 480
+		rect 0 0 640 480 0 0
 		fullScreen MENU_FALSE
 		visible MENU_FALSE
 		backcolor 1 1 1 1
 		style WINDOW_STYLE_FILLED
- 		background "$levelBriefing"
-	    focusColor GLOBAL_FOCUSED_COLOR
+		background "$levelBriefing"
+		focusColor NL_FOCUS
 
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 4 4
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 			backcolor		0 0 0 1
 			visible			1
 			decoration
@@ -23,8 +25,17 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_SHADER
-			rect			0 60 640 320
+			rect			0 40 640 320 0 0
 			background		"nl_ls_zom"
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			280 392 80 2 0 0
+			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
@@ -33,10 +44,12 @@
 		{
 			dvar			"nolimits_ls"
 			type			ITEM_TYPE_TEXT
-			rect			0 420 640 480 4 4
-			textscale		.4
-			textalign 		ITEM_ALIGN_CENTER
+			rect			0 420 640 0 0 0
+			textfont		NL_FONT
+			textscale		.26
+			textalign		ITEM_ALIGN_CENTER
 			textalignx		320
+			forecolor		NL_TEXT_DIM
 			visible			1
 			decoration
 		}

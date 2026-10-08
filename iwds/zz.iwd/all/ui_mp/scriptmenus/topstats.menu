@@ -1,70 +1,59 @@
-#include "ui/menudef.h"
+#include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
-#define TEXT_ON_BG_STYLE 		3	//
-#define ORIGIN_MENU				170 45
-#define ORIGIN_EXIT				60 415
-#define ORIGIN_TITLE1			200 72
-#define ORIGIN_TITLE2			340 72
+#define ORIGIN_TABLE			40 104
 
-#ifndef TAB
-#define TAB(_origin, _name, _action) \
-		itemDef \
-		{ \
-			group			"tab_" ## _action \
-			style			WINDOW_STYLE_SHADER \
-			rect			0 -7 100 20 0 0 \
-			origin			_origin \
-			background		"nl_zakladkas" \
-			visible			0 \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			style			WINDOW_STYLE_SHADER \
-			rect			0 -7 100 20 0 0 \
-			origin			_origin \
-			background		"nl_zakladka" \
-			visible			1 \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			type			ITEM_TYPE_TEXT \
-			rect			0 -2 100 20 0 0 \
-			origin			_origin \
-			text			_name \
-			textscale		.23 \
-			textalign 		ITEM_ALIGN_CENTER \
-			textalignx		50 \
-			textaligny		12 \
-			visible			1 \
-			decoration \
-		} \
+// The underline follows ui_topstats_tab, which the script sets to the data it loaded
+#define TOPTAB(_origin, _text, _response) \
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 100 20 0 0 \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 96 22 0 0 \
 			origin			_origin \
+			backcolor		NL_CLEAR \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.24 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		48 \
+			textaligny		15 \
+			forecolor		NL_TEXT_DIM \
 			visible			1 \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				setcolor backcolor 1 1 1 0.06; \
+			} \
+			mouseExit \
+			{ \
+				setcolor backcolor NL_CLEAR; \
+			} \
 			action \
 			{ \
 				play "mouse_click"; \
-				scriptMenuResponse _action; \
-				hide tab_overall; \
-				hide tab_month; \
-				show "tab_" ## _action; \
+				setdvar ui_topstats_tab _response; \
+				scriptMenuResponse _response; \
 			} \
 		}
-#endif
+
+#define STRIPE(_y) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 _y 560 20 0 0 \
+			origin			ORIGIN_TABLE \
+			backcolor		1 1 1 0.035 \
+			visible			1 \
+			decoration \
+		}
 
 {
-\\ SETUP MENU \\
-
 	menuDef
 	{
 		name			"topstats"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onEsc
@@ -72,301 +61,130 @@
 			close topstats;
 			open ingame;
 		}
-		/// BACKGROUND ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 40 300 305
-			origin			ORIGIN_MENU
-			background		"nl_top_bg"
-			visible			1
-			decoration
-		}
-		/// TABLE ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 40 298 2
-			origin			ORIGIN_MENU
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 40 2 305
-			origin			ORIGIN_MENU
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			298 40 2 305
-			origin			ORIGIN_MENU
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			2 343 296 2
-			origin			ORIGIN_MENU
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
-		
-		TAB(ORIGIN_TITLE1, "Overall", "overall")
-		TAB(ORIGIN_TITLE2, "Month", "month")
 
-		/// POSITION ///
+		NL_BACKDROP
+		NL_TITLE("Top players")
+
+		NL_RULE(100)
+		TOPTAB(40 78, "This month", "month")
+		TOPTAB(140 78, "Overall", "overall")
 		itemDef
 		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 60 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale		     .2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text			     "1"
+			style			WINDOW_STYLE_FILLED
+			rect			40 99 96 2 0 0
+			backcolor		NL_BLUE
+			dvartest		"ui_topstats_tab"
+			hideDvar		{ "overall" }
 			visible			1
 			decoration
 		}
 		itemDef
 		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 80 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"2"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 100 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"3"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 120 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"4"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 140 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"5"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 160 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"6"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 180 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"7"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 200 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"8"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 220 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"9"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 240 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"10"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 260 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"11"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect		      	10 280 12 12
-			origin			ORIGIN_MENU
-			background		"nl_top_postion"
-			textscale	       	.2
-			textalign 		ITEM_ALIGN_CENTER
-			textaligny		10
-			textalignx	     6
-			text		      	"12"
+			style			WINDOW_STYLE_FILLED
+			rect			140 99 96 2 0 0
+			backcolor		NL_BLUE
+			dvartest		"ui_topstats_tab"
+			showDvar		{ "overall" }
 			visible			1
 			decoration
 		}
 
 		itemDef
 		{
-			name			"ui_topstats"
-			visible		1
-			rect			10 320 12 12
-			origin		ORIGIN_MENU
-			forecolor		1 1 1 1
-			textalign 	ITEM_ALIGN_CENTER
-			textscale		.2
-               textaligny	10
-			textalignx	6
+			type			ITEM_TYPE_TEXT
+			rect			8 14 0 0 0 0
+			origin			ORIGIN_TABLE
+			text			"Rank"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			56 14 0 0 0 0
+			origin			ORIGIN_TABLE
+			text			"Player"
+			textfont		NL_FONT
+			textscale		.19
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			552 14 0 0 0 0
+			origin			ORIGIN_TABLE
+			text			"Score"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+
+		STRIPE(20)
+		STRIPE(60)
+		STRIPE(100)
+		STRIPE(140)
+		STRIPE(180)
+		STRIPE(220)
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			8 34 0 0 0 0
+			origin			ORIGIN_TABLE
+			text			"1\n\n2\n\n3\n\n4\n\n5\n\n6\n\n7\n\n8\n\n9\n\n10\n\n11\n\n12"
+			textfont		NL_FONT_BOLD
+			textscale		.209
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			8 295 0 0 0 0
+			origin			ORIGIN_TABLE
 			dvar			"ui_topstats_mypos"
+			textfont		NL_FONT_BOLD
+			textscale		.209
+			forecolor		NL_BLUE
+			visible			1
 			decoration
 		}
-
-		/// TEXT ///
 		itemDef
 		{
-			name			"ui_topstats"
-			visible			1
-			rect			28 62 0 0
-			origin			ORIGIN_MENU
-			forecolor		1 1 1 1
-			textalign 		ITEM_ALIGN_LEFT
-			textscale		.209
-			textaligny		8
+			type			ITEM_TYPE_TEXT
+			rect			56 34 0 0 0 0
+			origin			ORIGIN_TABLE
 			dvar			"ui_topstats_1"
-			decoration
-		}
-		itemDef
-		{
-			name			"ui_topstats"
-			visible			1
-			rect			290 62 0 0
-			origin			ORIGIN_MENU
-			forecolor		1 1 1 1
-			textalign 		ITEM_ALIGN_RIGHT
+			textfont		NL_FONT
 			textscale		.209
-			textaligny		8
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			552 34 0 0 0 0
+			origin			ORIGIN_TABLE
 			dvar			"ui_topstats_2"
+			textfont		NL_FONT
+			textscale		.209
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_TEXT
+			visible			1
 			decoration
 		}
 
-		/// TITLE ///
-		itemDef
-		{
-			name			"topstats_header"
-			visible			1
-			rect			90 -15 0 0
-			origin			ORIGIN_MENU
-			forecolor		1 1 1 1
-			text			"^3TOP PLAYERS"
-			textfont		UI_FONT_NORMAL
-			textscale		.45
-			textstyle		ITEM_TEXTSTYLE_SHADOWED
-			textaligny		20
-		}
-
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3ESC ^7Back"
-			textaligny		20
-			visible			1
-			action
-			{
-				close topstats;
-				open ingame;
-				play "mouse_click";
-			}
-		}
+		NL_FOOTER
+		NL_HINT_ESC(40 432, "Back to game menu", 130, close topstats; open ingame;)
 	}
-
 }

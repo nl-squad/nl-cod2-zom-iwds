@@ -1,135 +1,109 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
-#define ORIGIN_TITLE		10 60
-#define ORIGIN_PAGE			10 430
-#define ORIGIN_CHOICE1		70 105
-#define ORIGIN_CHOICE2		70 130
-#define ORIGIN_CHOICE3		70 155
-#define ORIGIN_CHOICE4		70 180
-#define ORIGIN_CHOICE5		70 205
-#define ORIGIN_CHOICE6		70 230
-#define ORIGIN_CHOICE7		70 255
-#define ORIGIN_CHOICE8		70 280
-#define ORIGIN_CHOICE9		70 305
-#define ORIGIN_CHOICE10		70 330
-#define ORIGIN_SERVERINFO	320 100
-#define ORIGIN_VERSION		320 430
-#define ORIGIN_CHANGES		320 445
-#define ORIGIN_PATRON		320 460
+#define ORIGIN_CHOICE1			40 86
+#define ORIGIN_CHOICE2			40 108
+#define ORIGIN_CHOICE3			40 130
+#define ORIGIN_CHOICE5			40 164
+#define ORIGIN_CHOICE6			40 186
+#define ORIGIN_CHOICE7			40 208
+#define ORIGIN_CHOICE9			40 242
+#define ORIGIN_CHOICE10			40 264
+#define ORIGIN_PANEL			264 84
+#define ORIGIN_RECORDS			264 132
+#define ORIGIN_PLROPT2			264 292
+#define ORIGIN_PLROPT1			264 330
 
-#define ORIGIN_PLROPT1		340 130
-#define ORIGIN_PLROPT2		340 105
-#define ORIGIN_EVER_SCOREBOARD		340 190
-#define ORIGIN_MAPNAME		460 205
-
-#define ORIGIN_LOGO			256 120
-
-
-#ifndef INGAME_SELECTION
 #define INGAME_SELECTION(_text, _origin, _response, _num) \
 		itemDef \
 		{ \
 			name			"blanco_highlight_menu" ## _num \
-			style			WINDOW_STYLE_SHADER \
-			rect			2 0 120 16 0 0 \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 196 20 0 0 \
 			origin			_origin \
-			background		"nl_gradient" \
-			visible			1 \
+			backcolor		NL_SURFACE_HOVER \
+			visible			0 \
 			decoration \
 		} \
 		itemDef \
 		{ \
-			visible			1 \
-			rect			0 0 100 16 0 0 \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 3 20 0 0 \
 			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
 			type			ITEM_TYPE_BUTTON \
+			rect			0 0 196 20 0 0 \
+			origin			_origin \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.27 \
+			textalignx		12 \
+			textaligny		15 \
+			forecolor		NL_TEXT_DIM \
+			visible			1 \
 			mouseEnter \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
-				show "blanco_highlight_menu" ## _num; \
 				play "mouse_over"; \
+				show "blanco_highlight_menu" ## _num; \
 			} \
 			mouseExit \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
+				hide "blanco_highlight_menu" ## _num; \
 			} \
 			action \
 			{ \
 				play "mouse_click"; \
-            	scriptMenuResponse _response; \
+				scriptMenuResponse _response; \
 			} \
-		} \
-		itemDef \
-		{ \
-			visible			1 \
-			origin			_origin \
-			type			ITEM_TYPE_TEXT \
-			text			_text \
-			textaligny 		15 \
-			textalignx		7 \
-			textscale		.30 \
 		}
-#endif
 
-#ifndef INGAME_SELECTION_OPENSUBMENU
 #define INGAME_SELECTION_OPENSUBMENU(_text, _origin, _submenu, _num) \
 		itemDef \
 		{ \
 			name			"blanco_highlight_menu" ## _num \
-			style			WINDOW_STYLE_SHADER \
-			rect			2 0 120 16 0 0 \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 196 20 0 0 \
 			origin			_origin \
-			background		"nl_gradient" \
-			visible			1 \
+			backcolor		NL_SURFACE_HOVER \
+			visible			0 \
 			decoration \
 		} \
 		itemDef \
 		{ \
-			visible			1 \
-			rect			0 0 100 16 0 0 \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 3 20 0 0 \
 			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
 			type			ITEM_TYPE_BUTTON \
+			rect			0 0 196 20 0 0 \
+			origin			_origin \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.27 \
+			textalignx		12 \
+			textaligny		15 \
+			forecolor		NL_TEXT_DIM \
+			visible			1 \
 			mouseEnter \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
-				show "blanco_highlight_menu" ## _num; \
 				play "mouse_over"; \
+				show "blanco_highlight_menu" ## _num; \
 			} \
 			mouseExit \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
+				hide "blanco_highlight_menu" ## _num; \
 			} \
 			action \
 			{ \
@@ -137,99 +111,174 @@
 				close ingame; \
 				open _submenu; \
 			} \
-		} \
-		itemDef \
-		{ \
-			visible			1 \
-			origin			_origin \
-			type			ITEM_TYPE_TEXT \
-			text			_text \
-			textaligny 		15 \
-			textalignx		7 \
-			textscale		.30 \
 		}
-#endif
 
-#ifndef INGAME_SELECTION_HOVERSUBMENU
-#define INGAME_SELECTION_HOVERSUBMENU(_text, _origin, _submenu, _num, _action) \
+#define INGAME_SELECTION_HOVERSUBMENU(_text, _origin, _submenu, _num, _response) \
 		itemDef \
 		{ \
 			name			"blanco_highlight_menu" ## _num \
-			style			WINDOW_STYLE_SHADER \
-			rect			2 0 120 16 0 0 \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 196 20 0 0 \
 			origin			_origin \
-			background		"nl_gradient" \
-			visible			1 \
+			backcolor		NL_SURFACE_HOVER \
+			visible			0 \
 			decoration \
 		} \
 		itemDef \
 		{ \
-			visible			1 \
-			rect			0 0 100 16 0 0 \
+			name			"blanco_highlight_menu" ## _num \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 3 20 0 0 \
 			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
 			type			ITEM_TYPE_BUTTON \
+			rect			0 0 196 20 0 0 \
+			origin			_origin \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.27 \
+			textalignx		12 \
+			textaligny		15 \
+			forecolor		NL_TEXT_DIM \
+			visible			1 \
 			mouseEnter \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
-				show "blanco_highlight_menu" ## _num; \
 				play "mouse_over"; \
+				show "blanco_highlight_menu" ## _num; \
 				hide map; \
 				hide map_records; \
 				hide blanco_playeroption; \
 				show _submenu; \
-				scriptMenuResponse _action; \
+				scriptMenuResponse _response; \
 			} \
 			mouseExit \
 			{ \
-				hide blanco_highlight_menu1; \
-				hide blanco_highlight_menu2; \
-				hide blanco_highlight_menu3; \
-				hide blanco_highlight_menu4; \
-				hide blanco_highlight_menu5; \
-				hide blanco_highlight_menu6; \
-				hide blanco_highlight_menu7; \
-				hide blanco_highlight_menu8; \
-				hide blanco_highlight_menu9; \
+				hide "blanco_highlight_menu" ## _num; \
 				show map; \
 				show map_records; \
 				show blanco_playeroption; \
 				hide _submenu; \
 			} \
+		}
+
+#define RECORD_STRIPE(_y) \
+		itemDef \
+		{ \
+			name			"map_records" \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 _y 336 12 0 0 \
+			origin			ORIGIN_RECORDS \
+			backcolor		1 1 1 0.035 \
+			visible			1 \
+			decoration \
+		}
+
+#define RECORD_COLUMN(_x, _title, _dvar) \
+		itemDef \
+		{ \
+			name			"map_records" \
+			type			ITEM_TYPE_TEXT \
+			rect			_x 0 0 0 0 0 \
+			origin			ORIGIN_RECORDS \
+			text			_title \
+			textfont		NL_FONT \
+			textscale		.19 \
+			textaligny		10 \
+			forecolor		NL_MUTED \
+			visible			1 \
+			decoration \
 		} \
 		itemDef \
 		{ \
-			visible			1 \
-			origin			_origin \
+			name			"map_records" \
 			type			ITEM_TYPE_TEXT \
-			text			_text \
-			textaligny 		15 \
-			textalignx		7 \
-			textscale		.30 \
+			rect			_x 18 0 0 0 0 \
+			origin			ORIGIN_RECORDS \
+			dvar			_dvar \
+			textfont		NL_FONT \
+			textscale		.25 \
+			textaligny		10 \
+			forecolor		NL_TEXT \
+			visible			1 \
+			decoration \
 		}
-#endif
 
+#define PLAYER_OPTION(_origin, _dvar, _title, _desc, _response) \
+		itemDef \
+		{ \
+			name			blanco_playeroption \
+			style			WINDOW_STYLE_DVAR_SHADER \
+			rect			0 0 28 28 0 0 \
+			origin			_origin \
+			dvar			_dvar \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			blanco_playeroption \
+			type			ITEM_TYPE_TEXT \
+			rect			36 0 0 0 0 0 \
+			origin			_origin \
+			text			_title \
+			textfont		NL_FONT \
+			textscale		.24 \
+			textaligny		13 \
+			forecolor		NL_TEXT \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			blanco_playeroption \
+			type			ITEM_TYPE_TEXT \
+			rect			36 0 0 0 0 0 \
+			origin			_origin \
+			text			_desc \
+			textfont		NL_FONT \
+			textscale		.19 \
+			textaligny		25 \
+			forecolor		NL_MUTED \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			blanco_playeroption \
+			type			ITEM_TYPE_BUTTON \
+			rect			0 0 240 28 0 0 \
+			origin			_origin \
+			visible			1 \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _response; \
+			} \
+		}
 
 {
 	menuDef
 	{
 		name			"ingame"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onOpen
 		{
 			hide serverinfo;
-               show blanco_playeroption;
+			show blanco_playeroption;
 			show map;
+			show map_records;
 
 			hide blanco_highlight_menu1;
 			hide blanco_highlight_menu2;
@@ -247,47 +296,9 @@
 			close ingame;
 		}
 
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
-		///// INGAME OTHER //////
-
-		itemDef
-		{
-			origin			ORIGIN_VERSION
-			type			ITEM_TYPE_TEXT
-			text			"Version 6.0"
-			forecolor		0.694 0.514 0.188 1
-			textscale		.3
-			textalign		ITEM_ALIGN_CENTER
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			origin			ORIGIN_CHANGES
-			type			ITEM_TYPE_TEXT
-			text			"^9Check the Updates on Discord ^3#news ^9channel."
-			textscale		.22
-			textalign		ITEM_ALIGN_CENTER
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			origin			ORIGIN_PATRON
-			type			ITEM_TYPE_TEXT
-			text			"^9Become our ^8Patron^9, more info on Discord ^3#how-to-patron ^9channel."
-			textscale		.22
-			textalign		ITEM_ALIGN_CENTER
-			visible			1
-			decoration
-		}
+		NL_BACKDROP
+		NL_HEADER("^7nL^4.^7Zombies")
+		NL_NOTE("Version 6.0")
 
 		execKey "1" { play "mouse_click"; scriptMenuResponse "autoassign"; }
 		execKey "2" { play "mouse_click"; scriptMenuResponse "changeweapon"; }
@@ -303,492 +314,101 @@
 			}
 		}
 
-		/// TITLE ///
 		itemDef
 		{
-			visible			1
-			origin			ORIGIN_TITLE
 			type			ITEM_TYPE_TEXT
-			text			"^4`^9nL^4.^7Zombies^4*"
-			textscale		.45
-		}
-		/// PAGE ///
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_PAGE
-			type			ITEM_TYPE_TEXT
+			rect			40 404 0 0 0 0
 			dvar			nl_ingame_page
-			textscale		.30
+			textfont		NL_FONT
+			textscale		.24
+			forecolor		NL_TEXT
+			visible			1
+			decoration
 		}
 
-          // Player option 1
-          itemDef
-          {
-               name           blanco_playeroption
-               style 			WINDOW_STYLE_DVAR_SHADER
-               rect 			0 0 25 25
-               origin			ORIGIN_PLROPT1
-               visible 		1
-               dvar 			nl_plropt_enableHook
-               decoration
-          }
-		itemDef
-		{
-               name           blanco_playeroption
-			visible		1
-			rect			30 0 0 0
-			origin		ORIGIN_PLROPT1
-			type			ITEM_TYPE_TEXT
-			text			"HOOK"
-			textscale		.28
-			textalign		ITEM_ALIGN_LEFT
-			textaligny 	14
-			textalignx	0
-		}
-
-		itemDef
-		{
-               name           blanco_playeroption
-			visible		1
-			rect			30 0 0 0
-			origin		ORIGIN_PLROPT1
-			type			ITEM_TYPE_TEXT
-			text			"Allow players to ask you for a Hook"
-			forecolor		0.6 0.6 0.6 1
-			textscale		.18
-			textalign		ITEM_ALIGN_LEFT
-			textaligny 	23
-			textalignx	0
-		}
-		itemDef
-		{
-               name           blanco_playeroption
-			visible	     1
-			rect			0 0 150 25
-			origin		ORIGIN_PLROPT1
-			type			ITEM_TYPE_BUTTON
-               mouseEnter
-               {
-                    play "mouse_over";
-               }
-			action
-			{
-                    play "mouse_click";
-				scriptMenuResponse "plropt_enableHook";
-			}
-		}
-
-          // Player option 2
-          itemDef
-          {
-               name           blanco_playeroption
-               style 			WINDOW_STYLE_DVAR_SHADER
-               rect 			0 0 25 25
-               origin			ORIGIN_PLROPT2
-               visible 		1
-               dvar 			nl_plropt_enableExchange
-               decoration
-          }
-		itemDef
-		{
-               name           blanco_playeroption
-			visible		1
-			rect			30 0 0 0
-			origin		ORIGIN_PLROPT2
-			type			ITEM_TYPE_TEXT
-			text			"WEAPON EXCHANGE"
-			textscale		.28
-			textalign		ITEM_ALIGN_LEFT
-			textaligny 	14
-			textalignx	0
-		}
-		itemDef
-		{
-               name           blanco_playeroption
-			visible		1
-			rect			30 0 0 0
-			origin		ORIGIN_PLROPT2
-			type			ITEM_TYPE_TEXT
-			text			"Allow players to ask you for a Weapon Exchange"
-			forecolor		0.6 0.6 0.6 1
-			textscale		.18
-			textalign		ITEM_ALIGN_LEFT
-			textaligny 	23
-			textalignx	0
-		}
-		itemDef
-		{
-               name           blanco_playeroption
-			visible	     1
-			rect			0 0 150 25
-			origin		ORIGIN_PLROPT2
-			type			ITEM_TYPE_BUTTON
-               mouseEnter
-               {
-                    play "mouse_over";
-               }
-			action
-			{
-                    play "mouse_click";
-				scriptMenuResponse "plropt_enableExchange";
-			}
-		}
-
-          // EVER SCOREBOARD
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_SHADER
-               rect			     5 0 100 20
-               origin			ORIGIN_EVER_SCOREBOARD
-               background		"nl_zakladka"
-               text			     "TOP 10 Scores"
-               textscale		     .23
-               textalign 	     ITEM_ALIGN_CENTER
-               textalignx	     50
-               textaligny	     17
-               visible			1
-               decoration
-          }
-
-          // EVER SCOREBOARD BORDERS
-          itemDef // TOP
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     0 20 250 2
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.027 0.082 0.604 1
-               visible			1
-               decoration
-          }
-          itemDef // BOTTOM
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     0 156 250 2
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.027 0.082 0.604 1
-               visible			1
-               decoration
-          }
-          itemDef // LEFT
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     0 22 2 134
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.027 0.082 0.604 1
-               visible			1
-               decoration
-          }
-          itemDef // RIGHT
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     248 22 2 134
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.027 0.082 0.604 1
-               visible			1
-               decoration
-          }
-
-          // TABLE HEADERS
-          itemDef
-          {
-               name           "map_records"
-               style		     ITEM_TYPE_TEXT
-               rect			     12 22 200 40
-               origin			ORIGIN_EVER_SCOREBOARD
-               forecolor		     1 1 1 1
-               textfont		     UI_FONT_NORMAL
-               text			     "Name"
-               textscale		     .2
-               textaligny		11
-               textalignx		5
-               textalign 		ITEM_ALIGN_LEFT
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style		     ITEM_TYPE_TEXT
-               rect			     152 22 200 40
-               origin			ORIGIN_EVER_SCOREBOARD
-               forecolor		     1 1 1 1
-               textfont		     UI_FONT_NORMAL
-               text			     "Score"
-               textscale		     .2
-               textaligny		11
-               textalignx		5
-               textalign 		ITEM_ALIGN_LEFT
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style		     ITEM_TYPE_TEXT
-               rect			     202 22 200 40
-               origin			ORIGIN_EVER_SCOREBOARD
-               forecolor		     1 1 1 1
-               textfont		     UI_FONT_NORMAL
-               text			     "Rank"
-               textscale		     .2
-               textaligny		11
-               textalignx		5
-               textalign 		ITEM_ALIGN_LEFT
-               visible			1
-               decoration
-          }
-          itemDef // HR
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     0 35 250 1
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.027 0.082 0.604 0.8
-               visible			1
-               decoration
-          }
-
-          // LINES
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 36 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.2 0.2 0.2 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 48 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.3 0.3 0.3 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 60 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.2 0.2 0.2 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 72 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.3 0.3 0.3 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 84 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.2 0.2 0.2 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 96 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.3 0.3 0.3 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 108 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.2 0.2 0.2 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 120 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.3 0.3 0.3 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 132 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.2 0.2 0.2 0.2
-               visible			1
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               style			WINDOW_STYLE_FILLED
-               rect			     2 144 246 12
-               origin			ORIGIN_EVER_SCOREBOARD
-               backcolor		     0.3 0.3 0.3 0.2
-               visible			1
-               decoration
-          }
-
-          // Dvars
-          itemDef
-          {
-               name           "map_records"
-               dvar			"nl_records_ever_names"
-               type			ITEM_TYPE_TEXT
-               visible		1
-               rect			12 47 200 40
-               origin		ORIGIN_EVER_SCOREBOARD
-               textscale		.25
-               textalignx	5
-               textalign 	ITEM_ALIGN_LEFT
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               dvar			"nl_records_ever_scores"
-               type			ITEM_TYPE_TEXT
-               visible		1
-               rect			152 47 200 40
-               origin		ORIGIN_EVER_SCOREBOARD
-               textscale		.25
-               textalignx	5
-               textalign 	ITEM_ALIGN_LEFT
-               decoration
-          }
-          itemDef
-          {
-               name           "map_records"
-               dvar			"nl_records_ever_ranks"
-               type			ITEM_TYPE_TEXT
-               visible		1
-               rect			202 47 200 40
-               origin		ORIGIN_EVER_SCOREBOARD
-               textscale		.25
-               textalignx	5
-               textalign 	ITEM_ALIGN_LEFT
-               decoration
-          }
-
-
-		/// MAP INFO ///
+		/// MAP RECORDS ///
 		itemDef
 		{
 			name			"map"
-			visible			1
-			origin			ORIGIN_MAPNAME
 			type			ITEM_TYPE_TEXT
+			rect			0 0 0 0 0 0
+			origin			ORIGIN_PANEL
 			dvar			nl_ingame_mapname
-			textscale		.35
+			textfont		NL_FONT_BOLD
+			textscale		.32
+			textaligny		16
+			forecolor		NL_TEXT
+			visible			1
+			decoration
 		}
+		itemDef
+		{
+			name			"map_records"
+			type			ITEM_TYPE_TEXT
+			rect			0 0 0 0 0 0
+			origin			ORIGIN_PANEL
+			text			"Best scores on this map"
+			textfont		NL_FONT
+			textscale		.2
+			textaligny		32
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		RECORD_STRIPE(18)
+		RECORD_STRIPE(42)
+		RECORD_STRIPE(66)
+		RECORD_STRIPE(90)
+		RECORD_STRIPE(114)
+		itemDef
+		{
+			name			"map_records"
+			style			WINDOW_STYLE_FILLED
+			rect			0 14 336 1 0 0
+			origin			ORIGIN_RECORDS
+			backcolor		NL_LINE
+			visible			1
+			decoration
+		}
+		RECORD_COLUMN(8, "Player", "nl_records_ever_names")
+		RECORD_COLUMN(200, "Score", "nl_records_ever_scores")
+		RECORD_COLUMN(280, "Rank", "nl_records_ever_ranks")
 
-		/// SERVER INFO
-		itemDef
-		{
-			name			"serverinfo"
-			style			WINDOW_STYLE_SHADER
-			rect			0 0 300 20
-			origin			ORIGIN_SERVERINFO
-			background		"nl_top_title"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			"serverinfo"
-			visible			1
-			rect			0 0 300 20
-			origin			ORIGIN_SERVERINFO
-			forecolor		0.1 0.4 1 1
-			text			"INFORMATIONS"
-			textfont		UI_FONT_NORMAL
-			textscale		.45
-			textstyle		ITEM_TEXTSTYLE_SHADOWED
-			textalignx		150
-			textaligny		22
-			textalign		ITEM_ALIGN_CENTER
-		}
+		/// PLAYER OPTIONS ///
+		PLAYER_OPTION(ORIGIN_PLROPT2, nl_plropt_enableExchange, "Weapon exchange", "Players can ask you for a weapon exchange", "plropt_enableExchange")
+		PLAYER_OPTION(ORIGIN_PLROPT1, nl_plropt_enableHook, "Hook", "Players can ask you for a hook", "plropt_enableHook")
 
-		/// BORDER ///
+		/// SERVER INFO ///
 		itemDef
 		{
 			name			"serverinfo"
-			style			WINDOW_STYLE_FILLED
-			rect			0 20 300 240
-			origin			ORIGIN_SERVERINFO
-			backcolor		0 0 0 .8
+			type			ITEM_TYPE_TEXT
+			rect			0 0 0 0 0 0
+			origin			ORIGIN_PANEL
+			text			"Server info"
+			textfont		NL_FONT_BOLD
+			textscale		.32
+			textaligny		16
+			forecolor		NL_TEXT
 			visible			1
 			decoration
 		}
 		itemDef
 		{
 			name			"serverinfo"
-			style			WINDOW_STYLE_FILLED
-			rect			0 19 2 241
-			origin			ORIGIN_SERVERINFO
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			"serverinfo"
-			style			WINDOW_STYLE_FILLED
-			rect			298 19 2 241
-			origin			ORIGIN_SERVERINFO
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			"serverinfo"
-			style			WINDOW_STYLE_FILLED
-			rect			2 258 298 2
-			origin			ORIGIN_SERVERINFO
-			backcolor		.254 .25 .254 1
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			"serverinfo"
-			rect			5 25 0 0
-			origin			ORIGIN_SERVERINFO
+			type			ITEM_TYPE_TEXT
+			rect			0 0 0 0 0 0
+			origin			ORIGIN_PANEL
 			dvar			nl_serverinfo
-			textscale		.25
+			textfont		NL_FONT
+			textscale		.22
+			textaligny		40
+			forecolor		NL_TEXT
 			visible			1
 			decoration
 		}
 
-		INGAME_SELECTION("Loadout Menu", ORIGIN_CHOICE1, "changeweapon", "1")
+		INGAME_SELECTION("Loadout", ORIGIN_CHOICE1, "changeweapon", "1")
 		INGAME_SELECTION("Shop", ORIGIN_CHOICE2, "purchases", "2")
 		INGAME_SELECTION("Challenges", ORIGIN_CHOICE3, "challenges", "3")
 
@@ -798,7 +418,7 @@
 			dvartest		"nl_challeges_badge"
 			showDvar		{ "1" }
 			style			WINDOW_STYLE_SHADER
-			rect			-2 -2 8 8
+			rect			76 7 7 7 0 0
 			origin			ORIGIN_CHOICE3
 			background		"nl_badge_notification"
 			decoration
@@ -809,174 +429,100 @@
 			dvartest		"nl_challeges_badge"
 			showDvar		{ "2" }
 			style			WINDOW_STYLE_SHADER
-			rect			-2 -2 8 8
+			rect			76 7 7 7 0 0
 			origin			ORIGIN_CHOICE3
 			background		"nl_badge_new"
 			decoration
 		}
 
 		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
-		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
-		INGAME_SELECTION_HOVERSUBMENU("Server Info", ORIGIN_CHOICE7, "serverinfo", "6", "serverinfo")
-		
-		INGAME_SELECTION_OPENSUBMENU("Leave Game", ORIGIN_CHOICE9, "leavegame", "7")
-		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
+		INGAME_SELECTION("Top players", ORIGIN_CHOICE6, "topstats", "5")
+		INGAME_SELECTION_HOVERSUBMENU("Server info", ORIGIN_CHOICE7, "serverinfo", "6", "serverinfo")
+
+		INGAME_SELECTION_OPENSUBMENU("Leave game", ORIGIN_CHOICE9, "leavegame", "7")
+		INGAME_SELECTION_OPENSUBMENU("Main menu", ORIGIN_CHOICE10, "main", "8")
+
+		NL_FOOTER
+		NL_HINT_KEY(40 432, "nl_kbd_1", "Play", 60, scriptMenuResponse "autoassign";)
+		NL_HINT_KEY(110 432, "nl_kbd_2", "Loadout", 80, scriptMenuResponse "changeweapon";)
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			600 436 0 0 0 0
+			text			"^9Updates on Discord ^7#news\n^9Become a ^8Patron^9: Discord ^7#how-to-patron"
+			textfont		NL_FONT
+			textscale		.19
+			textalign		ITEM_ALIGN_RIGHT
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
 	}
-	
+
 	menuDef
 	{
 		name			"leavegame"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onOpen
 		{
-			hide blanco_highlight_menu1;
 			hide blanco_highlight_menu2;
+			hide blanco_highlight_menu3;
 		}
-		onEsc 
+		onEsc
 		{
 			close leavegame;
+		}
+
+		execKey "1" { play "mouse_click"; close leavegame; scriptMenuResponse "leave"; }
+		execKey "2" { play "mouse_click"; close leavegame; }
+
+		NL_BACKDROP
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			200 176 240 112 0 0
+			backcolor		NL_SURFACE_SOLID
+			border			1
+			bordercolor		NL_LINE
+			visible			1
+			decoration
 		}
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
-		
-		Leave Game?
-		
-		execKey "1" { play "mouse_click"; close leavegame; scriptMenuResponse "leave"; }
-		execKey "2" { play "mouse_click"; close leavegame; }
-		
-		/// 1 ///
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE1
-			type			ITEM_TYPE_TEXT
-			text			"Leave Game?"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		
-		/// 2 ///
-		itemDef
-		{
-			name			blanco_highlight_menu2
-			style			WINDOW_STYLE_SHADER
-			rect			2 2 120 16
-			origin			ORIGIN_CHOICE2
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE2
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu3;
-
-				show blanco_highlight_menu2;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-			}
-			action
-			{
-				play "mouse_click";
-				close leavegame;
-				scriptMenuResponse "leave";
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE2
-			type			ITEM_TYPE_TEXT
-			text			"Yes"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		
-		/// 3 ///
-		itemDef
-		{
-			name			blanco_highlight_menu3
-			style			WINDOW_STYLE_SHADER
-			rect			2 0 120 16
-			origin			ORIGIN_CHOICE3
-			background		"nl_gradient"
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			visible			1
-			rect			0 0 100 16
-			origin			ORIGIN_CHOICE3
-			type			ITEM_TYPE_BUTTON
-			mouseEnter
-			{
-				hide blanco_highlight_menu2;
-
-				show blanco_highlight_menu3;
-				play "mouse_over";
-			}
-			mouseExit
-			{
-				hide blanco_highlight_menu2;
-				hide blanco_highlight_menu3;
-			}
-			action
-			{
-				play "mouse_click";
-				close leavegame;
-			}
-		}
-		itemDef
-		{
-			visible			1
-			origin			ORIGIN_CHOICE3
-			type			ITEM_TYPE_TEXT
-			text			"No"
-			textaligny 		15
-			textalignx		7
-			textscale		.30
-		}
-		
-		/// LOGO ///
-		itemDef
-		{
-			style			WINDOW_STYLE_SHADER
-			rect			0 0 128 128
-			origin			ORIGIN_LOGO
-			background		"nl_logo_avard"
+			rect			201 177 3 110 0 0
+			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			-10 -5 0 0
-			origin			ORIGIN_LOGO
-			text			"^4` ^7NoLimits ^4~> ^9Zombies ^4*"
-			textscale		.30
+			rect			216 176 0 0 0 0
+			text			"Leave the game?"
+			textfont		NL_FONT_BOLD
+			textscale		.32
+			textaligny		28
+			forecolor		NL_TEXT
 			visible			1
 			decoration
 		}
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			216 176 0 0 0 0
+			text			"You will disconnect from the server."
+			textfont		NL_FONT
+			textscale		.21
+			textaligny		46
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		NL_HINT_KEY(216 248, "nl_kbd_1", "Leave", 80, close leavegame; scriptMenuResponse "leave";)
+		NL_HINT_KEY(316 248, "nl_kbd_2", "Stay", 80, close leavegame;)
 	}
 }

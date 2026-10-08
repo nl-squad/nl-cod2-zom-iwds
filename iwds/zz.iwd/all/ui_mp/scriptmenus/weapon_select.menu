@@ -1,64 +1,75 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
-#define ORIGIN_CURRENTTITLE			90 120
-#define ORIGIN_IMAGE				380 120
-#define ORIGIN_TITLE1				60 72
-#define ORIGIN_TITLE2				200 72
-#define ORIGIN_TITLE3				340 72
-#define ORIGIN_TITLE4				480 72
+#define ORIGIN_IMAGE			320 108
+#define ORIGIN_AMMO				320 256
+#define ORIGIN_CHOICE1 			40 94
+#define ORIGIN_CHOICE2 			40 112
+#define ORIGIN_CHOICE3 			40 130
+#define ORIGIN_CHOICE4 			40 148
+#define ORIGIN_CHOICE5 			40 166
+#define ORIGIN_CHOICE6 			40 184
+#define ORIGIN_CHOICE7 			40 202
+#define ORIGIN_CHOICE8 			40 220
+#define ORIGIN_CHOICE9 			40 238
+#define ORIGIN_CHOICE10			40 256
+#define ORIGIN_CHOICE11			40 274
+#define ORIGIN_CHOICE12			40 292
+#define ORIGIN_CHOICE13			40 310
+#define ORIGIN_CHOICE14			40 328
+#define ORIGIN_CHOICE15			40 346
+#define ORIGIN_CHOICE16			40 364
 
-#define ORIGIN_CHOICE1				160 100
-#define ORIGIN_CHOICE2				160 120
-#define ORIGIN_CHOICE3				160 140
-#define ORIGIN_CHOICE4				160 160
-#define ORIGIN_CHOICE5				160 180
-#define ORIGIN_CHOICE6				160 200
-#define ORIGIN_CHOICE7				160 220
-#define ORIGIN_CHOICE8				160 240
-#define ORIGIN_CHOICE9				160 260
-#define ORIGIN_CHOICE10				160 280
-#define ORIGIN_CHOICE11				160 300
-#define ORIGIN_CHOICE12				160 320
-#define ORIGIN_CHOICE13				160 340
-#define ORIGIN_CHOICE14				160 360
-#define ORIGIN_CHOICE15				160 380
-#define ORIGIN_CHOICE16				160 400
-#define ORIGIN_EXIT					20 415
-#define ORIGIN_AMMO					380 240
-#define ORIGIN_INFO					160 435
-#define ORIGIN_NLT					350 20
-
-#ifndef WP
-#define WP(_tab, _origin, _requirement, _name, _weapon, _ammo) \
+#define WP(_tab, _hl, _origin, _requirement, _name, _weapon, _ammo) \
 		itemDef \
 		{ \
-			group			"tab_" ## _tab \
-			visible			0 \
-			rect			-10 0 128 24 0 0 \
-			forecolor		GLOBAL_UNFOCUSED_COLOR \
-			type			ITEM_TYPE_TEXT \
-			textfont		UI_FONT_NORMAL \
-			textscale		.25 \
-			textstyle		ITEM_TEXTSTYLE_SHADOWED \
-			textaligny		20 \
-			textalign      	ITEM_ALIGN_RIGHT \
+			name			"hl" ## _hl \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 260 18 0 0 \
 			origin			_origin \
-			text			_requirement ## " ^4|" \
+			backcolor		NL_SURFACE_HOVER \
+			visible			0 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			name			"hl" ## _hl \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 3 18 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			0 \
+			decoration \
 		} \
 		itemDef \
 		{ \
 			group			"tab_" ## _tab \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 260 18 0 0 \
+			origin			_origin \
+			text			_requirement \
+			textfont		NL_FONT \
+			textscale		.19 \
+			textalign		ITEM_ALIGN_RIGHT \
+			textalignx		252 \
+			textaligny		13 \
+			forecolor		NL_MUTED \
 			visible			0 \
-			rect			0 0 128 24 0 0 \
-			forecolor		GLOBAL_UNFOCUSED_COLOR \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			group			"tab_" ## _tab \
 			type			ITEM_TYPE_BUTTON \
-			textfont		UI_FONT_NORMAL \
-			textscale		.25 \
-			textstyle		ITEM_TEXTSTYLE_SHADOWED \
-			textaligny		20 \
-			textalign      	ITEM_ALIGN_LEFT \
+			rect			0 0 260 18 0 0 \
 			origin			_origin \
 			text			_name \
+			textfont		NL_FONT \
+			textscale		.22 \
+			textalignx		12 \
+			textaligny		13 \
+			forecolor		NL_TEXT_DIM \
+			visible			0 \
 			action \
 			{ \
 				play "mouse_click"; \
@@ -66,7 +77,13 @@
 			} \
 			mouseEnter \
 			{ \
+				play "mouse_over"; \
+				show "hl" ## _hl; \
 				setdvar nl_weapon "nl_img_" ## _weapon; \
+			} \
+			mouseExit \
+			{ \
+				hide "hl" ## _hl; \
 			} \
 			onFocus \
 			{ \
@@ -77,92 +94,20 @@
 		itemDef \
 		{ \
 			group			"ammo_group" \
-			name 			_weapon ## "_ammo" \
+			name			_weapon ## "_ammo" \
 			origin			ORIGIN_AMMO \
 			text			_ammo \
-			textscale		.23 \
+			textfont		NL_FONT \
+			textscale		.18 \
+			forecolor		NL_TEXT \
 		}
-#endif
-
-#ifndef MORE
-#define MORE(_tab, _origin) \
-		itemDef \
-		{ \
-			group			"tab_" ## _tab \
-			visible			0 \
-			rect			0 0 128 24 0 0 \
-			forecolor		GLOBAL_UNFOCUSED_COLOR \
-			type			ITEM_TYPE_TEXT \
-			textfont		UI_FONT_NORMAL \
-			textscale		.2 \
-			textstyle		ITEM_TEXTSTYLE_SHADOWED \
-			textaligny		20 \
-			textalign      	ITEM_ALIGN_LEFT \
-			origin			_origin \
-			text			"^9more comming soon..." \
-		}
-#endif
-
-#ifndef WPTAB
-#define WPTAB(_tab, _origin, _name) \
-		itemDef \
-		{ \
-			group			"tab_" ## _tab \
-			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
-			origin			_origin \
-			background		"nl_zakladkas" \
-			visible			1 \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			style			WINDOW_STYLE_SHADER \
-			rect			0 -5 100 20 0 0 \
-			origin			_origin \
-			background		"nl_zakladka" \
-			visible			1 \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			type			ITEM_TYPE_TEXT \
-			rect			0 0 100 20 0 0 \
-			origin			_origin \
-			text			_name \
-			textscale		.23 \
-			textalign 		ITEM_ALIGN_CENTER \
-			textalignx		50 \
-			textaligny		12 \
-			visible			1 \
-			decoration \
-		} \
-		itemDef \
-		{ \
-			type			ITEM_TYPE_BUTTON \
-			rect			0 0 100 20 0 0 \
-			origin			_origin \
-			visible			1 \
-			action \
-			{ \
-				play "mouse_click"; \
-				setdvar nl_weapon "nl_blank"; \
-				hide tab_1; \
-				hide tab_2; \
-				hide tab_3; \
-				hide tab_4; \
-				hide ammo_group; \
-				show "tab_" ## _tab; \
-			} \
-		}
-#endif
 
 {
 	menuDef
 	{
 		name			"weapon_select"
-		rect			0 0 640 480
-		focuscolor		GLOBAL_FOCUSED_COLOR
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
 		style			WINDOW_STYLE_EMPTY
 		blurWorld		5.0
 		onEsc
@@ -177,160 +122,75 @@
 			hide tab_2;
 			hide tab_3;
 			hide tab_4;
+			show tabon_1;
+			hide tabon_2;
+			hide tabon_3;
+			hide tabon_4;
 			hide nlt_tooltip;
 			scriptMenuResponse "open";
 		}
 
-		/// TLO ///
-		itemDef
-		{
-			style			WINDOW_STYLE_FILLED
-			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-			backcolor		0 0 0 0.7975
-			visible			1
-			decoration
-		}
+		NL_BACKDROP
+		NL_TITLE("Primary weapon")
+		NL_TOKENS
+
+		NL_RULE(100)
+		NL_TAB(40 78, 128, 64, "Semi-auto & bolts", "tabon_1", setdvar nl_weapon "nl_blank"; hide tab_1; hide tab_2; hide tab_3; hide tab_4; hide ammo_group; hide tabon_1; hide tabon_2; hide tabon_3; hide tabon_4; show tab_1; show tabon_1;)
+		NL_TAB(172 78, 128, 64, "Assaults & SMGs", "tabon_2", setdvar nl_weapon "nl_blank"; hide tab_1; hide tab_2; hide tab_3; hide tab_4; hide ammo_group; hide tabon_1; hide tabon_2; hide tabon_3; hide tabon_4; show tab_2; show tabon_2;)
+		NL_TAB(304 78, 128, 64, "Shotguns & LMGs", "tabon_3", setdvar nl_weapon "nl_blank"; hide tab_1; hide tab_2; hide tab_3; hide tab_4; hide ammo_group; hide tabon_1; hide tabon_2; hide tabon_3; hide tabon_4; show tab_3; show tabon_3;)
+		NL_TAB(436 78, 128, 64, "Special", "tabon_4", setdvar nl_weapon "nl_blank"; hide tab_1; hide tab_2; hide tab_3; hide tab_4; hide ammo_group; hide tabon_1; hide tabon_2; hide tabon_3; hide tabon_4; show tab_4; show tabon_4;)
 
 		itemDef
 		{
-			style			WINDOW_STYLE_FILLED
-			rect			-10 15 540 2
-			origin			ORIGIN_TITLE1
-			backcolor		0.027 0.082 0.604 1
-			visible			1
-			decoration
-		}
-
-		itemDef
-		{
-			style 			WINDOW_STYLE_DVAR_SHADER
-			rect 			0 0 200 100
+			style			WINDOW_STYLE_DVAR_SHADER
+			rect			0 0 256 128 0 0
 			origin			ORIGIN_IMAGE
-			visible 		1
-			dvar 			nl_weapon
-			decoration
-		}
-
-		WPTAB("1", ORIGIN_TITLE1, "Semi-Auto & Bolts")
-		WPTAB("2", ORIGIN_TITLE2, "Assaults & SMGs")
-		WPTAB("3", ORIGIN_TITLE3, "Shotguns & LMGs")
-		WPTAB("4", ORIGIN_TITLE4, "Special Weapons")
-
-		WP("1", ORIGIN_CHOICE2, "^9Rank 10", "M1903 Springfield", "springfield", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120 \n \n^7Chamber Reload ^9Time^7: 0.6^9 s \n^7Empty Reload ^9Time^7: 4.8^9 s \n \n^7Max. ^9Damage^7: 300 ^9(<52 Meters) \n^7Min. ^9Damage^7: 150 ^9(>78 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("1", ORIGIN_CHOICE4, "^82 500 ^9nL Tokens", "G3", "g3", "^7Start ^9Ammo^7: 20^9/260 \n^7Max ^9Ammo^7: 20^9/320 \n \n^7Reload ^9Time^7: 2.5^9 s \n^7Empty Reload ^9Time^7: 3.6^9 s \n \n^7Max. ^9Damage^7: 80 ^9(<39 Meters) \n^7Min. ^9Damage^7: 60 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("1", ORIGIN_CHOICE5, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^7Start ^9Ammo^7: 10^9/90 \n^7Max ^9Ammo^7: 10^9/120 \n \n^7Reload ^9Time^7: 3.26^9 s \n^7Empty Reload ^9Time^7: 3.26^9 s \n \n^7Max. ^9Damage^7: 350 ^9(<52 Meters) \n^7Min. ^9Damage^7: 300 ^9(>78 Meters) \n \n^7Head ^9Multiplier^7: x4 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5  \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 90")
-		WP("1", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens", "FAL", "fal", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/390 \n \n^7Reload ^9Time^7: 1.7^9 s \n^7Empty Reload ^9Time^7: 1.7^9 s \n \n^7Max. ^9Damage^7: 120 ^9(<39 Meters) \n^7Min. ^9Damage^7: 90 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("1", ORIGIN_CHOICE7, "^812 500 ^9nL Tokens", "Mk 14 EBR", "m14ebr", "^7Start ^9Ammo^7: 15^9/165 \n^7Max ^9Ammo^7: 15^9/210 \n \n^7Reload ^9Time^7: 2.7^9 s \n^7Empty Reload ^9Time^7: 3.2^9 s \n \n^7Max. ^9Damage^7: 150 ^9(<39 Meters) \n^7Min. ^9Damage^7: 100 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("1", ORIGIN_CHOICE8, "^825 000 ^9nL Tokens", "Tesla Gun", "tesla", "^7Start ^9Ammo^7: 15^9/180 \n^7Max ^9Ammo^7: 15^9/225\n \n^7Reload ^9Time^7: 2.2^9 s \n^7Empty Reload ^9Time^7: 2.2^9 s \n \n^7Max. ^9Damage^7: 175 ^9(<39 Meters) \n^7Min. ^9Damage^7: 125 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x4 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("1", ORIGIN_CHOICE10, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^7Start ^9Ammo^7: 5^9/105 \n^7Max ^9Ammo^7: 5^9/125 \n \n^7Reload ^9Time^7: 2.5^9 s \n^7Empty Reload ^9Time^7: 2.5^9 s \n \n^7Max. ^9Damage^7: 700 ^9(<52 Meters) \n^7Min. ^9Damage^7: 350 ^9(>78 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		// WP("1", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "M1 Garand", "m1garand", "^7Start ^9Ammo^7: 8^9/256 \n^7Max ^9Ammo^7: 8^9/288 \n \n^7Reload ^9Time^7: 1.6^9 s \n^7Empty Reload ^9Time^7: 1.6^9 s \n \n^7Max. ^9Damage^7: 90 ^9(<39 Meters) \n^7Min. ^9Damage^7: 70 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		// WP("1", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "M200 Intervention", "intervention", "^7Start ^9Ammo^7: 5^9/80 \n^7Max ^9Ammo^7: 5^9/100 \n \n^7Reload ^9Time^7: 3.26^9 s \n^7Empty Reload ^9Time^7: 3.26^9 s \n \n^7Max. ^9Damage^7: 800 ^9(<52 Meters) \n^7Min. ^9Damage^7: 500 ^9(>78 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 90")
-		// WP("1", ORIGIN_CHOICE14, "^9Rank 999", "^3Golden ^7Scoped Kar98k", "kar98k_sniper", "^7Start ^9Ammo^7: 5^9/100 \n^7Max ^9Ammo^7: 5^9/120 \n \n^7Chamber Reload ^9Time^7: 0.6^9 s \n^7Empty Reload ^9Time^7: 4.8^9 s \n \n^7Max. ^9Damage^7: 800 ^9(<52 Meters) \n^7Min. ^9Damage^7: 500 ^9(>78 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("2", ORIGIN_CHOICE2, "^9Rank 1", "MP40", "mp40", "^7Start ^9Ammo^7: 32^9/320 \n^7Max ^9Ammo^7: 32^9/416 \n \n^7Reload ^9Time^7: 2.6^9 s \n^7Empty Reload ^9Time^7: 3.3^9 s \n \n^7Max. ^9Damage^7: 40 ^9(<26 Meters) \n^7Min. ^9Damage^7: 30 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x3 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 110")
-		WP("2", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "SIG SG 552", "sig", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/390 \n \n^7Reload ^9Time^7: 2^9 s \n^7Empty Reload ^9Time^7: 2.67^9 s \n \n^7Max. ^9Damage^7: 50 ^9(<26 Meters) \n^7Min. ^9Damage^7: 40 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("2", ORIGIN_CHOICE5, "^82 500 ^9nL Tokens", "AK-47", "ak47", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/390 \n \n^7Reload ^9Time^7: 2^9 s \n^7Empty Reload ^9Time^7: 2.67^9 s \n \n^7Max. ^9Damage^7: 55 ^9(<26 Meters) \n^7Min. ^9Damage^7: 45 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("2", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "P90", "p90", "^7Start ^9Ammo^7: 50^9/550 \n^7Max ^9Ammo^7: 50^9/750\n \n^7Reload ^9Time^7: 2.76^9 s \n^7Empty Reload ^9Time^7: 3.5^9 s \n \n^7Max. ^9Damage^7: 50 ^9(<20 Meters) \n^7Min. ^9Damage^7: 40 ^9(>32 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("2", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens", "SCAR-H", "scar", "^7Start ^9Ammo^7: 30^9/330 \n^7Max ^9Ammo^7: 30^9/420\n \n^7Reload ^9Time^7: 2.3^9 s \n^7Empty Reload ^9Time^7: 2.7^9 s \n \n^7Max. ^9Damage^7: 70 ^9(<26 Meters) \n^7Min. ^9Damage^7: 60 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x2.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("2", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens", "MP5", "mp5", "^7Start ^9Ammo^7: 30^9/330 \n^7Max ^9Ammo^7: 30^9/420\n \n^7Reload ^9Time^7: 1.9^9 s \n^7Empty Reload ^9Time^7: 3.5^9 s \n \n^7Max. ^9Damage^7: 80 ^9(<20 Meters) \n^7Min. ^9Damage^7: 55 ^9(>32 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("2", ORIGIN_CHOICE9, "^812 500 ^9nL Tokens", "M4", "m4", "^7Start ^9Ammo^7: 30^9/330 \n^7Max ^9Ammo^7: 30^9/420\n \n^7Reload ^9Time^7: 2.03^9 s \n^7Empty Reload ^9Time^7: 2.36^9 s \n \n^7Max. ^9Damage^7: 70 ^9(<26 Meters) \n^7Min. ^9Damage^7: 60 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x2.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("2", ORIGIN_CHOICE10, "^812 500 ^9nL Tokens", "G36C", "g36c", "^7Start ^9Ammo^7: 30^9/360 \n^7Max ^9Ammo^7: 30^9/450\n \n^7Reload ^9Time^7: 1.6^9 s \n^7Empty Reload ^9Time^7: 2^9 s \n \n^7Max. ^9Damage^7: 80 ^9(<26 Meters) \n^7Min. ^9Damage^7: 60 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("2", ORIGIN_CHOICE11, "^820 000 ^9nL Tokens", "FAMAS", "famas", "^7Start ^9Ammo^7: 25^9/325 \n^7Max ^9Ammo^7: 25^9/400\n \n^7Reload ^9Time^7: 2.5^9 s \n^7Empty Reload ^9Time^7: 3.2^9 s \n \n^7Max. ^9Damage^7: 90 ^9(<26 Meters) \n^7Min. ^9Damage^7: 60 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x5 \n^7Legs ^9Multiplier^7: x0.5\n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("2", ORIGIN_CHOICE12, "^825 000 ^9nL Tokens", "ACR", "acr", "^7Start ^9Ammo^7: 30^9/360 \n^7Max ^9Ammo^7: 30^9/450\n \n^7Reload ^9Time^7: 2.03^9 s \n^7Empty Reload ^9Time^7: 2.36^9 s \n \n^7Max. ^9Damage^7: 85 ^9(<26 Meters) \n^7Min. ^9Damage^7: 65 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("2", ORIGIN_CHOICE14, "^9Rank 300", "^3Golden ^7PPS-43", "pps", "^7Start ^9Ammo^7: 35^9/350 \n^7Max ^9Ammo^7: 35^9/455\n \n^7Reload ^9Time^7: 2^9 s \n^7Empty Reload ^9Time^7: 2^9 s \n \n^7Max. ^9Damage^7: 85 ^9(<20 Meters) \n^7Min. ^9Damage^7: 55 ^9(>32 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		// WP("2", ORIGIN_CHOICE15, "^9Rank 999", "MP44", "mp44", "^7Start ^9Ammo^7: 30^9/300 \n^7Max ^9Ammo^7: 30^9/390 \n \n^7Reload ^9Time^7: 2^9 s \n^7Empty Reload ^9Time^7: 2.67^9 s \n \n^7Max. ^9Damage^7: 45 ^9(<26 Meters) \n^7Min. ^9Damage^7: 35 ^9(>39 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		// WP("2", ORIGIN_CHOICE16, "^9Rank 999", "^3Golden ^7Thompson", "thompson", "^7Start ^9Ammo^7: 30^9/330 \n^7Max ^9Ammo^7: 30^9/420\n \n^7Reload ^9Time^7: 1.83^9 s \n^7Empty Reload ^9Time^7: 2.2^9 s \n \n^7Max. ^9Damage^7: 75 ^9(<20 Meters) \n^7Min. ^9Damage^7: 55 ^9(>32 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("3", ORIGIN_CHOICE2, "^9Rank 5", "M1918 BAR", "bar", "^7Start ^9Ammo^7: 20^9/280 \n^7Max ^9Ammo^7: 20^9/360\n \n^7Reload ^9Time^7: 3.63^9 s \n^7Empty Reload ^9Time^7: 3.8^9 s \n \n^7Max. ^9Damage^7: 75 ^9(<32 Meters) \n^7Min. ^9Damage^7: 55 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 800 \n \n^7Movement ^9Speed^7: 95")
-		WP("3", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Winchester 1200", "winchester", "^7Start ^9Ammo^7: 7^9/70 \n^7Max ^9Ammo^7: 7^9/98\n \n^7Chamber Reload ^9Time^7: 0.47^9 s \n^7Empty Reload ^9Time^7: 4.2^9 s \n \n^7Max. ^9Damage^7: 55 per bullet, 8-bullet spread ^9(<10 Meters) \n^7Min. ^9Damage^7: 35 per bullet, 8-bullet spread ^9(>16 Meters) \n \n^7Head ^9Multiplier^7: x2 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("3", ORIGIN_CHOICE5, "^82 500 ^9nL Tokens", "Model 1887", "model_1887", "^7Start ^9Ammo^7: 6^9/72 \n^7Max ^9Ammo^7: 6^9/90\n \n^7Chamber Reload ^9Time^7: 0.85^9 s \n^7Empty Reload ^9Time^7: 5.1^9 s \n \n^7Max. ^9Damage^7: 100 per bullet, 8-bullet spread ^9(<13 Meters) \n^7Min. ^9Damage^7: 50 per bullet, 8-bullet spread ^9(>20 Meters) \n \n^7Head ^9Multiplier^7: x2 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("3", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "DP-28", "dp28", "^7Start ^9Ammo^7: 47^9/470 \n^7Max ^9Ammo^7: 47^9/611\n \n^7Reload ^9Time^7: 3.4^9 s \n^7Empty Reload ^9Time^7: 4.5^9 s \n \n^7Max. ^9Damage^7: 65 ^9(<32 Meters) \n^7Min. ^9Damage^7: 55 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 600 \n \n^7Movement ^9Speed^7: 90")
-		WP("3", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens", "AA-12", "aa12", "^7Start ^9Ammo^7: 8^9/96 \n^7Max ^9Ammo^7: 8^9/120\n \n^7Reload ^9Time^7: 1.9^9 s \n^7Empty Reload ^9Time^7: 2.4^9 s \n \n^7Max. ^9Damage^7: 50 per bullet, 8-bullet spread ^9(<6.5 Meters) \n^7Min. ^9Damage^7: 30 per bullet, 8-bullet spread ^9(>13 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("3", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens", "RPK-74", "rpk", "^7Start ^9Ammo^7: 45^9/405 \n^7Max ^9Ammo^7: 45^9/540\n \n^7Reload ^9Time^7: 2.1^9 s \n^7Empty Reload ^9Time^7: 2.7^9 s \n \n^7Max. ^9Damage^7: 55 ^9(<32 Meters) \n^7Min. ^9Damage^7: 45 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x4 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 800 \n \n^7Movement ^9Speed^7: 95")
-		WP("3", ORIGIN_CHOICE9, "^812 500 ^9nL Tokens", "Double Barrel", "doublebarrel", "^7Start ^9Ammo^7: 2^9/70 \n^7Max ^9Ammo^7: 2^9/90\n \n^7Reload ^9Time^7: 2^9 s \n^7Empty Reload ^9Time^7: 2^9 s \n \n^7Max. ^9Damage^7: 100 per bullet, 8-bullet spread ^9(<13 Meters) \n^7Min. ^9Damage^7: 50 per bullet, 8-bullet spread ^9(>20 Meters) \n \n^7Head ^9Multiplier^7: x2 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("3", ORIGIN_CHOICE10, "^812 500 ^9nL Tokens", "RPD", "saw", "^7Start ^9Ammo^7: 200^9/400 \n^7Max ^9Ammo^7: 200^9/600\n \n^7Reload ^9Time^7: 6^9 s \n^7Empty Reload ^9Time^7: 6^9 s \n \n^7Max. ^9Damage^7: 55 ^9(<32 Meters) \n^7Min. ^9Damage^7: 45 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 800 \n \n^7Movement ^9Speed^7: 90")
-		WP("3", ORIGIN_CHOICE11, "^820 000 ^9nL Tokens", "M249 SAW", "saw", "^7Start ^9Ammo^7: 200^9/400 \n^7Max ^9Ammo^7: 200^9/600\n \n^7Reload ^9Time^7: 6^9 s \n^7Empty Reload ^9Time^7: 6^9 s \n \n^7Max. ^9Damage^7: 55 ^9(<32 Meters) \n^7Min. ^9Damage^7: 45 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 800 \n \n^7Movement ^9Speed^7: 90")
-		WP("3", ORIGIN_CHOICE12, "^825 000 ^9nL Tokens", "Striker", "striker", "^7Start ^9Ammo^7: 12^9/120 \n^7Max ^9Ammo^7: 12^9/168\n \n^7Chamber Reload ^9Time^7: 0.66^9 s \n^7Empty Reload ^9Time^7: 7.92^9 s \n \n^7Max. ^9Damage^7: 55 per bullet, 8-bullet spread ^9(<13 Meters) \n^7Min. ^9Damage^7: 35 per bullet, 8-bullet spread ^9(>20 Meters) \n \n^7Head ^9Multiplier^7: x2 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 100")
-		WP("3", ORIGIN_CHOICE14, "^9Rank 400", "^3Golden ^7Trench Gun", "shotgun", "^7Start ^9Ammo^7: 6^9/90 \n^7Max ^9Ammo^7: 6^9/108\n \n^7Chamber Reload ^9Time^7: 0.73^9 s \n^7Empty Reload ^9Time^7: 4.38^9 s \n \n^7Max. ^9Damage^7: 100 per bullet, 8-bullet spread ^9(<13 Meters) \n^7Min. ^9Damage^7: 50 per bullet, 8-bullet spread ^9(>20 Meters) \n \n^7Head ^9Multiplier^7: x2 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		// WP("3", ORIGIN_CHOICE12, "^9Rank 999", "^3Golden ^7Bren", "bren", "^7Start ^9Ammo^7: 30^9/330 \n^7Max ^9Ammo^7: 30^9/420\n \n^7Reload ^9Time^7: 3.7^9 s \n^7Empty Reload ^9Time^7: 3.7^9 s \n \n^7Max. ^9Damage^7: 100 ^9(<32 Meters) \n^7Min. ^9Damage^7: 80 ^9(>46 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 800 \n \n^7Movement ^9Speed^7: 90")
-		WP("4", ORIGIN_CHOICE2, "^9Only for ^8Patron", "Crossbow", "crossbow", "^7Start ^9Ammo^7: 1^9/75 \n^7Max ^9Ammo^7: 1^9/95\n \n^7Reload ^9Time^7: 1^9 s \n^7Empty Reload ^9Time^7: 1^9 s \n \n^7Max. ^9Damage^7: 700 ^9(<39 Meters) \n^7Min. ^9Damage^7: 400 ^9(>52 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Upper Torso ^9Multiplier^7: x1.5 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("4", ORIGIN_CHOICE4, "^9Only for ^3Nexus", "Raygun", "raygun", "^7Start ^9Ammo^7: 20^9/60 \n^7Max ^9Ammo^7: 20^9/100\n \n^7Reload ^9Time^7: 3^9 s \n^7Empty Reload ^9Time^7: 3^9 s \n \n^7Max. ^9Damage^7: 300 ^9(<20 Meters) \n^7Min. ^9Damage^7: 200 ^9(>32 Meters) \n \n^7Head ^9Multiplier^7: x3 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 500 \n \n^7Movement ^9Speed^7: 105")
-		WP("4", ORIGIN_CHOICE5, "^9Only from ^3MysteryBox", "Wunderwaffe", "wunderwaffe", "^7Start ^9Ammo^7: 3^9/30 \n^7Max ^9Ammo^7: 3^9/42\n \n^7Reload ^9Time^7: 4.2^9 s \n^7Empty Reload ^9Time^7: 4.2^9 s \n \n^7Max. ^9Damage^7: 3000 ^9(<50 Meters) \n^7Min. ^9Damage^7: 3000 ^9(>50 Meters) \n \n^7Head ^9Multiplier^7: x2 \n^7Legs ^9Multiplier^7: x0.5 \n \n^7Bash ^9Damage^7: 600 \n \n^7Movement ^9Speed^7: 95")
-		
-
-		/// EXIT ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3ESC ^7Back"
-			textaligny		20
-			visible			1
-			action
-			{
-				close weapon_select;
-				open weapon_american;
-				play "mouse_click";
-			}
-		}
-
-		itemDef
-		{
-			type			ITEM_TYPE_TEXT
-			rect			-3 0 130 18
-			origin			ORIGIN_NLT
-			textscale		.23
-			text			"nL Tokens balance:"
-			textaligny		15
-			textalignx		3
-			visible			1
-			decoration
-			mouseEnter
-			{
-				show nlt_tooltip;
-			}
-			mouseExit
-			{
-				hide nlt_tooltip;
-			}
-		}
-
-		itemDef
-		{
-			dvar			"nlt"
-			type			ITEM_TYPE_TEXT
-			forecolor		.976 .624 .22 1
-			rect			0 0 0 0
-			origin			ORIGIN_NLT
-			textscale		.24
-			textaligny		15
-			textalignx		85
-			visible			1
-			decoration
-		}
-		
-		itemDef
-		{
-			name			"nlt_tooltip"
-			type			ITEM_TYPE_TEXT
-			rect			0 30 0 0
-			origin			ORIGIN_NLT
-			textscale		.23
-			text			"You can earn ^8nL Tokens ^7for your ^7Activity, \nChallenges, and Special Events."
+			dvar			nl_weapon
 			visible			1
 			decoration
 		}
 
-		itemDef
-		{
-			dvar			"nl_kr_info"
-			type			ITEM_TYPE_TEXT
-			visible			1
-			rect			0 0 0 0
-			origin			ORIGIN_INFO
-			textscale		.25
-			decoration
-		}
+		WP("1", "1_2", ORIGIN_CHOICE2, "^9Rank 10", "M1903 Springfield", "springfield", "^9Start ammo: ^75^9/100\n^9Max ammo: ^75^9/120\n\n^9Chamber reload time: ^70.6^9 s\n^9Empty reload time: ^74.8^9 s\n\n^9Max. damage: ^7300 ^9(<52 Meters)\n^9Min. damage: ^7150 ^9(>78 Meters)\n\n^9Head multiplier: ^7x2\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("1", "1_4", ORIGIN_CHOICE4, "^82 500 ^9nL Tokens", "G3", "g3", "^9Start ammo: ^720^9/260\n^9Max ammo: ^720^9/320\n\n^9Reload time: ^72.5^9 s\n^9Empty reload time: ^73.6^9 s\n\n^9Max. damage: ^780 ^9(<39 Meters)\n^9Min. damage: ^760 ^9(>52 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("1", "1_5", ORIGIN_CHOICE5, "^85 000 ^9nL Tokens", "Barrett M82", "barrett", "^9Start ammo: ^710^9/90\n^9Max ammo: ^710^9/120\n\n^9Reload time: ^73.26^9 s\n^9Empty reload time: ^73.26^9 s\n\n^9Max. damage: ^7350 ^9(<52 Meters)\n^9Min. damage: ^7300 ^9(>78 Meters)\n\n^9Head multiplier: ^7x4\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^790")
+		WP("1", "1_6", ORIGIN_CHOICE6, "^87 500 ^9nL Tokens", "FAL", "fal", "^9Start ammo: ^730^9/300\n^9Max ammo: ^730^9/390\n\n^9Reload time: ^71.7^9 s\n^9Empty reload time: ^71.7^9 s\n\n^9Max. damage: ^7120 ^9(<39 Meters)\n^9Min. damage: ^790 ^9(>52 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("1", "1_7", ORIGIN_CHOICE7, "^812 500 ^9nL Tokens", "Mk 14 EBR", "m14ebr", "^9Start ammo: ^715^9/165\n^9Max ammo: ^715^9/210\n\n^9Reload time: ^72.7^9 s\n^9Empty reload time: ^73.2^9 s\n\n^9Max. damage: ^7150 ^9(<39 Meters)\n^9Min. damage: ^7100 ^9(>52 Meters)\n\n^9Head multiplier: ^7x3\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("1", "1_8", ORIGIN_CHOICE8, "^825 000 ^9nL Tokens", "Tesla Gun", "tesla", "^9Start ammo: ^715^9/180\n^9Max ammo: ^715^9/225\n\n^9Reload time: ^72.2^9 s\n^9Empty reload time: ^72.2^9 s\n\n^9Max. damage: ^7175 ^9(<39 Meters)\n^9Min. damage: ^7125 ^9(>52 Meters)\n\n^9Head multiplier: ^7x4\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("1", "1_10", ORIGIN_CHOICE10, "^9Rank 200", "^3Golden ^7Kar98k", "kar98k", "^9Start ammo: ^75^9/105\n^9Max ammo: ^75^9/125\n\n^9Reload time: ^72.5^9 s\n^9Empty reload time: ^72.5^9 s\n\n^9Max. damage: ^7700 ^9(<52 Meters)\n^9Min. damage: ^7350 ^9(>78 Meters)\n\n^9Head multiplier: ^7x3\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		// WP("1", "1_4", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "M1 Garand", "m1garand", "^9Start ammo: ^78^9/256\n^9Max ammo: ^78^9/288\n\n^9Reload time: ^71.6^9 s\n^9Empty reload time: ^71.6^9 s\n\n^9Max. damage: ^790 ^9(<39 Meters)\n^9Min. damage: ^770 ^9(>52 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		// WP("1", "1_6", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "M200 Intervention", "intervention", "^9Start ammo: ^75^9/80\n^9Max ammo: ^75^9/100\n\n^9Reload time: ^73.26^9 s\n^9Empty reload time: ^73.26^9 s\n\n^9Max. damage: ^7800 ^9(<52 Meters)\n^9Min. damage: ^7500 ^9(>78 Meters)\n\n^9Head multiplier: ^7x3\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^790")
+		// WP("1", "1_14", ORIGIN_CHOICE14, "^9Rank 999", "^3Golden ^7Scoped Kar98k", "kar98k_sniper", "^9Start ammo: ^75^9/100\n^9Max ammo: ^75^9/120\n\n^9Chamber reload time: ^70.6^9 s\n^9Empty reload time: ^74.8^9 s\n\n^9Max. damage: ^7800 ^9(<52 Meters)\n^9Min. damage: ^7500 ^9(>78 Meters)\n\n^9Head multiplier: ^7x3\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("2", "2_2", ORIGIN_CHOICE2, "^9Rank 1", "MP40", "mp40", "^9Start ammo: ^732^9/320\n^9Max ammo: ^732^9/416\n\n^9Reload time: ^72.6^9 s\n^9Empty reload time: ^73.3^9 s\n\n^9Max. damage: ^740 ^9(<26 Meters)\n^9Min. damage: ^730 ^9(>39 Meters)\n\n^9Head multiplier: ^7x3\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7110")
+		WP("2", "2_4", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "SIG SG 552", "sig", "^9Start ammo: ^730^9/300\n^9Max ammo: ^730^9/390\n\n^9Reload time: ^72^9 s\n^9Empty reload time: ^72.67^9 s\n\n^9Max. damage: ^750 ^9(<26 Meters)\n^9Min. damage: ^740 ^9(>39 Meters)\n\n^9Head multiplier: ^7x5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("2", "2_5", ORIGIN_CHOICE5, "^82 500 ^9nL Tokens", "AK-47", "ak47", "^9Start ammo: ^730^9/300\n^9Max ammo: ^730^9/390\n\n^9Reload time: ^72^9 s\n^9Empty reload time: ^72.67^9 s\n\n^9Max. damage: ^755 ^9(<26 Meters)\n^9Min. damage: ^745 ^9(>39 Meters)\n\n^9Head multiplier: ^7x5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("2", "2_6", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "P90", "p90", "^9Start ammo: ^750^9/550\n^9Max ammo: ^750^9/750\n\n^9Reload time: ^72.76^9 s\n^9Empty reload time: ^73.5^9 s\n\n^9Max. damage: ^750 ^9(<20 Meters)\n^9Min. damage: ^740 ^9(>32 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("2", "2_7", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens", "SCAR-H", "scar", "^9Start ammo: ^730^9/330\n^9Max ammo: ^730^9/420\n\n^9Reload time: ^72.3^9 s\n^9Empty reload time: ^72.7^9 s\n\n^9Max. damage: ^770 ^9(<26 Meters)\n^9Min. damage: ^760 ^9(>39 Meters)\n\n^9Head multiplier: ^7x2.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("2", "2_8", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens", "MP5", "mp5", "^9Start ammo: ^730^9/330\n^9Max ammo: ^730^9/420\n\n^9Reload time: ^71.9^9 s\n^9Empty reload time: ^73.5^9 s\n\n^9Max. damage: ^780 ^9(<20 Meters)\n^9Min. damage: ^755 ^9(>32 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("2", "2_9", ORIGIN_CHOICE9, "^812 500 ^9nL Tokens", "M4", "m4", "^9Start ammo: ^730^9/330\n^9Max ammo: ^730^9/420\n\n^9Reload time: ^72.03^9 s\n^9Empty reload time: ^72.36^9 s\n\n^9Max. damage: ^770 ^9(<26 Meters)\n^9Min. damage: ^760 ^9(>39 Meters)\n\n^9Head multiplier: ^7x2.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("2", "2_10", ORIGIN_CHOICE10, "^812 500 ^9nL Tokens", "G36C", "g36c", "^9Start ammo: ^730^9/360\n^9Max ammo: ^730^9/450\n\n^9Reload time: ^71.6^9 s\n^9Empty reload time: ^72^9 s\n\n^9Max. damage: ^780 ^9(<26 Meters)\n^9Min. damage: ^760 ^9(>39 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("2", "2_11", ORIGIN_CHOICE11, "^820 000 ^9nL Tokens", "FAMAS", "famas", "^9Start ammo: ^725^9/325\n^9Max ammo: ^725^9/400\n\n^9Reload time: ^72.5^9 s\n^9Empty reload time: ^73.2^9 s\n\n^9Max. damage: ^790 ^9(<26 Meters)\n^9Min. damage: ^760 ^9(>39 Meters)\n\n^9Head multiplier: ^7x5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("2", "2_12", ORIGIN_CHOICE12, "^825 000 ^9nL Tokens", "ACR", "acr", "^9Start ammo: ^730^9/360\n^9Max ammo: ^730^9/450\n\n^9Reload time: ^72.03^9 s\n^9Empty reload time: ^72.36^9 s\n\n^9Max. damage: ^785 ^9(<26 Meters)\n^9Min. damage: ^765 ^9(>39 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("2", "2_14", ORIGIN_CHOICE14, "^9Rank 300", "^3Golden ^7PPS-43", "pps", "^9Start ammo: ^735^9/350\n^9Max ammo: ^735^9/455\n\n^9Reload time: ^72^9 s\n^9Empty reload time: ^72^9 s\n\n^9Max. damage: ^785 ^9(<20 Meters)\n^9Min. damage: ^755 ^9(>32 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		// WP("2", "2_15", ORIGIN_CHOICE15, "^9Rank 999", "MP44", "mp44", "^9Start ammo: ^730^9/300\n^9Max ammo: ^730^9/390\n\n^9Reload time: ^72^9 s\n^9Empty reload time: ^72.67^9 s\n\n^9Max. damage: ^745 ^9(<26 Meters)\n^9Min. damage: ^735 ^9(>39 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		// WP("2", "2_16", ORIGIN_CHOICE16, "^9Rank 999", "^3Golden ^7Thompson", "thompson", "^9Start ammo: ^730^9/330\n^9Max ammo: ^730^9/420\n\n^9Reload time: ^71.83^9 s\n^9Empty reload time: ^72.2^9 s\n\n^9Max. damage: ^775 ^9(<20 Meters)\n^9Min. damage: ^755 ^9(>32 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("3", "3_2", ORIGIN_CHOICE2, "^9Rank 5", "M1918 BAR", "bar", "^9Start ammo: ^720^9/280\n^9Max ammo: ^720^9/360\n\n^9Reload time: ^73.63^9 s\n^9Empty reload time: ^73.8^9 s\n\n^9Max. damage: ^775 ^9(<32 Meters)\n^9Min. damage: ^755 ^9(>46 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7800\n\n^9Movement speed: ^795")
+		WP("3", "3_4", ORIGIN_CHOICE4, "^81 000 ^9nL Tokens", "Winchester 1200", "winchester", "^9Start ammo: ^77^9/70\n^9Max ammo: ^77^9/98\n\n^9Chamber reload time: ^70.47^9 s\n^9Empty reload time: ^74.2^9 s\n\n^9Max. damage: ^755 per bullet, 8-bullet spread ^9(<10 Meters)\n^9Min. damage: ^735 per bullet, 8-bullet spread ^9(>16 Meters)\n\n^9Head multiplier: ^7x2\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("3", "3_5", ORIGIN_CHOICE5, "^82 500 ^9nL Tokens", "Model 1887", "model_1887", "^9Start ammo: ^76^9/72\n^9Max ammo: ^76^9/90\n\n^9Chamber reload time: ^70.85^9 s\n^9Empty reload time: ^75.1^9 s\n\n^9Max. damage: ^7100 per bullet, 8-bullet spread ^9(<13 Meters)\n^9Min. damage: ^750 per bullet, 8-bullet spread ^9(>20 Meters)\n\n^9Head multiplier: ^7x2\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("3", "3_6", ORIGIN_CHOICE6, "^82 500 ^9nL Tokens", "DP-28", "dp28", "^9Start ammo: ^747^9/470\n^9Max ammo: ^747^9/611\n\n^9Reload time: ^73.4^9 s\n^9Empty reload time: ^74.5^9 s\n\n^9Max. damage: ^765 ^9(<32 Meters)\n^9Min. damage: ^755 ^9(>46 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7600\n\n^9Movement speed: ^790")
+		WP("3", "3_7", ORIGIN_CHOICE7, "^87 500 ^9nL Tokens", "AA-12", "aa12", "^9Start ammo: ^78^9/96\n^9Max ammo: ^78^9/120\n\n^9Reload time: ^71.9^9 s\n^9Empty reload time: ^72.4^9 s\n\n^9Max. damage: ^750 per bullet, 8-bullet spread ^9(<6.5 Meters)\n^9Min. damage: ^730 per bullet, 8-bullet spread ^9(>13 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("3", "3_8", ORIGIN_CHOICE8, "^87 500 ^9nL Tokens", "RPK-74", "rpk", "^9Start ammo: ^745^9/405\n^9Max ammo: ^745^9/540\n\n^9Reload time: ^72.1^9 s\n^9Empty reload time: ^72.7^9 s\n\n^9Max. damage: ^755 ^9(<32 Meters)\n^9Min. damage: ^745 ^9(>46 Meters)\n\n^9Head multiplier: ^7x4\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7800\n\n^9Movement speed: ^795")
+		WP("3", "3_9", ORIGIN_CHOICE9, "^812 500 ^9nL Tokens", "Double Barrel", "doublebarrel", "^9Start ammo: ^72^9/70\n^9Max ammo: ^72^9/90\n\n^9Reload time: ^72^9 s\n^9Empty reload time: ^72^9 s\n\n^9Max. damage: ^7100 per bullet, 8-bullet spread ^9(<13 Meters)\n^9Min. damage: ^750 per bullet, 8-bullet spread ^9(>20 Meters)\n\n^9Head multiplier: ^7x2\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("3", "3_10", ORIGIN_CHOICE10, "^812 500 ^9nL Tokens", "RPD", "saw", "^9Start ammo: ^7200^9/400\n^9Max ammo: ^7200^9/600\n\n^9Reload time: ^76^9 s\n^9Empty reload time: ^76^9 s\n\n^9Max. damage: ^755 ^9(<32 Meters)\n^9Min. damage: ^745 ^9(>46 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7800\n\n^9Movement speed: ^790")
+		WP("3", "3_11", ORIGIN_CHOICE11, "^820 000 ^9nL Tokens", "M249 SAW", "saw", "^9Start ammo: ^7200^9/400\n^9Max ammo: ^7200^9/600\n\n^9Reload time: ^76^9 s\n^9Empty reload time: ^76^9 s\n\n^9Max. damage: ^755 ^9(<32 Meters)\n^9Min. damage: ^745 ^9(>46 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7800\n\n^9Movement speed: ^790")
+		WP("3", "3_12", ORIGIN_CHOICE12, "^825 000 ^9nL Tokens", "Striker", "striker", "^9Start ammo: ^712^9/120\n^9Max ammo: ^712^9/168\n\n^9Chamber reload time: ^70.66^9 s\n^9Empty reload time: ^77.92^9 s\n\n^9Max. damage: ^755 per bullet, 8-bullet spread ^9(<13 Meters)\n^9Min. damage: ^735 per bullet, 8-bullet spread ^9(>20 Meters)\n\n^9Head multiplier: ^7x2\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7100")
+		WP("3", "3_14", ORIGIN_CHOICE14, "^9Rank 400", "^3Golden ^7Trench Gun", "shotgun", "^9Start ammo: ^76^9/90\n^9Max ammo: ^76^9/108\n\n^9Chamber reload time: ^70.73^9 s\n^9Empty reload time: ^74.38^9 s\n\n^9Max. damage: ^7100 per bullet, 8-bullet spread ^9(<13 Meters)\n^9Min. damage: ^750 per bullet, 8-bullet spread ^9(>20 Meters)\n\n^9Head multiplier: ^7x2\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		// WP("3", "3_12", ORIGIN_CHOICE12, "^9Rank 999", "^3Golden ^7Bren", "bren", "^9Start ammo: ^730^9/330\n^9Max ammo: ^730^9/420\n\n^9Reload time: ^73.7^9 s\n^9Empty reload time: ^73.7^9 s\n\n^9Max. damage: ^7100 ^9(<32 Meters)\n^9Min. damage: ^780 ^9(>46 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7800\n\n^9Movement speed: ^790")
+		WP("4", "4_2", ORIGIN_CHOICE2, "^9Only for ^8Patron", "Crossbow", "crossbow", "^9Start ammo: ^71^9/75\n^9Max ammo: ^71^9/95\n\n^9Reload time: ^71^9 s\n^9Empty reload time: ^71^9 s\n\n^9Max. damage: ^7700 ^9(<39 Meters)\n^9Min. damage: ^7400 ^9(>52 Meters)\n\n^9Head multiplier: ^7x3\n^9Upper torso multiplier: ^7x1.5\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("4", "4_4", ORIGIN_CHOICE4, "^9Only for ^3Nexus", "Raygun", "raygun", "^9Start ammo: ^720^9/60\n^9Max ammo: ^720^9/100\n\n^9Reload time: ^73^9 s\n^9Empty reload time: ^73^9 s\n\n^9Max. damage: ^7300 ^9(<20 Meters)\n^9Min. damage: ^7200 ^9(>32 Meters)\n\n^9Head multiplier: ^7x3\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7500\n\n^9Movement speed: ^7105")
+		WP("4", "4_5", ORIGIN_CHOICE5, "^9Only from ^3MysteryBox", "Wunderwaffe", "wunderwaffe", "^9Start ammo: ^73^9/30\n^9Max ammo: ^73^9/42\n\n^9Reload time: ^74.2^9 s\n^9Empty reload time: ^74.2^9 s\n\n^9Max. damage: ^73000 ^9(<50 Meters)\n^9Min. damage: ^73000 ^9(>50 Meters)\n\n^9Head multiplier: ^7x2\n^9Legs multiplier: ^7x0.5\n\n^9Bash damage: ^7600\n\n^9Movement speed: ^795")
+
+		NL_INFO(40 400)
+		NL_FOOTER
+		NL_HINT_ESC(40 432, "Back to loadout", 120, close weapon_select; open weapon_american;)
 	}
 }
-
