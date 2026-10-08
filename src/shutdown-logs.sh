@@ -48,11 +48,10 @@ if [ $? -ne 0 ]; then
 fi
 
 # Define error patterns
-error_patterns=("******* script runtime error *******" "******* script compile error *******")
-error_regex=$(printf "%s|" "${error_patterns[@]}" | sed 's/|$//')  # Join patterns with | and remove trailing |
-if grep -q -E "$error_regex" "$TEMP_LOG_FILE"; then
+error_pattern_args=(-e "******* script runtime error *******" -e "******* script compile error *******")
+if grep -q -F "${error_pattern_args[@]}" "$TEMP_LOG_FILE"; then
     # Find the first occurrence of an error pattern
-    first_error_line=$(grep -n -E "$error_regex" "$TEMP_LOG_FILE" | head -n 1 | cut -d: -f1)
+    first_error_line=$(grep -n -F "${error_pattern_args[@]}" "$TEMP_LOG_FILE" | head -n 1 | cut -d: -f1)
     
     # Calculate the starting line (10 lines before, but not less than 1)
     if [ "$first_error_line" -gt 10 ]; then
