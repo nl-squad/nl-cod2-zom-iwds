@@ -297,6 +297,7 @@
 		}
 		onOpen 
 		{
+			setdvar nl_kr_info "";
 			show tab1;
 			show tiers;
 			hide tab2;

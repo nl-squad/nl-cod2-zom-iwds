@@ -119,6 +119,7 @@
 		}
 		onOpen
 		{
+			setdvar nl_kr_info "";
 			setdvar nl_weapon "nl_blank";
 			hide hl;
 			show tab_1;

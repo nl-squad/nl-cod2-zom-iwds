@@ -32,6 +32,7 @@
 		}
 		onOpen
 		{
+			setdvar nl_kr_info "";
 			scriptMenuResponse "open";
 		}
 
