@@ -1,8 +1,8 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			400 100
-#define ORIGIN_DETAILS			400 274
+#define ORIGIN_IMAGE			400 108
+#define ORIGIN_DETAILS			400 282
 
 #define ZROW(_hl, _origin, _requirement, _name, _key, _enter, _action) \
 		itemDef \
@@ -196,38 +196,38 @@
 			decoration
 		}
 
-		SECTION(96, "Zombie Weapon")
-		ZROW("z1", 40 102, "^9Rank 1", "Baseball Bat", "hbat", setdvar nl_weapon "nl_img_hbat";, play "mouse_click"; scriptMenuResponse "hbat_mp";)
+		SECTION(104, "Zombie Weapon")
+		ZROW("z1", 40 110, "^9Rank 1", "Baseball Bat", "hbat", setdvar nl_weapon "nl_img_hbat";, play "mouse_click"; scriptMenuResponse "hbat_mp";)
 		INFO("hbat", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: 0.7 ^9s \n^7Bash ^9Delay^7: 0.1 ^9s \n \n^7Bash ^9Range^7: 100 \n \n^7Movement ^9Speed^7: 110")
-		ZROW("z2", 40 119, "^9Rank 50", "Axe", "axe", setdvar nl_weapon "nl_img_axe";, play "mouse_click"; scriptMenuResponse "axe_mp";)
+		ZROW("z2", 40 127, "^9Rank 50", "Axe", "axe", setdvar nl_weapon "nl_img_axe";, play "mouse_click"; scriptMenuResponse "axe_mp";)
 		INFO("axe", "^7Bash ^9Damage^7: 140 \n^7Bash ^9Time^7: 0.8 ^9s \n^7Bash ^9Delay^7: 0.15 ^9s \n \n^7Bash ^9Range^7: 105 \n \n^7Movement ^9Speed^7: 105")
-		ZROW("z3", 40 136, "^9Rank 75", "Knife", "knife", setdvar nl_weapon "nl_img_knife";, play "mouse_click"; scriptMenuResponse "knife_mp";)
+		ZROW("z3", 40 144, "^9Rank 75", "Knife", "knife", setdvar nl_weapon "nl_img_knife";, play "mouse_click"; scriptMenuResponse "knife_mp";)
 		INFO("knife", "^7Bash ^9Damage^7: 120 \n^7Bash ^9Time^7: 0.6 ^9s \n^7Bash ^9Delay^7: 0.08 ^9s \n \n^7Bash ^9Range^7: 95 \n \n^7Movement ^9Speed^7: 115")
 
-		SECTION(174, "Zombie Types")
-		ZTYPE("z5", 40 180, "", "Nazi Zombie", "nazi", setdvar nl_weapon "nl_char_nazi";)
+		SECTION(182, "Zombie Types")
+		ZTYPE("z5", 40 188, "", "Nazi Zombie", "nazi", setdvar nl_weapon "nl_char_nazi";)
 		INFO("nazi", "^7Ability^9#^71^9: ^7Throwable Zombie Nade^9/^7Stun Nade \n^7Ability^9#^72^9: ^7Throwable Potatoes Deal ^335 ^7Damage Each \n^9Level ^71^9: ^31 ^9Potato \n^9Level ^72^9: ^32 ^9Potatoes \n^9Level ^73^9: ^33 ^9Potatoes \n \n^7Health Points^9: ^3300")
-		ZTYPE("z6", 40 197, "", "Speed Zombie", "charple", setdvar nl_weapon "nl_char_charple";)
+		ZTYPE("z6", 40 205, "", "Speed Zombie", "charple", setdvar nl_weapon "nl_char_charple";)
 		INFO("charple", "^7Ability^9: ^7Increased Movement Speed \n^9Level ^71^9: ^3+30% \n^9Level ^72^9: ^3+40% \n^9Level ^73^9: ^3+50% \n \n^7Health Points^9: ^3200")
-		ZTYPE("z7", 40 214, "", "Mutant", "mutant", setdvar nl_weapon "nl_char_mutant";)
+		ZTYPE("z7", 40 222, "", "Mutant", "mutant", setdvar nl_weapon "nl_char_mutant";)
 		INFO("mutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire by ^320% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3550 ^9HP \n^9Level ^72^9: ^3600 ^9HP \n^9Level ^73^9: ^3650 ^9HP")
-		ZTYPE("z8", 40 231, "", "Heavy Mutant", "heavymutant", setdvar nl_weapon "nl_char_heavymutant";)
+		ZTYPE("z8", 40 239, "", "Heavy Mutant", "heavymutant", setdvar nl_weapon "nl_char_heavymutant";)
 		INFO("heavymutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire by ^325% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3750 ^9HP \n^9Level ^72^9: ^3800 ^9HP \n^9Level ^73^9: ^3850 ^9HP")
-		ZTYPE("z9", 40 248, "", "Armoured Mutant", "armoured", setdvar nl_weapon "nl_char_armoured";)
+		ZTYPE("z9", 40 256, "", "Armoured Mutant", "armoured", setdvar nl_weapon "nl_char_armoured";)
 		INFO("armoured", "^7Ability^9: ^7Reduced Damage from Explosions ^9& ^7Fire \n^9Level ^71^9: ^3-30% \n^9Level ^72^9: ^3-40% \n^9Level ^73^9: ^3-50% \n \n^7Health Points^9: ^3800")
-		ZTYPE("z10", 40 265, "", "Alien", "alien", setdvar nl_weapon "nl_char_alien";)
+		ZTYPE("z10", 40 273, "", "Alien", "alien", setdvar nl_weapon "nl_char_alien";)
 		INFO("alien", "^7Ability^9#^71^9: ^7Teleports to a Random Location on the Map once per Life \n^7Ability^9#^72^9: ^7Deals ^310 ^7Damage per tick within a Radius (x1.5 against Invi) \n^7Ability^9#^73^9: ^7Gets ^340 ^7Health Points per tick within a Radius \n^9Level ^71^9: ^32.4 m ^9Radius \n^9Level ^72^9: ^33.2 m ^9Radius \n^9Level ^73^9: ^34 m ^9Radius \n \n^7Health Points^9: ^3400 \n^7Max Health Points^9: ^3800")
-		ZTYPE("z11", 40 282, "", "Chimp", "chimp", setdvar nl_weapon "nl_char_chimp";)
+		ZTYPE("z11", 40 290, "", "Chimp", "chimp", setdvar nl_weapon "nl_char_chimp";)
 		INFO("chimp", "^7Ability^9: ^7Performs a Charged Swoosh Jump \n^9Level ^71^9: ^3200 ^9Max Power \n^9Level ^72^9: ^3300 ^9Max Power \n^9Level ^73^9: ^3400 ^9Max Power \n \n^7Health Points^9: ^3400")
-		ZTYPE("z12", 40 299, "", "Half-Life Red", "halflife", setdvar nl_weapon "nl_char_halflife";)
+		ZTYPE("z12", 40 307, "", "Half-Life Red", "halflife", setdvar nl_weapon "nl_char_halflife";)
 		INFO("halflife", "^7Ability^9: ^7Sets a Jumpy Spawn Point on Death \n^9Level ^71^9: ^31.5 s ^9of Spawn Protect \n^9Level ^72^9: ^32 s ^9of Spawn Protect \n^9Level ^73^9: ^32.5 s ^9of Spawn Protect \n \n^7Health Points^9: ^3300")
-		ZTYPE("z13", 40 316, "", "Ice Zombie", "ice", setdvar nl_weapon "nl_char_ice";)
+		ZTYPE("z13", 40 324, "", "Ice Zombie", "ice", setdvar nl_weapon "nl_char_ice";)
 		INFO("ice", "^7Ability^9#^71^9: ^7Immunity to Freeze Zombies \n^7Ability^9#^72^9: ^7Throwable Ice Nade Freezing Hunters for ^33 s ^7within a Radius \n \n^7Health Points^9: ^3500")
-		ZTYPE("z14", 40 333, "", "Skeleton", "skeleton", setdvar nl_weapon "nl_char_skeleton";)
+		ZTYPE("z14", 40 341, "", "Skeleton", "skeleton", setdvar nl_weapon "nl_char_skeleton";)
 		INFO("skeleton", "^7Ability^9#^71^9: ^7Immunity to Fire Damage \n^7Ability^9#^72^9: ^7Chance to Dodge Bullets \n^9Level ^71^9: ^330% \n^9Level ^72^9: ^340% \n^9Level ^73^9: ^350% \n \n^7Health Points^9: ^3300")
-		ZTYPE("z15", 40 350, "", "Toxic Zombie", "toxic", setdvar nl_weapon "nl_char_toxic";)
+		ZTYPE("z15", 40 358, "", "Toxic Zombie", "toxic", setdvar nl_weapon "nl_char_toxic";)
 		INFO("toxic", "^7Ability^9#^71^9: ^7Throwable Toxic Meat Deals ^320 ^7Damage per tick within a Radius \n^7Ability^9#^72^9: ^7Upon Death, Releases a Toxin Dealing ^320 ^7Damage within a Radius \n^9Level ^71^9: ^31.6 m ^9Radius \n^9Level ^72^9: ^31.8 m ^9Radius \n^9Level ^73^9: ^32 m ^9Radius \n \n^7Health Points^9: ^3350")
-		ZTYPE("z16", 40 367, "", "Venom", "venom", setdvar nl_weapon "nl_char_venom";)
+		ZTYPE("z16", 40 375, "", "Venom", "venom", setdvar nl_weapon "nl_char_venom";)
 		INFO("venom", "^7Ability^9: ^7Performs a High Jump \n^9Level ^71^9: ^3Single ^9High Jump \n^9Level ^72^9: ^3Double ^9High Jump \n^9Level ^73^9: ^3Triple ^9High Jump \n \n^7Health Points^9: ^3300")
 
 		NL_INFO(40 404)

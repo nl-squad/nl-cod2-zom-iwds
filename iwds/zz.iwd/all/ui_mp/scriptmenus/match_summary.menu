@@ -777,7 +777,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			81 176 0 0 0 0
+			rect			81 174 0 0 0 0
 			text			"Score"
 			textfont		NL_FONT
 			textscale		.19
@@ -789,7 +789,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			81 204 0 0 0 0
+			rect			81 196 0 0 0 0
 			dvar			"nl_progress_score"
 			textfont		NL_FONT_BOLD
 			textscale		.3
@@ -811,7 +811,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			170 176 0 0 0 0
+			rect			170 174 0 0 0 0
 			text			"EXP"
 			textfont		NL_FONT
 			textscale		.19
@@ -823,7 +823,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			170 204 0 0 0 0
+			rect			170 196 0 0 0 0
 			dvar			"nl_progress_exp"
 			textfont		NL_FONT_BOLD
 			textscale		.3
@@ -845,7 +845,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			259 176 0 0 0 0
+			rect			259 174 0 0 0 0
 			text			"nL Tokens"
 			textfont		NL_FONT
 			textscale		.19
@@ -857,7 +857,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			259 204 0 0 0 0
+			rect			259 196 0 0 0 0
 			dvar			"nl_progress_tokens"
 			textfont		NL_FONT_BOLD
 			textscale		.3

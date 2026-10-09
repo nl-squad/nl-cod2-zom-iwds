@@ -2,24 +2,25 @@
 #include "ui_mp/nl_style.h"
 
 #define ORIGIN_CHOICE1			40 86
-#define ORIGIN_CHOICE2			40 108
-#define ORIGIN_CHOICE3			40 130
-#define ORIGIN_CHOICE5			40 164
-#define ORIGIN_CHOICE6			40 186
-#define ORIGIN_CHOICE7			40 208
-#define ORIGIN_CHOICE9			40 242
-#define ORIGIN_CHOICE10			40 264
-#define ORIGIN_PANEL			264 84
-#define ORIGIN_RECORDS			264 132
-#define ORIGIN_PLROPT2			264 292
-#define ORIGIN_PLROPT1			264 330
+#define ORIGIN_CHOICE2			40 110
+#define ORIGIN_CHOICE3			40 134
+#define ORIGIN_CHOICE5			40 170
+#define ORIGIN_CHOICE6			40 194
+#define ORIGIN_CHOICE7			40 218
+#define ORIGIN_CHOICE9			40 254
+#define ORIGIN_CHOICE10			40 278
+#define ORIGIN_PLROPT2			264 86
+#define ORIGIN_PLROPT1			264 124
+#define ORIGIN_PANEL			264 174
+#define ORIGIN_RECORDS			264 212
+#define ORIGIN_SERVERINFO		276 98
 
 #define INGAME_SELECTION(_text, _origin, _response, _num) \
 		itemDef \
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			backcolor		NL_SURFACE_HOVER \
 			visible			0 \
@@ -29,7 +30,7 @@
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 3 20 0 0 \
+			rect			0 0 3 22 0 0 \
 			origin			_origin \
 			backcolor		NL_BLUE \
 			visible			0 \
@@ -38,13 +39,13 @@
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			text			_text \
 			textfont		NL_FONT \
-			textscale		.27 \
+			textscale		.3 \
 			textalignx		12 \
-			textaligny		15 \
+			textaligny		16 \
 			forecolor		NL_TEXT_DIM \
 			visible			1 \
 			mouseEnter \
@@ -68,7 +69,7 @@
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			backcolor		NL_SURFACE_HOVER \
 			visible			0 \
@@ -78,7 +79,7 @@
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 3 20 0 0 \
+			rect			0 0 3 22 0 0 \
 			origin			_origin \
 			backcolor		NL_BLUE \
 			visible			0 \
@@ -87,13 +88,13 @@
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			text			_text \
 			textfont		NL_FONT \
-			textscale		.27 \
+			textscale		.3 \
 			textalignx		12 \
-			textaligny		15 \
+			textaligny		16 \
 			forecolor		NL_TEXT_DIM \
 			visible			1 \
 			mouseEnter \
@@ -118,7 +119,7 @@
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			backcolor		NL_SURFACE_HOVER \
 			visible			0 \
@@ -128,7 +129,7 @@
 		{ \
 			name			"blanco_highlight_menu" ## _num \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 3 20 0 0 \
+			rect			0 0 3 22 0 0 \
 			origin			_origin \
 			backcolor		NL_BLUE \
 			visible			0 \
@@ -137,13 +138,13 @@
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
-			rect			0 0 196 20 0 0 \
+			rect			0 0 196 22 0 0 \
 			origin			_origin \
 			text			_text \
 			textfont		NL_FONT \
-			textscale		.27 \
+			textscale		.3 \
 			textalignx		12 \
-			textaligny		15 \
+			textaligny		16 \
 			forecolor		NL_TEXT_DIM \
 			visible			1 \
 			mouseEnter \
@@ -300,8 +301,8 @@
 		NL_HEADER("^7nL^4.^7Zombies")
 		NL_NOTE("Version 6.0")
 
-		execKey "1" { play "mouse_click"; scriptMenuResponse "autoassign"; }
-		execKey "2" { play "mouse_click"; scriptMenuResponse "changeweapon"; }
+		execKey "1" { play "mouse_click"; scriptMenuResponse "changeweapon"; }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "purchases"; }
 
 		itemDef
 		{
@@ -384,7 +385,7 @@
 			name			"serverinfo"
 			type			ITEM_TYPE_TEXT
 			rect			0 0 0 0 0 0
-			origin			ORIGIN_PANEL
+			origin			ORIGIN_SERVERINFO
 			text			"Server Info"
 			textfont		NL_FONT_BOLD
 			textscale		.32
@@ -398,7 +399,7 @@
 			name			"serverinfo"
 			type			ITEM_TYPE_TEXT
 			rect			0 0 0 0 0 0
-			origin			ORIGIN_PANEL
+			origin			ORIGIN_SERVERINFO
 			dvar			nl_serverinfo
 			textfont		NL_FONT
 			textscale		.22
@@ -418,7 +419,7 @@
 			dvartest		"nl_challeges_badge"
 			showDvar		{ "1" }
 			style			WINDOW_STYLE_SHADER
-			rect			76 7 7 7 0 0
+			rect			82 8 7 7 0 0
 			origin			ORIGIN_CHOICE3
 			background		"nl_badge_notification"
 			decoration
@@ -429,7 +430,7 @@
 			dvartest		"nl_challeges_badge"
 			showDvar		{ "2" }
 			style			WINDOW_STYLE_SHADER
-			rect			76 7 7 7 0 0
+			rect			82 8 7 7 0 0
 			origin			ORIGIN_CHOICE3
 			background		"nl_badge_new"
 			decoration
@@ -443,13 +444,13 @@
 		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
 
 		NL_FOOTER
-		NL_HINT_KEY(40 432, "nl_kbd_1", "Play", 60, scriptMenuResponse "autoassign";)
-		NL_HINT_KEY(110 432, "nl_kbd_2", "Loadout", 80, scriptMenuResponse "changeweapon";)
+		NL_HINT_KEY(40 432, "nl_kbd_1", "Loadout", 80, scriptMenuResponse "changeweapon";)
+		NL_HINT_KEY(130 432, "nl_kbd_2", "Shop", 60, scriptMenuResponse "purchases";)
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
 			rect			600 436 0 0 0 0
-			text			"^9Updates on Discord ^7#news\n^9Become a ^8Patron^9: Discord ^7#how-to-patron"
+			text			"^9Updates on Discord ^3#news\n^9Become a ^8Patron^9: Discord ^3#how-to-patron"
 			textfont		NL_FONT
 			textscale		.19
 			textalign		ITEM_ALIGN_RIGHT

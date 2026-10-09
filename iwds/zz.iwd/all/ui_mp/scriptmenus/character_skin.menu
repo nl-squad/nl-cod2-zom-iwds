@@ -1,19 +1,19 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			340 116
-#define ORIGIN_CHOICE1 			40 94
-#define ORIGIN_CHOICE2 			40 112
-#define ORIGIN_CHOICE3 			40 130
-#define ORIGIN_CHOICE4 			40 148
-#define ORIGIN_CHOICE5 			40 166
-#define ORIGIN_CHOICE6 			40 184
-#define ORIGIN_CHOICE7 			40 202
-#define ORIGIN_CHOICE8 			40 220
-#define ORIGIN_CHOICE9 			40 238
-#define ORIGIN_CHOICE10			40 256
-#define ORIGIN_CHOICE11			40 274
-#define ORIGIN_CHOICE12			40 292
+#define ORIGIN_IMAGE			340 134
+#define ORIGIN_CHOICE1 			40 112
+#define ORIGIN_CHOICE2 			40 130
+#define ORIGIN_CHOICE3 			40 148
+#define ORIGIN_CHOICE4 			40 166
+#define ORIGIN_CHOICE5 			40 184
+#define ORIGIN_CHOICE6 			40 202
+#define ORIGIN_CHOICE7 			40 220
+#define ORIGIN_CHOICE8 			40 238
+#define ORIGIN_CHOICE9 			40 256
+#define ORIGIN_CHOICE10			40 274
+#define ORIGIN_CHOICE11			40 292
+#define ORIGIN_CHOICE12			40 310
 
 #define SKIN(_tab, _hl, _origin, _requirement, _name, _skin_id, _preview) \
 		itemDef \

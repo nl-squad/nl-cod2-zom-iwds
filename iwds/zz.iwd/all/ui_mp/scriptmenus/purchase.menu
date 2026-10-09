@@ -16,7 +16,7 @@
 
 #define ORIGIN_EXIT				40 432
 #define ORIGIN_INFO				400 415
-#define ORIGIN_NLT				245 10
+#define ORIGIN_NLT				245 16
 
 #define ORIGIN_TAB1				40 60
 #define ORIGIN_TAB2				136 60

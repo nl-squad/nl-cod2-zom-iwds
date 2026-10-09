@@ -162,7 +162,7 @@
 			dvar			"nlt" \
 			type			ITEM_TYPE_TEXT \
 			rect			552 34 0 0 0 0 \
-			textfont		NL_FONT_BOLD \
+			textfont		NL_FONT \
 			textscale		.32 \
 			textalign		ITEM_ALIGN_RIGHT \
 			textaligny		22 \
@@ -391,7 +391,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			34 15 32 32 0 0 \
+			rect			34.5 15 32 32 0 0 \
 			origin			_origin \
 			background		"nl_kutka" \
 			dvartest		_dvar \
