@@ -7,8 +7,8 @@
 #define ORIGIN_KILLSTREAKS		40 212
 #define ORIGIN_ZOMBIE			320 212
 #define ORIGIN_SKIN				464 212
-#define ORIGIN_LOAD				40 346
-#define ORIGIN_SAVE				40 370
+#define ORIGIN_SAVE				40 346
+#define ORIGIN_LOAD				40 370
 #define ORIGIN_SPAWN			388 348
 #define ORIGIN_SPAWN_KEY		480 358
 
@@ -177,15 +177,15 @@
 		CARD(ORIGIN_SKIN, 136, "Skin", close weapon_american; open character_skin;)
 		PICTURE(ORIGIN_SKIN, 22 18 92 92 0 0, nl_appereance)
 
-		CLASS_LABEL(ORIGIN_LOAD, "Load")
-		NL_BUTTON(80 346, 70, 35, "Class 1", scriptMenuResponse "loadout1";)
-		NL_BUTTON(156 346, 70, 35, "Class 2", scriptMenuResponse "loadout2";)
-		NL_BUTTON(232 346, 80, 40, "^3VIP ^7Class 3", scriptMenuResponse "loadout3";)
-
 		CLASS_LABEL(ORIGIN_SAVE, "Save")
-		NL_BUTTON(80 370, 70, 35, "Class 1", scriptMenuResponse "save_loadout1";)
-		NL_BUTTON(156 370, 70, 35, "Class 2", scriptMenuResponse "save_loadout2";)
-		NL_BUTTON(232 370, 80, 40, "^3VIP ^7Class 3", scriptMenuResponse "save_loadout3";)
+		NL_BUTTON(80 346, 70, 35, "Class 1", scriptMenuResponse "save_loadout1";)
+		NL_BUTTON(156 346, 70, 35, "Class 2", scriptMenuResponse "save_loadout2";)
+		NL_BUTTON(232 346, 80, 40, "^3VIP ^7Class 3", scriptMenuResponse "save_loadout3";)
+
+		CLASS_LABEL(ORIGIN_LOAD, "Load")
+		NL_BUTTON(80 370, 70, 35, "Class 1", scriptMenuResponse "loadout1";)
+		NL_BUTTON(156 370, 70, 35, "Class 2", scriptMenuResponse "loadout2";)
+		NL_BUTTON(232 370, 80, 40, "^3VIP ^7Class 3", scriptMenuResponse "loadout3";)
 
 		NL_CTA("spawn_btn", "spawn_btn_hover", ORIGIN_SPAWN, 144, 36, 62, 23, "Spawn", scriptMenuResponse "spawn";)
 		NL_KEYCAP(ORIGIN_SPAWN_KEY, "nl_kbd_s", 16)
