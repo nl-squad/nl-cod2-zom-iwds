@@ -1,8 +1,8 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			400 88
-#define ORIGIN_DETAILS			400 262
+#define ORIGIN_IMAGE			400 100
+#define ORIGIN_DETAILS			400 274
 
 #define ZROW(_hl, _origin, _requirement, _name, _key, _enter, _action) \
 		itemDef \

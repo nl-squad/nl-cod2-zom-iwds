@@ -1,7 +1,7 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			340 104
+#define ORIGIN_IMAGE			340 116
 #define ORIGIN_CHOICE1 			40 94
 #define ORIGIN_CHOICE2 			40 112
 #define ORIGIN_CHOICE3 			40 130
