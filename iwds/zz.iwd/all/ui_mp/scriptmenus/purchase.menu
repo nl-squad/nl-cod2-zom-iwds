@@ -1,4 +1,5 @@
 #include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
 
 #define ORIGIN_TITLE			0 50
 #define ORIGIN_KR1				40 120
@@ -13,7 +14,7 @@
 #define ORIGIN_KR9				400 240
 #define ORIGIN_KR10				520 240
 
-#define ORIGIN_EXIT				20 415
+#define ORIGIN_EXIT				40 432
 #define ORIGIN_INFO				400 415
 #define ORIGIN_NLT				245 10
 
@@ -459,24 +460,7 @@
 			decoration
 		}
 
-		/// EXIT ///
-		itemDef
-		{
-			type			ITEM_TYPE_BUTTON
-			rect			0 0 40 20
-			origin			ORIGIN_EXIT
-			textscale		.25
-			text			"^3ESC ^7Back"
-			textaligny		15
-			visible			1
-			action
-			{
-				close purchase;
-				uiScript openMenuOnDvar ui_purchase_back ingame ingame;
-				uiScript openMenuOnDvar ui_purchase_back weapon_select weapon_select;
-				play "mouse_click";
-			}
-		}
+		NL_HINT_ESC(ORIGIN_EXIT, "Back", 70, close purchase; uiScript openMenuOnDvar ui_purchase_back ingame ingame; uiScript openMenuOnDvar ui_purchase_back weapon_select weapon_select;)
 
 		itemDef
 		{
