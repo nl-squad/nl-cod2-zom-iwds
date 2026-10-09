@@ -116,12 +116,11 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			552 14 0 0 0 0
+			rect			488 14 0 0 0 0
 			origin			ORIGIN_TABLE
 			text			"Score"
 			textfont		NL_FONT
 			textscale		.19
-			textalign		ITEM_ALIGN_RIGHT
 			forecolor		NL_MUTED
 			visible			1
 			decoration
@@ -173,12 +172,11 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			536 34 0 0 0 0
+			rect			488 34 0 0 0 0
 			origin			ORIGIN_TABLE
 			dvar			"ui_topstats_2"
 			textfont		NL_FONT
 			textscale		.209
-			textalign		ITEM_ALIGN_RIGHT
 			forecolor		NL_TEXT
 			visible			1
 			decoration

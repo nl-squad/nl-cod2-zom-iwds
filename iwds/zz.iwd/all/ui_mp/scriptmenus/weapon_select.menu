@@ -1,8 +1,8 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			344 108
-#define ORIGIN_AMMO				344 256
+#define ORIGIN_IMAGE			400 108
+#define ORIGIN_AMMO				400 228
 #define ORIGIN_CHOICE1 			40 94
 #define ORIGIN_CHOICE2 			40 112
 #define ORIGIN_CHOICE3 			40 130
@@ -147,7 +147,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_DVAR_SHADER
-			rect			0 0 256 128 0 0
+			rect			0 0 200 100 0 0
 			origin			ORIGIN_IMAGE
 			dvar			nl_weapon
 			visible			1
