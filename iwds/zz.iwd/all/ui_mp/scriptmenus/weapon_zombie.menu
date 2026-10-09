@@ -209,7 +209,7 @@
 		ZTYPE("z6", 40 197, "", "Speed Zombie", "charple", setdvar nl_weapon "nl_char_charple";)
 		INFO("charple", "^7Ability^9: ^7Increased Movement Speed \n^9Level ^71^9: ^3+30% \n^9Level ^72^9: ^3+40% \n^9Level ^73^9: ^3+50% \n \n^7Health Points^9: ^3200")
 		ZTYPE("z7", 40 214, "", "Mutant", "mutant", setdvar nl_weapon "nl_char_mutant";)
-		INFO("mutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire by ^320% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3550 ^9HP \n^9Level ^72^9: ^3600 ^9HP \n^9Level ^73^9:7^3650 ^9HP")
+		INFO("mutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire by ^320% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3550 ^9HP \n^9Level ^72^9: ^3600 ^9HP \n^9Level ^73^9: ^3650 ^9HP")
 		ZTYPE("z8", 40 231, "", "Heavy Mutant", "heavymutant", setdvar nl_weapon "nl_char_heavymutant";)
 		INFO("heavymutant", "^7Ability^9#^71^9: ^7Reduced Damage from Explosions ^9& ^7Fire by ^325% \n^7Ability^9#^72^9: ^7More Health Points \n^9Level ^71^9: ^3750 ^9HP \n^9Level ^72^9: ^3800 ^9HP \n^9Level ^73^9: ^3850 ^9HP")
 		ZTYPE("z9", 40 248, "", "Armoured Mutant", "armoured", setdvar nl_weapon "nl_char_armoured";)
