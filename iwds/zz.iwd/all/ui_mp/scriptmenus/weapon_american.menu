@@ -145,11 +145,9 @@
 
 		CARD(ORIGIN_TACTICAL, 136, "Tactical Perk", close weapon_american; open perks_tactical;)
 		PICTURE(ORIGIN_TACTICAL, 36 28 64 64 0 0, nl_tp)
-		CARD_RESET(ORIGIN_TACTICAL, 92, "Clear", "reset_tactical_perk")
 
 		CARD(ORIGIN_COMBAT, 136, "Combat Perk", close weapon_american; open perks_combat;)
 		PICTURE(ORIGIN_COMBAT, 36 28 64 64 0 0, nl_cp)
-		CARD_RESET(ORIGIN_COMBAT, 92, "Clear", "reset_combat_perk")
 
 		CARD(ORIGIN_KILLSTREAKS, 272, "Killstreaks", close weapon_american; scriptMenuResponse "open_killstreak_menu";)
 		KS_SLOT(17, nl_kr_1)
@@ -175,11 +173,9 @@
 
 		CARD(ORIGIN_ZOMBIE, 136, "Zombie Profile", close weapon_american; open weapon_zombie;)
 		PICTURE(ORIGIN_ZOMBIE, 36 26 64 64 0 0, nl_zombiegun)
-		CARD_RESET(ORIGIN_ZOMBIE, 92, "Default", "reset_zombie")
 
 		CARD(ORIGIN_SKIN, 136, "Skin", close weapon_american; open character_skin;)
 		PICTURE(ORIGIN_SKIN, 22 18 92 92 0 0, nl_appereance)
-		CARD_RESET(ORIGIN_SKIN, 92, "Default", "reset_skin")
 
 		CLASS_LABEL(ORIGIN_LOAD, "Load")
 		NL_BUTTON(80 346, 70, 35, "Class 1", scriptMenuResponse "loadout1";)
