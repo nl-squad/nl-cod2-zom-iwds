@@ -347,7 +347,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			0 0 0 0 0 0
 			origin			ORIGIN_PANEL
-			text			"Best scores on this map"
+			text			"Best Scores on This Map"
 			textfont		NL_FONT
 			textscale		.2
 			textaligny		32
@@ -375,7 +375,7 @@
 		RECORD_COLUMN(280, "Rank", "nl_records_ever_ranks")
 
 		/// PLAYER OPTIONS ///
-		PLAYER_OPTION(ORIGIN_PLROPT2, nl_plropt_enableExchange, "Weapon exchange", "Players can ask you for a weapon exchange", "plropt_enableExchange")
+		PLAYER_OPTION(ORIGIN_PLROPT2, nl_plropt_enableExchange, "Weapon Exchange", "Players can ask you for a weapon exchange", "plropt_enableExchange")
 		PLAYER_OPTION(ORIGIN_PLROPT1, nl_plropt_enableHook, "Hook", "Players can ask you for a hook", "plropt_enableHook")
 
 		/// SERVER INFO ///
@@ -385,7 +385,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			0 0 0 0 0 0
 			origin			ORIGIN_PANEL
-			text			"Server info"
+			text			"Server Info"
 			textfont		NL_FONT_BOLD
 			textscale		.32
 			textaligny		16
@@ -436,11 +436,11 @@
 		}
 
 		INGAME_SELECTION("Statistics", ORIGIN_CHOICE5, "stats", "4")
-		INGAME_SELECTION("Top players", ORIGIN_CHOICE6, "topstats", "5")
-		INGAME_SELECTION_HOVERSUBMENU("Server info", ORIGIN_CHOICE7, "serverinfo", "6", "serverinfo")
+		INGAME_SELECTION("Top Players", ORIGIN_CHOICE6, "topstats", "5")
+		INGAME_SELECTION_HOVERSUBMENU("Server Info", ORIGIN_CHOICE7, "serverinfo", "6", "serverinfo")
 
-		INGAME_SELECTION_OPENSUBMENU("Leave game", ORIGIN_CHOICE9, "leavegame", "7")
-		INGAME_SELECTION_OPENSUBMENU("Main menu", ORIGIN_CHOICE10, "main", "8")
+		INGAME_SELECTION_OPENSUBMENU("Leave Game", ORIGIN_CHOICE9, "leavegame", "7")
+		INGAME_SELECTION_OPENSUBMENU("Main Menu", ORIGIN_CHOICE10, "main", "8")
 
 		NL_FOOTER
 		NL_HINT_KEY(40 432, "nl_kbd_1", "Play", 60, scriptMenuResponse "autoassign";)

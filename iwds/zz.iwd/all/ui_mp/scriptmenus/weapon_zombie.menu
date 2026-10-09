@@ -1,8 +1,8 @@
 #include "ui_mp/menudef.h"
 #include "ui_mp/nl_style.h"
 
-#define ORIGIN_IMAGE			320 88
-#define ORIGIN_DETAILS			320 262
+#define ORIGIN_IMAGE			400 88
+#define ORIGIN_DETAILS			400 262
 
 #define ZROW(_hl, _origin, _requirement, _name, _key, _enter, _action) \
 		itemDef \
@@ -183,7 +183,7 @@
 		}
 
 		NL_BACKDROP
-		NL_HEADER("Zombie profile")
+		NL_HEADER("Zombie Profile")
 
 		itemDef
 		{
@@ -195,7 +195,7 @@
 			decoration
 		}
 
-		SECTION(96, "Zombie weapon")
+		SECTION(96, "Zombie Weapon")
 		ZROW("z1", 40 102, "^9Rank 1", "Baseball Bat", "hbat", setdvar nl_weapon "nl_img_hbat";, play "mouse_click"; scriptMenuResponse "hbat_mp";)
 		INFO("hbat", "^7Bash ^9Damage^7: 100 \n^7Bash ^9Time^7: 0.7 ^9s \n^7Bash ^9Delay^7: 0.1 ^9s \n \n^7Bash ^9Range^7: 100 \n \n^7Movement ^9Speed^7: 110")
 		ZROW("z2", 40 119, "^9Rank 50", "Axe", "axe", setdvar nl_weapon "nl_img_axe";, play "mouse_click"; scriptMenuResponse "axe_mp";)
@@ -203,7 +203,7 @@
 		ZROW("z3", 40 136, "^9Rank 75", "Knife", "knife", setdvar nl_weapon "nl_img_knife";, play "mouse_click"; scriptMenuResponse "knife_mp";)
 		INFO("knife", "^7Bash ^9Damage^7: 120 \n^7Bash ^9Time^7: 0.6 ^9s \n^7Bash ^9Delay^7: 0.08 ^9s \n \n^7Bash ^9Range^7: 95 \n \n^7Movement ^9Speed^7: 115")
 
-		SECTION(174, "Zombie types")
+		SECTION(174, "Zombie Types")
 		ZTYPE("z5", 40 180, "", "Nazi Zombie", "nazi", setdvar nl_weapon "nl_char_nazi";)
 		INFO("nazi", "^7Ability^9#^71^9: ^7Throwable Zombie Nade^9/^7Stun Nade \n^7Ability^9#^72^9: ^7Throwable Potatoes Deal ^335 ^7Damage Each \n^9Level ^71^9: ^31 ^9Potato \n^9Level ^72^9: ^32 ^9Potatoes \n^9Level ^73^9: ^33 ^9Potatoes \n \n^7Health Points^9: ^3300")
 		ZTYPE("z6", 40 197, "", "Speed Zombie", "charple", setdvar nl_weapon "nl_char_charple";)
@@ -231,6 +231,6 @@
 
 		NL_INFO(40 404)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to loadout", 120, close weapon_zombie; open weapon_american;)
+		NL_HINT_ESC(40 432, "Back to Loadout", 120, close weapon_zombie; open weapon_american;)
 	}
 }

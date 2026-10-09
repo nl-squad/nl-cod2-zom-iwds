@@ -78,10 +78,10 @@
 		COLUMN(340, "Progress", "nl_challenges_progress")
 		COLUMN(430, "Reward", "nl_challenges_reward")
 
-		NL_CTA("collect_btn", "collect_btn_hover", ORIGIN_COLLECT, 160, 34, 80, 22, "Collect rewards", scriptMenuResponse "collect";)
+		NL_CTA("collect_btn", "collect_btn_hover", ORIGIN_COLLECT, 160, 34, 80, 22, "Collect Rewards", scriptMenuResponse "collect";)
 
 		NL_INFO(40 400)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to game menu", 130, close challenges; open ingame;)
+		NL_HINT_ESC(40 432, "Back to Game Menu", 130, close challenges; open ingame;)
 	}
 }

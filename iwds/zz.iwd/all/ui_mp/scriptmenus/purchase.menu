@@ -273,7 +273,7 @@
 			background		"nl_purchase_arrow_down_right" \
 			textscale		.17 \
 			textalign		ITEM_ALIGN_CENTER \
-			textalignx		25 \
+			textalignx		30 \
 			textaligny		52 \
 			text			_kills \
 			visible			1 \
@@ -417,7 +417,7 @@
 			rect			-3 0 170 24
 			origin			ORIGIN_NLT
 			textscale		.3
-			text			"nL Tokens balance:"
+			text			"nL Tokens Balance:"
 			textaligny		20
 			textalignx		3
 			visible			1

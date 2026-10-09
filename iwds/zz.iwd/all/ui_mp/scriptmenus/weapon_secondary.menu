@@ -86,7 +86,7 @@
 		}
 
 		NL_BACKDROP
-		NL_HEADER("Secondary weapon")
+		NL_HEADER("Secondary Weapon")
 
 		itemDef
 		{
@@ -109,6 +109,6 @@
 
 		NL_INFO(40 404)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to loadout", 120, close weapon_secondary; open weapon_american;)
+		NL_HINT_ESC(40 432, "Back to Loadout", 120, close weapon_secondary; open weapon_american;)
 	}
 }

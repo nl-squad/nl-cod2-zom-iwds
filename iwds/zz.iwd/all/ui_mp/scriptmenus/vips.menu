@@ -20,8 +20,8 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(305, 135, "nl_qt_vip")
-		NL_QDVAR(345, nl_vips_dvar)
+		NL_QCARD(285, 135, "nl_qt_vip")
+		NL_QDVAR(325, nl_vips_dvar)
 
 		execKey "0" { scriptMenuResponse "0"; close vips; }
 		execKey "1" { scriptMenuResponse "1"; close vips; }

@@ -57,8 +57,8 @@
 
 		NL_INFO(40 388)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to loadout", 120, close weapon_killstreak_hard; open weapon_american;)
-		NL_HINT_KEY(180 432, "nl_kbd_u", "Unselect all", 90, scriptMenuResponse "reset_ks";)
+		NL_HINT_ESC(40 432, "Back to Loadout", 120, close weapon_killstreak_hard; open weapon_american;)
+		NL_HINT_KEY(180 432, "nl_kbd_u", "Unselect All", 90, scriptMenuResponse "reset_ks";)
 		execKey "u" { scriptMenuResponse "reset_ks"; play "mouse_click"; }
 	}
 }

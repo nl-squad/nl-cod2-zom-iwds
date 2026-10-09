@@ -9,8 +9,8 @@
 #define ORIGIN_SKIN				464 212
 #define ORIGIN_LOAD				40 346
 #define ORIGIN_SAVE				40 370
-#define ORIGIN_SPAWN			456 348
-#define ORIGIN_SPAWN_KEY		548 358
+#define ORIGIN_SPAWN			388 348
+#define ORIGIN_SPAWN_KEY		480 358
 
 #define CARD(_origin, _w, _label, _action) \
 		itemDef \
@@ -140,14 +140,14 @@
 		NL_BACKDROP
 		NL_HEADER("Loadout")
 
-		CARD(ORIGIN_PRIMARY, 272, "Primary weapon", close weapon_american; open weapon_select;)
+		CARD(ORIGIN_PRIMARY, 272, "Primary Weapon", close weapon_american; open weapon_select;)
 		PICTURE(ORIGIN_PRIMARY, 48 24 176 88 0 0, nl_primary)
 
-		CARD(ORIGIN_TACTICAL, 136, "Tactical perk", close weapon_american; open perks_tactical;)
+		CARD(ORIGIN_TACTICAL, 136, "Tactical Perk", close weapon_american; open perks_tactical;)
 		PICTURE(ORIGIN_TACTICAL, 36 28 64 64 0 0, nl_tp)
 		CARD_RESET(ORIGIN_TACTICAL, 92, "Clear", "reset_tactical_perk")
 
-		CARD(ORIGIN_COMBAT, 136, "Combat perk", close weapon_american; open perks_combat;)
+		CARD(ORIGIN_COMBAT, 136, "Combat Perk", close weapon_american; open perks_combat;)
 		PICTURE(ORIGIN_COMBAT, 36 28 64 64 0 0, nl_cp)
 		CARD_RESET(ORIGIN_COMBAT, 92, "Clear", "reset_combat_perk")
 
@@ -173,7 +173,7 @@
 		}
 		CARD_RESET(ORIGIN_KILLSTREAKS, 228, "Clear", "reset_ks")
 
-		CARD(ORIGIN_ZOMBIE, 136, "Zombie profile", close weapon_american; open weapon_zombie;)
+		CARD(ORIGIN_ZOMBIE, 136, "Zombie Profile", close weapon_american; open weapon_zombie;)
 		PICTURE(ORIGIN_ZOMBIE, 36 26 64 64 0 0, nl_zombiegun)
 		CARD_RESET(ORIGIN_ZOMBIE, 92, "Default", "reset_zombie")
 
@@ -197,9 +197,9 @@
 
 		NL_INFO(40 404)
 		NL_FOOTER
-		NL_HINT_KEY(40 432, "nl_kbd_m", "Main menu", 90, close weapon_american; open main;)
+		NL_HINT_KEY(40 432, "nl_kbd_m", "Main Menu", 90, close weapon_american; open main;)
 		execKey "m" { close weapon_american; open main; }
-		NL_HINT_KEY(140 432, "nl_kbd_i", "Game menu", 90, close weapon_american; open ingame;)
+		NL_HINT_KEY(140 432, "nl_kbd_i", "Game Menu", 90, close weapon_american; open ingame;)
 		execKey "i" { close weapon_american; open ingame; }
 	}
 }

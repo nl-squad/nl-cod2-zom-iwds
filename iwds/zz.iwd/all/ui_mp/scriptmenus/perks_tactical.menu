@@ -37,7 +37,7 @@
 		}
 
 		NL_BACKDROP
-		NL_HEADER("Tactical perk")
+		NL_HEADER("Tactical Perk")
 
 		NL_TILE(ORIGIN_T1, "1", "hover_1", "tp1", "Laser Dot", "", "nl_hud_pe1")
 		NL_TILE(ORIGIN_T2, "25", "hover_25", "tp25", "Treasure Seeker", "", "nl_hud_pe2")
@@ -55,6 +55,6 @@
 
 		NL_INFO(40 388)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to loadout", 120, close perks_tactical; open weapon_american;)
+		NL_HINT_ESC(40 432, "Back to Loadout", 120, close perks_tactical; open weapon_american;)
 	}
 }

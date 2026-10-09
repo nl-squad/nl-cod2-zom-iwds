@@ -21,8 +21,8 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(362, 78, "nl_qt_quick")
-		NL_QLIST(402, "1\n2\n3\n4", "Voice messages\nPlayer options\nHunters\nVIP")
+		NL_QCARD(342, 78, "nl_qt_quick")
+		NL_QLIST(382, "1\n2\n3\n4", "Voice Messages\nPlayer Options\nHunters\nVIP")
 
 		execKey "v" { close quickmessage; open voice_cmd; }
 		execKey "1" { close quickmessage; open voice_cmd; }

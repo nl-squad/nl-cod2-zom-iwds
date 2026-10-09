@@ -112,9 +112,9 @@
 		NL_TITLE("Skin")
 
 		NL_RULE(100)
-		NL_TAB(40 78, 128, 64, "WW2 soldiers", "tabon1", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab1; show tabon1;)
+		NL_TAB(40 78, 128, 64, "WW2 Soldiers", "tabon1", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab1; show tabon1;)
 		NL_TAB(172 78, 128, 64, "nL old-school", "tabon2", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab2; show tabon2;)
-		NL_TAB(304 78, 128, 64, "CoD universe", "tabon3", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab3; show tabon3;)
+		NL_TAB(304 78, 128, 64, "CoD Universe", "tabon3", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab3; show tabon3;)
 		NL_TAB(436 78, 128, 64, "Specials", "tabon4", setdvar nl_weapon "nl_blank"; hide tab1; hide tab2; hide tab3; hide tab4; hide tabon1; hide tabon2; hide tabon3; hide tabon4; show tab4; show tabon4;)
 
 		itemDef
@@ -159,6 +159,6 @@
 
 		NL_INFO(40 400)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to loadout", 120, close character_skin; open weapon_american;)
+		NL_HINT_ESC(40 432, "Back to Loadout", 120, close character_skin; open weapon_american;)
 	}
 }

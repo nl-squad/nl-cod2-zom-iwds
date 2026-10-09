@@ -20,8 +20,8 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(314, 126, "nl_qt_statements")
-		NL_QLIST(354, "1\n2\n3\n4\n5\n6\n7\n8\n9", "Enemy spotted!\nEnemy down!\nI'm in position.\nArea secure!\nGrenade!\nSniper!\nNeed reinforcements!\nHold your fire!\nMan down!")
+		NL_QCARD(294, 126, "nl_qt_statements")
+		NL_QLIST(334, "1\n2\n3\n4\n5\n6\n7\n8\n9", "Enemy spotted!\nEnemy down!\nI'm in position.\nArea secure!\nGrenade!\nSniper!\nNeed reinforcements!\nHold your fire!\nMan down!")
 
 		execKey "1" { scriptMenuResponse "1"; close quickstatements }
 		execKey "2" { scriptMenuResponse "2"; close quickstatements }

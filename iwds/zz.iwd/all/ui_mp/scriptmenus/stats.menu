@@ -71,13 +71,12 @@
 		NL_HEADER("Statistics")
 
 		STATS_PANEL(ORIGIN_MINE, "You", "ui_stats1")
-		STATS_PANEL(ORIGIN_OTHER, "Other players", "ui_stats2")
+		STATS_PANEL(ORIGIN_OTHER, "Other Players", "ui_stats2")
 
-		NL_BUTTON(328 330, 84, 42, "Previous player", scriptMenuResponse "left";)
-		NL_BUTTON(516 330, 84, 42, "Next player", scriptMenuResponse "right";)
+		NL_BUTTON(328 330, 84, 42, "Previous Player", scriptMenuResponse "left";)
+		NL_BUTTON(516 330, 84, 42, "Next Player", scriptMenuResponse "right";)
 
-		NL_INFO(40 400)
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to game menu", 130, close stats; open ingame;)
+		NL_HINT_ESC(40 432, "Back to Game Menu", 130, close stats; open ingame;)
 	}
 }

@@ -260,7 +260,7 @@
 			type			ITEM_TYPE_TEXT
 			rect			12 0 0 0 0 0
 			origin			ORIGIN_TITLE
-			text			"Your nL account"
+			text			"Your nL Account"
 			textfont		NL_FONT_BOLD
 			textscale		.4
 			textaligny		22
@@ -291,7 +291,7 @@
 			visible			1
 			decoration
 		}
-		ACCOUNT_TAB(ORIGIN_TAB1, "Log in", loginGroup, hide registerGroup; show loginGroup; setDvar ui_pass ""; setDvar ui_warn "";)
+		ACCOUNT_TAB(ORIGIN_TAB1, "Log In", loginGroup, hide registerGroup; show loginGroup; setDvar ui_pass ""; setDvar ui_warn "";)
 		ACCOUNT_TAB(ORIGIN_TAB2, "Register", registerGroup, hide loginGroup; show registerGroup; setDvar ui_pass ""; setDvar ui_repass ""; setDvar ui_warn "";)
 
 		/// LOGIN ///
@@ -352,7 +352,7 @@
 		}
 		FIELD_MASK(loginGroup, ORIGIN_INPUT2, "ui_display_pass")
 
-		FIELD_LABEL(loginGroup, ORIGIN_INPUT3, "Auto login")
+		FIELD_LABEL(loginGroup, ORIGIN_INPUT3, "Auto Login")
 		itemDef
 		{
 			group			loginGroup
@@ -392,7 +392,7 @@
 			decoration
 		}
 
-		SUBMIT("login_btn", "login_btn_hover", loginGroup, ORIGIN_INPUT4, "Log in", "login")
+		SUBMIT("login_btn", "login_btn_hover", loginGroup, ORIGIN_INPUT4, "Log In", "login")
 		WARNING(loginGroup, 170 334)
 		FIELD_CLEAR(loginGroup, ORIGIN_INPUT2, ui_pass, loginPass)
 
@@ -512,7 +512,7 @@
 		}
 		FIELD_MASK(registerGroup, ORIGIN_INPUT3, "ui_display_pass")
 
-		FIELD_LABEL(registerGroup, ORIGIN_INPUT4, "Repeat password")
+		FIELD_LABEL(registerGroup, ORIGIN_INPUT4, "Repeat Password")
 		itemDef
 		{
 			name			registerRepass
@@ -543,7 +543,7 @@
 		}
 		FIELD_MASK(registerGroup, ORIGIN_INPUT4_BOX, "ui_display_repass")
 
-		SUBMIT("register_btn", "register_btn_hover", registerGroup, ORIGIN_INPUT5, "Create account", "register")
+		SUBMIT("register_btn", "register_btn_hover", registerGroup, ORIGIN_INPUT5, "Create Account", "register")
 		WARNING(registerGroup, 170 362)
 		FIELD_CLEAR(registerGroup, ORIGIN_INPUT3, ui_pass, registerPass)
 		FIELD_CLEAR(registerGroup, ORIGIN_INPUT4_BOX, ui_repass, registerRepass)

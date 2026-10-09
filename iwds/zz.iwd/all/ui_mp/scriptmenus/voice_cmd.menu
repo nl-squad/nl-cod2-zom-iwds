@@ -21,8 +21,8 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(353, 87, "nl_qt_voice")
-		NL_QLIST(393, "1\n2\n3\n4\n5", "Commands\nStatements\nResponses\nCustom voice ^3VIP\nCustom voice ^8Patron")
+		NL_QCARD(333, 87, "nl_qt_voice")
+		NL_QLIST(373, "1\n2\n3\n4\n5", "Commands\nStatements\nResponses\nCustom Voice ^3VIP\nCustom Voice ^8Patron")
 
 		execKey "1" { close voice_cmd; open quickcommands }
 		execKey "2" { close voice_cmd; open quickstatements }

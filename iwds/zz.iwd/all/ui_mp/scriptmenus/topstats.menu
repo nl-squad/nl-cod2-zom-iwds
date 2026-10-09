@@ -63,10 +63,10 @@
 		}
 
 		NL_BACKDROP
-		NL_TITLE("Top players")
+		NL_TITLE("Top Players")
 
 		NL_RULE(100)
-		TOPTAB(40 78, "This month", "month")
+		TOPTAB(40 78, "This Month", "month")
 		TOPTAB(140 78, "Overall", "overall")
 		itemDef
 		{
@@ -173,7 +173,7 @@
 		itemDef
 		{
 			type			ITEM_TYPE_TEXT
-			rect			552 34 0 0 0 0
+			rect			536 34 0 0 0 0
 			origin			ORIGIN_TABLE
 			dvar			"ui_topstats_2"
 			textfont		NL_FONT
@@ -185,6 +185,6 @@
 		}
 
 		NL_FOOTER
-		NL_HINT_ESC(40 432, "Back to game menu", 130, close topstats; open ingame;)
+		NL_HINT_ESC(40 432, "Back to Game Menu", 130, close topstats; open ingame;)
 	}
 }

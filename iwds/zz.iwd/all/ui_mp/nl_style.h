@@ -200,7 +200,7 @@
 		{ \
 			name			"nlt_tooltip" \
 			type			ITEM_TYPE_TEXT \
-			rect			600 64 0 0 0 0 \
+			rect			600 70 0 0 0 0 \
 			text			"Earn nL Tokens through activity, challenges and events." \
 			textfont		NL_FONT \
 			textscale		.2 \
@@ -391,7 +391,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_SHADER \
-			rect			34 12 32 32 0 0 \
+			rect			34 15 32 32 0 0 \
 			origin			_origin \
 			background		"nl_kutka" \
 			dvartest		_dvar \

@@ -33,7 +33,7 @@
 		onESC { }
 
 		NL_BACKDROP
-		NL_HEADER("Match summary")
+		NL_HEADER("Match Summary")
 
 		itemDef
 		{
@@ -743,7 +743,7 @@
 		{
 			type			ITEM_TYPE_TEXT
 			rect			40 148 0 0 0 0
-			text			"EXP to next rank"
+			text			"EXP to Next Rank"
 			textfont		NL_FONT
 			textscale		.19
 			forecolor		NL_MUTED
@@ -881,7 +881,7 @@
 		{
 			type			ITEM_TYPE_TEXT
 			rect			340 100 0 0 0 0
-			text			"Best on this map"
+			text			"Best on This Map"
 			textfont		NL_FONT_BOLD
 			textscale		.26
 			forecolor		NL_TEXT
@@ -1169,7 +1169,7 @@
 		{
 			type			ITEM_TYPE_TEXT
 			rect			40 290 0 0 0 0
-			text			"Vote for the next map"
+			text			"Vote for the Next Map"
 			textfont		NL_FONT_BOLD
 			textscale		.26
 			forecolor		NL_TEXT
