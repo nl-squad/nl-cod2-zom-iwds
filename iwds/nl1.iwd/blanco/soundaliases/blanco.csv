@@ -1,0 +1,5 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+weap_blanco_fire,,blanco/nl_blanco_fire.wav,0.8,,wpnai,0.92,1.08,35,1500,auto,,,,0.55,all_mp,,,,weapon2,,,,
+weap_blanco_fire_plr,,blanco/nl_blanco_fire.wav,0.85,,wpnplyr,0.95,1.05,500000,,auto,,,,0.7,all_mp,,,,,,,,0.2
+weap_blanco_reload,,blanco/nl_blanco_refill.wav,0.6,,wpnai,0.95,1,35,500,voice,,,,0.7,all_mp,,,,weapon2,,,,
+weap_blanco_reload_plr,,blanco/nl_blanco_refill.wav,0.7,,wpnplyr,0.95,1,500000,,voice,,,,0.7,all_mp,,,,,,,,0.2

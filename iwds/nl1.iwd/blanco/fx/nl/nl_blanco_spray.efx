@@ -1,0 +1,230 @@
+Tail
+{
+	name				jet
+
+	flags				usePhysics impactKills impactFx useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				26
+
+	life				500 300
+
+	delay				0 90
+
+	origin				0 -0.3 -0.3 2 0.3 0.3
+
+	velocity			750 -20 -20 900 20 20
+
+	gravity				-500
+
+	rgb
+	{
+		curve
+		[
+			0 0.85 0.93 1
+			1 0.85 0.93 1
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.7 0.9
+			0.7 0.9 1 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 1.6
+			1 1.6 0 0
+		]
+
+		scale			1.8 2.6
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 0 0
+		]
+
+		scale			26 38
+	}
+
+	shaders
+	[
+		gfx_rain_drop
+	]
+
+	impactfx
+	[
+		/fx/misc/rain_splash
+	]
+}
+
+Particle
+{
+	name				droplets
+
+	flags				usePhysics impactKills useAlpha
+
+	count				8
+
+	life				600 300
+
+	delay				0 90
+
+	origin				0 -0.5 -0.5 3 0.5 0.5
+
+	rotation			360 0
+
+	velocity			500 -70 -70 800 70 70
+
+	gravity				-500
+
+	rgb
+	{
+		curve
+		[
+			0 0.8 0.9 1
+			1 0.8 0.9 1
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.6 0.8
+			0.6 0.8 1 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.4 0.1 1
+			0.1 1 1 1
+			1 1 0 0
+		]
+
+		scale			2 3.5
+	}
+
+	shaders
+	[
+		gfx_rain_spray
+	]
+}
+
+Particle
+{
+	name				mist
+
+	flags				useAlpha
+
+	count				3
+
+	life				350 250
+
+	origin				0 -0.5 -0.5 3 0.5 0.5
+
+	rotation			360 0
+
+	rotationDelta		30 -60
+
+	velocity			60 -25 -25 140 25 25
+
+	rgb
+	{
+		curve
+		[
+			0 0.85 0.93 1
+			1 0.85 0.93 1
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.45 1 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3 1 1
+			1 1 0 0
+		]
+
+		scale			8 14
+	}
+
+	shaders
+	[
+		gfx_water_mist
+	]
+}
+
+Particle
+{
+	name				splat
+
+	flags				usePhysics impactFx useAlpha
+
+	count				2
+
+	life				900
+
+	delay				0 90
+
+	origin				0 0 0 2 0 0
+
+	velocity			750 -20 -20 900 20 20
+
+	gravity				-500
+
+	alpha
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 0 0
+		]
+
+		scale			1
+	}
+
+	shaders
+	[
+		gfx_water_mist
+	]
+
+	impactfx
+	[
+		/fx/impacts/decal_watersplat
+	]
+}
