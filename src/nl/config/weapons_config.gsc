@@ -115,7 +115,7 @@ Configure()
 
     level.weapons_ak47 = defineWeapon(10, "ak47_mp", "AK-47", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_ak47, 2, 106, 2500);
-    addPurchaseRequirement(level.weapons_ak47, "sig_mp", 250);
+    addPurchaseRequirement(level.weapons_ak47, "sig_mp", 5);
     addWeaponToMysteryBox(level.weapons_ak47, "xmodel/ak47_w", 1, 1);
 	
 	level.weapons_scar = defineWeapon(20, "scar_mp", "SCAR-H", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -135,7 +135,7 @@ Configure()
 	
 	level.weapons_p90 = defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_p90, 2, 115, 2500);
-	addPurchaseRequirement(level.weapons_p90, "sig_mp", 250);
+	addPurchaseRequirement(level.weapons_p90, "sig_mp", 5);
     addWeaponToMysteryBox(level.weapons_p90, "xmodel/weapon_p90sd", 1, 1);
 	
     level.weapons_mp5 = defineWeapon(18, "mp5_mp", "MP5", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
