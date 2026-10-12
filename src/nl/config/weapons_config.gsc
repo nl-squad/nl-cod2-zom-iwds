@@ -140,7 +140,8 @@ Configure()
 	
     level.weapons_mp5 = defineWeapon(18, "mp5_mp", "MP5", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_mp5, 2, 111, 7500);
-	addPurchaseRequirement(level.weapons_mp5, "p90_mp", 750);
+	addPurchaseRequirement(level.weapons_mp5, "p90_mp", 5);
+	addPurchaseRequirement(level.weapons_mp5, "ak47_mp", 5);
     addWeaponToMysteryBox(level.weapons_mp5, "xmodel/mp5_w", 1, 1);
 	
 	level.weapons_g36c = defineWeapon(30, "g36c_mp", "G36C", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
