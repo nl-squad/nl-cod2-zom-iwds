@@ -1,0 +1,6 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop
+nl_mario_music,,,mario/nl_mario_music.wav,0.8,0.8,,,,300,1500,auto,loaded,looping
+nl_mario_start,,,mario/nl_mario_start.wav,1,1,,,,1000000,,auto,loaded,
+nl_mario_bump,,,mario/nl_mario_bump.wav,1,1,,0.9,1.1,250,2000,auto,loaded,
+nl_mario_skid,,,mario/nl_mario_skid.wav,0.7,0.7,,,,200,1200,auto,loaded,looping
+nl_mario_boost,,,mario/nl_mario_boost.wav,1,1,,,,250,2000,auto,loaded,
