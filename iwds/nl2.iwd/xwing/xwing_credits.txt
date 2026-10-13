@@ -1,0 +1,1 @@
+This work is based on "Xwing" (https://sketchfab.com/3d-models/xwing-d34629ae9cf3432188545f36ac1d9cb8) by GaryPhelps (https://sketchfab.com/GaryPhelps) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/). Changed: simplified to a fifth of its triangles, scaled and converted to a CoD2 xmodel.
