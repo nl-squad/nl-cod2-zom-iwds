@@ -1,7 +1,6 @@
 Configure()
 {
 	level.HQ_enabled = true;
-	level.HQ_hqSpawnRequiredPlayers = 7;
 	level.HQ_captureSecondsDelay = 45;
 	level.HQ_secondsToCapLevel1 = 24;
 	level.HQ_secondsToCapLevel2 = 30;
