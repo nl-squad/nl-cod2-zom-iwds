@@ -5,7 +5,7 @@ Configure()
     a[a.size] = "^1*^9Para^7noize^1.^5.^3.";
     a[a.size] = "^^77x^^88*^^44-^^66LoKKu^^44-";
     a[a.size] = "^^55`^^77Ga^^55ng^^77Zap";
-    a[a.size] = "p o r n e s z ^1_";
+    a[a.size] = "^^00u^^55Reqt";
     a[a.size] = "^^55ERIKZON";
     a[a.size] = "^3MeXicano";
     a[a.size] = "^9I ^7<3 ^9D^7eath^9R^7un ^3#01";
@@ -63,7 +63,7 @@ Configure()
     a[a.size] = "^8Happy";
     a[a.size] = "^^00^5x^9*_OBEY_";
     a[a.size] = "^^00Mahmoud";
-    a[a.size] = "^^00Woo^^11Doo";
+    a[a.size] = "^9R.I.P+ ^7Ach1doX^1.";
     a[a.size] = "^^69<<^^06GO^^69KR^^06>>";
     a[a.size] = "Mama Malej Madzi";
     a[a.size] = "^17th^7Division LaMa";
@@ -86,7 +86,7 @@ Configure()
     a[a.size] = "^^33Makaka";
     a[a.size] = "^^00^7M^51^9lf x Str^5i^7ke^5*";
     a[a.size] = "^^00^7M^51^9lf x P^5o^7ki^5*";
-    a[a.size] = "DaraS^1[^7PL^1]";
+    a[a.size] = "^^99Jeffrey Epstein";
     a[a.size] = "^^11PAT^^33RYCZ^^22ESKO";
     a[a.size] = "^^11Sgt.Randall^^44|AD|";
     a[a.size] = "=[1944]=";
