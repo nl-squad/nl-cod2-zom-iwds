@@ -111,7 +111,7 @@ Configure()
     reward(s, 10, level.DEATHSTREAK_typeSwoosh, 1);
 	reward(s, 5, level.DEATHSTREAK_typeSwoosh, 2);
 	reward(s, 0, level.DEATHSTREAK_typeSwoosh, 3);
-	reward(s, 10, level.DEATHSTREAK_typeAbsorption, 1);
+	reward(s, 5, level.DEATHSTREAK_typeAbsorption, 1);
 	reward(s, 5, level.DEATHSTREAK_typeAbsorption, 2);
 	reward(s, 0, level.DEATHSTREAK_typeAbsorption, 3);
     reward(s, 10, level.DEATHSTREAK_typeToxic, 1);
@@ -121,7 +121,7 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
     reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
-    reward(s, 0, level.DEATHSTREAK_typeIce, 1);
+    reward(s, 5, level.DEATHSTREAK_typeIce, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 	
     s = stage(10, &"Zombie Power^4: ^3Medium ^4| ^7Next In^4: ^7");
@@ -151,7 +151,7 @@ Configure()
 	reward(s, 10, level.DEATHSTREAK_typeSwoosh, 2);
 	reward(s, 0, level.DEATHSTREAK_typeSwoosh, 3);
 	reward(s, 5, level.DEATHSTREAK_typeAbsorption, 1);
-	reward(s, 10, level.DEATHSTREAK_typeAbsorption, 2);
+	reward(s, 5, level.DEATHSTREAK_typeAbsorption, 2);
 	reward(s, 0, level.DEATHSTREAK_typeAbsorption, 3);
     reward(s, 5, level.DEATHSTREAK_typeToxic, 1);
 	reward(s, 10, level.DEATHSTREAK_typeToxic, 2);
@@ -160,7 +160,7 @@ Configure()
 	reward(s, 15, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 3);
     reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
-    reward(s, 0, level.DEATHSTREAK_typeIce, 1);
+    reward(s, 5, level.DEATHSTREAK_typeIce, 1);
     reward(s, 0, level.DEATHSTREAK_typeNade, 1);
 
     s = stage(20, &"Zombie Power^4: ^8Strong ^4| ^7Next In^4: ^7");
@@ -174,7 +174,7 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typeHeavyMutant, 1);
 	reward(s, 10, level.DEATHSTREAK_typeHeavyMutant, 2);
 	reward(s, 5, level.DEATHSTREAK_typeHeavyMutant, 3);
-    reward(s, 0, level.DEATHSTREAK_typeArmoured, 1);
+    reward(s, 5, level.DEATHSTREAK_typeArmoured, 1);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 2);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 3);
     reward(s, 5, level.DEATHSTREAK_typeHighJump, 1);
@@ -198,7 +198,7 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typePotato, 1);
 	reward(s, 10, level.DEATHSTREAK_typePotato, 2);
 	reward(s, 15, level.DEATHSTREAK_typePotato, 3);
-    reward(s, 10, level.DEATHSTREAK_typeStunNade, 1);
+    reward(s, 5, level.DEATHSTREAK_typeStunNade, 1);
     reward(s, 5, level.DEATHSTREAK_typeIce, 1);
     reward(s, 5, level.DEATHSTREAK_typeNade, 1);
 
@@ -213,8 +213,8 @@ Configure()
 	reward(s, 0, level.DEATHSTREAK_typeHeavyMutant, 1);
 	reward(s, 5, level.DEATHSTREAK_typeHeavyMutant, 2);
 	reward(s, 10, level.DEATHSTREAK_typeHeavyMutant, 3);
-    reward(s, 10, level.DEATHSTREAK_typeArmoured, 1);
-	reward(s, 5, level.DEATHSTREAK_typeArmoured, 2);
+    reward(s, 5, level.DEATHSTREAK_typeArmoured, 1);
+	reward(s, 10, level.DEATHSTREAK_typeArmoured, 2);
 	reward(s, 0, level.DEATHSTREAK_typeArmoured, 3);
     reward(s, 0, level.DEATHSTREAK_typeHighJump, 1);
 	reward(s, 15, level.DEATHSTREAK_typeHighJump, 2);
