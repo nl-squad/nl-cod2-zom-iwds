@@ -78,7 +78,7 @@ Configure()
 
 	level.weapons_m14ebr = defineWeapon(25, "m14ebr_mp", "Mk 14 EBR", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase(level.weapons_m14ebr, 1, 117, 12500);
-	addPurchaseRequirement(level.weapons_m14ebr, "barrett_mp", 2500);
+	addPurchaseRequirement(level.weapons_m14ebr, "fal_mp", 2500);
     addWeaponToMysteryBox(level.weapons_m14ebr, "xmodel/weapon_law_m14ebr", 1, 1);
 	
 	level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_RIFLE);
