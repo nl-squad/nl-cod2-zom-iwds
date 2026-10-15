@@ -1,0 +1,20 @@
+Particle
+{
+	life				1
+
+	alpha
+	{
+		start			0
+		end				0
+	}
+
+	size
+	{
+		start			1
+	}
+
+	shaders
+	[
+		gfx_snow_sheet
+	]
+}
