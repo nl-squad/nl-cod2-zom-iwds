@@ -379,6 +379,7 @@
 		PURCHASEWIDE("tab3", ORIGIN_KR5, "striker_mp", "nl_img_striker", "nl_kutka", "Striker", "127", "25 000")
 		PURCHASEWIDE("tab3", ORIGIN_KR7, "dp28_mp", "nl_img_dp28", "nl_kutka", "DP-28", "129", "2 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR8, "rpk_mp", "nl_img_rpk", "nl_kutka", "RPK-74", "108", "7 500")
+		PURCHASEWIDE("tab3", ORIGIN_KR9, "rpd_mp", "nl_img_rpd", "nl_kutka", "RPD", "130", "12 500")
 		PURCHASEWIDE("tab3", ORIGIN_KR10, "saw_mp", "nl_img_saw", "nl_kutka", "M249 SAW", "109", "20 000")
 		ARROW_RIGHT("tab3", ORIGIN_KR1, "250 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR2, "1 000 kills")
@@ -386,6 +387,7 @@
 		ARROW_RIGHT("tab3", ORIGIN_KR4, "5 000 kills")
 		ARROW_DOWN_RIGHT("tab3", ORIGIN_KR1, "250 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR7, "1 000 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR8, "2 500 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR9, "5 000 kills")
 		
 		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
