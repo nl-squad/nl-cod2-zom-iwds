@@ -85,6 +85,19 @@
 		visible MENU_TRUE
 		rect 0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
 		
+		itemDef
+		{
+			name "weaponname"
+			rect -141 -15 100 0
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont NL_FONT
+			textscale .24
+			forecolor 0.85 0.86 0.88 1
+			ownerdraw CG_PLAYER_WEAPON_NAME
+			visible MENU_TRUE
+			decoration
+		}
+
 		// ammo text
 		itemDef 
 		{
@@ -100,19 +113,52 @@
 		}
 	}
 
+	menuDef
+	{
+		name "killstreakkeys"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 640 480 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+
+		itemDef
+		{
+			style WINDOW_STYLE_SHADER
+			rect 139.5 469 11 11
+			background "nl_kbd_dim_lt"
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			style WINDOW_STYLE_SHADER
+			rect 174.5 469 11 11
+			background "nl_kbd_dim_m"
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			style WINDOW_STYLE_SHADER
+			rect 209.5 469 11 11
+			background "nl_kbd_dim_gt"
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
 	// HEALTH BAR
 	menuDef
 	{
 		name "Health"
 		fullScreen MENU_FALSE
 		visible MENU_TRUE
-		rect  0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-		
+		rect 0 0 640 480 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_TOP
+
 		itemDef
 		{
 			name "healthbarback"
-			rect 13 0 130 12
-			forecolor 1.0 1.0 1.0 1.0
+			rect -155 468 152 9
+			forecolor 0.7 0.7 0.7 0.9
 			background "gfx/hud/hud@health_back.tga"
 			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
 			visible MENU_TRUE
@@ -121,20 +167,27 @@
 		itemDef
 		{
 			name "healthbar"
-			rect 14 1 128 10
-			forecolor 0.7 0.4 0.0 1.0
+			rect -154 469 150 7
+			forecolor 0.1 0.85 0.1 0.6
 			background "gfx/hud/hud@health_bar.tga"
 			ownerdraw CG_PLAYER_BAR_HEALTH
 			visible MENU_TRUE
 			decoration
 		}
+	}
+
+	menuDef
+	{
+		name "moneysplash"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 640 480 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_TOP
+
 		itemDef
 		{
-			name "healthbarcross"
-			rect 0 0 12 12
-			forecolor 1.0 1.0 1.0 1.0
-			background "gfx/hud/hud@health_cross.tga"
-			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
+			style WINDOW_STYLE_SHADER
+			rect -206 442 102 32
+			background "blanco_proporties"
 			visible MENU_TRUE
 			decoration
 		}
@@ -145,7 +198,7 @@
 	{
 		name "Low Health"
 		fullScreen MENU_FALSE
-		visible MENU_TRUE
+		visible MENU_FALSE
 		rect 0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		
 		itemDef
