@@ -36,7 +36,7 @@ Configure()
 	tips[tips.size] = "Chimp = Charged Swoosh Jump Ability, 400 HP";
 	tips[tips.size] = "Alien = Health Absorption Ability, 400-800 HP";
 	tips[tips.size] = "Alien can kill nearby Invisible Hunters";
-	tips[tips.size] = "Alien can teleport to a Random Place once per Life";
+	tips[tips.size] = "Level 3 Alien can teleport to a Random Place once per Life";
 	tips[tips.size] = "Nexus can use the Raygun on the next map";
 	tips[tips.size] = "Venom = High Jump Ability, 300 HP";
 	tips[tips.size] = "Yellow Toxic Zombie = Throws Toxic Meat, 350 HP";
