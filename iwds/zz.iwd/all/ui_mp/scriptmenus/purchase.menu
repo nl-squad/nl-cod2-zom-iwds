@@ -225,18 +225,14 @@
 #endif
 
 #ifndef TIER
-#define TIER(_origin, _text) \
+#define TIER(_origin, _image) \
 		itemDef \
 		{ \
 			name			"tiers" \
-			type			ITEM_TYPE_TEXT \
-			rect			0 -8 0 0 0 0 \
+			style			WINDOW_STYLE_SHADER \
+			rect			20 -17 40 10 0 0 \
 			origin			_origin \
-			forecolor		1 1 1 0.6 \
-			textscale		.22 \
-			textalign		ITEM_ALIGN_CENTER \
-			textalignx		40 \
-			text			_text \
+			background		_image \
 			visible			1 \
 			decoration \
 		}
@@ -338,11 +334,11 @@
 		TAB("5", ORIGIN_TAB5, "Skins #1", hide)
 		TAB("6", ORIGIN_TAB6, "Skins #2", hide)
 
-		TIER(ORIGIN_KR1, "Tier I")
-		TIER(ORIGIN_KR2, "Tier II")
-		TIER(ORIGIN_KR3, "Tier III")
-		TIER(ORIGIN_KR4, "Tier IV")
-		TIER(ORIGIN_KR5, "Tier V")
+		TIER(ORIGIN_KR1, "nl_badge_tier1")
+		TIER(ORIGIN_KR2, "nl_badge_tier2")
+		TIER(ORIGIN_KR3, "nl_badge_tier3")
+		TIER(ORIGIN_KR4, "nl_badge_tier4")
+		TIER(ORIGIN_KR5, "nl_badge_tier5")
 
 		PURCHASEWIDE("tab1", ORIGIN_KR1, "g3_mp", "nl_img_g3", "nl_kutka", "G3", "102", "2 500")
 		PURCHASEWIDE("tab1", ORIGIN_KR2, "barrett_mp", "nl_img_barrett", "nl_kutka", "Barrett M82", "103", "5 000")
