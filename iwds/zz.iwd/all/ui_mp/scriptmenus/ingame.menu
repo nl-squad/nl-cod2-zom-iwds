@@ -299,7 +299,7 @@
 
 		NL_BACKDROP
 		NL_HEADER("^7nL^4.^7Zombies")
-		NL_NOTE("Version 6.0")
+		NL_NOTE("Version 6.1")
 
 		execKey "1" { play "mouse_click"; scriptMenuResponse "changeweapon"; }
 		execKey "2" { play "mouse_click"; scriptMenuResponse "purchases"; }
