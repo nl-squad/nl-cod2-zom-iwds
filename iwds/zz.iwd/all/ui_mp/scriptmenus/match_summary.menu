@@ -1191,7 +1191,7 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			40 302 128 96 0 0
+			rect			42 304 126 94 0 0
 			backcolor		NL_SURFACE
 			visible			1
 			decoration
@@ -1200,17 +1200,8 @@
 		{
 			name			vote1
 			style			WINDOW_STYLE_FILLED
-			rect			40 302 128 96 0 0
+			rect			42 304 126 94 0 0
 			backcolor		NL_BLUE_SOFT
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			vote1
-			style			WINDOW_STYLE_FILLED
-			rect			41 303 3 94 0 0
-			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
@@ -1265,8 +1256,17 @@
 		}
 		itemDef
 		{
+			name			vote1
 			style			WINDOW_STYLE_FILLED
-			rect			184 302 128 96 0 0
+			rect			41 303 3 96 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			186 304 126 94 0 0
 			backcolor		NL_SURFACE
 			visible			1
 			decoration
@@ -1275,17 +1275,8 @@
 		{
 			name			vote2
 			style			WINDOW_STYLE_FILLED
-			rect			184 302 128 96 0 0
+			rect			186 304 126 94 0 0
 			backcolor		NL_BLUE_SOFT
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			vote2
-			style			WINDOW_STYLE_FILLED
-			rect			185 303 3 94 0 0
-			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
@@ -1340,8 +1331,17 @@
 		}
 		itemDef
 		{
+			name			vote2
 			style			WINDOW_STYLE_FILLED
-			rect			328 302 128 96 0 0
+			rect			185 303 3 96 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			330 304 126 94 0 0
 			backcolor		NL_SURFACE
 			visible			1
 			decoration
@@ -1350,17 +1350,8 @@
 		{
 			name			vote3
 			style			WINDOW_STYLE_FILLED
-			rect			328 302 128 96 0 0
+			rect			330 304 126 94 0 0
 			backcolor		NL_BLUE_SOFT
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			vote3
-			style			WINDOW_STYLE_FILLED
-			rect			329 303 3 94 0 0
-			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
@@ -1415,8 +1406,17 @@
 		}
 		itemDef
 		{
+			name			vote3
 			style			WINDOW_STYLE_FILLED
-			rect			472 302 128 96 0 0
+			rect			329 303 3 96 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			474 304 126 94 0 0
 			backcolor		NL_SURFACE
 			visible			1
 			decoration
@@ -1425,17 +1425,8 @@
 		{
 			name			vote4
 			style			WINDOW_STYLE_FILLED
-			rect			472 302 128 96 0 0
+			rect			474 304 126 94 0 0
 			backcolor		NL_BLUE_SOFT
-			visible			1
-			decoration
-		}
-		itemDef
-		{
-			name			vote4
-			style			WINDOW_STYLE_FILLED
-			rect			473 303 3 94 0 0
-			backcolor		NL_BLUE
 			visible			1
 			decoration
 		}
@@ -1487,6 +1478,15 @@
 				show vote4;
 				play "mouse_click";
 			}
+		}
+		itemDef
+		{
+			name			vote4
+			style			WINDOW_STYLE_FILLED
+			rect			473 303 3 96 0 0
+			backcolor		NL_BLUE
+			visible			1
+			decoration
 		}
 		itemDef
 		{
