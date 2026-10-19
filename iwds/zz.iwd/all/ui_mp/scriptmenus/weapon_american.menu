@@ -5,6 +5,7 @@
 #define ORIGIN_TACTICAL			320 84
 #define ORIGIN_COMBAT			464 84
 #define ORIGIN_KILLSTREAKS		40 212
+#define ORIGIN_KILLSTREAK_PICTURES	42 214
 #define ORIGIN_ZOMBIE			320 212
 #define ORIGIN_SKIN				464 212
 #define ORIGIN_SAVE				300 348
@@ -12,11 +13,11 @@
 #define ORIGIN_SPAWN			456 348
 #define ORIGIN_SPAWN_KEY		548 358
 
-#define CARD(_origin, _w, _label, _action) \
+#define CARD(_origin, _w, _innerW, _label, _action) \
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 _w 120 0 0 \
+			rect			2 2 _innerW 118 0 0 \
 			origin			_origin \
 			backcolor		NL_SURFACE \
 			visible			1 \
@@ -95,15 +96,24 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
+			rect			_x 32 50 50 0 0 \
+			origin			ORIGIN_KILLSTREAK_PICTURES \
+			backcolor		0 0 0 0.3 \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
 			rect			_x 32 52 52 0 0 \
 			origin			ORIGIN_KILLSTREAKS \
-			backcolor		0 0 0 0.3 \
+			backcolor		NL_CLEAR \
 			border			1 \
 			bordercolor		NL_LINE \
 			visible			1 \
 			decoration \
 		} \
-		PICTURE(ORIGIN_KILLSTREAKS, _x 32 52 52 0 0, _dvar)
+		PICTURE(ORIGIN_KILLSTREAK_PICTURES, _x 32 50 50 0 0, _dvar)
 
 #define CARD_KEY(_origin, _x, _image) \
 		itemDef \
@@ -226,22 +236,22 @@
 		execKey "3" { scriptMenuResponse "loadout3"; }
 		execKey "4" { scriptMenuResponse "loadout4"; }
 
-		CARD(ORIGIN_PRIMARY, 272, "Primary Weapon", close weapon_american; open weapon_select;)
+		CARD(ORIGIN_PRIMARY, 272, 270, "Primary Weapon", close weapon_american; open weapon_select;)
 		PICTURE(ORIGIN_PRIMARY, 48 24 176 88 0 0, nl_primary)
 		CARD_KEY(ORIGIN_PRIMARY, 246, "nl_kbd_dim_w")
 		execKey "w" { close weapon_american; open weapon_select; }
 
-		CARD(ORIGIN_TACTICAL, 136, "Tactical Perk", close weapon_american; open perks_tactical;)
+		CARD(ORIGIN_TACTICAL, 136, 134, "Tactical Perk", close weapon_american; open perks_tactical;)
 		PICTURE(ORIGIN_TACTICAL, 36 28 64 64 0 0, nl_tp)
 		CARD_KEY(ORIGIN_TACTICAL, 110, "nl_kbd_dim_t")
 		execKey "t" { close weapon_american; open perks_tactical; }
 
-		CARD(ORIGIN_COMBAT, 136, "Combat Perk", close weapon_american; open perks_combat;)
+		CARD(ORIGIN_COMBAT, 136, 134, "Combat Perk", close weapon_american; open perks_combat;)
 		PICTURE(ORIGIN_COMBAT, 36 28 64 64 0 0, nl_cp)
 		CARD_KEY(ORIGIN_COMBAT, 110, "nl_kbd_dim_c")
 		execKey "c" { close weapon_american; open perks_combat; }
 
-		CARD(ORIGIN_KILLSTREAKS, 272, "Killstreaks", close weapon_american; scriptMenuResponse "open_killstreak_menu";)
+		CARD(ORIGIN_KILLSTREAKS, 272, 270, "Killstreaks", close weapon_american; scriptMenuResponse "open_killstreak_menu";)
 		CARD_KEY(ORIGIN_KILLSTREAKS, 246, "nl_kbd_dim_k")
 		execKey "k" { close weapon_american; scriptMenuResponse "open_killstreak_menu"; }
 		KS_SLOT(17, nl_kr_1)
@@ -265,12 +275,12 @@
 		}
 		CARD_RESET(ORIGIN_KILLSTREAKS, 228, "Clear", "reset_ks")
 
-		CARD(ORIGIN_ZOMBIE, 136, "Zombie Profile", close weapon_american; open weapon_zombie;)
+		CARD(ORIGIN_ZOMBIE, 136, 134, "Zombie Profile", close weapon_american; open weapon_zombie;)
 		PICTURE(ORIGIN_ZOMBIE, 36 26 64 64 0 0, nl_zombiegun)
 		CARD_KEY(ORIGIN_ZOMBIE, 110, "nl_kbd_dim_z")
 		execKey "z" { close weapon_american; open weapon_zombie; }
 
-		CARD(ORIGIN_SKIN, 136, "Skin", close weapon_american; open character_skin;)
+		CARD(ORIGIN_SKIN, 136, 134, "Skin", close weapon_american; open character_skin;)
 		PICTURE(ORIGIN_SKIN, 22 18 92 92 0 0, nl_appereance)
 		CARD_KEY(ORIGIN_SKIN, 110, "nl_kbd_dim_a")
 		execKey "a" { close weapon_american; open character_skin; }

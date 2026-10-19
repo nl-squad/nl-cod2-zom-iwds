@@ -767,8 +767,16 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			40 160 82 56 0 0
+			rect			42 162 80 54 0 0
 			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			40 160 82 56 0 0
+			backcolor		NL_CLEAR
 			border			1
 			bordercolor		NL_LINE
 			visible			1
@@ -801,8 +809,16 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			129 160 82 56 0 0
+			rect			131 162 80 54 0 0
 			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			129 160 82 56 0 0
+			backcolor		NL_CLEAR
 			border			1
 			bordercolor		NL_LINE
 			visible			1
@@ -835,8 +851,16 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			218 160 82 56 0 0
+			rect			220 162 80 54 0 0
 			backcolor		NL_SURFACE
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			218 160 82 56 0 0
+			backcolor		NL_CLEAR
 			border			1
 			bordercolor		NL_LINE
 			visible			1

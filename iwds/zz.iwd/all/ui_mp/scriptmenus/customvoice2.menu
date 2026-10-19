@@ -20,7 +20,7 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(294, 126, "nl_qt_voice_patron")
+		NL_QCARD(294, 126, 124, "nl_qt_voice_patron")
 		NL_QLIST(334, "1\n2\n3\n4\n5\n6\n7\n8\n9", "Another one.\nBozzy czy Ty to widzisz?\nDobre, pomaranczowe.\nDamn.\nJestem hardkorem!\nOMG!\nTo jest zajebiste!\nArrrgh, this sucks.\nNossa nossa!")
 
 		execKey "1" { scriptMenuResponse "1"; close customvoice2 }

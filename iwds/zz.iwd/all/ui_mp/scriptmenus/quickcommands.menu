@@ -20,7 +20,7 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(294, 126, "nl_qt_commands")
+		NL_QCARD(294, 126, 124, "nl_qt_commands")
 		NL_QLIST(334, "1\n2\n3\n4\n5\n6\n7\n8\n9", "Follow me!\nMove in!\nFall back!\nSuppressing fire!\nAttack left flank!\nAttack right flank!\nHold this position!\nRegroup!\nDefend this position!")
 
 		execKey "1" { scriptMenuResponse "1"; close quickcommands; }

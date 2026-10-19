@@ -20,7 +20,7 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(323, 97, "nl_qt_hunters")
+		NL_QCARD(323, 97, 95, "nl_qt_hunters")
 		NL_QDVAR(363, nl_hunters_dvar)
 
 		execKey "0" { scriptMenuResponse "0"; close hunters; }

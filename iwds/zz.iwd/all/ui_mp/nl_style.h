@@ -308,14 +308,23 @@
 		}
 
 // Small secondary button
-#define NL_BUTTON(_origin, _w, _cx, _text, _action) \
+#define NL_BUTTON(_origin, _w, _innerW, _cx, _text, _action) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 _innerW 16 0 0 \
+			origin			_origin \
+			backcolor		NL_SURFACE \
+			visible			1 \
+			decoration \
+		} \
 		itemDef \
 		{ \
 			type			ITEM_TYPE_BUTTON \
 			style			WINDOW_STYLE_FILLED \
 			rect			0 0 _w 18 0 0 \
 			origin			_origin \
-			backcolor		NL_SURFACE \
+			backcolor		NL_CLEAR \
 			border			1 \
 			bordercolor		NL_LINE \
 			text			_text \
@@ -347,7 +356,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 100 84 0 0 \
+			rect			2 2 98 82 0 0 \
 			origin			_origin \
 			backcolor		NL_SURFACE \
 			visible			1 \
@@ -356,7 +365,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
-			rect			0 0 100 84 0 0 \
+			rect			2 2 98 82 0 0 \
 			origin			_origin \
 			backcolor		NL_BLUE_SOFT \
 			dvartest		_dvar \
@@ -402,7 +411,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
-			rect			1 1 3 82 0 0 \
+			rect			1 1 3 84 0 0 \
 			origin			_origin \
 			backcolor		NL_BLUE \
 			dvartest		_dvar \
@@ -460,12 +469,21 @@
 		}
 
 // Quick message card anchored bottom-left; rows use the script's "N. Name" text pitch (.2 = 9.6px)
-#define NL_QCARD(_y, _h, _title) \
+#define NL_QCARD(_y, _h, _innerH, _title) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			26 _y 130 _innerH 0 0 \
+			origin			0 2 \
+			backcolor		NL_SURFACE_SOLID \
+			visible			1 \
+			decoration \
+		} \
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
 			rect			24 _y 132 _h 0 0 \
-			backcolor		NL_SURFACE_SOLID \
+			backcolor		NL_CLEAR \
 			border			1 \
 			bordercolor		NL_LINE \
 			visible			1 \
@@ -491,7 +509,7 @@
 		itemDef \
 		{ \
 			style			WINDOW_STYLE_FILLED \
-			rect			24 _y 132 1 0 0 \
+			rect			25 _y 132 1 0 0 \
 			origin			0 28 \
 			backcolor		NL_LINE \
 			visible			1 \

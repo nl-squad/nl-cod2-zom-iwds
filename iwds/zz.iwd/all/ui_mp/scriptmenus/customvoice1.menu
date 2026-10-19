@@ -20,7 +20,7 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(294, 126, "nl_qt_voice_vip")
+		NL_QCARD(294, 126, 124, "nl_qt_voice_vip")
 		NL_QLIST(334, "1\n2\n3\n4\n5\n6\n7\n8\n9", "Ale urwal! Ale to bylo dobre!\nBede gral w gre.\nBro.\nDamn I'm good.\nFuck you.\nMiota nim jak szatan!\n*Risitas laugh*\nJestem kaskaderem!\nDo mycia!")
 
 		execKey "1" { scriptMenuResponse "1"; close customvoice1 }

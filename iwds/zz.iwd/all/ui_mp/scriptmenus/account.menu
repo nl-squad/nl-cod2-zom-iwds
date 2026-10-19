@@ -38,11 +38,23 @@
 			textscale		.24 \
 			textalignx		-4 \
 			style			WINDOW_STYLE_FILLED \
-			backcolor		0 0 0 0.55 \
+			backcolor		NL_CLEAR \
 			forecolor		NL_TEXT \
 			border			WINDOW_BORDER_FULL \
 			bordercolor		NL_LINE_STRONG \
 			visible			1
+
+#define FIELD_FILL(_group, _origin) \
+		itemDef \
+		{ \
+			group			_group \
+			style			WINDOW_STYLE_FILLED \
+			rect			102 6 198 16 0 0 \
+			origin			_origin \
+			backcolor		0 0 0 0.55 \
+			visible			1 \
+			decoration \
+		}
 
 // Masked password shown over its edit field
 #define FIELD_MASK(_group, _origin, _dvar) \
@@ -296,6 +308,7 @@
 
 		/// LOGIN ///
 		FIELD_LABEL(loginGroup, ORIGIN_INPUT1, "Login")
+		FIELD_FILL(loginGroup, ORIGIN_INPUT1)
 		itemDef
 		{
 			group			loginGroup
@@ -323,6 +336,7 @@
 		}
 
 		FIELD_LABEL(loginGroup, ORIGIN_INPUT2, "Password")
+		FIELD_FILL(loginGroup, ORIGIN_INPUT2)
 		itemDef
 		{
 			name			loginPass
@@ -355,12 +369,22 @@
 		FIELD_LABEL(loginGroup, ORIGIN_INPUT3, "Auto Login")
 		itemDef
 		{
+			style			WINDOW_STYLE_FILLED
+			rect			102 4 14 14 0 0
+			backcolor		0 0 0 0.55
+			group			loginGroup
+			origin			ORIGIN_INPUT3
+			visible			1
+			decoration
+		}
+		itemDef
+		{
 			group			loginGroup
 			type			ITEM_TYPE_BUTTON
 			style			WINDOW_STYLE_FILLED
 			rect			100 2 16 16 0 0
 			origin			ORIGIN_INPUT3
-			backcolor		0 0 0 0.55
+			backcolor		NL_CLEAR
 			border			1
 			bordercolor		NL_LINE_STRONG
 			visible			1
@@ -398,6 +422,7 @@
 
 		/// REGISTER ///
 		FIELD_LABEL(registerGroup, ORIGIN_INPUT1, "Login")
+		FIELD_FILL(registerGroup, ORIGIN_INPUT1)
 		itemDef
 		{
 			group			registerGroup
@@ -425,6 +450,7 @@
 		}
 
 		FIELD_LABEL(registerGroup, ORIGIN_INPUT2, "Email")
+		FIELD_FILL(registerGroup, ORIGIN_INPUT2)
 		itemDef
 		{
 			group			registerGroup
@@ -482,6 +508,7 @@
 		}
 
 		FIELD_LABEL(registerGroup, ORIGIN_INPUT3, "Password")
+		FIELD_FILL(registerGroup, ORIGIN_INPUT3)
 		itemDef
 		{
 			name			registerPass
@@ -513,6 +540,7 @@
 		FIELD_MASK(registerGroup, ORIGIN_INPUT3, "ui_display_pass")
 
 		FIELD_LABEL(registerGroup, ORIGIN_INPUT4, "Repeat Password")
+		FIELD_FILL(registerGroup, ORIGIN_INPUT4_BOX)
 		itemDef
 		{
 			name			registerRepass
@@ -570,6 +598,6 @@
 			decoration
 		}
 
-		NL_BUTTON(40 440, 84, 42, "Disconnect", scriptMenuResponse "leave";)
+		NL_BUTTON(40 440, 84, 82, 42, "Disconnect", scriptMenuResponse "leave";)
 	}
 }

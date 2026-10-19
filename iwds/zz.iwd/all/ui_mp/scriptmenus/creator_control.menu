@@ -67,7 +67,7 @@
 // Two-way switch; _chosen names this side's highlight, shown on click while the other side's hides.
 // The highlight sits inside the border, which the game draws a unit right and down from the rect
 #define CC_TOGGLE(_origin, _w, _innerW, _cx, _text, _chosen, _other, _visible, _response) \
-		NL_BUTTON(_origin, _w, _cx, _text, scriptMenuResponse _response; show _chosen; hide _other;) \
+		NL_BUTTON(_origin, _w, _innerW, _cx, _text, scriptMenuResponse _response; show _chosen; hide _other;) \
 		itemDef \
 		{ \
 			name			_chosen \

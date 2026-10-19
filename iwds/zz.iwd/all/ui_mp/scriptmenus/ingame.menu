@@ -356,11 +356,11 @@
 			visible			1
 			decoration
 		}
-		RECORD_STRIPE(18)
-		RECORD_STRIPE(42)
-		RECORD_STRIPE(66)
-		RECORD_STRIPE(90)
-		RECORD_STRIPE(114)
+		RECORD_STRIPE(17)
+		RECORD_STRIPE(41)
+		RECORD_STRIPE(65)
+		RECORD_STRIPE(89)
+		RECORD_STRIPE(113)
 		itemDef
 		{
 			name			"map_records"
@@ -484,8 +484,16 @@
 		itemDef
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			200 176 240 112 0 0
+			rect			202 178 238 110 0 0
 			backcolor		NL_SURFACE_SOLID
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			200 176 240 112 0 0
+			backcolor		NL_CLEAR
 			border			1
 			bordercolor		NL_LINE
 			visible			1
