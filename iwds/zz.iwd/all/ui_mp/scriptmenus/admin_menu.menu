@@ -107,6 +107,7 @@
 		execKey "7" { scriptMenuResponse "7"; close admin_menu; }
 		execKey "8" { scriptMenuResponse "8"; close admin_menu; }
 		execKey "9" { scriptMenuResponse "9"; close admin_menu; }
+		execKey "x" { scriptMenuResponse "x"; close admin_menu; }
 
 		itemDef
 		{
@@ -120,6 +121,22 @@
 			textscale		.24
 			textaligny		8
 			text			"^91^4. ^7Aim ^4& ^9execute ^7!block \n^92^4. ^7Aim ^4& ^9execute ^7!warn \n^93^4. ^7Aim ^4& ^9execute ^7!kill \n^94^4. ^9Toggle ^7Bash Mode \n \n \n \n \n^99^4. ^9Finish ^7Map \n^90^4. ^9Map ^7Restart \n"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"creator"
+			visible			1
+			rect			16 62 0 0
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"^9X^4. ^9Creator ^7Control"
+			dvartest		"ui_creator"
+			showDvar		{ "1" }
 			decoration
 		}
 	}

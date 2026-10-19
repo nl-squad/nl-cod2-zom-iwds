@@ -260,11 +260,11 @@ Configure()
     // Grenades
     level.weapons_potato = defineGrenade(91, "potato_mp");
     level.weapons_grenade = defineGrenade(92, "grenade_mp");
-    level.weapons_big_nade = defineGrenade(93, "big_nade_mp");
-    level.weapons_dummy = defineGrenade(94, "dummy_mp");
-    level.weapons_zom_nade = defineGrenade(95, "zom_nade_mp");
-    level.weapons_body = defineGrenade(96, "body_mp");
-    level.weapons_thermite = defineGrenade(97, "thermite_mp");
+    level.weapons_big_grenade = defineGrenade(93, "big_grenade_mp");
+    level.weapons_stun_nade = defineGrenade(94, "stun_nade_mp");
+    level.weapons_zombie_grenade = defineGrenade(95, "zombie_grenade_mp");
+    level.weapons_toxic_meat = defineGrenade(96, "toxic_meat_mp");
+    level.weapons_ice_nade = defineGrenade(97, "ice_nade_mp");
 
     // Killstreak
 	level.weapons_thunder = defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);
@@ -272,11 +272,11 @@ Configure()
     level.weapons_rocket = defineNonSelectable(111, "rocket_mp", level.KIND_KILLSTREAK);
     level.weapons_launcher = defineNonSelectable(112, "launcher_mp", level.KIND_KILLSTREAK);
     level.weapons_panzerschreck = defineNonSelectable(113, "panzerschreck_mp", level.KIND_KILLSTREAK);
-    level.weapons_det = defineNonSelectable(114, "det_mp", level.KIND_KILLSTREAK);
+    level.weapons_detonator = defineNonSelectable(114, "detonator_mp", level.KIND_KILLSTREAK);
 
     level.weapons_explode = defineNonSelectable(116, "explode_mp", level.KIND_KILLSTREAK);
     level.weapons_nuke = defineNonSelectable(118, "nuke_mp", level.KIND_KILLSTREAK);
-    level.weapons_fire = defineNonSelectable(120, "fire_mp", level.KIND_KILLSTREAK);
+    level.weapons_burn = defineNonSelectable(120, "burn_mp", level.KIND_KILLSTREAK);
     level.weapons_raptor = defineNonSelectable(121, "raptor_mp", level.KIND_KILLSTREAK);
     level.weapons_drone = defineNonSelectable(128, "drone_mp", level.KIND_KILLSTREAK);
 

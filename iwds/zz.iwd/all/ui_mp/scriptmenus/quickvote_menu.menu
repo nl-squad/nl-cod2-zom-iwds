@@ -91,11 +91,22 @@
 		/// ANSWER BOXES ///
 		itemDef
 		{
+			style			WINDOW_STYLE_FILLED
+			rect			-18 14 16 16
+			backcolor		.6 .6 .6 .5
+			visible			1
+			origin			ORIGIN_VOTE1
+			dvartest		"nl_max_answers"
+			showDvar		{ "1"; "2"; "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
 			visible			1
 			style			WINDOW_STYLE_FILLED
 			rect			-20 12 18 18
 			origin			ORIGIN_VOTE1
-			backcolor		.6 .6 .6 .5
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			dvartest		"nl_max_answers"
@@ -123,11 +134,22 @@
 
 		itemDef
 		{
+			style			WINDOW_STYLE_FILLED
+			rect			-18 14 16 16
+			backcolor		.6 .6 .6 .5
+			visible			1
+			origin			ORIGIN_VOTE2
+			dvartest		"nl_max_answers"
+			showDvar		{ "2"; "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
 			visible			1
 			style			WINDOW_STYLE_FILLED
 			rect			-20 12 18 18
 			origin			ORIGIN_VOTE2
-			backcolor		.6 .6 .6 .5
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			dvartest		"nl_max_answers"
@@ -155,11 +177,22 @@
 
 		itemDef
 		{
+			style			WINDOW_STYLE_FILLED
+			rect			-18 14 16 16
+			backcolor		.6 .6 .6 .5
+			visible			1
+			origin			ORIGIN_VOTE3
+			dvartest		"nl_max_answers"
+			showDvar		{ "3"; "4"; }
+			decoration
+		}
+		itemDef
+		{
 			visible			1
 			style			WINDOW_STYLE_FILLED
 			rect			-20 12 18 18
 			origin			ORIGIN_VOTE3
-			backcolor		.6 .6 .6 .5
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			dvartest		"nl_max_answers"
@@ -187,11 +220,22 @@
 
 		itemDef
 		{
+			style			WINDOW_STYLE_FILLED
+			rect			-18 14 16 16
+			backcolor		.6 .6 .6 .5
+			visible			1
+			origin			ORIGIN_VOTE4
+			dvartest		"nl_max_answers"
+			showDvar		{ "4" }
+			decoration
+		}
+		itemDef
+		{
 			visible			1
 			style			WINDOW_STYLE_FILLED
 			rect			-20 12 18 18
 			origin			ORIGIN_VOTE4
-			backcolor		.6 .6 .6 .5
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			dvartest		"nl_max_answers"

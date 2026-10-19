@@ -1,0 +1,433 @@
+#include "ui_mp/menudef.h"
+#include "ui_mp/nl_style.h"
+
+// Script-filled player row: _name holds the name on the left, _detail its rank, score and time played on the right,
+// and empty rows hide; the row reads as chosen while cc_ps equals _index
+#define CC_PLAYER(_y, _index, _name, _detail, _response) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			40 _y 180 18 0 0 \
+			backcolor		NL_BLUE_SOFT \
+			dvartest		"cc_ps" \
+			showDvar		{ _index } \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			46 _y 0 0 0 0 \
+			dvar			_name \
+			textfont		NL_FONT \
+			textscale		.2 \
+			textaligny		13 \
+			forecolor		NL_TEXT \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_TEXT \
+			rect			216 _y 0 0 0 0 \
+			dvar			_detail \
+			textfont		NL_FONT \
+			textscale		.15 \
+			textalign		ITEM_ALIGN_RIGHT \
+			textaligny		12 \
+			forecolor		NL_MUTED \
+			visible			1 \
+			decoration \
+		} \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			style			WINDOW_STYLE_FILLED \
+			rect			40 _y 180 18 0 0 \
+			backcolor		NL_CLEAR \
+			dvartest		_name \
+			hideDvar		{ "" } \
+			visible			1 \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				setcolor backcolor 1 1 1 0.06; \
+			} \
+			mouseExit \
+			{ \
+				setcolor backcolor NL_CLEAR; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _response; \
+			} \
+		}
+
+// Two-way switch; _chosen names this side's highlight, shown on click while the other side's hides.
+// The highlight sits inside the border, which the game draws a unit right and down from the rect
+#define CC_TOGGLE(_origin, _w, _innerW, _cx, _text, _chosen, _other, _visible, _response) \
+		NL_BUTTON(_origin, _w, _innerW, _cx, _text, scriptMenuResponse _response; show _chosen; hide _other;) \
+		itemDef \
+		{ \
+			name			_chosen \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 _innerW 16 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE_SOFT \
+			visible			_visible \
+			decoration \
+		}
+
+// Page arrow for the players, hidden while cc_pp is empty (everyone fits on one page)
+#define CC_PAGER_ARROW(_x, _image, _response) \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			style			WINDOW_STYLE_SHADER \
+			rect			_x 368 18 18 0 0 \
+			background		_image \
+			forecolor		1 1 1 0.8 \
+			dvartest		"cc_pp" \
+			hideDvar		{ "" } \
+			visible			1 \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				setcolor forecolor 1 1 1 1; \
+			} \
+			mouseExit \
+			{ \
+				setcolor forecolor 1 1 1 0.8; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _response; \
+			} \
+		}
+
+// Text tab; _marker names its blue underline
+#define CC_TAB(_origin, _text, _marker, _visible, _action) \
+		itemDef \
+		{ \
+			type			ITEM_TYPE_BUTTON \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 100 22 0 0 \
+			origin			_origin \
+			backcolor		NL_CLEAR \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.24 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		50 \
+			textaligny		15 \
+			forecolor		NL_TEXT_DIM \
+			visible			1 \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				setcolor backcolor 1 1 1 0.06; \
+			} \
+			mouseExit \
+			{ \
+				setcolor backcolor NL_CLEAR; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				_action \
+			} \
+		} \
+		itemDef \
+		{ \
+			name			_marker \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 21 100 2 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE \
+			visible			_visible \
+			decoration \
+		}
+
+// Group heading above a row of tiles, shown with its tab (_name)
+#define CC_LABEL(_origin, _name, _visible, _text) \
+		itemDef \
+		{ \
+			name			_name \
+			type			ITEM_TYPE_TEXT \
+			rect			0 0 0 0 0 0 \
+			origin			_origin \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.18 \
+			textaligny		9 \
+			forecolor		NL_MUTED \
+			visible			_visible \
+			decoration \
+		}
+
+// Tier badge heading a row of tiles, shown with its tab (_name)
+#define CC_BADGE(_origin, _name, _visible, _image) \
+		itemDef \
+		{ \
+			name			_name \
+			style			WINDOW_STYLE_SHADER \
+			rect			0 0 40 10 0 0 \
+			origin			_origin \
+			background		_image \
+			visible			_visible \
+			decoration \
+		}
+
+// Tile picking a reward: the tile is its own button; its highlight shows while cc_sel, which the script sets on a pick,
+// equals _reward
+#define CC_TILE(_origin, _name, _visible, _text, _reward, _pick) \
+		itemDef \
+		{ \
+			name			_name \
+			type			ITEM_TYPE_BUTTON \
+			style			WINDOW_STYLE_FILLED \
+			rect			0 0 50 48 0 0 \
+			origin			_origin \
+			backcolor		NL_SURFACE \
+			border			1 \
+			bordercolor		NL_LINE \
+			text			_text \
+			textfont		NL_FONT \
+			textscale		.15 \
+			textalign		ITEM_ALIGN_CENTER \
+			textalignx		25 \
+			textaligny		43 \
+			forecolor		NL_TEXT_DIM \
+			visible			_visible \
+			mouseEnter \
+			{ \
+				play "mouse_over"; \
+				setcolor bordercolor NL_LINE_HOVER; \
+			} \
+			mouseExit \
+			{ \
+				setcolor bordercolor NL_LINE; \
+			} \
+			action \
+			{ \
+				play "mouse_click"; \
+				scriptMenuResponse _pick; \
+			} \
+		} \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			2 2 48 46 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE_SOFT \
+			dvartest		"cc_sel" \
+			showDvar		{ _reward } \
+			visible			1 \
+			decoration \
+		}
+
+// Blue bar over the picked tile's left border, which the game draws a unit right and down from the rect
+#define CC_PICKED_BAR(_origin, _reward) \
+		itemDef \
+		{ \
+			style			WINDOW_STYLE_FILLED \
+			rect			1 1 3 48 0 0 \
+			origin			_origin \
+			backcolor		NL_BLUE \
+			dvartest		"cc_sel" \
+			showDvar		{ _reward } \
+			visible			1 \
+			decoration \
+		}
+
+#define CC_WEAPON(_origin, _text, _icon, _reward, _pick) \
+		CC_TILE(_origin, "weapons", 1, _text, _reward, _pick) \
+		itemDef \
+		{ \
+			name			"weapons" \
+			style			WINDOW_STYLE_SHADER \
+			rect			4 6 42 21 0 0 \
+			origin			_origin \
+			background		_icon \
+			visible			1 \
+			decoration \
+		} \
+		CC_PICKED_BAR(_origin, _reward)
+
+#define CC_KILLSTREAK(_origin, _text, _icon, _reward, _pick) \
+		CC_TILE(_origin, "killstreaks", 0, _text, _reward, _pick) \
+		itemDef \
+		{ \
+			name			"killstreaks" \
+			style			WINDOW_STYLE_SHADER \
+			rect			11 3 28 28 0 0 \
+			origin			_origin \
+			background		_icon \
+			visible			0 \
+			decoration \
+		} \
+		CC_PICKED_BAR(_origin, _reward)
+
+{
+	menuDef
+	{
+		name			"creator_control"
+		rect			0 0 640 480 0 0
+		focuscolor		NL_FOCUS
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onOpen
+		{
+			show weapons;
+			hide killstreaks;
+			show tab_weapons;
+			hide tab_killstreaks;
+			show filter_all;
+			hide filter_humans;
+		}
+		onEsc
+		{
+			close creator_control;
+		}
+
+		NL_BACKDROP
+		NL_HEADER("Creator Control")
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			600 34 0 0 0 0
+			dvar			"cc_target"
+			textfont		NL_FONT
+			textscale		.24
+			textalign		ITEM_ALIGN_RIGHT
+			textaligny		22
+			forecolor		NL_TEXT_DIM
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			40 78 0 0 0 0
+			text			"Players"
+			textfont		NL_FONT_BOLD
+			textscale		.24
+			textaligny		14
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		CC_TOGGLE(40 98, 88, 86, 44, "All", "filter_all", "filter_humans", 1, "filter:all")
+		CC_TOGGLE(132 98, 88, 86, 44, "Humans", "filter_humans", "filter_all", 0, "filter:humans")
+
+		CC_PLAYER(122, "0", "cc_p0", "cc_d0", "player:0")
+		CC_PLAYER(142, "1", "cc_p1", "cc_d1", "player:1")
+		CC_PLAYER(162, "2", "cc_p2", "cc_d2", "player:2")
+		CC_PLAYER(182, "3", "cc_p3", "cc_d3", "player:3")
+		CC_PLAYER(202, "4", "cc_p4", "cc_d4", "player:4")
+		CC_PLAYER(222, "5", "cc_p5", "cc_d5", "player:5")
+		CC_PLAYER(242, "6", "cc_p6", "cc_d6", "player:6")
+		CC_PLAYER(262, "7", "cc_p7", "cc_d7", "player:7")
+		CC_PLAYER(282, "8", "cc_p8", "cc_d8", "player:8")
+		CC_PLAYER(302, "9", "cc_p9", "cc_d9", "player:9")
+		CC_PLAYER(322, "10", "cc_p10", "cc_d10", "player:10")
+		CC_PLAYER(342, "11", "cc_p11", "cc_d11", "player:11")
+		CC_PAGER_ARROW(40, "nl_left_arrow", "players:prev")
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			130 368 0 0 0 0
+			dvar			"cc_pp"
+			textfont		NL_FONT
+			textscale		.21
+			textalign		ITEM_ALIGN_CENTER
+			textaligny		13
+			forecolor		NL_MUTED
+			visible			1
+			decoration
+		}
+		CC_PAGER_ARROW(202, "nl_right_arrow", "players:next")
+
+		CC_TAB(232 76, "Weapons", "tab_weapons", 1, show weapons; hide killstreaks; show tab_weapons; hide tab_killstreaks; scriptMenuResponse "pick:none";)
+		CC_TAB(336 76, "Killstreaks", "tab_killstreaks", 0, show killstreaks; hide weapons; show tab_killstreaks; hide tab_weapons; scriptMenuResponse "pick:none";)
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			232 98 368 1 0 0
+			backcolor		NL_LINE
+			visible			1
+			decoration
+		}
+
+		CC_LABEL(232 104, "weapons", 1, "Special")
+		CC_WEAPON(232 114, "Water Gun", "nl_img_watergun", "watergun_mp", "pick:watergun_mp")
+		CC_WEAPON(285 114, "Kar98k", "nl_img_kar98k", "kar98k_mp", "pick:kar98k_mp")
+		CC_WEAPON(338 114, "PPS-43", "nl_img_pps", "pps_mp", "pick:pps_mp")
+		CC_WEAPON(391 114, "Trench Gun", "nl_img_shotgun", "shotgun_mp", "pick:shotgun_mp")
+		CC_WEAPON(444 114, "Raygun", "nl_img_raygun", "raygun_mp", "pick:raygun_mp")
+		CC_WEAPON(497 114, "Crossbow", "nl_img_crossbow", "crossbow_mp", "pick:crossbow_mp")
+		CC_WEAPON(550 114, "Wunderwaffe", "nl_img_wunderwaffe", "wunderwaffe_mp", "pick:wunderwaffe_mp")
+		CC_BADGE(232 166, "weapons", 1, "nl_badge_tier5")
+		CC_WEAPON(232 176, "Tesla Gun", "nl_img_tesla", "tesla_mp", "pick:tesla_mp")
+		CC_WEAPON(285 176, "ACR", "nl_img_acr", "acr_mp", "pick:acr_mp")
+		CC_WEAPON(338 176, "FAMAS", "nl_img_famas", "famas_mp", "pick:famas_mp")
+		CC_WEAPON(391 176, "Striker", "nl_img_striker", "striker_mp", "pick:striker_mp")
+		CC_WEAPON(444 176, "RPD", "nl_img_rpd", "rpd_mp", "pick:rpd_mp")
+		CC_BADGE(232 228, "weapons", 1, "nl_badge_tier4")
+		CC_WEAPON(232 238, "Mk 14 EBR", "nl_img_m14ebr", "m14ebr_mp", "pick:m14ebr_mp")
+		CC_WEAPON(285 238, "M4", "nl_img_m4", "m4_mp", "pick:m4_mp")
+		CC_WEAPON(338 238, "G36C", "nl_img_g36c", "g36c_mp", "pick:g36c_mp")
+		CC_WEAPON(391 238, "Double Barrel", "nl_img_doublebarrel", "doublebarrel_mp", "pick:doublebarrel_mp")
+		CC_WEAPON(444 238, "M249 SAW", "nl_img_saw", "saw_mp", "pick:saw_mp")
+
+		CC_BADGE(232 104, "killstreaks", 0, "nl_badge_tier5")
+		CC_KILLSTREAK(232 114, "AC130", "nl_hud_kr1001", "ac130", "pick:ac130")
+		CC_KILLSTREAK(285 114, "Orbs", "nl_hud_kr1002", "orbs", "pick:orbs")
+		CC_KILLSTREAK(338 114, "Repulsor", "nl_hud_kr1003", "repulsor", "pick:repulsor")
+		CC_KILLSTREAK(391 114, "Gravity Well", "nl_hud_kr1004", "gravitywell", "pick:gravitywell")
+		CC_KILLSTREAK(444 114, "Barricade", "nl_hud_kr1005", "barricade", "pick:barricade")
+		CC_KILLSTREAK(497 114, "Mario Kart", "nl_hud_kr1006", "mario", "pick:mario")
+		CC_KILLSTREAK(550 114, "X-Wing", "nl_hud_kr1007", "xwing", "pick:xwing")
+		CC_BADGE(232 166, "killstreaks", 0, "nl_badge_tier4")
+		CC_KILLSTREAK(232 176, "Nuke", "nl_hud_kr18", "nuke", "pick:nuke")
+		CC_KILLSTREAK(285 176, "Ultimate Fire", "hud_ulti", "ulti", "pick:ulti")
+		CC_KILLSTREAK(338 176, "Raptor", "nl_hud_kr21", "raptor", "pick:raptor")
+		CC_KILLSTREAK(391 176, "Drone", "nl_hud_kr22", "drone", "pick:drone")
+		CC_KILLSTREAK(444 176, "Rage", "hud_rage", "rage", "pick:rage")
+		CC_KILLSTREAK(497 176, "Sentry Gun", "nl_hud_kr14", "sentry", "pick:sentry")
+		CC_KILLSTREAK(550 176, "RC-XD", "hud_rcxd", "rcxd", "pick:rcxd")
+		CC_BADGE(232 228, "killstreaks", 0, "nl_badge_tier3")
+		CC_KILLSTREAK(232 238, "Thunderclaps", "hud_thunder", "thunder", "pick:thunder")
+		CC_KILLSTREAK(285 238, "Rocket", "nl_hud_kr17", "rocket", "pick:rocket")
+		CC_KILLSTREAK(338 238, "Launcher", "nl_hud_kr11", "launcher", "pick:launcher")
+		CC_KILLSTREAK(391 238, "Rambo Mode", "nl_hud_kr15", "rambo", "pick:rambo")
+		CC_KILLSTREAK(444 238, "EMP", "nl_hud_kr16", "emp", "pick:emp")
+		CC_BADGE(232 290, "killstreaks", 0, "nl_badge_tier2")
+		CC_KILLSTREAK(232 300, "HP Boost", "hud_hpboost", "hp_boost", "pick:hp_boost")
+		CC_KILLSTREAK(285 300, "Mortar", "nl_hud_kr13", "mortar", "pick:mortar")
+		CC_KILLSTREAK(338 300, "Napalm", "nl_hud_kr7", "napalm", "pick:napalm")
+		CC_KILLSTREAK(391 300, "Ammo Pack", "nl_hud_kr4", "ammo", "pick:ammo")
+		CC_KILLSTREAK(444 300, "Care Pack", "nl_hud_kr2", "care_pack", "pick:care_pack")
+
+		NL_FOOTER
+		NL_HINT_ESC(40 432, "Close", 80, close creator_control;)
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			rect			140 432 0 0 0 0
+			dvar			"cc_info"
+			textfont		NL_FONT
+			textscale		.2
+			textaligny		12
+			forecolor		NL_TEXT
+			visible			1
+			decoration
+		}
+		NL_CTA("give_btn", "give_btn_hover", 376 427, 96, 28, 48, 19, "Give", scriptMenuResponse "action:give";)
+		NL_CTA("giveaway_btn", "giveaway_btn_hover", 478 427, 122, 28, 61, 19, "Start Giveaway", scriptMenuResponse "action:giveaway";)
+	}
+}

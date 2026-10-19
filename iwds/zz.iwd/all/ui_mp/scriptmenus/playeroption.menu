@@ -20,7 +20,7 @@
 			setDvar cl_bypassMouseInput "0"
 		}
 
-		NL_QCARD(333, 87, "nl_qt_options")
+		NL_QCARD(333, 87, 85, "nl_qt_options")
 		NL_QDVAR(373, nl_playeroption_dvar)
 
 		execKey "0" { scriptMenuResponse "0"; close playeroption; }

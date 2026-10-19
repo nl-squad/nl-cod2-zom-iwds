@@ -54,8 +54,16 @@
 		itemDef 
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			230 117 117 26
+			rect			232 119 115 24
 			backcolor		.7 .7 .7 .1
+			visible			1
+			decoration
+		} 
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			230 117 117 26
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			visible			1
@@ -65,8 +73,16 @@
 		itemDef 
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			450 80 150 150
+			rect			452 82 148 148
 			backcolor		.7 .7 .7 .1
+			visible			1
+			decoration
+		} 
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			450 80 150 150
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			visible			1
@@ -322,8 +338,16 @@
 		itemDef 
 		{
 			style			WINDOW_STYLE_FILLED
-			rect			370 250 145 22
+			rect			372 252 143 20
 			backcolor		.7 .7 .7 .1
+			visible			1
+			decoration
+		} 
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			370 250 145 22
+			backcolor		0 0 0 0
 			border			1
 			bordercolor		1 1 1 1
 			visible			1
