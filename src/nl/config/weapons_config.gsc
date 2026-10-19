@@ -62,13 +62,13 @@ Configure()
     addWeaponRank(level.weapons_springfield, 10);
 	
     level.weapons_g3 = defineWeapon(4, "g3_mp", "G3", level.TYPE_PRIMARY, level.KIND_RIFLE);
-    addWeaponPurchase(level.weapons_g3, 1, 102, 2500);
+    addWeaponPurchase(level.weapons_g3, 1, 102, 1000);
 	// addPurchaseRequirement(level.weapons_sig, "springfield_mp", 50);
     addWeaponToMysteryBox(level.weapons_g3, "xmodel/weapon_g3", 1, 1);
 	
 	level.weapons_barrett = defineWeapon(5, "barrett_mp", "Barrett M82", level.TYPE_PRIMARY, level.KIND_RIFLE);
     addWeaponPurchase(level.weapons_barrett, 1, 103, 5000);
-	addPurchaseRequirement(level.weapons_barrett, "g3_mp", 500);
+	addPurchaseRequirement(level.weapons_barrett, "g3_mp", 250);
     addWeaponToMysteryBox(level.weapons_barrett, "xmodel/m82_w", 1, 1);
 	
 	level.weapons_fal = defineWeapon(27, "fal_mp", "FAL", level.TYPE_PRIMARY, level.KIND_RIFLE);
@@ -83,7 +83,7 @@ Configure()
 	
 	level.weapons_tesla = defineWeapon(16, "tesla_mp", "Tesla Gun", level.TYPE_PRIMARY, level.KIND_RIFLE);
 	addWeaponPurchase(level.weapons_tesla, 1, 110, 25000);
-	addPurchaseRequirement(level.weapons_tesla, "m14ebr_mp", 5000);
+	addPurchaseRequirement(level.weapons_tesla, "m14ebr_mp", 7500);
     addWeaponToMysteryBox(level.weapons_tesla, "xmodel/superweap_worldmodel", 1, 3);
 
 	level.weapons_kar98k = defineWeapon(22, "kar98k_mp", "Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
@@ -130,7 +130,7 @@ Configure()
 	
 	level.weapons_acr = defineWeapon(28, "acr_mp", "ACR", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_acr, 2, 125, 25000);
-    addPurchaseRequirement(level.weapons_acr, "m4_mp", 5000);
+    addPurchaseRequirement(level.weapons_acr, "m4_mp", 7500);
     addWeaponToMysteryBox(level.weapons_acr, "xmodel/weapon_masada", 1, 1);
 	
 	level.weapons_p90 = defineWeapon(23, "p90_mp", "P90", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -150,7 +150,7 @@ Configure()
 	
     level.weapons_famas = defineWeapon(29, "famas_mp", "FAMAS", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
     addWeaponPurchase(level.weapons_famas, 2, 121, 25000);
-    addPurchaseRequirement(level.weapons_famas, "g36c_mp", 5000);
+    addPurchaseRequirement(level.weapons_famas, "g36c_mp", 7500);
     addWeaponToMysteryBox(level.weapons_famas, "xmodel/weapon_famas", 1, 1);
 
 	level.weapons_pps = defineWeapon(34, "pps_mp", "PPS-43", level.TYPE_PRIMARY, level.KIND_MACHINE_GUN);
@@ -204,15 +204,15 @@ Configure()
 	addPurchaseRequirement(level.weapons_rpk, "dp28_mp", 1000);
 	addWeaponToMysteryBox(level.weapons_rpk, "xmodel/weapon_rpk", 1, 1);
 	
-	level.weapons_rpd = defineWeapon(38, "rpd_mp", "RPD", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase(level.weapons_rpd, 3, 130, 12500);
-	addPurchaseRequirement(level.weapons_rpd, "rpk_mp", 2500);
-	addWeaponToMysteryBox(level.weapons_rpd, "xmodel/rpd_w", 1, 1);
-	
     level.weapons_saw = defineWeapon(15, "saw_mp", "M249 SAW", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    addWeaponPurchase(level.weapons_saw, 3, 109, 20000);
-	addPurchaseRequirement(level.weapons_saw, "rpd_mp", 5000);
+    addWeaponPurchase(level.weapons_saw, 3, 109, 12500);
+	addPurchaseRequirement(level.weapons_saw, "rpk_mp", 2500);
     addWeaponToMysteryBox(level.weapons_saw, "xmodel/weapon_m249", 1, 1);
+	
+	level.weapons_rpd = defineWeapon(38, "rpd_mp", "RPD", level.TYPE_PRIMARY, level.KIND_HEAVY);
+    addWeaponPurchase(level.weapons_rpd, 3, 130, 25000);
+	addPurchaseRequirement(level.weapons_rpd, "saw_mp", 5000);
+	addWeaponToMysteryBox(level.weapons_rpd, "xmodel/rpd_w", 1, 1);
 	
 	level.weapons_shotgun = defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_shotgun, 400);
