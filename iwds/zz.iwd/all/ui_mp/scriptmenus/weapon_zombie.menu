@@ -216,7 +216,7 @@
 		ZTYPE("z9", 40 256, "", "Armoured Mutant", "armoured", setdvar nl_weapon "nl_char_armoured";)
 		INFO("armoured", "^7Ability^9: ^7Reduced Damage from Explosions ^9& ^7Fire \n^9Level ^71^9: ^3-30% \n^9Level ^72^9: ^3-40% \n^9Level ^73^9: ^3-50% \n \n^7Health Points^9: ^3800")
 		ZTYPE("z10", 40 273, "", "Alien", "alien", setdvar nl_weapon "nl_char_alien";)
-		INFO("alien", "^7Ability^9#^71^9: ^7Deals ^310 ^7Damage per tick within a Radius (x1.5 against Invi) \n^7Ability^9#^72^9: ^7Gets ^340 ^7Health Points per tick within a Radius \n^7Ability^9#^73^9: ^7Teleports to a Random Location on the Map once per Life at ^9Level ^73 \n^9Level ^71^9: ^32.4 m ^9Radius \n^9Level ^72^9: ^33.2 m ^9Radius \n^9Level ^73^9: ^34 m ^9Radius \n \n^7Health Points^9: ^3400 \n^7Max Health Points^9: ^3800")
+		INFO("alien", "^7Ability^9#^71^9: ^7Deals ^310 ^7Damage per tick within a Radius (x1.5 against Invi) \n^7Ability^9#^72^9: ^7Gets ^340 ^7Health Points per tick within a Radius \n^7Ability^9#^73^9: ^7Teleports to a Random Location on the Map once per Life at ^9Level ^33 \n^9Level ^71^9: ^32.4 m ^9Radius \n^9Level ^72^9: ^33.2 m ^9Radius \n^9Level ^73^9: ^34 m ^9Radius \n \n^7Health Points^9: ^3400 \n^7Max Health Points^9: ^3800")
 		ZTYPE("z11", 40 290, "", "Chimp", "chimp", setdvar nl_weapon "nl_char_chimp";)
 		INFO("chimp", "^7Ability^9: ^7Performs a Charged Swoosh Jump \n^9Level ^71^9: ^3200 ^9Max Power \n^9Level ^72^9: ^3300 ^9Max Power \n^9Level ^73^9: ^3400 ^9Max Power \n \n^7Health Points^9: ^3400")
 		ZTYPE("z12", 40 307, "", "Half-Life Red", "halflife", setdvar nl_weapon "nl_char_halflife";)
