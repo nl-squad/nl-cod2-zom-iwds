@@ -12,10 +12,10 @@ Configure()
     level.PERK_spawnProtectionEscapeDuration = 10;
 	level.PERK_immortalSelfDamageMultiplier = 0.05;
 	level.PERK_ghostInvisibleExtensionSeconds = 5;
-	level.PERK_explodeBulletChance = 5;
+	level.PERK_explodeBulletChance = 4;
     level.PERK_explodeBulletFx = "fx/nl/nl_explodebullet.efx";
     level.PERK_explodeBulletRange = 100;
-    level.PERK_explodeBulletDamage = 400;
+    level.PERK_explodeBulletDamage = 350;
     level.PERK_pistoleroDamageMultiplier = 1.5;
     level.PERK_strongPunchDamage = 5000;
     level.PERK_brothersInArmsDamageMultiplier = 1.25;
@@ -84,7 +84,7 @@ Configure()
 	level.perks_brothersInArms = blanco\config::addNewPerk(26, "combat", "Brothers in Arms", 232, "nl_hud_pe26", "Increases Weapon Damage by 25 percent if 4+ other Hunters are Alive");
 	level.perks_fireEnthusiast = blanco\config::addNewPerk(28, "combat", "Fire Enthusiast", 272, "nl_hud_pe28", "Increases Fire Damage by 33 percent");
 	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 312, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
-	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 352, "nl_hud_pe17", "Provides a 5 percent chance for Bullets to Explode");
+	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 352, "nl_hud_pe17", "Provides a 4 percent chance for Bullets to Explode");
 	// Random must be last
 	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
 }
