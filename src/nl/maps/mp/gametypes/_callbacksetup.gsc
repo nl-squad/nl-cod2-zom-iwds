@@ -164,18 +164,6 @@ CodeCallback_UserInfoChanged()
 
 CodeCallback_DPrintf(message)
 {
-    if (isSubStr(message, "(writing snapshot) Snapshot delta request from out of date packet."))
-        return;
-
-	if (isSubStr(message, "SV_DirectConnect()"))
-		return;
-
-	if (isSubStr(message, "SV_SendClientGameState() for "))
-		return;
-
-	if (isSubStr(message, "bytes in gamestate to client"))
-		return;
-
     logPrintConsole(message);
 }
 
