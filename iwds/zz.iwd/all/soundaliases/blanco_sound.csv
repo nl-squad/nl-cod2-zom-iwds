@@ -51,7 +51,7 @@ nl_drone_fire,,,drone/nl_drone_fire.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_loop,,,drone/nl_drone_loop.wav,1,1,,,,1000000,,auto,streamed,
 nl_drone_start,,,drone/nl_drone_start.wav,1,1,,,,1000000,,auto,streamed,
 
-#Emp
+#EMP
 emp_used,,,emp/emp_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #Exploding Ball
@@ -132,4 +132,3 @@ nl_rcxd_start,,,rcxd/nl_rcxd_start.wav,1,1,,,,1000000,,auto,streamed,
 sentry_delivery,,,sentry/sentry_delivery.mp3,1,1,,,,1000000,,auto,streamed,
 sentry_deploy,,,sentry/sentry_deploy.mp3,1,1,,,,1000000,,auto,streamed,
 sentry_fire,,,sentry/sentry_fire.mp3,1,1,,,,1000000,,auto,streamed,
-
