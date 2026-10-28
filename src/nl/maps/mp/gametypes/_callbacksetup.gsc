@@ -86,14 +86,6 @@ Setup any misc callbacks stuff like defines and default callbacks
 SetupCallbacks()
 {
 	SetDefaultCallbacks();
-
-	// Set defined for damage flags used in the playerDamage callback
-	level.damageFlags_RADIUS				= 1;
-	level.damageFlags_NO_ARMOR				= 2;
-	level.damageFlags_NO_KNOCKBACK			= 4;
-	level.damageFlags_NO_TEAM_PROTECTION	= 8;
-	level.damageFlags_NO_PROTECTION			= 16;
-	level.damageFlags_PASSTHRU				= 32;
 }
 
 /*================
