@@ -93,11 +93,6 @@ Configure()
 	// level.weapons_m1garand = defineWeapon(2, "m1garand_mp", "M1 Garand", level.TYPE_PRIMARY, level.KIND_RIFLE);
     // addWeaponPurchase(level.weapons_m1garand, 1, 104, 1000);
 	// addPurchaseRequirement(level.weapons_m1garand, "springfield_mp", 50);
-		
-	// level.weapons_intervention = defineWeapon(24, "intervention_mp", "M200 Intervention", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
-    // addWeaponPurchase(level.weapons_intervention, 1, 116, 2500);
-	// addPurchaseRequirement(level.weapons_intervention, "m1garand_mp", 250);
-    // addWeaponToMysteryBox(level.weapons_intervention, "xmodel/weapon_intervention", 1, 1);
 	
 	// level.weapons_kar98k_sniper = defineWeapon(33, "kar98k_sniper_mp", "Scoped Kar98k", level.TYPE_PRIMARY, level.KIND_RIFLE, botsDisable);
     // addWeaponRank(level.weapons_kar98k_sniper, 999);
@@ -217,12 +212,7 @@ Configure()
 	level.weapons_shotgun = defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponRank(level.weapons_shotgun, 400);
     addWeaponToMysteryBox(level.weapons_shotgun, "xmodel/weapon_trenchgun", 1, 3);
-	
-	// level.weapons_m60 = defineWeapon(21, "m60_mp", "M60", level.TYPE_PRIMARY, level.KIND_HEAVY);
-    // addWeaponPurchase(level.weapons_m60, 3, 126, 5000);
-	// addPurchaseRequirement(level.weapons_m60, "rpk_mp", 750);
-    // addWeaponToMysteryBox(level.weapons_m60, "xmodel/weapon_m60", 1, 1);
-	
+		
 	// level.weapons_bren = defineWeapon(17, "bren_mp", "Bren", level.TYPE_PRIMARY, level.KIND_HEAVY);
     // addWeaponRank(level.weapons_bren, 999);
 	// addWeaponToMysteryBox(level.weapons_bren, "xmodel/weapon_bren", 1, 3);
