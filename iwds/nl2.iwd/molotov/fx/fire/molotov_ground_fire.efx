@@ -77,7 +77,7 @@ Particle
 			1 0.4367 8.265e-040 2.498e-038
 		]
 
-		scale			25
+		scale			15
 	}
 
 	sizeRand
@@ -181,7 +181,7 @@ Particle
 			1 0.08 2.755e-040 2.718e-038
 		]
 
-		scale			50
+		scale			6
 	}
 
 	velocityXRand
@@ -241,7 +241,7 @@ Particle
 			1 0.1948 2.755e-040 2.718e-038
 		]
 
-		scale			100
+		scale			10
 	}
 
 	velocity2XRand
@@ -352,7 +352,7 @@ Particle
 			1 0.4367 8.265e-040 2.498e-038
 		]
 
-		scale			10
+		scale			6
 	}
 
 	sizeRand
@@ -516,7 +516,7 @@ Particle
 			1 0.1948 2.755e-040 2.718e-038
 		]
 
-		scale			100
+		scale			10
 	}
 
 	velocity2XRand
