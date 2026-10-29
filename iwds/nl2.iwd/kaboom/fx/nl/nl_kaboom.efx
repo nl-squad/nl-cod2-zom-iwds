@@ -50,7 +50,7 @@ Light
 			1 0 0 0
 		]
 
-		scale			300
+		scale			30
 	}
 
 	sizeRand
@@ -233,7 +233,7 @@ Particle
 
 	life				270 405
 
-	origin				30 0 0
+	origin				3 0 0
 
 	rotation			0 360
 
@@ -283,7 +283,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			600
+		scale			60
 	}
 
 	sizeRand
@@ -516,7 +516,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			525
+		scale			52.5
 	}
 
 	sizeRand
@@ -710,11 +710,11 @@ Particle
 
 	delay				0 135
 
-	origin				22.5 0 0
+	origin				2.25 0 0
 
-	radius				0 37.5
+	radius				0 3.75
 
-	height				0 37.5
+	height				0 3.75
 
 	rotation			0 360
 
@@ -772,7 +772,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			105
+		scale			10.5
 	}
 
 	sizeRand
@@ -848,7 +848,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			66.6667
+		scale			6.6667
 	}
 
 	velocityY
@@ -859,7 +859,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			66.6667
+		scale			6.6667
 	}
 
 	velocityZ
@@ -870,7 +870,7 @@ Particle
 			1 0.3 0 0
 		]
 
-		scale			166.667
+		scale			16.6667
 	}
 
 	velocityXRand
@@ -974,7 +974,7 @@ Particle
 
 	delay				0 225
 
-	radius				0 120
+	radius				0 12
 
 	rotation			0 360
 
@@ -1031,7 +1031,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			112.5
+		scale			11.25
 	}
 
 	sizeRand
@@ -1107,7 +1107,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			73.3333
+		scale			7.3333
 	}
 
 	velocityY
@@ -1118,7 +1118,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			73.3333
+		scale			7.3333
 	}
 
 	velocityZ
@@ -1131,7 +1131,7 @@ Particle
 			1 0.02 0 0
 		]
 
-		scale			416.667
+		scale			41.6667
 	}
 
 	velocityXRand
@@ -1235,7 +1235,7 @@ Particle
 
 	delay				0 180
 
-	radius				0 52.5
+	radius				0 5.25
 
 	rotation			0 360
 
@@ -1292,7 +1292,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			120
+		scale			12
 	}
 
 	sizeRand
@@ -1368,7 +1368,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityY
@@ -1379,7 +1379,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityZ
@@ -1392,7 +1392,7 @@ Particle
 			1 0.02 0 0
 		]
 
-		scale			766.667
+		scale			76.6667
 	}
 
 	velocityXRand
@@ -1496,7 +1496,7 @@ Particle
 
 	delay				90 315
 
-	radius				105 165
+	radius				10.5 16.5
 
 	rotation			0 360
 
@@ -1552,7 +1552,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			97.5
+		scale			9.75
 	}
 
 	sizeRand
@@ -1628,7 +1628,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityY
@@ -1639,7 +1639,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityZ
@@ -1652,7 +1652,7 @@ Particle
 			1 0.02 0 0
 		]
 
-		scale			316.667
+		scale			31.6667
 	}
 
 	velocityXRand
@@ -1756,9 +1756,9 @@ Particle
 
 	delay				45 2700
 
-	origin				9 0 0
+	origin				0.9 0 0
 
-	radius				0 27
+	radius				0 2.7
 
 	rotation			0 360
 
@@ -1813,7 +1813,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			97.5
+		scale			9.75
 	}
 
 	sizeRand
@@ -1889,7 +1889,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			13.3333
+		scale			1.3333
 	}
 
 	velocityY
@@ -1900,7 +1900,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			13.3333
+		scale			1.3333
 	}
 
 	velocityZ
@@ -1911,7 +1911,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			200
+		scale			20
 	}
 
 	velocityXRand
@@ -2015,9 +2015,9 @@ Particle
 
 	delay				45 180
 
-	origin				6 0 0
+	origin				0.6 0 0
 
-	radius				67.5 120
+	radius				6.75 12
 
 	rotation			0 360
 
@@ -2072,7 +2072,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			97.5
+		scale			9.75
 	}
 
 	sizeRand
@@ -2148,7 +2148,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityY
@@ -2159,7 +2159,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityZ
@@ -2170,7 +2170,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			33.3333
+		scale			3.3333
 	}
 
 	velocityXRand
@@ -2274,9 +2274,9 @@ Particle
 
 	delay				180 405
 
-	origin				6 0 0
+	origin				0.6 0 0
 
-	radius				120 187.5
+	radius				12 18.75
 
 	rotation			0 360
 
@@ -2331,7 +2331,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			97.5
+		scale			9.75
 	}
 
 	sizeRand
@@ -2407,7 +2407,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityY
@@ -2418,7 +2418,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityZ
@@ -2429,7 +2429,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			33.3333
+		scale			3.3333
 	}
 
 	velocityXRand
@@ -2533,9 +2533,9 @@ Particle
 
 	delay				360 675
 
-	origin				6 0 0
+	origin				0.6 0 0
 
-	radius				187.5 270
+	radius				18.75 27
 
 	rotation			0 360
 
@@ -2590,7 +2590,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			97.5
+		scale			9.75
 	}
 
 	sizeRand
@@ -2666,7 +2666,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityY
@@ -2677,7 +2677,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			53.3333
+		scale			5.3333
 	}
 
 	velocityZ
@@ -2688,7 +2688,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			33.3333
+		scale			3.3333
 	}
 
 	velocityXRand
@@ -2833,7 +2833,7 @@ Decal
 			1 1 0 0
 		]
 
-		scale			240
+		scale			24
 	}
 
 	sizeRand
