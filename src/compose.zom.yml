@@ -5,6 +5,8 @@ services:
     stdin_open: true
     tty: true
     stop_grace_period: 1s
+    sysctls:
+      net.ipv4.tcp_keepalive_time: 600
     ports:
       - target: 28960
         published: 28960
