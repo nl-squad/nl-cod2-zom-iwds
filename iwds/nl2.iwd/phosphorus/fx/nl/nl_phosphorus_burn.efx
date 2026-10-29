@@ -8,9 +8,9 @@ Particle
 
 	count				35
 
-	life				9200 9800
+	life				7360 7840
 
-	delay				0 500
+	delay				0 400
 
 	radius				120 550
 
@@ -334,9 +334,9 @@ Particle
 
 	count				35
 
-	life				9200 9800
+	life				7360 7840
 
-	delay				0 500
+	delay				0 400
 
 	radius				120 550
 
@@ -658,9 +658,9 @@ Particle
 
 	count				20
 
-	life				9300 9800
+	life				7440 7840
 
-	delay				0 500
+	delay				0 400
 
 	radius				100 500
 
@@ -908,11 +908,11 @@ Particle
 
 	spawnFlags			orgOnCylinder evenDistribution
 
-	count				180
+	count				144
 
 	life				700 1000
 
-	delay				0 9300
+	delay				0 7440
 
 	radius				80 520
 
@@ -1161,11 +1161,11 @@ Particle
 
 	spawnFlags			orgOnCylinder axisFromSphere evenDistribution
 
-	count				180
+	count				144
 
 	life				300 600
 
-	delay				0 9300
+	delay				0 7440
 
 	bounce				0.2
 
@@ -1414,11 +1414,11 @@ Particle
 
 	spawnFlags			orgOnCylinder evenDistribution
 
-	count				84
+	count				67
 
-	life				3500 4200
+	life				2800 3360
 
-	delay				0 5800
+	delay				0 4640
 
 	radius				100 540
 
@@ -1671,11 +1671,11 @@ Particle
 
 	spawnFlags			orgOnCylinder evenDistribution
 
-	count				12
+	count				10
 
-	life				4500 5500
+	life				3600 4400
 
-	delay				0 4000
+	delay				0 3200
 
 	radius				100 480
 
@@ -1923,7 +1923,7 @@ Light
 {
 	name				burn_light
 
-	life				9800
+	life				7840
 
 	rgb
 	{
