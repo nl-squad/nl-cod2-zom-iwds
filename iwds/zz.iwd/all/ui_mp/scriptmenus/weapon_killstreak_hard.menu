@@ -41,7 +41,7 @@
 		NL_NOTE("Choose up to 4. Click a chosen one to remove it.")
 
 		NL_TILE(ORIGIN_T1, "2", "hover_2", "reward_2", "Panzerschreck", "5 kills", "nl_hud_kr1")
-		NL_TILE(ORIGIN_T2, "6", "hover_6", "reward_6", "Big Grenade", "8 kills", "nl_hud_kr8")
+		NL_TILE(ORIGIN_T2, "6", "hover_6", "reward_6", "Molotov", "8 kills", "nl_hud_kr8")
 		NL_TILE(ORIGIN_T3, "3", "hover_3", "reward_3", "Care Pack", "10 kills", "nl_hud_kr2")
 		NL_TILE(ORIGIN_T4, "1", "hover_1", "reward_1", "Artillery", "12 kills", "nl_hud_kr3")
 		NL_TILE(ORIGIN_T5, "5", "hover_5", "reward_5", "Napalm", "15 kills", "nl_hud_kr7")

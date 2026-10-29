@@ -255,6 +255,7 @@ Configure()
     level.weapons_zombie_grenade = defineGrenade(95, "zombie_grenade_mp");
     level.weapons_toxic_meat = defineGrenade(96, "toxic_meat_mp");
     level.weapons_ice_nade = defineGrenade(97, "ice_nade_mp");
+    level.weapons_molotov = defineGrenade(98, "molotov_mp");
 
     // Killstreak
 	level.weapons_thunder = defineNonSelectable(101, "thunder_mp", level.KIND_SHOP);

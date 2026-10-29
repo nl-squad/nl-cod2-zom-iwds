@@ -2,7 +2,7 @@ Configure()
 {
     key = "M";
 	blanco\config::addNewKillstreak(2, "panzerschreck", "Panzerschreck", 3, 4, 5, 1, "nl_hud_kr1", "Shoulder Launcher with 4 Missiles", "Panzerschreck^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GivePanzerschreck);
-	blanco\config::addNewKillstreak(6, "big_grenade", "Molotov", 4, 5, 8, 1, "nl_hud_kr8", "Bottle that sets Zombies on Fire", "Molotov^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
+	blanco\config::addNewKillstreak(6, "molotov", "Molotov", 4, 5, 8, 1, "nl_hud_kr8", "Bottle that sets Zombies on Fire", "Molotov^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveMolotov);
 	blanco\config::addNewKillstreak(3, "care_pack", "Care Pack", 5, 8, 10, 1, "nl_hud_kr2", "Care Package with a Random Killstreak", "Care Pack^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\care_package::Activate);
     blanco\config::addNewKillstreak(1, "artillery", "Artillery", 8, 10, 12, 3, "nl_hud_kr3", "Artillery Barrage called by using Binoculars", "Artillery^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\artillery::Activate, blanco\actions\artillery::CanUse);
 	 blanco\config::addNewKillstreak(5, "napalm", "Napalm", 10, 12, 15, 5, "nl_hud_kr7", "Napalm Strike called by using Binoculars", "Napalm^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);
@@ -22,6 +22,7 @@ Configure()
     blanco\config::addNewKillstreak(19, "rage", "Rage", 9999, 9999, 9999, 999, "hud_rage", "Double Damage and Ability to Burn for 45 seconds", "Rage Mode^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rage::Activate, blanco\actions\rage::CanUse, blanco\utils::a(45));
     blanco\config::addNewKillstreak(20, "hp_boost", "HP Boost", 9999, 9999, 9999, 999, "hud_hpboost", "Increases Health Points to 150", "HP Boost^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\hp_boost::Activate, blanco\actions\hp_boost::CanUse);
     blanco\config::addNewKillstreak(21, "ulti", "Ultimate Fire", 9999, 9999, 9999, 999, "hud_ulti", "Fire Ring dealing damage for 30 seconds", "Ultimate Fire^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\ultimate::Activate, blanco\actions\ultimate::CanUse);
+    blanco\config::addNewKillstreak(22, "big_grenade", "Big Grenade", 9999, 9999, 9999, 999, "nl_hud_kr_22", "Grenade with high Damage Radius", "Big Grenade^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
 
 	blanco\config::setKillstreakLevelForMap("mp_kg", level.killstreakEasyLevel);
 	blanco\config::setKillstreakLevelForMap("mp_loop", level.killstreakEasyLevel);
