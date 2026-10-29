@@ -16,11 +16,11 @@ Particle
 
 	nonUniformScale		1
 
-	count				100
+	count				35
 
 	life				1200 2300
 
-	delay				0 12000
+	delay				0 2800
 
 	origin				6 0 0
 
@@ -293,11 +293,11 @@ Particle
 
 	spawnFlags			orgOnCylinder axisFromSphere evenDistribution
 
-	count				100
+	count				20
 
 	life				500 800
 
-	delay				0 1.8e+004
+	delay				0 3000
 
 	origin				8 0 0
 

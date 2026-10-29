@@ -2,7 +2,7 @@ Configure()
 {
     key = "M";
 	blanco\config::addNewKillstreak(2, "panzerschreck", "Panzerschreck", 3, 4, 5, 1, "nl_hud_kr1", "Shoulder Launcher with 4 Missiles", "Panzerschreck^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GivePanzerschreck);
-	blanco\config::addNewKillstreak(6, "big_grenade", "Big Grenade", 4, 5, 8, 1, "nl_hud_kr8", "Grenade with high Damage Radius", "Big Grenade^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
+	blanco\config::addNewKillstreak(6, "big_grenade", "Molotov", 4, 5, 8, 1, "nl_hud_kr8", "Bottle that sets Zombies on Fire", "Molotov^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveBigNade);
 	blanco\config::addNewKillstreak(3, "care_pack", "Care Pack", 5, 8, 10, 1, "nl_hud_kr2", "Care Package with a Random Killstreak", "Care Pack^4: ^9Drop ^4[^7" + key + "^4]", blanco\actions\care_package::Activate);
     blanco\config::addNewKillstreak(1, "artillery", "Artillery", 8, 10, 12, 3, "nl_hud_kr3", "Artillery Barrage called by using Binoculars", "Artillery^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\artillery::Activate, blanco\actions\artillery::CanUse);
 	 blanco\config::addNewKillstreak(5, "napalm", "Napalm", 10, 12, 15, 5, "nl_hud_kr7", "Napalm Strike called by using Binoculars", "Napalm^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\napalm::Activate, blanco\actions\napalm::CanUse);

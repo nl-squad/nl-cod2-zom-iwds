@@ -1400,7 +1400,7 @@ Particle
 
 	impactfx
 	[
-		/fx/fire/ground_fire_small_oneshot
+		/fx/fire/molotov_ground_fire
 	]
 }
 
