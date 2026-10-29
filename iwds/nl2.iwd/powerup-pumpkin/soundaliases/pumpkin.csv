@@ -1,2 +1,3 @@
 name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
 pumpkin_witch_laugh,,powerup-pumpkin/witch_laugh.wav,1.00,1.00,,,,1000000,,auto,loaded,,nonlooping,,all_mp
+pumpkin_witching_hour_survived,,powerup-pumpkin/witching_hour_survived.wav,1.00,1.00,,,,1000000,,auto,loaded,,nonlooping,,all_mp
