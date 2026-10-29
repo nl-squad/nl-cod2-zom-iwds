@@ -7,9 +7,9 @@ Configure()
 	blanco\config::addNewKillstreak(9, "thunder", "Thunderclaps", 8, 10, 12, 3, "hud_thunder", "Summons a Thunderstorm that kills Zombies", "Thunderclaps^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\thunderclaps::ActivateWithChallangeProgress, blanco\actions\thunderclaps::CanUse);
 	blanco\config::addNewKillstreak(7, "browning", "Browning MG", 10, 12, 15, 5, "nl_hud_kr5", "Plantable Machine Gun for 30 seconds", "Browning MG^4: ^9Plant ^4[^7" + key + "^4]", blanco\actions\browning::Activate, blanco\actions\browning::CanUse, blanco\utils::a(30));
 	blanco\config::addNewKillstreak(1, "artillery", "Artillery", 12, 15, 18, 8, "nl_hud_kr3", "Artillery Barrage called by using Binoculars", "Artillery^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\artillery::Activate, blanco\actions\artillery::CanUse);
-	blanco\config::addNewKillstreak(1008, "phosphorus", "White Phosphorus", 15, 18, 20, 10, "nl_hud_kr1008", "White Phosphorus Airburst burning and slowing Zombies for 8 seconds", "White Phosphorus^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\phosphorus::Activate, blanco\actions\phosphorus::CanUse);
+	blanco\config::addNewKillstreak(4, "mortar", "Mortar", 15, 18, 20, 10, "nl_hud_kr13", "Mortar Barrage called by using Binoculars", "Mortar^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\mortar::Activate, blanco\actions\mortar::CanUse);
 	blanco\config::addNewKillstreak(8, "ammo", "Ammo Pack", 18, 20, 25, 12, "nl_hud_kr4", "Gives the Weapons Max Ammo & 3 Grenades", "Ammo Pack^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveAmmo);
-    blanco\config::addNewKillstreak(4, "mortar", "Mortar", 20, 25, 30, 15, "nl_hud_kr13", "Mortar Barrage called by using Binoculars", "Mortar^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\mortar::Activate, blanco\actions\mortar::CanUse);
+    blanco\config::addNewKillstreak(1008, "phosphorus", "White Phosphorus", 20, 25, 30, 15, "nl_hud_kr1008", "White Phosphorus Airburst burning and slowing Zombies for 8 seconds", "White Phosphorus^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\phosphorus::Activate, blanco\actions\phosphorus::CanUse);
     blanco\config::addNewKillstreak(11, "rambo", "Rambo Mode", 25, 30, 35, 20, "nl_hud_kr15", "Unlimited Magazine for 20 seconds & 3 Grenades", "Rambo Mode^4: ^9Activate ^4[^7" + key + "^4]", blanco\actions\rambo::Activate, blanco\actions\rambo::CanUse, blanco\utils::a(20));
     blanco\config::addNewKillstreak(12, "sentry", "Sentry Gun", 30, 35, 40, 25, "nl_hud_kr14", "Plantable Sentry Gun for 30 seconds", "Sentry Gun^4: ^9Plant ^4[^7" + key + "^4]", blanco\actions\sentry_gun::Activate, blanco\actions\sentry_gun::CanUse, blanco\utils::a(30));
 	blanco\config::addNewKillstreak(14, "rocket", "Rocket", 35, 40, 50, 30, "nl_hud_kr17", "Quake3 Rocket Launcher with 10 Missiles", "Rocket^4: ^9Get ^4[^7" + key + "^4]", blanco\modules\weapons::GiveRocket);
@@ -32,7 +32,9 @@ Configure()
 	blanco\config::setKillstreakLevelForMap("mp_blocks", level.killstreakMediumLevel);
 	blanco\config::setKillstreakLevelForMap("mp_fakhre", level.killstreakMediumLevel);
 	blanco\config::setKillstreakLevelForMap("mp_kjoa", level.killstreakMediumLevel);
+	blanco\config::setKillstreakLevelForMap("mp_newcastle", level.killstreakMediumLevel);
 	blanco\config::setKillstreakLevelForMap("mp_starter", level.killstreakMediumLevel);
+	blanco\config::setKillstreakLevelForMap("mp_tale", level.killstreakMediumLevel);
     // Available levels: killstreakHardLevel, killstreakMediumLevel, killstreakEasyLevel
     // Hard is the default one
 }
