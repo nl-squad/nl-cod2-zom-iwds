@@ -1204,7 +1204,7 @@ Emitter
 
 	gravity				-400
 
-	density				30
+	density				60
 
 	variance			2
 
@@ -1450,7 +1450,7 @@ Emitter
 
 	gravity				-400
 
-	density				30
+	density				60
 
 	variance			2
 
@@ -1696,7 +1696,7 @@ Emitter
 
 	gravity				-400
 
-	density				30
+	density				60
 
 	variance			2
 
@@ -1942,7 +1942,7 @@ Emitter
 
 	gravity				-400
 
-	density				30
+	density				60
 
 	variance			2
 

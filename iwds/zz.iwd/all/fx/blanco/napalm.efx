@@ -293,7 +293,7 @@ Emitter
 
 	gravity				-200 -300
 
-	density				9 12
+	density				30 40
 
 	variance			2 3
 
@@ -567,7 +567,7 @@ Emitter
 
 	gravity				-200 -300
 
-	density				9 12
+	density				30 40
 
 	variance			2 3
 

@@ -512,7 +512,7 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				70
+	count				35
 
 	life				5000 6500
 
@@ -580,7 +580,7 @@ Particle
 			1 0.6 0 0
 		]
 
-		scale			160
+		scale			190
 	}
 
 	sizeRand
@@ -776,7 +776,7 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				180
+	count				70
 
 	life				5000 6500
 
@@ -844,7 +844,7 @@ Particle
 			1 0.6 0 0
 		]
 
-		scale			160
+		scale			200
 	}
 
 	sizeRand
@@ -1569,7 +1569,7 @@ Particle
 
 	spawnFlags			orgOnCylinder evenDistribution
 
-	count				140
+	count				70
 
 	life				1200 2200
 

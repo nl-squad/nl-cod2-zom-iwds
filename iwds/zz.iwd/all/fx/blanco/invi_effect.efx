@@ -6,7 +6,7 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				250
+	count				100
 
 	life				500
 
@@ -67,7 +67,7 @@ Particle
 			1 0 0 0
 		]
 
-		scale			5
+		scale			8
 	}
 
 	sizeRand
