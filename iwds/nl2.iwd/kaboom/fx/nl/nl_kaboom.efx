@@ -50,7 +50,7 @@ Light
 			1 0 0 0
 		]
 
-		scale			30
+		scale			10
 	}
 
 	sizeRand
@@ -69,6 +69,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -87,6 +88,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -123,6 +125,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityY
@@ -132,6 +135,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityZ
@@ -141,6 +145,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityXRand
@@ -177,6 +182,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -186,6 +192,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -195,6 +202,7 @@ Light
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -231,9 +239,9 @@ Particle
 
 	count				1
 
-	life				270 405
+	life				4000
 
-	origin				3 0 0
+	origin				1 0 0
 
 	rotation			0 360
 
@@ -261,6 +269,7 @@ Particle
 		[
 			0 1 0 0
 			0.3 0.9 0 0
+			0.95 0.9 0 0
 			1 0 0 0
 		]
 	}
@@ -279,11 +288,13 @@ Particle
 		curve
 		[
 			0 0.2 0 0
-			0.15 1 0 0
-			1 1 0 0
+			0.1875 1 0 0
+			0.25 1 0 0
+			0.5 0.5 0 0
+			1 0.5 0 0
 		]
 
-		scale			60
+		scale			32
 	}
 
 	sizeRand
@@ -302,6 +313,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -320,6 +332,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -356,6 +369,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityY
@@ -365,6 +379,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityZ
@@ -374,6 +389,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityXRand
@@ -410,6 +426,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -419,6 +436,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -428,6 +446,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -516,7 +535,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			52.5
+		scale			17.5
 	}
 
 	sizeRand
@@ -535,6 +554,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -553,6 +573,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -589,6 +610,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityY
@@ -598,6 +620,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityZ
@@ -607,6 +630,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityXRand
@@ -643,6 +667,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -652,6 +677,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -661,6 +687,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -710,11 +737,11 @@ Particle
 
 	delay				0 135
 
-	origin				2.25 0 0
+	origin				0.75 0 0
 
-	radius				0 3.75
+	radius				0 1.25
 
-	height				0 3.75
+	height				0 1.25
 
 	rotation			0 360
 
@@ -772,7 +799,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			10.5
+		scale			3.5
 	}
 
 	sizeRand
@@ -791,6 +818,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -809,6 +837,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -848,7 +877,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			6.6667
+		scale			2.22223
 	}
 
 	velocityY
@@ -859,7 +888,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			6.6667
+		scale			2.22223
 	}
 
 	velocityZ
@@ -870,7 +899,7 @@ Particle
 			1 0.3 0 0
 		]
 
-		scale			16.6667
+		scale			5.55557
 	}
 
 	velocityXRand
@@ -907,6 +936,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -916,6 +946,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -925,6 +956,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -968,13 +1000,14 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				52
+	count				80
 
-	life				3150 3600
+	life				1400 1600
 
-	delay				0 225
+	delay				1100 2400
+	origin				17.3333 0 0
 
-	radius				0 12
+	radius				0 0.666667
 
 	rotation			0 360
 
@@ -1007,8 +1040,9 @@ Particle
 		curve
 		[
 			0 0 0 0
-			0.03 1 0 0
-			0.8 0.9 0 0
+			0.1 1 0 0
+			0.4 1 0 0
+			0.7 0.4 0 0
 			1 0 0 0
 		]
 	}
@@ -1031,7 +1065,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			11.25
+		scale			4.66667
 	}
 
 	sizeRand
@@ -1050,6 +1084,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -1068,6 +1103,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -1103,43 +1139,49 @@ Particle
 	{
 		curve
 		[
-			0 -0.5 0 0
-			1 -0.5 0 0
+			0.0 -0.5 0 0
+			0.19 -0.5 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			7.3333
+		scale			28
 	}
 
 	velocityY
 	{
 		curve
 		[
-			0 -0.5 0 0
-			1 -0.5 0 0
+			0.0 -0.5 0 0
+			0.19 -0.5 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			7.3333
+		scale			28
 	}
 
 	velocityZ
 	{
 		curve
 		[
-			0 1 0 0
-			0.1 0.6 0 0
-			0.2 0.15 0 0
-			1 0.02 0 0
+			0.0 0.0 0 0
+			0.19 0.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			41.6667
+		scale			20
 	}
 
 	velocityXRand
 	{
 		curve
 		[
-			0 1 0 0
-			1 1 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1147,8 +1189,10 @@ Particle
 	{
 		curve
 		[
-			0 1 0 0
-			1 1 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1156,8 +1200,10 @@ Particle
 	{
 		curve
 		[
-			0 0.06 0 0
-			1 0.06 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1168,6 +1214,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -1177,6 +1224,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -1186,6 +1234,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -1233,9 +1282,10 @@ Particle
 
 	life				1350 1710
 
-	delay				0 180
+	delay				1100 1250
+	origin				17.3333 0 0
 
-	radius				0 5.25
+	radius				0 0.666667
 
 	rotation			0 360
 
@@ -1292,7 +1342,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			12
+		scale			4
 	}
 
 	sizeRand
@@ -1311,6 +1361,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -1329,6 +1380,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -1365,10 +1417,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.27 -0.5 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			16.6667
 	}
 
 	velocityY
@@ -1376,23 +1430,25 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.27 -0.5 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			16.6667
 	}
 
 	velocityZ
 	{
 		curve
 		[
-			0 1 0 0
-			0.1 0.6 0 0
-			0.2 0.15 0 0
-			1 0.02 0 0
+			0 0 0 0
+			0.27 0 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 
-		scale			76.6667
+		scale			13.3333
 	}
 
 	velocityXRand
@@ -1400,7 +1456,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.27 1 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -1409,7 +1467,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.27 1 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -1417,8 +1477,10 @@ Particle
 	{
 		curve
 		[
-			0 0.06 0 0
-			1 0.06 0 0
+			0 1 0 0
+			0.27 1 0 0
+			0.272 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -1429,6 +1491,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -1438,6 +1501,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -1447,6 +1511,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -1490,13 +1555,14 @@ Particle
 
 	spawnFlags			orgOnCylinder
 
-	count				24
+	count				36
 
-	life				3150 3600
+	life				1400 1600
 
-	delay				90 315
+	delay				1150 2400
+	origin				17.3333 0 0
 
-	radius				10.5 16.5
+	radius				0 0.666667
 
 	rotation			0 360
 
@@ -1528,8 +1594,9 @@ Particle
 		curve
 		[
 			0 0 0 0
-			0.05 0.9 0 0
-			0.8 0.8 0 0
+			0.1 0.9 0 0
+			0.4 0.9 0 0
+			0.7 0.36 0 0
 			1 0 0 0
 		]
 	}
@@ -1552,7 +1619,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			9.75
+		scale			3.25
 	}
 
 	sizeRand
@@ -1571,6 +1638,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -1589,6 +1657,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -1624,43 +1693,49 @@ Particle
 	{
 		curve
 		[
-			0 -0.5 0 0
-			1 -0.5 0 0
+			0.0 -0.5 0 0
+			0.19 -0.5 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			5.3333
+		scale			24
 	}
 
 	velocityY
 	{
 		curve
 		[
-			0 -0.5 0 0
-			1 -0.5 0 0
+			0.0 -0.5 0 0
+			0.19 -0.5 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			5.3333
+		scale			24
 	}
 
 	velocityZ
 	{
 		curve
 		[
-			0 1 0 0
-			0.1 0.6 0 0
-			0.2 0.15 0 0
-			1 0.02 0 0
+			0.0 -1.0 0 0
+			0.19 -1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 
-		scale			31.6667
+		scale			5.33333
 	}
 
 	velocityXRand
 	{
 		curve
 		[
-			0 1 0 0
-			1 1 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1668,8 +1743,10 @@ Particle
 	{
 		curve
 		[
-			0 1 0 0
-			1 1 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1677,8 +1754,10 @@ Particle
 	{
 		curve
 		[
-			0 0.06 0 0
-			1 0.06 0 0
+			0.0 1.0 0 0
+			0.19 1.0 0 0
+			0.192 0.0 0 0
+			1.0 0.0 0 0
 		]
 	}
 
@@ -1689,6 +1768,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -1698,6 +1778,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -1707,6 +1788,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -1750,15 +1832,15 @@ Particle
 
 	spawnFlags			orgOnCylinder evenDistribution
 
-	count				52
+	count				80
 
 	life				1080 1260
 
-	delay				45 2700
+	delay				45 1300
 
-	origin				0.9 0 0
+	origin				0.3 0 0
 
-	radius				0 2.7
+	radius				0 1.33333
 
 	rotation			0 360
 
@@ -1813,7 +1895,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			9.75
+		scale			3
 	}
 
 	sizeRand
@@ -1832,6 +1914,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -1850,6 +1933,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -1889,7 +1973,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			1.3333
+		scale			0.444433
 	}
 
 	velocityY
@@ -1900,7 +1984,7 @@ Particle
 			1 -0.5 0 0
 		]
 
-		scale			1.3333
+		scale			0.444433
 	}
 
 	velocityZ
@@ -1911,7 +1995,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			20
+		scale			14.6667
 	}
 
 	velocityXRand
@@ -1948,6 +2032,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -1957,6 +2042,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -1966,6 +2052,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -2015,9 +2102,9 @@ Particle
 
 	delay				45 180
 
-	origin				0.6 0 0
+	origin				0.2 0 0
 
-	radius				6.75 12
+	radius				2.25 4
 
 	rotation			0 360
 
@@ -2072,7 +2159,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			9.75
+		scale			3.25
 	}
 
 	sizeRand
@@ -2091,6 +2178,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -2109,6 +2197,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -2145,10 +2234,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityY
@@ -2156,10 +2247,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityZ
@@ -2170,7 +2263,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			3.3333
+		scale			1.1111
 	}
 
 	velocityXRand
@@ -2178,7 +2271,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2187,7 +2282,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2207,6 +2304,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -2216,6 +2314,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -2225,6 +2324,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -2274,9 +2374,9 @@ Particle
 
 	delay				180 405
 
-	origin				0.6 0 0
+	origin				0.2 0 0
 
-	radius				12 18.75
+	radius				4 6.25
 
 	rotation			0 360
 
@@ -2331,7 +2431,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			9.75
+		scale			3.25
 	}
 
 	sizeRand
@@ -2350,6 +2450,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -2368,6 +2469,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -2404,10 +2506,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityY
@@ -2415,10 +2519,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityZ
@@ -2429,7 +2535,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			3.3333
+		scale			1.1111
 	}
 
 	velocityXRand
@@ -2437,7 +2543,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2446,7 +2554,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2466,6 +2576,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -2475,6 +2586,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -2484,6 +2596,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -2533,9 +2646,9 @@ Particle
 
 	delay				360 675
 
-	origin				0.6 0 0
+	origin				0.2 0 0
 
-	radius				18.75 27
+	radius				6.25 9
 
 	rotation			0 360
 
@@ -2590,7 +2703,7 @@ Particle
 			1 1 0 0
 		]
 
-		scale			9.75
+		scale			3.25
 	}
 
 	sizeRand
@@ -2609,6 +2722,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -2627,6 +2741,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -2663,10 +2778,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityY
@@ -2674,10 +2791,12 @@ Particle
 		curve
 		[
 			0 -0.5 0 0
-			1 -0.5 0 0
+			0.2 -0.5 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 
-		scale			5.3333
+		scale			1.77777
 	}
 
 	velocityZ
@@ -2688,7 +2807,7 @@ Particle
 			1 0.2 0 0
 		]
 
-		scale			3.3333
+		scale			1.1111
 	}
 
 	velocityXRand
@@ -2696,7 +2815,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2705,7 +2826,9 @@ Particle
 		curve
 		[
 			0 1 0 0
-			1 1 0 0
+			0.2 1 0 0
+			0.3 0 0 0
+			1 0 0 0
 		]
 	}
 
@@ -2725,6 +2848,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -2734,6 +2858,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -2743,6 +2868,7 @@ Particle
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
@@ -2833,7 +2959,7 @@ Decal
 			1 1 0 0
 		]
 
-		scale			24
+		scale			8
 	}
 
 	sizeRand
@@ -2852,6 +2978,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	size2Rand
@@ -2870,6 +2997,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	lengthRand
@@ -2906,6 +3034,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityY
@@ -2915,6 +3044,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityZ
@@ -2924,6 +3054,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocityXRand
@@ -2960,6 +3091,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Y
@@ -2969,6 +3101,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2Z
@@ -2978,6 +3111,7 @@ Decal
 			0 0 0 0
 			1 0 0 0
 		]
+		scale			0.333333
 	}
 
 	velocity2XRand
