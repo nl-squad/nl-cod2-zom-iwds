@@ -69,6 +69,7 @@ nl_absorption_damage,,,misc/nl_absorption_damage.mp3,1,1,,,,1000000,,auto,stream
 nl_absorption_teleport,,,misc/nl_absorption_teleport.wav,0.9,0.9,,0.95,1.05,300,1500,auto,streamed,
 nl_elixir,,,misc/nl_elixir.mp3,1,1,,,,1000000,,auto,streamed,
 nl_explodebullet,,,misc/nl_explodebullet.wav,1,1,,,,1000000,,auto,streamed,
+nl_hp_boost,,,misc/nl_hp_boost.mp3,1,1,,,,1000000,,auto,streamed,
 nl_shadow_escape,,,misc/nl_shadow_escape.wav,0.9,0.9,,0.95,1.05,300,1500,auto,streamed,
 nl_spawn_beacon,,,misc/nl_spawn_beacon.mp3,1,1,,,,1000000,,auto,streamed,
 nl_spawn_beacon_plant,,,misc/nl_spawn_beacon_plant.mp3,1,1,,,,1000000,,auto,streamed,
@@ -83,8 +84,12 @@ roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
 spawnprotect,,,misc/spawnprotect.mp3,1,1,,,,1000000,,auto,streamed,
 vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
 
+#Molotov
+molotov_ready,,,molotov/molotov_ready.mp3,1,1,,,,1000000,,auto,streamed
+
 #Mortar
 mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
+mortar_used,,,mortar/mortar_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #MysteryBox
 box_byebye,,,mysterybox/box_byebye.mp3,1,1,,,,1000000,,auto,streamed,
@@ -119,6 +124,7 @@ rambo,,,rambo/rambo.mp3,1,1,,,,1000000,,auto,streamed,
 
 #Raptor
 raptor_boom,,,raptor/nl_raptor_boom.wav,1,1,,,,1000000,,auto,streamed,
+raptor_deploy,,,raptor/nl_raptor_deploy.mp3,1,1,,,,1000000,,auto,streamed,
 raptor_fire,,,raptor/nl_raptor_fire.wav,1,1,,,,1000000,,auto,streamed,
 raptor_rocket,,,raptor/nl_raptor_rocket.wav,1,1,,,,1000000,,auto,streamed,
 
