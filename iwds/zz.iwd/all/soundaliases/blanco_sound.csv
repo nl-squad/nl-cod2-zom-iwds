@@ -85,6 +85,7 @@ vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
 
 #Mortar
 mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
+mortar_used,,,mortar/mortar_used.mp3,1,1,,,,1000000,,auto,streamed
 
 #MysteryBox
 box_byebye,,,mysterybox/box_byebye.mp3,1,1,,,,1000000,,auto,streamed,
