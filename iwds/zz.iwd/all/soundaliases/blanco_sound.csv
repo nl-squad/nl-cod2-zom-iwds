@@ -83,6 +83,9 @@ roll_exp,,,misc/roll_exp.wav,1,1,,,,1000000,,auto,streamed,
 spawnprotect,,,misc/spawnprotect.mp3,1,1,,,,1000000,,auto,streamed,
 vote,,,misc/vote.wav,1,1,,,,1000000,,auto,streamed,
 
+#Molotov
+molotov_ready,,,molotov/molotov_ready.mp3,1,1,,,,1000000,,auto,streamed
+
 #Mortar
 mortar_ready,,,mortar/mortar_ready.mp3,1,1,,,,1000000,,auto,streamed
 mortar_used,,,mortar/mortar_used.mp3,1,1,,,,1000000,,auto,streamed
