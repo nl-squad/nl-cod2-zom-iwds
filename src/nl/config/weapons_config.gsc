@@ -206,7 +206,7 @@ Configure()
 	
 	level.weapons_rpd = defineWeapon(38, "rpd_mp", "RPD", level.TYPE_PRIMARY, level.KIND_HEAVY);
     addWeaponPurchase(level.weapons_rpd, 3, 130, 25000);
-	addPurchaseRequirement(level.weapons_rpd, "saw_mp", 5000);
+	addPurchaseRequirement(level.weapons_rpd, "saw_mp", 7500);
 	addWeaponToMysteryBox(level.weapons_rpd, "xmodel/rpd_w", 1, 1);
 	
 	level.weapons_shotgun = defineWeapon(35, "shotgun_mp", "Trench Gun", level.TYPE_PRIMARY, level.KIND_HEAVY);
