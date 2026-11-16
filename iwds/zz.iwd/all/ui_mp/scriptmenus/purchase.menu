@@ -385,7 +385,7 @@
 		ARROW_DOWN_RIGHT("tab3", ORIGIN_KR1, "250 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR7, "1 000 kills")
 		ARROW_RIGHT("tab3", ORIGIN_KR8, "2 500 kills")
-		ARROW_RIGHT("tab3", ORIGIN_KR9, "5 000 kills")
+		ARROW_RIGHT("tab3", ORIGIN_KR9, "7 500 kills")
 		
 		PURCHASE("tab4", ORIGIN_KR2, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(7d)", "2", "2 500")
 		PURCHASE("tab4", ORIGIN_KR3, "vip", "nl_booster_vip_a", "nl_booster_vip_n", "^3VIP ^7(30d)", "3", "7 500")

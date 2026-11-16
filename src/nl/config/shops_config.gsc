@@ -23,7 +23,7 @@ Configure()
     vips["3"] = CreateMenuSelection(3, "napalm", "Napalm", ::napalmPrice, blanco\actions\napalm::ActivateFromShop, blanco\actions\napalm::CanUse);
     vips["4"] = CreateMenuSelection(6, "spawn_beacon", "Spawn Beacon", ::spawn_beaconPrice, blanco\actions\spawn_beacon::Activate, blanco\actions\spawn_beacon::CanUse);
     vips["5"] = CreateMenuSelection(5, "emp", "EMP (^720 ^9s)", ::empPrice, blanco\actions\emp::Activate, blanco\actions\emp::CanUse, undefined, a(20));
-    vips["6"] = CreateMenuSelection(4, "rage", "Rage Mode (^745 ^9s)", ::rageModePrice, blanco\actions\rage::ActivateFromShop, blanco\actions\rage::CanUse, undefined, a(45));
+    vips["6"] = CreateMenuSelection(4, "rage", "Rage Mode (^730 ^9s)", ::rageModePrice, blanco\actions\rage::ActivateFromShop, blanco\actions\rage::CanUse, undefined, a(30));
     RegisterMenu("vips", ::VMenuDefaultHandler, vips, blanco\menus\shops::canUseVipsMenu);
 }
 
@@ -99,12 +99,12 @@ exploding_ballPrice(usageTimes)
 
 napalmPrice(usageTimes)
 {
-    return 1250 + 250 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 spawn_beaconPrice(usageTimes)
 {
-    return 1250 + 250 * usageTimes;
+    return 1000 + 200 * usageTimes;
 }
 
 empPrice(usageTimes)
