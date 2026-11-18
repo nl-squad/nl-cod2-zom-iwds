@@ -376,9 +376,9 @@
 		RECORD_COLUMN(280, "Rank", "nl_records_ever_ranks")
 
 		/// PLAYER OPTIONS ///
-		PLAYER_OPTION(ORIGIN_PLROPT2, nl_plropt_enableExchange, "Weapon Exchange (^1OFF^7/^2ON^7)", "Players can ask you for a Weapon Exchange", "plropt_enableExchange")
 		PLAYER_OPTION(ORIGIN_PLROPT1, nl_plropt_enableHook, "Hook (^1OFF^7/^2ON^7)", "Players can ask you for a Hook", "plropt_enableHook")
-
+		PLAYER_OPTION(ORIGIN_PLROPT2, nl_plropt_enableExchange, "Weapon Exchange (^1OFF^7/^2ON^7)", "Players can ask you for a Weapon Exchange", "plropt_enableExchange")
+		
 		/// SERVER INFO ///
 		itemDef
 		{
