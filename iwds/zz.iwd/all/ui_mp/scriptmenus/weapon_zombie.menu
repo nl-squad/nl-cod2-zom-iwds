@@ -222,7 +222,7 @@
 		ZTYPE("z12", 40 307, "", "Half-Life Red", "halflife", setdvar nl_weapon "nl_char_halflife";)
 		INFO("halflife", "^7Ability^9: ^7Sets a Jumpy Spawn Point on Death \n^9Level ^71^9: ^31.5 s ^9of Spawn Protect \n^9Level ^72^9: ^32 s ^9of Spawn Protect \n^9Level ^73^9: ^32.5 s ^9of Spawn Protect \n \n^7Health Points^9: ^3300")
 		ZTYPE("z13", 40 324, "", "Ice Zombie", "ice", setdvar nl_weapon "nl_char_ice";)
-		INFO("ice", "^7Ability^9#^71^9: ^7Immunity to Freeze Zombies \n^7Ability^9#^72^9: ^7Throwable Ice Nade Freezing Hunters for ^33 s ^7within a Radius \n \n^7Health Points^9: ^3500")
+		INFO("ice", "^7Ability^9#^71^9: ^7Immunity to Freeze Zombies \n^7Ability^9#^72^9: ^7Throwable Ice Nade Freezing Hunters for ^33 s ^7within a Radius \n \n^7Health Points^9: ^3700")
 		ZTYPE("z14", 40 341, "", "Skeleton", "skeleton", setdvar nl_weapon "nl_char_skeleton";)
 		INFO("skeleton", "^7Ability^9#^71^9: ^7Immunity to Fire Damage \n^7Ability^9#^72^9: ^7Chance to Dodge Bullets \n^9Level ^71^9: ^330% \n^9Level ^72^9: ^340% \n^9Level ^73^9: ^350% \n \n^7Health Points^9: ^3300")
 		ZTYPE("z15", 40 358, "", "Toxic Zombie", "toxic", setdvar nl_weapon "nl_char_toxic";)
