@@ -64,7 +64,7 @@ Configure()
     level.DEATHSTREAK_toxicGrade3RadiusSquared = 80 * 80;
     level.DEATHSTREAK_toxicEffectLevel3 = "fx/nl/nl_toxic_80.efx";
 
-    level.DEATHSTREAK_iceHp = 500;
+    level.DEATHSTREAK_iceHp = 700;
     level.DEATHSTREAK_iceNadeFreezeDuration = 3;
 
     level.DEATHSTREAK_typeNothing = deathstreak("nothing", blanco\deathstreaks\generic::GrantNothing);
