@@ -12,6 +12,7 @@ Configure()
     tips[tips.size] = "You can access the Hunters or VIP Shop by pressing ^3V ^7button";
     tips[tips.size] = "Remember to select your Perks and Killstreaks in your Loadout section";
 	tips[tips.size] = "To change/activate the current Killstreaks, use ^3< M > ^7buttons";
+	tips[tips.size] = "There is a small chance to get a Nuke from a Care Pack";
     tips[tips.size] = "Remember to save your Loadout Class after making changes by pressing ^3V";
 	tips[tips.size] = "Use keys 1–4 to quickly switch between your Loadout Classes";
 	tips[tips.size] = "A shield hitmarker indicates a spawn-protected enemy";
@@ -50,7 +51,7 @@ Configure()
 	tips[tips.size] = "Nexus can use the Raygun on the next map";
 	tips[tips.size] = "Venom (300 HP) = High Jump Ability";
 	tips[tips.size] = "Yellow Toxic Zombie (350 HP) can throw Toxic Meat";
-	tips[tips.size] = "Ice Zombie (500 HP) can throw Freezing Nade";
+	tips[tips.size] = "Ice Zombie (700 HP) can throw Freezing Nade";
 	tips[tips.size] = "Ice Zombies are immune to Freeze Zombies";
 	tips[tips.size] = "Stun Nade deals minor damage and reduce Hunter mobility";
 	tips[tips.size] = "Use barrels and ledges as cover from Zombie Nades";

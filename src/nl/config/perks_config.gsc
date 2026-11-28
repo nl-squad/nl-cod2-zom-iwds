@@ -70,7 +70,7 @@ Configure()
 	level.perks_ghost = blanco\config::addNewPerk(4, "tactical", "Ghost", 264, "nl_hud_pe4", "Adds 5 seconds of Invi & Removes Star overhead");
 	level.perks_hardline = blanco\config::addNewPerk(6, "tactical", "Hardline", 304, "nl_hud_pe6", "Reduces a number of Required Kills for a Killstreak by 15 percent");
 	// Random must be last
-	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk");
+	level.perks_randomTactical = blanco\config::addNewPerk(19, "tactical", "Random Tactical", 84, "nl_hud_pe19", "Selects a random Tactical Perk (including locked ones)");
 	
 	level.perks_pistolero = blanco\config::addNewPerk(21, "combat", "Pistolero", 12, "nl_hud_pe21", "Increases Damage of Beretta Pistol by 50 percent");
 	level.perks_potatoGrater = blanco\config::addNewPerk(12, "combat", "Potato Grater", 32, "nl_hud_pe12", "Reduces Damage received from each Potato to 25 (-10)");
@@ -86,5 +86,5 @@ Configure()
 	level.perks_assaultExtension = blanco\config::addNewPerk(15, "combat", "Assault Extension", 312, "nl_hud_pe15", "Doubles Browning MG & Sentry Gun time + Adds 1 Raptor's rocket");
 	level.perks_explodeBullets = blanco\config::addNewPerk(17, "combat", "Explode Bullets", 352, "nl_hud_pe17", "Provides a 3 percent chance for Bullets to Explode");
 	// Random must be last
-	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk");
+	level.perks_randomCombat = blanco\config::addNewPerk(20, "combat", "Random Combat", 92, "nl_hud_pe20", "Selects a random Combat Perk (including locked ones)");
 }
